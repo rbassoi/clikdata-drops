@@ -19,8 +19,8 @@ Toda terça-feira, gere a nova edição da newsletter Clickdata Drops.
 
 5. ENVIE a newsletter via Brevo API:
    - Endpoint: POST https://api.brevo.com/v3/emailCampaigns
-   - API Key: [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]
-   - Lista de destinatários: ID da lista [6]
+   - API Key: []
+   - Lista de destinatários: ID da lista []
    - Assunto: "Clickdata Drops #[NNN] — [Data]"
    - Conteúdo: o HTML gerado
    - Agende o envio para as 9h do mesmo dia
