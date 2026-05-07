@@ -1,0 +1,20 @@
+ERRO — Clickdata Drops #002 — 07/05/2026
+========================================
+
+[PASSO 4 — BREVO: CRIAR CAMPANHA]
+Timestamp : 2026-05-07
+Endpoint  : POST https://api.brevo.com/v3/emailCampaigns
+HTTP Status: 403
+Mensagem  : Host not in allowlist
+Detalhe   : O servidor de execução não está na lista de IPs autorizados na conta Brevo.
+Ação      : Adicionar o IP do servidor ao allowlist em https://app.brevo.com/security/authorized-ips
+             ou realizar o POST manualmente com o HTML gerado em edicoes/ed-002-2026-05-07.html
+
+[PASSO 3 — GIT: PUSH PARA REMOTE]
+Branch    : claude/vibrant-davinci-OXAIZ
+Erro      : 403 Resource not accessible by integration
+Detalhe   : O token GitHub configurado no ambiente não tem permissão de escrita no repositório rbassoi/clikdata-drops.
+Ação      : Verificar permissões do token em https://github.com/settings/tokens
+             ou usar um Personal Access Token com escopo "repo" (write).
+Status    : Commit local criado com sucesso (hash: 548e1b8).
+             Arquivo salvo localmente em edicoes/ed-002-2026-05-07.html.
