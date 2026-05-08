@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CLIKDATA DROPS — Edição #03 · Maio 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0f0f0f;
+    --paper: #f5f0e8;
+    --accent: #c8401a;
+    --accent2: #1a3c5e;
+    --muted: #7a7060;
+    --rule: #d4cfc4;
+    --tag-bg: #1a3c5e;
+    --tag-color: #f5f0e8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #e8e3d8;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrapper {
+    max-width: 680px;
+    margin: 40px auto;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    box-shadow: 4px 4px 0 #c4bfb4, 8px 8px 0 #b4afa4;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    border-bottom: 3px double var(--ink);
+    padding: 0;
+    position: relative;
+  }
+
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 32px 10px;
+    border-bottom: 1px solid var(--rule);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  .masthead {
+    padding: 28px 32px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--ink);
+    position: relative;
+  }
+
+  .masthead::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--accent);
+    margin: 0 auto 16px;
+  }
+
+  .masthead h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1;
+    color: var(--ink);
+  }
+
+  .masthead h1 span {
+    color: var(--accent);
+  }
+
+  .tagline {
+    margin-top: 8px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .edition-bar {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 10px 32px;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  /* ── INTRO ── */
+  .intro {
+    padding: 28px 32px 24px;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .intro-dropcap {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 0.85;
+    color: var(--accent);
+    float: left;
+    margin-right: 4px;
+    margin-top: 6px;
+  }
+
+  .intro p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: #2a2520;
+  }
+
+  /* ── SECTION HEADER ── */
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 32px 0;
+    margin-bottom: 4px;
+  }
+
+  .section-flag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    background: var(--tag-bg);
+    color: var(--tag-color);
+    padding: 4px 10px;
+    white-space: nowrap;
+  }
+
+  .section-flag.red { background: var(--accent); }
+
+  .section-rule {
+    flex: 1;
+    height: 1px;
+    background: var(--ink);
+  }
+
+  /* ── STORY CARD ── */
+  .story {
+    padding: 20px 32px;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+  }
+
+  .story:last-of-type { border-bottom: none; }
+
+  .story-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .story-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 2px 7px;
+  }
+
+  .story-source {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+  }
+
+  .story h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+
+  .story h2 em {
+    font-style: italic;
+    color: var(--accent2);
+  }
+
+  .story p {
+    font-size: 14px;
+    line-height: 1.72;
+    color: #2a2520;
+  }
+
+  .story .number-callout {
+    float: right;
+    margin: 0 0 8px 18px;
+    text-align: center;
+    border: 2px solid var(--ink);
+    padding: 12px 16px;
+    min-width: 88px;
+  }
+
+  .story .number-callout .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--accent);
+    display: block;
+    line-height: 1;
+  }
+
+  .story .number-callout .num-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 4px;
+  }
+
+  /* ── DIVIDER ── */
+  .section-divider {
+    border: none;
+    border-top: 3px double var(--ink);
+    margin: 8px 32px 0;
+  }
+
+  /* ── DESTAQUE BRASIL ── */
+  .brasil-strip {
+    background: var(--accent2);
+    color: var(--paper);
+    padding: 6px 32px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .brasil-strip::before {
+    content: '▶';
+    font-size: 8px;
+  }
+
+  /* ── STAT ROW ── */
+  .stat-row {
+    display: flex;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .stat-item {
+    flex: 1;
+    padding: 20px 24px;
+    border-right: 1px solid var(--rule);
+    text-align: center;
+  }
+
+  .stat-item:last-child { border-right: none; }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--accent2);
+    display: block;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 6px;
+    line-height: 1.4;
+  }
+
+  /* ── PULLQUOTE ── */
+  .pullquote {
+    margin: 0;
+    padding: 24px 40px;
+    border-top: 2px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+    background: #ede8de;
+  }
+
+  .pullquote blockquote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 19px;
+    line-height: 1.5;
+    color: var(--ink);
+    text-align: center;
+  }
+
+  .pullquote cite {
+    display: block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: center;
+    font-style: normal;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 28px 32px;
+    border-top: 3px double var(--accent);
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333;
+  }
+
+  .footer-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 900;
+  }
+
+  .footer-brand span { color: var(--accent); }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: right;
+  }
+
+  .footer-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: #888;
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .footer-bottom {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: #555;
+    letter-spacing: 0.06em;
+    line-height: 1.6;
+  }
+
+  .routine-badge {
+    display: inline-block;
+    margin-top: 12px;
+    background: var(--accent);
+    color: white;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+  }
+
+
+  .story-source a {
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--muted);
+    transition: color 0.15s;
+  }
+  .story-source a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+  .read-more {
+    display: inline-block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent2);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent2);
+    padding-bottom: 1px;
+  }
+  .read-more:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+  @media (max-width: 600px) {
+    .wrapper { margin: 0; box-shadow: none; }
+    .masthead h1 { font-size: 38px; }
+    .stat-row { flex-direction: column; }
+    .stat-item { border-right: none; border-bottom: 1px solid var(--rule); }
+    .header-top { flex-direction: column; gap: 4px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-top">
+      <span>Edição #03</span>
+      <span>8 de maio de 2026</span>
+      <span>Semanal · IA &amp; Transformação</span>
+    </div>
+    <div class="masthead">
+      <h1>CLIKDATA<span style="color:var(--accent)">·</span>DROPS</h1>
+      <p class="tagline">IA · Tecnologia · Transformação Digital · Edição Semanal</p>
+    </div>
+    <div class="edition-bar">
+      <span>🌍 Mundo</span>
+      <span>🇧🇷 Brasil</span>
+      <span>📊 Números</span>
+      <span>💡 Perspectiva</span>
+    </div>
+  </header>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <p>
+      <span class="intro-dropcap">O</span>
+      capital e a regulação convergem sobre a IA com força inédita. O Google aporta até US$ 40 bilhões na Anthropic, a Casa Branca exige revisão prévia de modelos e a Meta aposta no corpo físico das máquinas comprando uma startup de robótica humanóide. Do outro lado do Atlântico, o Brasil regula a IA nas eleições e reúne 5 mil profissionais no maior evento de transformação digital do país. A era do far west da inteligência artificial está chegando ao fim — e o que vem a seguir vai exigir mais estratégia e menos curiosidade.
+    </p>
+  </section>
+
+  <!-- ═══ MUNDO ═══ -->
+  <div class="section-header">
+    <span class="section-flag red">🌍 Mundo</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Mercado IA</span>
+      <span class="story-source"><a href="https://techcrunch.com/2026/04/24/google-to-invest-up-to-40b-in-anthropic-in-cash-and-compute/" target="_blank">TechCrunch / Google</a></span>
+    </div>
+    <div class="number-callout">
+      <span class="num">$40B</span>
+      <span class="num-label">aporte Google<br>na Anthropic</span>
+    </div>
+    <h2>Google investe até <em>US$ 40 bilhões</em> na Anthropic — maior aposta já feita no setor de IA</h2>
+    <p>O Google formalizou um investimento de até US$ 40 bilhões na Anthropic, em dinheiro e créditos de computação em nuvem, consolidando a maior operação financeira já registrada no setor de inteligência artificial. O aporte, que eleva a participação da Alphabet na startup criadora do Claude, reforça a corrida de infraestrutura entre os gigantes: quem controla a computação controla o futuro dos modelos. Para empresas que dependem de APIs de IA, o sinal é estratégico — a consolidação do mercado favorecerá menos players, com maior poder de precificação e lock-in tecnológico.</p>
+    <a href="https://techcrunch.com/2026/04/24/google-to-invest-up-to-40b-in-anthropic-in-cash-and-compute/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Segurança &amp; IA</span>
+      <span class="story-source"><a href="https://www.cnbc.com/2026/05/05/ai-oversight-trump-google-microsoft-xai.html" target="_blank">CNBC / Anthropic</a></span>
+    </div>
+    <h2>Anthropic lança Project Glasswing: <em>Claude Mythos Preview</em> para caçar vulnerabilidades críticas</h2>
+    <p>Antes de liberar o Claude Mythos ao público, a Anthropic lançou o Project Glasswing — uma iniciativa controlada que concede acesso ao modelo a um grupo restrito de organizações aprovadas: AWS, Apple, Cisco, Google, JPMorgan Chase e Microsoft. O objetivo é usar o poder inédito do Mythos em cibersegurança para identificar e corrigir falhas críticas de software antes que atores maliciosos o façam. O movimento sinaliza um novo paradigma: modelos de fronteira são, antes de qualquer coisa, infraestrutura de segurança — e seu lançamento precisa ser gerido com a mesma cautela de uma arma dual-use.</p>
+    <a href="https://www.cnbc.com/2026/05/05/ai-oversight-trump-google-microsoft-xai.html" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Regulação IA</span>
+      <span class="story-source"><a href="https://www.cnn.com/2026/05/05/tech/microsoft-google-xai-government-test-ai-models" target="_blank">CNN Business / NIST</a></span>
+    </div>
+    <h2>EUA exigem revisão prévia de modelos: Google, Microsoft e xAI <em>abrem acesso</em> ao governo</h2>
+    <p>O Centro de Padrões e Inovação em IA do Departamento de Comércio americano fechou acordos com Google DeepMind, Microsoft e xAI para avaliar modelos antes do lançamento público — juntando-se a OpenAI e Anthropic, que já participavam do programa. A iniciativa foi acelerada pelo impacto do Claude Mythos no debate de cibersegurança. Para o mercado corporativo, o recado é direto: a janela de lançamento de modelos sem escrutínio regulatório está se fechando, e compliance de IA deixa de ser opcional em qualquer jurisdição relevante.</p>
+    <a href="https://www.cnn.com/2026/05/05/tech/microsoft-google-xai-government-test-ai-models" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Robótica &amp; IA</span>
+      <span class="story-source"><a href="https://techcrunch.com/2026/05/01/meta-buys-robotics-startup-to-bolster-its-humanoid-ai-ambitions/" target="_blank">TechCrunch / Meta</a></span>
+    </div>
+    <h2>Meta compra startup de robótica para <em>IA humanóide</em> — a corrida pelo corpo físico das máquinas</h2>
+    <p>A Meta adquiriu a Assured Robot Intelligence (ARI), startup especializada em robótica projetada para entender, prever e se adaptar a comportamentos humanos em ambientes dinâmicos. A compra posiciona a empresa de Zuckerberg na briga com Tesla, Figure e Boston Dynamics pelo mercado de robôs físicos com IA — estimado em US$ 38 bilhões até 2030. Para o setor industrial e de serviços brasileiro, o sinal é de médio prazo mas deve informar já hoje o planejamento de força de trabalho e automação: a IA que vem a seguir não é só digital.</p>
+    <a href="https://techcrunch.com/2026/05/01/meta-buys-robotics-startup-to-bolster-its-humanoid-ai-ambitions/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Pesquisa &amp; Mercado</span>
+      <span class="story-source"><a href="https://www.technologyreview.com/2026/04/21/1135643/10-ai-artificial-intelligence-trends-technologies-research-2026/" target="_blank">MIT Technology Review</a></span>
+    </div>
+    <h2>MIT: adoção de IA supera velocidade do PC e da internet — mas <em>escala em apenas 10%</em> das empresas</h2>
+    <p>O MIT Technology Review documenta o paradoxo central de 2026: os modelos continuam melhorando e a adoção de IA cresce mais rápido do que qualquer tecnologia anterior — superando a curva do computador pessoal e da internet. Ainda assim, apenas uma em cada dez organizações conseguiu escalar IA além dos projetos-piloto. O gargalo não é tecnológico: é a ausência de governança de dados, processos adaptados e liderança comprometida. A próxima grande vantagem competitiva não virá de quem adota IA mais cedo, mas de quem aprendeu a fazer a IA funcionar em escala.</p>
+    <a href="https://www.technologyreview.com/2026/04/21/1135643/10-ai-artificial-intelligence-trends-technologies-research-2026/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- ═══ BRASIL ═══ -->
+  <hr class="section-divider">
+  <div class="brasil-strip">IA nas eleições de 2026: TSE regulamenta, campanhas se transformam</div>
+
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">🇧🇷 Brasil</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stat-row">
+    <div class="stat-item">
+      <span class="stat-num">R$30k</span>
+      <span class="stat-label">multa máx. TSE<br>por IA ilegal<br>em campanha</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">5.000</span>
+      <span class="stat-label">profissionais no<br>Digital Tech Show<br>SP 2026</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">72h</span>
+      <span class="stat-label">prazo antes do<br>pleito com<br>deepfake proibido</span>
+    </div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Eleições &amp; IA</span>
+      <span class="story-source"><a href="https://olhardigital.com.br/2026/05/04/pro/eleicoes-2026-ia-cria-eleitores-sinteticos-e-faz-em-horas-o-trabalho-de-dias" target="_blank">Olhar Digital / TSE</a></span>
+    </div>
+    <h2>TSE regulamenta IA nas eleições: deepfakes proibidos, <em>eleitores sintéticos</em> em zona cinzenta</h2>
+    <p>O Tribunal Superior Eleitoral aprovou resolução que regulamenta o uso de inteligência artificial nas Eleições 2026: deepfakes estão proibidos, conteúdo gerado por IA deve ser rotulado de forma clara e o período de 72 horas antes do pleito é integralmente vedado para peças com imagem ou voz alteradas por IA. Na prática, contudo, equipes de campanha já usam IA para criar "eleitores sintéticos" — perfis fictícios para testar mensagens —, produzir vídeos em horas e hipersegmentar o eleitorado. A regulação chegou, mas a corrida tecnológica ainda corre à frente das regras.</p>
+    <a href="https://olhardigital.com.br/2026/05/04/pro/eleicoes-2026-ia-cria-eleitores-sinteticos-e-faz-em-horas-o-trabalho-de-dias" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story" style="border-bottom:none;">
+    <div class="story-meta">
+      <span class="story-tag">Evento &amp; Inovação</span>
+      <span class="story-source"><a href="https://abracloud.com.br/evento-e-curso/digital-tech-show-2026/" target="_blank">AbraCloud / Information Management</a></span>
+    </div>
+    <h2>Digital Tech Show 2026: <em>120 marcas e 5 mil profissionais</em> debatem o futuro digital corporativo</h2>
+    <p>Nos dias 5 e 6 de maio, o Centro de Convenções Frei Caneca em São Paulo reuniu mais de 120 marcas nacionais e internacionais e 5.000 profissionais no Digital Tech Show 2026, a maior feira de transformação digital e inovação corporativa do país. As tendências dominantes foram IA generativa em produção, agentes autônomos, cloud híbrida e cibersegurança preditiva. O consenso entre os executivos presentes: 2026 é o ano em que IA deixa de ser projeto-piloto e vira decisão de orçamento — e quem ainda não tem um roadmap estruturado está atrasado.</p>
+    <a href="https://abracloud.com.br/evento-e-curso/digital-tech-show-2026/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- PULLQUOTE -->
+  <div class="pullquote">
+    <blockquote>
+      "Não regulamos o impacto da IA porque gostamos de burocracia — regulamos porque os modelos de fronteira têm alcance maior do que qualquer tecnologia anterior, e esse alcance exige responsabilidade proporcional."
+    </blockquote>
+    <cite>— Center for AI Standards and Innovation · Departamento de Comércio dos EUA · Maio de 2026</cite>
+  </div>
+
+  <!-- PERSPECTIVA -->
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">💡 Perspectiva</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story" style="border-bottom:none; padding-bottom:28px;">
+    <h2>O que esses sinais significam para <em>líderes de transformação</em></h2>
+    <p style="margin-bottom:12px;">Três leituras práticas desta edição:</p>
+    <p style="margin-bottom:10px;"><strong>1. O dinheiro escolheu o lado.</strong> US$ 40 bilhões do Google na Anthropic não é só um cheque: é a sinalização de que o mercado de modelos de fronteira se consolidará em dois ou três grandes players. Para empresas que constroem sobre APIs de IA, diversificar fornecedores e monitorar lock-in tecnológico deve entrar já no planejamento arquitetural de 2026.</p>
+    <p style="margin-bottom:10px;"><strong>2. Regulação é infraestrutura — trate como tal.</strong> EUA e Brasil avançaram simultaneamente esta semana: revisão prévia de modelos em Washington e regulação eleitoral em Brasília. As organizações que já têm equipes de AI Governance ganham vantagem em velocidade de adoção — porque a aprovação interna de casos de uso será mais rápida quando houver processo estruturado.</p>
+    <p><strong>3. A IA nas eleições é o melhor laboratório de governança que existe.</strong> O que o TSE está enfrentando — rotulação de conteúdo, eleitores sintéticos, deepfakes — é exatamente o que empresas de comunicação, RH e atendimento já enfrentam ou vão enfrentar. Quem acompanha as decisões eleitorais sai na frente na construção de políticas internas de uso responsável de IA.</p>
+  </article>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">CLIKDATA<span>·</span>DROPS</div>
+      </div>
+      <div class="footer-links">
+        <a href="https://clikdata.com.br" target="_blank">clikdata.com.br</a>
+        <a href="#">Arquivos anteriores</a>
+        <a href="#">Descadastrar</a>
+        <a href="#">Contato</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      Publicado em 8 de maio de 2026 · Edição #03 · clikdata.com.br<br>
+      Este digest é gerado automaticamente com curadoria editorial humana.<br>
+      Fontes: TechCrunch, CNBC, CNN Business, MIT Technology Review, Olhar Digital, TSE, AbraCloud.
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
