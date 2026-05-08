@@ -1,6 +1,6 @@
-Toda terça-feira, gere a nova edição da newsletter Clickdata Drops.
+Diariamente, gere a nova edição da newsletter Clickdata Drops.
 
-1. PESQUISE as 5 principais notícias da semana sobre IA, 
+1. PESQUISE as 5 principais notícias das últimas 24 horas sobre IA, 
    Tecnologia e Transformação Digital — Brasil e mundo.
    Priorize fontes confiáveis (Stanford HAI, MIT Tech Review, 
    Exame, Valor, TechCrunch, IDC, Gartner).
@@ -23,4 +23,4 @@ Toda terça-feira, gere a nova edição da newsletter Clickdata Drops.
    - Lista de destinatários: ID da lista []
    - Assunto: "Clickdata Drops #[NNN] — [Data]"
    - Conteúdo: o HTML gerado
-   - Agende o envio para as 9h do mesmo dia
+   - Agende o envio para as 8h do mesmo dia
