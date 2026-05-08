@@ -1,7 +1,7 @@
-# Clickdata Drops — Instruções para Claude
+# Clikdata Drops — Instruções para Claude
 
 ## Visão geral
-Newsletter semanal de IA, Tecnologia e Transformação Digital.
+Newsletter diária de IA, Tecnologia e Transformação Digital.
 Cada edição é um arquivo HTML gerado a partir do `template.html`.
 
 ## Fluxo completo de publicação
@@ -13,7 +13,7 @@ Execute **todos os passos abaixo** em toda nova edição, sem precisar de confir
 - Formato do arquivo: `edicoes/ed-NNN-AAAA-MM-DD.html`
 
 ### 2. Pesquisar notícias
-- Buscar as 5 principais notícias da semana: IA (mundo e Brasil), Tecnologia, Transformação Digital corporativa.
+- Buscar as 5 principais notícias das últimas 24 horas: IA (mundo e Brasil), Tecnologia, Transformação Digital corporativa.
 - Fontes prioritárias: Stanford HAI, MIT Technology Review, Exame, Valor Econômico, TechCrunch, IDC, Gartner, Blip.
 - Cada notícia deve ter: link original, tag de categoria e botão "→ Ler matéria completa".
 
