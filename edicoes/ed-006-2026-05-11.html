@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CLIKDATA DROPS — Edição #006 · Maio 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0f0f0f;
+    --paper: #f5f0e8;
+    --accent: #c8401a;
+    --accent2: #1a3c5e;
+    --muted: #7a7060;
+    --rule: #d4cfc4;
+    --tag-bg: #1a3c5e;
+    --tag-color: #f5f0e8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #e8e3d8;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrapper {
+    max-width: 680px;
+    margin: 40px auto;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    box-shadow: 4px 4px 0 #c4bfb4, 8px 8px 0 #b4afa4;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    border-bottom: 3px double var(--ink);
+    padding: 0;
+    position: relative;
+  }
+
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 32px 10px;
+    border-bottom: 1px solid var(--rule);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  .masthead {
+    padding: 28px 32px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--ink);
+    position: relative;
+  }
+
+  .masthead::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--accent);
+    margin: 0 auto 16px;
+  }
+
+  .masthead h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1;
+    color: var(--ink);
+  }
+
+  .masthead h1 span {
+    color: var(--accent);
+  }
+
+  .tagline {
+    margin-top: 8px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .edition-bar {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 10px 32px;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  /* ── INTRO ── */
+  .intro {
+    padding: 28px 32px 24px;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .intro-dropcap {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 0.85;
+    color: var(--accent);
+    float: left;
+    margin-right: 4px;
+    margin-top: 6px;
+  }
+
+  .intro p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: #2a2520;
+  }
+
+  /* ── SECTION HEADER ── */
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 32px 0;
+    margin-bottom: 4px;
+  }
+
+  .section-flag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    background: var(--tag-bg);
+    color: var(--tag-color);
+    padding: 4px 10px;
+    white-space: nowrap;
+  }
+
+  .section-flag.red { background: var(--accent); }
+
+  .section-rule {
+    flex: 1;
+    height: 1px;
+    background: var(--ink);
+  }
+
+  /* ── STORY CARD ── */
+  .story {
+    padding: 20px 32px;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+  }
+
+  .story:last-of-type { border-bottom: none; }
+
+  .story-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .story-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 2px 7px;
+  }
+
+  .story-source {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+  }
+
+  .story h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+
+  .story h2 em {
+    font-style: italic;
+    color: var(--accent2);
+  }
+
+  .story p {
+    font-size: 14px;
+    line-height: 1.72;
+    color: #2a2520;
+  }
+
+  .story .number-callout {
+    float: right;
+    margin: 0 0 8px 18px;
+    text-align: center;
+    border: 2px solid var(--ink);
+    padding: 12px 16px;
+    min-width: 88px;
+  }
+
+  .story .number-callout .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--accent);
+    display: block;
+    line-height: 1;
+  }
+
+  .story .number-callout .num-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 4px;
+  }
+
+  /* ── DIVIDER ── */
+  .section-divider {
+    border: none;
+    border-top: 3px double var(--ink);
+    margin: 8px 32px 0;
+  }
+
+  /* ── DESTAQUE BRASIL ── */
+  .brasil-strip {
+    background: var(--accent2);
+    color: var(--paper);
+    padding: 6px 32px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .brasil-strip::before {
+    content: '▶';
+    font-size: 8px;
+  }
+
+  /* ── STAT ROW ── */
+  .stat-row {
+    display: flex;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .stat-item {
+    flex: 1;
+    padding: 20px 24px;
+    border-right: 1px solid var(--rule);
+    text-align: center;
+  }
+
+  .stat-item:last-child { border-right: none; }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--accent2);
+    display: block;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 6px;
+    line-height: 1.4;
+  }
+
+  /* ── PULLQUOTE ── */
+  .pullquote {
+    margin: 0;
+    padding: 24px 40px;
+    border-top: 2px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+    background: #ede8de;
+  }
+
+  .pullquote blockquote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 19px;
+    line-height: 1.5;
+    color: var(--ink);
+    text-align: center;
+  }
+
+  .pullquote cite {
+    display: block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: center;
+    font-style: normal;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 28px 32px;
+    border-top: 3px double var(--accent);
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333;
+  }
+
+  .footer-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 900;
+  }
+
+  .footer-brand span { color: var(--accent); }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: right;
+  }
+
+  .footer-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: #888;
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .footer-bottom {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: #555;
+    letter-spacing: 0.06em;
+    line-height: 1.6;
+  }
+
+  .routine-badge {
+    display: inline-block;
+    margin-top: 12px;
+    background: var(--accent);
+    color: white;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+  }
+
+  .story-source a {
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--muted);
+    transition: color 0.15s;
+  }
+  .story-source a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+  .read-more {
+    display: inline-block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent2);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent2);
+    padding-bottom: 1px;
+  }
+  .read-more:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+  @media (max-width: 600px) {
+    .wrapper { margin: 0; box-shadow: none; }
+    .masthead h1 { font-size: 38px; }
+    .stat-row { flex-direction: column; }
+    .stat-item { border-right: none; border-bottom: 1px solid var(--rule); }
+    .header-top { flex-direction: column; gap: 4px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-top">
+      <span>Edição #006</span>
+      <span>11 de maio de 2026</span>
+      <span>Diária · IA &amp; Transformação</span>
+    </div>
+    <div class="masthead">
+      <h1>CLIKDATA<span style="color:var(--accent)">·</span>DROPS</h1>
+      <p class="tagline">IA · Tecnologia · Transformação Digital · Edição Diária</p>
+    </div>
+    <div class="edition-bar">
+      <span>🌍 Mundo</span>
+      <span>🇧🇷 Brasil</span>
+      <span>📊 Números</span>
+      <span>💡 Perspectiva</span>
+    </div>
+  </header>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <p>
+      <span class="intro-dropcap">O</span>
+      capital já decidiu. Enquanto a OpenAI formalizava a maior rodada de financiamento da história da tecnologia — US$ 122 bilhões a uma avaliação de US$ 852 bilhões —, o mundo acordou para uma realidade que os líderes mais atentos já antecipavam: a corrida pela IA entrou em sua fase de consolidação. No Brasil, o cenário converge: US$ 4,2 bilhões em investimentos projetados para 2026, liderança na América Latina e um gargalo urgente de governança que pode sepultar os melhores planos. Esta edição detalha o que importa agora.
+    </p>
+  </section>
+
+  <!-- ═══ MUNDO ═══ -->
+  <div class="section-header">
+    <span class="section-flag red">🌍 Mundo</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Mercado</span>
+      <span class="story-source"><a href="https://techcrunch.com/2026/03/31/openai-not-yet-public-raises-3b-from-retail-investors-in-monster-122b-fund-raise/" target="_blank">TechCrunch / Bloomberg</a></span>
+    </div>
+    <div class="number-callout">
+      <span class="num">$852B</span>
+      <span class="num-label">valuation<br>OpenAI</span>
+    </div>
+    <h2>OpenAI fecha US$ 122 bilhões — a <em>maior rodada de financiamento</em> da história tech</h2>
+    <p>A OpenAI concluiu a maior captação privada já registrada no setor de tecnologia: US$ 122 bilhões a uma avaliação de US$ 852 bilhões. Amazon e Nvidia ancoraram o round com US$ 50 bilhões e US$ 30 bilhões respectivamente, ao lado de SoftBank, Microsoft e Andreessen Horowitz. O número já ressoa pelas boardrooms do mundo: uma empresa privada, ainda sem IPO, vale quase o dobro da Meta. O capital não está apostando no presente da IA — está precificando o futuro. Uma parcela de US$ 35 bilhões está condicionada ao alcance de AGI ou a um IPO, tornando a rodada também uma aposta explícita sobre quando — não se — a AGI chegará.</p>
+    <a href="https://techcrunch.com/2026/03/31/openai-not-yet-public-raises-3b-from-retail-investors-in-monster-122b-fund-raise/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Adoção Global</span>
+      <span class="story-source"><a href="https://blogs.microsoft.com/on-the-issues/2026/05/07/the-state-of-global-ai-diffusion-in-2026/" target="_blank">Microsoft AI Economy Institute</a></span>
+    </div>
+    <h2>IA atinge 17,8% de adoção global — mas o <em>fosso digital</em> se aprofunda</h2>
+    <p>O relatório de Q1 2026 do Microsoft AI Economy Institute revela que 17,8% da população mundial em idade ativa usa IA regularmente — alta de 1,5 ponto percentual em apenas um trimestre. Mas o dado preocupante está na assimetria: no Norte Global, a adoção já alcança 27,5%; no Sul Global, apenas 15,4%. Os EAU lideram com impressionantes 70,1%. Vinte e seis economias já superam 30% de adoção. Para executivos de transformação digital, o sinal é duplo: o mercado cresce — e a desigualdade de capacidade competitiva entre países e empresas também.</p>
+    <a href="https://blogs.microsoft.com/on-the-issues/2026/05/07/the-state-of-global-ai-diffusion-in-2026/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Inovação</span>
+      <span class="story-source"><a href="https://www.crescendo.ai/news/latest-ai-news-and-updates" target="_blank">Crescendo AI / Reuters</a></span>
+    </div>
+    <h2>SpaceX + xAI: Musk funde hardware e inteligência para criar <em>naves autônomas</em></h2>
+    <p>Elon Musk anunciou a fusão entre a SpaceX e a xAI, sua venture de inteligência artificial. O objetivo declarado é integrar os modelos Grok às operações da SpaceX para acelerar o desenvolvimento de espaçonaves totalmente autônomas. O movimento simboliza uma tendência maior que vai além do espaço: as fronteiras entre IA de software e hardware físico estão desaparecendo. De foguetes a veículos autônomos a chips customizados, a integração vertical da inteligência artificial no mundo físico está se tornando o próximo grande campo de batalha competitivo — e as empresas industriais que não o percebem correm o risco de irrelevância.</p>
+    <a href="https://www.crescendo.ai/news/latest-ai-news-and-updates" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- ═══ BRASIL ═══ -->
+  <hr class="section-divider">
+  <div class="brasil-strip">Brasil lidera IA na América Latina — US$ 4,2 bilhões projetados para 2026</div>
+
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">🇧🇷 Brasil</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stat-row">
+    <div class="stat-item">
+      <span class="stat-num">$4,2B</span>
+      <span class="stat-label">investimento em IA<br>no Brasil em 2026</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">41,7%</span>
+      <span class="stat-label">participação BR<br>no mercado LATAM</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">5%</span>
+      <span class="stat-label">empresas que chegam<br>à 3ª geração de IA</span>
+    </div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Mercado Brasil</span>
+      <span class="story-source"><a href="https://docmanagement.com.br/05/08/2026/empresas-aceleram-investimentos-em-ia-mas-desafio-esta-em-estruturar-governanca-arquitetura-e-cultura-para-escalar-tecnologia/" target="_blank">IDC / Portal Information Management</a></span>
+    </div>
+    <h2>Brasil responde por 41,7% do mercado de IA da América Latina — <em>e a corrida acelera</em></h2>
+    <p>A IDC projeta que o Brasil investirá US$ 4,2 bilhões em IA em 2026, consolidando-se como o maior mercado da região. Mais de 80% das empresas brasileiras planejam ampliar seus orçamentos de IA em mais de 25% nos próximos 12 meses. O movimento, porém, enfrenta um gargalo estrutural: enquanto o capital aumenta, a maturidade organizacional não acompanha. Empresas investem em ferramentas sem construir a arquitetura de dados, a cultura e a governança necessárias para escalar. O risco de desperdício massivo de capital é real — e crescente.</p>
+    <a href="https://docmanagement.com.br/05/08/2026/empresas-aceleram-investimentos-em-ia-mas-desafio-esta-em-estruturar-governanca-arquitetura-e-cultura-para-escalar-tecnologia/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story" style="border-bottom:none;">
+    <div class="story-meta">
+      <span class="story-tag">Transformação Digital</span>
+      <span class="story-source"><a href="https://docmanagement.com.br/05/06/2026/pesquisa-revela-brasil-escala-agentes-de-ia-e-empresas-apontam-responsabilidade-e-seguranca-como-fatores-mais-importantes/" target="_blank">Gartner / Portal Information Management</a></span>
+    </div>
+    <h2>Apenas 5% das empresas chegam à 3ª geração de IA — <em>governança é o gargalo real</em></h2>
+    <p>Pesquisa da Gartner com 782 líderes de infraestrutura e operações revela que apenas 28% dos projetos de IA atingem plenamente o ROI esperado — e 20% falham por completo. No Brasil, o cenário é ainda mais seletivo: só 5% das empresas chegam à terceira geração de maturidade em IA. O denominador comum das que avançam é sempre o mesmo: governança estruturada, liderança especializada e arquitetura de dados estabelecida antes da expansão. Para 59% das empresas, responsabilidade e segurança já superam o preço como critério de escolha de fornecedor — um sinal de que o mercado está amadurecendo.</p>
+    <a href="https://docmanagement.com.br/05/06/2026/pesquisa-revela-brasil-escala-agentes-de-ia-e-empresas-apontam-responsabilidade-e-seguranca-como-fatores-mais-importantes/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- PULLQUOTE -->
+  <div class="pullquote">
+    <blockquote>
+      "Investir em IA sem estruturar governança é como construir um arranha-céu sem fundação. Os primeiros andares ficam de pé — mas o colapso é questão de tempo."
+    </blockquote>
+    <cite>— Análise Editorial · Clikdata Drops #006 · 11 de Maio de 2026</cite>
+  </div>
+
+  <!-- PERSPECTIVA -->
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">💡 Perspectiva</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story" style="border-bottom:none; padding-bottom:28px;">
+    <h2>O que esses sinais significam para <em>líderes de transformação</em></h2>
+    <p style="margin-bottom:12px;">Três leituras práticas desta edição:</p>
+    <p style="margin-bottom:10px;"><strong>1. O capital já decidiu — e os atrasados pagarão caro.</strong> OpenAI a US$ 852 bilhões não é hype: é o mercado formalizando que a IA é infraestrutura crítica de longo prazo. Condicionais atreladas à AGI transformam a rodada também em uma aposta explícita sobre quando — não se — os modelos ultrapassarão a inteligência humana geral. Líderes que ainda aguardam "o momento certo" para escalar estão apostando contra uma tendência que já saiu das apostas e entrou nos balanços das maiores empresas do planeta.</p>
+    <p style="margin-bottom:10px;"><strong>2. Brasil tem janela — mas ela não fica aberta para sempre.</strong> US$ 4,2 bilhões, liderança regional e maturidade em pagamentos digitais são vantagens reais. O risco é dilapidar esse capital com pilotos sem estrutura. A diferença entre os 5% que chegam à 3ª geração e os 95% que ficam pelo caminho está em governança, arquitetura de dados e cultura — não em ferramentas. Escalar IA sem esses alicerces não é crescimento: é risco acumulado.</p>
+    <p><strong>3. A próxima fronteira é física.</strong> A fusão SpaceX + xAI sinaliza que a IA está migrando definitivamente do software para o mundo físico. Empresas industriais, de infraestrutura e logística que não estão mapeando essa convergência estão perdendo a mais importante janela de reposicionamento da próxima década. O fosso digital documentado pela Microsoft entre Norte e Sul Global não é geográfico — é de velocidade de decisão.</p>
+  </article>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">CLIKDATA<span>·</span>DROPS</div>
+
+      </div>
+      <div class="footer-links">
+        <a href="https://clikdata.com.br" target="_blank">clikdata.com.br</a>
+        <a href="#">Arquivos anteriores</a>
+        <a href="#">Descadastrar</a>
+        <a href="#">Contato</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      Publicado em 11 de maio de 2026 · Edição #006 · clikdata.com.br<br>
+      Este digest é gerado automaticamente com curadoria editorial humana.<br>
+      Fontes: TechCrunch, Bloomberg, Microsoft AI Economy Institute, IDC, Gartner, Portal Information Management, Crescendo AI.
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
