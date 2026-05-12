@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CLIKDATA DROPS — Edição #007 · Maio 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0f0f0f;
+    --paper: #f5f0e8;
+    --accent: #c8401a;
+    --accent2: #1a3c5e;
+    --muted: #7a7060;
+    --rule: #d4cfc4;
+    --tag-bg: #1a3c5e;
+    --tag-color: #f5f0e8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #e8e3d8;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrapper {
+    max-width: 680px;
+    margin: 40px auto;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    box-shadow: 4px 4px 0 #c4bfb4, 8px 8px 0 #b4afa4;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    border-bottom: 3px double var(--ink);
+    padding: 0;
+    position: relative;
+  }
+
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 32px 10px;
+    border-bottom: 1px solid var(--rule);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  .masthead {
+    padding: 28px 32px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--ink);
+    position: relative;
+  }
+
+  .masthead::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--accent);
+    margin: 0 auto 16px;
+  }
+
+  .masthead h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1;
+    color: var(--ink);
+  }
+
+  .masthead h1 span {
+    color: var(--accent);
+  }
+
+  .tagline {
+    margin-top: 8px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .edition-bar {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 10px 32px;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  /* ── INTRO ── */
+  .intro {
+    padding: 28px 32px 24px;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .intro-dropcap {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 0.85;
+    color: var(--accent);
+    float: left;
+    margin-right: 4px;
+    margin-top: 6px;
+  }
+
+  .intro p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: #2a2520;
+  }
+
+  /* ── SECTION HEADER ── */
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 32px 0;
+    margin-bottom: 4px;
+  }
+
+  .section-flag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    background: var(--tag-bg);
+    color: var(--tag-color);
+    padding: 4px 10px;
+    white-space: nowrap;
+  }
+
+  .section-flag.red { background: var(--accent); }
+
+  .section-rule {
+    flex: 1;
+    height: 1px;
+    background: var(--ink);
+  }
+
+  /* ── STORY CARD ── */
+  .story {
+    padding: 20px 32px;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+  }
+
+  .story:last-of-type { border-bottom: none; }
+
+  .story-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .story-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 2px 7px;
+  }
+
+  .story-source {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+  }
+
+  .story h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+
+  .story h2 em {
+    font-style: italic;
+    color: var(--accent2);
+  }
+
+  .story p {
+    font-size: 14px;
+    line-height: 1.72;
+    color: #2a2520;
+  }
+
+  .story .number-callout {
+    float: right;
+    margin: 0 0 8px 18px;
+    text-align: center;
+    border: 2px solid var(--ink);
+    padding: 12px 16px;
+    min-width: 88px;
+  }
+
+  .story .number-callout .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--accent);
+    display: block;
+    line-height: 1;
+  }
+
+  .story .number-callout .num-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 4px;
+  }
+
+  /* ── DIVIDER ── */
+  .section-divider {
+    border: none;
+    border-top: 3px double var(--ink);
+    margin: 8px 32px 0;
+  }
+
+  /* ── DESTAQUE BRASIL ── */
+  .brasil-strip {
+    background: var(--accent2);
+    color: var(--paper);
+    padding: 6px 32px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .brasil-strip::before {
+    content: '▶';
+    font-size: 8px;
+  }
+
+  /* ── STAT ROW ── */
+  .stat-row {
+    display: flex;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .stat-item {
+    flex: 1;
+    padding: 20px 24px;
+    border-right: 1px solid var(--rule);
+    text-align: center;
+  }
+
+  .stat-item:last-child { border-right: none; }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--accent2);
+    display: block;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 6px;
+    line-height: 1.4;
+  }
+
+  /* ── PULLQUOTE ── */
+  .pullquote {
+    margin: 0;
+    padding: 24px 40px;
+    border-top: 2px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+    background: #ede8de;
+  }
+
+  .pullquote blockquote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 19px;
+    line-height: 1.5;
+    color: var(--ink);
+    text-align: center;
+  }
+
+  .pullquote cite {
+    display: block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: center;
+    font-style: normal;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 28px 32px;
+    border-top: 3px double var(--accent);
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333;
+  }
+
+  .footer-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 900;
+  }
+
+  .footer-brand span { color: var(--accent); }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: right;
+  }
+
+  .footer-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: #888;
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .footer-bottom {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: #555;
+    letter-spacing: 0.06em;
+    line-height: 1.6;
+  }
+
+  .routine-badge {
+    display: inline-block;
+    margin-top: 12px;
+    background: var(--accent);
+    color: white;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+  }
+
+  .story-source a {
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--muted);
+    transition: color 0.15s;
+  }
+  .story-source a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+  .read-more {
+    display: inline-block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent2);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent2);
+    padding-bottom: 1px;
+  }
+  .read-more:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+  @media (max-width: 600px) {
+    .wrapper { margin: 0; box-shadow: none; }
+    .masthead h1 { font-size: 38px; }
+    .stat-row { flex-direction: column; }
+    .stat-item { border-right: none; border-bottom: 1px solid var(--rule); }
+    .header-top { flex-direction: column; gap: 4px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-top">
+      <span>Edição #007</span>
+      <span>12 de maio de 2026</span>
+      <span>Diária · IA &amp; Transformação</span>
+    </div>
+    <div class="masthead">
+      <h1>CLIKDATA<span style="color:var(--accent)">·</span>DROPS</h1>
+      <p class="tagline">IA · Tecnologia · Transformação Digital · Edição Diária</p>
+    </div>
+    <div class="edition-bar">
+      <span>🌍 Mundo</span>
+      <span>🇧🇷 Brasil</span>
+      <span>📊 Números</span>
+      <span>💡 Perspectiva</span>
+    </div>
+  </header>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <p>
+      <span class="intro-dropcap">A</span>
+      IA cruzou uma linha que não tem volta: pela primeira vez, um exploit zero-day foi comprovadamente gerado por hackers usando inteligência artificial. Ao mesmo tempo, o Stanford HAI documenta que a adoção global bateu recordes históricos — enquanto a transparência dos modelos despencou. E no Brasil, universidades e governo se movem para estabelecer as regras do jogo antes que a corrida fique grande demais para ser governada. Esta edição mapeia as fronteiras que estão sendo redesenhadas agora.
+    </p>
+  </section>
+
+  <!-- ═══ MUNDO ═══ -->
+  <div class="section-header">
+    <span class="section-flag red">🌍 Mundo</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">IA &amp; Segurança</span>
+      <span class="story-source"><a href="https://www.cnbc.com/2026/05/11/google-thwarts-effort-hacker-group-use-ai-mass-exploitation-event.html" target="_blank">CNBC / Google GTIG</a></span>
+    </div>
+    <div class="number-callout">
+      <span class="num">1º</span>
+      <span class="num-label">exploit zero-day<br>gerado por IA</span>
+    </div>
+    <h2>Google bloqueia o primeiro exploit zero-day <em>criado por IA</em> — um marco sombrio</h2>
+    <p>O Grupo de Inteligência de Ameaças do Google identificou e neutralizou o primeiro exploit zero-day comprovadamente gerado por inteligência artificial, usado por um grupo de hackers para planejar um ataque de exploração em massa. O bug visava contornar a autenticação de dois fatores em uma plataforma de administração web de código aberto. As evidências do uso de IA são inequívocas: docstrings educacionais excessivas, pontuações CVSS alucinadas e formatação Pythônica característica de LLMs. O sinal para o mercado de segurança é claro — a barreira de entrada para ataques sofisticados acabou de cair de forma permanente.</p>
+    <a href="https://www.cnbc.com/2026/05/11/google-thwarts-effort-hacker-group-use-ai-mass-exploitation-event.html" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Adoção Global</span>
+      <span class="story-source"><a href="https://hai.stanford.edu/news/inside-the-ai-index-12-takeaways-from-the-2026-report" target="_blank">Stanford HAI · AI Index 2026</a></span>
+    </div>
+    <h2>Stanford AI Index 2026: adoção recorde, <em>transparência em queda livre</em></h2>
+    <p>O AI Index 2026 de Stanford revela que a IA generativa atingiu 53% de adoção populacional em apenas três anos — ritmo superior ao PC ou à internet. O valor estimado das ferramentas de IA para consumidores americanos chegou a US$ 172 bilhões ao ano, com o valor mediano por usuário triplicando de 2025 para 2026. O dado que deveria preocupar líderes: o índice de transparência dos modelos fundacionais caiu de 58 para 40 pontos, e os incidentes documentados com IA saltaram de 233 para 362 em 12 meses. Adoção recorde com governança em declínio é uma combinação que exige atenção redobrada.</p>
+    <a href="https://hai.stanford.edu/news/inside-the-ai-index-12-takeaways-from-the-2026-report" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Infraestrutura</span>
+      <span class="story-source"><a href="https://www.tomshardware.com/tech-industry/big-tech/big-techs-ai-spending-plans-reach-725-billion" target="_blank">Tom's Hardware / Financial Times</a></span>
+    </div>
+    <h2>Big Techs vão gastar <em>US$ 725 bilhões</em> em infraestrutura de IA em 2026</h2>
+    <p>Google, Amazon, Microsoft e Meta projetam gastos combinados de capital de US$ 725 bilhões em 2026 — alta de 77% sobre o recorde de US$ 410 bilhões de 2025. Os recursos são destinados principalmente a data centers, chips customizados e GPUs para sustentar a corrida pela IA. O volume reacendeu o debate em Wall Street sobre se o nível de investimento está justificado pelos retornos reais já gerados. Para o ecossistema de fornecedores, parceiros e clientes dessas empresas, o sinal é inequívoco: a infraestrutura de IA não é mais um diferencial — é o piso mínimo de competição.</p>
+    <a href="https://www.tomshardware.com/tech-industry/big-tech/big-techs-ai-spending-plans-reach-725-billion" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- ═══ BRASIL ═══ -->
+  <hr class="section-divider">
+  <div class="brasil-strip">Brasil avança em governança digital — universidades e governo definem as regras da IA</div>
+
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">🇧🇷 Brasil</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stat-row">
+    <div class="stat-item">
+      <span class="stat-num">0,79</span>
+      <span class="stat-label">nota BR no índice<br>de gov. digital OCDE</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">84%</span>
+      <span class="stat-label">estudantes brasileiros<br>que usam IA</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">79%</span>
+      <span class="stat-label">professores que<br>já usam IA</span>
+    </div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Transformação Digital</span>
+      <span class="story-source"><a href="https://www.gov.br/gestao/pt-br/assuntos/noticias/2026/maio/governo-do-brasil-e-movimento-brasil-competitivo-lancam-parceria-para-mapear-a-transformacao-digital-no-brasil" target="_blank">Gov.br / MGI</a></span>
+    </div>
+    <h2>Brasil lança Observatório Nacional de Governo Digital — <em>maturidade municipal no radar</em></h2>
+    <p>O Ministério da Gestão e Inovação (MGI) e o Movimento Brasil Competitivo (MBC), com apoio do Insper, formalizaram a criação do Observatório Brasileiro de Governo Digital. A plataforma consolidará indicadores comparáveis de interoperabilidade, governança e capacidade digital de estados e municípios, ajudando a identificar gargalos e disseminar boas práticas. O lançamento ocorre após o Brasil atingir nota 0,79 no Índice de Governo Digital da OCDE — acima da média da organização. Para líderes do setor público e consultores de transformação, o observatório representa uma ferramenta concreta de benchmarking e priorização de investimentos digitais.</p>
+    <a href="https://www.gov.br/gestao/pt-br/assuntos/noticias/2026/maio/governo-do-brasil-e-movimento-brasil-competitivo-lancam-parceria-para-mapear-a-transformacao-digital-no-brasil" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story" style="border-bottom:none;">
+    <div class="story-meta">
+      <span class="story-tag">IA &amp; Educação</span>
+      <span class="story-source"><a href="https://tvbrasil.ebc.com.br/reporter-brasil/2026/05/universidades-criam-regras-para-uso-etico-da-inteligencia-artificial" target="_blank">TV Brasil / EBC</a></span>
+    </div>
+    <h2>USP, Unicamp e Unesp criam protocolos para IA — <em>regulação nacional em vista</em></h2>
+    <p>Em maio de 2026, USP, Unicamp e Unesp formalizaram protocolos para o uso de inteligência artificial em pesquisas e atividades acadêmicas, exigindo declaração das ferramentas utilizadas, versões e prompts empregados. O Conselho Nacional de Educação trabalha na primeira regulamentação nacional sobre IA no ensino básico e superior, com aprovação prevista pelo MEC ainda neste semestre. Os números justificam a urgência: 84% dos estudantes e 79% dos professores brasileiros já utilizam ferramentas de IA no contexto escolar. O Brasil sinaliza que pretende liderar a regulação da IA educacional na América Latina antes que o vácuo normativo se consolide.</p>
+    <a href="https://tvbrasil.ebc.com.br/reporter-brasil/2026/05/universidades-criam-regras-para-uso-etico-da-inteligencia-artificial" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- PULLQUOTE -->
+  <div class="pullquote">
+    <blockquote>
+      "A IA que não pode ser explicada não pode ser confiada. Transparência não é burocracia — é a fundação da confiança institucional que sustenta toda adoção de longo prazo."
+    </blockquote>
+    <cite>— Análise Editorial · Clikdata Drops #007 · 12 de Maio de 2026</cite>
+  </div>
+
+  <!-- PERSPECTIVA -->
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">💡 Perspectiva</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story" style="border-bottom:none; padding-bottom:28px;">
+    <h2>O que esses sinais significam para <em>líderes de transformação</em></h2>
+    <p style="margin-bottom:12px;">Três leituras práticas desta edição:</p>
+    <p style="margin-bottom:10px;"><strong>1. Segurança por IA exige IA como defesa.</strong> O primeiro exploit zero-day gerado por IA não é um episódio isolado — é o anúncio de uma nova era de ameaças. Organizações que ainda tratam cibersegurança como função de suporte precisam reposicioná-la como prioridade estratégica. Ferramentas de defesa baseadas em IA deixaram de ser diferencial e passaram a ser requisito mínimo. Quem não investe agora pagará o custo de um incidente depois.</p>
+    <p style="margin-bottom:10px;"><strong>2. Adoção sem transparência é risco sistêmico.</strong> O paradoxo documentado pelo Stanford HAI — mais adoção, menos transparência — é o sinal de alerta mais importante desta edição. Com incidentes de IA crescendo 55% em um ano, empresas que escalam sem estrutura de explicabilidade e auditoria estão acumulando passivo invisível. Reguladores em todo o mundo estão atentos a esse gap, e a janela para autocorreção é menor do que parece.</p>
+    <p><strong>3. Brasil governa antes de escalar — e isso é vantagem.</strong> A criação do Observatório de Governo Digital e os protocolos acadêmicos de IA são movimentos de maturidade institucional que raramente acontecem antes da crise. Para empresas que operam em setores regulados ou dependem de contratos públicos, antecipar esses frameworks é mais barato do que se adaptar após a imposição regulatória. O Brasil que lidera a América Latina em adoção também lidera em governança — e essa combinação é rara no mundo.</p>
+  </article>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">CLIKDATA<span>·</span>DROPS</div>
+      </div>
+      <div class="footer-links">
+        <a href="https://clikdata.com.br" target="_blank">clikdata.com.br</a>
+        <a href="#">Arquivos anteriores</a>
+        <a href="#">Descadastrar</a>
+        <a href="#">Contato</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      Publicado em 12 de maio de 2026 · Edição #007 · clikdata.com.br<br>
+      Este digest é gerado automaticamente com curadoria editorial humana.<br>
+      Fontes: CNBC, Google GTIG, Stanford HAI, Tom's Hardware, Financial Times, Gov.br, TV Brasil / EBC.
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
