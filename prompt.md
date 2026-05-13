@@ -3,7 +3,7 @@ Diariamente, gere a nova edição da newsletter Clickdata Drops.
 1. PESQUISE as 5 principais notícias das últimas 24 horas sobre IA, 
    Tecnologia e Transformação Digital — Brasil e mundo.
    Priorize fontes confiáveis (Stanford HAI, MIT Tech Review, 
-   Exame, Valor, TechCrunch, IDC, Gartner).
+   Exame, Valor, TechCrunch, IDC, Gartner), https://www.zdnet.com/topic/digital-transformation/
 
 2. Para cada notícia inclua obrigatoriamente:
    - O link original da fonte
