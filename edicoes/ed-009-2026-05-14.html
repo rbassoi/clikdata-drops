@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CLIKDATA DROPS — Edição #009 · Maio 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0f0f0f;
+    --paper: #f5f0e8;
+    --accent: #c8401a;
+    --accent2: #1a3c5e;
+    --muted: #7a7060;
+    --rule: #d4cfc4;
+    --tag-bg: #1a3c5e;
+    --tag-color: #f5f0e8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #e8e3d8;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrapper {
+    max-width: 680px;
+    margin: 40px auto;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    box-shadow: 4px 4px 0 #c4bfb4, 8px 8px 0 #b4afa4;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    border-bottom: 3px double var(--ink);
+    padding: 0;
+    position: relative;
+  }
+
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 32px 10px;
+    border-bottom: 1px solid var(--rule);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  .masthead {
+    padding: 28px 32px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--ink);
+    position: relative;
+  }
+
+  .masthead::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--accent);
+    margin: 0 auto 16px;
+  }
+
+  .masthead h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1;
+    color: var(--ink);
+  }
+
+  .masthead h1 span {
+    color: var(--accent);
+  }
+
+  .tagline {
+    margin-top: 8px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .edition-bar {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 10px 32px;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  /* ── INTRO ── */
+  .intro {
+    padding: 28px 32px 24px;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .intro-dropcap {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 0.85;
+    color: var(--accent);
+    float: left;
+    margin-right: 4px;
+    margin-top: 6px;
+  }
+
+  .intro p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: #2a2520;
+  }
+
+  /* ── SECTION HEADER ── */
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 32px 0;
+    margin-bottom: 4px;
+  }
+
+  .section-flag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    background: var(--tag-bg);
+    color: var(--tag-color);
+    padding: 4px 10px;
+    white-space: nowrap;
+  }
+
+  .section-flag.red { background: var(--accent); }
+
+  .section-rule {
+    flex: 1;
+    height: 1px;
+    background: var(--ink);
+  }
+
+  /* ── STORY CARD ── */
+  .story {
+    padding: 20px 32px;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+  }
+
+  .story:last-of-type { border-bottom: none; }
+
+  .story-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .story-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 2px 7px;
+  }
+
+  .story-source {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+  }
+
+  .story h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+
+  .story h2 em {
+    font-style: italic;
+    color: var(--accent2);
+  }
+
+  .story p {
+    font-size: 14px;
+    line-height: 1.72;
+    color: #2a2520;
+  }
+
+  .story .number-callout {
+    float: right;
+    margin: 0 0 8px 18px;
+    text-align: center;
+    border: 2px solid var(--ink);
+    padding: 12px 16px;
+    min-width: 88px;
+  }
+
+  .story .number-callout .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--accent);
+    display: block;
+    line-height: 1;
+  }
+
+  .story .number-callout .num-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 4px;
+  }
+
+  /* ── DIVIDER ── */
+  .section-divider {
+    border: none;
+    border-top: 3px double var(--ink);
+    margin: 8px 32px 0;
+  }
+
+  /* ── DESTAQUE BRASIL ── */
+  .brasil-strip {
+    background: var(--accent2);
+    color: var(--paper);
+    padding: 6px 32px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .brasil-strip::before {
+    content: '▶';
+    font-size: 8px;
+  }
+
+  /* ── STAT ROW ── */
+  .stat-row {
+    display: flex;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .stat-item {
+    flex: 1;
+    padding: 20px 24px;
+    border-right: 1px solid var(--rule);
+    text-align: center;
+  }
+
+  .stat-item:last-child { border-right: none; }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--accent2);
+    display: block;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 6px;
+    line-height: 1.4;
+  }
+
+  /* ── PULLQUOTE ── */
+  .pullquote {
+    margin: 0;
+    padding: 24px 40px;
+    border-top: 2px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+    background: #ede8de;
+  }
+
+  .pullquote blockquote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 19px;
+    line-height: 1.5;
+    color: var(--ink);
+    text-align: center;
+  }
+
+  .pullquote cite {
+    display: block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: center;
+    font-style: normal;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 28px 32px;
+    border-top: 3px double var(--accent);
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333;
+  }
+
+  .footer-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 900;
+  }
+
+  .footer-brand span { color: var(--accent); }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: right;
+  }
+
+  .footer-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: #888;
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .footer-bottom {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: #555;
+    letter-spacing: 0.06em;
+    line-height: 1.6;
+  }
+
+  .routine-badge {
+    display: inline-block;
+    margin-top: 12px;
+    background: var(--accent);
+    color: white;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+  }
+
+  .story-source a {
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--muted);
+    transition: color 0.15s;
+  }
+  .story-source a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+  .read-more {
+    display: inline-block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent2);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent2);
+    padding-bottom: 1px;
+  }
+  .read-more:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+  @media (max-width: 600px) {
+    .wrapper { margin: 0; box-shadow: none; }
+    .masthead h1 { font-size: 38px; }
+    .stat-row { flex-direction: column; }
+    .stat-item { border-right: none; border-bottom: 1px solid var(--rule); }
+    .header-top { flex-direction: column; gap: 4px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-top">
+      <span>Edição #009</span>
+      <span>14 de maio de 2026</span>
+      <span>Diária · IA &amp; Transformação</span>
+    </div>
+    <div class="masthead">
+      <h1>CLIKDATA<span style="color:var(--accent)">·</span>DROPS</h1>
+      <p class="tagline">IA · Tecnologia · Transformação Digital · Edição Diária</p>
+    </div>
+    <div class="edition-bar">
+      <span>🌍 Mundo</span>
+      <span>🇧🇷 Brasil</span>
+      <span>📊 Números</span>
+      <span>💡 Perspectiva</span>
+    </div>
+  </header>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <p>
+      <span class="intro-dropcap">D</span>
+      e reestruturações bilionárias a data centers no espaço: a IA de 14 de maio de 2026 não para de redesenhar fronteiras. A Microsoft e a OpenAI enterraram a exclusividade — e a corrida por capacidade computacional chegou à órbita terrestre. O Gartner revela que 70% dos CMOs ainda não estão prontos para escalar o que planejam. No Brasil, quem domina IA já ganha 28% a mais — e o governo corre para mapear quem está ficando para trás. Aqui estão os sinais que líderes precisam ler hoje.
+    </p>
+  </section>
+
+  <!-- ═══ MUNDO ═══ -->
+  <div class="section-header">
+    <span class="section-flag red">🌍 Mundo</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">IA Mundo</span>
+      <span class="story-source"><a href="https://blogs.microsoft.com/blog/2026/04/27/the-next-phase-of-the-microsoft-openai-partnership/" target="_blank">Microsoft Blog</a></span>
+    </div>
+    <div class="number-callout">
+      <span class="num">$100B</span>
+      <span class="num-label">deal OpenAI<br>com AWS</span>
+    </div>
+    <h2>Microsoft e OpenAI abandonam exclusividade — o mercado de IA em nuvem <em>se fragmenta</em></h2>
+    <p>Em uma virada estratégica de grandes proporções, Microsoft e OpenAI reestruturaram sua parceria histórica, migrando para um modelo de licenciamento não exclusivo. A partir de agora, a OpenAI pode atender clientes em qualquer provedor de nuvem — não apenas no Azure. A Microsoft mantém status de parceira primária até 2032, mas deixa de pagar repasses de receita. O movimento ocorre semanas após a OpenAI firmar acordo estratégico com a Amazon Web Services avaliado em até US$ 100 bilhões, sinalizando que o mercado de IA em nuvem caminha para um cenário multi-cloud, onde a tecnologia de fronteira estará disponível em vários provedores simultaneamente.</p>
+    <a href="https://blogs.microsoft.com/blog/2026/04/27/the-next-phase-of-the-microsoft-openai-partnership/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Tecnologia</span>
+      <span class="story-source"><a href="https://techstartups.com/2026/05/13/top-tech-news-today-may-13-2026/" target="_blank">Tech Startups / SpaceX</a></span>
+    </div>
+    <div class="number-callout">
+      <span class="num">$1,75T</span>
+      <span class="num-label">valuation<br>SpaceX</span>
+    </div>
+    <h2>Google e SpaceX negociam <em>data centers em órbita</em> para suprir a sede global por compute</h2>
+    <p>O Google está em negociações avançadas com a SpaceX para instalar data centers em órbita terrestre — uma aposta para reduzir drasticamente o custo de processamento de IA à medida que a demanda global por capacidade computacional explode. A SpaceX posiciona a infraestrutura orbital como a opção de menor custo para IA nos próximos anos, estratégia que ganha ainda mais peso às vésperas do planejado IPO da empresa, avaliada em US$ 1,75 trilhão. A corrida por compute passou das cidades para o espaço: o próximo grande gargalo da IA pode estar na atmosfera.</p>
+    <a href="https://techstartups.com/2026/05/13/top-tech-news-today-may-13-2026/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Transformação Digital</span>
+      <span class="story-source"><a href="https://www.gartner.com/en/newsroom/press-releases/2026-05-11-gartner-2026-cmo-spend-survey-finds-cmos-allocate-15-point-3-percent-of-marketing-budgets-to-ai-but-only-30-percent-are-ready-to-scale-ai-capabilities" target="_blank">Gartner Marketing Symposium 2026</a></span>
+    </div>
+    <h2>Gartner: CMOs investem 15,3% do budget em IA — mas <em>apenas 30%</em> estão prontos para escalar</h2>
+    <p>A pesquisa do Gartner Marketing Symposium/Xpo 2026 expõe o maior gap do momento: líderes de marketing esperam que a automação impulsionada por IA salte de 16% para 36% até 2028, e já destinam 15,3% dos orçamentos à tecnologia. Mas apenas 30% possuem capacidades maduras o suficiente para escalar. O número revela que a ambição superou a capacidade de execução na maioria das organizações globais — e que o diferencial competitivo dos próximos 24 meses estará justamente na capacidade de cruzar essa fronteira antes da concorrência.</p>
+    <a href="https://www.gartner.com/en/newsroom/press-releases/2026-05-11-gartner-2026-cmo-spend-survey-finds-cmos-allocate-15-point-3-percent-of-marketing-budgets-to-ai-but-only-30-percent-are-ready-to-scale-ai-capabilities" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- ═══ BRASIL ═══ -->
+  <hr class="section-divider">
+  <div class="brasil-strip">No Brasil, IA já eleva salários em 28% — mas exige reinvenção do modelo operacional</div>
+
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">🇧🇷 Brasil</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stat-row">
+    <div class="stat-item">
+      <span class="stat-num">15,3%</span>
+      <span class="stat-label">dos budgets de marketing<br>alocados em IA (Gartner)</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">30%</span>
+      <span class="stat-label">das organizações<br>prontas para escalar IA</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">+28%</span>
+      <span class="stat-label">salário premium para<br>vagas com IA no Brasil</span>
+    </div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">IA Brasil</span>
+      <span class="story-source"><a href="https://www.braining.com.br/2026/05/13/ia-exige-novo-modelo-operacional-e-pode-elevar-salarios-afirma-especialista-em-ia/" target="_blank">Braining</a></span>
+    </div>
+    <h2>"IA exige novo modelo operacional" — e quem se adapta já ganha <em>R$ 35 mil/mês</em></h2>
+    <p>Especialistas em IA alertam que o impacto da inteligência artificial no Brasil vai muito além da adoção de ferramentas: exige uma reinvenção profunda do modelo operacional das organizações. A transição esperada é clara — de executores de tarefas repetitivas para orquestradores de inteligência. Os dados confirmam o prêmio para quem faz essa transição: vagas que exigem competências em IA já pagam em média 28% a mais, com salários sênior ultrapassando R$ 35 mil mensais. Para líderes de RH e transformação digital, a mensagem é direta — requalificação não é mais estratégia de longo prazo; é urgência do presente.</p>
+    <a href="https://www.braining.com.br/2026/05/13/ia-exige-novo-modelo-operacional-e-pode-elevar-salarios-afirma-especialista-em-ia/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story" style="border-bottom:none;">
+    <div class="story-meta">
+      <span class="story-tag">Transformação Digital</span>
+      <span class="story-source"><a href="https://agenciagov.ebc.com.br/noticias/202605/governo-do-brasil-e-movimento-brasil-competitivo-lancam-parceria-para-mapear-a-transformacao-digital-no-brasil" target="_blank">Agência Gov / MGI</a></span>
+    </div>
+    <h2>Governo e MBC lançam <em>Observatório de Maturidade Digital</em> para estados e municípios</h2>
+    <p>O Ministério da Gestão e da Inovação em Serviços Públicos (MGI) e o Movimento Brasil Competitivo (MBC) formalizaram parceria para a criação do Observatório Brasileiro de Governo Digital — uma plataforma com indicadores de maturidade digital de estados e municípios em tempo real. A iniciativa busca mapear a transformação digital no setor público, subsidiar políticas de investimento e acelerar a convergência entre os entes federativos no uso de tecnologia. Para o setor privado, o dado importa: onde o governo digital avança, o ambiente regulatório e de negócios tende a acompanhar.</p>
+    <a href="https://agenciagov.ebc.com.br/noticias/202605/governo-do-brasil-e-movimento-brasil-competitivo-lancam-parceria-para-mapear-a-transformacao-digital-no-brasil" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- PULLQUOTE -->
+  <div class="pullquote">
+    <blockquote>
+      "A ambição em IA está nas estratégias de todas as organizações. A maturidade para executar, em apenas 30% delas. Esse gap é a maior oportunidade — e o maior risco — do momento."
+    </blockquote>
+    <cite>— Gartner Marketing Symposium/Xpo · Síntese editorial · Clikdata Drops #009 · 14 de maio de 2026</cite>
+  </div>
+
+  <!-- PERSPECTIVA -->
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">💡 Perspectiva</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story" style="border-bottom:none; padding-bottom:28px;">
+    <h2>O que esses sinais significam para <em>líderes de transformação</em></h2>
+    <p style="margin-bottom:12px;">Três leituras práticas desta edição:</p>
+    <p style="margin-bottom:10px;"><strong>1. Multi-cloud é o novo padrão da IA de fronteira.</strong> O fim da exclusividade Microsoft-OpenAI não é uma notícia de bastidores — é uma mudança de arquitetura. Empresas que apostaram em um único provedor de IA precisam revisar sua estratégia de fornecedores. Diversificação de modelos e portabilidade de workloads passam a ser requisitos de governança, não apenas de resiliência técnica.</p>
+    <p style="margin-bottom:10px;"><strong>2. O gap de maturidade do Gartner é um mapa de oportunidades.</strong> Se apenas 30% das organizações estão prontas para escalar IA, isso significa que 70% do mercado ainda não capturou valor. Para consultorias, integradores e líderes de transformação interna, esse número define onde atuar nos próximos 18 meses. Quem resolver o problema de escala — não de adoção — ganha a corrida.</p>
+    <p><strong>3. Requalificação em IA no Brasil é arbitragem salarial.</strong> Um premium de 28% e salários sênior acima de R$ 35 mil transformam o investimento em formação em IA em um dos melhores retornos disponíveis para profissionais e organizações brasileiras. Empresas que estruturarem trilhas internas de upskilling agora colherão retenção de talentos e vantagem competitiva antes que o mercado eleve ainda mais esse patamar.</p>
+  </article>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">CLIKDATA<span>·</span>DROPS</div>
+      </div>
+      <div class="footer-links">
+        <a href="https://clikdata.com.br" target="_blank">clikdata.com.br</a>
+        <a href="#">Arquivos anteriores</a>
+        <a href="#">Descadastrar</a>
+        <a href="#">Contato</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      Publicado em 14 de maio de 2026 · Edição #009 · clikdata.com.br<br>
+      Este digest é gerado automaticamente com curadoria editorial humana.<br>
+      Fontes: Microsoft Blog, Tech Startups, Gartner, Braining, Agência Gov / MGI, Movimento Brasil Competitivo.
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
