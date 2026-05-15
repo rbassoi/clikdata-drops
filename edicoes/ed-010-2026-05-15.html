@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CLIKDATA DROPS — Edição #010 - Maio 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0f0f0f;
+    --paper: #f5f0e8;
+    --accent: #c8401a;
+    --accent2: #1a3c5e;
+    --muted: #7a7060;
+    --rule: #d4cfc4;
+    --tag-bg: #1a3c5e;
+    --tag-color: #f5f0e8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #e8e3d8;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrapper {
+    max-width: 680px;
+    margin: 40px auto;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    box-shadow: 4px 4px 0 #c4bfb4, 8px 8px 0 #b4afa4;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    border-bottom: 3px double var(--ink);
+    padding: 0;
+    position: relative;
+  }
+
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 32px 10px;
+    border-bottom: 1px solid var(--rule);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  .masthead {
+    padding: 28px 32px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--ink);
+    position: relative;
+  }
+
+  .masthead::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--accent);
+    margin: 0 auto 16px;
+  }
+
+  .masthead h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1;
+    color: var(--ink);
+  }
+
+  .masthead h1 span {
+    color: var(--accent);
+  }
+
+  .tagline {
+    margin-top: 8px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .edition-bar {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 10px 32px;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  /* ── INTRO ── */
+  .intro {
+    padding: 28px 32px 24px;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .intro-dropcap {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 0.85;
+    color: var(--accent);
+    float: left;
+    margin-right: 4px;
+    margin-top: 6px;
+  }
+
+  .intro p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: #2a2520;
+  }
+
+  /* ── SECTION HEADER ── */
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 32px 0;
+    margin-bottom: 4px;
+  }
+
+  .section-flag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    background: var(--tag-bg);
+    color: var(--tag-color);
+    padding: 4px 10px;
+    white-space: nowrap;
+  }
+
+  .section-flag.red { background: var(--accent); }
+
+  .section-rule {
+    flex: 1;
+    height: 1px;
+    background: var(--ink);
+  }
+
+  /* ── STORY CARD ── */
+  .story {
+    padding: 20px 32px;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+  }
+
+  .story:last-of-type { border-bottom: none; }
+
+  .story-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .story-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 2px 7px;
+  }
+
+  .story-source {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+  }
+
+  .story h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+
+  .story h2 em {
+    font-style: italic;
+    color: var(--accent2);
+  }
+
+  .story p {
+    font-size: 14px;
+    line-height: 1.72;
+    color: #2a2520;
+  }
+
+  .story .number-callout {
+    float: right;
+    margin: 0 0 8px 18px;
+    text-align: center;
+    border: 2px solid var(--ink);
+    padding: 12px 16px;
+    min-width: 88px;
+  }
+
+  .story .number-callout .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--accent);
+    display: block;
+    line-height: 1;
+  }
+
+  .story .number-callout .num-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 4px;
+  }
+
+  /* ── DIVIDER ── */
+  .section-divider {
+    border: none;
+    border-top: 3px double var(--ink);
+    margin: 8px 32px 0;
+  }
+
+  /* ── DESTAQUE BRASIL ── */
+  .brasil-strip {
+    background: var(--accent2);
+    color: var(--paper);
+    padding: 6px 32px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .brasil-strip::before {
+    content: '▶';
+    font-size: 8px;
+  }
+
+  /* ── STAT ROW ── */
+  .stat-row {
+    display: flex;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .stat-item {
+    flex: 1;
+    padding: 20px 24px;
+    border-right: 1px solid var(--rule);
+    text-align: center;
+  }
+
+  .stat-item:last-child { border-right: none; }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--accent2);
+    display: block;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 6px;
+    line-height: 1.4;
+  }
+
+  /* ── PULLQUOTE ── */
+  .pullquote {
+    margin: 0;
+    padding: 24px 40px;
+    border-top: 2px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+    background: #ede8de;
+  }
+
+  .pullquote blockquote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 19px;
+    line-height: 1.5;
+    color: var(--ink);
+    text-align: center;
+  }
+
+  .pullquote cite {
+    display: block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: center;
+    font-style: normal;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 28px 32px;
+    border-top: 3px double var(--accent);
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333;
+  }
+
+  .footer-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 900;
+  }
+
+  .footer-brand span { color: var(--accent); }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: right;
+  }
+
+  .footer-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: #888;
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .footer-bottom {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: #555;
+    letter-spacing: 0.06em;
+    line-height: 1.6;
+  }
+
+  .routine-badge {
+    display: inline-block;
+    margin-top: 12px;
+    background: var(--accent);
+    color: white;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+  }
+
+
+  .story-source a {
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--muted);
+    transition: color 0.15s;
+  }
+  .story-source a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+  .read-more {
+    display: inline-block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent2);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent2);
+    padding-bottom: 1px;
+  }
+  .read-more:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+  @media (max-width: 600px) {
+    .wrapper { margin: 0; box-shadow: none; }
+    .masthead h1 { font-size: 38px; }
+    .stat-row { flex-direction: column; }
+    .stat-item { border-right: none; border-bottom: 1px solid var(--rule); }
+    .header-top { flex-direction: column; gap: 4px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-top">
+      <span>Edição #010</span>
+      <span>15 de maio de 2026</span>
+      <span>Diária · IA &amp; Transformação</span>
+    </div>
+    <div class="masthead">
+      <h1>CLIKDATA<span style="color:var(--accent)">·</span>DROPS</h1>
+      <p class="tagline">IA · Tecnologia · Transformação Digital · Edição Diária</p>
+    </div>
+    <div class="edition-bar">
+      <span>🌍 Mundo</span>
+      <span>🇧🇷 Brasil</span>
+      <span>📊 Números</span>
+      <span>💡 Perspectiva</span>
+    </div>
+  </header>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <p>
+      <span class="intro-dropcap">A</span>
+      era dos agentes chegou — mas a maioria das organizações ainda não está pronta para ela. Nesta edição: o CEO do Baidu decreta o fim da competição por modelos e anuncia a era dos agentes; a Apple abre o iOS 27 para rivais como Google e Anthropic; a Snap demite 16% da força de trabalho citando IA. No Brasil, o Plano Nacional de IA mobiliza R$ 23 bilhões até 2028. E o Gartner adverte: 40% dos projetos de agentes de IA vão fracassar — não por falha tecnológica, mas por automação de processos quebrados.
+    </p>
+  </section>
+
+  <!-- ═══ MUNDO ═══ -->
+  <div class="section-header">
+    <span class="section-flag red">🌍 Mundo</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Agentes de IA</span>
+      <span class="story-source"><a href="https://technode.com/2026/05/14/baidu-create-2026-ceo-says-ai-is-moving-from-model-competition-to-ai-agent-era-foresees-rise-of-super-individuals/" target="_blank">TechNode · Baidu Create 2026</a></span>
+    </div>
+    <div class="number-callout">
+      <span class="num">DAA</span>
+      <span class="num-label">nova métrica<br>da era agêntica</span>
+    </div>
+    <h2>Baidu declara fim da corrida por modelos — <em>a era dos agentes</em> começa agora</h2>
+    <p>No Baidu Create 2026, realizado em 14 de maio, o CEO Robin Li anunciou que a competição da IA migra definitivamente dos modelos de linguagem para os agentes autônomos. Li propôs o índice DAA (Daily Active Agents — agentes ativos diários) como a nova métrica-chave da indústria, análoga ao DAU da era mobile: o que importa não é o custo dos tokens gerados, mas o valor das tarefas concluídas. O Baidu lançou quatro produtos agênticos: o assistente geral DuMate, o agente de código Miaoda (que já gera 90% do próprio código), a plataforma de humanos digitais Yijing e o agente auto-evolutivo Famou 2.0. A mensagem para o mercado global é clara: quem ainda mede sucesso em parâmetros de modelo está olhando para o retrovisor.</p>
+    <a href="https://technode.com/2026/05/14/baidu-create-2026-ceo-says-ai-is-moving-from-model-competition-to-ai-agent-era-foresees-rise-of-super-individuals/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Big Tech</span>
+      <span class="story-source"><a href="https://techcrunch.com/2026/05/05/apple-plans-to-make-ios-27-a-choose-your-own-adventure-of-ai-models/" target="_blank">TechCrunch · Bloomberg</a></span>
+    </div>
+    <h2>Apple abre iOS 27 para Google e Anthropic — <em>escolha o seu modelo</em> de IA</h2>
+    <p>A Apple anunciou que o iOS 27, iPadOS 27 e macOS 27 permitirão aos usuários escolher o modelo de IA que alimenta o Apple Intelligence — incluindo Google Gemini e Claude, da Anthropic. A funcionalidade, chamada internamente de "Extensions", estará disponível via App Store e poderá ser configurada diretamente em Ajustes. Siri, Writing Tools e Image Playground serão controláveis por provedores externos, criando o primeiro ecossistema de IA verdadeiramente multi-modelo em um sistema operacional de consumo. Detalhes adicionais serão revelados na WWDC em junho. A mudança consolida a Apple como plataforma — e não apenas como fornecedora — de IA.</p>
+    <a href="https://techcrunch.com/2026/05/05/apple-plans-to-make-ios-27-a-choose-your-own-adventure-of-ai-models/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Mercado de Trabalho</span>
+      <span class="story-source"><a href="https://techcrunch.com/2026/04/15/snap-is-cutting-1000-jobs-16-of-its-workforce/" target="_blank">TechCrunch · Variety</a></span>
+    </div>
+    <div class="number-callout">
+      <span class="num">65%</span>
+      <span class="num-label">código Snap<br>gerado por IA</span>
+    </div>
+    <h2>Snap demite 1.000 pessoas — 65% do código já é feito por IA e <em>equipes menores entregam mais</em></h2>
+    <p>A Snap anunciou o corte de aproximadamente 1.000 funcionários — 16% do quadro total — e o fechamento de mais de 300 vagas abertas. O CEO Evan Spiegel citou diretamente os "rápidos avanços em inteligência artificial" que permitem a equipes menores entregar os mesmos resultados. A companhia informa que a IA já gera 65% do novo código produzido internamente. A reestruturação deve reduzir custos anualizados em mais de US$ 500 milhões. O movimento insere-se numa onda mais ampla: mais de 85.000 trabalhadores do setor de tecnologia foram demitidos em 2026, muitos em reestruturações explicitamente ligadas à adoção de IA.</p>
+    <a href="https://techcrunch.com/2026/04/15/snap-is-cutting-1000-jobs-16-of-its-workforce/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- ═══ BRASIL ═══ -->
+  <hr class="section-divider">
+  <div class="brasil-strip">Brasil mobiliza R$ 23 bilhões para liderar IA na América Latina</div>
+
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">🇧🇷 Brasil</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stat-row">
+    <div class="stat-item">
+      <span class="stat-num">R$23B</span>
+      <span class="stat-label">investimento<br>Plano Br. IA até 2028</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">11%</span>
+      <span class="stat-label">organizações com<br>agentes em produção</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">85k+</span>
+      <span class="stat-label">demissões tech<br>em 2026 por IA</span>
+    </div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Política de IA</span>
+      <span class="story-source"><a href="https://docmanagement.com.br/05/14/2026/o-elo-invisivel-da-revolucao-da-inteligencia-artificial-no-brasil/" target="_blank">Portal Information Management</a></span>
+    </div>
+    <h2>O elo invisível da IA no Brasil: sem <em>dados, governança e gente</em>, os R$ 23 bilhões não chegam longe</h2>
+    <p>Publicado em 14 de maio, o relatório "O elo invisível da revolução da IA no Brasil" mapeia o principal gargalo do Plano Brasileiro de Inteligência Artificial: a infraestrutura de dados ainda é fragmentada, o déficit de profissionais capacitados é crescente e as estruturas de governança corporativa não acompanham o ritmo de adoção. O Brasil lidera a América Latina em intenção e investimento — com R$ 23 bilhões previstos até 2028 —, mas a execução depende de conectar educação técnica, regulação equilibrada e qualidade de dados. O relatório conclui que a janela de liderança regional existe, mas é estreita e requer ação coordenada agora.</p>
+    <a href="https://docmanagement.com.br/05/14/2026/o-elo-invisivel-da-revolucao-da-inteligencia-artificial-no-brasil/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story" style="border-bottom:none;">
+    <div class="story-meta">
+      <span class="story-tag">Transformação Digital</span>
+      <span class="story-source"><a href="https://www.cio.com/article/4117078/digital-transformation-2026-whats-in-whats-out.html" target="_blank">CIO.com · Gartner</a></span>
+    </div>
+    <h2>Gartner alerta: 40% dos projetos de agentes de IA vão falhar até 2027 — <em>o problema não é a tecnologia</em></h2>
+    <p>Apenas 11% das organizações globais têm agentes de IA em produção, enquanto 38% ainda estão em fase de piloto. O Gartner projeta que 40% desses projetos fracassarão até 2027 — não por limitações técnicas, mas porque as empresas estão automatizando processos operacionalmente quebrados em vez de redesenhá-los. A consultora aponta que o novo diferencial de 2026 não é ter IA generativa, mas integrá-la a fluxos de trabalho repensados. Organizações que tratam IA como substituto direto de tarefas existentes colhem ganhos pontuais; as que redesenham operações inteiras colhem vantagem estrutural.</p>
+    <a href="https://www.cio.com/article/4117078/digital-transformation-2026-whats-in-whats-out.html" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- PULLQUOTE -->
+  <div class="pullquote">
+    <blockquote>
+      "Tokens apenas refletem custo, não valor. O que importa é quantos agentes estão ativos e quantas tarefas eles completam por dia."
+    </blockquote>
+    <cite>— Robin Li, CEO do Baidu · Baidu Create 2026, 14 de maio de 2026</cite>
+  </div>
+
+  <!-- PERSPECTIVA -->
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">💡 Perspectiva</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story" style="border-bottom:none; padding-bottom:28px;">
+    <h2>A era dos agentes chegou — mas <em>chegar não é vencer</em></h2>
+    <p style="margin-bottom:12px;">Três leituras práticas desta edição:</p>
+    <p style="margin-bottom:10px;"><strong>1. A métrica mudou.</strong> O Baidu propõe DAA (Daily Active Agents) como o novo KPI da indústria. Organizações que ainda medem sucesso de IA em número de usuários treinados ou prompts enviados estão usando o painel de bordo errado. A pergunta certa é: quantos processos reais estão sendo completados por agentes hoje?</p>
+    <p style="margin-bottom:10px;"><strong>2. Automação de processo ruim = fracasso garantido.</strong> O alerta do Gartner (40% dos projetos falharão) não é pessimismo — é diagnóstico. Antes de delegar uma tarefa a um agente, redesenhe o processo. IA aplicada sobre ineficiência operacional escala o problema, não a solução.</p>
+    <p><strong>3. Brasil tem vantagem — mas precisa executar.</strong> R$ 23 bilhões de intenção não se convertem sozinhos em liderança. O "elo invisível" é exatamente o que separa países que lideram rankings de intenção de países que lideram em impacto: dados de qualidade, governança funcional e talentos formados. Essas três alavancas não esperam.</p>
+  </article>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">CLIKDATA<span>·</span>DROPS</div>
+
+      </div>
+      <div class="footer-links">
+        <a href="https://clikdata.com.br" target="_blank">clikdata.com.br</a>
+        <a href="#">Arquivos anteriores</a>
+        <a href="#">Descadastrar</a>
+        <a href="#">Contato</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      Publicado em 15 de maio de 2026 · Edição #010 · clikdata.com.br<br>
+      Este digest é gerado automaticamente com curadoria editorial humana.<br>
+      Fontes: TechNode, TechCrunch, Bloomberg, Gartner, CIO.com, Portal Information Management, Variety.
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
