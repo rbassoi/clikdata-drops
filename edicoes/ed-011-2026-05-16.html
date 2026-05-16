@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CLIKDATA DROPS — Edição #011 - Maio 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0f0f0f;
+    --paper: #f5f0e8;
+    --accent: #c8401a;
+    --accent2: #1a3c5e;
+    --muted: #7a7060;
+    --rule: #d4cfc4;
+    --tag-bg: #1a3c5e;
+    --tag-color: #f5f0e8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #e8e3d8;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrapper {
+    max-width: 680px;
+    margin: 40px auto;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    box-shadow: 4px 4px 0 #c4bfb4, 8px 8px 0 #b4afa4;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    border-bottom: 3px double var(--ink);
+    padding: 0;
+    position: relative;
+  }
+
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 32px 10px;
+    border-bottom: 1px solid var(--rule);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  .masthead {
+    padding: 28px 32px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--ink);
+    position: relative;
+  }
+
+  .masthead::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--accent);
+    margin: 0 auto 16px;
+  }
+
+  .masthead h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1;
+    color: var(--ink);
+  }
+
+  .masthead h1 span {
+    color: var(--accent);
+  }
+
+  .tagline {
+    margin-top: 8px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .edition-bar {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 10px 32px;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  /* ── INTRO ── */
+  .intro {
+    padding: 28px 32px 24px;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .intro-dropcap {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 0.85;
+    color: var(--accent);
+    float: left;
+    margin-right: 4px;
+    margin-top: 6px;
+  }
+
+  .intro p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: #2a2520;
+  }
+
+  /* ── SECTION HEADER ── */
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 32px 0;
+    margin-bottom: 4px;
+  }
+
+  .section-flag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    background: var(--tag-bg);
+    color: var(--tag-color);
+    padding: 4px 10px;
+    white-space: nowrap;
+  }
+
+  .section-flag.red { background: var(--accent); }
+
+  .section-rule {
+    flex: 1;
+    height: 1px;
+    background: var(--ink);
+  }
+
+  /* ── STORY CARD ── */
+  .story {
+    padding: 20px 32px;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+  }
+
+  .story:last-of-type { border-bottom: none; }
+
+  .story-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .story-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 2px 7px;
+  }
+
+  .story-source {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+  }
+
+  .story h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+
+  .story h2 em {
+    font-style: italic;
+    color: var(--accent2);
+  }
+
+  .story p {
+    font-size: 14px;
+    line-height: 1.72;
+    color: #2a2520;
+  }
+
+  .story .number-callout {
+    float: right;
+    margin: 0 0 8px 18px;
+    text-align: center;
+    border: 2px solid var(--ink);
+    padding: 12px 16px;
+    min-width: 88px;
+  }
+
+  .story .number-callout .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--accent);
+    display: block;
+    line-height: 1;
+  }
+
+  .story .number-callout .num-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 4px;
+  }
+
+  /* ── DIVIDER ── */
+  .section-divider {
+    border: none;
+    border-top: 3px double var(--ink);
+    margin: 8px 32px 0;
+  }
+
+  /* ── DESTAQUE BRASIL ── */
+  .brasil-strip {
+    background: var(--accent2);
+    color: var(--paper);
+    padding: 6px 32px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .brasil-strip::before {
+    content: '▶';
+    font-size: 8px;
+  }
+
+  /* ── STAT ROW ── */
+  .stat-row {
+    display: flex;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .stat-item {
+    flex: 1;
+    padding: 20px 24px;
+    border-right: 1px solid var(--rule);
+    text-align: center;
+  }
+
+  .stat-item:last-child { border-right: none; }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--accent2);
+    display: block;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 6px;
+    line-height: 1.4;
+  }
+
+  /* ── PULLQUOTE ── */
+  .pullquote {
+    margin: 0;
+    padding: 24px 40px;
+    border-top: 2px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+    background: #ede8de;
+  }
+
+  .pullquote blockquote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 19px;
+    line-height: 1.5;
+    color: var(--ink);
+    text-align: center;
+  }
+
+  .pullquote cite {
+    display: block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: center;
+    font-style: normal;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 28px 32px;
+    border-top: 3px double var(--accent);
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333;
+  }
+
+  .footer-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 900;
+  }
+
+  .footer-brand span { color: var(--accent); }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: right;
+  }
+
+  .footer-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: #888;
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .footer-bottom {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: #555;
+    letter-spacing: 0.06em;
+    line-height: 1.6;
+  }
+
+  .routine-badge {
+    display: inline-block;
+    margin-top: 12px;
+    background: var(--accent);
+    color: white;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+  }
+
+
+  .story-source a {
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--muted);
+    transition: color 0.15s;
+  }
+  .story-source a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+  .read-more {
+    display: inline-block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent2);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent2);
+    padding-bottom: 1px;
+  }
+  .read-more:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+  @media (max-width: 600px) {
+    .wrapper { margin: 0; box-shadow: none; }
+    .masthead h1 { font-size: 38px; }
+    .stat-row { flex-direction: column; }
+    .stat-item { border-right: none; border-bottom: 1px solid var(--rule); }
+    .header-top { flex-direction: column; gap: 4px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-top">
+      <span>Edição #011</span>
+      <span>16 de maio de 2026</span>
+      <span>Diária · IA &amp; Transformação</span>
+    </div>
+    <div class="masthead">
+      <h1>CLIKDATA<span style="color:var(--accent)">·</span>DROPS</h1>
+      <p class="tagline">IA · Tecnologia · Transformação Digital · Edição Diária</p>
+    </div>
+    <div class="edition-bar">
+      <span>🌍 Mundo</span>
+      <span>🇧🇷 Brasil</span>
+      <span>📊 Números</span>
+      <span>💡 Perspectiva</span>
+    </div>
+  </header>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <p>
+      <span class="intro-dropcap">P</span>
+      oder e responsabilidade dominam a semana. O modelo Mythos da Anthropic identificou autonomamente milhares de vulnerabilidades zero-day em sistemas críticos — e seu CEO avisa que estamos num "momento de perigo cibernético". A OpenAI lança a OpenAI Deployment Company com US$ 4 bilhões para levar IA ao núcleo das grandes corporações. O Google I/O (19/05) se aproxima com o Gemini Omni já vazado. No Brasil, o supercomputador do PBIA avança com 5.000 GPUs e R$ 1,8 bilhão — enquanto a IA abala as campanhas eleitorais de 2026.
+    </p>
+  </section>
+
+  <!-- ═══ MUNDO ═══ -->
+  <div class="section-header">
+    <span class="section-flag red">🌍 Mundo</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Cibersegurança &amp; IA</span>
+      <span class="story-source"><a href="https://www.cnbc.com/2026/05/08/anthropic-mythos-ai-cybersecurity-banks.html" target="_blank">CNBC · Fortune</a></span>
+    </div>
+    <div class="number-callout">
+      <span class="num">17</span>
+      <span class="num-label">anos de vida<br>da falha no FreeBSD</span>
+    </div>
+    <h2>Anthropic Mythos encontra vulnerabilidades em todos os sistemas — <em>o momento de perigo cibernético</em> chegou</h2>
+    <p>O modelo Mythos Preview da Anthropic identificou e explorou autonomamente milhares de vulnerabilidades zero-day em todos os principais sistemas operacionais e navegadores — incluindo uma falha de execução remota de código de 17 anos no FreeBSD e centenas de bugs no Firefox, um deles com mais de 20 anos de existência. A Anthropic liberou o modelo inicialmente apenas para parceiros estratégicos — Apple, Amazon, JPMorgan Chase e Palo Alto Networks — por meio do Projeto Glasswing, para que defensores comecem a corrigir sistemas críticos antes que capacidades similares se tornem amplamente disponíveis. O CEO Dario Amodei alertou publicamente: estamos num "momento de perigo cibernético". Para as equipes de segurança corporativa, a mensagem é inequívoca — a janela de ação é agora.</p>
+    <a href="https://www.cnbc.com/2026/05/08/anthropic-mythos-ai-cybersecurity-banks.html" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Empresas &amp; IA</span>
+      <span class="story-source"><a href="https://openai.com/index/openai-launches-the-deployment-company/" target="_blank">OpenAI · PYMNTS</a></span>
+    </div>
+    <div class="number-callout">
+      <span class="num">$4B</span>
+      <span class="num-label">investimento<br>inicial</span>
+    </div>
+    <h2>OpenAI lança empresa de US$ 4 bilhões para <em>escalar IA no núcleo corporativo</em></h2>
+    <p>A OpenAI anunciou a OpenAI Deployment Company, uma nova empresa dedicada a ajudar organizações a construir e implantar IA em seus processos mais críticos. A iniciativa reúne US$ 4 bilhões de investimento inicial em parceria com 19 firmas globais — incluindo TPG, Bain Capital, Goldman Sachs e SoftBank — e incorpora a Tomoro, consultoria de IA com cerca de 150 engenheiros especializados em implementação corporativa. O modelo de negócio vai além da venda de API: a OpenAI agora compete diretamente em consultoria, redesenho de processos e gestão da mudança. Para SIs, consultorias tradicionais e integradores de sistemas, o recado é claro — o maior player do mercado acaba de entrar no seu território.</p>
+    <a href="https://openai.com/index/openai-launches-the-deployment-company/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Produto &amp; IA</span>
+      <span class="story-source"><a href="https://9to5google.com/2026/05/11/gemini-omni-video-model-shows-up-with-some-early-demos/" target="_blank">9to5Google · TestingCatalog</a></span>
+    </div>
+    <h2>Google vaza Gemini Omni antes do I/O 2026 — <em>geração nativa de vídeo</em> chega dia 19 de maio</h2>
+    <p>Um leak no próprio app do Gemini revelou o "Omni", novo modelo de geração de vídeo do Google que será anunciado oficialmente no Google I/O 2026 (19–20 de maio). A string descoberta na interface anuncia: "Crie com Gemini Omni: remix seus vídeos, edite diretamente no chat, use templates e mais." Os primeiros testes mostram capacidade de remover marcas d'água, trocar objetos dentro de clipes e reescrever cenas por instrução de chat — tudo em uma interface unificada de imagem, vídeo e texto. Se confirmado, o Omni substitui o Veo 3.1 e representa a aposta mais ambiciosa do Google por um modelo omni-modal com saída nativa de vídeo. O Google I/O 2026 começa em três dias.</p>
+    <a href="https://9to5google.com/2026/05/11/gemini-omni-video-model-shows-up-with-some-early-demos/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- ═══ BRASIL ═══ -->
+  <hr class="section-divider">
+  <div class="brasil-strip">Brasil avança com supercomputador de IA e eleições sob o impacto dos algoritmos</div>
+
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">🇧🇷 Brasil</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stat-row">
+    <div class="stat-item">
+      <span class="stat-num">5k</span>
+      <span class="stat-label">GPUs no supercomputador<br>do PBIA</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">R$1,8B</span>
+      <span class="stat-label">valor do projeto<br>até 2027</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">19/Mai</span>
+      <span class="stat-label">Google I/O 2026<br>começa esta semana</span>
+    </div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Infraestrutura &amp; IA</span>
+      <span class="story-source"><a href="https://convergenciadigital.com.br/governo/exclusivo-supercomputador-do-pbia-tera-5-mil-gpus-arquitetura-risc-v-e-inauguracao-prevista-para-2026/" target="_blank">ConvergênciaDigital · MCTI</a></span>
+    </div>
+    <h2>Supercomputador do PBIA: 5.000 GPUs e R$ 1,8 bilhão colocam o Brasil <em>no mapa global da IA</em></h2>
+    <p>O Plano Brasileiro de Inteligência Artificial (PBIA) avança com a especificação do supercomputador nacional: 5.000 GPUs em arquitetura RISC-V, com inauguração prevista ainda em 2026 e custo estimado em R$ 1,8 bilhão. O MCTI garantiu financiamento via Programa IA Brasil (FNDCT), com R$ 5 bilhões disponibilizados até 2028. A instalação prioritária é um data center da Telebras em Brasília. Quando operacional, o equipamento figurará entre os cinco mais poderosos do mundo e permitirá ao país desenvolver modelos de IA soberanos, apoiar pesquisa acadêmica de fronteira e oferecer capacidade computacional a empresas brasileiras que hoje dependem de infraestrutura estrangeira. A janela para liderança regional em IA passa, inevitavelmente, por essa fundação de hardware.</p>
+    <a href="https://convergenciadigital.com.br/governo/exclusivo-supercomputador-do-pbia-tera-5-mil-gpus-arquitetura-risc-v-e-inauguracao-prevista-para-2026/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story" style="border-bottom:none;">
+    <div class="story-meta">
+      <span class="story-tag">IA &amp; Política</span>
+      <span class="story-source"><a href="https://diariodocomercio.com.br/politica/inteligencia-artificial-terremoto-campanhas-eleitorais-2026/" target="_blank">Diário do Comércio</a></span>
+    </div>
+    <h2>IA provoca um <em>terremoto silencioso</em> nas campanhas eleitorais brasileiras de 2026</h2>
+    <p>A inteligência artificial está redefinindo a política brasileira antes mesmo das eleições de outubro. Equipes de campanha já utilizam IA para segmentação hiper-personalizada de mensagens, substituição de pesquisas qualitativas por "eleitores sintéticos" e produção de vídeos e peças em horas — o que antes levava dias. O fenômeno levanta questões urgentes de regulação eleitoral: o TSE estuda regras específicas para uso de IA em propaganda, mas o arcabouço normativo ainda corre atrás da tecnologia. Para líderes empresariais, o paralelo é direto — o mesmo potencial de personalização em escala que está transformando campanhas políticas está disponível para comunicação corporativa, atendimento e retenção de clientes.</p>
+    <a href="https://diariodocomercio.com.br/politica/inteligencia-artificial-terremoto-campanhas-eleitorais-2026/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- PULLQUOTE -->
+  <div class="pullquote">
+    <blockquote>
+      "Estamos num momento de perigo cibernético. Modelos como o Mythos podem encontrar vulnerabilidades críticas mais rápido do que qualquer equipe humana consegue corrigi-las."
+    </blockquote>
+    <cite>— Dario Amodei, CEO da Anthropic · CNBC, maio de 2026</cite>
+  </div>
+
+  <!-- PERSPECTIVA -->
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">💡 Perspectiva</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story" style="border-bottom:none; padding-bottom:28px;">
+    <h2>O que esses sinais significam para <em>líderes de transformação</em></h2>
+    <p style="margin-bottom:12px;">Três leituras práticas desta edição:</p>
+    <p style="margin-bottom:10px;"><strong>1. Segurança é a nova fronteira da IA.</strong> O Mythos da Anthropic não é apenas impressionante — é um alerta de alto nível para toda a liderança executiva. Organizações sem uma estratégia de cibersegurança integrada à sua estratégia de IA estão construindo sobre areia. O próximo passo obrigatório não é comprar mais ferramentas de IA, é auditar a superfície de ataque que elas criam.</p>
+    <p style="margin-bottom:10px;"><strong>2. A OpenAI entrou no jogo de implementação.</strong> A OpenAI Deployment Company não é mais uma API — é consultoria, engenharia e capital combinados. Isso redefine a concorrência para SIs e consultorias tradicionais: não basta mais saber implementar IA, é preciso saber redesenhar processos e garantir ROI mensurável. Quem não entrega isso perde contratos para o próprio fornecedor de tecnologia.</p>
+    <p><strong>3. Brasil: infraestrutura é meio, não fim.</strong> O supercomputador com 5.000 GPUs é um ativo estratégico real e necessário — mas só gera retorno se acompanhado de dados de qualidade, governança funcional e pessoas treinadas. O erro clássico a evitar: tratar hardware como vitória, quando ele é apenas o pré-requisito.</p>
+  </article>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">CLIKDATA<span>·</span>DROPS</div>
+
+      </div>
+      <div class="footer-links">
+        <a href="https://clikdata.com.br" target="_blank">clikdata.com.br</a>
+        <a href="#">Arquivos anteriores</a>
+        <a href="#">Descadastrar</a>
+        <a href="#">Contato</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      Publicado em 16 de maio de 2026 · Edição #011 · clikdata.com.br<br>
+      Este digest é gerado automaticamente com curadoria editorial humana.<br>
+      Fontes: CNBC, Fortune, OpenAI, PYMNTS, 9to5Google, TestingCatalog, ConvergênciaDigital, Diário do Comércio, MCTI.
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
