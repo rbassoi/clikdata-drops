@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CLIKDATA DROPS — Edição #017 - Maio 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0f0f0f;
+    --paper: #f5f0e8;
+    --accent: #c8401a;
+    --accent2: #1a3c5e;
+    --muted: #7a7060;
+    --rule: #d4cfc4;
+    --tag-bg: #1a3c5e;
+    --tag-color: #f5f0e8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #e8e3d8;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrapper {
+    max-width: 680px;
+    margin: 40px auto;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    box-shadow: 4px 4px 0 #c4bfb4, 8px 8px 0 #b4afa4;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    border-bottom: 3px double var(--ink);
+    padding: 0;
+    position: relative;
+  }
+
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 32px 10px;
+    border-bottom: 1px solid var(--rule);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  .masthead {
+    padding: 28px 32px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--ink);
+    position: relative;
+  }
+
+  .masthead::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--accent);
+    margin: 0 auto 16px;
+  }
+
+  .masthead h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1;
+    color: var(--ink);
+  }
+
+  .masthead h1 span {
+    color: var(--accent);
+  }
+
+  .tagline {
+    margin-top: 8px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .edition-bar {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 10px 32px;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  /* ── INTRO ── */
+  .intro {
+    padding: 28px 32px 24px;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .intro-dropcap {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 0.85;
+    color: var(--accent);
+    float: left;
+    margin-right: 4px;
+    margin-top: 6px;
+  }
+
+  .intro p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: #2a2520;
+  }
+
+  /* ── SECTION HEADER ── */
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 32px 0;
+    margin-bottom: 4px;
+  }
+
+  .section-flag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    background: var(--tag-bg);
+    color: var(--tag-color);
+    padding: 4px 10px;
+    white-space: nowrap;
+  }
+
+  .section-flag.red { background: var(--accent); }
+
+  .section-rule {
+    flex: 1;
+    height: 1px;
+    background: var(--ink);
+  }
+
+  /* ── STORY CARD ── */
+  .story {
+    padding: 20px 32px;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+  }
+
+  .story:last-of-type { border-bottom: none; }
+
+  .story-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .story-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 2px 7px;
+  }
+
+  .story-source {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+  }
+
+  .story h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+
+  .story h2 em {
+    font-style: italic;
+    color: var(--accent2);
+  }
+
+  .story p {
+    font-size: 14px;
+    line-height: 1.72;
+    color: #2a2520;
+  }
+
+  .story .number-callout {
+    float: right;
+    margin: 0 0 8px 18px;
+    text-align: center;
+    border: 2px solid var(--ink);
+    padding: 12px 16px;
+    min-width: 88px;
+  }
+
+  .story .number-callout .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--accent);
+    display: block;
+    line-height: 1;
+  }
+
+  .story .number-callout .num-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 4px;
+  }
+
+  /* ── DIVIDER ── */
+  .section-divider {
+    border: none;
+    border-top: 3px double var(--ink);
+    margin: 8px 32px 0;
+  }
+
+  /* ── DESTAQUE BRASIL ── */
+  .brasil-strip {
+    background: var(--accent2);
+    color: var(--paper);
+    padding: 6px 32px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .brasil-strip::before {
+    content: '▶';
+    font-size: 8px;
+  }
+
+  /* ── STAT ROW ── */
+  .stat-row {
+    display: flex;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .stat-item {
+    flex: 1;
+    padding: 20px 24px;
+    border-right: 1px solid var(--rule);
+    text-align: center;
+  }
+
+  .stat-item:last-child { border-right: none; }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--accent2);
+    display: block;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 6px;
+    line-height: 1.4;
+  }
+
+  /* ── PULLQUOTE ── */
+  .pullquote {
+    margin: 0;
+    padding: 24px 40px;
+    border-top: 2px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+    background: #ede8de;
+  }
+
+  .pullquote blockquote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 19px;
+    line-height: 1.5;
+    color: var(--ink);
+    text-align: center;
+  }
+
+  .pullquote cite {
+    display: block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: center;
+    font-style: normal;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 28px 32px;
+    border-top: 3px double var(--accent);
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333;
+  }
+
+  .footer-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 900;
+  }
+
+  .footer-brand span { color: var(--accent); }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: right;
+  }
+
+  .footer-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: #888;
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .footer-bottom {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: #555;
+    letter-spacing: 0.06em;
+    line-height: 1.6;
+  }
+
+  .routine-badge {
+    display: inline-block;
+    margin-top: 12px;
+    background: var(--accent);
+    color: white;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+  }
+
+
+  .story-source a {
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--muted);
+    transition: color 0.15s;
+  }
+  .story-source a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+  .read-more {
+    display: inline-block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent2);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent2);
+    padding-bottom: 1px;
+  }
+  .read-more:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+  @media (max-width: 600px) {
+    .wrapper { margin: 0; box-shadow: none; }
+    .masthead h1 { font-size: 38px; }
+    .stat-row { flex-direction: column; }
+    .stat-item { border-right: none; border-bottom: 1px solid var(--rule); }
+    .header-top { flex-direction: column; gap: 4px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-top">
+      <span>Edição #017</span>
+      <span>22 de maio de 2026</span>
+      <span>Diária · IA &amp; Transformação</span>
+    </div>
+    <div class="masthead">
+      <h1>CLIKDATA<span style="color:var(--accent)">·</span>DROPS</h1>
+      <p class="tagline">IA · Tecnologia · Transformação Digital · Edição Diária</p>
+    </div>
+    <div class="edition-bar">
+      <span>🌍 Mundo</span>
+      <span>🇧🇷 Brasil</span>
+      <span>📊 Números</span>
+      <span>💡 Perspectiva</span>
+    </div>
+  </header>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <p>
+      <span class="intro-dropcap">E</span>
+      m três anos, a IA generativa foi adotada por mais de metade da população global — mais rápido do que o PC ou a internet. Enquanto o relatório Stanford AI Index 2026 confirma que chegamos a um ponto de inflexão histórico, o Brasil movimenta R$ 23 bilhões para não ficar de fora da próxima onda. A IA criativa derruba mais uma barreira ao avaliar a Runway em US$ 5,3 bilhões — e a grande pergunta para executivos não é mais "quando entrar", mas "até quando dá para esperar".
+    </p>
+  </section>
+
+  <!-- ═══ MUNDO ═══ -->
+  <div class="section-header">
+    <span class="section-flag red">🌍 Mundo</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">IA Mundo</span>
+      <span class="story-source"><a href="https://hai.stanford.edu/news/inside-the-ai-index-12-takeaways-from-the-2026-report" target="_blank">Stanford HAI · AI Index 2026</a></span>
+    </div>
+    <div class="number-callout">
+      <span class="num">53%</span>
+      <span class="num-label">adoção global<br>em 3 anos</span>
+    </div>
+    <h2>Stanford AI Index 2026: IA generativa atinge <em>53% de adoção global</em> — superou PC e internet</h2>
+    <p>O Stanford AI Index 2026, publicado esta semana, documenta o que já parecia inevitável: a IA generativa atingiu 53% de adoção populacional em apenas três anos, superando em velocidade a curva de adoção do computador pessoal e da internet. O valor estimado dessas ferramentas para consumidores americanos chegou a US$ 172 bilhões anuais, com o valor mediano por usuário triplicando entre 2025 e 2026. No front geopolítico, a vantagem dos EUA sobre a China estreitou a ponto de os modelos trocarem de posição no topo dos rankings mais de uma vez. A corrida não acabou — ela acelerou.</p>
+    <a href="https://hai.stanford.edu/news/inside-the-ai-index-12-takeaways-from-the-2026-report" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">IA Criativa</span>
+      <span class="story-source"><a href="https://techcrunch.com/2026/05/15/runway-started-by-helping-filmmakers-now-it-wants-to-beat-google-at-ai/" target="_blank">TechCrunch</a></span>
+    </div>
+    <div class="number-callout">
+      <span class="num">$5,3B</span>
+      <span class="num-label">avaliação<br>Runway 2026</span>
+    </div>
+    <h2>Runway ultrapassa US$ 5 bilhões e <em>desafia o Google</em> na IA generativa para vídeo</h2>
+    <p>A startup Runway foi avaliada em US$ 5,3 bilhões e registrou US$ 40 milhões em receita anual recorrente no segundo trimestre de 2026 — crescimento que consolida a IA criativa como segmento de alto valor. A empresa, que começou apoiando cineastas independentes, fechou acordos com estúdios de peso como Lionsgate e AMC Networks e agora compete diretamente com o Google em geração de vídeo por IA. Para o mercado de marketing, entretenimento e produção de conteúdo, a barreira de entrada para vídeo de alta qualidade está caindo estruturalmente — e quem incorporar essas ferramentas hoje chega a 2027 com custo de produção que a concorrência não consegue replicar no curto prazo.</p>
+    <a href="https://techcrunch.com/2026/05/15/runway-started-by-helping-filmmakers-now-it-wants-to-beat-google-at-ai/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Transformação Digital</span>
+      <span class="story-source"><a href="https://www.gartner.com/en/articles/top-technology-trends-2026" target="_blank">Gartner</a></span>
+    </div>
+    <h2>Gartner: US$ 3,4 trilhões em transformação digital — mas <em>apenas 48% das iniciativas atingem metas</em></h2>
+    <p>A mais recente pesquisa do Gartner para CIOs revela uma contradição cara: os gastos globais em transformação digital devem alcançar US$ 3,4 trilhões em 2026, mas apenas 48% das iniciativas atingem ou superam os resultados esperados. Ao mesmo tempo, 94% dos executivos de TI preveem mudanças significativas em seus planos estratégicos nos próximos 24 meses. O diagnóstico do Gartner é direto — o problema não é investimento, é execução. As organizações que saem da fase de planejamento e chegam à entrega mensurável são aquelas com governança clara, talento capacitado e liderança que patrocina a transformação de forma consistente, não apenas no discurso.</p>
+    <a href="https://www.gartner.com/en/articles/top-technology-trends-2026" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- ═══ BRASIL ═══ -->
+  <hr class="section-divider">
+  <div class="brasil-strip">Brasil mira R$ 23 bilhões em IA até 2028 — demanda por profissionais cresce 306%</div>
+
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">🇧🇷 Brasil</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stat-row">
+    <div class="stat-item">
+      <span class="stat-num">R$23B</span>
+      <span class="stat-label">plano nacional<br>de IA até 2028</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">306%</span>
+      <span class="stat-label">crescimento na<br>busca por profissionais IA</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">+30%</span>
+      <span class="stat-label">crescimento nos<br>gastos em IA no país</span>
+    </div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">IA Brasil</span>
+      <span class="story-source"><a href="https://exame.com/inteligencia-artificial/" target="_blank">Exame</a></span>
+    </div>
+    <h2>Brasil acelera com <em>R$ 23 bilhões em IA até 2028</em> — e o mercado de trabalho já sente a pressão</h2>
+    <p>O Plano Brasileiro de Inteligência Artificial prevê R$ 23 bilhões em investimentos até 2028, com os gastos do setor privado projetados para superar US$ 2,4 bilhões em 2026 — crescimento de 30% frente a 2024. O sinal mais revelador vem do mercado de trabalho: a demanda por profissionais com conhecimento em IA cresceu 306% no último ano. O gargalo deixou de ser tecnologia e virou capital humano. Para líderes de RH e transformação digital, a janela para atrair e formar esses perfis está se fechando à medida que a concorrência por talento especializado se intensifica. Quem construir esse pipeline hoje chega a 2028 em posição de vantagem difícil de replicar.</p>
+    <a href="https://exame.com/inteligencia-artificial/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story" style="border-bottom:none;">
+    <div class="story-meta">
+      <span class="story-tag">IA Conversacional</span>
+      <span class="story-source"><a href="https://www.blip.ai/en/blip-id/" target="_blank">Blip</a></span>
+    </div>
+    <h2>Blip expande operações no Brasil com 50 vagas — <em>clientes reduzem tempo de resposta em 99,99%</em></h2>
+    <p>A Blip, principal plataforma de inteligência conversacional do Brasil com mais de US$ 170 milhões captados, anuncia abertura de 50 novas vagas em IA para 2026. A expansão reflete resultados concretos de clientes: a XP Investimentos reduziu o tempo de resposta em 99,99% com agentes conversacionais; o Banco PAN aumentou o autosserviço em 85%. Para além dos números, o movimento da Blip sinaliza que a IA conversacional — antes restrita a chatbots de atendimento — entrou na camada de processos críticos de negócio. No Brasil, onde o WhatsApp é o canal dominante de comunicação, quem domina a camada conversacional controla o principal ponto de contato com o cliente.</p>
+    <a href="https://www.blip.ai/en/blip-id/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- PULLQUOTE -->
+  <div class="pullquote">
+    <blockquote>
+      "A IA generativa chegou a 53% de adoção em três anos — mais rápido do que qualquer tecnologia da história. O ponto de inflexão não está no horizonte. Ele passou."
+    </blockquote>
+    <cite>— Stanford HAI · AI Index 2026, maio de 2026</cite>
+  </div>
+
+  <!-- PERSPECTIVA -->
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">💡 Perspectiva</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story" style="border-bottom:none; padding-bottom:28px;">
+    <h2>Três leituras desta sexta-feira para quem <em>lidera transformação</em></h2>
+    <p style="margin-bottom:12px;">O que os dados desta edição dizem para gestores de inovação e tecnologia:</p>
+    <p style="margin-bottom:10px;"><strong>1. Velocidade de adoção redefine urgência.</strong> Quando uma tecnologia atravessa 53% de adoção em três anos, o custo de "esperar para ver" deixa de ser teórico. Stanford documenta que o valor por usuário triplicou em 12 meses — quem está construindo competência em IA hoje não está apenas ganhando eficiência, está criando uma vantagem acumulada que o entrante tardio precisa de anos para recuperar.</p>
+    <p style="margin-bottom:10px;"><strong>2. O problema do Gartner é o seu problema.</strong> US$ 3,4 trilhões investidos, 48% de sucesso. A falha não é de orçamento — é de execução: governança fraca, times sem capacitação e lideranças que delegam a transformação para a TI e não a incorporam nas decisões de negócio. No Brasil, com R$ 23 bilhões em jogo, o risco de repetir esse padrão é real. A pergunta a fazer internamente: temos as pessoas, os processos e a estrutura de decisão para converter investimento em resultado?</p>
+    <p><strong>3. Talento é o novo gargalo estratégico.</strong> O crescimento de 306% na demanda por profissionais de IA no Brasil revela que o verdadeiro limite da transformação digital não é tecnologia nem orçamento — é capital humano. Empresas que construírem academias internas, programas de requalificação e parcerias com universidades agora terão, em 18 meses, um ativo que o mercado simplesmente não conseguirá fornecer a todos ao mesmo tempo.</p>
+  </article>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">CLIKDATA<span>·</span>DROPS</div>
+      </div>
+      <div class="footer-links">
+        <a href="https://clikdata.com.br" target="_blank">clikdata.com.br</a>
+        <a href="#">Arquivos anteriores</a>
+        <a href="#">Descadastrar</a>
+        <a href="#">Contato</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      Publicado em 22 de maio de 2026 · Edição #017 · clikdata.com.br<br>
+      Este digest é gerado automaticamente com curadoria editorial humana.<br>
+      Fontes: Stanford HAI, TechCrunch, Gartner, Exame, Blip.
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
