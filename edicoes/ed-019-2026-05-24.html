@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CLIKDATA DROPS — Edição #019 - Maio 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0f0f0f;
+    --paper: #f5f0e8;
+    --accent: #c8401a;
+    --accent2: #1a3c5e;
+    --muted: #7a7060;
+    --rule: #d4cfc4;
+    --tag-bg: #1a3c5e;
+    --tag-color: #f5f0e8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #e8e3d8;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrapper {
+    max-width: 680px;
+    margin: 40px auto;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    box-shadow: 4px 4px 0 #c4bfb4, 8px 8px 0 #b4afa4;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    border-bottom: 3px double var(--ink);
+    padding: 0;
+    position: relative;
+  }
+
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 32px 10px;
+    border-bottom: 1px solid var(--rule);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  .masthead {
+    padding: 28px 32px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--ink);
+    position: relative;
+  }
+
+  .masthead::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--accent);
+    margin: 0 auto 16px;
+  }
+
+  .masthead h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1;
+    color: var(--ink);
+  }
+
+  .masthead h1 span {
+    color: var(--accent);
+  }
+
+  .tagline {
+    margin-top: 8px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .edition-bar {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 10px 32px;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  /* ── INTRO ── */
+  .intro {
+    padding: 28px 32px 24px;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .intro-dropcap {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 0.85;
+    color: var(--accent);
+    float: left;
+    margin-right: 4px;
+    margin-top: 6px;
+  }
+
+  .intro p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: #2a2520;
+  }
+
+  /* ── SECTION HEADER ── */
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 32px 0;
+    margin-bottom: 4px;
+  }
+
+  .section-flag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    background: var(--tag-bg);
+    color: var(--tag-color);
+    padding: 4px 10px;
+    white-space: nowrap;
+  }
+
+  .section-flag.red { background: var(--accent); }
+
+  .section-rule {
+    flex: 1;
+    height: 1px;
+    background: var(--ink);
+  }
+
+  /* ── STORY CARD ── */
+  .story {
+    padding: 20px 32px;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+  }
+
+  .story:last-of-type { border-bottom: none; }
+
+  .story-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .story-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 2px 7px;
+  }
+
+  .story-source {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+  }
+
+  .story h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+
+  .story h2 em {
+    font-style: italic;
+    color: var(--accent2);
+  }
+
+  .story p {
+    font-size: 14px;
+    line-height: 1.72;
+    color: #2a2520;
+  }
+
+  .story .number-callout {
+    float: right;
+    margin: 0 0 8px 18px;
+    text-align: center;
+    border: 2px solid var(--ink);
+    padding: 12px 16px;
+    min-width: 88px;
+  }
+
+  .story .number-callout .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--accent);
+    display: block;
+    line-height: 1;
+  }
+
+  .story .number-callout .num-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 4px;
+  }
+
+  /* ── DIVIDER ── */
+  .section-divider {
+    border: none;
+    border-top: 3px double var(--ink);
+    margin: 8px 32px 0;
+  }
+
+  /* ── DESTAQUE BRASIL ── */
+  .brasil-strip {
+    background: var(--accent2);
+    color: var(--paper);
+    padding: 6px 32px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .brasil-strip::before {
+    content: '▶';
+    font-size: 8px;
+  }
+
+  /* ── STAT ROW ── */
+  .stat-row {
+    display: flex;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .stat-item {
+    flex: 1;
+    padding: 20px 24px;
+    border-right: 1px solid var(--rule);
+    text-align: center;
+  }
+
+  .stat-item:last-child { border-right: none; }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--accent2);
+    display: block;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 6px;
+    line-height: 1.4;
+  }
+
+  /* ── PULLQUOTE ── */
+  .pullquote {
+    margin: 0;
+    padding: 24px 40px;
+    border-top: 2px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+    background: #ede8de;
+  }
+
+  .pullquote blockquote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 19px;
+    line-height: 1.5;
+    color: var(--ink);
+    text-align: center;
+  }
+
+  .pullquote cite {
+    display: block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: center;
+    font-style: normal;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 28px 32px;
+    border-top: 3px double var(--accent);
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333;
+  }
+
+  .footer-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 900;
+  }
+
+  .footer-brand span { color: var(--accent); }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: right;
+  }
+
+  .footer-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: #888;
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .footer-bottom {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: #555;
+    letter-spacing: 0.06em;
+    line-height: 1.6;
+  }
+
+  .routine-badge {
+    display: inline-block;
+    margin-top: 12px;
+    background: var(--accent);
+    color: white;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+  }
+
+
+  .story-source a {
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--muted);
+    transition: color 0.15s;
+  }
+  .story-source a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+  .read-more {
+    display: inline-block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent2);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent2);
+    padding-bottom: 1px;
+  }
+  .read-more:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+  @media (max-width: 600px) {
+    .wrapper { margin: 0; box-shadow: none; }
+    .masthead h1 { font-size: 38px; }
+    .stat-row { flex-direction: column; }
+    .stat-item { border-right: none; border-bottom: 1px solid var(--rule); }
+    .header-top { flex-direction: column; gap: 4px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-top">
+      <span>Edição #019</span>
+      <span>24 de maio de 2026</span>
+      <span>Diária · IA &amp; Transformação</span>
+    </div>
+    <div class="masthead">
+      <h1>CLIKDATA<span style="color:var(--accent)">·</span>DROPS</h1>
+      <p class="tagline">IA · Tecnologia · Transformação Digital · Edição Diária</p>
+    </div>
+    <div class="edition-bar">
+      <span>🌍 Mundo</span>
+      <span>🇧🇷 Brasil</span>
+      <span>📊 Números</span>
+      <span>💡 Perspectiva</span>
+    </div>
+  </header>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <p>
+      <span class="intro-dropcap">G</span>
+      emini deixou de ser produto — virou plataforma. A semana encerrada com o Google I/O 2026 ficará marcada na história da IA: o maior ecossistema digital do mundo foi reconstruído em torno de uma única inteligência. Na mesma semana, uma captação histórica de US$ 30 bilhões posicionou a Anthropic entre as empresas privadas mais valiosas do planeta, e 15.800 postos de trabalho foram redesenhados ou eliminados por IA em sete dias. No Brasil, a resposta regulatória começou a ganhar forma — do jornalismo às urnas eleitorais.
+    </p>
+  </section>
+
+  <!-- ═══ MUNDO ═══ -->
+  <div class="section-header">
+    <span class="section-flag red">🌍 Mundo</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Big Tech</span>
+      <span class="story-source"><a href="https://www.marketingprofs.com/opinions/2026/54803/ai-update-may-22-2026-ai-news-and-views-from-the-past-week" target="_blank">MarketingProfs · AI Update, 22/05/2026</a></span>
+    </div>
+    <div class="number-callout">
+      <span class="num">1B</span>
+      <span class="num-label">usuários mensais<br>do AI Mode Google</span>
+    </div>
+    <h2>Google I/O 2026: Gemini vira o <em>sistema operacional da internet</em> — Search, Android, Chrome e YouTube agora orbitam em torno de uma IA</h2>
+    <p>No maior evento de produto do Google desde a criação do Android, Sundar Pichai anunciou que o Gemini deixa de ser um produto isolado para se tornar a camada de inteligência que conecta toda a infraestrutura da empresa. O AI Mode — novo mecanismo de busca alimentado por IA — já supera 1 bilhão de usuários mensais. O Gemini 3.5 Flash, agora modelo padrão, oferece performance de fronteira a 4x a velocidade das versões anteriores. O Antigravity 2.0 estreia como desktop agent autônomo com CLI e SDK; o Gemini Spark opera como agente pessoal 24/7 em VMs dedicadas na nuvem; e o Universal Cart leva a IA agêntica ao e-commerce. A mensagem estratégica é inequívoca: o Google não está adicionando IA ao seu produto — está reconstruindo o produto em torno da IA.</p>
+    <a href="https://singhajit.com/dev-weekly/2026/may-18-24/google-io-2026-anthropic-stainless-spacex-ipo-openai-ipo-meta-layoffs-laravel-lang-attack/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Investimento</span>
+      <span class="story-source"><a href="https://medium.com/@davidakpovi/ai-news-week-of-may-18-to-may-24-2026-6cb451ecb766" target="_blank">Medium · David Akpovi / singhajit.com</a></span>
+    </div>
+    <h2>Anthropic capta <em>US$ 30 bilhões</em> a valuação de US$ 900 bi — e Andrej Karpathy embarca no projeto</h2>
+    <p>A Anthropic, criadora do Claude, deve fechar ainda em maio uma rodada histórica de pelo menos US$ 30 bilhões co-liderada por Sequoia, Dragoneer, Greenoaks e Altimeter — que elevaria sua valuação para mais de US$ 900 bilhões, posicionando-a entre as maiores empresas privadas já existentes. Na mesma semana, Andrej Karpathy — um dos fundadores originais da OpenAI e ex-diretor de IA da Tesla — anunciou sua chegada à Anthropic para usar o Claude na aceleração do pré-treinamento de modelos de fronteira. A combinação de capital recorde e talento de elite envia um sinal claro ao mercado: a corrida pela liderança em IA está longe de ser decidida, e o próximo capítulo pode redefinir o ranking.</p>
+    <a href="https://medium.com/@davidakpovi/ai-news-week-of-may-18-to-may-24-2026-6cb451ecb766" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Trabalho &amp; IA</span>
+      <span class="story-source"><a href="https://www.tomshardware.com/tech-industry/standard-chartered-plans-to-cut-7-000-jobs-in-ai-push-lender-wants-to-replace-lower-value-human-capital-and-focus-on-automation" target="_blank">Tom's Hardware · 4Corner Resources</a></span>
+    </div>
+    <h2>IA desfaz <em>15.800 empregos</em> em 7 dias — Standard Chartered e Meta lideram a onda</h2>
+    <p>Standard Chartered anunciou em 19 de maio o corte de 7.800 posições até 2030, sendo RH, risco e compliance os primeiros setores afetados — com foco em back-offices em Chennai, Bengaluru, Kuala Lumpur e Varsóvia. No mesmo dia, o Meta demitiu 8.000 pessoas e realocou outras 7.000 para equipes de IA, reestruturação que alcança 15% do headcount corporativo. O CEO do Standard Chartered, Bill Winters, foi direto ao ponto: não é corte de custos — é substituição de "capital humano de baixo valor" por automação. Para líderes de RH e transformação digital, o padrão é inegável: funções administrativas e de processamento de dados estão na linha de frente da substituição por IA agêntica.</p>
+    <a href="https://www.4cornerresources.com/job-market-news/meta-ai-restructuring-may-20-2026/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- ═══ BRASIL ═══ -->
+  <hr class="section-divider">
+  <div class="brasil-strip">Brasil em alerta: CADE investiga Google por IA no jornalismo — eleições 2026 também na mira</div>
+
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">🇧🇷 Brasil</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stat-row">
+    <div class="stat-item">
+      <span class="stat-num">1B</span>
+      <span class="stat-label">usuários mensais<br>do AI Mode Google</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">US$30B</span>
+      <span class="stat-label">maior captação privada<br>de IA em 2026</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">7.800</span>
+      <span class="stat-label">empregos cortados pelo<br>Standard Chartered</span>
+    </div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Regulação</span>
+      <span class="story-source"><a href="https://pt.globalvoices.org/2026/05/19/brasil-abre-investigacao-sobre-o-impacto-de-inteligencia-artificial-do-google-no-setor-jornalistico/" target="_blank">Global Voices · Brasil 247</a></span>
+    </div>
+    <h2>CADE abre processo contra Google por <em>AI Overviews</em> — jornalismo brasileiro na linha de frente da regulação de IA</h2>
+    <p>O Conselho Administrativo de Defesa Econômica aprovou por unanimidade, em abril de 2026, a abertura de processo administrativo contra o Google por uso de conteúdo jornalístico para alimentar seus resumos automatizados de IA (AI Overviews) sem remuneração proporcional às redações. A investigação — que ganhou tração internacional nesta semana — tentará quantificar o valor retido pelo Google via publicidade digital versus os custos editoriais arcados pelos veículos de comunicação, algo que a empresa nunca divulgou. A Associação de Jornalismo Digital (Ajor) classificou o processo como "um passo correto". O movimento coloca o Brasil na vanguarda da regulação de IA no jornalismo ao lado da União Europeia, e pode criar precedente para toda a América Latina.</p>
+    <a href="https://www.esmaelmorais.com.br/cade-google-noticias-ia/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story" style="border-bottom:none;">
+    <div class="story-meta">
+      <span class="story-tag">IA &amp; Democracia</span>
+      <span class="story-source"><a href="https://www.tse.jus.br/comunicacao/noticias/2026/Maio/presidente-do-tse-defende-inteligencia-democratica-contra-uso-abusivo-de-ia" target="_blank">TSE · Tribunal Superior Eleitoral</a></span>
+    </div>
+    <h2>TSE defende <em>"inteligência democrática"</em> contra deepfakes e desinformação nas eleições 2026</h2>
+    <p>Com as eleições de outubro de 2026 no horizonte, o Tribunal Superior Eleitoral colocou no centro do debate a necessidade de uma "inteligência democrática" — o uso ético e responsável da IA para proteger o processo eleitoral, não para subvertê-lo. Em seminário realizado em maio, especialistas alertaram para o risco crescente de deepfakes, desinformação gerada por LLMs e ataques a sistemas de apuração. O TSE trabalha em frameworks de detecção de conteúdo sintético e está em contato com os principais laboratórios de IA para estabelecer protocolos de resposta rápida. A máxima do evento foi direta: "A IA pode auxiliar a atividade institucional, mas não pode substituir o juízo humano." Para empresas de tecnologia que operam no Brasil, o sinal é claro — o ambiente regulatório de IA amadurece rapidamente.</p>
+    <a href="https://www.tse.jus.br/comunicacao/noticias/2026/Maio/presidente-do-tse-defende-inteligencia-democratica-contra-uso-abusivo-de-ia" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- PULLQUOTE -->
+  <div class="pullquote">
+    <blockquote>
+      "O abuso investigado é caracterizado pela extração e apropriação de valor econômico proveniente de conteúdo produzido por terceiros, sem remuneração proporcional — em um contexto de assimetria e ausência de alternativas eficazes."
+    </blockquote>
+    <cite>— CADE · Processo Administrativo contra o Google, abril de 2026</cite>
+  </div>
+
+  <!-- PERSPECTIVA -->
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">💡 Perspectiva</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story" style="border-bottom:none; padding-bottom:28px;">
+    <h2>O que esses sinais significam para <em>líderes de transformação</em></h2>
+    <p style="margin-bottom:12px;">Três leituras práticas desta edição:</p>
+    <p style="margin-bottom:10px;"><strong>1. Gemini como OS do século 21.</strong> O Google não está adicionando IA ao seu produto — está reconstruindo o produto ao redor da IA. Empresas que dependem de SEO, tráfego orgânico e publicidade no ecossistema Google precisam revisar suas estratégias de distribuição digital agora. O AI Mode com 1 bilhão de usuários não é uma funcionalidade — é uma ruptura no modelo de acesso à informação.</p>
+    <p style="margin-bottom:10px;"><strong>2. Quando o trabalho muda de endereço.</strong> 15.800 posições impactadas em sete dias não são anomalia — são o novo ritmo. A pergunta para líderes de RH não é mais "se" a automação chegará às suas funções, mas quais trilhas de requalificação estão abertas antes que a onda chegue. Quem mapeia processos candidatos à automação hoje está à frente — e quem espera, paga o preço.</p>
+    <p><strong>3. Regulação como vantagem competitiva.</strong> O Brasil está criando jurisprudência sobre IA enquanto outros mercados ainda debatem o framework. A combinação de CADE versus Google, TSE mobilizado e futuro marco legal em tramitação forma um ecossistema regulatório que vai endurecer — e rápido. Empresas que se posicionarem proativamente com compliance de IA no Brasil terão menos atrito quando a regulação se expandir para toda a América Latina.</p>
+  </article>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">CLIKDATA<span>·</span>DROPS</div>
+
+      </div>
+      <div class="footer-links">
+        <a href="https://clikdata.com.br" target="_blank">clikdata.com.br</a>
+        <a href="#">Arquivos anteriores</a>
+        <a href="#">Descadastrar</a>
+        <a href="#">Contato</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      Publicado em 24 de maio de 2026 · Edição #019 · clikdata.com.br<br>
+      Este digest é gerado automaticamente com curadoria editorial humana.<br>
+      Fontes: Google I/O, MarketingProfs, singhajit.com, Medium, Tom's Hardware, 4Corner Resources, Global Voices, CADE, TSE.
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
