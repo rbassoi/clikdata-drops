@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CLIKDATA DROPS — Edição #021 - Maio 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0f0f0f;
+    --paper: #f5f0e8;
+    --accent: #c8401a;
+    --accent2: #1a3c5e;
+    --muted: #7a7060;
+    --rule: #d4cfc4;
+    --tag-bg: #1a3c5e;
+    --tag-color: #f5f0e8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #e8e3d8;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrapper {
+    max-width: 680px;
+    margin: 40px auto;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    box-shadow: 4px 4px 0 #c4bfb4, 8px 8px 0 #b4afa4;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    border-bottom: 3px double var(--ink);
+    padding: 0;
+    position: relative;
+  }
+
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 32px 10px;
+    border-bottom: 1px solid var(--rule);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  .masthead {
+    padding: 28px 32px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--ink);
+    position: relative;
+  }
+
+  .masthead::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--accent);
+    margin: 0 auto 16px;
+  }
+
+  .masthead h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1;
+    color: var(--ink);
+  }
+
+  .masthead h1 span {
+    color: var(--accent);
+  }
+
+  .tagline {
+    margin-top: 8px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .edition-bar {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 10px 32px;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  /* ── INTRO ── */
+  .intro {
+    padding: 28px 32px 24px;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .intro-dropcap {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 0.85;
+    color: var(--accent);
+    float: left;
+    margin-right: 4px;
+    margin-top: 6px;
+  }
+
+  .intro p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: #2a2520;
+  }
+
+  /* ── SECTION HEADER ── */
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 32px 0;
+    margin-bottom: 4px;
+  }
+
+  .section-flag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    background: var(--tag-bg);
+    color: var(--tag-color);
+    padding: 4px 10px;
+    white-space: nowrap;
+  }
+
+  .section-flag.red { background: var(--accent); }
+
+  .section-rule {
+    flex: 1;
+    height: 1px;
+    background: var(--ink);
+  }
+
+  /* ── STORY CARD ── */
+  .story {
+    padding: 20px 32px;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+  }
+
+  .story:last-of-type { border-bottom: none; }
+
+  .story-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .story-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 2px 7px;
+  }
+
+  .story-source {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+  }
+
+  .story h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+
+  .story h2 em {
+    font-style: italic;
+    color: var(--accent2);
+  }
+
+  .story p {
+    font-size: 14px;
+    line-height: 1.72;
+    color: #2a2520;
+  }
+
+  .story .number-callout {
+    float: right;
+    margin: 0 0 8px 18px;
+    text-align: center;
+    border: 2px solid var(--ink);
+    padding: 12px 16px;
+    min-width: 88px;
+  }
+
+  .story .number-callout .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--accent);
+    display: block;
+    line-height: 1;
+  }
+
+  .story .number-callout .num-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 4px;
+  }
+
+  /* ── DIVIDER ── */
+  .section-divider {
+    border: none;
+    border-top: 3px double var(--ink);
+    margin: 8px 32px 0;
+  }
+
+  /* ── DESTAQUE BRASIL ── */
+  .brasil-strip {
+    background: var(--accent2);
+    color: var(--paper);
+    padding: 6px 32px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .brasil-strip::before {
+    content: '▶';
+    font-size: 8px;
+  }
+
+  /* ── STAT ROW ── */
+  .stat-row {
+    display: flex;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .stat-item {
+    flex: 1;
+    padding: 20px 24px;
+    border-right: 1px solid var(--rule);
+    text-align: center;
+  }
+
+  .stat-item:last-child { border-right: none; }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--accent2);
+    display: block;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 6px;
+    line-height: 1.4;
+  }
+
+  /* ── PULLQUOTE ── */
+  .pullquote {
+    margin: 0;
+    padding: 24px 40px;
+    border-top: 2px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+    background: #ede8de;
+  }
+
+  .pullquote blockquote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 19px;
+    line-height: 1.5;
+    color: var(--ink);
+    text-align: center;
+  }
+
+  .pullquote cite {
+    display: block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: center;
+    font-style: normal;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 28px 32px;
+    border-top: 3px double var(--accent);
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333;
+  }
+
+  .footer-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 900;
+  }
+
+  .footer-brand span { color: var(--accent); }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: right;
+  }
+
+  .footer-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: #888;
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .footer-bottom {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: #555;
+    letter-spacing: 0.06em;
+    line-height: 1.6;
+  }
+
+  .routine-badge {
+    display: inline-block;
+    margin-top: 12px;
+    background: var(--accent);
+    color: white;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+  }
+
+
+  .story-source a {
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--muted);
+    transition: color 0.15s;
+  }
+  .story-source a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+  .read-more {
+    display: inline-block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent2);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent2);
+    padding-bottom: 1px;
+  }
+  .read-more:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+  @media (max-width: 600px) {
+    .wrapper { margin: 0; box-shadow: none; }
+    .masthead h1 { font-size: 38px; }
+    .stat-row { flex-direction: column; }
+    .stat-item { border-right: none; border-bottom: 1px solid var(--rule); }
+    .header-top { flex-direction: column; gap: 4px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-top">
+      <span>Edição #021</span>
+      <span>26 de maio de 2026</span>
+      <span>Diária · IA &amp; Transformação</span>
+    </div>
+    <div class="masthead">
+      <h1>CLIKDATA<span style="color:var(--accent)">·</span>DROPS</h1>
+      <p class="tagline">IA · Tecnologia · Transformação Digital · Edição Diária</p>
+    </div>
+    <div class="edition-bar">
+      <span>🌍 Mundo</span>
+      <span>🇧🇷 Brasil</span>
+      <span>📊 Números</span>
+      <span>💡 Perspectiva</span>
+    </div>
+  </header>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <p>
+      <span class="intro-dropcap">E</span>
+      m 2026, a IA não é apenas ferramenta de produtividade — é também arma e escudo. Enquanto a Anthropic restringe o acesso ao modelo mais poderoso já construído por medo do que ele pode fazer, o Brasil acumula um paradoxo perigoso: adoção acelerada de IA generativa com maturidade digital intermediária e governança insuficiente. Esta edição mapeia os riscos reais — e as janelas de ação para líderes que ainda podem correr na frente.
+    </p>
+  </section>
+
+  <!-- ═══ MUNDO ═══ -->
+  <div class="section-header">
+    <span class="section-flag red">🌍 Mundo</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Segurança &amp; IA</span>
+      <span class="story-source"><a href="https://www.anthropic.com/glasswing" target="_blank">Anthropic · Project Glasswing</a></span>
+    </div>
+    <div class="number-callout">
+      <span class="num">10k</span>
+      <span class="num-label">vulnerabilidades<br>críticas em 1 mês</span>
+    </div>
+    <h2>Claude Mythos: o modelo mais avançado da história descobre <em>10.000 vulnerabilidades críticas</em> — e o acesso é restrito</h2>
+    <p>A Anthropic confirmou que Claude Mythos — codinome "Capybara" —, seu modelo mais poderoso até hoje, identificou mais de 10.000 vulnerabilidades de alta ou crítica severidade em seu primeiro mês de operação. O salto de desempenho é expressivo: SWE-bench de 93,9% e USAMO de 97,6%, "muito à frente de qualquer outro modelo de IA". Por isso, o acesso é deliberadamente restrito: o Project Glasswing libera o Mythos primeiro a parceiros industriais críticos e desenvolvedores open source para que defensores consigam proteger sistemas antes que capacidades equivalentes se tornem amplamente disponíveis. A lógica é clara — e perturbadora: quem não começar a se defender com IA hoje enfrentará atacantes que já o fazem.</p>
+    <a href="https://www.anthropic.com/glasswing" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Regulação Global</span>
+      <span class="story-source"><a href="https://www.gov.uk/government/news/uk-and-australia-pact-on-fast-moving-ai-security-risks" target="_blank">GOV.UK · 25 mai 2026</a></span>
+    </div>
+    <h2>UK e Austrália firmam pacto de segurança em IA — o arco de <em>governança global</em> se expande</h2>
+    <p>O governo britânico e a Austrália assinaram ontem um acordo formal para enfrentar os riscos de segurança de IA em ritmo acelerado. O pacto cria canais de compartilhamento de inteligência técnica, coordenação regulatória e resposta conjunta a incidentes ligados à IA — um modelo que deverá ser replicado em outras parcerias bilaterais nos próximos meses. Somado à iniciativa da UE com o AI Act e ao posicionamento recente do CADE no Brasil, o movimento sinaliza que o multilateralismo chegou ao setor de IA: as regras do jogo serão escritas por quem estiver à mesa, não por quem esperar na fila.</p>
+    <a href="https://www.gov.uk/government/news/uk-and-australia-pact-on-fast-moving-ai-security-risks" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Agentes &amp; Infraestrutura</span>
+      <span class="story-source"><a href="https://www.infoworld.com/article/4176801/google-adds-open-source-agent-executor-to-support-ai-agents-in-production.html" target="_blank">InfoWorld · Google</a></span>
+    </div>
+    <h2>Google lança Agent Executor open-source: agentes de IA <em>escalam para produção</em> corporativa</h2>
+    <p>O Google liberou o Agent Executor como projeto open source, voltado a resolver os desafios operacionais de colocar agentes de IA em escala dentro de empresas. A ferramenta endereça problemas reais que travam a adoção: orquestração de múltiplos agentes, gerenciamento de estado, rastreabilidade de decisões e integração com sistemas legados. Junto ao Gemini 3.5 Flash — disponível com velocidade 4× superior e janela de 1M de tokens —, o Google consolida uma aposta clara: ser a plataforma preferida de quem quer sair do piloto e colocar IA agêntica em produção. Para equipes de TI e engenharia, o momento de avaliar a stack de agentes chegou.</p>
+    <a href="https://www.infoworld.com/article/4176801/google-adds-open-source-agent-executor-to-support-ai-agents-in-production.html" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- ═══ BRASIL ═══ -->
+  <hr class="section-divider">
+  <div class="brasil-strip">Brasil: maturidade digital intermediária + adoção acelerada = exposição crítica</div>
+
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">🇧🇷 Brasil</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stat-row">
+    <div class="stat-item">
+      <span class="stat-num">R$7,19M</span>
+      <span class="stat-label">custo médio por<br>violação de dados no Brasil</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">64%</span>
+      <span class="stat-label">violações de GenAI<br>envolvem dados sensíveis</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">16%</span>
+      <span class="stat-label">empresas com<br>CISO dedicado</span>
+    </div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Cibersegurança</span>
+      <span class="story-source"><a href="https://docmanagement.com.br/05/25/2026/nova-era-de-risco-digital-pressiona-empresas-e-ciberseguranca-ganha-peso-ainda-mais-estrategico/" target="_blank">Portal Information Management · 25 mai 2026</a></span>
+    </div>
+    <h2>Nova era de risco digital: cibersegurança deixa de ser TI e vira <em>prioridade do board</em> brasileiro</h2>
+    <p>Um levantamento divulgado ontem aponta que o Brasil registrou perdas médias de R$ 7,19 milhões por violação de dados em 2025 — com Saúde, Finanças e Serviços liderando os impactos. O índice geral de maturidade digital das organizações ficou em 58% (faixa intermediária), enquanto o risco médio permanece em 44%, indicando exposição relevante a incidentes com impacto operacional e financeiro. Apenas cerca de 16% das organizações possuem CISO dedicado. Os gastos mundiais com cibersegurança devem alcançar US$ 308 bilhões em 2026, segundo o IDC — crescimento de 11,8% —, e as empresas brasileiras que não ajustarem a postura de segurança ao nível de adoção de IA enfrentarão custos crescentes de conformidade e resposta a incidentes.</p>
+    <a href="https://docmanagement.com.br/05/25/2026/nova-era-de-risco-digital-pressiona-empresas-e-ciberseguranca-ganha-peso-ainda-mais-estrategico/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story" style="border-bottom:none;">
+    <div class="story-meta">
+      <span class="story-tag">IA Generativa</span>
+      <span class="story-source"><a href="https://sitepd.org.br/2026/05/20/uso-corporativo-de-ia-generativa-preocupa-especialistas-em-ciberseguranca/" target="_blank">SITEPD · Netskope Threat Labs</a></span>
+    </div>
+    <h2>Alerta corporativo: <em>64% das violações de dados</em> em IA generativa no Brasil expõem informações sensíveis ou reguladas</h2>
+    <p>Um levantamento do Netskope Threat Labs revela que 64% das violações de políticas de dados relacionadas ao uso de IA generativa no Brasil envolvem informações sensíveis ou reguladas — e todas as organizações analisadas já utilizam algum tipo de GenAI. O uso ativo dessas ferramentas cresceu de 50% para 71% em apenas um ano. O cenário configura um paradoxo de adoção sem governança: as mesmas ferramentas que aceleram a produtividade criam superfícies de exposição de dados que a maioria das organizações ainda não mapeou. Para líderes de privacidade, jurídico e operações, o próximo passo não é barrar a IA — é estabelecer frameworks de uso seguro antes que um incidente force a mão.</p>
+    <a href="https://sitepd.org.br/2026/05/20/uso-corporativo-de-ia-generativa-preocupa-especialistas-em-ciberseguranca/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- PULLQUOTE -->
+  <div class="pullquote">
+    <blockquote>
+      "A cibersegurança deixou de ser um problema de TI. Ela é agora um problema de negócio — e o risco de não agir supera em muito o custo de agir."
+    </blockquote>
+    <cite>— Análise Portal Information Management · Nova Era de Risco Digital · Maio 2026</cite>
+  </div>
+
+  <!-- PERSPECTIVA -->
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">💡 Perspectiva</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story" style="border-bottom:none; padding-bottom:28px;">
+    <h2>O que esses sinais significam para <em>líderes de transformação</em></h2>
+    <p style="margin-bottom:12px;">Três leituras práticas desta edição:</p>
+    <p style="margin-bottom:10px;"><strong>1. IA cria atacantes mais rápidos — e defensores com nova arma.</strong> O Claude Mythos encontrou 10.000 vulnerabilidades em 30 dias. Isso significa que modelos com capacidade equivalente vão chegar a agentes maliciosos. A defesa precisa escalar na mesma velocidade que o ataque — e a única forma de fazer isso é também com IA. Empresas que ainda tratam segurança como checklist trimestral estão operando no passado.</p>
+    <p style="margin-bottom:10px;"><strong>2. Agentes em produção = nova superfície de ataque não mapeada.</strong> O Google Agent Executor facilita o deploy de agentes autônomos em escala corporativa. Mas cada agente que opera com acesso a dados, APIs e sistemas internos é um novo vetor de risco. O mapeamento de riscos de segurança deve preceder — não seguir — a escala de agentes de IA.</p>
+    <p><strong>3. Brasil: a lacuna entre adoção e maturidade é a próxima grande crise setorial.</strong> 71% das empresas já usam GenAI, mas 64% das violações envolvem dados sensíveis e apenas 16% têm CISO dedicado. A equação é explosiva. A janela para construir governança antes de um incidente catastrófico é estreita — e quem agir agora transforma risco em vantagem competitiva perante clientes, reguladores e parceiros.</p>
+  </article>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">CLIKDATA<span>·</span>DROPS</div>
+
+      </div>
+      <div class="footer-links">
+        <a href="https://clikdata.com.br" target="_blank">clikdata.com.br</a>
+        <a href="#">Arquivos anteriores</a>
+        <a href="#">Descadastrar</a>
+        <a href="#">Contato</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      Publicado em 26 de maio de 2026 · Edição #021 · clikdata.com.br<br>
+      Este digest é gerado automaticamente com curadoria editorial humana.<br>
+      Fontes: Anthropic, GOV.UK, InfoWorld, Portal Information Management, SITEPD, Netskope Threat Labs, IDC.
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
