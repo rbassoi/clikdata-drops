@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CLIKDATA DROPS — Edição #023 - Maio 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0f0f0f;
+    --paper: #f5f0e8;
+    --accent: #c8401a;
+    --accent2: #1a3c5e;
+    --muted: #7a7060;
+    --rule: #d4cfc4;
+    --tag-bg: #1a3c5e;
+    --tag-color: #f5f0e8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #e8e3d8;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrapper {
+    max-width: 680px;
+    margin: 40px auto;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    box-shadow: 4px 4px 0 #c4bfb4, 8px 8px 0 #b4afa4;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    border-bottom: 3px double var(--ink);
+    padding: 0;
+    position: relative;
+  }
+
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 32px 10px;
+    border-bottom: 1px solid var(--rule);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  .masthead {
+    padding: 28px 32px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--ink);
+    position: relative;
+  }
+
+  .masthead::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--accent);
+    margin: 0 auto 16px;
+  }
+
+  .masthead h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1;
+    color: var(--ink);
+  }
+
+  .masthead h1 span {
+    color: var(--accent);
+  }
+
+  .tagline {
+    margin-top: 8px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .edition-bar {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 10px 32px;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  /* ── INTRO ── */
+  .intro {
+    padding: 28px 32px 24px;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .intro-dropcap {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 0.85;
+    color: var(--accent);
+    float: left;
+    margin-right: 4px;
+    margin-top: 6px;
+  }
+
+  .intro p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: #2a2520;
+  }
+
+  /* ── SECTION HEADER ── */
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 32px 0;
+    margin-bottom: 4px;
+  }
+
+  .section-flag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    background: var(--tag-bg);
+    color: var(--tag-color);
+    padding: 4px 10px;
+    white-space: nowrap;
+  }
+
+  .section-flag.red { background: var(--accent); }
+
+  .section-rule {
+    flex: 1;
+    height: 1px;
+    background: var(--ink);
+  }
+
+  /* ── STORY CARD ── */
+  .story {
+    padding: 20px 32px;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+  }
+
+  .story:last-of-type { border-bottom: none; }
+
+  .story-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .story-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 2px 7px;
+  }
+
+  .story-source {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+  }
+
+  .story h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+
+  .story h2 em {
+    font-style: italic;
+    color: var(--accent2);
+  }
+
+  .story p {
+    font-size: 14px;
+    line-height: 1.72;
+    color: #2a2520;
+  }
+
+  .story .number-callout {
+    float: right;
+    margin: 0 0 8px 18px;
+    text-align: center;
+    border: 2px solid var(--ink);
+    padding: 12px 16px;
+    min-width: 88px;
+  }
+
+  .story .number-callout .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--accent);
+    display: block;
+    line-height: 1;
+  }
+
+  .story .number-callout .num-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 4px;
+  }
+
+  /* ── DIVIDER ── */
+  .section-divider {
+    border: none;
+    border-top: 3px double var(--ink);
+    margin: 8px 32px 0;
+  }
+
+  /* ── DESTAQUE BRASIL ── */
+  .brasil-strip {
+    background: var(--accent2);
+    color: var(--paper);
+    padding: 6px 32px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .brasil-strip::before {
+    content: '▶';
+    font-size: 8px;
+  }
+
+  /* ── STAT ROW ── */
+  .stat-row {
+    display: flex;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .stat-item {
+    flex: 1;
+    padding: 20px 24px;
+    border-right: 1px solid var(--rule);
+    text-align: center;
+  }
+
+  .stat-item:last-child { border-right: none; }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--accent2);
+    display: block;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 6px;
+    line-height: 1.4;
+  }
+
+  /* ── PULLQUOTE ── */
+  .pullquote {
+    margin: 0;
+    padding: 24px 40px;
+    border-top: 2px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+    background: #ede8de;
+  }
+
+  .pullquote blockquote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 19px;
+    line-height: 1.5;
+    color: var(--ink);
+    text-align: center;
+  }
+
+  .pullquote cite {
+    display: block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: center;
+    font-style: normal;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 28px 32px;
+    border-top: 3px double var(--accent);
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333;
+  }
+
+  .footer-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 900;
+  }
+
+  .footer-brand span { color: var(--accent); }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: right;
+  }
+
+  .footer-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: #888;
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .footer-bottom {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: #555;
+    letter-spacing: 0.06em;
+    line-height: 1.6;
+  }
+
+  .routine-badge {
+    display: inline-block;
+    margin-top: 12px;
+    background: var(--accent);
+    color: white;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+  }
+
+
+  .story-source a {
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--muted);
+    transition: color 0.15s;
+  }
+  .story-source a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+  .read-more {
+    display: inline-block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent2);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent2);
+    padding-bottom: 1px;
+  }
+  .read-more:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+  @media (max-width: 600px) {
+    .wrapper { margin: 0; box-shadow: none; }
+    .masthead h1 { font-size: 38px; }
+    .stat-row { flex-direction: column; }
+    .stat-item { border-right: none; border-bottom: 1px solid var(--rule); }
+    .header-top { flex-direction: column; gap: 4px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-top">
+      <span>Edição #023</span>
+      <span>28 de maio de 2026</span>
+      <span>Diária · IA &amp; Transformação</span>
+    </div>
+    <div class="masthead">
+      <h1>CLIKDATA<span style="color:var(--accent)">·</span>DROPS</h1>
+      <p class="tagline">IA · Tecnologia · Transformação Digital · Edição Diária</p>
+    </div>
+    <div class="edition-bar">
+      <span>🌍 Mundo</span>
+      <span>🇧🇷 Brasil</span>
+      <span>📊 Números</span>
+      <span>💡 Perspectiva</span>
+    </div>
+  </header>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <p>
+      <span class="intro-dropcap">D</span>
+      e US$ 900 bilhões a uma encíclica papal, a semana comprova que a IA não cabe mais só nos relatórios de tecnologia — ela entrou na geopolítica, na ética global e no planejamento eleitoral. Enquanto a Anthropic ameaça destronar a OpenAI como startup privada mais valiosa da história, o Google I/O reinventou o assistente como agente que age. No Brasil, os US$ 3,4 bilhões do IDC jogam luz sobre uma janela que está se fechando — quem não entrou na era agêntica está ficando para trás.
+    </p>
+  </section>
+
+  <!-- ═══ MUNDO ═══ -->
+  <div class="section-header">
+    <span class="section-flag red">🌍 Mundo</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Mercado &amp; Valuations</span>
+      <span class="story-source"><a href="https://www.techtimes.com/articles/317066/20260523/anthropic-funding-round-top-30b-900b-valuation-would-surpass-openai-most-valuable-ai-startup.htm" target="_blank">Bloomberg / TechTimes</a></span>
+    </div>
+    <div class="number-callout">
+      <span class="num">$900B</span>
+      <span class="num-label">avaliação<br>Anthropic</span>
+    </div>
+    <h2>Anthropic pode superar OpenAI com rodada de <em>US$ 30 bilhões</em> a US$ 900 bi de valuation</h2>
+    <p>A Anthropic está em conversas avançadas para captar ao menos US$ 30 bilhões numa rodada co-liderada por Sequoia, Dragoneer, Altimeter e Greenoaks — cada uma investindo cerca de US$ 2 bilhões. O valuation pós-money chega a US$ 930 bilhões, ultrapassando os US$ 852 bilhões da OpenAI estabelecidos em março. O dado mais surpreendente é a velocidade: a receita anualizada da Anthropic saltou de US$ 87 milhões em janeiro de 2024 para US$ 30 bilhões em abril de 2026 — crescimento de 34.000% em dois anos. O Claude Code, ferramenta de codificação agêntica lançada em meados de 2025, atingiu US$ 1 bilhão em receita recorrente anual em apenas seis meses — possivelmente o software que mais cresceu na história.</p>
+    <a href="https://www.techtimes.com/articles/317066/20260523/anthropic-funding-round-top-30b-900b-valuation-would-surpass-openai-most-valuable-ai-startup.htm" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Agentes &amp; Plataformas</span>
+      <span class="story-source"><a href="https://blog.google/innovation-and-ai/technology/ai/google-io-2026-all-our-announcements/" target="_blank">Google Blog / 9to5Google</a></span>
+    </div>
+    <h2>Google I/O 2026: <em>Gemini Spark</em> age por você — IA deixa de responder e começa a executar</h2>
+    <p>No palco do Google I/O 2026, o anúncio central não foi um novo modelo — foi uma mudança de paradigma. O Gemini Spark é um agente pessoal que toma ações em nome do usuário navegando pelo ecossistema digital sem precisar de instruções a cada passo. Junto, chegou o Gemini 3.5 Flash, capaz de rivalizar com modelos flaghship em tarefas de raciocínio e coding, e o Daily Brief, um digest personalizado que integra Gmail, Agenda e Tarefas. A mensagem do CEO Sundar Pichai foi inequívoca: o assistente que responde perguntas morreu — agora a IA resolve problemas de ponta a ponta.</p>
+    <a href="https://blog.google/innovation-and-ai/technology/ai/google-io-2026-all-our-announcements/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Ética &amp; Regulação</span>
+      <span class="story-source"><a href="https://time.com/article/2026/05/25/pope-leo-encyclical-ai-magnifica-humanitas/" target="_blank">Time / National Catholic Reporter</a></span>
+    </div>
+    <h2>Papa Leão XIV publica encíclica sobre IA e pede que o mundo a <em>"desarme"</em></h2>
+    <p>Em 25 de maio, o Papa Leão XIV divulgou "Magnifica Humanitas" — o primeiro documento papal dedicado inteiramente à inteligência artificial. O texto alerta para ameaças tecnológicas à dignidade humana e chama líderes globais a "desarmarem a IA" de seus usos destrutivos. A escolha do parceiro para o lançamento foi significativa: o Vaticano dividiu o palco com a Anthropic — não com Google ou OpenAI — sinalizando qual laboratório considera mais alinhado com segurança e ética. Para o mercado, a encíclica eleva a pauta de governança de IA ao nível de interesse civilizacional.</p>
+    <a href="https://time.com/article/2026/05/25/pope-leo-encyclical-ai-magnifica-humanitas/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- ═══ BRASIL ═══ -->
+  <hr class="section-divider">
+  <div class="brasil-strip">Brasil concentra 41,7% do mercado de IA da América Latina — US$ 4,2 bi em 2026</div>
+
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">🇧🇷 Brasil</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stat-row">
+    <div class="stat-item">
+      <span class="stat-num">$3,4B</span>
+      <span class="stat-label">investimento em IA<br>no Brasil em 2026</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">+30%</span>
+      <span class="stat-label">crescimento vs.<br>ano anterior</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">55%</span>
+      <span class="stat-label">brasileiros que<br>confiam em IA p/ compras</span>
+    </div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Mercado Nacional</span>
+      <span class="story-source"><a href="https://www.mobiletime.com.br/noticias/10/02/2026/agente-ia-idc-2026/" target="_blank">IDC / MobileTime</a></span>
+    </div>
+    <h2>IDC: agentes de IA atrairão <em>US$ 3,4 bilhões</em> em TI ao Brasil este ano — crescimento de 30%</h2>
+    <p>O IDC projeta que a implementação de IA em software, serviços e infraestrutura no Brasil chegará a US$ 3,4 bilhões em 2026 — crescimento acima de 30% sobre os US$ 2,6 bilhões do ano anterior. O país concentra 41,7% do mercado latino-americano de IA e lidera a transição para a era agêntica: 75% dos líderes empresariais brasileiros já esperam agentes operando de forma autônoma dentro de suas operações em 2026. A confiança do consumidor brasileiro também chama atenção: 55% dos brasileiros dizem confiar em IA para fazer compras — o dobro dos índices registrados em EUA e Reino Unido.</p>
+    <a href="https://www.mobiletime.com.br/noticias/10/02/2026/agente-ia-idc-2026/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story" style="border-bottom:none;">
+    <div class="story-meta">
+      <span class="story-tag">Democracia &amp; IA</span>
+      <span class="story-source"><a href="https://www.tse.jus.br/comunicacao/noticias/2026/Maio/presidente-do-tse-defende-inteligencia-democratica-contra-uso-abusivo-de-ia" target="_blank">TSE</a></span>
+    </div>
+    <h2>TSE prepara "inteligência democrática" para enfrentar deepfakes e desinformação nas eleições 2026</h2>
+    <p>O presidente do Tribunal Superior Eleitoral apresentou a estratégia brasileira para proteger as eleições de 2026 contra o uso abusivo de IA: detecção automatizada de deepfakes, monitoramento de desinformação em tempo real e parceria com plataformas digitais para remoção acelerada de conteúdo falso. O Brasil é pioneiro na América Latina a estruturar um arcabouço jurídico-tecnológico específico para eleições na era generativa — um modelo que organismos internacionais já estudam replicar. A decisão de enfrentar o problema com "inteligência democrática" — IA contra IA — marca uma virada na postura regulatória do país.</p>
+    <a href="https://www.tse.jus.br/comunicacao/noticias/2026/Maio/presidente-do-tse-defende-inteligencia-democratica-contra-uso-abusivo-de-ia" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- PULLQUOTE -->
+  <div class="pullquote">
+    <blockquote>
+      "Não podemos permitir que a inteligência artificial seja usada como arma contra a democracia. Precisamos de inteligência democrática para enfrentá-la."
+    </blockquote>
+    <cite>— Presidente do TSE · Seminário sobre IA nas Eleições 2026</cite>
+  </div>
+
+  <!-- PERSPECTIVA -->
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">💡 Perspectiva</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story" style="border-bottom:none; padding-bottom:28px;">
+    <h2>O que esses sinais significam para <em>líderes de transformação</em></h2>
+    <p style="margin-bottom:12px;">Três leituras práticas desta edição:</p>
+    <p style="margin-bottom:10px;"><strong>1. A era do assistente acabou — começa a era do agente.</strong> O Google I/O 2026 não foi só um evento de produto. Foi uma declaração de paradigma: IA que age substitui IA que responde. Gemini Spark, Claude Code e os novos agentes da OpenAI convergem no mesmo ponto. Líderes que ainda avaliam "copilots" estão olhando para a geração anterior.</p>
+    <p style="margin-bottom:10px;"><strong>2. Valuation de US$ 900 bilhões é um sinal de mercado — não de exuberância.</strong> A Anthropic atingiu US$ 30 bilhões em receita recorrente anual em dois anos de crescimento acelerado. Quando fundos como Sequoia e Altimeter co-lideram rodadas desse tamanho, não é aposta — é convicção de que o mercado adressável é trilionário e a janela de liderança é agora.</p>
+    <p><strong>3. Brasil tem estrutura para ganhar — se agir rápido.</strong> US$ 3,4 bilhões em investimento em IA, liderança regional em confiança do consumidor e pioneirismo regulatório no TSE compõem um cenário único. A vantagem não é permanente: o window de ser first-mover em IA agêntica na América Latina está se fechando nos próximos 12 a 18 meses.</p>
+  </article>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">CLIKDATA<span>·</span>DROPS</div>
+
+      </div>
+      <div class="footer-links">
+        <a href="https://clikdata.com.br" target="_blank">clikdata.com.br</a>
+        <a href="#">Arquivos anteriores</a>
+        <a href="#">Descadastrar</a>
+        <a href="#">Contato</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      Publicado em 28 de maio de 2026 · Edição #023 · clikdata.com.br<br>
+      Este digest é gerado automaticamente com curadoria editorial humana.<br>
+      Fontes: Bloomberg, TechTimes, Google Blog, Time, IDC, TSE, MobileTime, 9to5Google.
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
