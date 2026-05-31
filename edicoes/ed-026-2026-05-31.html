@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CLIKDATA DROPS — Edição #026 - Maio 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0f0f0f;
+    --paper: #f5f0e8;
+    --accent: #c8401a;
+    --accent2: #1a3c5e;
+    --muted: #7a7060;
+    --rule: #d4cfc4;
+    --tag-bg: #1a3c5e;
+    --tag-color: #f5f0e8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #e8e3d8;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrapper {
+    max-width: 680px;
+    margin: 40px auto;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    box-shadow: 4px 4px 0 #c4bfb4, 8px 8px 0 #b4afa4;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    border-bottom: 3px double var(--ink);
+    padding: 0;
+    position: relative;
+  }
+
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 32px 10px;
+    border-bottom: 1px solid var(--rule);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  .masthead {
+    padding: 28px 32px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--ink);
+    position: relative;
+  }
+
+  .masthead::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--accent);
+    margin: 0 auto 16px;
+  }
+
+  .masthead h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1;
+    color: var(--ink);
+  }
+
+  .masthead h1 span {
+    color: var(--accent);
+  }
+
+  .tagline {
+    margin-top: 8px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .edition-bar {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 10px 32px;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  /* ── INTRO ── */
+  .intro {
+    padding: 28px 32px 24px;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .intro-dropcap {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 0.85;
+    color: var(--accent);
+    float: left;
+    margin-right: 4px;
+    margin-top: 6px;
+  }
+
+  .intro p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: #2a2520;
+  }
+
+  /* ── SECTION HEADER ── */
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 32px 0;
+    margin-bottom: 4px;
+  }
+
+  .section-flag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    background: var(--tag-bg);
+    color: var(--tag-color);
+    padding: 4px 10px;
+    white-space: nowrap;
+  }
+
+  .section-flag.red { background: var(--accent); }
+
+  .section-rule {
+    flex: 1;
+    height: 1px;
+    background: var(--ink);
+  }
+
+  /* ── STORY CARD ── */
+  .story {
+    padding: 20px 32px;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+  }
+
+  .story:last-of-type { border-bottom: none; }
+
+  .story-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .story-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 2px 7px;
+  }
+
+  .story-source {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+  }
+
+  .story h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+
+  .story h2 em {
+    font-style: italic;
+    color: var(--accent2);
+  }
+
+  .story p {
+    font-size: 14px;
+    line-height: 1.72;
+    color: #2a2520;
+  }
+
+  .story .number-callout {
+    float: right;
+    margin: 0 0 8px 18px;
+    text-align: center;
+    border: 2px solid var(--ink);
+    padding: 12px 16px;
+    min-width: 88px;
+  }
+
+  .story .number-callout .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--accent);
+    display: block;
+    line-height: 1;
+  }
+
+  .story .number-callout .num-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 4px;
+  }
+
+  /* ── DIVIDER ── */
+  .section-divider {
+    border: none;
+    border-top: 3px double var(--ink);
+    margin: 8px 32px 0;
+  }
+
+  /* ── DESTAQUE BRASIL ── */
+  .brasil-strip {
+    background: var(--accent2);
+    color: var(--paper);
+    padding: 6px 32px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .brasil-strip::before {
+    content: '▶';
+    font-size: 8px;
+  }
+
+  /* ── STAT ROW ── */
+  .stat-row {
+    display: flex;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .stat-item {
+    flex: 1;
+    padding: 20px 24px;
+    border-right: 1px solid var(--rule);
+    text-align: center;
+  }
+
+  .stat-item:last-child { border-right: none; }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--accent2);
+    display: block;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 6px;
+    line-height: 1.4;
+  }
+
+  /* ── PULLQUOTE ── */
+  .pullquote {
+    margin: 0;
+    padding: 24px 40px;
+    border-top: 2px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+    background: #ede8de;
+  }
+
+  .pullquote blockquote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 19px;
+    line-height: 1.5;
+    color: var(--ink);
+    text-align: center;
+  }
+
+  .pullquote cite {
+    display: block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: center;
+    font-style: normal;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 28px 32px;
+    border-top: 3px double var(--accent);
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333;
+  }
+
+  .footer-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 900;
+  }
+
+  .footer-brand span { color: var(--accent); }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: right;
+  }
+
+  .footer-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: #888;
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .footer-bottom {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: #555;
+    letter-spacing: 0.06em;
+    line-height: 1.6;
+  }
+
+  .routine-badge {
+    display: inline-block;
+    margin-top: 12px;
+    background: var(--accent);
+    color: white;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+  }
+
+
+  .story-source a {
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--muted);
+    transition: color 0.15s;
+  }
+  .story-source a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+  .read-more {
+    display: inline-block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent2);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent2);
+    padding-bottom: 1px;
+  }
+  .read-more:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+  @media (max-width: 600px) {
+    .wrapper { margin: 0; box-shadow: none; }
+    .masthead h1 { font-size: 38px; }
+    .stat-row { flex-direction: column; }
+    .stat-item { border-right: none; border-bottom: 1px solid var(--rule); }
+    .header-top { flex-direction: column; gap: 4px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-top">
+      <span>Edição #026</span>
+      <span>31 de maio de 2026</span>
+      <span>Diária · IA &amp; Transformação</span>
+    </div>
+    <div class="masthead">
+      <h1>CLIKDATA<span style="color:var(--accent)">·</span>DROPS</h1>
+      <p class="tagline">IA · Tecnologia · Transformação Digital · Edição Diária</p>
+    </div>
+    <div class="edition-bar">
+      <span>🌍 Mundo</span>
+      <span>🇧🇷 Brasil</span>
+      <span>📊 Números</span>
+      <span>💡 Perspectiva</span>
+    </div>
+  </header>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <p>
+      <span class="intro-dropcap">M</span>
+      aio de 2026 encerra com um estalo: a Anthropic ultrapassa a OpenAI em valor de mercado e chega a US$ 965 bilhões, o Google funde IA ao DNA de todos os seus produtos e o Brasil confirma liderança regional em adoção transformadora. A semana que passa redefiniu o tabuleiro — e esta edição traz os movimentos que cada líder de negócios precisa entender antes de virar a página do mês.
+    </p>
+  </section>
+
+  <!-- ═══ MUNDO ═══ -->
+  <div class="section-header">
+    <span class="section-flag red">🌍 Mundo</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Financiamento</span>
+      <span class="story-source"><a href="https://techcrunch.com/2026/05/28/anthropic-raises-65-billion-nears-1t-valuation-ahead-of-ipo/" target="_blank">TechCrunch · 28/05/2026</a></span>
+    </div>
+    <div class="number-callout">
+      <span class="num">$965B</span>
+      <span class="num-label">valuation<br>Anthropic</span>
+    </div>
+    <h2>Anthropic ultrapassa OpenAI e chega a <em>US$ 965 bilhões</em> — a corrida por valuation entra na reta final privada</h2>
+    <p>A Anthropic fechou uma Série H de US$ 65 bilhões a uma avaliação de US$ 965 bilhões — superando a OpenAI (US$ 852 bilhões) e tornando-se a startup de IA mais valiosa do mundo. O run rate de receita cruzou US$ 47 bilhões em maio, impulsionado pelo crescimento explosivo do Claude Code. Com a OpenAI preparando S-1 confidencial para IPO e a Anthropic quase no trilhão, o mercado privado de IA parece ter chegado ao seu teto — a próxima disputa acontecerá em bolsa, sob escrutínio público e pressão por rentabilidade real.</p>
+    <a href="https://techcrunch.com/2026/05/28/anthropic-raises-65-billion-nears-1t-valuation-ahead-of-ipo/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Modelos</span>
+      <span class="story-source"><a href="https://fortune.com/2026/05/29/anthropic-raises-65-billion-at-record-965-billion-valuation-promises-mythos-ai-model-in-wide-release-in-coming-weeks-releases-claude-opus-4-8/" target="_blank">Fortune · 29/05/2026</a></span>
+    </div>
+    <h2>Claude Opus 4.8: o modelo de IA mais <em>honesto</em> já lançado — e o que isso muda para empresas</h2>
+    <p>Junto ao anúncio de valuation, a Anthropic lançou o Claude Opus 4.8 com avanços em tarefas agênticas e programação — mas o diferencial mais relevante é outro: o modelo é 4× menos propenso a deixar erros de código passar sem reconhecê-los que seu predecessor. Para empresas que adotam IA em pipelines críticos, "honestidade" de modelo deixa de ser conceito abstrato e vira requisito operacional. A Anthropic ainda prometeu o "Mythos", modelo focado em cibersegurança avançada, disponível em breve para um grupo seleto de parceiros.</p>
+    <a href="https://fortune.com/2026/05/29/anthropic-raises-65-billion-at-record-965-billion-valuation-promises-mythos-ai-model-in-wide-release-in-coming-weeks-releases-claude-opus-4-8/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Big Tech</span>
+      <span class="story-source"><a href="https://www.axios.com/2026/05/21/google-ai-anthropic-openai-war" target="_blank">Axios · Google I/O 2026</a></span>
+    </div>
+    <h2>Google I/O 2026: Gemini entra no núcleo de <em>tudo</em> — Search, Android, YouTube e além</h2>
+    <p>O Google I/O 2026 foi, de ponta a ponta, uma conferência de IA. O Gemini foi integrado ao Search (que agora responde consultas curtas e longas conversações em fluxo contínuo), ao Android, ao Chrome, ao Workspace e ao YouTube — que ganhou o "Ask YouTube" para buscas com resposta textual e link direto para o vídeo relevante. Com o Gemini 3.5 Flash disponível a US$ 1,50 por milhão de tokens e 4× mais velocidade que modelos equivalentes, o Google posiciona capacidade de IA como commodity e pressiona todos os concorrentes nas camadas de produto e aplicação.</p>
+    <a href="https://www.axios.com/2026/05/21/google-ai-anthropic-openai-war" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Estratégia</span>
+      <span class="story-source"><a href="https://www.cio.com/article/4167787/openai-anthropic-expand-services-push-signaling-new-phase-in-enterprise-ai-race.html" target="_blank">CIO · maio 2026</a></span>
+    </div>
+    <h2>OpenAI rumo ao IPO e ao mercado de anúncios — <em>US$ 100 bilhões</em> em publicidade até 2030</h2>
+    <p>A OpenAI deu dois movimentos simultâneos que redefinem sua trajetória: protocolou S-1 confidencial junto à SEC, com IPO esperado para o final de 2026 ou início de 2027, e lançou plataforma de anúncios self-serve dentro do ChatGPT, mirando US$ 2,5 bilhões em receita publicitária neste ano e US$ 100 bilhões até 2030. O modelo de IA como mídia pode ser tão disruptivo quanto o IA como produto — e abre novos debates sobre privacidade, viés e monetização de diálogos com usuários.</p>
+    <a href="https://www.cio.com/article/4167787/openai-anthropic-expand-services-push-signaling-new-phase-in-enterprise-ai-race.html" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- ═══ BRASIL ═══ -->
+  <hr class="section-divider">
+  <div class="brasil-strip">Brasil supera média global em adoção transformadora de IA — veja os números</div>
+
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">🇧🇷 Brasil</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stat-row">
+    <div class="stat-item">
+      <span class="stat-num">42%</span>
+      <span class="stat-label">empresas brasileiras<br>com IA transformadora</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">US$4.2B</span>
+      <span class="stat-label">investimentos em IA<br>no Brasil em 2026</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">87%</span>
+      <span class="stat-label">líderes BR que esperam<br>IA impulsionar receita</span>
+    </div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Pesquisa</span>
+      <span class="story-source"><a href="https://docmanagement.com.br/05/19/2026/ia-entra-em-fase-de-escala-enquanto-papel-estrategico-avanca-nas-empresas-mercado-brasileiro-se-destaca-aponta-deloitte/" target="_blank">Deloitte · State of AI 2026</a></span>
+    </div>
+    <h2>Deloitte: 42% das empresas brasileiras usam IA de forma <em>transformadora</em> — 8 pontos acima da média global</h2>
+    <p>O "State of AI in the Enterprise 2026" da Deloitte coloca o Brasil em posição de destaque: 42% das empresas nacionais relatam uso de IA de forma transformadora, contra 34% da média global. O estudo documenta a consolidação da fase de escala — com IA agora integrada a produtividade, automação, desenvolvimento de software, tomada de decisão e modernização operacional de forma contínua. O mercado brasileiro deve concentrar 41,7% dos investimentos latino-americanos em IA em 2026, estimados em US$ 4,2 bilhões. Governança e capacitação seguem como os principais gargalos a superar.</p>
+    <a href="https://docmanagement.com.br/05/19/2026/ia-entra-em-fase-de-escala-enquanto-papel-estrategico-avanca-nas-empresas-mercado-brasileiro-se-destaca-aponta-deloitte/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story" style="border-bottom:none;">
+    <div class="story-meta">
+      <span class="story-tag">Transformação Digital</span>
+      <span class="story-source"><a href="https://www.danielnunes.net.br/2026/05/seis-tendencias-de-inteligencia.html" target="_blank">Daniel Nunes · maio 2026</a></span>
+    </div>
+    <h2>Seis tendências de IA que aceleram a transformação corporativa no Brasil — e os gargalos que travam a escala</h2>
+    <p>Um levantamento publicado em maio identifica as seis tendências de IA com maior impacto na transformação corporativa brasileira: agentes autônomos de processo, IA embarcada em produtos, automação de decision-making, personalização em escala, co-pilotos humano-máquina e infraestrutura de dados para IA. Para líderes de transformação digital, o diagnóstico é claro: empresas que ainda tratam IA como projeto-piloto correm o risco de sair da disputa antes de consolidar posição. Cultura organizacional e qualidade de dados emergem como os obstáculos mais frequentes à escala.</p>
+    <a href="https://www.danielnunes.net.br/2026/05/seis-tendencias-de-inteligencia.html" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- PULLQUOTE -->
+  <div class="pullquote">
+    <blockquote>
+      "A inteligência artificial não é mais um projeto de tecnologia. É uma decisão estratégica que pertence ao board — e quem ainda trata como piloto está perdendo a janela."
+    </blockquote>
+    <cite>— State of AI in the Enterprise 2026, Deloitte · AI Institute</cite>
+  </div>
+
+  <!-- PERSPECTIVA -->
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">💡 Perspectiva</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story" style="border-bottom:none; padding-bottom:28px;">
+    <h2>Três movimentos que definem o tabuleiro de IA ao final de <em>maio de 2026</em></h2>
+    <p style="margin-bottom:12px;">O mês encerra com sinais que merecem leitura atenta:</p>
+    <p style="margin-bottom:10px;"><strong>1. A guerra de valuation chega ao seu fim privado.</strong> Anthropic a US$ 965 bilhões e OpenAI preparando S-1 sinalizam que o capital privado atingiu seu limite natural. A próxima fase da competição acontecerá em mercados públicos, com pressão real por receita e rentabilidade. O hype precifica hoje o que a disciplina cobrará amanhã — e empresas que adotam IA precisam exigir ROI mensurável de seus fornecedores de plataforma.</p>
+    <p style="margin-bottom:10px;"><strong>2. Honestidade vira vantagem competitiva de modelo.</strong> O diferencial mais relevante do Claude Opus 4.8 não é velocidade nem benchmark — é que ele admite quando erra. Em pipelines críticos de negócio, modelos que reconhecem incerteza reduzem risco operacional de forma concreta. Espere "honesty scores" como critério de seleção de modelos nos próximos trimestres.</p>
+    <p><strong>3. Brasil lidera, mas a janela tem prazo.</strong> Com 42% das empresas em uso transformador (vs. 34% global) e US$ 4,2 bilhões em investimentos previstos para 2026, o Brasil tem vantagem real na América Latina. Mas a liderança regional não se converte automaticamente em competitividade global. Empresas que saírem do piloto para a escala nos próximos 12 meses definirão quem estará no jogo em 2027 — as demais assistirão.</p>
+  </article>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">CLIKDATA<span>·</span>DROPS</div>
+
+      </div>
+      <div class="footer-links">
+        <a href="https://clikdata.com.br" target="_blank">clikdata.com.br</a>
+        <a href="#">Arquivos anteriores</a>
+        <a href="#">Descadastrar</a>
+        <a href="#">Contato</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      Publicado em 31 de maio de 2026 · Edição #026 · clikdata.com.br<br>
+      Este digest é gerado automaticamente com curadoria editorial humana.<br>
+      Fontes: TechCrunch, Fortune, Axios, CIO, Deloitte, Daniel Nunes, Portal Information Management.
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
