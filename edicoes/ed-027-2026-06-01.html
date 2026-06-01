@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CLIKDATA DROPS — Edição #027 - Junho 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0f0f0f;
+    --paper: #f5f0e8;
+    --accent: #c8401a;
+    --accent2: #1a3c5e;
+    --muted: #7a7060;
+    --rule: #d4cfc4;
+    --tag-bg: #1a3c5e;
+    --tag-color: #f5f0e8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #e8e3d8;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrapper {
+    max-width: 680px;
+    margin: 40px auto;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    box-shadow: 4px 4px 0 #c4bfb4, 8px 8px 0 #b4afa4;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    border-bottom: 3px double var(--ink);
+    padding: 0;
+    position: relative;
+  }
+
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 32px 10px;
+    border-bottom: 1px solid var(--rule);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  .masthead {
+    padding: 28px 32px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--ink);
+    position: relative;
+  }
+
+  .masthead::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--accent);
+    margin: 0 auto 16px;
+  }
+
+  .masthead h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1;
+    color: var(--ink);
+  }
+
+  .masthead h1 span {
+    color: var(--accent);
+  }
+
+  .tagline {
+    margin-top: 8px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .edition-bar {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 10px 32px;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  /* ── INTRO ── */
+  .intro {
+    padding: 28px 32px 24px;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .intro-dropcap {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 0.85;
+    color: var(--accent);
+    float: left;
+    margin-right: 4px;
+    margin-top: 6px;
+  }
+
+  .intro p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: #2a2520;
+  }
+
+  /* ── SECTION HEADER ── */
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 32px 0;
+    margin-bottom: 4px;
+  }
+
+  .section-flag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    background: var(--tag-bg);
+    color: var(--tag-color);
+    padding: 4px 10px;
+    white-space: nowrap;
+  }
+
+  .section-flag.red { background: var(--accent); }
+
+  .section-rule {
+    flex: 1;
+    height: 1px;
+    background: var(--ink);
+  }
+
+  /* ── STORY CARD ── */
+  .story {
+    padding: 20px 32px;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+  }
+
+  .story:last-of-type { border-bottom: none; }
+
+  .story-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .story-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 2px 7px;
+  }
+
+  .story-source {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+  }
+
+  .story h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+
+  .story h2 em {
+    font-style: italic;
+    color: var(--accent2);
+  }
+
+  .story p {
+    font-size: 14px;
+    line-height: 1.72;
+    color: #2a2520;
+  }
+
+  .story .number-callout {
+    float: right;
+    margin: 0 0 8px 18px;
+    text-align: center;
+    border: 2px solid var(--ink);
+    padding: 12px 16px;
+    min-width: 88px;
+  }
+
+  .story .number-callout .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--accent);
+    display: block;
+    line-height: 1;
+  }
+
+  .story .number-callout .num-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 4px;
+  }
+
+  /* ── DIVIDER ── */
+  .section-divider {
+    border: none;
+    border-top: 3px double var(--ink);
+    margin: 8px 32px 0;
+  }
+
+  /* ── DESTAQUE BRASIL ── */
+  .brasil-strip {
+    background: var(--accent2);
+    color: var(--paper);
+    padding: 6px 32px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .brasil-strip::before {
+    content: '▶';
+    font-size: 8px;
+  }
+
+  /* ── STAT ROW ── */
+  .stat-row {
+    display: flex;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .stat-item {
+    flex: 1;
+    padding: 20px 24px;
+    border-right: 1px solid var(--rule);
+    text-align: center;
+  }
+
+  .stat-item:last-child { border-right: none; }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--accent2);
+    display: block;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 6px;
+    line-height: 1.4;
+  }
+
+  /* ── PULLQUOTE ── */
+  .pullquote {
+    margin: 0;
+    padding: 24px 40px;
+    border-top: 2px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+    background: #ede8de;
+  }
+
+  .pullquote blockquote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 19px;
+    line-height: 1.5;
+    color: var(--ink);
+    text-align: center;
+  }
+
+  .pullquote cite {
+    display: block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: center;
+    font-style: normal;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 28px 32px;
+    border-top: 3px double var(--accent);
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333;
+  }
+
+  .footer-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 900;
+  }
+
+  .footer-brand span { color: var(--accent); }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: right;
+  }
+
+  .footer-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: #888;
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .footer-bottom {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: #555;
+    letter-spacing: 0.06em;
+    line-height: 1.6;
+  }
+
+  .routine-badge {
+    display: inline-block;
+    margin-top: 12px;
+    background: var(--accent);
+    color: white;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+  }
+
+
+  .story-source a {
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--muted);
+    transition: color 0.15s;
+  }
+  .story-source a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+  .read-more {
+    display: inline-block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent2);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent2);
+    padding-bottom: 1px;
+  }
+  .read-more:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+  @media (max-width: 600px) {
+    .wrapper { margin: 0; box-shadow: none; }
+    .masthead h1 { font-size: 38px; }
+    .stat-row { flex-direction: column; }
+    .stat-item { border-right: none; border-bottom: 1px solid var(--rule); }
+    .header-top { flex-direction: column; gap: 4px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-top">
+      <span>Edição #027</span>
+      <span>1 de junho de 2026</span>
+      <span>Diária · IA &amp; Transformação</span>
+    </div>
+    <div class="masthead">
+      <h1>CLIKDATA<span style="color:var(--accent)">·</span>DROPS</h1>
+      <p class="tagline">IA · Tecnologia · Transformação Digital · Edição Diária</p>
+    </div>
+    <div class="edition-bar">
+      <span>🌍 Mundo</span>
+      <span>🇧🇷 Brasil</span>
+      <span>📊 Números</span>
+      <span>💡 Perspectiva</span>
+    </div>
+  </header>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <p>
+      <span class="intro-dropcap">J</span>
+      unho começa com a IA reescrevendo o mapa de poder do setor de tecnologia. A Anthropic ultrapassou a OpenAI em valor de mercado e se aproxima de US$ 1 trilhão; a OpenAI respondeu lançando um braço de consultoria corporativa de US$ 4 bilhões; e o Google ativou silenciosamente seu mais novo modelo para assinantes premium. Enquanto isso, o Brasil coloca o marco regulatório da IA em pauta urgente — e as empresas globais descobrem que investir em transformação digital não é garantia de resultado.
+    </p>
+  </section>
+
+  <!-- ═══ MUNDO ═══ -->
+  <div class="section-header">
+    <span class="section-flag red">🌍 Mundo</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Mercado IA</span>
+      <span class="story-source"><a href="https://techcrunch.com/2026/05/28/anthropic-raises-65-billion-nears-1t-valuation-ahead-of-ipo/" target="_blank">TechCrunch / Sherwood News</a></span>
+    </div>
+    <div class="number-callout">
+      <span class="num">$965B</span>
+      <span class="num-label">valoração<br>Anthropic</span>
+    </div>
+    <h2>Anthropic ultrapassa OpenAI e se aproxima de <em>US$ 1 trilhão</em> em valor de mercado</h2>
+    <p>Em um movimento que sacudiu o setor, a Anthropic fechou um Series H de US$ 65 bilhões liderado por Altimeter Capital, Dragoneer, Greenoaks e Sequoia Capital — triplicando sua avaliação em relação a fevereiro (US$ 380 bilhões) e superando os US$ 852 bilhões da OpenAI. No mesmo dia, a empresa lançou o Claude Opus 4.8, modelo que é quatro vezes mais honesto em relação a falhas de código do que seu antecessor. O run rate de receita saltou para US$ 47 bilhões anuais, puxado pelo sucesso do Claude Code entre desenvolvedores corporativos. A corrida ao primeiro trilhão em IA generativa tem nome e data.</p>
+    <a href="https://techcrunch.com/2026/05/28/anthropic-raises-65-billion-nears-1t-valuation-ahead-of-ipo/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Estratégia</span>
+      <span class="story-source"><a href="https://www.pymnts.com/news/artificial-intelligence/2026/openai-launches-4-billion-dollar-company-accelerate-enterprise-ai-adoption/" target="_blank">PYMNTS / OpenAI</a></span>
+    </div>
+    <h2>OpenAI lança empresa de consultoria de US$ 4 bilhões — e muda o jogo do enterprise</h2>
+    <p>A OpenAI anunciou o <strong>OpenAI Deployment Company</strong>, uma unidade de negócios avaliada em US$ 10 bilhões e com mais de US$ 4 bilhões em capital inicial, voltada para implementar IA dentro de grandes empresas. A iniciativa conta com McKinsey, Bain &amp; Company, Capgemini e TPG como parceiros, e já começa operando graças à aquisição da consultora britânica Tomoro — com carteira de clientes que inclui Tesco, Virgin Atlantic e Supercell. A estratégia é embalar engenheiros e especialistas em implantação dentro das organizações, eliminando a lacuna entre comprar um modelo e extrair valor real dele.</p>
+    <a href="https://www.pymnts.com/news/artificial-intelligence/2026/openai-launches-4-billion-dollar-company-accelerate-enterprise-ai-adoption/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Big Tech IA</span>
+      <span class="story-source"><a href="https://www.axios.com/2026/05/21/google-ai-anthropic-openai-war" target="_blank">Axios</a></span>
+    </div>
+    <h2>Google ativa Gemini Spark em silêncio — novo modelo ao vivo para assinantes Ultra</h2>
+    <p>Uma semana após anunciar o Gemini Spark no Google I/O 2026, o Google o ativou discretamente em 29 de maio para usuários do plano Google AI Ultra — a camada premium de assinatura (US$ 249/mês ou mais). O lançamento faz parte da estratégia que o Axios descreveu como a "guerra da IA": enquanto OpenAI e Anthropic travam batalha por valuation e market share, o Google joga o longo prazo integrando modelos cada vez mais capazes diretamente à sua infraestrutura de produtos. Com Search, Workspace e Android como vetores de distribuição, a vantagem do Google pode ser mais estrutural do que qualquer rodada de captação.</p>
+    <a href="https://www.axios.com/2026/05/21/google-ai-anthropic-openai-war" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Transformação Digital</span>
+      <span class="story-source"><a href="https://www.pwc.com/us/en/services/consulting/business-transformation/library/digital-trends-operations-survey.html" target="_blank">PwC Digital Trends in Operations 2026</a></span>
+    </div>
+    <h2>PwC revela o paradoxo da transformação digital: <em>85% líderes, 89% sem resultado</em></h2>
+    <p>A PwC entrevistou 767 líderes de operações e supply chain nos EUA para o seu relatório anual de tendências digitais — e encontrou uma contradição gritante: 85% dizem estar à frente dos concorrentes em transformação digital, mas 89% admitem que seus investimentos em tecnologia não entregaram os resultados esperados. Apenas 27% conseguiram uma estratégia de IA incorporada em toda a organização, e só 37% se sentem confortáveis em delegar processos completos para agentes de IA. O principal gargalo: qualidade de dados ruim, apontada por 87% dos respondentes. A transformação digital em 2026 não é sobre adotar ferramentas — é sobre mudar como a empresa opera, decide e entrega valor.</p>
+    <a href="https://www.pwc.com/us/en/services/consulting/business-transformation/library/digital-trends-operations-survey.html" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- ═══ BRASIL ═══ -->
+  <hr class="section-divider">
+  <div class="brasil-strip">Marco regulatório da IA entra na pauta urgente da Câmara em junho</div>
+
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">🇧🇷 Brasil</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stat-row">
+    <div class="stat-item">
+      <span class="stat-num">$965B</span>
+      <span class="stat-label">valoração da<br>Anthropic (maio/26)</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">11%</span>
+      <span class="stat-label">organizações com<br>agentes IA em produção</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">89%</span>
+      <span class="stat-label">líderes que dizem que<br>IA não entregou o retorno esperado</span>
+    </div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Regulação</span>
+      <span class="story-source"><a href="https://diariocarioca.com/2026/05/28/politica/camara-votacao-regulamentacao-ia/" target="_blank">Diário Carioca / Brasil 247</a></span>
+    </div>
+    <h2>Marco regulatório da IA no Brasil: <em>votação no Plenário prevista para junho</em></h2>
+    <p>O presidente da Câmara dos Deputados, Hugo Motta, anunciou que o texto de regulamentação da inteligência artificial deve ser aprovado na comissão especial até 9 de junho e encaminhado ao Plenário ainda no mesmo mês. O relator, deputado Aguinaldo Ribeiro (PP-PB), está alinhando o texto com o Senado Federal — que já aprovou uma versão em 2024. O projeto proíbe sistemas de risco excessivo (armas autônomas, vigilância biométrica em massa, predição comportamental para fins criminais) e estabelece responsabilidades para desenvolvedores e operadores. Para empresas que já trabalham com IA agêntica, a janela de adaptação começa agora.</p>
+    <a href="https://diariocarioca.com/2026/05/28/politica/camara-votacao-regulamentacao-ia/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- PULLQUOTE -->
+  <div class="pullquote">
+    <blockquote>
+      "A corrida não é mais quem tem o melhor modelo — é quem consegue colocar IA funcionando dentro de processos reais, com governança e resultado mensurável."
+    </blockquote>
+    <cite>— Análise editorial · Clikdata Drops #027 · 1 de junho de 2026</cite>
+  </div>
+
+  <!-- PERSPECTIVA -->
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">💡 Perspectiva</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story" style="border-bottom:none; padding-bottom:28px;">
+    <h2>Junho de 2026: o mês em que a IA parou de ser <em>promessa de futuro</em></h2>
+    <p style="margin-bottom:12px;">Três leituras práticas desta edição:</p>
+    <p style="margin-bottom:10px;"><strong>1. A guerra de valuation é um sinal de maturidade, não de hype.</strong> Quando Anthropic e OpenAI disputam quem vale mais próximo de US$ 1 trilhão, o mercado está precificando receita real — não apenas potencial. Com US$ 47 bilhões em run rate, a Anthropic não é mais uma startup. É infraestrutura. Para líderes empresariais, isso significa que o acesso a modelos de ponta vai ficar mais caro e mais disputado. Defina sua estratégia de fornecedor agora.</p>
+    <p style="margin-bottom:10px;"><strong>2. A OpenAI Deployment Company sinaliza que implementação é o novo diferencial.</strong> A grande maioria das empresas sabe que precisa de IA. O gargalo é execução — e a OpenAI acabou de entrar nesse mercado com US$ 4 bilhões e os maiores nomes de consultoria global. Quem no Brasil já tem parceiros e processos estruturados de implantação leva vantagem antes que esse mercado fique congestionado.</p>
+    <p><strong>3. O marco regulatório brasileiro é urgente — e estratégico.</strong> Com a votação prevista para este mês, empresas que usam IA no Brasil precisam mapear seus sistemas de risco alto ou excessivo agora. Não se trata apenas de compliance: entender as regras antes que elas virem multa é diferencial competitivo. A janela de adaptação voluntária está fechando.</p>
+  </article>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">CLIKDATA<span>·</span>DROPS</div>
+
+      </div>
+      <div class="footer-links">
+        <a href="https://clikdata.com.br" target="_blank">clikdata.com.br</a>
+        <a href="#">Arquivos anteriores</a>
+        <a href="#">Descadastrar</a>
+        <a href="#">Contato</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      Publicado em 1 de junho de 2026 · Edição #027 · clikdata.com.br<br>
+      Este digest é gerado automaticamente com curadoria editorial humana.<br>
+      Fontes: TechCrunch, CNBC, Axios, PwC, PYMNTS, Diário Carioca, Brasil 247, Sherwood News.
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
