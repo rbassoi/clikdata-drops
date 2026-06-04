@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CLIKDATA DROPS — Edição #030 - Junho 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0f0f0f;
+    --paper: #f5f0e8;
+    --accent: #c8401a;
+    --accent2: #1a3c5e;
+    --muted: #7a7060;
+    --rule: #d4cfc4;
+    --tag-bg: #1a3c5e;
+    --tag-color: #f5f0e8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #e8e3d8;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrapper {
+    max-width: 680px;
+    margin: 40px auto;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    box-shadow: 4px 4px 0 #c4bfb4, 8px 8px 0 #b4afa4;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    border-bottom: 3px double var(--ink);
+    padding: 0;
+    position: relative;
+  }
+
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 32px 10px;
+    border-bottom: 1px solid var(--rule);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  .masthead {
+    padding: 28px 32px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--ink);
+    position: relative;
+  }
+
+  .masthead::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--accent);
+    margin: 0 auto 16px;
+  }
+
+  .masthead h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1;
+    color: var(--ink);
+  }
+
+  .masthead h1 span {
+    color: var(--accent);
+  }
+
+  .tagline {
+    margin-top: 8px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .edition-bar {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 10px 32px;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  /* ── INTRO ── */
+  .intro {
+    padding: 28px 32px 24px;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .intro-dropcap {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 0.85;
+    color: var(--accent);
+    float: left;
+    margin-right: 4px;
+    margin-top: 6px;
+  }
+
+  .intro p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: #2a2520;
+  }
+
+  /* ── SECTION HEADER ── */
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 32px 0;
+    margin-bottom: 4px;
+  }
+
+  .section-flag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    background: var(--tag-bg);
+    color: var(--tag-color);
+    padding: 4px 10px;
+    white-space: nowrap;
+  }
+
+  .section-flag.red { background: var(--accent); }
+
+  .section-rule {
+    flex: 1;
+    height: 1px;
+    background: var(--ink);
+  }
+
+  /* ── STORY CARD ── */
+  .story {
+    padding: 20px 32px;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+  }
+
+  .story:last-of-type { border-bottom: none; }
+
+  .story-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .story-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 2px 7px;
+  }
+
+  .story-source {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+  }
+
+  .story h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+
+  .story h2 em {
+    font-style: italic;
+    color: var(--accent2);
+  }
+
+  .story p {
+    font-size: 14px;
+    line-height: 1.72;
+    color: #2a2520;
+  }
+
+  .story .number-callout {
+    float: right;
+    margin: 0 0 8px 18px;
+    text-align: center;
+    border: 2px solid var(--ink);
+    padding: 12px 16px;
+    min-width: 88px;
+  }
+
+  .story .number-callout .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--accent);
+    display: block;
+    line-height: 1;
+  }
+
+  .story .number-callout .num-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 4px;
+  }
+
+  /* ── DIVIDER ── */
+  .section-divider {
+    border: none;
+    border-top: 3px double var(--ink);
+    margin: 8px 32px 0;
+  }
+
+  /* ── DESTAQUE BRASIL ── */
+  .brasil-strip {
+    background: var(--accent2);
+    color: var(--paper);
+    padding: 6px 32px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .brasil-strip::before {
+    content: '▶';
+    font-size: 8px;
+  }
+
+  /* ── STAT ROW ── */
+  .stat-row {
+    display: flex;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .stat-item {
+    flex: 1;
+    padding: 20px 24px;
+    border-right: 1px solid var(--rule);
+    text-align: center;
+  }
+
+  .stat-item:last-child { border-right: none; }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--accent2);
+    display: block;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 6px;
+    line-height: 1.4;
+  }
+
+  /* ── PULLQUOTE ── */
+  .pullquote {
+    margin: 0;
+    padding: 24px 40px;
+    border-top: 2px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+    background: #ede8de;
+  }
+
+  .pullquote blockquote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 19px;
+    line-height: 1.5;
+    color: var(--ink);
+    text-align: center;
+  }
+
+  .pullquote cite {
+    display: block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: center;
+    font-style: normal;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 28px 32px;
+    border-top: 3px double var(--accent);
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333;
+  }
+
+  .footer-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 900;
+  }
+
+  .footer-brand span { color: var(--accent); }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: right;
+  }
+
+  .footer-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: #888;
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .footer-bottom {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: #555;
+    letter-spacing: 0.06em;
+    line-height: 1.6;
+  }
+
+  .routine-badge {
+    display: inline-block;
+    margin-top: 12px;
+    background: var(--accent);
+    color: white;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+  }
+
+
+  .story-source a {
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--muted);
+    transition: color 0.15s;
+  }
+  .story-source a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+  .read-more {
+    display: inline-block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent2);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent2);
+    padding-bottom: 1px;
+  }
+  .read-more:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+  @media (max-width: 600px) {
+    .wrapper { margin: 0; box-shadow: none; }
+    .masthead h1 { font-size: 38px; }
+    .stat-row { flex-direction: column; }
+    .stat-item { border-right: none; border-bottom: 1px solid var(--rule); }
+    .header-top { flex-direction: column; gap: 4px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-top">
+      <span>Edição #030</span>
+      <span>4 de junho de 2026</span>
+      <span>Diária · IA &amp; Transformação</span>
+    </div>
+    <div class="masthead">
+      <h1>CLIKDATA<span style="color:var(--accent)">·</span>DROPS</h1>
+      <p class="tagline">IA · Tecnologia · Transformação Digital · Edição Diária</p>
+    </div>
+    <div class="edition-bar">
+      <span>🌍 Mundo</span>
+      <span>🇧🇷 Brasil</span>
+      <span>📊 Números</span>
+      <span>💡 Perspectiva</span>
+    </div>
+  </header>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <p>
+      <span class="intro-dropcap">D</span>
+      ois marcos regulatórios em lados opostos do Atlântico definem esta semana: nos EUA, Trump assina decreto que exige acesso governamental antecipado a modelos de IA; no Brasil, a Câmara se prepara para votar o Marco Legal da IA ainda em junho. Enquanto legisladores correm para pôr ordem na casa, a indústria lança outro alerta — o Gartner projeta que 40% dos projetos de IA agêntica falharão até 2027, não por problemas na tecnologia, mas por automação de processos já quebrados. Governança e execução emergem como os novos diferenciais competitivos.
+    </p>
+  </section>
+
+  <!-- ═══ MUNDO ═══ -->
+  <div class="section-header">
+    <span class="section-flag red">🌍 Mundo</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Regulação Global</span>
+      <span class="story-source"><a href="https://www.cnbc.com/2026/06/02/trump-executive-order-ai.html" target="_blank">CNBC · Casa Branca</a></span>
+    </div>
+    <div class="number-callout">
+      <span class="num">30d</span>
+      <span class="num-label">janela de revisão<br>gov. EUA</span>
+    </div>
+    <h2>Trump assina decreto de IA: empresas devem entregar modelos ao governo <em>30 dias antes</em> do lançamento</h2>
+    <p>O presidente Trump assinou em 2 de junho um decreto executivo pedindo que companhias de IA submetam voluntariamente seus modelos mais avançados ao governo federal até 30 dias antes do lançamento público. A ordem cria um "clearinghouse de cibersegurança para IA" e instrui agências a desenvolver benchmarks de capacidade ofensiva dos modelos. A versão final é significativamente mais branda que o rascunho original — que previa 90 dias de antecedência — e não impõe licenciamento obrigatório, preservando cronogramas comerciais. Mas o sinal estratégico é inequívoco: Washington quer ser o primeiro a avaliar o que a fronteira da IA pode fazer.</p>
+    <a href="https://www.cnbc.com/2026/06/02/trump-executive-order-ai.html" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Gestão &amp; IA</span>
+      <span class="story-source"><a href="https://www.cio.com/article/4117078/digital-transformation-2026-whats-in-whats-out.html" target="_blank">CIO.com · Gartner</a></span>
+    </div>
+    <h2>Gartner alerta: <em>40% dos projetos de IA agêntica</em> serão abandonados até 2027 — o problema não é a tecnologia</h2>
+    <p>A Gartner projeta que 4 em cada 10 iniciativas de agentes autônomos de IA serão descontinuadas até 2027 — não por limitações técnicas, mas porque as organizações estão automatizando processos disfuncionais em vez de redesenhar operações. Apenas 11% das empresas têm agentes em produção, apesar de 38% estarem em fase piloto. A mensagem para líderes é direta: implantar IA sobre processos quebrados é amplificar o caos, não resolvê-lo. A transformação organizacional precede — e condiciona — o sucesso de qualquer automação.</p>
+    <a href="https://www.cio.com/article/4117078/digital-transformation-2026-whats-in-whats-out.html" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Agentes IA</span>
+      <span class="story-source"><a href="https://techstartups.com/2026/06/03/top-tech-news-today-june-3-2026/" target="_blank">Microsoft · Tech Startups</a></span>
+    </div>
+    <h2>Satya Nadella anuncia: IA agêntica será <em>nativa em todo o ecossistema Microsoft</em></h2>
+    <p>O CEO da Microsoft delineou o plano de levar IA agêntica para o centro do cotidiano computacional — com agentes capazes de gerenciar tarefas rotineiras entre aplicativos e fluxos de trabalho sem intervenção humana constante. Windows, Microsoft 365 e Azure convergem em uma plataforma agêntica end-to-end. Para as organizações que já operam no ecossistema Microsoft — a maioria das empresas brasileiras de médio e grande porte —, a implicação é objetiva: IA agêntica não será uma escolha estratégica, será o padrão da próxima renovação tecnológica.</p>
+    <a href="https://techstartups.com/2026/06/03/top-tech-news-today-june-3-2026/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Transformação Digital</span>
+      <span class="story-source"><a href="https://www.pwc.com/us/en/services/consulting/supply-chain-operations/library/digital-trends-operations-survey.html" target="_blank">PwC · Digital Trends 2026</a></span>
+    </div>
+    <h2>PwC revela: <em>89% dos líderes</em> admitem que investimentos em tecnologia não entregaram os resultados esperados</h2>
+    <p>O relatório "Digital Trends in Operations 2026" da PwC expõe um dado contundente: 89% dos líderes de operações afirmam que seus investimentos em tecnologia não entregaram plenamente os resultados prometidos nas iniciativas de transformação digital. Apenas um quarto das organizações prioriza gestão de mudança estruturada — o que as deixa vulneráveis à resistência interna e ao desperdício de capital. A conclusão ressoa com o alerta da Gartner: o gap não está na tecnologia, está na execução e na cultura organizacional. IA não substitui liderança.</p>
+    <a href="https://www.pwc.com/us/en/services/consulting/supply-chain-operations/library/digital-trends-operations-survey.html" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- ═══ BRASIL ═══ -->
+  <hr class="section-divider">
+  <div class="brasil-strip">Marco Legal da IA: Câmara prepara votação histórica ainda em junho</div>
+
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">🇧🇷 Brasil</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stat-row">
+    <div class="stat-item">
+      <span class="stat-num">9/jun</span>
+      <span class="stat-label">relatório do marco<br>da IA na Câmara</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">40%</span>
+      <span class="stat-label">projetos agênticos<br>que falharão (Gartner)</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">89%</span>
+      <span class="stat-label">líderes insatisfeitos<br>com tech investment</span>
+    </div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Regulação</span>
+      <span class="story-source"><a href="https://startupi.com.br/marco-da-ia-deve-ser-votado-ainda-em-junho-o-impacto-e-os-desafios-dessa-regulamentacao-no-brasil/" target="_blank">Startupi · Telesíntese</a></span>
+    </div>
+    <h2>Marco Legal da IA no Brasil: relatório em 9 de junho, <em>votação prevista até o fim do mês</em></h2>
+    <p>O presidente da Câmara, Hugo Motta, definiu o calendário: o relator Aguinaldo Ribeiro (PP-PB) apresentará seu parecer ao PL 2.338/2023 em 9 de junho, com votação no plenário prevista antes do recesso parlamentar de 18 de julho. O projeto — aprovado pelo Senado em dezembro de 2024 — classifica sistemas de IA por nível de risco, define responsabilidade civil por danos algorítmicos e garante compensação financeira a criadores cujo conteúdo foi utilizado para treinar modelos generativos. O Brasil está a semanas de ter seu primeiro marco regulatório para a IA — e o texto aprovado moldará o ambiente de negócios para a próxima década.</p>
+    <a href="https://startupi.com.br/marco-da-ia-deve-ser-votado-ainda-em-junho-o-impacto-e-os-desafios-dessa-regulamentacao-no-brasil/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story" style="border-bottom:none;">
+    <div class="story-meta">
+      <span class="story-tag">Infraestrutura</span>
+      <span class="story-source"><a href="https://news.o-algoritmo.com/p/br-supercomputador-ia-2026" target="_blank">O Algoritmo · MCTI</a></span>
+    </div>
+    <h2>Supercomputador nacional de IA: MCTI avança para garantir <em>soberania tecnológica</em> em 2026</h2>
+    <p>O Ministério da Ciência, Tecnologia e Inovação avança nos planos para colocar em operação, ainda em 2026, um supercomputador dedicado à inteligência artificial como parte da Estratégia Brasileira de IA. O equipamento visa fortalecer pesquisa científica, desenvolvimento de modelos com dados nacionais e uso de IA em políticas públicas — da saúde à agricultura. Para o setor privado, o sinal é estratégico: o Brasil aposta em soberania computacional como base para uma indústria de IA com identidade própria, independente de infraestrutura estrangeira.</p>
+    <a href="https://news.o-algoritmo.com/p/br-supercomputador-ia-2026" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- PULLQUOTE -->
+  <div class="pullquote">
+    <blockquote>
+      "A verdade inconfortável é que a maioria das organizações não tem um problema de tecnologia. Tem um problema de execução e de cultura."
+    </blockquote>
+    <cite>— PwC · Digital Trends in Operations 2026</cite>
+  </div>
+
+  <!-- PERSPECTIVA -->
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">💡 Perspectiva</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story" style="border-bottom:none; padding-bottom:28px;">
+    <h2>O que esses sinais significam para <em>líderes de transformação</em></h2>
+    <p style="margin-bottom:12px;">Três leituras práticas desta edição:</p>
+    <p style="margin-bottom:10px;"><strong>1. A era da regulação chegou — e chegou rápido.</strong> Em menos de 30 dias, EUA e Brasil se movem para regulamentar IA simultaneamente. Para empresas que operam globalmente, o desafio passa a ser convergência regulatória: construir práticas de governança que atendam múltiplos frameworks ao mesmo tempo. Quem começa esse mapeamento hoje estará à frente quando as leis entrarem em vigor — e as penalidades, também.</p>
+    <p style="margin-bottom:10px;"><strong>2. Antes de automatizar, otimize o processo.</strong> O alerta do Gartner e da PwC converge: 40% dos projetos agênticos vão falhar e 89% das iniciativas de transformação digital não entregaram. O padrão é o mesmo — tecnologia aplicada sobre processos disfuncionais. O diagnóstico operacional antes da automação não é uma etapa opcional: é o diferencial entre escala e desperdício.</p>
+    <p><strong>3. Microsoft agêntico = ponto sem retorno.</strong> Quando a maior fornecedora de software corporativo do planeta embute IA agêntica como padrão, a adoção deixa de ser uma escolha estratégica e passa a ser consequência da próxima renovação tecnológica. A pergunta para os CIOs não é mais "quando adotar" — é "como governar o que já está chegando".</p>
+  </article>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">CLIKDATA<span>·</span>DROPS</div>
+
+      </div>
+      <div class="footer-links">
+        <a href="https://clikdata.com.br" target="_blank">clikdata.com.br</a>
+        <a href="#">Arquivos anteriores</a>
+        <a href="#">Descadastrar</a>
+        <a href="#">Contato</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      Publicado em 4 de junho de 2026 · Edição #030 · clikdata.com.br<br>
+      Este digest é gerado automaticamente com curadoria editorial humana.<br>
+      Fontes: CNBC, NPR, Gartner, CIO.com, PwC, Startupi, Telesíntese, O Algoritmo, Tech Startups, Microsoft.
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
