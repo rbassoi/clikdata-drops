@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CLIKDATA DROPS — Edição #032 - Junho 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0f0f0f;
+    --paper: #f5f0e8;
+    --accent: #c8401a;
+    --accent2: #1a3c5e;
+    --muted: #7a7060;
+    --rule: #d4cfc4;
+    --tag-bg: #1a3c5e;
+    --tag-color: #f5f0e8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #e8e3d8;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrapper {
+    max-width: 680px;
+    margin: 40px auto;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    box-shadow: 4px 4px 0 #c4bfb4, 8px 8px 0 #b4afa4;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    border-bottom: 3px double var(--ink);
+    padding: 0;
+    position: relative;
+  }
+
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 32px 10px;
+    border-bottom: 1px solid var(--rule);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  .masthead {
+    padding: 28px 32px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--ink);
+    position: relative;
+  }
+
+  .masthead::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--accent);
+    margin: 0 auto 16px;
+  }
+
+  .masthead h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1;
+    color: var(--ink);
+  }
+
+  .masthead h1 span {
+    color: var(--accent);
+  }
+
+  .tagline {
+    margin-top: 8px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .edition-bar {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 10px 32px;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  /* ── INTRO ── */
+  .intro {
+    padding: 28px 32px 24px;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .intro-dropcap {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 0.85;
+    color: var(--accent);
+    float: left;
+    margin-right: 4px;
+    margin-top: 6px;
+  }
+
+  .intro p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: #2a2520;
+  }
+
+  /* ── SECTION HEADER ── */
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 32px 0;
+    margin-bottom: 4px;
+  }
+
+  .section-flag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    background: var(--tag-bg);
+    color: var(--tag-color);
+    padding: 4px 10px;
+    white-space: nowrap;
+  }
+
+  .section-flag.red { background: var(--accent); }
+
+  .section-rule {
+    flex: 1;
+    height: 1px;
+    background: var(--ink);
+  }
+
+  /* ── STORY CARD ── */
+  .story {
+    padding: 20px 32px;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+  }
+
+  .story:last-of-type { border-bottom: none; }
+
+  .story-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .story-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 2px 7px;
+  }
+
+  .story-source {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+  }
+
+  .story h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+
+  .story h2 em {
+    font-style: italic;
+    color: var(--accent2);
+  }
+
+  .story p {
+    font-size: 14px;
+    line-height: 1.72;
+    color: #2a2520;
+  }
+
+  .story .number-callout {
+    float: right;
+    margin: 0 0 8px 18px;
+    text-align: center;
+    border: 2px solid var(--ink);
+    padding: 12px 16px;
+    min-width: 88px;
+  }
+
+  .story .number-callout .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--accent);
+    display: block;
+    line-height: 1;
+  }
+
+  .story .number-callout .num-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 4px;
+  }
+
+  /* ── DIVIDER ── */
+  .section-divider {
+    border: none;
+    border-top: 3px double var(--ink);
+    margin: 8px 32px 0;
+  }
+
+  /* ── DESTAQUE BRASIL ── */
+  .brasil-strip {
+    background: var(--accent2);
+    color: var(--paper);
+    padding: 6px 32px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .brasil-strip::before {
+    content: '▶';
+    font-size: 8px;
+  }
+
+  /* ── STAT ROW ── */
+  .stat-row {
+    display: flex;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .stat-item {
+    flex: 1;
+    padding: 20px 24px;
+    border-right: 1px solid var(--rule);
+    text-align: center;
+  }
+
+  .stat-item:last-child { border-right: none; }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--accent2);
+    display: block;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 6px;
+    line-height: 1.4;
+  }
+
+  /* ── PULLQUOTE ── */
+  .pullquote {
+    margin: 0;
+    padding: 24px 40px;
+    border-top: 2px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+    background: #ede8de;
+  }
+
+  .pullquote blockquote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 19px;
+    line-height: 1.5;
+    color: var(--ink);
+    text-align: center;
+  }
+
+  .pullquote cite {
+    display: block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: center;
+    font-style: normal;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 28px 32px;
+    border-top: 3px double var(--accent);
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333;
+  }
+
+  .footer-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 900;
+  }
+
+  .footer-brand span { color: var(--accent); }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: right;
+  }
+
+  .footer-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: #888;
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .footer-bottom {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: #555;
+    letter-spacing: 0.06em;
+    line-height: 1.6;
+  }
+
+  .routine-badge {
+    display: inline-block;
+    margin-top: 12px;
+    background: var(--accent);
+    color: white;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+  }
+
+
+  .story-source a {
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--muted);
+    transition: color 0.15s;
+  }
+  .story-source a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+  .read-more {
+    display: inline-block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent2);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent2);
+    padding-bottom: 1px;
+  }
+  .read-more:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+  @media (max-width: 600px) {
+    .wrapper { margin: 0; box-shadow: none; }
+    .masthead h1 { font-size: 38px; }
+    .stat-row { flex-direction: column; }
+    .stat-item { border-right: none; border-bottom: 1px solid var(--rule); }
+    .header-top { flex-direction: column; gap: 4px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-top">
+      <span>Edição #032</span>
+      <span>6 de junho de 2026</span>
+      <span>Diária · IA &amp; Transformação</span>
+    </div>
+    <div class="masthead">
+      <h1>CLIKDATA<span style="color:var(--accent)">·</span>DROPS</h1>
+      <p class="tagline">IA · Tecnologia · Transformação Digital · Edição Diária</p>
+    </div>
+    <div class="edition-bar">
+      <span>🌍 Mundo</span>
+      <span>🇧🇷 Brasil</span>
+      <span>📊 Números</span>
+      <span>💡 Perspectiva</span>
+    </div>
+  </header>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <p>
+      <span class="intro-dropcap">O</span>
+      dia 6 de junho de 2026 pode ser lembrado como um divisor de águas regulatório: legisladores americanos apresentaram as 269 páginas do projeto de lei federal de IA mais abrangente da história — bipartidário, estrutural e com alcance global. Enquanto isso, a OpenAI reinventa a memória do ChatGPT, a Microsoft declara independência tecnológica da OpenAI com 7 modelos proprietários, e a SpaceX — fundida com a xAI de Elon Musk — mira uma avaliação de US$ 2 trilhões. No Brasil, o relógio corre: o Web Summit Rio abre as portas em 48 horas e coloca o país no centro da agenda tech global.
+    </p>
+  </section>
+
+  <!-- ═══ MUNDO ═══ -->
+  <div class="section-header">
+    <span class="section-flag red">🌍 Mundo</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Regulação Federal</span>
+      <span class="story-source"><a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-6-2026" target="_blank">CNBC · Scientific American</a></span>
+    </div>
+    <div class="number-callout">
+      <span class="num">269</span>
+      <span class="num-label">páginas do<br>projeto de lei</span>
+    </div>
+    <h2>Great American AI Act: o projeto federal de IA mais ambicioso <em>já apresentado ao Congresso americano</em></h2>
+    <p>Na quinta-feira, 4 de junho, os representantes Jay Obernolte (R-CA) e Lori Trahan (D-MA) apresentaram um rascunho de discussão de 269 páginas do Great American Artificial Intelligence Act — o framework federal de IA mais abrangente já colocado em votação no Congresso dos EUA. O documento cobre desde requisitos de transparência e avaliação de riscos até responsabilidade civil e critérios específicos para modelos de fronteira. O alcance é global: qualquer empresa que desenvolva ou implante modelos de IA de alto impacto com usuários nos Estados Unidos estará no escopo da lei — o que inclui fornecedores, startups e subsidiárias de grupos internacionais. Para executivos brasileiros com presença no mercado americano, este é o documento prioritário a monitorar nos próximos meses.</p>
+    <a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-6-2026" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">IA Generativa</span>
+      <span class="story-source"><a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-6-2026" target="_blank">OpenAI · Build Fast With AI</a></span>
+    </div>
+    <h2>ChatGPT Dreaming V3: a maior revolução de memória <em>desde o lançamento do ChatGPT original</em></h2>
+    <p>A OpenAI lançou o Dreaming V3 — a atualização de memória mais significativa desde o debut do ChatGPT. A nova arquitetura começou a chegar aos usuários ChatGPT Plus e Pro nos EUA em 4 de junho e deve alcançar usuários Free e Go nas próximas semanas. A mudança é qualitativa: o sistema passa a manter contexto e aprendizado de longo prazo entre sessões, transformando o ChatGPT de uma ferramenta de consulta pontual em algo próximo de um assistente que genuinamente "conhece" seu usuário. Para empresas que baseiam fluxos de trabalho em IA generativa, a atualização redefine a régua de personalização — e pressiona toda a concorrência a acelerar suas próprias soluções de memória persistente.</p>
+    <a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-6-2026" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Big Tech &amp; IA</span>
+      <span class="story-source"><a href="https://www.tomsguide.com/news/live/microsoft-build-2026" target="_blank">Tom's Guide · Microsoft Build 2026</a></span>
+    </div>
+    <h2>Microsoft revela 7 modelos MAI proprietários — <em>a independência da OpenAI é oficial</em></h2>
+    <p>Em desdobramento do Microsoft Build 2026, a empresa confirmou que possui sete modelos de IA proprietários desenvolvidos internamente, sem a parceria da OpenAI. Os modelos MAI (Microsoft AI) cobrem geração de código, raciocínio, compreensão de linguagem e tarefas multimodais — todos integráveis ao ecossistema Azure, Microsoft 365 e GitHub Copilot. O movimento não é apenas tecnológico: é uma declaração estratégica de que a Microsoft não depende de um único parceiro de modelos. Para CIOs e CTOs que desenham arquiteturas de IA corporativa, o sinal é direto — o futuro é multi-modelo, e até os próprios fornecedores de plataformas já estão apostando nisso.</p>
+    <a href="https://www.tomsguide.com/news/live/microsoft-build-2026" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Mercado &amp; IA</span>
+      <span class="story-source"><a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-6-2026" target="_blank">TechCrunch · Fortune</a></span>
+    </div>
+    <h2>SpaceX funde com xAI e mira US$ 2 trilhões em IPO — <em>o maior da história em valor absoluto</em></h2>
+    <p>A SpaceX — que se fundiu com a xAI de Elon Musk no início de 2026 — iniciou o roadshow de IPO com uma avaliação-alvo de US$ 2 trilhões e busca levantar mais de US$ 75 bilhões no mercado de capitais. A fusão transforma a equação estratégica: a SpaceX carrega agora não apenas a tese de espaço e conectividade via Starlink, mas também a aposta em IA de fronteira com os modelos Grok. O IPO sinaliza que os grandes conglomerados tecnológicos multissetoriais estão de volta — desta vez com IA como cola central entre as verticais. Para o mercado de capitais global, é o maior teste de apetite por risco da era pós-bolha de IA: quem precifica infraestrutura de dados espaciais combinada com modelo de linguagem de fronteira?</p>
+    <a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-6-2026" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- ═══ BRASIL ═══ -->
+  <hr class="section-divider">
+  <div class="brasil-strip">Web Summit Rio abre em 48h — Brasil no centro da agenda tech global</div>
+
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">🇧🇷 Brasil</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stat-row">
+    <div class="stat-item">
+      <span class="stat-num">34K+</span>
+      <span class="stat-label">participantes<br>Web Summit Rio</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">1.500</span>
+      <span class="stat-label">startups<br>presentes</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">R$1,8B</span>
+      <span class="stat-label">impacto econômico<br>projetado até 2030</span>
+    </div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Inovação &amp; Eventos</span>
+      <span class="story-source"><a href="https://rio.websummit.com/pt-br/" target="_blank">Web Summit Rio · Sebrae · Invest.Rio</a></span>
+    </div>
+    <h2>Web Summit Rio 2026 começa em 48 horas — <em>o maior evento de tecnologia da América do Sul</em></h2>
+    <p>De 8 a 11 de junho, o Riocentro recebe o Web Summit Rio 2026 — uma das maiores conferências globais de tecnologia, com mais de 34 mil participantes, 600 investidores e 1.500 startups de todo o mundo. O evento traz inteligência artificial, fintechs e sustentabilidade como eixos temáticos centrais, em uma programação que conecta fundadores, executivos e líderes de governo em mesas de alto nível. O impacto vai além do simbólico: a parceria com Invest.Rio foi renovada por cinco anos, garantindo presença do evento até 2030 e um retorno econômico projetado de R$ 1,8 bilhão para a cidade. Para o ecossistema de inovação brasileiro, o Web Summit Rio é hoje a maior vitrine de acesso a capital e parcerias globais disponível — e abre as portas amanhã.</p>
+    <a href="https://rio.websummit.com/pt-br/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story" style="border-bottom:none;">
+    <div class="story-meta">
+      <span class="story-tag">Regulação Global</span>
+      <span class="story-source"><a href="https://www.cnbc.com/2026/06/02/trump-executive-order-ai.html" target="_blank">CNBC · Tom's Hardware</a></span>
+    </div>
+    <h2>EUA avançam em dois fronts regulatórios — <em>o que empresas brasileiras precisam monitorar agora</em></h2>
+    <p>Na mesma semana em que o Congresso apresentou o Great American AI Act (269 páginas), já estava em vigor o decreto executivo de Trump assinado em 2 de junho: um regime voluntário que pede às empresas de IA 30 dias de acesso governamental antes do lançamento público de modelos de fronteira. E em 30 de junho entra em vigor a lei de proteção ao consumidor de IA do Colorado — a primeira legislação estadual abrangente de IA dos Estados Unidos. Para empresas brasileiras com operações, parceiros ou usuários no mercado americano, o cenário é de acumulação regulatória acelerada: quem não começar a mapear compliance de IA agora estará correndo atrás quando as obrigações — e as multas — se tornarem mandatórias.</p>
+    <a href="https://www.cnbc.com/2026/06/02/trump-executive-order-ai.html" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- PULLQUOTE -->
+  <div class="pullquote">
+    <blockquote>
+      "Estamos no ponto de inflexão em que a IA passa de ferramenta a infraestrutura — e as empresas que entendem isso primeiro ganham a década."
+    </blockquote>
+    <cite>— Satya Nadella, CEO · Microsoft, Build 2026</cite>
+  </div>
+
+  <!-- PERSPECTIVA -->
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">💡 Perspectiva</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story" style="border-bottom:none; padding-bottom:28px;">
+    <h2>O que esses sinais significam para <em>líderes de transformação</em></h2>
+    <p style="margin-bottom:12px;">Três leituras práticas desta edição:</p>
+    <p style="margin-bottom:10px;"><strong>1. Regulação é sinal de maturidade — não de freio.</strong> O Great American AI Act de 269 páginas, o decreto executivo de Trump e a lei do Colorado que entra em vigor em 30 dias confirmam que o mercado americano de IA está entrando na fase institucional. Para CIOs, jurídicos e líderes de conformidade de empresas brasileiras com presença nos EUA, o momento de iniciar o mapeamento regulatório é agora — não quando as multas chegarem.</p>
+    <p style="margin-bottom:10px;"><strong>2. Multi-modelo não é opção — é necessidade estratégica.</strong> Com a Microsoft revelando 7 modelos próprios independentes da OpenAI, e com Anthropic, Google e Meta todos acelerando portfólios proprietários, a concentração em um único provedor de IA deixou de ser estratégia viável. Empresas que constroem arquiteturas multi-modelo hoje ganham poder de negociação, resiliência operacional e flexibilidade para adotar o próximo modelo de fronteira sem migração traumática.</p>
+    <p><strong>3. Web Summit Rio é a maior porta de entrada para capital global no Brasil.</strong> Com 600 investidores e mais de 34 mil participantes chegando ao Rio em 48 horas, o ecossistema brasileiro de inovação tem uma janela rara de visibilidade internacional. Para startups, scale-ups e executivos de transformação digital, estar presente — mesmo como visitante — significa acesso direto à rede que está financiando as próximas empresas de tecnologia da América Latina.</p>
+  </article>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">CLIKDATA<span>·</span>DROPS</div>
+
+      </div>
+      <div class="footer-links">
+        <a href="https://clikdata.com.br" target="_blank">clikdata.com.br</a>
+        <a href="#">Arquivos anteriores</a>
+        <a href="#">Descadastrar</a>
+        <a href="#">Contato</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      Publicado em 6 de junho de 2026 · Edição #032 · clikdata.com.br<br>
+      Este digest é gerado automaticamente com curadoria editorial humana.<br>
+      Fontes: CNBC, Scientific American, Tom's Guide, Microsoft, OpenAI, Web Summit Rio, Sebrae, TechCrunch, Fortune.
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
