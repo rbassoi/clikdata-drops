@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CLIKDATA DROPS — Edição #034 - Junho 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0f0f0f;
+    --paper: #f5f0e8;
+    --accent: #c8401a;
+    --accent2: #1a3c5e;
+    --muted: #7a7060;
+    --rule: #d4cfc4;
+    --tag-bg: #1a3c5e;
+    --tag-color: #f5f0e8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #e8e3d8;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrapper {
+    max-width: 680px;
+    margin: 40px auto;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    box-shadow: 4px 4px 0 #c4bfb4, 8px 8px 0 #b4afa4;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    border-bottom: 3px double var(--ink);
+    padding: 0;
+    position: relative;
+  }
+
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 32px 10px;
+    border-bottom: 1px solid var(--rule);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  .masthead {
+    padding: 28px 32px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--ink);
+    position: relative;
+  }
+
+  .masthead::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--accent);
+    margin: 0 auto 16px;
+  }
+
+  .masthead h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1;
+    color: var(--ink);
+  }
+
+  .masthead h1 span {
+    color: var(--accent);
+  }
+
+  .tagline {
+    margin-top: 8px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .edition-bar {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 10px 32px;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  /* ── INTRO ── */
+  .intro {
+    padding: 28px 32px 24px;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .intro-dropcap {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 0.85;
+    color: var(--accent);
+    float: left;
+    margin-right: 4px;
+    margin-top: 6px;
+  }
+
+  .intro p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: #2a2520;
+  }
+
+  /* ── SECTION HEADER ── */
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 32px 0;
+    margin-bottom: 4px;
+  }
+
+  .section-flag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    background: var(--tag-bg);
+    color: var(--tag-color);
+    padding: 4px 10px;
+    white-space: nowrap;
+  }
+
+  .section-flag.red { background: var(--accent); }
+
+  .section-rule {
+    flex: 1;
+    height: 1px;
+    background: var(--ink);
+  }
+
+  /* ── STORY CARD ── */
+  .story {
+    padding: 20px 32px;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+  }
+
+  .story:last-of-type { border-bottom: none; }
+
+  .story-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .story-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 2px 7px;
+  }
+
+  .story-source {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+  }
+
+  .story h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+
+  .story h2 em {
+    font-style: italic;
+    color: var(--accent2);
+  }
+
+  .story p {
+    font-size: 14px;
+    line-height: 1.72;
+    color: #2a2520;
+  }
+
+  .story .number-callout {
+    float: right;
+    margin: 0 0 8px 18px;
+    text-align: center;
+    border: 2px solid var(--ink);
+    padding: 12px 16px;
+    min-width: 88px;
+  }
+
+  .story .number-callout .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--accent);
+    display: block;
+    line-height: 1;
+  }
+
+  .story .number-callout .num-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 4px;
+  }
+
+  /* ── DIVIDER ── */
+  .section-divider {
+    border: none;
+    border-top: 3px double var(--ink);
+    margin: 8px 32px 0;
+  }
+
+  /* ── DESTAQUE BRASIL ── */
+  .brasil-strip {
+    background: var(--accent2);
+    color: var(--paper);
+    padding: 6px 32px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .brasil-strip::before {
+    content: '▶';
+    font-size: 8px;
+  }
+
+  /* ── STAT ROW ── */
+  .stat-row {
+    display: flex;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .stat-item {
+    flex: 1;
+    padding: 20px 24px;
+    border-right: 1px solid var(--rule);
+    text-align: center;
+  }
+
+  .stat-item:last-child { border-right: none; }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--accent2);
+    display: block;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 6px;
+    line-height: 1.4;
+  }
+
+  /* ── PULLQUOTE ── */
+  .pullquote {
+    margin: 0;
+    padding: 24px 40px;
+    border-top: 2px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+    background: #ede8de;
+  }
+
+  .pullquote blockquote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 19px;
+    line-height: 1.5;
+    color: var(--ink);
+    text-align: center;
+  }
+
+  .pullquote cite {
+    display: block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: center;
+    font-style: normal;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 28px 32px;
+    border-top: 3px double var(--accent);
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333;
+  }
+
+  .footer-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 900;
+  }
+
+  .footer-brand span { color: var(--accent); }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: right;
+  }
+
+  .footer-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: #888;
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .footer-bottom {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: #555;
+    letter-spacing: 0.06em;
+    line-height: 1.6;
+  }
+
+  .routine-badge {
+    display: inline-block;
+    margin-top: 12px;
+    background: var(--accent);
+    color: white;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+  }
+
+
+  .story-source a {
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--muted);
+    transition: color 0.15s;
+  }
+  .story-source a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+  .read-more {
+    display: inline-block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent2);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent2);
+    padding-bottom: 1px;
+  }
+  .read-more:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+  @media (max-width: 600px) {
+    .wrapper { margin: 0; box-shadow: none; }
+    .masthead h1 { font-size: 38px; }
+    .stat-row { flex-direction: column; }
+    .stat-item { border-right: none; border-bottom: 1px solid var(--rule); }
+    .header-top { flex-direction: column; gap: 4px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-top">
+      <span>Edição #034</span>
+      <span>8 de junho de 2026</span>
+      <span>Diária · IA &amp; Transformação</span>
+    </div>
+    <div class="masthead">
+      <h1>CLIKDATA<span style="color:var(--accent)">·</span>DROPS</h1>
+      <p class="tagline">IA · Tecnologia · Transformação Digital · Edição Diária</p>
+    </div>
+    <div class="edition-bar">
+      <span>🌍 Mundo</span>
+      <span>🇧🇷 Brasil</span>
+      <span>📊 Números</span>
+      <span>💡 Perspectiva</span>
+    </div>
+  </header>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <p>
+      <span class="intro-dropcap">O</span>
+      campo de batalha mudou. Em junho de 2026, não se discute mais <em>se</em> agentes de IA chegarão às empresas — discute-se <em>quando</em> e <em>como</em>. A NVIDIA lançou infraestrutura open source para uma nova geração de agentes corporativos, adotada por 17 gigantes no dia um; 80% das organizações já contabilizam ROI real com IA; e o Web Summit Rio abre hoje reunindo 30 mil líderes para debater exatamente essa virada. A revolução silenciosa do trabalho do conhecimento está, finalmente, em produção.
+    </p>
+  </section>
+
+  <!-- ═══ MUNDO ═══ -->
+  <div class="section-header">
+    <span class="section-flag red">🌍 Mundo</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Infraestrutura IA</span>
+      <span class="story-source"><a href="https://nvidianews.nvidia.com/news/ai-agents" target="_blank">NVIDIA Newsroom · VentureBeat</a></span>
+    </div>
+    <div class="number-callout">
+      <span class="num">17</span>
+      <span class="num-label">gigantes adotam<br>no dia 1</span>
+    </div>
+    <h2>NVIDIA lança plataforma open para agentes corporativos — <em>Adobe, SAP e Salesforce</em> adotam de imediato</h2>
+    <p>No GTC Taipei, a NVIDIA apresentou o Agent Toolkit, uma plataforma open source para desenvolvimento de agentes autônomos corporativos composta por quatro pilares: o modelo Nemotron 3 Ultra (5x mais rápido, 30% mais barato para tarefas agênticas longas), o blueprint AI-Q para percepção e raciocínio sobre dados empresariais, o runtime OpenShell com guardrails de segurança e privacidade, e a biblioteca cuOpt para otimização de decisões. Dezessete líderes de software — incluindo Adobe, Atlassian, Cisco, SAP, Salesforce, ServiceNow e Siemens — já integram o toolkit. O sinal estratégico: a corrida não é mais por modelos, é por infraestrutura de orquestração.</p>
+    <a href="https://nvidianews.nvidia.com/news/ai-agents" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">ROI &amp; Produção</span>
+      <span class="story-source"><a href="https://aibusiness.com/agentic-ai/prompt-ai-agents-becoming-operational-infrastructure" target="_blank">AI Business · BeamSec Research</a></span>
+    </div>
+    <h2>80% das empresas já têm ROI com agentes de IA — <em>piloto virou linha de produção</em></h2>
+    <p>Novo estudo da BeamSec com líderes empresariais globais revela que 80% das organizações com agentes de IA em operação já registram retornos econômicos mensuráveis — em planejamento, geração de código, documentação e atendimento. Junho de 2026 marca a inflexão definitiva: o mercado parou de perguntar "os agentes de IA são reais?" e passou a perguntar "qual parte da minha empresa agentizo primeiro?". A governança emergiu como diferencial primário: trilhas de auditoria, data lineage e policy-based security são os critérios decisivos na escolha de plataforma — à frente de performance dos modelos.</p>
+    <a href="https://beamsec.com/how-enterprises-are-building-ai-agents-in-2026-from-pilots-to-production/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Mercado IA</span>
+      <span class="story-source"><a href="https://openai.com/index/next-phase-of-enterprise-ai/" target="_blank">OpenAI</a></span>
+    </div>
+    <h2>OpenAI Enterprise supera <em>40% da receita total</em> — GPT-5.4 leva IA agêntica ao mainstream corporativo</h2>
+    <p>A OpenAI anunciou que o segmento enterprise já representa mais de 40% de sua receita total e está a caminho de empatar com o consumidor até o fim de 2026. O motor do crescimento é o GPT-5.4, que impulsiona workflows agênticos com engajamento recorde em automação de processos financeiros, jurídicos e de desenvolvimento de software. A empresa projeta paridade receita consumer/enterprise até dezembro — uma inversão que sinaliza que IA generativa corporativa é agora um mercado maior e mais rentável que o B2C.</p>
+    <a href="https://openai.com/index/next-phase-of-enterprise-ai/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- ═══ BRASIL ═══ -->
+  <hr class="section-divider">
+  <div class="brasil-strip">Web Summit Rio abre hoje — Brasil no centro do debate global sobre IA e soberania tecnológica</div>
+
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">🇧🇷 Brasil</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stat-row">
+    <div class="stat-item">
+      <span class="stat-num">30K+</span>
+      <span class="stat-label">participantes<br>Web Summit Rio</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">14</span>
+      <span class="stat-label">trilhas temáticas<br>com IA em todas</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">41,7%</span>
+      <span class="stat-label">mercado LatAm de IA<br>concentrado no Brasil</span>
+    </div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Evento</span>
+      <span class="story-source"><a href="https://rio.websummit.com/pt-br/" target="_blank">Web Summit Rio 2026 · Times Brasil</a></span>
+    </div>
+    <h2>Web Summit Rio começa hoje: <em>IA, regulação e soberania</em> em 14 trilhas e 30 mil líderes globais</h2>
+    <p>O maior evento de tecnologia da América do Sul abre hoje (8/6) no Riocentro, Barra da Tijuca, com mais de 30 mil participantes de 60 países até 11 de junho. A inteligência artificial atravessa as 14 trilhas temáticas — de produtividade a governança, de fintechs a educação. Destaques do palco: Michele Catasta (presidente da Replit), Henna Virkkunen (vice-presidente executiva da Comissão Europeia para soberania tecnológica) e representantes de OpenAI, Microsoft, Google e Nvidia. A pergunta que domina os corredores: o Brasil será apenas consumidor de tecnologia de IA, ou conseguirá ocupar elos mais relevantes da cadeia de valor global?</p>
+    <a href="https://timesbrasil.com.br/brasil/web-summit-rio-2026-brasil-inteligencia-artificial-marcel-nobre/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story" style="border-bottom:none;">
+    <div class="story-meta">
+      <span class="story-tag">Soberania Digital</span>
+      <span class="story-source"><a href="https://exame.com/inteligencia-artificial/ia-soberania-tecnologica/" target="_blank">Exame</a></span>
+    </div>
+    <h2>IA acelera debate sobre soberania tecnológica no Brasil — <em>consumidor ou produtor?</em></h2>
+    <p>Com o Brasil concentrando 41,7% do mercado latino-americano de IA e movimentando cerca de US$ 4,2 bilhões em investimentos em 2026, o país chega ao Web Summit Rio diante de uma escolha estratégica: permanecer como grande adotante de tecnologias desenvolvidas no exterior — ou investir na construção de modelos, infraestrutura e talentos próprios. O artigo da Exame documenta como governos, universidades e startups brasileiras começam a articular uma agenda de soberania de IA, impulsionados pela pressão geopolítica crescente e pela dependência de APIs externas em processos críticos de negócio.</p>
+    <a href="https://exame.com/inteligencia-artificial/ia-soberania-tecnologica/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- PULLQUOTE -->
+  <div class="pullquote">
+    <blockquote>
+      "Estamos igniting a próxima revolução industrial no trabalho do conhecimento — e ela será alimentada por agentes de IA que atuam como parceiros autônomos dos seres humanos."
+    </blockquote>
+    <cite>— Jensen Huang, CEO da NVIDIA · GTC Taipei, junho 2026</cite>
+  </div>
+
+  <!-- PERSPECTIVA -->
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">💡 Perspectiva</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story" style="border-bottom:none; padding-bottom:28px;">
+    <h2>O que esses sinais significam para <em>líderes de transformação</em></h2>
+    <p style="margin-bottom:12px;">Três leituras práticas desta edição:</p>
+    <p style="margin-bottom:10px;"><strong>1. Infraestrutura open source muda a equação de build vs. buy.</strong> O NVIDIA Agent Toolkit com 17 parceiros no dia zero sinaliza que a corrida saiu dos modelos e chegou à camada de orquestração. Líderes de tecnologia que ainda avaliam "comprar ou construir" agentes precisam revisar o cálculo: a peça central de infraestrutura agora é aberta, segura e escalonável — e não sair à frente nessa janela é entregar a vantagem à concorrência.</p>
+    <p style="margin-bottom:10px;"><strong>2. ROI de 80% é o novo piso — não o teto.</strong> Com quatro em cada cinco empresas relatando retorno mensurável, quem ainda está em fase de piloto está na cauda da curva. A próxima pergunta não é mais "como justificar o investimento?" — é "quanto estou deixando de ganhar a cada trimestre sem escalar?".</p>
+    <p><strong>3. O Web Summit Rio é uma janela estratégica para o Brasil.</strong> A presença de reguladores europeus, CEOs de plataformas de IA e líderes de capital de risco global cria uma oportunidade rara: posicionar o Brasil não só como mercado adotante, mas como parceiro de desenvolvimento. Organizações com agenda de soberania de dados e IA local saem deste evento com vantagem de narrativa e de relacionamento.</p>
+  </article>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">CLIKDATA<span>·</span>DROPS</div>
+      </div>
+      <div class="footer-links">
+        <a href="https://clikdata.com.br" target="_blank">clikdata.com.br</a>
+        <a href="#">Arquivos anteriores</a>
+        <a href="#">Descadastrar</a>
+        <a href="#">Contato</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      Publicado em 8 de junho de 2026 · Edição #034 · clikdata.com.br<br>
+      Este digest é gerado automaticamente com curadoria editorial humana.<br>
+      Fontes: NVIDIA Newsroom, VentureBeat, AI Business, BeamSec, OpenAI, Web Summit Rio, Times Brasil, Exame.
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
