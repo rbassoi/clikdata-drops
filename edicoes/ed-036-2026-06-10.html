@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CLIKDATA DROPS — Edição #036 - Junho 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0f0f0f;
+    --paper: #f5f0e8;
+    --accent: #c8401a;
+    --accent2: #1a3c5e;
+    --muted: #7a7060;
+    --rule: #d4cfc4;
+    --tag-bg: #1a3c5e;
+    --tag-color: #f5f0e8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #e8e3d8;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrapper {
+    max-width: 680px;
+    margin: 40px auto;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    box-shadow: 4px 4px 0 #c4bfb4, 8px 8px 0 #b4afa4;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    border-bottom: 3px double var(--ink);
+    padding: 0;
+    position: relative;
+  }
+
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 32px 10px;
+    border-bottom: 1px solid var(--rule);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  .masthead {
+    padding: 28px 32px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--ink);
+    position: relative;
+  }
+
+  .masthead::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--accent);
+    margin: 0 auto 16px;
+  }
+
+  .masthead h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1;
+    color: var(--ink);
+  }
+
+  .masthead h1 span {
+    color: var(--accent);
+  }
+
+  .tagline {
+    margin-top: 8px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .edition-bar {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 10px 32px;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  /* ── INTRO ── */
+  .intro {
+    padding: 28px 32px 24px;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .intro-dropcap {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 0.85;
+    color: var(--accent);
+    float: left;
+    margin-right: 4px;
+    margin-top: 6px;
+  }
+
+  .intro p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: #2a2520;
+  }
+
+  /* ── SECTION HEADER ── */
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 32px 0;
+    margin-bottom: 4px;
+  }
+
+  .section-flag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    background: var(--tag-bg);
+    color: var(--tag-color);
+    padding: 4px 10px;
+    white-space: nowrap;
+  }
+
+  .section-flag.red { background: var(--accent); }
+
+  .section-rule {
+    flex: 1;
+    height: 1px;
+    background: var(--ink);
+  }
+
+  /* ── STORY CARD ── */
+  .story {
+    padding: 20px 32px;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+  }
+
+  .story:last-of-type { border-bottom: none; }
+
+  .story-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .story-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 2px 7px;
+  }
+
+  .story-source {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+  }
+
+  .story h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+
+  .story h2 em {
+    font-style: italic;
+    color: var(--accent2);
+  }
+
+  .story p {
+    font-size: 14px;
+    line-height: 1.72;
+    color: #2a2520;
+  }
+
+  .story .number-callout {
+    float: right;
+    margin: 0 0 8px 18px;
+    text-align: center;
+    border: 2px solid var(--ink);
+    padding: 12px 16px;
+    min-width: 88px;
+  }
+
+  .story .number-callout .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--accent);
+    display: block;
+    line-height: 1;
+  }
+
+  .story .number-callout .num-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 4px;
+  }
+
+  /* ── DIVIDER ── */
+  .section-divider {
+    border: none;
+    border-top: 3px double var(--ink);
+    margin: 8px 32px 0;
+  }
+
+  /* ── DESTAQUE BRASIL ── */
+  .brasil-strip {
+    background: var(--accent2);
+    color: var(--paper);
+    padding: 6px 32px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .brasil-strip::before {
+    content: '▶';
+    font-size: 8px;
+  }
+
+  /* ── STAT ROW ── */
+  .stat-row {
+    display: flex;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .stat-item {
+    flex: 1;
+    padding: 20px 24px;
+    border-right: 1px solid var(--rule);
+    text-align: center;
+  }
+
+  .stat-item:last-child { border-right: none; }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--accent2);
+    display: block;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 6px;
+    line-height: 1.4;
+  }
+
+  /* ── PULLQUOTE ── */
+  .pullquote {
+    margin: 0;
+    padding: 24px 40px;
+    border-top: 2px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+    background: #ede8de;
+  }
+
+  .pullquote blockquote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 19px;
+    line-height: 1.5;
+    color: var(--ink);
+    text-align: center;
+  }
+
+  .pullquote cite {
+    display: block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: center;
+    font-style: normal;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 28px 32px;
+    border-top: 3px double var(--accent);
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333;
+  }
+
+  .footer-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 900;
+  }
+
+  .footer-brand span { color: var(--accent); }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: right;
+  }
+
+  .footer-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: #888;
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .footer-bottom {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: #555;
+    letter-spacing: 0.06em;
+    line-height: 1.6;
+  }
+
+  .routine-badge {
+    display: inline-block;
+    margin-top: 12px;
+    background: var(--accent);
+    color: white;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+  }
+
+
+  .story-source a {
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--muted);
+    transition: color 0.15s;
+  }
+  .story-source a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+  .read-more {
+    display: inline-block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent2);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent2);
+    padding-bottom: 1px;
+  }
+  .read-more:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+  @media (max-width: 600px) {
+    .wrapper { margin: 0; box-shadow: none; }
+    .masthead h1 { font-size: 38px; }
+    .stat-row { flex-direction: column; }
+    .stat-item { border-right: none; border-bottom: 1px solid var(--rule); }
+    .header-top { flex-direction: column; gap: 4px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-top">
+      <span>Edição #036</span>
+      <span>10 de junho de 2026</span>
+      <span>Diária · IA &amp; Transformação</span>
+    </div>
+    <div class="masthead">
+      <h1>CLIKDATA<span style="color:var(--accent)">·</span>DROPS</h1>
+      <p class="tagline">IA · Tecnologia · Transformação Digital · Edição Diária</p>
+    </div>
+    <div class="edition-bar">
+      <span>🌍 Mundo</span>
+      <span>🇧🇷 Brasil</span>
+      <span>📊 Números</span>
+      <span>💡 Perspectiva</span>
+    </div>
+  </header>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <p>
+      <span class="intro-dropcap">E</span>
+      sta semana trouxe uma convergência rara: Web Summit Rio 2026 e WWDC da Apple aconteceram simultaneamente, enquanto alertas urgentes sobre segurança e governança de agentes de IA ecoavam nos relatórios do MIT e do Gartner. No centro de tudo, o Brasil emerge não apenas como espectador, mas como protagonista global — com o Rio de Janeiro anunciando o maior campus de data centers da América Latina e US$ 10 bilhões em perspectiva.
+    </p>
+  </section>
+
+  <!-- ═══ MUNDO ═══ -->
+  <div class="section-header">
+    <span class="section-flag red">🌍 Mundo</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">IA Global</span>
+      <span class="story-source"><a href="https://hai.stanford.edu/news/inside-the-ai-index-12-takeaways-from-the-2026-report" target="_blank">Stanford HAI · AI Index 2026</a></span>
+    </div>
+    <div class="number-callout">
+      <span class="num">53%</span>
+      <span class="num-label">adoção de IA<br>generativa em 3 anos</span>
+    </div>
+    <h2>Stanford HAI: IA generativa adotada mais rápido que o PC e a internet — <em>China quase empata com EUA</em></h2>
+    <p>O AI Index 2026 do Stanford HAI traz um dado que redefine expectativas: a IA generativa atingiu 53% de adoção populacional em apenas três anos, ritmo superior ao do computador pessoal e da internet. Os modelos líderes continuam evoluindo, contrariando previsões de estagnação. Na corrida EUA-China, os países trocaram diversas vezes a liderança desde 2025 — em março de 2026, o modelo topo da Anthropic liderava por apenas 2,7% sobre o concorrente chinês mais próximo. O relatório também alerta para o pico de riscos sistêmicos em 2026: clonagem de identidade digital, bots criminosos e engenharia social automatizada em escala.</p>
+    <a href="https://hai.stanford.edu/news/inside-the-ai-index-12-takeaways-from-the-2026-report" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Tecnologia</span>
+      <span class="story-source"><a href="https://techcrunch.com/2026/06/09/wwdc-2026-everything-announced-on-siri-ai-os-27-apple-intelligence-and-more/" target="_blank">TechCrunch · WWDC 2026</a></span>
+    </div>
+    <h2>Apple redefine o Siri com IA generativa e <em>Google Gemini</em> no WWDC 2026</h2>
+    <p>A Apple abriu a WWDC 2026 com a reformulação completa do Siri, rebatizado como "Siri AI". O novo assistente abandona a arquitetura anterior e adota o Google Gemini como motor de raciocínio, ganhando consciência total da tela em tempo real: o usuário pode dizer "adicione este voo ao calendário e avise minha mãe" e o assistente lê as informações na tela, cria o evento e envia a mensagem automaticamente. O iOS 27 traz até 30% de aceleração no lançamento de apps e 70% de melhora no carregamento de fotos — disponível a partir do iPhone 11. O CEO Tim Cook também anunciou sua transição para John Ternus a partir de setembro de 2026.</p>
+    <a href="https://techcrunch.com/2026/06/09/wwdc-2026-everything-announced-on-siri-ai-os-27-apple-intelligence-and-more/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">IA · Segurança</span>
+      <span class="story-source"><a href="https://www.technologyreview.com/2026/06/05/1138437/the-meta-hack-shows-theres-more-to-ai-security-than-mythos/" target="_blank">MIT Technology Review</a></span>
+    </div>
+    <h2>Hackers exploram agente de IA da Meta para <em>roubar contas</em> no Instagram</h2>
+    <p>O MIT Technology Review revelou como atacantes usaram o próprio agente de atendimento ao cliente da Meta para roubar contas no Instagram: bastava solicitar ao agente que vinculasse contas a e-mails controlados pelos invasores — um ataque de engenharia social totalmente automatizado e escalável. O caso expõe uma falha estrutural: à medida que empresas implantam agentes com acesso a sistemas críticos, a superfície de ataque cresce exponencialmente. O relatório conclui que a segurança em IA vai muito além dos modelos de ameaça tradicionais e exige revisão profunda de arquitetura, permissões e monitoramento de agentes em produção.</p>
+    <a href="https://www.technologyreview.com/2026/06/05/1138437/the-meta-hack-shows-theres-more-to-ai-security-than-mythos/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Transformação Digital</span>
+      <span class="story-source"><a href="https://www.gartner.com/en/newsroom/press-releases/2026-05-26-gartner-says-applying-uniform-governance-across-ai-agents-will-lead-to-enterprise-ai-agent-failure" target="_blank">Gartner</a></span>
+    </div>
+    <div class="number-callout">
+      <span class="num">40%</span>
+      <span class="num-label">apps corporativos<br>com agentes até 2026</span>
+    </div>
+    <h2>Gartner alerta: governança uniforme de agentes de IA leva ao <em>fracasso corporativo</em></h2>
+    <p>O Gartner advertiu que aplicar governança uniforme a todos os agentes de IA — independentemente do nível de autonomia e escopo — conduz ao fracasso das iniciativas nas empresas. A consultoria prevê que até 2027, 40% das organizações irão rebaixar ou desativar agentes autônomos devido a falhas de governança identificadas apenas após incidentes em produção. A solução proposta é uma classificação por nível de autonomia: do Nível 1 (Observar, acesso somente leitura) ao Nível 2 (Aconselhar, com revisão humana obrigatória). O contexto é urgente: 40% dos apps corporativos já terão agentes incorporados até o final de 2026, ante menos de 5% em 2025.</p>
+    <a href="https://www.gartner.com/en/newsroom/press-releases/2026-05-26-gartner-says-applying-uniform-governance-across-ai-agents-will-lead-to-enterprise-ai-agent-failure" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- ═══ BRASIL ═══ -->
+  <hr class="section-divider">
+  <div class="brasil-strip">Rio AI City: maior campus de data centers da América Latina anunciado no Web Summit Rio 2026</div>
+
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">🇧🇷 Brasil</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stat-row">
+    <div class="stat-item">
+      <span class="stat-num">US$10B</span>
+      <span class="stat-label">projeção de ciclo<br>Rio AI City</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">1,5GW</span>
+      <span class="stat-label">capacidade inicial<br>de energia do campus</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">10k+</span>
+      <span class="stat-label">empregos qualificados<br>previstos</span>
+    </div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Brasil · IA</span>
+      <span class="story-source"><a href="https://tiinside.com.br/09/06/2026/rio-ai-city-recebe-primeiro-aporte-de-us-550-milhoes-e-projeta-ciclo-de-us-10-bilhoes/" target="_blank">TI Inside · Web Summit Rio 2026</a></span>
+    </div>
+    <h2>Rio AI City: US$ 550 milhões em primeiro aporte — e um ciclo de <em>US$ 10 bilhões</em> no horizonte</h2>
+    <p>Durante a abertura do Web Summit Rio 2026, o prefeito Eduardo Cavaliere e o CEO da Elea Data Centers, Alessandro Lombardi, anunciaram um investimento inicial de US$ 550 milhões no Rio AI City — um complexo de data centers voltado à infraestrutura de IA, no Parque Olímpico, na Barra da Tijuca. O projeto prevê capacidade inicial de 1,5 GW de energia, expansão para até 3 GW até 2032 e investimento total estimado em US$ 65 bilhões ao longo da próxima década, com meta de mais de 10 mil empregos qualificados e uso de energia renovável.</p>
+    <p style="margin-top:10px;">O Web Summit Rio 2026 (8 a 11 de junho, no Riocentro) reuniu mais de 34 mil participantes e 1.500 startups, com OpenAI, Microsoft, Google, Nvidia e Meta entre as empresas presentes — consolidando o Rio de Janeiro como hub global de IA e o maior polo de debates sobre agentes autônomos e governança de dados da América Latina.</p>
+    <a href="https://tiinside.com.br/09/06/2026/rio-ai-city-recebe-primeiro-aporte-de-us-550-milhoes-e-projeta-ciclo-de-us-10-bilhoes/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- PULLQUOTE -->
+  <div class="pullquote">
+    <blockquote>
+      "Tratar a governança de agentes de IA como binária — completamente bloqueada ou totalmente confiável — é receita certa para o fracasso corporativo."
+    </blockquote>
+    <cite>— Gartner, Press Release · maio de 2026</cite>
+  </div>
+
+  <!-- PERSPECTIVA -->
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">💡 Perspectiva</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story" style="border-bottom:none; padding-bottom:28px;">
+    <h2>O que essa semana revela para <em>líderes de transformação</em></h2>
+    <p style="margin-bottom:12px;">Três leituras práticas desta edição:</p>
+    <p style="margin-bottom:10px;"><strong>1. Brasil virou protagonista de infraestrutura.</strong> O Rio AI City não é apenas um investimento imobiliário — é um sinal de que o Brasil passou de consumidor a construtor da infraestrutura de IA. Para empresas locais, isso significa acesso a capacidade de processamento de classe global sem latência internacional. A janela para posicionamento estratégico está aberta.</p>
+    <p style="margin-bottom:10px;"><strong>2. Agentes de IA exigem nova camada de segurança.</strong> O ataque à Meta via seu próprio agente de atendimento é um alerta: frameworks de segurança tradicionais não foram projetados para sistemas que agem autonomamente em nome da empresa. CISOs precisam redesenhar modelos de ameaça antes de implantar — não depois do primeiro incidente.</p>
+    <p><strong>3. A corrida EUA-China encurta o prazo das decisões.</strong> Com Stanford documentando que a vantagem americana se mede em pontos percentuais, empresas que ainda apostam em um único fornecedor de IA assumem risco de concentração. Diversificar o stack de modelos hoje é hedge estratégico — não preciosismo técnico.</p>
+  </article>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">CLIKDATA<span>·</span>DROPS</div>
+
+      </div>
+      <div class="footer-links">
+        <a href="https://clikdata.com.br" target="_blank">clikdata.com.br</a>
+        <a href="#">Arquivos anteriores</a>
+        <a href="#">Descadastrar</a>
+        <a href="#">Contato</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      Publicado em 10 de junho de 2026 · Edição #036 · clikdata.com.br<br>
+      Este digest é gerado automaticamente com curadoria editorial humana.<br>
+      Fontes: Stanford HAI, MIT Technology Review, TechCrunch, Gartner, TI Inside, Apple Newsroom.
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
