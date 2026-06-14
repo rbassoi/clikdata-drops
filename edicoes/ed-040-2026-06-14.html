@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CLIKDATA DROPS — Edição #040 - Junho 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0f0f0f;
+    --paper: #f5f0e8;
+    --accent: #c8401a;
+    --accent2: #1a3c5e;
+    --muted: #7a7060;
+    --rule: #d4cfc4;
+    --tag-bg: #1a3c5e;
+    --tag-color: #f5f0e8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #e8e3d8;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrapper {
+    max-width: 680px;
+    margin: 40px auto;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    box-shadow: 4px 4px 0 #c4bfb4, 8px 8px 0 #b4afa4;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    border-bottom: 3px double var(--ink);
+    padding: 0;
+    position: relative;
+  }
+
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 32px 10px;
+    border-bottom: 1px solid var(--rule);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  .masthead {
+    padding: 28px 32px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--ink);
+    position: relative;
+  }
+
+  .masthead::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--accent);
+    margin: 0 auto 16px;
+  }
+
+  .masthead h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1;
+    color: var(--ink);
+  }
+
+  .masthead h1 span {
+    color: var(--accent);
+  }
+
+  .tagline {
+    margin-top: 8px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .edition-bar {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 10px 32px;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  /* ── INTRO ── */
+  .intro {
+    padding: 28px 32px 24px;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .intro-dropcap {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 0.85;
+    color: var(--accent);
+    float: left;
+    margin-right: 4px;
+    margin-top: 6px;
+  }
+
+  .intro p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: #2a2520;
+  }
+
+  /* ── SECTION HEADER ── */
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 32px 0;
+    margin-bottom: 4px;
+  }
+
+  .section-flag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    background: var(--tag-bg);
+    color: var(--tag-color);
+    padding: 4px 10px;
+    white-space: nowrap;
+  }
+
+  .section-flag.red { background: var(--accent); }
+
+  .section-rule {
+    flex: 1;
+    height: 1px;
+    background: var(--ink);
+  }
+
+  /* ── STORY CARD ── */
+  .story {
+    padding: 20px 32px;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+  }
+
+  .story:last-of-type { border-bottom: none; }
+
+  .story-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .story-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 2px 7px;
+  }
+
+  .story-source {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+  }
+
+  .story h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+
+  .story h2 em {
+    font-style: italic;
+    color: var(--accent2);
+  }
+
+  .story p {
+    font-size: 14px;
+    line-height: 1.72;
+    color: #2a2520;
+  }
+
+  .story .number-callout {
+    float: right;
+    margin: 0 0 8px 18px;
+    text-align: center;
+    border: 2px solid var(--ink);
+    padding: 12px 16px;
+    min-width: 88px;
+  }
+
+  .story .number-callout .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--accent);
+    display: block;
+    line-height: 1;
+  }
+
+  .story .number-callout .num-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 4px;
+  }
+
+  /* ── DIVIDER ── */
+  .section-divider {
+    border: none;
+    border-top: 3px double var(--ink);
+    margin: 8px 32px 0;
+  }
+
+  /* ── DESTAQUE BRASIL ── */
+  .brasil-strip {
+    background: var(--accent2);
+    color: var(--paper);
+    padding: 6px 32px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .brasil-strip::before {
+    content: '▶';
+    font-size: 8px;
+  }
+
+  /* ── STAT ROW ── */
+  .stat-row {
+    display: flex;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .stat-item {
+    flex: 1;
+    padding: 20px 24px;
+    border-right: 1px solid var(--rule);
+    text-align: center;
+  }
+
+  .stat-item:last-child { border-right: none; }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--accent2);
+    display: block;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 6px;
+    line-height: 1.4;
+  }
+
+  /* ── PULLQUOTE ── */
+  .pullquote {
+    margin: 0;
+    padding: 24px 40px;
+    border-top: 2px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+    background: #ede8de;
+  }
+
+  .pullquote blockquote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 19px;
+    line-height: 1.5;
+    color: var(--ink);
+    text-align: center;
+  }
+
+  .pullquote cite {
+    display: block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: center;
+    font-style: normal;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 28px 32px;
+    border-top: 3px double var(--accent);
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333;
+  }
+
+  .footer-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 900;
+  }
+
+  .footer-brand span { color: var(--accent); }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: right;
+  }
+
+  .footer-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: #888;
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .footer-bottom {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: #555;
+    letter-spacing: 0.06em;
+    line-height: 1.6;
+  }
+
+  .routine-badge {
+    display: inline-block;
+    margin-top: 12px;
+    background: var(--accent);
+    color: white;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+  }
+
+
+  .story-source a {
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--muted);
+    transition: color 0.15s;
+  }
+  .story-source a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+  .read-more {
+    display: inline-block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent2);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent2);
+    padding-bottom: 1px;
+  }
+  .read-more:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+  @media (max-width: 600px) {
+    .wrapper { margin: 0; box-shadow: none; }
+    .masthead h1 { font-size: 38px; }
+    .stat-row { flex-direction: column; }
+    .stat-item { border-right: none; border-bottom: 1px solid var(--rule); }
+    .header-top { flex-direction: column; gap: 4px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-top">
+      <span>Edição #040</span>
+      <span>14 de junho de 2026</span>
+      <span>Diária · IA &amp; Transformação</span>
+    </div>
+    <div class="masthead">
+      <h1>CLIKDATA<span style="color:var(--accent)">·</span>DROPS</h1>
+      <p class="tagline">IA · Tecnologia · Transformação Digital · Edição Diária</p>
+    </div>
+    <div class="edition-bar">
+      <span>🌍 Mundo</span>
+      <span>🇧🇷 Brasil</span>
+      <span>📊 Números</span>
+      <span>💡 Perspectiva</span>
+    </div>
+  </header>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <p>
+      <span class="intro-dropcap">S</span>
+      iri ganhou um novo cérebro, os EUA regularam a IA sem criar licenças obrigatórias e o Google promete o maior modelo de contexto da história para os próximos dias. Na Copa do Mundo, todas as 32 seleções chegaram com IA como arma tática. E no Brasil, o supercomputador nacional de IA sai do papel. A semana consagra uma certeza: a corrida não é mais por adoção — é por quem aprende a usar IA como vantagem estrutural antes da concorrência.
+    </p>
+  </section>
+
+  <!-- ═══ MUNDO ═══ -->
+  <div class="section-header">
+    <span class="section-flag red">🌍 Mundo</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Big Tech &amp; IA</span>
+      <span class="story-source"><a href="https://techcrunch.com/2026/06/09/wwdc-2026-everything-announced-on-siri-ai-os-27-apple-intelligence-and-more/" target="_blank">TechCrunch · WWDC 2026</a></span>
+    </div>
+    <div class="number-callout">
+      <span class="num">iOS 27</span>
+      <span class="num-label">nova era<br>apple intelligence</span>
+    </div>
+    <h2>Apple reinventa a Siri com <em>Google Gemini</em> — o assistente que voltou para brigar</h2>
+    <p>Na WWDC 2026, a Apple anunciou a maior reformulação da Siri em sua história: alimentada pelo Google Gemini, a assistente ganhou um aplicativo independente, integração contextual profunda entre apps e memória de conversas anteriores. O iOS 27 traz o "Reframe" (que reconfigura perspectivas em fotos após o clique), organização inteligente de abas no Safari e monitoramento automático de páginas. A mensagem estratégica é inequívoca: IA deixou de ser recurso acessório e passou a ser o eixo do sistema operacional — com privacidade como diferencial declarado. Para o ecossistema corporativo Apple, o impacto começa a ser sentido agora.</p>
+    <a href="https://techcrunch.com/2026/06/09/wwdc-2026-everything-announced-on-siri-ai-os-27-apple-intelligence-and-more/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Regulação &amp; Política</span>
+      <span class="story-source"><a href="https://www.whitehouse.gov/presidential-actions/2026/06/promoting-advanced-artificial-intelligence-innovation-and-security/" target="_blank">Casa Branca · White House</a></span>
+    </div>
+    <h2>EUA regulam sem travar: ordem executiva dá ao governo <em>acesso antecipado</em> a modelos de IA</h2>
+    <p>O presidente Trump assinou a Executive Order "Promoting Advanced Artificial Intelligence Innovation and Security", que determina que desenvolvedores forneçam ao governo americano acesso antecipado a modelos de IA antes do lançamento público — sem, contudo, exigir licenças ou aprovações prévias obrigatórias. Em complemento, um Memorando de Segurança Nacional estabeleceu um framework de uso de IA em defesa e inteligência guiado por quatro pilares: Adoção, Adaptação, Garantia e Responsabilidade. O modelo regulatório americano aposta em acesso e transparência antes do mercado, não em burocracia — uma referência para o debate regulatório global.</p>
+    <a href="https://www.whitehouse.gov/presidential-actions/2026/06/promoting-advanced-artificial-intelligence-innovation-and-security/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">IA Generativa</span>
+      <span class="story-source"><a href="https://www.techtimes.com/articles/317919/20260606/google-gemini-35-pro-nears-june-launch-2-million-token-context-deep-think-reasoning.htm" target="_blank">TechTimes · CoderSera</a></span>
+    </div>
+    <div class="number-callout">
+      <span class="num">2M</span>
+      <span class="num-label">tokens de<br>contexto</span>
+    </div>
+    <h2>Gemini 3.5 Pro: <em>2 milhões de tokens</em> e raciocínio "Deep Think" chegam este mês</h2>
+    <p>O Google Gemini 3.5 Pro está em lançamento iminente para junho de 2026, com uma janela de contexto de 2 milhões de tokens e o modo "Deep Think" — raciocínio encadeado de múltiplos passos para tarefas complexas. O modelo absorve os casos de uso antes destinados ao tier "Ultra" da empresa: raciocínio avançado, multimodalidade profunda (texto, imagens e código) e contextos extensos. Para líderes de TI, o impacto prático é imediato: processar documentos inteiros, contratos longos e repositórios de código sem cortes de contexto. A corrida entre Google e Anthropic no segmento enterprise entra em nova fase.</p>
+    <a href="https://www.techtimes.com/articles/317919/20260606/google-gemini-35-pro-nears-june-launch-2-million-token-context-deep-think-reasoning.htm" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- ═══ BRASIL ═══ -->
+  <hr class="section-divider">
+  <div class="brasil-strip">Brasil liga supercomputador de IA e entra na Copa com dados como arma</div>
+
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">🇧🇷 Brasil</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stat-row">
+    <div class="stat-item">
+      <span class="stat-num">2M</span>
+      <span class="stat-label">tokens — janela de<br>contexto Gemini 3.5 Pro</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">32</span>
+      <span class="stat-label">seleções na Copa<br>usando IA e dados</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">R$23bi</span>
+      <span class="stat-label">PBIA — infraestrutura<br>nacional de IA até 2028</span>
+    </div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Infraestrutura Nacional</span>
+      <span class="story-source"><a href="https://news.o-algoritmo.com/p/br-supercomputador-ia-2026" target="_blank">O Algoritmo · MCTI</a></span>
+    </div>
+    <h2>Brasil liga supercomputador de IA em 2026 — <em>soberania computacional</em> sai do papel</h2>
+    <p>O Ministério da Ciência, Tecnologia e Inovação confirmou que o Brasil colocará em operação em 2026 um supercomputador dedicado à inteligência artificial — parte estratégica do PBIA e do objetivo de posicionar o país como produtor, não apenas consumidor, de IA. A iniciativa reduz a dependência de infraestrutura estrangeira para treinar e executar modelos de grande escala. Para empresas e pesquisadores brasileiros, o acesso a hardware de classe mundial abre oportunidades reais de desenvolver modelos nacionais adaptados ao contexto local — saúde pública, agronegócio, língua portuguesa — e elimina o "imposto" de latência e custo de nuvens americanas.</p>
+    <a href="https://news.o-algoritmo.com/p/br-supercomputador-ia-2026" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story" style="border-bottom:none;">
+    <div class="story-meta">
+      <span class="story-tag">IA no Esporte</span>
+      <span class="story-source"><a href="https://portuguese.news-pravda.com/brazil/2026/06/12/397802.html" target="_blank">Pravda PT · Copa do Mundo 2026</a></span>
+    </div>
+    <h2>Copa do Mundo 2026: <em>32 seleções</em> usam IA e ciência de dados como vantagem tática</h2>
+    <p>Pela primeira vez na história, praticamente todas as 32 seleções da Copa do Mundo 2026 — com jogos no Brasil, EUA e Canadá — integraram IA e análise de dados ao método competitivo. Doutorandos e cientistas de dados trabalham incorporados às comissões técnicas, modelando probabilidades de gol, padrões de pressão adversária e perfis de sprints em tempo real. O que era privilégio de poucos clubes europeus em 2024 é hoje padrão universal no torneio mais assistido do mundo. O case vai além do futebol: é o maior proof-of-concept de IA aplicada a equipes e tomada de decisão sob pressão já realizado na história do esporte.</p>
+    <a href="https://portuguese.news-pravda.com/brazil/2026/06/12/397802.html" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- PULLQUOTE -->
+  <div class="pullquote">
+    <blockquote>
+      "Nada nesta ordem deve ser interpretado como autorização para criar requisitos obrigatórios de licenciamento para o desenvolvimento ou lançamento de modelos de IA."
+    </blockquote>
+    <cite>— Ordem Executiva de IA dos EUA · Casa Branca, junho de 2026</cite>
+  </div>
+
+  <!-- PERSPECTIVA -->
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">💡 Perspectiva</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story" style="border-bottom:none; padding-bottom:28px;">
+    <h2>O que esses sinais significam para <em>líderes de transformação</em></h2>
+    <p style="margin-bottom:12px;">Três leituras práticas desta edição:</p>
+    <p style="margin-bottom:10px;"><strong>1. A Siri com Gemini redefine o padrão do assistente corporativo.</strong> Apple integrou Google Gemini ao sistema operacional de mais de 2 bilhões de dispositivos — com privacidade como argumento central. Para empresas que ainda avaliam qual assistente adotar, o ecossistema Apple acaba de elevar a barra. A pergunta não é mais "usar assistente de IA?", mas "qual nível de integração sistêmica sua empresa suporta e precisa hoje?"</p>
+    <p style="margin-bottom:10px;"><strong>2. O modelo regulatório americano é uma aula de postura estratégica.</strong> Os EUA criaram acesso antecipado do governo a modelos de IA sem exigir licenças. É o equilíbrio entre supervisão e inovação que o Brasil deveria estudar ao avançar na regulamentação do Marco Legal de IA. Regular para acompanhar, não para frear — essa distinção define quais países liderarão a próxima década.</p>
+    <p><strong>3. A Copa prova que IA escala para qualquer organização com dados.</strong> Se 32 federações — de diferentes orçamentos, culturas e infraestruturas — conseguiram integrar IA à tomada de decisão tática, qualquer empresa com processos estruturados pode fazer o mesmo. O argumento de "nossa realidade é diferente" perdeu validade nos gramados da Copa. O próximo passo é trazer essa mentalidade data-driven para dentro da operação.</p>
+  </article>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">CLIKDATA<span>·</span>DROPS</div>
+      </div>
+      <div class="footer-links">
+        <a href="https://clikdata.com.br" target="_blank">clikdata.com.br</a>
+        <a href="#">Arquivos anteriores</a>
+        <a href="#">Descadastrar</a>
+        <a href="#">Contato</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      Publicado em 14 de junho de 2026 · Edição #040 · clikdata.com.br<br>
+      Este digest é gerado automaticamente com curadoria editorial humana.<br>
+      Fontes: TechCrunch, Casa Branca, TechTimes, CoderSera, O Algoritmo, MCTI, Pravda PT, Bloomberg.
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
