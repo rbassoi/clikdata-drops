@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CLIKDATA DROPS — Edição #044 - Junho 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0f0f0f;
+    --paper: #f5f0e8;
+    --accent: #c8401a;
+    --accent2: #1a3c5e;
+    --muted: #7a7060;
+    --rule: #d4cfc4;
+    --tag-bg: #1a3c5e;
+    --tag-color: #f5f0e8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #e8e3d8;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrapper {
+    max-width: 680px;
+    margin: 40px auto;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    box-shadow: 4px 4px 0 #c4bfb4, 8px 8px 0 #b4afa4;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    border-bottom: 3px double var(--ink);
+    padding: 0;
+    position: relative;
+  }
+
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 32px 10px;
+    border-bottom: 1px solid var(--rule);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  .masthead {
+    padding: 28px 32px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--ink);
+    position: relative;
+  }
+
+  .masthead::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--accent);
+    margin: 0 auto 16px;
+  }
+
+  .masthead h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1;
+    color: var(--ink);
+  }
+
+  .masthead h1 span {
+    color: var(--accent);
+  }
+
+  .tagline {
+    margin-top: 8px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .edition-bar {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 10px 32px;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  /* ── INTRO ── */
+  .intro {
+    padding: 28px 32px 24px;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .intro-dropcap {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 0.85;
+    color: var(--accent);
+    float: left;
+    margin-right: 4px;
+    margin-top: 6px;
+  }
+
+  .intro p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: #2a2520;
+  }
+
+  /* ── SECTION HEADER ── */
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 32px 0;
+    margin-bottom: 4px;
+  }
+
+  .section-flag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    background: var(--tag-bg);
+    color: var(--tag-color);
+    padding: 4px 10px;
+    white-space: nowrap;
+  }
+
+  .section-flag.red { background: var(--accent); }
+
+  .section-rule {
+    flex: 1;
+    height: 1px;
+    background: var(--ink);
+  }
+
+  /* ── STORY CARD ── */
+  .story {
+    padding: 20px 32px;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+  }
+
+  .story:last-of-type { border-bottom: none; }
+
+  .story-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .story-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 2px 7px;
+  }
+
+  .story-source {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+  }
+
+  .story h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+
+  .story h2 em {
+    font-style: italic;
+    color: var(--accent2);
+  }
+
+  .story p {
+    font-size: 14px;
+    line-height: 1.72;
+    color: #2a2520;
+  }
+
+  .story .number-callout {
+    float: right;
+    margin: 0 0 8px 18px;
+    text-align: center;
+    border: 2px solid var(--ink);
+    padding: 12px 16px;
+    min-width: 88px;
+  }
+
+  .story .number-callout .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--accent);
+    display: block;
+    line-height: 1;
+  }
+
+  .story .number-callout .num-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 4px;
+  }
+
+  /* ── DIVIDER ── */
+  .section-divider {
+    border: none;
+    border-top: 3px double var(--ink);
+    margin: 8px 32px 0;
+  }
+
+  /* ── DESTAQUE BRASIL ── */
+  .brasil-strip {
+    background: var(--accent2);
+    color: var(--paper);
+    padding: 6px 32px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .brasil-strip::before {
+    content: '▶';
+    font-size: 8px;
+  }
+
+  /* ── STAT ROW ── */
+  .stat-row {
+    display: flex;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .stat-item {
+    flex: 1;
+    padding: 20px 24px;
+    border-right: 1px solid var(--rule);
+    text-align: center;
+  }
+
+  .stat-item:last-child { border-right: none; }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--accent2);
+    display: block;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 6px;
+    line-height: 1.4;
+  }
+
+  /* ── PULLQUOTE ── */
+  .pullquote {
+    margin: 0;
+    padding: 24px 40px;
+    border-top: 2px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+    background: #ede8de;
+  }
+
+  .pullquote blockquote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 19px;
+    line-height: 1.5;
+    color: var(--ink);
+    text-align: center;
+  }
+
+  .pullquote cite {
+    display: block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: center;
+    font-style: normal;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 28px 32px;
+    border-top: 3px double var(--accent);
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333;
+  }
+
+  .footer-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 900;
+  }
+
+  .footer-brand span { color: var(--accent); }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: right;
+  }
+
+  .footer-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: #888;
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .footer-bottom {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: #555;
+    letter-spacing: 0.06em;
+    line-height: 1.6;
+  }
+
+  .routine-badge {
+    display: inline-block;
+    margin-top: 12px;
+    background: var(--accent);
+    color: white;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+  }
+
+
+  .story-source a {
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--muted);
+    transition: color 0.15s;
+  }
+  .story-source a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+  .read-more {
+    display: inline-block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent2);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent2);
+    padding-bottom: 1px;
+  }
+  .read-more:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+  @media (max-width: 600px) {
+    .wrapper { margin: 0; box-shadow: none; }
+    .masthead h1 { font-size: 38px; }
+    .stat-row { flex-direction: column; }
+    .stat-item { border-right: none; border-bottom: 1px solid var(--rule); }
+    .header-top { flex-direction: column; gap: 4px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-top">
+      <span>Edição #044</span>
+      <span>18 de junho de 2026</span>
+      <span>Diária · IA &amp; Transformação</span>
+    </div>
+    <div class="masthead">
+      <h1>CLIKDATA<span style="color:var(--accent)">·</span>DROPS</h1>
+      <p class="tagline">IA · Tecnologia · Transformação Digital · Edição Diária</p>
+    </div>
+    <div class="edition-bar">
+      <span>🌍 Mundo</span>
+      <span>🇧🇷 Brasil</span>
+      <span>📊 Números</span>
+      <span>💡 Perspectiva</span>
+    </div>
+  </header>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <p>
+      <span class="intro-dropcap">C</span>
+      onsolidação é a palavra de junho de 2026. De um lado, a SpaceX engole o Cursor por US$ 60 bilhões e redefine o que é "infraestrutura de desenvolvimento". Do outro, a Casa Branca assina um decreto histórico sobre IA e o Google encerra o Gemini CLI em favor de uma plataforma multi-agente. No Brasil, 9 milhões de empresas já operam com IA de forma sistemática. A era dos experimentos acabou — o que vem agora é corrida por posição.
+    </p>
+  </section>
+
+  <!-- ═══ MUNDO ═══ -->
+  <div class="section-header">
+    <span class="section-flag red">🌍 Mundo</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Aquisição</span>
+      <span class="story-source"><a href="https://www.cnbc.com/2026/06/16/spacex-spcx-cursor-acquisition-ipo.html" target="_blank">CNBC · 16 jun 2026</a></span>
+    </div>
+    <div class="number-callout">
+      <span class="num">$60B</span>
+      <span class="num-label">maior deal<br>IA coding<br>da história</span>
+    </div>
+    <h2>SpaceX compra o Cursor por <em>US$ 60 bilhões</em> — e transforma o ecossistema de dev em IA</h2>
+    <p>Quatro dias após seu IPO na Nasdaq (levantando US$ 75 bilhões a US$ 135/ação), a SpaceX anunciou a aquisição da Anysphere — criadora do Cursor, o assistente de coding mais popular do mercado — num negócio all-stock avaliado em US$ 60 bilhões. Com US$ 2,6 bilhões em receita anualizada e enterprise em forte crescimento, o Cursor agora integra o ecossistema da xAI (adquirida pela SpaceX em fevereiro). O movimento consolida a aposta: quem controla a camada de coding controla o próximo ciclo de produção de software — e, por extensão, de todos os sistemas que o mundo vai construir nos próximos anos.</p>
+    <a href="https://www.cnbc.com/2026/06/16/spacex-spcx-cursor-acquisition-ipo.html" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Regulação</span>
+      <span class="story-source"><a href="https://www.whitehouse.gov/presidential-actions/2026/06/promoting-advanced-artificial-intelligence-innovation-and-security/" target="_blank">The White House · jun 2026</a></span>
+    </div>
+    <h2>Trump assina decreto histórico: IA de fronteira terá 30 dias de revisão governamental antes do lançamento</h2>
+    <p>O governo dos EUA publicou o decreto executivo "Promoting Advanced Artificial Intelligence Innovation and Security", estabelecendo que desenvolvedores de modelos de fronteira deverão fornecer acesso antecipado ao governo por até 30 dias antes da liberação ao mercado — voluntariamente. O decreto também cria um <em>AI Cybersecurity Clearinghouse</em> entre governo e setor privado para detecção e remediação de vulnerabilidades. A medida rejeita explicitamente licenças obrigatórias ou pré-aprovações — mas sinaliza que o laissez-faire total em IA de ponta ficou para trás.</p>
+    <a href="https://www.whitehouse.gov/presidential-actions/2026/06/promoting-advanced-artificial-intelligence-innovation-and-security/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Ferramentas Dev</span>
+      <span class="story-source"><a href="https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/" target="_blank">Google Developers Blog · 18 jun 2026</a></span>
+    </div>
+    <h2>Google encerra o Gemini CLI hoje e lança o <em>Antigravity CLI</em> — a era dos agentes múltiplos chegou</h2>
+    <p>A partir desta quarta-feira, o Gemini CLI deixou de servir usuários Pro, Ultra e Code Assist. O sucessor, Antigravity CLI, é construído em Go — mais rápido e responsivo — e orquestra múltiplos agentes em background para tarefas complexas, compartilhando o mesmo harness do Antigravity 2.0. Recursos críticos como Agent Skills, Hooks, Subagents e Extensions (agora como plugins) foram preservados. A migração é obrigatória para usuários individuais; licenças empresariais Standard e Enterprise continuam com suporte ao Gemini CLI. O movimento consolida a aposta do Google em plataformas multi-agente como padrão de desenvolvimento.</p>
+    <a href="https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Europa &amp; IA</span>
+      <span class="story-source"><a href="https://techcrunch.com/2026/06/02/why-vivatech-2026-is-the-place-to-see-europes-ai-strategy-take-shape/" target="_blank">TechCrunch · VivaTech 2026</a></span>
+    </div>
+    <h2>VivaTech 2026: Paris define o <em>terceiro modelo</em> de IA — nem Vale do Silício, nem Beijing</h2>
+    <p>A décima edição da VivaTech (17–20 jun, Paris) reuniu Macron, o PM indiano Modi e líderes da Comissão Europeia sob o tema "Impact, Not Illusion". A mensagem central: enquanto os EUA apostam em escala e a China em volume, a Europa propõe IA regulada, aplicada à indústria complexa — manufatura, saúde, energia, logística. O AI Act é a aposta estrutural. A Índia é o país parceiro de IA, sinalizando que o eixo de cooperação tecnológica está se diversificando rapidamente além do duopólio americano-chinês. Para empresas brasileiras que buscam parceiros estratégicos, o modelo europeu merece atenção crescente.</p>
+    <a href="https://www.euronews.com/next/2026/06/17/from-jeff-bezos-to-europes-ai-push-everything-to-know-about-vivatech-2026" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- ═══ BRASIL ═══ -->
+  <hr class="section-divider">
+  <div class="brasil-strip">Brasil: 9 milhões de empresas com IA ativa — crescimento de 29% em um ano</div>
+
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">🇧🇷 Brasil</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stat-row">
+    <div class="stat-item">
+      <span class="stat-num">9M</span>
+      <span class="stat-label">empresas brasileiras<br>com IA sistemática</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">+29%</span>
+      <span class="stat-label">crescimento vs.<br>ano anterior (AWS)</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">50%</span>
+      <span class="stat-label">empresas usando IA<br>no desenvolvimento<br>de software</span>
+    </div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Adoção Nacional</span>
+      <span class="story-source"><a href="https://www.softdesign.com.br/blog/digital-business/" target="_blank">Softdesign · Digital Business Innovation 2026</a></span>
+    </div>
+    <h2>9 milhões de empresas brasileiras operam com IA — e o patamar dobrou em doze meses</h2>
+    <p>Levantamento da AWS indica que 9 milhões de empresas no Brasil já utilizam IA de forma sistemática — um salto de 29% em apenas um ano. No desenvolvimento de software, o número de organizações que adotam plataformas corporativas de IA subiu de 25% para 50% no mesmo período. As prioridades estratégicas revelam maturidade crescente: melhora no engajamento de clientes (16%), otimização operacional por digitalização (16%) e reinvenção de modelos de negócio (14%) lideram as agendas. O Brasil ultrapassa 1.500 municípios com cobertura ativa de 5G e 45 milhões de conexões por fibra óptica — infraestrutura que sustenta a próxima onda de escala.</p>
+    <a href="https://fenati.org.br/transformacao-digital-ia-decisoes-empresariais/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story" style="border-bottom:none;">
+    <div class="story-meta">
+      <span class="story-tag">Transformação Digital</span>
+      <span class="story-source"><a href="https://uhy-us.com/insights/news/2026/june/its-not-the-technology-digital-transformation-fails-at-the-operating-model" target="_blank">UHY · jun 2026</a></span>
+    </div>
+    <h2>Transformação digital falha no <em>modelo operacional</em> — não na tecnologia</h2>
+    <p>Um estudo da UHY publicado em junho reforça o diagnóstico que cresce entre consultores e CIOs: a maioria das iniciativas de transformação digital tropeça não por falta de ferramentas, mas por ausência de alinhamento no modelo operacional. A IA pode automatizar até 80% das tarefas administrativas em grandes corporações — mas o fator limitante é a capacidade da organização de redesenhar processos, reter talento e sustentar a mudança cultural. Para líderes brasileiros, o recado é direto: tecnologia sem modelo operacional é despesa, não transformação.</p>
+    <a href="https://uhy-us.com/insights/news/2026/june/its-not-the-technology-digital-transformation-fails-at-the-operating-model" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- PULLQUOTE -->
+  <div class="pullquote">
+    <blockquote>
+      "A IA que não gera impacto mensurável no modelo de negócio não é transformação — é ilusão cara. Impact, not illusion."
+    </blockquote>
+    <cite>— Tema oficial da VivaTech 2026 · Paris, junho de 2026</cite>
+  </div>
+
+  <!-- PERSPECTIVA -->
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">💡 Perspectiva</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story" style="border-bottom:none; padding-bottom:28px;">
+    <h2>O que esses sinais significam para <em>líderes de transformação</em></h2>
+    <p style="margin-bottom:12px;">Três leituras práticas desta edição:</p>
+    <p style="margin-bottom:10px;"><strong>1. A camada de coding virou território estratégico.</strong> A aquisição do Cursor pela SpaceX por US$ 60 bilhões não é apenas uma jogada de mercado — é uma declaração de que quem controla as ferramentas de desenvolvimento controla a velocidade de criação de produtos de IA. Empresas que dependem de stacks de terceiros para construir seus sistemas internos precisam rever essa dependência agora.</p>
+    <p style="margin-bottom:10px;"><strong>2. Regulação chegou, mas não freou.</strong> O decreto da Casa Branca cria fricção voluntária — não barreiras obrigatórias. O resultado prático para empresas é que modelos de fronteira chegarão ao mercado com mais transparência e menos surpresas, mas sem atrasos significativos. Governança proativa deixa de ser diferencial e vira exigência de parceiros e investidores.</p>
+    <p><strong>3. Brasil: infraestrutura pronta, modelo operacional em atraso.</strong> Com 9 milhões de empresas operando IA e 5G em 1.500 municípios, a base técnica existe. O gargalo está na capacidade de redesenhar processos e formar lideranças que saibam operar nesse ambiente. Quem investir em mudança de modelo operacional nos próximos 12 meses colherá vantagem desproporcional sobre quem apenas comprou licenças de software.</p>
+  </article>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">CLIKDATA<span>·</span>DROPS</div>
+
+      </div>
+      <div class="footer-links">
+        <a href="https://clikdata.com.br" target="_blank">clikdata.com.br</a>
+        <a href="#">Arquivos anteriores</a>
+        <a href="#">Descadastrar</a>
+        <a href="#">Contato</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      Publicado em 18 de junho de 2026 · Edição #044 · clikdata.com.br<br>
+      Este digest é gerado automaticamente com curadoria editorial humana.<br>
+      Fontes: CNBC, The White House, Google Developers Blog, TechCrunch, Euronews, AWS, Softdesign, UHY, Fenati.
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
