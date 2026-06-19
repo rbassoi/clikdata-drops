@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CLIKDATA DROPS — Edição #045 - Junho 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0f0f0f;
+    --paper: #f5f0e8;
+    --accent: #c8401a;
+    --accent2: #1a3c5e;
+    --muted: #7a7060;
+    --rule: #d4cfc4;
+    --tag-bg: #1a3c5e;
+    --tag-color: #f5f0e8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #e8e3d8;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrapper {
+    max-width: 680px;
+    margin: 40px auto;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    box-shadow: 4px 4px 0 #c4bfb4, 8px 8px 0 #b4afa4;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    border-bottom: 3px double var(--ink);
+    padding: 0;
+    position: relative;
+  }
+
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 32px 10px;
+    border-bottom: 1px solid var(--rule);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  .masthead {
+    padding: 28px 32px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--ink);
+    position: relative;
+  }
+
+  .masthead::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--accent);
+    margin: 0 auto 16px;
+  }
+
+  .masthead h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1;
+    color: var(--ink);
+  }
+
+  .masthead h1 span {
+    color: var(--accent);
+  }
+
+  .tagline {
+    margin-top: 8px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .edition-bar {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 10px 32px;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  /* ── INTRO ── */
+  .intro {
+    padding: 28px 32px 24px;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .intro-dropcap {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 0.85;
+    color: var(--accent);
+    float: left;
+    margin-right: 4px;
+    margin-top: 6px;
+  }
+
+  .intro p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: #2a2520;
+  }
+
+  /* ── SECTION HEADER ── */
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 32px 0;
+    margin-bottom: 4px;
+  }
+
+  .section-flag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    background: var(--tag-bg);
+    color: var(--tag-color);
+    padding: 4px 10px;
+    white-space: nowrap;
+  }
+
+  .section-flag.red { background: var(--accent); }
+
+  .section-rule {
+    flex: 1;
+    height: 1px;
+    background: var(--ink);
+  }
+
+  /* ── STORY CARD ── */
+  .story {
+    padding: 20px 32px;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+  }
+
+  .story:last-of-type { border-bottom: none; }
+
+  .story-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .story-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 2px 7px;
+  }
+
+  .story-source {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+  }
+
+  .story h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+
+  .story h2 em {
+    font-style: italic;
+    color: var(--accent2);
+  }
+
+  .story p {
+    font-size: 14px;
+    line-height: 1.72;
+    color: #2a2520;
+  }
+
+  .story .number-callout {
+    float: right;
+    margin: 0 0 8px 18px;
+    text-align: center;
+    border: 2px solid var(--ink);
+    padding: 12px 16px;
+    min-width: 88px;
+  }
+
+  .story .number-callout .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--accent);
+    display: block;
+    line-height: 1;
+  }
+
+  .story .number-callout .num-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 4px;
+  }
+
+  /* ── DIVIDER ── */
+  .section-divider {
+    border: none;
+    border-top: 3px double var(--ink);
+    margin: 8px 32px 0;
+  }
+
+  /* ── DESTAQUE BRASIL ── */
+  .brasil-strip {
+    background: var(--accent2);
+    color: var(--paper);
+    padding: 6px 32px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .brasil-strip::before {
+    content: '▶';
+    font-size: 8px;
+  }
+
+  /* ── STAT ROW ── */
+  .stat-row {
+    display: flex;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .stat-item {
+    flex: 1;
+    padding: 20px 24px;
+    border-right: 1px solid var(--rule);
+    text-align: center;
+  }
+
+  .stat-item:last-child { border-right: none; }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--accent2);
+    display: block;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 6px;
+    line-height: 1.4;
+  }
+
+  /* ── PULLQUOTE ── */
+  .pullquote {
+    margin: 0;
+    padding: 24px 40px;
+    border-top: 2px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+    background: #ede8de;
+  }
+
+  .pullquote blockquote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 19px;
+    line-height: 1.5;
+    color: var(--ink);
+    text-align: center;
+  }
+
+  .pullquote cite {
+    display: block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: center;
+    font-style: normal;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 28px 32px;
+    border-top: 3px double var(--accent);
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333;
+  }
+
+  .footer-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 900;
+  }
+
+  .footer-brand span { color: var(--accent); }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: right;
+  }
+
+  .footer-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: #888;
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .footer-bottom {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: #555;
+    letter-spacing: 0.06em;
+    line-height: 1.6;
+  }
+
+  .routine-badge {
+    display: inline-block;
+    margin-top: 12px;
+    background: var(--accent);
+    color: white;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+  }
+
+
+  .story-source a {
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--muted);
+    transition: color 0.15s;
+  }
+  .story-source a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+  .read-more {
+    display: inline-block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent2);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent2);
+    padding-bottom: 1px;
+  }
+  .read-more:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+  @media (max-width: 600px) {
+    .wrapper { margin: 0; box-shadow: none; }
+    .masthead h1 { font-size: 38px; }
+    .stat-row { flex-direction: column; }
+    .stat-item { border-right: none; border-bottom: 1px solid var(--rule); }
+    .header-top { flex-direction: column; gap: 4px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-top">
+      <span>Edição #045</span>
+      <span>19 de junho de 2026</span>
+      <span>Diária · IA &amp; Transformação</span>
+    </div>
+    <div class="masthead">
+      <h1>CLIKDATA<span style="color:var(--accent)">·</span>DROPS</h1>
+      <p class="tagline">IA · Tecnologia · Transformação Digital · Edição Diária</p>
+    </div>
+    <div class="edition-bar">
+      <span>🌍 Mundo</span>
+      <span>🇧🇷 Brasil</span>
+      <span>📊 Números</span>
+      <span>💡 Perspectiva</span>
+    </div>
+  </header>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <p>
+      <span class="intro-dropcap">U</span>
+      m bilhão de usuários mensais para o ChatGPT. Oito mil demissões na Meta para financiar um capex de US$ 145 bilhões em IA. A primeira grande lei americana de IA revisada antes mesmo de entrar em vigor. No Brasil, um supercomputador de 5.000 GPUs avança no Plano de IA enquanto a demanda por talentos cresce 306% em um ano. Os números desta semana não são tendências — são pontos de inflexão.
+    </p>
+  </section>
+
+  <!-- ═══ MUNDO ═══ -->
+  <div class="section-header">
+    <span class="section-flag red">🌍 Mundo</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Adoção Global</span>
+      <span class="story-source"><a href="https://enterprisedna.co/resources/news/chatgpt-1-billion-monthly-users-fastest-app-2026/" target="_blank">Enterprise DNA · PYMNTS · jun 2026</a></span>
+    </div>
+    <div class="number-callout">
+      <span class="num">1B</span>
+      <span class="num-label">usuários mensais<br>ChatGPT</span>
+    </div>
+    <h2>ChatGPT atinge <em>1 bilhão de usuários mensais</em> — e a OpenAI já aponta para o próximo salto</h2>
+    <p>O ChatGPT se tornou o aplicativo mais rápido da história a alcançar 1 bilhão de usuários mensais ativos, superando Google Maps, TikTok, Instagram e YouTube. A OpenAI reportou receita anualizada de US$ 25 bilhões em maio de 2026 — mais de quatro vezes o patamar de 2024. Mas o momento simbólico chega exatamente quando a empresa pivota para além do chat: o ChatGPT será redesenhado como um "superapp", integrando agentes autônomos, Codex, workflows corporativos e aplicações de terceiros. Vinte e oito por cento dos trabalhadores americanos empregados já usam a ferramenta no trabalho — ante 8% em 2023. O marco não é o destino; é o trampolim.</p>
+    <a href="https://www.pymnts.com/news/artificial-intelligence/2026/chatgpt-reaches-1-billion-users-as-the-ai-economy-takes-shape/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Big Tech &amp; Trabalho</span>
+      <span class="story-source"><a href="https://qz.com/meta-layoffs-8000-jobs-ai-restructuring-052026" target="_blank">Quartz · Yahoo Finance · jun 2026</a></span>
+    </div>
+    <h2>Meta demite 8.000 e redireciona 7.000 para IA — Zuckerberg aposta US$ 145 bilhões em 2026</h2>
+    <p>A Meta iniciou a notificação de aproximadamente 8.000 funcionários — cerca de 10% de seu quadro total —, numa reestruturação que o CEO Mark Zuckerberg descreveu como necessária para financiar a corrida à IA. Ao mesmo tempo, mais de 7.000 trabalhadores serão realocados para equipes recém-criadas: Applied AI Engineering, Agent Transformation Accelerator XFN e Central Analytics. O capex projetado para 2026 atinge entre US$ 125 bilhões e US$ 145 bilhões — mais que o dobro do ano anterior. Gerentes intermediários e desenvolvedores de software concentram as maiores reduções. O padrão se repete em todo o setor: IA não está eliminando empregos de forma uniforme — está redistribuindo poder interno e orçamento em direção a quem a constrói.</p>
+    <a href="https://qz.com/meta-layoffs-8000-jobs-ai-restructuring-052026" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Regulação</span>
+      <span class="story-source"><a href="https://www.hunton.com/privacy-and-cybersecurity-law-blog/colorado-ai-act-amended-and-effective-date-delayed" target="_blank">Hunton Andrews Kurth · Norton Rose Fulbright</a></span>
+    </div>
+    <h2>EUA revisam primeira lei estadual de IA antes de entrar em vigor — Colorado recalibra abordagem</h2>
+    <p>O Colorado AI Act, considerado o marco regulatório de IA mais abrangente dos EUA em nível estadual, foi substancialmente revisado antes mesmo de sua implementação prevista para 30 de junho de 2026. O governador assinou a nova versão em 14 de maio, adiando a vigência para 1º de janeiro de 2027 e substituindo o conceito de "sistemas de IA de alto risco" pela regulação de <em>Automated Decision-Making Technology (ADMT)</em> em "decisões consequenciais" — emprego, saúde, crédito, moradia. A mudança sinaliza que até os legisladores mais progressistas em IA reconhecem a dificuldade de regulamentar tecnologia em movimento acelerado. Para empresas globais, o recado é duplo: a regulação chegou, mas ainda está sendo calibrada — e quem construir compliance agora terá vantagem quando as regras definitivas entrarem em vigor.</p>
+    <a href="https://www.nortonrosefulbright.com/en-us/knowledge/publications/18733d31/colorado-enacts-revised-ai-law" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- ═══ BRASIL ═══ -->
+  <hr class="section-divider">
+  <div class="brasil-strip">Brasil: busca por profissionais de IA cresce 306% em um ano — e o supercomputador avança</div>
+
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">🇧🇷 Brasil</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stat-row">
+    <div class="stat-item">
+      <span class="stat-num">306%</span>
+      <span class="stat-label">crescimento na busca<br>por talentos em IA<br>no Brasil (1 ano)</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">5K</span>
+      <span class="stat-label">GPUs no novo<br>supercomputador<br>nacional de IA</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">R$23B</span>
+      <span class="stat-label">investimento previsto<br>no Plano Brasileiro<br>de IA até 2028</span>
+    </div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Infraestrutura Nacional</span>
+      <span class="story-source"><a href="https://agenciagov.ebc.com.br/noticias/202407/supercomputador-previsto-no-plano-de-inteligencia-artificial-sera-um-dos-cinco-maiores-do-mundo" target="_blank">Agência Gov · MCTI · Blog NVIDIA Brasil</a></span>
+    </div>
+    <h2>Brasil avança para ter <em>supercomputador de IA</em> entre os cinco maiores do mundo</h2>
+    <p>O Ministério da Ciência, Tecnologia e Inovação (MCTI) avança nas tratativas para instalação de um supercomputador dedicado à inteligência artificial com estimativa de R$ 1,8 bilhão e aproximadamente 5.000 GPUs — projetado para figurar entre os cinco mais poderosos do mundo. O equipamento é peça central do Plano Brasileiro de Inteligência Artificial (PBIA), que prevê R$ 23 bilhões em investimentos até 2028 com foco em soberania tecnológica. Em paralelo, o Santos Dumont — supercomputador do LNCC em Petrópolis — recebeu expansão de capacidade quatro vezes maior, com recursos dedicados a IA, elevando sua potência para 18,85 petaflops. Para setores como agronegócio, saúde e clima, a infraestrutura computacional nacional é a base que viabilizará modelos de IA treinados com dados e contextos genuinamente brasileiros.</p>
+    <a href="https://blog.nvidia.com.br/blog/santos-dumont-supercomputador-do-lncc-recebe-ampliacao-quatro-vezes-maior-como-primeiro-passo-do-plano-brasileiro-de-inteligencia-artificial/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story" style="border-bottom:none;">
+    <div class="story-meta">
+      <span class="story-tag">Mercado de Trabalho</span>
+      <span class="story-source"><a href="https://www.alura.com.br/artigos/mercado-de-ia" target="_blank">Alura · Valor Econômico · 2026</a></span>
+    </div>
+    <h2>Demanda por profissionais de IA cresce <em>306% no Brasil</em> — e a oferta ainda não acompanha</h2>
+    <p>A busca por profissionais com conhecimento em inteligência artificial cresceu 306% no Brasil no último ano, segundo levantamento de plataformas de recrutamento e educação tecnológica. O gap entre oferta e demanda é especialmente agudo em funções como engenharia de dados, MLOps, arquitetura de agentes e governança de IA. Empresas que antes buscavam apenas "analistas de dados" agora competem por perfis híbridos — capazes de combinar domínio técnico em modelos de linguagem com compreensão de negócios e gestão de risco. Para líderes de RH e T&D, o momento exige urgência: a janela para formar talentos internamente antes que o mercado externo os absorva está se fechando rapidamente.</p>
+    <a href="https://www.alura.com.br/artigos/mercado-de-ia" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- PULLQUOTE -->
+  <div class="pullquote">
+    <blockquote>
+      "A questão não é mais se a IA vai transformar sua empresa — é se sua empresa vai ser capaz de se transformar rápido o suficiente para liderar ou apenas sobreviver."
+    </blockquote>
+    <cite>— Síntese editorial · Clikdata Drops #045 · Junho de 2026</cite>
+  </div>
+
+  <!-- PERSPECTIVA -->
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">💡 Perspectiva</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story" style="border-bottom:none; padding-bottom:28px;">
+    <h2>O que esses sinais significam para <em>líderes de transformação</em></h2>
+    <p style="margin-bottom:12px;">Três leituras práticas desta edição:</p>
+    <p style="margin-bottom:10px;"><strong>1. O ChatGPT em 1 bilhão é o fim do hype — e o início da cobrança.</strong> Quando um bilhão de pessoas usa uma ferramenta todo mês, ela deixa de ser diferencial competitivo e vira expectativa de base. Seus clientes, parceiros e colaboradores já a usam. A pergunta agora não é "devemos adotar IA?" — é "por que ainda não temos processos redesenhados com ela?"</p>
+    <p style="margin-bottom:10px;"><strong>2. A reestruturação da Meta é um manual, não um caso isolado.</strong> US$ 145 bilhões em capex e 10% do workforce realocado para equipes de IA não é notícia de uma empresa — é o blueprint que o setor inteiro vai copiar nos próximos 18 meses. Organizações que não iniciaram o mapeamento de funções em transição hoje chegarão atrasadas quando a pressão por eficiência via IA chegar às suas portas.</p>
+    <p><strong>3. Brasil: soberania de dados começa pela infraestrutura computacional.</strong> Um supercomputador de 5.000 GPUs com investimento de R$ 1,8 bilhão é mais do que um projeto científico — é a fundação para modelos de linguagem treinados com dados do agronegócio brasileiro, da saúde pública nacional, do português com contexto local. Empresas que apostarem em parcerias com o ecossistema acadêmico público agora terão acesso privilegiado a essa infraestrutura — e à inteligência que ela vai gerar.</p>
+  </article>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">CLIKDATA<span>·</span>DROPS</div>
+
+      </div>
+      <div class="footer-links">
+        <a href="https://clikdata.com.br" target="_blank">clikdata.com.br</a>
+        <a href="#">Arquivos anteriores</a>
+        <a href="#">Descadastrar</a>
+        <a href="#">Contato</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      Publicado em 19 de junho de 2026 · Edição #045 · clikdata.com.br<br>
+      Este digest é gerado automaticamente com curadoria editorial humana.<br>
+      Fontes: Enterprise DNA, PYMNTS, Quartz, Yahoo Finance, Hunton Andrews Kurth, Norton Rose Fulbright, Agência Gov, Blog NVIDIA Brasil, Alura, Valor Econômico.
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
