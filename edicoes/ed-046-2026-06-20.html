@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CLIKDATA DROPS — Edição #046 - Junho 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0f0f0f;
+    --paper: #f5f0e8;
+    --accent: #c8401a;
+    --accent2: #1a3c5e;
+    --muted: #7a7060;
+    --rule: #d4cfc4;
+    --tag-bg: #1a3c5e;
+    --tag-color: #f5f0e8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #e8e3d8;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrapper {
+    max-width: 680px;
+    margin: 40px auto;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    box-shadow: 4px 4px 0 #c4bfb4, 8px 8px 0 #b4afa4;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    border-bottom: 3px double var(--ink);
+    padding: 0;
+    position: relative;
+  }
+
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 32px 10px;
+    border-bottom: 1px solid var(--rule);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  .masthead {
+    padding: 28px 32px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--ink);
+    position: relative;
+  }
+
+  .masthead::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--accent);
+    margin: 0 auto 16px;
+  }
+
+  .masthead h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1;
+    color: var(--ink);
+  }
+
+  .masthead h1 span {
+    color: var(--accent);
+  }
+
+  .tagline {
+    margin-top: 8px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .edition-bar {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 10px 32px;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  /* ── INTRO ── */
+  .intro {
+    padding: 28px 32px 24px;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .intro-dropcap {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 0.85;
+    color: var(--accent);
+    float: left;
+    margin-right: 4px;
+    margin-top: 6px;
+  }
+
+  .intro p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: #2a2520;
+  }
+
+  /* ── SECTION HEADER ── */
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 32px 0;
+    margin-bottom: 4px;
+  }
+
+  .section-flag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    background: var(--tag-bg);
+    color: var(--tag-color);
+    padding: 4px 10px;
+    white-space: nowrap;
+  }
+
+  .section-flag.red { background: var(--accent); }
+
+  .section-rule {
+    flex: 1;
+    height: 1px;
+    background: var(--ink);
+  }
+
+  /* ── STORY CARD ── */
+  .story {
+    padding: 20px 32px;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+  }
+
+  .story:last-of-type { border-bottom: none; }
+
+  .story-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .story-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 2px 7px;
+  }
+
+  .story-source {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+  }
+
+  .story h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+
+  .story h2 em {
+    font-style: italic;
+    color: var(--accent2);
+  }
+
+  .story p {
+    font-size: 14px;
+    line-height: 1.72;
+    color: #2a2520;
+  }
+
+  .story .number-callout {
+    float: right;
+    margin: 0 0 8px 18px;
+    text-align: center;
+    border: 2px solid var(--ink);
+    padding: 12px 16px;
+    min-width: 88px;
+  }
+
+  .story .number-callout .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--accent);
+    display: block;
+    line-height: 1;
+  }
+
+  .story .number-callout .num-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 4px;
+  }
+
+  /* ── DIVIDER ── */
+  .section-divider {
+    border: none;
+    border-top: 3px double var(--ink);
+    margin: 8px 32px 0;
+  }
+
+  /* ── DESTAQUE BRASIL ── */
+  .brasil-strip {
+    background: var(--accent2);
+    color: var(--paper);
+    padding: 6px 32px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .brasil-strip::before {
+    content: '▶';
+    font-size: 8px;
+  }
+
+  /* ── STAT ROW ── */
+  .stat-row {
+    display: flex;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .stat-item {
+    flex: 1;
+    padding: 20px 24px;
+    border-right: 1px solid var(--rule);
+    text-align: center;
+  }
+
+  .stat-item:last-child { border-right: none; }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--accent2);
+    display: block;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 6px;
+    line-height: 1.4;
+  }
+
+  /* ── PULLQUOTE ── */
+  .pullquote {
+    margin: 0;
+    padding: 24px 40px;
+    border-top: 2px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+    background: #ede8de;
+  }
+
+  .pullquote blockquote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 19px;
+    line-height: 1.5;
+    color: var(--ink);
+    text-align: center;
+  }
+
+  .pullquote cite {
+    display: block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: center;
+    font-style: normal;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 28px 32px;
+    border-top: 3px double var(--accent);
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333;
+  }
+
+  .footer-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 900;
+  }
+
+  .footer-brand span { color: var(--accent); }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: right;
+  }
+
+  .footer-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: #888;
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .footer-bottom {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: #555;
+    letter-spacing: 0.06em;
+    line-height: 1.6;
+  }
+
+  .routine-badge {
+    display: inline-block;
+    margin-top: 12px;
+    background: var(--accent);
+    color: white;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+  }
+
+
+  .story-source a {
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--muted);
+    transition: color 0.15s;
+  }
+  .story-source a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+  .read-more {
+    display: inline-block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent2);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent2);
+    padding-bottom: 1px;
+  }
+  .read-more:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+  @media (max-width: 600px) {
+    .wrapper { margin: 0; box-shadow: none; }
+    .masthead h1 { font-size: 38px; }
+    .stat-row { flex-direction: column; }
+    .stat-item { border-right: none; border-bottom: 1px solid var(--rule); }
+    .header-top { flex-direction: column; gap: 4px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-top">
+      <span>Edição #046</span>
+      <span>20 de junho de 2026</span>
+      <span>Diária · IA &amp; Transformação</span>
+    </div>
+    <div class="masthead">
+      <h1>CLIKDATA<span style="color:var(--accent)">·</span>DROPS</h1>
+      <p class="tagline">IA · Tecnologia · Transformação Digital · Edição Diária</p>
+    </div>
+    <div class="edition-bar">
+      <span>🌍 Mundo</span>
+      <span>🇧🇷 Brasil</span>
+      <span>📊 Números</span>
+      <span>💡 Perspectiva</span>
+    </div>
+  </header>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <p>
+      <span class="intro-dropcap">E</span>
+      nquanto o Data+AI Summit 2026 colocou a governança de IA no centro da agenda empresarial em São Francisco, o Parlamento Europeu votou adiar as regras de alto risco do EU AI Act — mas a urgência de conformidade não desapareceu. A OpenAI elevou o GPT-5.5 a modelo padrão global. No Brasil, a IDC confirma: investimentos corporativos em IA chegarão a US$ 3,4 bilhões em 2026, puxados por agentes autônomos. Esta edição mapeia os movimentos que separam as organizações preparadas das que ainda aguardam as regras ficarem claras.
+    </p>
+  </section>
+
+  <!-- ═══ MUNDO ═══ -->
+  <div class="section-header">
+    <span class="section-flag red">🌍 Mundo</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Regulação</span>
+      <span class="story-source"><a href="https://www.hklaw.com/en/insights/publications/2026/04/us-companies-face-eu-ai-acts-possible-august-2026-compliance-deadline" target="_blank">Holland &amp; Knight · Legal Nodes · jun 2026</a></span>
+    </div>
+    <div class="number-callout">
+      <span class="num">€35M</span>
+      <span class="num-label">multa máxima<br>EU AI Act</span>
+    </div>
+    <h2>EU AI Act: Parlamento Europeu vota adiamento — mas a <em>corrida de compliance</em> não para</h2>
+    <p>O Parlamento Europeu aprovou uma proposta para empurrar as obrigações de conformidade para sistemas de IA de alto risco do EU AI Act de agosto de 2026 para dezembro de 2027 — e obrigações setoriais específicas para agosto de 2028. Mas há um nó: o adiamento só terá efeito legal se o Conselho da União Europeia ratificar o acordo <em>antes</em> do prazo original de 2 de agosto de 2026. Até lá, as empresas devem agir como se as regras vigessem. Os requisitos em jogo abrangem gestão de riscos, governança de dados, logging, transparência, supervisão humana, resiliência cibernética e monitoramento pós-mercado. As multas chegam a €35 milhões ou 7% do faturamento global anual — qualquer que seja o maior. Para líderes jurídicos e de compliance, a mensagem é inequívoca: o adiamento é incerto; o custo de não estar preparado, não é.</p>
+    <a href="https://www.legalnodes.com/article/eu-ai-act-2026-updates-compliance-requirements-and-business-risks" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Plataformas &amp; Dados</span>
+      <span class="story-source"><a href="https://www.databricks.com/blog/building-open-ecosystem-ai-governance-unity-ai-gateway" target="_blank">Databricks Blog · Digiage.com.br · jun 2026</a></span>
+    </div>
+    <h2>Data+AI Summit 2026: Databricks lança <em>Unity AI Gateway</em> e abre protocolo para compartilhar IA</h2>
+    <p>O Data+AI Summit 2026, o maior evento mundial de IA corporativa promovido pela Databricks, encerrou esta semana em São Francisco com anúncios que redefinem o paradigma de governança de IA nas empresas. O Unity AI Gateway estreia como uma torre de controle centralizada para todo o tráfego de IA — monitorando custo, permissões e dados sensíveis em tempo real, com integrações já operacionais com CrowdStrike, Okta, Palo Alto Networks e Zscaler. Além disso, a Databricks doou o protocolo OpenSharing para a Linux Foundation: a primeira especificação aberta e neutra para compartilhamento seguro de modelos de IA, agentes e skills entre organizações. O recado arquitetural é claro — lacehouse, semântica, runtime de agentes e governança convergem em uma única plataforma. Empresas que ainda gerenciam IA em silos estão acumulando débito de governança que vai custar caro quando a regulação chegar.</p>
+    <a href="https://www.digiage.com.br/dataai-summit-2026-quando-a-inteligencia-artificial-deixa-de-responder-e-comeca-a-agir/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Modelos &amp; Agentes</span>
+      <span class="story-source"><a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-19-2026" target="_blank">BuildFastWithAI · NeuralBuddies · jun 2026</a></span>
+    </div>
+    <h2>OpenAI aposenta GPT-5.2 e eleva GPT-5.5 a padrão global — Google e Anthropic <em>aceleram agentes</em></h2>
+    <p>A OpenAI aposentou o GPT-5.2 em 12 de junho e migrou automaticamente todas as conversas para o GPT-5.5, agora o modelo padrão para usuários em todo o mundo. A atualização chega com melhorias em voz ao vivo, tradução e transcrição — sinal de que a OpenAI quer ampliar uso além do texto. Enquanto isso, Google e Anthropic também aceleraram suas apostas em agentes: o Google move o Gemini para fluxos de tarefas gerenciadas, enquanto a Anthropic trabalha em agentes que aprendem e melhoram com o uso ao longo do tempo. A convergência das três maiores empresas de IA em direção à mesma arquitetura — agentes autônomos operando em workflows empresariais — confirma que a era dos assistentes de chat está cedendo espaço à era dos agentes que executam. Para líderes de TI, a pergunta não é mais qual modelo adotar, mas quais processos estão prontos para ser delegados a eles.</p>
+    <a href="https://www.neuralbuddies.com/p/ai-news-recap-june-19-2026" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- ═══ BRASIL ═══ -->
+  <hr class="section-divider">
+  <div class="brasil-strip">Brasil: IDC projeta US$ 3,4 bilhões em IA corporativa em 2026 — agentes como principal motor</div>
+
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">🇧🇷 Brasil</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stat-row">
+    <div class="stat-item">
+      <span class="stat-num">$3,4B</span>
+      <span class="stat-label">investimento em IA<br>corporativa no Brasil<br>em 2026 (IDC)</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">+30%</span>
+      <span class="stat-label">crescimento vs.<br>2025 em TI/IA<br>no Brasil</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">67%</span>
+      <span class="stat-label">empresas que citam<br>eficiência operacional<br>como prioridade #1</span>
+    </div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Mercado de TI</span>
+      <span class="story-source"><a href="https://www.mobiletime.com.br/noticias/10/02/2026/agente-ia-idc-2026/" target="_blank">MobileTime · IDC · fev–jun 2026</a></span>
+    </div>
+    <h2>IDC: Agentes de IA atrairão <em>US$ 3,4 bilhões</em> em investimentos de TI ao Brasil em 2026</h2>
+    <p>A IDC projeta que os gastos corporativos brasileiros em IA — somando software, serviços e infraestrutura — chegarão a US$ 3,4 bilhões em 2026, crescimento superior a 30% em relação aos US$ 2,6 bilhões de 2025. O principal catalisador são os agentes autônomos, já incorporados às iniciativas de transformação digital do mercado B2B. Em paralelo, o mercado de Infrastructure as a Service (IaaS) no Brasil deve atingir US$ 4,4 bilhões — reflexo direto da demanda por capacidade computacional para treinar e hospedar modelos. Para empresas que ainda tratam IA como linha de P&D no orçamento, os números da IDC sinalizam um momento de revisão: o crescimento de 30% não é tendência futura — é a taxa de hoje, e as empresas que não aceleraram o investimento já estão perdendo terreno para concorrentes que decidiram antes.</p>
+    <a href="https://www.mobiletime.com.br/noticias/10/02/2026/agente-ia-idc-2026/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story" style="border-bottom:none;">
+    <div class="story-meta">
+      <span class="story-tag">Transformação Digital</span>
+      <span class="story-source"><a href="https://theshift.info/hot/em-2026-empresas-encaram-o-paradoxo-da-transformacao-digital/" target="_blank">The Shift · SoftDesign · TNX Brasil · 2026</a></span>
+    </div>
+    <h2>O paradoxo digital brasileiro: orçamento de TI cresce, mas <em>estrutura organizacional fica para trás</em></h2>
+    <p>Um estudo recente sobre transformação digital no Brasil revela uma contradição que preocupa líderes de tecnologia: 60% das companhias projetam crescimento no orçamento de TI em 2026 — com 23% esperando alta acima de 10% —, mas a estrutura organizacional ainda está amplamente desalinhada das ambições digitais. A busca por eficiência operacional, citada por 67% dos entrevistados, encabeça as prioridades pelo segundo ano consecutivo. A IA sai de iniciativas experimentais e passa a apoiar produtividade, automação, desenvolvimento de software e modernização operacional de forma contínua. O diagnóstico do paradoxo é claro: o dinheiro existe, a intenção existe, mas faltam governança interna, papéis definidos e processos redesenhados para que o investimento em IA gere resultado real — e não apenas dashboards de iniciativas.</p>
+    <a href="https://www.softdesign.com.br/blog/digital-business/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- PULLQUOTE -->
+  <div class="pullquote">
+    <blockquote>
+      "Governança de IA não é um projeto de TI — é uma decisão estratégica que determina quem controla os ativos mais valiosos da empresa nas próximas décadas."
+    </blockquote>
+    <cite>— Síntese editorial · Clikdata Drops #046 · Junho de 2026</cite>
+  </div>
+
+  <!-- PERSPECTIVA -->
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">💡 Perspectiva</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story" style="border-bottom:none; padding-bottom:28px;">
+    <h2>O que esses sinais significam para <em>líderes de transformação</em></h2>
+    <p style="margin-bottom:12px;">Três leituras práticas desta edição:</p>
+    <p style="margin-bottom:10px;"><strong>1. Governança de IA é a nova vantagem competitiva — não a IA em si.</strong> O lançamento do Unity AI Gateway pela Databricks e do protocolo OpenSharing sinaliza que a próxima corrida não é sobre qual modelo usar, mas sobre quem consegue governar, auditar e compartilhar IA com segurança em escala. Empresas que constroem frameworks de governança agora — permissões, lineage, monitoramento de custo — estarão à frente quando o regulador (e o conselho) pedir explicações sobre como a IA toma decisões.</p>
+    <p style="margin-bottom:10px;"><strong>2. EU AI Act adiado não significa risco zero.</strong> O voto do Parlamento Europeu é uma respiração — não uma absolvição. As obrigações de conformidade para sistemas de alto risco (RH, saúde, crédito, educação) continuam no horizonte, e o Conselho ainda precisa ratificar o adiamento antes de agosto. Empresas globais que operam na Europa devem manter o roadmap de compliance em andamento: o custo de estar pronto é sempre menor do que o de se adaptar às pressas após uma autuação de €35 milhões.</p>
+    <p><strong>3. Brasil: o orçamento de TI que cresce precisa de destino claro.</strong> Os US$ 3,4 bilhões projetados pela IDC para IA corporativa no Brasil em 2026 são oportunidade real — mas o paradoxo da transformação digital revela que dinheiro sem estrutura organizacional não vira resultado. O momento exige que líderes definam agora: quais três processos serão redesenhados com agentes autônomos nos próximos 90 dias? Sem esse recorte, o investimento vira custo — não diferencial.</p>
+  </article>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">CLIKDATA<span>·</span>DROPS</div>
+
+      </div>
+      <div class="footer-links">
+        <a href="https://clikdata.com.br" target="_blank">clikdata.com.br</a>
+        <a href="#">Arquivos anteriores</a>
+        <a href="#">Descadastrar</a>
+        <a href="#">Contato</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      Publicado em 20 de junho de 2026 · Edição #046 · clikdata.com.br<br>
+      Este digest é gerado automaticamente com curadoria editorial humana.<br>
+      Fontes: Holland &amp; Knight, Legal Nodes, Databricks Blog, Digiage, BuildFastWithAI, NeuralBuddies, MobileTime, IDC, The Shift, SoftDesign, TNX Brasil.
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
