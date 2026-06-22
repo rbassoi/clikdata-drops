@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CLIKDATA DROPS — Edição #048 - Junho 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0f0f0f;
+    --paper: #f5f0e8;
+    --accent: #c8401a;
+    --accent2: #1a3c5e;
+    --muted: #7a7060;
+    --rule: #d4cfc4;
+    --tag-bg: #1a3c5e;
+    --tag-color: #f5f0e8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #e8e3d8;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrapper {
+    max-width: 680px;
+    margin: 40px auto;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    box-shadow: 4px 4px 0 #c4bfb4, 8px 8px 0 #b4afa4;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    border-bottom: 3px double var(--ink);
+    padding: 0;
+    position: relative;
+  }
+
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 32px 10px;
+    border-bottom: 1px solid var(--rule);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  .masthead {
+    padding: 28px 32px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--ink);
+    position: relative;
+  }
+
+  .masthead::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--accent);
+    margin: 0 auto 16px;
+  }
+
+  .masthead h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1;
+    color: var(--ink);
+  }
+
+  .masthead h1 span {
+    color: var(--accent);
+  }
+
+  .tagline {
+    margin-top: 8px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .edition-bar {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 10px 32px;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  /* ── INTRO ── */
+  .intro {
+    padding: 28px 32px 24px;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .intro-dropcap {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 0.85;
+    color: var(--accent);
+    float: left;
+    margin-right: 4px;
+    margin-top: 6px;
+  }
+
+  .intro p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: #2a2520;
+  }
+
+  /* ── SECTION HEADER ── */
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 32px 0;
+    margin-bottom: 4px;
+  }
+
+  .section-flag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    background: var(--tag-bg);
+    color: var(--tag-color);
+    padding: 4px 10px;
+    white-space: nowrap;
+  }
+
+  .section-flag.red { background: var(--accent); }
+
+  .section-rule {
+    flex: 1;
+    height: 1px;
+    background: var(--ink);
+  }
+
+  /* ── STORY CARD ── */
+  .story {
+    padding: 20px 32px;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+  }
+
+  .story:last-of-type { border-bottom: none; }
+
+  .story-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .story-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 2px 7px;
+  }
+
+  .story-source {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+  }
+
+  .story h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+
+  .story h2 em {
+    font-style: italic;
+    color: var(--accent2);
+  }
+
+  .story p {
+    font-size: 14px;
+    line-height: 1.72;
+    color: #2a2520;
+  }
+
+  .story .number-callout {
+    float: right;
+    margin: 0 0 8px 18px;
+    text-align: center;
+    border: 2px solid var(--ink);
+    padding: 12px 16px;
+    min-width: 88px;
+  }
+
+  .story .number-callout .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--accent);
+    display: block;
+    line-height: 1;
+  }
+
+  .story .number-callout .num-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 4px;
+  }
+
+  /* ── DIVIDER ── */
+  .section-divider {
+    border: none;
+    border-top: 3px double var(--ink);
+    margin: 8px 32px 0;
+  }
+
+  /* ── DESTAQUE BRASIL ── */
+  .brasil-strip {
+    background: var(--accent2);
+    color: var(--paper);
+    padding: 6px 32px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .brasil-strip::before {
+    content: '▶';
+    font-size: 8px;
+  }
+
+  /* ── STAT ROW ── */
+  .stat-row {
+    display: flex;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .stat-item {
+    flex: 1;
+    padding: 20px 24px;
+    border-right: 1px solid var(--rule);
+    text-align: center;
+  }
+
+  .stat-item:last-child { border-right: none; }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--accent2);
+    display: block;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 6px;
+    line-height: 1.4;
+  }
+
+  /* ── PULLQUOTE ── */
+  .pullquote {
+    margin: 0;
+    padding: 24px 40px;
+    border-top: 2px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+    background: #ede8de;
+  }
+
+  .pullquote blockquote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 19px;
+    line-height: 1.5;
+    color: var(--ink);
+    text-align: center;
+  }
+
+  .pullquote cite {
+    display: block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: center;
+    font-style: normal;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 28px 32px;
+    border-top: 3px double var(--accent);
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333;
+  }
+
+  .footer-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 900;
+  }
+
+  .footer-brand span { color: var(--accent); }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: right;
+  }
+
+  .footer-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: #888;
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .footer-bottom {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: #555;
+    letter-spacing: 0.06em;
+    line-height: 1.6;
+  }
+
+  .routine-badge {
+    display: inline-block;
+    margin-top: 12px;
+    background: var(--accent);
+    color: white;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+  }
+
+
+  .story-source a {
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--muted);
+    transition: color 0.15s;
+  }
+  .story-source a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+  .read-more {
+    display: inline-block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent2);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent2);
+    padding-bottom: 1px;
+  }
+  .read-more:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+  @media (max-width: 600px) {
+    .wrapper { margin: 0; box-shadow: none; }
+    .masthead h1 { font-size: 38px; }
+    .stat-row { flex-direction: column; }
+    .stat-item { border-right: none; border-bottom: 1px solid var(--rule); }
+    .header-top { flex-direction: column; gap: 4px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-top">
+      <span>Edição #048</span>
+      <span>22 de junho de 2026</span>
+      <span>Diária · IA &amp; Transformação</span>
+    </div>
+    <div class="masthead">
+      <h1>CLIKDATA<span style="color:var(--accent)">·</span>DROPS</h1>
+      <p class="tagline">IA · Tecnologia · Transformação Digital · Edição Diária</p>
+    </div>
+    <div class="edition-bar">
+      <span>🌍 Mundo</span>
+      <span>🇧🇷 Brasil</span>
+      <span>📊 Números</span>
+      <span>💡 Perspectiva</span>
+    </div>
+  </header>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <p>
+      <span class="intro-dropcap">R</span>
+      egulação voluntária, agentes que ainda não saíram do piloto e R$ 23 bilhões apostados na soberania digital brasileira: a edição de hoje mapeia o momento exato em que as promessas da IA começam a ter de provar seu valor — em ROI, em empregos e em geopolítica. Os números não mentem, mas também não contam toda a história.
+    </p>
+  </section>
+
+  <!-- ═══ MUNDO ═══ -->
+  <div class="section-header">
+    <span class="section-flag red">🌍 Mundo</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Política &amp; IA</span>
+      <span class="story-source"><a href="https://www.whitehouse.gov/presidential-actions/2026/06/promoting-advanced-artificial-intelligence-innovation-and-security/" target="_blank">White House · CNBC</a></span>
+    </div>
+    <div class="number-callout">
+      <span class="num">30</span>
+      <span class="num-label">dias de revisão<br>voluntária EUA</span>
+    </div>
+    <h2>EUA lançam nova ordem executiva de IA: <em>inovação primeiro</em>, regulação depois</h2>
+    <p>Em 2 de junho, Donald Trump assinou a ordem executiva "Promoting Advanced Artificial Intelligence Innovation and Security", pedindo que empresas de IA compartilhem voluntariamente com o governo seus modelos de fronteira por até 30 dias antes do lançamento público. O texto descarta explicitamente qualquer licença obrigatória ou pré-aprovação estatal — uma vitória para a indústria após meses de debate interno que chegou a cogitar janela de 90 dias. Paralelamente, cria um "AI Cybersecurity Clearinghouse" para compartilhar vulnerabilidades entre governo e setor privado. O sinal é claro: Washington quer liderar sem frear.</p>
+    <a href="https://www.cnbc.com/2026/06/02/trump-executive-order-ai.html" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Agentes &amp; Empresas</span>
+      <span class="story-source"><a href="https://www.gartner.com/en/articles/hype-cycle-for-agentic-ai" target="_blank">Gartner · Hype Cycle 2026</a></span>
+    </div>
+    <h2>Gartner: <em>40% dos apps empresariais</em> terão agentes de IA até o fim de 2026 — mas a lacuna de implementação é real</h2>
+    <p>O Hype Cycle for Agentic AI 2026 do Gartner projeta que 40% das aplicações corporativas integrarão agentes de IA com tarefas específicas este ano, ante menos de 5% em 2025. Mas a pesquisa com CIOs revela a contradição do momento: apenas 17% das organizações já implantaram agentes em produção, enquanto mais de 60% esperam fazê-lo nos próximos dois anos. O gap entre intenção e execução é o principal risco — mais de 40% dos projetos de agentes devem falhar até 2027, segundo a consultoria, por problemas de governança de dados e falta de integração com sistemas legados.</p>
+    <a href="https://www.gartner.com/en/newsroom/press-releases/2025-08-26-gartner-predicts-40-percent-of-enterprise-apps-will-feature-task-specific-ai-agents-by-2026-up-from-less-than-5-percent-in-2025" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">ROI &amp; Resultados</span>
+      <span class="story-source"><a href="https://www.pwc.com/us/en/services/consulting/supply-chain-operations/library/digital-trends-operations-survey.html" target="_blank">PwC · Digital Trends Operations 2026</a></span>
+    </div>
+    <h2>PwC: só <em>12% dos CEOs</em> conseguiram receita E redução de custo com IA — ao mesmo tempo</h2>
+    <p>A pesquisa Digital Trends in Operations 2026 da PwC revela o paradoxo da adoção em escala: 71% das organizações planejam aumentar investimentos em IA, mas apenas 12% dos CEOs globais reportam ter conseguido simultaneamente crescimento de receita e corte de custos com a tecnologia. A maioria colhe um benefício ou outro — raramente os dois. A conclusão dos analistas é que empresas ainda tratam a IA como otimização pontual, não como redesenho de processos. Quem reengenheirou workflows do zero colhe o dobro de resultado.</p>
+    <a href="https://www.pwc.com/us/en/services/consulting/supply-chain-operations/library/digital-trends-operations-survey.html" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- ═══ BRASIL ═══ -->
+  <hr class="section-divider">
+  <div class="brasil-strip">Brasil investe R$ 23 bilhões em soberania digital — PBIA 2024-2028 em curso</div>
+
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">🇧🇷 Brasil</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stat-row">
+    <div class="stat-item">
+      <span class="stat-num">R$23bi</span>
+      <span class="stat-label">investimento PBIA<br>até 2028</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">67%</span>
+      <span class="stat-label">empresas BR com IA<br>como prioridade</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">115k</span>
+      <span class="stat-label">servidores públicos<br>treinados até 2026</span>
+    </div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Política Nacional</span>
+      <span class="story-source"><a href="https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/transformacaodigital/plano-brasileiro-de-inteligencia-artificial" target="_blank">MCTI · Plano Brasileiro de IA</a></span>
+    </div>
+    <h2>PBIA avança: Brasil quer <em>soberania tecnológica</em> com R$ 23 bilhões e supercomputador nacional</h2>
+    <p>O Plano Brasileiro de Inteligência Artificial 2024–2028 consolida-se como a maior aposta do governo federal na corrida global por autonomia digital. Com R$ 23 bilhões distribuídos em cinco eixos — infraestrutura, capacitação, serviços públicos, inovação empresarial e governança —, o PBIA inclui a construção de um supercomputador nacional para processamento de grandes volumes de dados e o treinamento de 115.000 servidores públicos até o fim deste ano. O objetivo declarado: reduzir a dependência das big techs estrangeiras e posicionar o Brasil como referência em IA na América Latina. Para empresas privadas, o plano abre janelas de parceria e financiamento que ainda poucos estão aproveitando.</p>
+    <a href="https://tmc.com.br/brasil/plano-ia-brasil-investimento-23-bilhoes/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story" style="border-bottom:none;">
+    <div class="story-meta">
+      <span class="story-tag">Transformação Digital</span>
+      <span class="story-source"><a href="https://www.teksystems.com/en/insights/state-of-digital-transformation-2026" target="_blank">TEKsystems · State of Digital Transformation 2026</a></span>
+    </div>
+    <h2>Transformação digital em 2026: menos ferramentas, mais <em>redesenho de processos</em></h2>
+    <p>O relatório State of Digital Transformation 2026 da TEKsystems marca uma virada de mentalidade: as organizações que avançam não são as que adotam mais tecnologia, mas as que simplificam operações, modernizam sistemas legados e melhoram a qualidade dos dados antes de escalar IA. Cloud-native e IaaS lideram com 42% de adoção enterprise-wide. O dado mais relevante para líderes de TI brasileiros: 35% das empresas globais ainda não têm estratégia alguma para agentes autônomos — uma lacuna que representa tanto risco quanto oportunidade para quem agir agora.</p>
+    <a href="https://www.teksystems.com/en/insights/state-of-digital-transformation-2026" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- PULLQUOTE -->
+  <div class="pullquote">
+    <blockquote>
+      "A IA que não gera ROI mensurável — em receita ou em custo — está com os dias contados dentro das organizações. O hype acabou; começa a era da prestação de contas."
+    </blockquote>
+    <cite>— Análise editorial Clikdata Drops · Edição #048 · Junho 2026</cite>
+  </div>
+
+  <!-- PERSPECTIVA -->
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">💡 Perspectiva</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story" style="border-bottom:none; padding-bottom:28px;">
+    <h2>O que esses sinais significam para <em>líderes de transformação</em></h2>
+    <p style="margin-bottom:12px;">Três leituras práticas desta edição:</p>
+    <p style="margin-bottom:10px;"><strong>1. Regulação voluntária é uma janela, não uma garantia.</strong> A ordem executiva americana é favorável à inovação hoje — mas a revisão de 30 dias e o clearinghouse de cibersegurança criam precedentes. Empresas que documentam agora suas práticas de segurança em IA estarão prontas quando (não se) a janela fechar.</p>
+    <p style="margin-bottom:10px;"><strong>2. O gargalo não é tecnológico, é operacional.</strong> Com 40% de projetos de agentes previstos para falhar (Gartner) e só 12% dos CEOs colhendo resultado duplo (PwC), o diferencial competitivo está em dados limpos, processos redesenhados e governança — não em mais modelos ou mais ferramentas.</p>
+    <p><strong>3. O PBIA é uma oportunidade de mercado disfarçada de política pública.</strong> R$ 23 bilhões em cinco eixos, supercomputador nacional e 115 mil servidores capacitados criam demanda real por soluções de IA adaptadas à realidade brasileira. Consultorias e scale-ups que entrarem nesse ecossistema agora terão vantagem de relacionamento difícil de replicar depois.</p>
+  </article>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">CLIKDATA<span>·</span>DROPS</div>
+
+      </div>
+      <div class="footer-links">
+        <a href="https://clikdata.com.br" target="_blank">clikdata.com.br</a>
+        <a href="#">Arquivos anteriores</a>
+        <a href="#">Descadastrar</a>
+        <a href="#">Contato</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      Publicado em 22 de junho de 2026 · Edição #048 · clikdata.com.br<br>
+      Este digest é gerado automaticamente com curadoria editorial humana.<br>
+      Fontes: White House, CNBC, Gartner, PwC, TEKsystems, MCTI, TMC Brasil, Alura.
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
