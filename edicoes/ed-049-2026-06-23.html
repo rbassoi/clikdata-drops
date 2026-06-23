@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CLIKDATA DROPS — Edição #049 - Junho 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0f0f0f;
+    --paper: #f5f0e8;
+    --accent: #c8401a;
+    --accent2: #1a3c5e;
+    --muted: #7a7060;
+    --rule: #d4cfc4;
+    --tag-bg: #1a3c5e;
+    --tag-color: #f5f0e8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #e8e3d8;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrapper {
+    max-width: 680px;
+    margin: 40px auto;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    box-shadow: 4px 4px 0 #c4bfb4, 8px 8px 0 #b4afa4;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    border-bottom: 3px double var(--ink);
+    padding: 0;
+    position: relative;
+  }
+
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 32px 10px;
+    border-bottom: 1px solid var(--rule);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  .masthead {
+    padding: 28px 32px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--ink);
+    position: relative;
+  }
+
+  .masthead::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--accent);
+    margin: 0 auto 16px;
+  }
+
+  .masthead h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1;
+    color: var(--ink);
+  }
+
+  .masthead h1 span {
+    color: var(--accent);
+  }
+
+  .tagline {
+    margin-top: 8px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .edition-bar {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 10px 32px;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  /* ── INTRO ── */
+  .intro {
+    padding: 28px 32px 24px;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .intro-dropcap {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 0.85;
+    color: var(--accent);
+    float: left;
+    margin-right: 4px;
+    margin-top: 6px;
+  }
+
+  .intro p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: #2a2520;
+  }
+
+  /* ── SECTION HEADER ── */
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 32px 0;
+    margin-bottom: 4px;
+  }
+
+  .section-flag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    background: var(--tag-bg);
+    color: var(--tag-color);
+    padding: 4px 10px;
+    white-space: nowrap;
+  }
+
+  .section-flag.red { background: var(--accent); }
+
+  .section-rule {
+    flex: 1;
+    height: 1px;
+    background: var(--ink);
+  }
+
+  /* ── STORY CARD ── */
+  .story {
+    padding: 20px 32px;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+  }
+
+  .story:last-of-type { border-bottom: none; }
+
+  .story-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .story-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 2px 7px;
+  }
+
+  .story-source {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+  }
+
+  .story h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+
+  .story h2 em {
+    font-style: italic;
+    color: var(--accent2);
+  }
+
+  .story p {
+    font-size: 14px;
+    line-height: 1.72;
+    color: #2a2520;
+  }
+
+  .story .number-callout {
+    float: right;
+    margin: 0 0 8px 18px;
+    text-align: center;
+    border: 2px solid var(--ink);
+    padding: 12px 16px;
+    min-width: 88px;
+  }
+
+  .story .number-callout .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--accent);
+    display: block;
+    line-height: 1;
+  }
+
+  .story .number-callout .num-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 4px;
+  }
+
+  /* ── DIVIDER ── */
+  .section-divider {
+    border: none;
+    border-top: 3px double var(--ink);
+    margin: 8px 32px 0;
+  }
+
+  /* ── DESTAQUE BRASIL ── */
+  .brasil-strip {
+    background: var(--accent2);
+    color: var(--paper);
+    padding: 6px 32px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .brasil-strip::before {
+    content: '▶';
+    font-size: 8px;
+  }
+
+  /* ── STAT ROW ── */
+  .stat-row {
+    display: flex;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .stat-item {
+    flex: 1;
+    padding: 20px 24px;
+    border-right: 1px solid var(--rule);
+    text-align: center;
+  }
+
+  .stat-item:last-child { border-right: none; }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--accent2);
+    display: block;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 6px;
+    line-height: 1.4;
+  }
+
+  /* ── PULLQUOTE ── */
+  .pullquote {
+    margin: 0;
+    padding: 24px 40px;
+    border-top: 2px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+    background: #ede8de;
+  }
+
+  .pullquote blockquote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 19px;
+    line-height: 1.5;
+    color: var(--ink);
+    text-align: center;
+  }
+
+  .pullquote cite {
+    display: block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: center;
+    font-style: normal;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 28px 32px;
+    border-top: 3px double var(--accent);
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333;
+  }
+
+  .footer-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 900;
+  }
+
+  .footer-brand span { color: var(--accent); }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: right;
+  }
+
+  .footer-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: #888;
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .footer-bottom {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: #555;
+    letter-spacing: 0.06em;
+    line-height: 1.6;
+  }
+
+  .routine-badge {
+    display: inline-block;
+    margin-top: 12px;
+    background: var(--accent);
+    color: white;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+  }
+
+
+  .story-source a {
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--muted);
+    transition: color 0.15s;
+  }
+  .story-source a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+  .read-more {
+    display: inline-block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent2);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent2);
+    padding-bottom: 1px;
+  }
+  .read-more:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+  @media (max-width: 600px) {
+    .wrapper { margin: 0; box-shadow: none; }
+    .masthead h1 { font-size: 38px; }
+    .stat-row { flex-direction: column; }
+    .stat-item { border-right: none; border-bottom: 1px solid var(--rule); }
+    .header-top { flex-direction: column; gap: 4px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-top">
+      <span>Edição #049</span>
+      <span>23 de junho de 2026</span>
+      <span>Diária · IA &amp; Transformação</span>
+    </div>
+    <div class="masthead">
+      <h1>CLIKDATA<span style="color:var(--accent)">·</span>DROPS</h1>
+      <p class="tagline">IA · Tecnologia · Transformação Digital · Edição Diária</p>
+    </div>
+    <div class="edition-bar">
+      <span>🌍 Mundo</span>
+      <span>🇧🇷 Brasil</span>
+      <span>📊 Números</span>
+      <span>💡 Perspectiva</span>
+    </div>
+  </header>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <p>
+      <span class="intro-dropcap">H</span>
+      oje o mercado de IA acorda com um recorde histórico: a SpaceX concluiu a maior aquisição de startup da história ao comprar a Cursor por US$ 60 bilhões em ações. Enquanto esse movimento redefine o que significa ser uma empresa de tecnologia em 2026, o Google finaliza a janela de lançamento do Gemini 3.5 Pro — com 2 milhões de tokens de contexto que reescrevem os limites dos modelos de linguagem. No Brasil, a Deloitte revela que 95% das empresas planejam adotar IA agêntica em até dois anos — mas apenas 27% têm governança madura para suportar essa escala. Os sinais desta edição são inequívocos: a corrida não é mais pelo acesso à IA. É pela velocidade de escala com responsabilidade.
+    </p>
+  </section>
+
+  <!-- ═══ MUNDO ═══ -->
+  <div class="section-header">
+    <span class="section-flag red">🌍 Mundo</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">M&amp;A · IA</span>
+      <span class="story-source"><a href="https://techcrunch.com/2026/06/16/spacex-to-acquire-cursor-for-60b-in-stock-days-after-blockbuster-ipo/" target="_blank">TechCrunch</a></span>
+    </div>
+    <div class="number-callout">
+      <span class="num">$60B</span>
+      <span class="num-label">maior M&A<br>de startup</span>
+    </div>
+    <h2>SpaceX adquire a Cursor por <em>US$ 60 bilhões</em> — o maior deal de startup da história</h2>
+    <p>Quatro dias após estrear na Nasdaq, a SpaceX fechou a aquisição da Anysphere — fabricante do Cursor — por US$ 60 bilhões em ações, superando qualquer compra anterior de startup venture-backed. Com 50.000 clientes enterprise e US$ 2 bilhões em receita recorrente anual, o Cursor coloca a SpaceX e a divisão de IA da xAI diretamente no mercado de ferramentas de desenvolvimento assistido por IA. A movimentação sinaliza que as corridas espacial e de IA agora convergem em uma única empresa sob comando de Elon Musk. Para o mercado de software enterprise, a mensagem é direta: codificação assistida por IA deixou de ser nicho e se tornou disputa de titãs.</p>
+    <a href="https://techcrunch.com/2026/06/16/spacex-to-acquire-cursor-for-60b-in-stock-days-after-blockbuster-ipo/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Modelos de IA</span>
+      <span class="story-source"><a href="https://www.techtimes.com/articles/317919/20260606/google-gemini-35-pro-nears-june-launch-2-million-token-context-deep-think-reasoning.htm" target="_blank">TechTimes · Google</a></span>
+    </div>
+    <div class="number-callout">
+      <span class="num">2M</span>
+      <span class="num-label">tokens de<br>contexto</span>
+    </div>
+    <h2>Gemini 3.5 Pro: <em>2 milhões de tokens</em> de contexto e lançamento geral em junho</h2>
+    <p>Apresentado no Google I/O em maio, o Gemini 3.5 Pro entra na janela de disponibilidade geral com a maior janela de contexto de qualquer modelo de fronteira em produção: 2 milhões de tokens. Para fins práticos, o modelo processa documentos enormes, bases de código inteiras e conversas estendidas sem perder referências. O modo "Deep Think" adiciona raciocínio avançado com suporte multimodal completo. A precificação prevista — cerca de US$ 15/M tokens de entrada e US$ 60/M de saída — posiciona o modelo no segmento premium enterprise, concorrendo diretamente com o Fable 5 da Anthropic e o GPT-5.5 da OpenAI na batalha pelos contratos corporativos de maior valor.</p>
+    <a href="https://www.techtimes.com/articles/317919/20260606/google-gemini-35-pro-nears-june-launch-2-million-token-context-deep-think-reasoning.htm" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Precificação IA</span>
+      <span class="story-source"><a href="https://www.mindstudio.ai/blog/claude-fable-5-pricing-access-usage-limits" target="_blank">Anthropic · MindStudio</a></span>
+    </div>
+    <h2>Claude Fable 5 sai dos planos de assinatura <em>a partir de hoje</em> — créditos de uso entram em cena</h2>
+    <p>A janela gratuita de 13 dias do Claude Fable 5 para assinantes dos planos Pro, Max, Team e Enterprise encerra nesta segunda-feira, 23 de junho. O acesso ao modelo mais capaz da Anthropic passa a exigir créditos de uso cobrados a US$ 10/M tokens de entrada e US$ 50/M de saída — o dobro do preço do Opus 4.8. A mudança impacta diretamente empresas que integraram o Fable 5 em workflows e pipelines de produção durante o período gratuito. A Anthropic sinalizou que pretende reintegrar o modelo aos planos de assinatura quando a capacidade de infraestrutura permitir, sem prazo definido. Times de tecnologia precisam revisar seus custos operacionais de IA hoje.</p>
+    <a href="https://www.mindstudio.ai/blog/claude-fable-5-pricing-access-usage-limits" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- ═══ BRASIL ═══ -->
+  <hr class="section-divider">
+  <div class="brasil-strip">Brasil: 95% das empresas planejam IA agêntica em 2 anos — mas só 27% têm governança madura</div>
+
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">🇧🇷 Brasil</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stat-row">
+    <div class="stat-item">
+      <span class="stat-num">9M</span>
+      <span class="stat-label">empresas brasileiras<br>usando IA ativamente</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">42%</span>
+      <span class="stat-label">usam IA de forma<br>transformadora</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">27%</span>
+      <span class="stat-label">têm governança<br>de IA madura</span>
+    </div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Adoção Nacional</span>
+      <span class="story-source"><a href="https://www.deloitte.com/br/pt/about/press-room/state-of-ai-2026.html" target="_blank">Deloitte Brasil · State of AI 2026</a></span>
+    </div>
+    <h2>Deloitte State of AI 2026: <em>95% das empresas</em> brasileiras querem IA agêntica — mas a governança não acompanha</h2>
+    <p>O relatório State of AI 2026 da Deloitte Brasil revela uma ambição sem precedentes: 95% das organizações planejam adotar IA agêntica em até dois anos. O país avança em ritmo acelerado — 9 milhões de empresas já utilizam IA de forma sistemática, crescimento de 29% em apenas um ano, e 42% relatam uso transformador. O gargalo crítico, porém, é a governança: apenas 27% das organizações brasileiras afirmam ter modelos de governança de IA maduros. A Deloitte alerta que escalar sem frameworks sólidos expõe as empresas a riscos regulatórios crescentes, especialmente com a regulamentação de IA avançando no Congresso Nacional. Escalar sem governança, ressalta o relatório, é construir sobre areia.</p>
+    <a href="https://www.deloitte.com/br/pt/about/press-room/state-of-ai-2026.html" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story" style="border-bottom:none;">
+    <div class="story-meta">
+      <span class="story-tag">Analytics · Dados</span>
+      <span class="story-source"><a href="https://tiinside.com.br/22/06/2026/gartner-seis-tendencias-para-dados-e-analytics/" target="_blank">Gartner · TI Inside</a></span>
+    </div>
+    <h2>Gartner aponta <em>6 tendências</em> para dados e analytics em São Paulo — IA no centro de todas</h2>
+    <p>Em conferência realizada em São Paulo, o Gartner apresentou as seis tendências que definirão a agenda de dados e analytics até 2028: Plataformas de Desenvolvimento Nativo-IA, Sistemas Multiagentes autônomos, Computação Confidencial, Modelos de Linguagem Específicos ao Domínio (DSLMs), Fabric de Dados Inteligente e Governança por Design. O denominador comum é a IA como camada central de todas as iniciativas de dados. Para CIOs e CDOs brasileiros, o relatório é um mapa estratégico: organizações que não estruturarem suas estratégias de dados em torno de IA até o final de 2026 enfrentarão um gap competitivo crescente nos próximos dois anos — e recuperar esse terreno custará muito mais do que agir agora.</p>
+    <a href="https://tiinside.com.br/22/06/2026/gartner-seis-tendencias-para-dados-e-analytics/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- PULLQUOTE -->
+  <div class="pullquote">
+    <blockquote>
+      "42% das empresas brasileiras empregam IA de forma transformadora — mas escalar sem governança é construir sobre areia."
+    </blockquote>
+    <cite>— Deloitte Brasil · State of AI 2026</cite>
+  </div>
+
+  <!-- PERSPECTIVA -->
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">💡 Perspectiva</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story" style="border-bottom:none; padding-bottom:28px;">
+    <h2>O que esses sinais significam para <em>líderes de transformação</em></h2>
+    <p style="margin-bottom:12px;">Três leituras práticas desta edição:</p>
+    <p style="margin-bottom:10px;"><strong>1. A consolidação chegou à camada de desenvolvimento.</strong> A compra da Cursor pela SpaceX por US$ 60B não é apenas um recorde financeiro — é o sinal de que ferramentas de desenvolvimento assistido por IA tornaram-se ativos estratégicos de plataforma. Empresas que ainda tratam copilots de código como "ferramentas de produtividade" precisam recalibrar: a batalha agora é por quem controla a camada onde o software corporativo é construído.</p>
+    <p style="margin-bottom:10px;"><strong>2. A guerra dos modelos beneficia o comprador inteligente.</strong> Com Gemini 3.5 Pro (2M tokens), Fable 5 e GPT-5.5 competindo pelo enterprise, preços reais devem cair nos próximos 18 meses mesmo que as tabelas subam. A estratégia vencedora é negociar contratos enterprise agora, antes que a demanda se concentre nos modelos vencedores e os fornecedores percam incentivo para oferecer descontos estruturais.</p>
+    <p><strong>3. Governança virou vantagem competitiva no Brasil.</strong> Com 95% das empresas querendo IA agêntica mas apenas 27% com governança madura, há uma janela real para se diferenciar. Organizações que institucionalizarem frameworks de governança em 2026 estarão anos à frente quando a regulamentação nacional de IA entrar em vigor — e isso já é vantagem competitiva mensurável, não apenas compliance.</p>
+  </article>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">CLIKDATA<span>·</span>DROPS</div>
+      </div>
+      <div class="footer-links">
+        <a href="https://clikdata.com.br" target="_blank">clikdata.com.br</a>
+        <a href="#">Arquivos anteriores</a>
+        <a href="#">Descadastrar</a>
+        <a href="#">Contato</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      Publicado em 23 de junho de 2026 · Edição #049 · clikdata.com.br<br>
+      Este digest é gerado automaticamente com curadoria editorial humana.<br>
+      Fontes: TechCrunch, TechTimes, Anthropic, Deloitte Brasil, Gartner, TI Inside.
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
