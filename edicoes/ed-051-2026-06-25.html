@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CLIKDATA DROPS — Edição #051 - Junho 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0f0f0f;
+    --paper: #f5f0e8;
+    --accent: #c8401a;
+    --accent2: #1a3c5e;
+    --muted: #7a7060;
+    --rule: #d4cfc4;
+    --tag-bg: #1a3c5e;
+    --tag-color: #f5f0e8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #e8e3d8;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrapper {
+    max-width: 680px;
+    margin: 40px auto;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    box-shadow: 4px 4px 0 #c4bfb4, 8px 8px 0 #b4afa4;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    border-bottom: 3px double var(--ink);
+    padding: 0;
+    position: relative;
+  }
+
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 32px 10px;
+    border-bottom: 1px solid var(--rule);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  .masthead {
+    padding: 28px 32px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--ink);
+    position: relative;
+  }
+
+  .masthead::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--accent);
+    margin: 0 auto 16px;
+  }
+
+  .masthead h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1;
+    color: var(--ink);
+  }
+
+  .masthead h1 span {
+    color: var(--accent);
+  }
+
+  .tagline {
+    margin-top: 8px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .edition-bar {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 10px 32px;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  /* ── INTRO ── */
+  .intro {
+    padding: 28px 32px 24px;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .intro-dropcap {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 0.85;
+    color: var(--accent);
+    float: left;
+    margin-right: 4px;
+    margin-top: 6px;
+  }
+
+  .intro p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: #2a2520;
+  }
+
+  /* ── SECTION HEADER ── */
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 32px 0;
+    margin-bottom: 4px;
+  }
+
+  .section-flag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    background: var(--tag-bg);
+    color: var(--tag-color);
+    padding: 4px 10px;
+    white-space: nowrap;
+  }
+
+  .section-flag.red { background: var(--accent); }
+
+  .section-rule {
+    flex: 1;
+    height: 1px;
+    background: var(--ink);
+  }
+
+  /* ── STORY CARD ── */
+  .story {
+    padding: 20px 32px;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+  }
+
+  .story:last-of-type { border-bottom: none; }
+
+  .story-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .story-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 2px 7px;
+  }
+
+  .story-source {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+  }
+
+  .story h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+
+  .story h2 em {
+    font-style: italic;
+    color: var(--accent2);
+  }
+
+  .story p {
+    font-size: 14px;
+    line-height: 1.72;
+    color: #2a2520;
+  }
+
+  .story .number-callout {
+    float: right;
+    margin: 0 0 8px 18px;
+    text-align: center;
+    border: 2px solid var(--ink);
+    padding: 12px 16px;
+    min-width: 88px;
+  }
+
+  .story .number-callout .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--accent);
+    display: block;
+    line-height: 1;
+  }
+
+  .story .number-callout .num-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 4px;
+  }
+
+  /* ── DIVIDER ── */
+  .section-divider {
+    border: none;
+    border-top: 3px double var(--ink);
+    margin: 8px 32px 0;
+  }
+
+  /* ── DESTAQUE BRASIL ── */
+  .brasil-strip {
+    background: var(--accent2);
+    color: var(--paper);
+    padding: 6px 32px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .brasil-strip::before {
+    content: '▶';
+    font-size: 8px;
+  }
+
+  /* ── STAT ROW ── */
+  .stat-row {
+    display: flex;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .stat-item {
+    flex: 1;
+    padding: 20px 24px;
+    border-right: 1px solid var(--rule);
+    text-align: center;
+  }
+
+  .stat-item:last-child { border-right: none; }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--accent2);
+    display: block;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 6px;
+    line-height: 1.4;
+  }
+
+  /* ── PULLQUOTE ── */
+  .pullquote {
+    margin: 0;
+    padding: 24px 40px;
+    border-top: 2px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+    background: #ede8de;
+  }
+
+  .pullquote blockquote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 19px;
+    line-height: 1.5;
+    color: var(--ink);
+    text-align: center;
+  }
+
+  .pullquote cite {
+    display: block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: center;
+    font-style: normal;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 28px 32px;
+    border-top: 3px double var(--accent);
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333;
+  }
+
+  .footer-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 900;
+  }
+
+  .footer-brand span { color: var(--accent); }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: right;
+  }
+
+  .footer-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: #888;
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .footer-bottom {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: #555;
+    letter-spacing: 0.06em;
+    line-height: 1.6;
+  }
+
+  .routine-badge {
+    display: inline-block;
+    margin-top: 12px;
+    background: var(--accent);
+    color: white;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+  }
+
+  .story-source a {
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--muted);
+    transition: color 0.15s;
+  }
+  .story-source a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+  .read-more {
+    display: inline-block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent2);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent2);
+    padding-bottom: 1px;
+  }
+  .read-more:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+  @media (max-width: 600px) {
+    .wrapper { margin: 0; box-shadow: none; }
+    .masthead h1 { font-size: 38px; }
+    .stat-row { flex-direction: column; }
+    .stat-item { border-right: none; border-bottom: 1px solid var(--rule); }
+    .header-top { flex-direction: column; gap: 4px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-top">
+      <span>Edição #051</span>
+      <span>25 de junho de 2026</span>
+      <span>Diária · IA &amp; Transformação</span>
+    </div>
+    <div class="masthead">
+      <h1>CLIKDATA<span style="color:var(--accent)">·</span>DROPS</h1>
+      <p class="tagline">IA · Tecnologia · Transformação Digital · Edição Diária</p>
+    </div>
+    <div class="edition-bar">
+      <span>🌍 Mundo</span>
+      <span>🇧🇷 Brasil</span>
+      <span>📊 Números</span>
+      <span>💡 Perspectiva</span>
+    </div>
+  </header>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <p>
+      <span class="intro-dropcap">E</span>
+      m uma semana de movimentos decisivos, Washington levou a IA ao centro da segurança nacional com um decreto histórico, o Silicon Valley viveu seu maior choque trabalhista da era da IA — e o Brasil revelou um paradoxo estratégico: lidera investimentos em IA na América Latina, mas 72% das empresas ainda estão na fase inicial da jornada. Esta edição decifra o que esses sinais significam para quem está no front da transformação.
+    </p>
+  </section>
+
+  <!-- ═══ MUNDO ═══ -->
+  <div class="section-header">
+    <span class="section-flag red">🌍 Mundo</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Geopolítica IA</span>
+      <span class="story-source"><a href="https://www.whitehouse.gov/presidential-actions/2026/06/promoting-advanced-artificial-intelligence-innovation-and-security/" target="_blank">White House · Casa Branca</a></span>
+    </div>
+    <div class="number-callout">
+      <span class="num">30d</span>
+      <span class="num-label">prazo para<br>agências federais</span>
+    </div>
+    <h2>EUA assinam decreto histórico: IA entra definitivamente na agenda de <em>segurança nacional</em></h2>
+    <p>Em 2 de junho de 2026, o governo Trump assinou o decreto executivo "Promoting Advanced Artificial Intelligence Innovation and Security", tornando a IA questão de segurança nacional. O texto determina que agências federais endureçam defesas cibernéticas com IA em 30 dias, cria um clearinghouse voluntário de cibersegurança entre governo e setor privado e estabelece um framework pré-lançamento para modelos frontier — sem criar licenciamento obrigatório. A mensagem para o mercado global é clara: a era da IA sem supervisão governamental chegou ao fim, e quem já tem frameworks de governança sai na frente.</p>
+    <a href="https://www.whitehouse.gov/presidential-actions/2026/06/promoting-advanced-artificial-intelligence-innovation-and-security/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Big Tech &amp; IA</span>
+      <span class="story-source"><a href="https://www.npr.org/2026/05/20/nx-s1-5826917/meta-layoffs-ai-jobs" target="_blank">NPR · Yahoo Finance</a></span>
+    </div>
+    <h2>Meta corta 8 mil vagas e realoca 7 mil em IA — <em>"moral perto do pior em 20 anos"</em></h2>
+    <p>A Meta formalizou a maior reestruturação de sua história recente: 8.000 demissões e 7.000 transferências compulsórias para equipes de IA, impactando quase 20% do headcount total. Em memo interno de junho, o CTO da empresa admitiu que o moral dos funcionários está "perto do pior em duas décadas" — comparável ao período pós-Cambridge Analytica. A liderança foi acusada de ter feito "um trabalho péssimo explicando a visão" por trás da reorganização. O caso expõe o risco de reestruturações de IA conduzidas sem narrativa interna clara: o custo em talento e cultura supera os ganhos prometidos em eficiência.</p>
+    <a href="https://finance.yahoo.com/sectors/technology/articles/meta-layoffs-2026-8-000-114209703.html" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Mercado de Trabalho</span>
+      <span class="story-source"><a href="https://techcrunch.com/2026/06/15/the-ai-layoff-wave-is-becoming-a-powder-keg/" target="_blank">TechCrunch</a></span>
+    </div>
+    <h2>Onda de demissões por IA vira <em>"barril de pólvora"</em> — setor tech sente a pressão crescer</h2>
+    <p>A TechCrunch documenta o estágio crítico da onda de demissões motivadas por IA: empresas que adotaram "tokenmaxxing" — apostas agressivas em IA sem planejamento — como a Uber, que esgotou seu budget anual de IA em poucos meses, agora cortam licenças e equipes inteiras. A Meta chegou a eliminar seu leaderboard interno de performance de IA. O padrão se repete: investimentos desmedidos sem gestão de transição geram crises de moral, reputação e retenção de talentos que custam mais do que os ganhos de eficiência prometidos.</p>
+    <a href="https://techcrunch.com/2026/06/15/the-ai-layoff-wave-is-becoming-a-powder-keg/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- ═══ BRASIL ═══ -->
+  <hr class="section-divider">
+  <div class="brasil-strip">Brasil lidera investimentos em IA na América Latina — mas maturidade ainda preocupa</div>
+
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">🇧🇷 Brasil</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stat-row">
+    <div class="stat-item">
+      <span class="stat-num">72%</span>
+      <span class="stat-label">empresas brasileiras<br>em fase inicial de IA</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">+30%</span>
+      <span class="stat-label">crescimento dos<br>investimentos em IA no Brasil</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">40%</span>
+      <span class="stat-label">das apps corporativas<br>terão agentes IA em 2026</span>
+    </div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Adoção Nacional</span>
+      <span class="story-source"><a href="https://exame.com/inteligencia-artificial/72-das-empresas-brasileiras-estao-no-inicio-da-adocao-de-ia-aponta-pesquisa/" target="_blank">Exame · IDC</a></span>
+    </div>
+    <h2>Paradoxo brasileiro: 72% das empresas no início da IA — e o dinheiro <em>não para de crescer</em></h2>
+    <p>Pesquisa divulgada pela Exame com dados do IDC revela o maior paradoxo do mercado de IA no Brasil: enquanto os investimentos crescem 30% e devem superar US$ 2,4 bilhões em 2026, 72% das empresas brasileiras ainda estão nos estágios iniciante ou experimental de adoção. O dado crítico adicional: 8 em cada 10 empresas nacionais não possuem políticas de governança para IA. Investir sem governar é o atalho mais perigoso que uma organização pode tomar — e o Brasil está tomando-o em escala.</p>
+    <a href="https://exame.com/inteligencia-artificial/72-das-empresas-brasileiras-estao-no-inicio-da-adocao-de-ia-aponta-pesquisa/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story" style="border-bottom:none;">
+    <div class="story-meta">
+      <span class="story-tag">Agentes IA</span>
+      <span class="story-source"><a href="https://abes.org.br/en/gartner-preve-que-40-das-aplicacoes-empresariais-terao-agentes-de-inteligencia-artificial-voltados-para-tarefas-especificas-ate-2026-em-comparacao-com-a-menos-de-5-em-2025/" target="_blank">Gartner · ABES</a></span>
+    </div>
+    <h2>Gartner: 40% das aplicações corporativas terão agentes de IA específicos até o final de 2026</h2>
+    <p>A Gartner confirma: 40% das aplicações empresariais contarão com agentes de IA voltados a tarefas específicas até o final de 2026 — salto expressivo ante menos de 5% em 2025. No Brasil, 79% das empresas planejam expandir investimentos em IA generativa, mas a maioria ainda trata agentes como projeto-piloto. Para os líderes de TI e transformação digital, a mensagem é direta: a janela de implementação estratégica de agentes de IA está aberta agora — e ela não permanecerá assim por muito tempo.</p>
+    <a href="https://abes.org.br/en/gartner-preve-que-40-das-aplicacoes-empresariais-terao-agentes-de-inteligencia-artificial-voltados-para-tarefas-especificas-ate-2026-em-comparacao-com-a-menos-de-5-em-2025/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- PULLQUOTE -->
+  <div class="pullquote">
+    <blockquote>
+      "A inteligência artificial não é mais uma questão de laboratório ou de experimentação tecnológica — é uma questão de segurança nacional, competitividade econômica e soberania digital."
+    </blockquote>
+    <cite>— Decreto Executivo da Casa Branca · junho de 2026</cite>
+  </div>
+
+  <!-- PERSPECTIVA -->
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">💡 Perspectiva</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story" style="border-bottom:none; padding-bottom:28px;">
+    <h2>Três sinais que os líderes de transformação <em>não podem ignorar esta semana</em></h2>
+    <p style="margin-bottom:12px;">O que esta edição revela para quem está tomando decisões agora:</p>
+    <p style="margin-bottom:10px;"><strong>1. Regulação chegou — e é oportunidade, não barreira.</strong> O decreto da Casa Branca sinaliza que a IA amadureceu o suficiente para entrar na agenda de segurança nacional. Empresas que já estruturaram frameworks de governança saem na frente — no acesso a contratos, parcerias e talento. Quem ainda não o fez tem uma janela estreita antes que o mercado passe a exigir isso como pré-requisito de negócio.</p>
+    <p style="margin-bottom:10px;"><strong>2. O custo humano da pressa sem planejamento.</strong> A Meta cortou rápido, realocou sem comunicar e colheu crise de moral e reputação interna. A lição não é desacelerar a IA — é planejar a transição de pessoas com a mesma seriedade aplicada à transição de sistemas. Reestruturações sem narrativa interna destroem o ativo mais difícil de recuperar: a confiança do time.</p>
+    <p><strong>3. Brasil: hora de transformar investimento em maturidade.</strong> Crescer 30% em investimento enquanto 72% das empresas ainda estão em fase experimental é um sinal de desalinhamento estratégico grave. A próxima fase não é gastar mais — é governar melhor, capacitar equipes e implementar agentes que gerem ROI mensurável. Os números do Gartner sobre agentes IA provam que a janela está aberta agora. A questão é quem vai aproveitá-la.</p>
+  </article>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">CLIKDATA<span>·</span>DROPS</div>
+      </div>
+      <div class="footer-links">
+        <a href="https://clikdata.com.br" target="_blank">clikdata.com.br</a>
+        <a href="#">Arquivos anteriores</a>
+        <a href="#">Descadastrar</a>
+        <a href="#">Contato</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      Publicado em 25 de junho de 2026 · Edição #051 · clikdata.com.br<br>
+      Este digest é gerado automaticamente com curadoria editorial humana.<br>
+      Fontes: White House, NPR, TechCrunch, Yahoo Finance, Exame, Gartner, IDC, ABES.
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
