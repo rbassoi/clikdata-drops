@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CLIKDATA DROPS — Edição #052 - Junho 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0f0f0f;
+    --paper: #f5f0e8;
+    --accent: #c8401a;
+    --accent2: #1a3c5e;
+    --muted: #7a7060;
+    --rule: #d4cfc4;
+    --tag-bg: #1a3c5e;
+    --tag-color: #f5f0e8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #e8e3d8;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrapper {
+    max-width: 680px;
+    margin: 40px auto;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    box-shadow: 4px 4px 0 #c4bfb4, 8px 8px 0 #b4afa4;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    border-bottom: 3px double var(--ink);
+    padding: 0;
+    position: relative;
+  }
+
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 32px 10px;
+    border-bottom: 1px solid var(--rule);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  .masthead {
+    padding: 28px 32px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--ink);
+    position: relative;
+  }
+
+  .masthead::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--accent);
+    margin: 0 auto 16px;
+  }
+
+  .masthead h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1;
+    color: var(--ink);
+  }
+
+  .masthead h1 span {
+    color: var(--accent);
+  }
+
+  .tagline {
+    margin-top: 8px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .edition-bar {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 10px 32px;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  /* ── INTRO ── */
+  .intro {
+    padding: 28px 32px 24px;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .intro-dropcap {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 0.85;
+    color: var(--accent);
+    float: left;
+    margin-right: 4px;
+    margin-top: 6px;
+  }
+
+  .intro p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: #2a2520;
+  }
+
+  /* ── SECTION HEADER ── */
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 32px 0;
+    margin-bottom: 4px;
+  }
+
+  .section-flag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    background: var(--tag-bg);
+    color: var(--tag-color);
+    padding: 4px 10px;
+    white-space: nowrap;
+  }
+
+  .section-flag.red { background: var(--accent); }
+
+  .section-rule {
+    flex: 1;
+    height: 1px;
+    background: var(--ink);
+  }
+
+  /* ── STORY CARD ── */
+  .story {
+    padding: 20px 32px;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+  }
+
+  .story:last-of-type { border-bottom: none; }
+
+  .story-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .story-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 2px 7px;
+  }
+
+  .story-source {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+  }
+
+  .story h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+
+  .story h2 em {
+    font-style: italic;
+    color: var(--accent2);
+  }
+
+  .story p {
+    font-size: 14px;
+    line-height: 1.72;
+    color: #2a2520;
+  }
+
+  .story .number-callout {
+    float: right;
+    margin: 0 0 8px 18px;
+    text-align: center;
+    border: 2px solid var(--ink);
+    padding: 12px 16px;
+    min-width: 88px;
+  }
+
+  .story .number-callout .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--accent);
+    display: block;
+    line-height: 1;
+  }
+
+  .story .number-callout .num-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 4px;
+  }
+
+  /* ── DIVIDER ── */
+  .section-divider {
+    border: none;
+    border-top: 3px double var(--ink);
+    margin: 8px 32px 0;
+  }
+
+  /* ── DESTAQUE BRASIL ── */
+  .brasil-strip {
+    background: var(--accent2);
+    color: var(--paper);
+    padding: 6px 32px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .brasil-strip::before {
+    content: '▶';
+    font-size: 8px;
+  }
+
+  /* ── STAT ROW ── */
+  .stat-row {
+    display: flex;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .stat-item {
+    flex: 1;
+    padding: 20px 24px;
+    border-right: 1px solid var(--rule);
+    text-align: center;
+  }
+
+  .stat-item:last-child { border-right: none; }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--accent2);
+    display: block;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 6px;
+    line-height: 1.4;
+  }
+
+  /* ── PULLQUOTE ── */
+  .pullquote {
+    margin: 0;
+    padding: 24px 40px;
+    border-top: 2px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+    background: #ede8de;
+  }
+
+  .pullquote blockquote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 19px;
+    line-height: 1.5;
+    color: var(--ink);
+    text-align: center;
+  }
+
+  .pullquote cite {
+    display: block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: center;
+    font-style: normal;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 28px 32px;
+    border-top: 3px double var(--accent);
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333;
+  }
+
+  .footer-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 900;
+  }
+
+  .footer-brand span { color: var(--accent); }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: right;
+  }
+
+  .footer-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: #888;
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .footer-bottom {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: #555;
+    letter-spacing: 0.06em;
+    line-height: 1.6;
+  }
+
+  .routine-badge {
+    display: inline-block;
+    margin-top: 12px;
+    background: var(--accent);
+    color: white;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+  }
+
+
+  .story-source a {
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--muted);
+    transition: color 0.15s;
+  }
+  .story-source a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+  .read-more {
+    display: inline-block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent2);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent2);
+    padding-bottom: 1px;
+  }
+  .read-more:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+  @media (max-width: 600px) {
+    .wrapper { margin: 0; box-shadow: none; }
+    .masthead h1 { font-size: 38px; }
+    .stat-row { flex-direction: column; }
+    .stat-item { border-right: none; border-bottom: 1px solid var(--rule); }
+    .header-top { flex-direction: column; gap: 4px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-top">
+      <span>Edição #052</span>
+      <span>26 de junho de 2026</span>
+      <span>Diária · IA &amp; Transformação</span>
+    </div>
+    <div class="masthead">
+      <h1>CLIKDATA<span style="color:var(--accent)">·</span>DROPS</h1>
+      <p class="tagline">IA · Tecnologia · Transformação Digital · Edição Diária</p>
+    </div>
+    <div class="edition-bar">
+      <span>🌍 Mundo</span>
+      <span>🇧🇷 Brasil</span>
+      <span>📊 Números</span>
+      <span>💡 Perspectiva</span>
+    </div>
+  </header>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <p>
+      <span class="intro-dropcap">H</span>
+      ardware, regulação e reestruturação: esta edição chega num momento em que a batalha pela IA se deslocou do software para o silício, dos laboratórios para os parlamentos e das estratégias para os balanços. A OpenAI lança seu primeiro chip próprio, o governo americano interfere no lançamento do GPT-5.6, a Meta reorganiza oito mil empregos em torno da inteligência artificial — e o Brasil responde com 78% das empresas já usando IA e um plano nacional de R$ 23 bilhões. O que separa os que lideram dos que acompanham já não é acesso à tecnologia. É velocidade de decisão.
+    </p>
+  </section>
+
+  <!-- ═══ MUNDO ═══ -->
+  <div class="section-header">
+    <span class="section-flag red">🌍 Mundo</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Hardware &amp; IA</span>
+      <span class="story-source"><a href="https://cybersecuritynews.com/openai-delays-chatgpt-5-6-release/" target="_blank">CyberSecurityNews / OpenAI</a></span>
+    </div>
+    <div class="number-callout">
+      <span class="num">1°</span>
+      <span class="num-label">chip próprio<br>da OpenAI</span>
+    </div>
+    <h2>OpenAI e Broadcom revelam <em>"Jalapeño"</em> — o primeiro chip de inferência da empresa</h2>
+    <p>Em 25 de junho, a OpenAI anunciou o Jalapeño, seu primeiro Intelligence Processor: um acelerador customizado de inferência para LLMs, desenvolvido em parceria com a Broadcom. O chip promete tornar modelos de linguagem mais rápidos, confiáveis e acessíveis ao reduzir dependência de GPUs de terceiros. O movimento sinaliza que as grandes empresas de IA estão verticalizando a cadeia de valor — do modelo ao silício —, seguindo o caminho traçado por Google (TPU) e Amazon (Trainium). Para a indústria, é o sinal mais claro até agora de que a OpenAI quer controlar seu próprio destino de infraestrutura.</p>
+    <a href="https://cybersecuritynews.com/openai-delays-chatgpt-5-6-release/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Regulação</span>
+      <span class="story-source"><a href="https://cybersecuritynews.com/openai-delays-chatgpt-5-6-release/" target="_blank">CyberSecurityNews</a></span>
+    </div>
+    <h2>GPT-5.6 adiado a pedido da Casa Branca — regulação entra em cena nos EUA</h2>
+    <p>O CEO Sam Altman comunicou internamente que o GPT-5.6 será lançado inicialmente apenas para um grupo restrito de parceiros enterprise, após solicitação do governo Trump. A Casa Branca cancelou a cerimônia de assinatura de uma ordem executiva sobre IA, alegando que o texto poderia comprometer a liderança americana diante da China. O episódio inaugura uma nova fase: pela primeira vez, o governo federal americano intervém diretamente no calendário de lançamento de modelos de fronteira. Para empresas que planejam releases e integrações, o risco regulatório passou a integrar o roadmap.</p>
+    <a href="https://cybersecuritynews.com/openai-delays-chatgpt-5-6-release/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Corporativo &amp; IA</span>
+      <span class="story-source"><a href="https://www.artificialintelligence-news.com/" target="_blank">AI News / Reuters</a></span>
+    </div>
+    <h2>Meta demite 8.000 e redireciona 7.000 para IA — reestruturação em escala real</h2>
+    <p>A Meta anunciou a demissão de aproximadamente 8.000 funcionários e o remanejamento de outros 7.000 para equipes focadas em inteligência artificial, como parte de sua reestruturação estratégica de 2026. O movimento consolida o que Mark Zuckerberg vem sinalizando desde o início do ano: a empresa reorganiza seu capital humano em torno da IA generativa, agentes e infraestrutura de modelos. O caso Meta não é isolado — é o roteiro que outras grandes corporações estudam para justificar cortes e realocar headcount em direção a funções centradas em automação e IA.</p>
+    <a href="https://www.artificialintelligence-news.com/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Transformação Digital</span>
+      <span class="story-source"><a href="https://www.bcg.com/publications/2026/as-ai-investments-surge-ceos-take-the-lead" target="_blank">BCG AI Radar 2026</a></span>
+    </div>
+    <h2>BCG AI Radar: CEOs assumem o volante da IA — e 71% das empresas ampliam investimentos</h2>
+    <p>O BCG AI Radar 2026 revela que, pela primeira vez, os CEOs — e não os CTOs — lideram pessoalmente as iniciativas de inteligência artificial nas maiores empresas do mundo. A pesquisa aponta que 71% das organizações planejam aumentar gastos com IA em 2026, e que líderes que dedicam pelo menos 8 horas semanais ao tema têm probabilidade significativamente maior de gerar valor mensurável. O gap que preocupa: apenas 34% das empresas estão verdadeiramente reimaginando seus modelos de negócio — as demais apenas automatizam o que já existe, perdendo o maior potencial de retorno.</p>
+    <a href="https://www.bcg.com/publications/2026/as-ai-investments-surge-ceos-take-the-lead" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- ═══ BRASIL ═══ -->
+  <hr class="section-divider">
+  <div class="brasil-strip">Brasil: 78% das empresas já operam com IA — Deloitte State of AI 2026</div>
+
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">🇧🇷 Brasil</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stat-row">
+    <div class="stat-item">
+      <span class="stat-num">78%</span>
+      <span class="stat-label">empresas brasileiras<br>com IA em operação</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">R$23B</span>
+      <span class="stat-label">Plano Nacional de IA<br>até 2028</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">42%</span>
+      <span class="stat-label">usam IA de forma<br>transformadora</span>
+    </div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Adoção Nacional</span>
+      <span class="story-source"><a href="https://www.deloitte.com/br/pt/about/press-room/state-of-ai-2026.html" target="_blank">Deloitte · State of AI 2026</a></span>
+    </div>
+    <h2>Deloitte: Brasil entra na fase de <em>escala</em> — 78% das empresas com IA e R$ 23 bi do governo</h2>
+    <p>O relatório State of AI 2026 da Deloitte Brasil documenta uma virada histórica: 78% das empresas brasileiras já implementaram alguma forma de inteligência artificial em suas operações — crescimento de 45% em relação ao ano anterior. Desse total, 42% declaram uso transformador, não apenas incremental. No plano público, o governo federal avança com o Plano Brasileiro de Inteligência Artificial, que compromete R$ 23 bilhões até 2028 em infraestrutura, pesquisa e qualificação. O desafio que persiste: converter adoção em resultado financeiro consistente, ainda raro mesmo entre os que investem mais.</p>
+    <a href="https://www.deloitte.com/br/pt/about/press-room/state-of-ai-2026.html" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- PULLQUOTE -->
+  <div class="pullquote">
+    <blockquote>
+      "CEOs que dedicam ao menos oito horas semanais ao desenvolvimento de suas capacidades em IA têm probabilidade significativamente maior de gerar valor real com a tecnologia."
+    </blockquote>
+    <cite>— BCG AI Radar 2026 · Boston Consulting Group</cite>
+  </div>
+
+  <!-- PERSPECTIVA -->
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">💡 Perspectiva</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story" style="border-bottom:none; padding-bottom:28px;">
+    <h2>O que esses sinais significam para <em>líderes de transformação</em></h2>
+    <p style="margin-bottom:12px;">Três leituras práticas desta edição:</p>
+    <p style="margin-bottom:10px;"><strong>1. A cadeia de valor da IA está verticalizando.</strong> O chip Jalapeño da OpenAI não é só hardware — é uma declaração de independência estratégica. Empresas que dependem exclusivamente de provedores de modelo ficam expostas a decisões externas de preço, acesso e disponibilidade. Diversificar fornecedores e investir em modelos menores e especializados para uso interno deixou de ser paranoia e virou prudência executiva.</p>
+    <p style="margin-bottom:10px;"><strong>2. Regulação é agora uma variável de roadmap.</strong> O adiamento do GPT-5.6 a pedido da Casa Branca foi o primeiro caso público de intervenção governamental em lançamento de modelo de fronteira. No Brasil, o marco legal de IA ainda está em discussão — mas as empresas que mapearem hoje seus riscos regulatórios estarão à frente quando a lei vier.</p>
+    <p><strong>3. Escala sem transformação é custo disfarçado de inovação.</strong> O BCG lembra que apenas 34% das empresas estão reimaginando seus modelos de negócio com IA. No Brasil, 78% usam a tecnologia, mas 42% de forma transformadora. A diferença entre os dois grupos é quem terá vantagem competitiva sustentável — e quem apenas reduziu custos de curto prazo.</p>
+  </article>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">CLIKDATA<span>·</span>DROPS</div>
+
+      </div>
+      <div class="footer-links">
+        <a href="https://clikdata.com.br" target="_blank">clikdata.com.br</a>
+        <a href="#">Arquivos anteriores</a>
+        <a href="#">Descadastrar</a>
+        <a href="#">Contato</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      Publicado em 26 de junho de 2026 · Edição #052 · clikdata.com.br<br>
+      Este digest é gerado automaticamente com curadoria editorial humana.<br>
+      Fontes: OpenAI, Broadcom, BCG, Deloitte, CyberSecurityNews, AI News, MIT Technology Review, TechCrunch.
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
