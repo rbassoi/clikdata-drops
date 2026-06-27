@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CLIKDATA DROPS — Edição #053 - Junho 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0f0f0f;
+    --paper: #f5f0e8;
+    --accent: #c8401a;
+    --accent2: #1a3c5e;
+    --muted: #7a7060;
+    --rule: #d4cfc4;
+    --tag-bg: #1a3c5e;
+    --tag-color: #f5f0e8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #e8e3d8;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrapper {
+    max-width: 680px;
+    margin: 40px auto;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    box-shadow: 4px 4px 0 #c4bfb4, 8px 8px 0 #b4afa4;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    border-bottom: 3px double var(--ink);
+    padding: 0;
+    position: relative;
+  }
+
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 32px 10px;
+    border-bottom: 1px solid var(--rule);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  .masthead {
+    padding: 28px 32px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--ink);
+    position: relative;
+  }
+
+  .masthead::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--accent);
+    margin: 0 auto 16px;
+  }
+
+  .masthead h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1;
+    color: var(--ink);
+  }
+
+  .masthead h1 span {
+    color: var(--accent);
+  }
+
+  .tagline {
+    margin-top: 8px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .edition-bar {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 10px 32px;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  /* ── INTRO ── */
+  .intro {
+    padding: 28px 32px 24px;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .intro-dropcap {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 0.85;
+    color: var(--accent);
+    float: left;
+    margin-right: 4px;
+    margin-top: 6px;
+  }
+
+  .intro p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: #2a2520;
+  }
+
+  /* ── SECTION HEADER ── */
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 32px 0;
+    margin-bottom: 4px;
+  }
+
+  .section-flag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    background: var(--tag-bg);
+    color: var(--tag-color);
+    padding: 4px 10px;
+    white-space: nowrap;
+  }
+
+  .section-flag.red { background: var(--accent); }
+
+  .section-rule {
+    flex: 1;
+    height: 1px;
+    background: var(--ink);
+  }
+
+  /* ── STORY CARD ── */
+  .story {
+    padding: 20px 32px;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+  }
+
+  .story:last-of-type { border-bottom: none; }
+
+  .story-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .story-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 2px 7px;
+  }
+
+  .story-source {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+  }
+
+  .story h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+
+  .story h2 em {
+    font-style: italic;
+    color: var(--accent2);
+  }
+
+  .story p {
+    font-size: 14px;
+    line-height: 1.72;
+    color: #2a2520;
+  }
+
+  .story .number-callout {
+    float: right;
+    margin: 0 0 8px 18px;
+    text-align: center;
+    border: 2px solid var(--ink);
+    padding: 12px 16px;
+    min-width: 88px;
+  }
+
+  .story .number-callout .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--accent);
+    display: block;
+    line-height: 1;
+  }
+
+  .story .number-callout .num-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 4px;
+  }
+
+  /* ── DIVIDER ── */
+  .section-divider {
+    border: none;
+    border-top: 3px double var(--ink);
+    margin: 8px 32px 0;
+  }
+
+  /* ── DESTAQUE BRASIL ── */
+  .brasil-strip {
+    background: var(--accent2);
+    color: var(--paper);
+    padding: 6px 32px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .brasil-strip::before {
+    content: '▶';
+    font-size: 8px;
+  }
+
+  /* ── STAT ROW ── */
+  .stat-row {
+    display: flex;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .stat-item {
+    flex: 1;
+    padding: 20px 24px;
+    border-right: 1px solid var(--rule);
+    text-align: center;
+  }
+
+  .stat-item:last-child { border-right: none; }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--accent2);
+    display: block;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 6px;
+    line-height: 1.4;
+  }
+
+  /* ── PULLQUOTE ── */
+  .pullquote {
+    margin: 0;
+    padding: 24px 40px;
+    border-top: 2px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+    background: #ede8de;
+  }
+
+  .pullquote blockquote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 19px;
+    line-height: 1.5;
+    color: var(--ink);
+    text-align: center;
+  }
+
+  .pullquote cite {
+    display: block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: center;
+    font-style: normal;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 28px 32px;
+    border-top: 3px double var(--accent);
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333;
+  }
+
+  .footer-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 900;
+  }
+
+  .footer-brand span { color: var(--accent); }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: right;
+  }
+
+  .footer-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: #888;
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .footer-bottom {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: #555;
+    letter-spacing: 0.06em;
+    line-height: 1.6;
+  }
+
+  .routine-badge {
+    display: inline-block;
+    margin-top: 12px;
+    background: var(--accent);
+    color: white;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+  }
+
+
+  .story-source a {
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--muted);
+    transition: color 0.15s;
+  }
+  .story-source a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+  .read-more {
+    display: inline-block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent2);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent2);
+    padding-bottom: 1px;
+  }
+  .read-more:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+  @media (max-width: 600px) {
+    .wrapper { margin: 0; box-shadow: none; }
+    .masthead h1 { font-size: 38px; }
+    .stat-row { flex-direction: column; }
+    .stat-item { border-right: none; border-bottom: 1px solid var(--rule); }
+    .header-top { flex-direction: column; gap: 4px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-top">
+      <span>Edição #053</span>
+      <span>27 de junho de 2026</span>
+      <span>Diária · IA &amp; Transformação</span>
+    </div>
+    <div class="masthead">
+      <h1>CLIKDATA<span style="color:var(--accent)">·</span>DROPS</h1>
+      <p class="tagline">IA · Tecnologia · Transformação Digital · Edição Diária</p>
+    </div>
+    <div class="edition-bar">
+      <span>🌍 Mundo</span>
+      <span>🇧🇷 Brasil</span>
+      <span>📊 Números</span>
+      <span>💡 Perspectiva</span>
+    </div>
+  </header>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <p>
+      <span class="intro-dropcap">U</span>
+      ma semana que redefiniu fronteiras: o menor chip da história, um modelo de IA que penetrou sistemas classificados do governo americano, a Apple reformulando o iPhone com IA do Google e a Meta desmontando 15 mil postos para reconstruí-los em torno de inteligência artificial. No Brasil, o marco regulatório aguarda votação final — e a janela para se posicionar antes das regras chegarem está se fechando.
+    </p>
+  </section>
+
+  <!-- ═══ MUNDO ═══ -->
+  <div class="section-header">
+    <span class="section-flag red">🌍 Mundo</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Hardware &amp; IA</span>
+      <span class="story-source"><a href="https://www.technologyreview.com/2026/06/25/1139696/ibm-unveils-sub1nm-chip/" target="_blank">MIT Technology Review · IBM Research</a></span>
+    </div>
+    <div class="number-callout">
+      <span class="num">0,7nm</span>
+      <span class="num-label">menor chip<br>da história</span>
+    </div>
+    <h2>IBM quebra a barreira do nanômetro: o chip que pode <em>estender a Lei de Moore por uma década</em></h2>
+    <p>Em 25 de junho, a IBM apresentou o primeiro chip sub-1 nanômetro do mundo, com arquitetura "nanostack" 3D que empacota quase 100 bilhões de transistores num espaço do tamanho de uma unha. O ganho é expressivo: 50% mais desempenho ou 70% menos consumo de energia frente à geração anterior. Apresentado no VLSI 2026, o avanço não é só para PCs — a alta densidade de memória SRAM torna o chip ideal para workloads de IA de alta largura de banda. A IBM projeta pelo menos uma década de escalonamento adicional com o novo roadmap.</p>
+    <a href="https://newsroom.ibm.com/2026-06-25-ibm-debuts-worlds-first-sub-1-nanometer-chip-technology" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">IA &amp; Segurança</span>
+      <span class="story-source"><a href="https://www.cnbc.com/2026/06/23/anthropics-mythos-model-found-vulnerabilities-in-classified-us-government-systems-official-says.html" target="_blank">CNBC · CNN Business</a></span>
+    </div>
+    <h2>Mythos, o modelo da Anthropic que invadiu sistemas da NSA — e acaba de receber luz verde do governo</h2>
+    <p>A Anthropic revelou em abril que seu modelo Mythos era capaz de descobrir automaticamente milhares de vulnerabilidades de alto risco em sistemas operacionais e browsers. O teste com agências de inteligência dos EUA (Projeto Glasswing) confirmou: Mythos identificou falhas em sistemas classificados do governo americano em questão de horas. Após um embargo de exportação decretado em 12 de junho, o governo liberou em 26 de junho o redeploy do Claude Mythos 5 para mais de 100 organizações de infraestrutura crítica nos EUA — sinal de que a IA ofensiva se tornou também ferramenta de defesa institucional.</p>
+    <a href="https://www.cnn.com/2026/06/26/tech/anthropic-mythos-release" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Big Tech &amp; IA</span>
+      <span class="story-source"><a href="https://www.apple.com/newsroom/2026/06/apple-unveils-next-generation-of-apple-intelligence-siri-ai-and-more/" target="_blank">Apple Newsroom · Bloomberg</a></span>
+    </div>
+    <h2>WWDC 2026: Apple e Google unem forças para reinventar o Siri — <em>iOS 27 chega com IA pervasiva</em></h2>
+    <p>No maior anúncio da WWDC em anos, a Apple apresentou o iOS 27 com uma nova geração de Apple Intelligence e um Siri AI construído em parceria com o Google, rodando modelos Gemini sobre os Apple Foundation Models. O novo Siri age em apps (Messages, Music, Reminders, Shortcuts) com consciência de contexto em tempo real e histórico cross-device. O Apple Intelligence se expande para Safari, Fotos, Mail, Calendário e Casa, com geração de imagens, automações e sugestões contextuais. Disponível nos iPhones 16 em diante a partir do outono americano — atingindo potencialmente 500 milhões de dispositivos no lançamento.</p>
+    <a href="https://www.apple.com/newsroom/2026/06/apple-intelligence-brings-powerful-ai-capabilities-into-everyday-experiences/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Transformação Digital</span>
+      <span class="story-source"><a href="https://techcrunch.com/2026/06/22/the-running-list-major-tech-layoffs-in-2026-where-employers-cited-ai/" target="_blank">TechCrunch · HR Executive</a></span>
+    </div>
+    <h2>Meta demite 8 mil e redireciona 7 mil para IA — o maior redesenho de força de trabalho da Big Tech</h2>
+    <p>Em maio e junho de 2026, a Meta executou a maior reestruturação de sua história: 8.000 demissões (10% do quadro) e 7.000 transferências para equipes de IA, impactando quase um quinto de seus funcionários. Zuckerberg reconheceu erros no processo e alertou que "o sucesso não é garantido" na corrida pela IA. O CTO da empresa disse que o moral interno rivaliza com o pior momento da crise Cambridge Analytica. O CEO garantiu que não haverá novos cortes gerais em 2026 — mas o sinal para o mercado é inequívoco: nas Big Techs, a IA deixou de competir com headcount e passou a defini-lo.</p>
+    <a href="https://www.dqindia.com/news/meta-layoffs-2026-ai-restructuring-zuckerberg-mistakes-12038953" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- ═══ BRASIL ═══ -->
+  <hr class="section-divider">
+  <div class="brasil-strip">Brasil na reta final do Marco Legal da IA — o que muda para empresas</div>
+
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">🇧🇷 Brasil</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stat-row">
+    <div class="stat-item">
+      <span class="stat-num">R$23B</span>
+      <span class="stat-label">plano nacional<br>de IA até 2028</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">2026</span>
+      <span class="stat-label">votação final<br>marco legal da IA</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">6–8%</span>
+      <span class="stat-label">impacto potencial<br>no PIB brasileiro</span>
+    </div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Regulação &amp; IA</span>
+      <span class="story-source"><a href="https://agenciabrasil.ebc.com.br/economia/noticia/2026-05/regulacao-para-ia-sera-flexivel-e-tera-niveis-de-risco-diz-durigan" target="_blank">Agência Brasil · Capital Aberto</a></span>
+    </div>
+    <h2>Marco Legal da IA entra na reta final — regulação baseada em <em>risco e flexibilidade</em></h2>
+    <p>O PL 2.338/2023, aprovado pelo Senado em dezembro de 2024 e em tramitação na Câmara, deve ter sua votação final ainda em 2026. O modelo adotado é pragmático: regulação proporcional ao nível de risco da aplicação, sem exigir novas leis a cada avanço tecnológico — uma abordagem semelhante ao AI Act europeu, mas adaptada à velocidade do mercado brasileiro. Com um Plano Nacional de IA de R$ 23 bilhões até 2028 e projeções de impacto de 6% a 8% no PIB, o Brasil se posiciona como o ambiente mais dinâmico para IA da América Latina. O prazo para adaptar processos e governança antes que as regras entrem em vigor é curto — e está diminuindo.</p>
+    <a href="https://blog.cbrdoc.com.br/marco-legal-da-ia-tera-votacao-final-em-2026/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- PULLQUOTE -->
+  <div class="pullquote">
+    <blockquote>
+      "Não estamos mais num mundo onde a IA é uma camada sobre o software. Ela está se tornando o próprio substrato da computação — do hardware ao sistema operacional, do navegador ao banco."
+    </blockquote>
+    <cite>— MIT Technology Review, análise sobre o chip IBM 0,7nm · Junho de 2026</cite>
+  </div>
+
+  <!-- PERSPECTIVA -->
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">💡 Perspectiva</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story" style="border-bottom:none; padding-bottom:28px;">
+    <h2>Semana de 23–27 de junho: o que os sinais revelam para <em>líderes de transformação</em></h2>
+    <p style="margin-bottom:12px;">Quatro movimentos simultâneos definem a semana — e apontam para a mesma direção:</p>
+    <p style="margin-bottom:10px;"><strong>1. Hardware volta ao centro do tabuleiro.</strong> O chip IBM de 0,7nm não é apenas um recorde de engenharia — é um sinal de que a corrida por IA está voltando a depender de avanços físicos. Quem controla o substrato de computação controla a próxima onda de desempenho. Para empresas brasileiras, isso significa que a dependência de infraestrutura importada se aprofunda — e que a diversificação de fornecedores de nuvem e chip vira tema estratégico.</p>
+    <p style="margin-bottom:10px;"><strong>2. IA ofensiva virou IA defensiva.</strong> O caso Mythos inverte o enquadramento clássico: um modelo capaz de invadir sistemas classificados recebe luz verde justamente porque encontrar vulnerabilidades é mais valioso do que escondê-las. Para CISOs e equipes de segurança, isso significa que IA para testes de penetração deixa de ser tabu e se torna necessidade operacional.</p>
+    <p style="margin-bottom:10px;"><strong>3. A Apple democratizou a IA agêntica.</strong> Com iOS 27, um bilhão de usuários terá acesso a um assistente que age em apps, lembra contexto e executa tarefas sem prompt explícito. Isso eleva o padrão de experiência que consumidores passam a esperar de toda interface digital — incluindo as suas.</p>
+    <p><strong>4. No Brasil, o relógio regulatório está correndo.</strong> A votação do Marco Legal da IA em 2026 criará obrigações concretas de transparência, auditabilidade e gestão de risco para quem usa IA em decisões que afetam pessoas. Empresas que já têm governança de IA implementada chegam ao novo ambiente regulatório como ativos; as que não têm, chegam como passivos.</p>
+  </article>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">CLIKDATA<span>·</span>DROPS</div>
+      </div>
+      <div class="footer-links">
+        <a href="https://clikdata.com.br" target="_blank">clikdata.com.br</a>
+        <a href="#">Arquivos anteriores</a>
+        <a href="#">Descadastrar</a>
+        <a href="#">Contato</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      Publicado em 27 de junho de 2026 · Edição #053 · clikdata.com.br<br>
+      Este digest é gerado automaticamente com curadoria editorial humana.<br>
+      Fontes: MIT Technology Review, IBM Research, CNBC, CNN Business, Apple Newsroom, Bloomberg, TechCrunch, Agência Brasil, Capital Aberto.
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
