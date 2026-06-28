@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CLIKDATA DROPS — Edição #054 - Junho 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0f0f0f;
+    --paper: #f5f0e8;
+    --accent: #c8401a;
+    --accent2: #1a3c5e;
+    --muted: #7a7060;
+    --rule: #d4cfc4;
+    --tag-bg: #1a3c5e;
+    --tag-color: #f5f0e8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #e8e3d8;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrapper {
+    max-width: 680px;
+    margin: 40px auto;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    box-shadow: 4px 4px 0 #c4bfb4, 8px 8px 0 #b4afa4;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    border-bottom: 3px double var(--ink);
+    padding: 0;
+    position: relative;
+  }
+
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 32px 10px;
+    border-bottom: 1px solid var(--rule);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  .masthead {
+    padding: 28px 32px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--ink);
+    position: relative;
+  }
+
+  .masthead::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--accent);
+    margin: 0 auto 16px;
+  }
+
+  .masthead h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1;
+    color: var(--ink);
+  }
+
+  .masthead h1 span {
+    color: var(--accent);
+  }
+
+  .tagline {
+    margin-top: 8px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .edition-bar {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 10px 32px;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  /* ── INTRO ── */
+  .intro {
+    padding: 28px 32px 24px;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .intro-dropcap {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 0.85;
+    color: var(--accent);
+    float: left;
+    margin-right: 4px;
+    margin-top: 6px;
+  }
+
+  .intro p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: #2a2520;
+  }
+
+  /* ── SECTION HEADER ── */
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 32px 0;
+    margin-bottom: 4px;
+  }
+
+  .section-flag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    background: var(--tag-bg);
+    color: var(--tag-color);
+    padding: 4px 10px;
+    white-space: nowrap;
+  }
+
+  .section-flag.red { background: var(--accent); }
+
+  .section-rule {
+    flex: 1;
+    height: 1px;
+    background: var(--ink);
+  }
+
+  /* ── STORY CARD ── */
+  .story {
+    padding: 20px 32px;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+  }
+
+  .story:last-of-type { border-bottom: none; }
+
+  .story-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .story-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 2px 7px;
+  }
+
+  .story-source {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+  }
+
+  .story h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+
+  .story h2 em {
+    font-style: italic;
+    color: var(--accent2);
+  }
+
+  .story p {
+    font-size: 14px;
+    line-height: 1.72;
+    color: #2a2520;
+  }
+
+  .story .number-callout {
+    float: right;
+    margin: 0 0 8px 18px;
+    text-align: center;
+    border: 2px solid var(--ink);
+    padding: 12px 16px;
+    min-width: 88px;
+  }
+
+  .story .number-callout .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--accent);
+    display: block;
+    line-height: 1;
+  }
+
+  .story .number-callout .num-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 4px;
+  }
+
+  /* ── DIVIDER ── */
+  .section-divider {
+    border: none;
+    border-top: 3px double var(--ink);
+    margin: 8px 32px 0;
+  }
+
+  /* ── DESTAQUE BRASIL ── */
+  .brasil-strip {
+    background: var(--accent2);
+    color: var(--paper);
+    padding: 6px 32px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .brasil-strip::before {
+    content: '▶';
+    font-size: 8px;
+  }
+
+  /* ── STAT ROW ── */
+  .stat-row {
+    display: flex;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .stat-item {
+    flex: 1;
+    padding: 20px 24px;
+    border-right: 1px solid var(--rule);
+    text-align: center;
+  }
+
+  .stat-item:last-child { border-right: none; }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--accent2);
+    display: block;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 6px;
+    line-height: 1.4;
+  }
+
+  /* ── PULLQUOTE ── */
+  .pullquote {
+    margin: 0;
+    padding: 24px 40px;
+    border-top: 2px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+    background: #ede8de;
+  }
+
+  .pullquote blockquote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 19px;
+    line-height: 1.5;
+    color: var(--ink);
+    text-align: center;
+  }
+
+  .pullquote cite {
+    display: block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: center;
+    font-style: normal;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 28px 32px;
+    border-top: 3px double var(--accent);
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333;
+  }
+
+  .footer-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 900;
+  }
+
+  .footer-brand span { color: var(--accent); }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: right;
+  }
+
+  .footer-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: #888;
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .footer-bottom {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: #555;
+    letter-spacing: 0.06em;
+    line-height: 1.6;
+  }
+
+  .routine-badge {
+    display: inline-block;
+    margin-top: 12px;
+    background: var(--accent);
+    color: white;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+  }
+
+
+  .story-source a {
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--muted);
+    transition: color 0.15s;
+  }
+  .story-source a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+  .read-more {
+    display: inline-block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent2);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent2);
+    padding-bottom: 1px;
+  }
+  .read-more:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+  @media (max-width: 600px) {
+    .wrapper { margin: 0; box-shadow: none; }
+    .masthead h1 { font-size: 38px; }
+    .stat-row { flex-direction: column; }
+    .stat-item { border-right: none; border-bottom: 1px solid var(--rule); }
+    .header-top { flex-direction: column; gap: 4px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-top">
+      <span>Edição #054</span>
+      <span>28 de junho de 2026</span>
+      <span>Diária · IA &amp; Transformação</span>
+    </div>
+    <div class="masthead">
+      <h1>CLIKDATA<span style="color:var(--accent)">·</span>DROPS</h1>
+      <p class="tagline">IA · Tecnologia · Transformação Digital · Edição Diária</p>
+    </div>
+    <div class="edition-bar">
+      <span>🌍 Mundo</span>
+      <span>🇧🇷 Brasil</span>
+      <span>📊 Números</span>
+      <span>💡 Perspectiva</span>
+    </div>
+  </header>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <p>
+      <span class="intro-dropcap">P</span>
+      ela primeira vez desde seu lançamento, o ChatGPT representa menos da metade do mercado global de assistentes de IA — enquanto a OpenAI reage com o GPT-5.6 e a corrida por fronteiras tecnológicas se intensifica. No mesmo momento, 72% das grandes empresas já têm agentes autônomos em produção, mas 60% carecem de governança. E o Colorado, às vésperas do prazo histórico, reescreveu sua lei de IA do zero. A janela entre adotar e governar nunca foi tão estreita.
+    </p>
+  </section>
+
+  <!-- ═══ MUNDO ═══ -->
+  <div class="section-header">
+    <span class="section-flag red">🌍 Mundo</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Modelos &amp; Mercado</span>
+      <span class="story-source"><a href="https://www.essamamdani.com/blog/june-2026-ai-model-flood-gpt-gemini-claude" target="_blank">Essa Mamdani · LLM Stats · Sensor Tower</a></span>
+    </div>
+    <div class="number-callout">
+      <span class="num">46,4%</span>
+      <span class="num-label">ChatGPT no<br>mercado global</span>
+    </div>
+    <h2>ChatGPT abaixo de 50% pela primeira vez — e a OpenAI responde com <em>GPT-5.6</em></h2>
+    <p>O relatório State of AI 2026 da Sensor Tower registra um marco histórico: o ChatGPT caiu para 46,4% do mercado global de assistentes de IA em maio de 2026, a primeira vez abaixo de 50% desde o lançamento. O Google Gemini chegou a 27,7% e o Claude, da Anthropic, avançou para 10,3%. A OpenAI respondeu anunciando o GPT-5.6 em preview limitado — três variantes (Sol, Terra e Luna) com capacidades ampliadas em codificação, biologia e cibersegurança. O GPT-5.5 já está disponível via Microsoft Foundry. O mercado de IA deixou de ter um único dominante: a competição por participação chegou ao topo.</p>
+    <a href="https://llm-stats.com/llm-updates" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">IA Agêntica</span>
+      <span class="story-source"><a href="https://agenticaiinstitute.org/agentic-ai-enterprise-adoption-2026-governance-gap/" target="_blank">Agentic AI Institute · Tech-Insider</a></span>
+    </div>
+    <h2>72% das grandes empresas com IA agêntica em produção — mas <em>60% sem governança</em></h2>
+    <p>O Agentic AI Institute divulgou que 72% das grandes organizações globais já operam agentes de IA em produção em 2026 — um salto expressivo ante menos de 5% no ano anterior, segundo o Gartner. O mercado de IA agêntica corporativa ultrapassou US$ 9 bilhões e o retorno médio sobre o investimento nas implantações chega a 171% (192% nos EUA). O dado preocupante: 60% das empresas em produção ainda não possuem framework de governança para agentes — criando um gap estrutural entre velocidade de adoção e capacidade de controle. 100% das organizações pesquisadas declaram IA agêntica no roadmap de 2026.</p>
+    <a href="https://agenticaiinstitute.org/agentic-ai-enterprise-adoption-2026-governance-gap/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Regulação &amp; IA</span>
+      <span class="story-source"><a href="https://www.littler.com/news-analysis/asap/colorado-amends-its-artificial-intelligence-law-substantially-reducing" target="_blank">Littler · Norton Rose Fulbright</a></span>
+    </div>
+    <h2>Colorado reescreve sua lei de IA às vésperas do prazo — <em>nova abordagem foca em transparência</em></h2>
+    <p>A dois dias do prazo histórico (30 de junho de 2026), o governador do Colorado sancionou o SB26-189, que revogou e substituiu integralmente o Colorado AI Act original. A lei anterior exigia gestão de risco, avaliações de impacto anuais e obrigações extensas de reporte. A versão aprovada abandona o modelo baseado em risco e adota uma abordagem mais estreita — focada em transparência e divulgação sobre sistemas de decisão automatizada. A vigência foi adiada para 1º de janeiro de 2027. O movimento redefine o debate nos EUA: regulação de IA caminha para modelos de disclosure em vez de obrigações de processo.</p>
+    <a href="https://www.nortonrosefulbright.com/en-us/knowledge/publications/18733d31/colorado-enacts-revised-ai-law" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Infraestrutura &amp; IA</span>
+      <span class="story-source"><a href="https://tech-insider.org/agentic-ai-enterprise-2026-market-analysis/" target="_blank">Tech-Insider · Fivetran · Netskope</a></span>
+    </div>
+    <h2>Apenas 15% das empresas estão prontas para IA agêntica — <em>e a corrida por prontidão começa</em></h2>
+    <p>O Agentic AI Readiness Index 2026 da Fivetran revelou que apenas 15% das organizações estão totalmente preparadas para implantar IA agêntica em escala — mesmo com quase 60% investindo milhões no tema. O gap entre intenção e execução cria um mercado de plataformas de habilitação: a Netskope lançou o AgentSkope para segurança e redes, e a Yellow.ai apresentou o Nexus Vox, sistema de voz empresarial que clona a identidade de marca e opera em mais de 500 idiomas em menos de um segundo. A infraestrutura para agentes está sendo construída em tempo real — quem define os padrões hoje dita as regras de amanhã.</p>
+    <a href="https://agentic.ai/news" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- ═══ BRASIL ═══ -->
+  <hr class="section-divider">
+  <div class="brasil-strip">Deloitte: Brasil sai da adoção e entra na fase de escala da IA</div>
+
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">🇧🇷 Brasil</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stat-row">
+    <div class="stat-item">
+      <span class="stat-num">88%</span>
+      <span class="stat-label">executivos brasileiros<br>creem na IA como<br>motor de competitividade</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">23%</span>
+      <span class="stat-label">empresas já com IA<br>em escala de<br>produção</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">171%</span>
+      <span class="stat-label">ROI médio global<br>em IA agêntica<br>corporativa</span>
+    </div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Fase de Escala</span>
+      <span class="story-source"><a href="https://www.deloitte.com/br/pt/about/press-room/state-of-ai-2026.html" target="_blank">Deloitte Brasil · State of AI 2026</a></span>
+    </div>
+    <h2>Brasil não está mais adotando IA — <em>está escalando</em></h2>
+    <p>O relatório State of AI 2026 da Deloitte confirma o que o mercado sentia: o Brasil saiu da fase de experimentação. Enquanto 41% das empresas ainda aplicam IA em casos de uso limitados, 23% já escalaram a tecnologia para produção em diversas áreas. O dado mais revelador: 88% dos executivos brasileiros acreditam que a IA será o principal motor de competitividade até 2030 — e 90% enxergam a tecnologia como diferencial-chave em seus setores. A Deloitte aponta que eficiência operacional, atendimento ao cliente e tomada de decisão são os pilares do crescimento. Para líderes de transformação digital, o sinal é claro: o ponto de inflexão já passou — quem não escalou está ficando para trás.</p>
+    <a href="https://www.deloitte.com/br/pt/about/press-room/state-of-ai-2026.html" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- PULLQUOTE -->
+  <div class="pullquote">
+    <blockquote>
+      "A IA agêntica não é uma aposta no futuro — ela já está em produção em 72% das grandes organizações globais. A pergunta não é se adotar, mas como governar."
+    </blockquote>
+    <cite>— Agentic AI Institute, relatório de adoção empresarial · Junho de 2026</cite>
+  </div>
+
+  <!-- PERSPECTIVA -->
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">💡 Perspectiva</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story" style="border-bottom:none; padding-bottom:28px;">
+    <h2>28 de junho: o dia em que o mercado de IA <em>deixou de ter um rei</em></h2>
+    <p style="margin-bottom:12px;">Quatro sinais convergentes desta edição apontam para a mesma transformação estrutural:</p>
+    <p style="margin-bottom:10px;"><strong>1. O duopólio chegou ao fim.</strong> ChatGPT abaixo de 50% do mercado não é apenas um número — é o sinal de que o mercado de IA generativa amadureceu. Em mercados maduros, a diferenciação migra de "qual modelo usar" para "como integrá-lo melhor". Para empresas brasileiras, isso significa que a escolha de stack de IA virou decisão estratégica de médio prazo, não apenas operacional.</p>
+    <p style="margin-bottom:10px;"><strong>2. Governança é o próximo campo de batalha.</strong> Com 72% das grandes empresas em produção mas apenas 40% com governança adequada, o mercado criou um passivo sistêmico. Reguladores ao redor do mundo estão notando — como mostra a revisão do Colorado AI Act. Empresas que constroem frameworks de governança agora chegam às futuras regulações como ativo; as que não constroem, chegam como risco.</p>
+    <p style="margin-bottom:10px;"><strong>3. Prontidão é o novo diferencial.</strong> O dado da Fivetran — apenas 15% prontas — revela que a velocidade de adoção superou a capacidade de absorção. Investir em dados, integrações e cultura organizacional antes de escalar agentes é o que separa implantações com 171% de ROI das que geram apenas complexidade.</p>
+    <p><strong>4. Brasil: a fase de escala exige governança proporcional.</strong> Com 23% das empresas brasileiras já em escala e o Marco Legal da IA na reta final, o país está no momento mais crítico da jornada: grande o suficiente para ter riscos reais, mas ainda a tempo de construir as estruturas certas. Quem age agora define o padrão do setor.</p>
+  </article>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">CLIKDATA<span>·</span>DROPS</div>
+      </div>
+      <div class="footer-links">
+        <a href="https://clikdata.com.br" target="_blank">clikdata.com.br</a>
+        <a href="#">Arquivos anteriores</a>
+        <a href="#">Descadastrar</a>
+        <a href="#">Contato</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      Publicado em 28 de junho de 2026 · Edição #054 · clikdata.com.br<br>
+      Este digest é gerado automaticamente com curadoria editorial humana.<br>
+      Fontes: Sensor Tower, LLM Stats, Agentic AI Institute, Fivetran, Littler, Norton Rose Fulbright, Deloitte Brasil, TechCrunch, Gartner.
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
