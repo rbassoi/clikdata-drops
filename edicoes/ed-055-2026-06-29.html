@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CLIKDATA DROPS — Edição #055 - Junho 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0f0f0f;
+    --paper: #f5f0e8;
+    --accent: #c8401a;
+    --accent2: #1a3c5e;
+    --muted: #7a7060;
+    --rule: #d4cfc4;
+    --tag-bg: #1a3c5e;
+    --tag-color: #f5f0e8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #e8e3d8;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrapper {
+    max-width: 680px;
+    margin: 40px auto;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    box-shadow: 4px 4px 0 #c4bfb4, 8px 8px 0 #b4afa4;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    border-bottom: 3px double var(--ink);
+    padding: 0;
+    position: relative;
+  }
+
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 32px 10px;
+    border-bottom: 1px solid var(--rule);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  .masthead {
+    padding: 28px 32px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--ink);
+    position: relative;
+  }
+
+  .masthead::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--accent);
+    margin: 0 auto 16px;
+  }
+
+  .masthead h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1;
+    color: var(--ink);
+  }
+
+  .masthead h1 span {
+    color: var(--accent);
+  }
+
+  .tagline {
+    margin-top: 8px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .edition-bar {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 10px 32px;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  /* ── INTRO ── */
+  .intro {
+    padding: 28px 32px 24px;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .intro-dropcap {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 0.85;
+    color: var(--accent);
+    float: left;
+    margin-right: 4px;
+    margin-top: 6px;
+  }
+
+  .intro p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: #2a2520;
+  }
+
+  /* ── SECTION HEADER ── */
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 32px 0;
+    margin-bottom: 4px;
+  }
+
+  .section-flag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    background: var(--tag-bg);
+    color: var(--tag-color);
+    padding: 4px 10px;
+    white-space: nowrap;
+  }
+
+  .section-flag.red { background: var(--accent); }
+
+  .section-rule {
+    flex: 1;
+    height: 1px;
+    background: var(--ink);
+  }
+
+  /* ── STORY CARD ── */
+  .story {
+    padding: 20px 32px;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+  }
+
+  .story:last-of-type { border-bottom: none; }
+
+  .story-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .story-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 2px 7px;
+  }
+
+  .story-source {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+  }
+
+  .story h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+
+  .story h2 em {
+    font-style: italic;
+    color: var(--accent2);
+  }
+
+  .story p {
+    font-size: 14px;
+    line-height: 1.72;
+    color: #2a2520;
+  }
+
+  .story .number-callout {
+    float: right;
+    margin: 0 0 8px 18px;
+    text-align: center;
+    border: 2px solid var(--ink);
+    padding: 12px 16px;
+    min-width: 88px;
+  }
+
+  .story .number-callout .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--accent);
+    display: block;
+    line-height: 1;
+  }
+
+  .story .number-callout .num-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 4px;
+  }
+
+  /* ── DIVIDER ── */
+  .section-divider {
+    border: none;
+    border-top: 3px double var(--ink);
+    margin: 8px 32px 0;
+  }
+
+  /* ── DESTAQUE BRASIL ── */
+  .brasil-strip {
+    background: var(--accent2);
+    color: var(--paper);
+    padding: 6px 32px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .brasil-strip::before {
+    content: '▶';
+    font-size: 8px;
+  }
+
+  /* ── STAT ROW ── */
+  .stat-row {
+    display: flex;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .stat-item {
+    flex: 1;
+    padding: 20px 24px;
+    border-right: 1px solid var(--rule);
+    text-align: center;
+  }
+
+  .stat-item:last-child { border-right: none; }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--accent2);
+    display: block;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 6px;
+    line-height: 1.4;
+  }
+
+  /* ── PULLQUOTE ── */
+  .pullquote {
+    margin: 0;
+    padding: 24px 40px;
+    border-top: 2px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+    background: #ede8de;
+  }
+
+  .pullquote blockquote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 19px;
+    line-height: 1.5;
+    color: var(--ink);
+    text-align: center;
+  }
+
+  .pullquote cite {
+    display: block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: center;
+    font-style: normal;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 28px 32px;
+    border-top: 3px double var(--accent);
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333;
+  }
+
+  .footer-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 900;
+  }
+
+  .footer-brand span { color: var(--accent); }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: right;
+  }
+
+  .footer-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: #888;
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .footer-bottom {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: #555;
+    letter-spacing: 0.06em;
+    line-height: 1.6;
+  }
+
+  .routine-badge {
+    display: inline-block;
+    margin-top: 12px;
+    background: var(--accent);
+    color: white;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+  }
+
+
+  .story-source a {
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--muted);
+    transition: color 0.15s;
+  }
+  .story-source a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+  .read-more {
+    display: inline-block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent2);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent2);
+    padding-bottom: 1px;
+  }
+  .read-more:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+  @media (max-width: 600px) {
+    .wrapper { margin: 0; box-shadow: none; }
+    .masthead h1 { font-size: 38px; }
+    .stat-row { flex-direction: column; }
+    .stat-item { border-right: none; border-bottom: 1px solid var(--rule); }
+    .header-top { flex-direction: column; gap: 4px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-top">
+      <span>Edição #055</span>
+      <span>29 de junho de 2026</span>
+      <span>Diária · IA &amp; Transformação</span>
+    </div>
+    <div class="masthead">
+      <h1>CLIKDATA<span style="color:var(--accent)">·</span>DROPS</h1>
+      <p class="tagline">IA · Tecnologia · Transformação Digital · Edição Diária</p>
+    </div>
+    <div class="edition-bar">
+      <span>🌍 Mundo</span>
+      <span>🇧🇷 Brasil</span>
+      <span>📊 Números</span>
+      <span>💡 Perspectiva</span>
+    </div>
+  </header>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <p>
+      <span class="intro-dropcap">E</span>
+      m junho de 2026, a corrida da IA deixou de ser apenas uma batalha de modelos e passou a ser uma batalha de infraestrutura, capital e talento. Big Techs desenvolvem chips próprios em meses, não anos. Empresas reformulam quadros inteiros ao redor de equipes de IA. E no Brasil, o investimento recorde em tecnologia reafirma o país como polo estratégico da transformação digital na América Latina. Esta edição traz os cinco movimentos que você precisa monitorar esta semana.
+    </p>
+  </section>
+
+  <!-- ═══ MUNDO ═══ -->
+  <div class="section-header">
+    <span class="section-flag red">🌍 Mundo</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">IA Generativa</span>
+      <span class="story-source"><a href="https://hai.stanford.edu/news/inside-the-ai-index-12-takeaways-from-the-2026-report" target="_blank">Stanford HAI · AI Index 2026</a></span>
+    </div>
+    <div class="number-callout">
+      <span class="num">88%</span>
+      <span class="num-label">organizações<br>com IA adotada</span>
+    </div>
+    <h2>Stanford AI Index 2026: <em>88% das organizações</em> adotaram IA — e a diferença EUA-China caiu para 2,7%</h2>
+    <p>O Stanford Human-Centered AI Institute divulgou o AI Index 2026 com um dado que redefine o patamar da corrida tecnológica global: 88% das organizações já adotaram alguma forma de IA — um salto sem precedentes em apenas um ciclo. O desempenho em benchmarks de programação passou de 60% para quase 100% em apenas um ano. O dado mais crítico para estrategistas brasileiros, porém, é a paridade competitiva: a diferença entre os melhores modelos ocidentais e os chineses caiu para 2,7%. A janela de diferenciação está se fechando — e quem não acelerou sua estratégia de IA até o final de 2026 corre risco de ficar do lado errado dessa curva.</p>
+    <a href="https://hai.stanford.edu/news/inside-the-ai-index-12-takeaways-from-the-2026-report" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Infraestrutura de IA</span>
+      <span class="story-source"><a href="https://techcrunch.com/2026/06/24/openai-unveils-its-first-custom-chip-built-by-broadcom/" target="_blank">TechCrunch</a></span>
+    </div>
+    <h2>OpenAI e Broadcom revelam chip <em>Jalapeño</em> — desenvolvido em 9 meses com auxílio da própria IA</h2>
+    <p>A OpenAI e a Broadcom apresentaram o Jalapeño, o primeiro chip customizado da OpenAI, projetado exclusivamente para inferência de modelos de linguagem de grande escala. O chip foi concebido, projetado e levado à fabricação em apenas nove meses — possivelmente o ciclo mais rápido da história dos semicondutores de alto desempenho — e a própria IA da OpenAI acelerou o processo de engenharia. O movimento sinaliza que as Big Techs estão construindo infraestrutura proprietária para reduzir a dependência da Nvidia, o que deverá alterar dinâmicas de custo e acesso à tecnologia nos próximos anos. Para CIOs e CTOs, o alerta é claro: a IA que você usa amanhã será rodada em hardware que a própria IA ajudou a projetar.</p>
+    <a href="https://techcrunch.com/2026/06/24/openai-unveils-its-first-custom-chip-built-by-broadcom/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Mercado</span>
+      <span class="story-source"><a href="https://finance.yahoo.com/sectors/technology/articles/meta-layoffs-2026-8-000-114209703.html" target="_blank">Yahoo Finance / Quartz</a></span>
+    </div>
+    <h2>Meta corta 8.000 empregos e reassina 7.000 para times de IA — <em>moral interno no pior nível em 20 anos</em></h2>
+    <p>A Meta iniciou a maior reestruturação de sua história recente: 8.000 demissões e 7.000 remanejamentos para equipes de IA Aplicada, afetando quase 20% do quadro total. O CTO Andrew Bosworth admitiu publicamente que a liderança fez um "trabalho péssimo" ao comunicar a visão de IA para os funcionários. Para CHROs e líderes de transformação digital no Brasil, o caso é um alerta preciso: reestruturações aceleradas por IA falham quando a comunicação interna e a gestão de talentos não acompanham o ritmo da estratégia tecnológica. O resultado técnico pode ser excelente enquanto o capital humano desmorona.</p>
+    <a href="https://finance.yahoo.com/sectors/technology/articles/meta-layoffs-2026-8-000-114209703.html" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- ═══ BRASIL ═══ -->
+  <hr class="section-divider">
+  <div class="brasil-strip">Brasil registra recordes de investimento e conexões IoT em junho de 2026</div>
+
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">🇧🇷 Brasil</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stat-row">
+    <div class="stat-item">
+      <span class="stat-num">R$57bi</span>
+      <span class="stat-label">investimento Mercado<br>Livre no Brasil em 2026</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">30M</span>
+      <span class="stat-label">conexões IoT<br>ativas no Brasil</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">88%</span>
+      <span class="stat-label">empresas projetam<br>crescimento IoT em 2026</span>
+    </div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Brasil</span>
+      <span class="story-source"><a href="https://exame.com/invest/mercados/mercado-livre-anuncia-investimento-de-r-57-bilhoes-no-brasil-em-2026/" target="_blank">Exame</a></span>
+    </div>
+    <h2>Mercado Livre anuncia <em>R$ 57 bilhões</em> no Brasil em 2026 — recorde histórico com foco em logística e Mercado Pago</h2>
+    <p>O Mercado Livre confirmou o maior aporte de sua história no Brasil: R$ 57 bilhões em 2026, alta de 50% sobre os R$ 38 bilhões investidos no ano anterior. Os recursos serão direcionados à expansão logística — com abertura de 14 novos centros de distribuição fulfilment —, ao fortalecimento do marketplace e ao crescimento do Mercado Pago. A empresa também prevê a criação de 10.000 novos empregos. O dado estratégico: o Brasil representa 52% da receita global da companhia, reafirmando o potencial do mercado digital brasileiro. Para líderes de e-commerce, fintech e logística, o sinal é que o ciclo de consolidação está acelerando e a escala importa agora.</p>
+    <a href="https://exame.com/invest/mercados/mercado-livre-anuncia-investimento-de-r-57-bilhoes-no-brasil-em-2026/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story" style="border-bottom:none;">
+    <div class="story-meta">
+      <span class="story-tag">Transformação Digital</span>
+      <span class="story-source"><a href="https://www.gov.br/mcom/pt-br/noticias/2026/junho-1/internet-das-coisas-avanca-no-brasil-e-impulsiona-transformacao-digital-em-setores-estrategicos" target="_blank">Ministério das Comunicações</a></span>
+    </div>
+    <h2>IoT avança para 30 milhões de conexões no Brasil — próxima onda é a convergência com <em>IA e 5G</em></h2>
+    <p>Relatório do Ministério das Comunicações aponta que o Brasil já conta com 30 milhões de conexões IoT — 11% do total móvel — e que 88% do mercado projeta crescimento contínuo em 2026. A Indústria 4.0 lidera as aplicações (17%), seguida por utilities e logística. O ponto de inflexão que 67,2% dos especialistas indicam: a próxima onda será a convergência IoT + IA, combinada com edge computing e 5G, que já cobre 1.500 municípios brasileiros. Empresas que não iniciarem essa jornada em 2026 correm risco de ficar fora do ciclo de eficiência operacional que está se formando — especialmente nos setores industrial, agrícola e de infraestrutura.</p>
+    <a href="https://www.gov.br/mcom/pt-br/noticias/2026/junho-1/internet-das-coisas-avanca-no-brasil-e-impulsiona-transformacao-digital-em-setores-estrategicos" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- PULLQUOTE -->
+  <div class="pullquote">
+    <blockquote>
+      "A velocidade com que a IA está sendo integrada à infraestrutura produtiva global não tem precedentes históricos. Empresas que ainda tratam isso como projeto-piloto estão cometendo um erro estratégico grave."
+    </blockquote>
+    <cite>— Análise editorial Clikdata Drops · 29 de junho de 2026</cite>
+  </div>
+
+  <!-- PERSPECTIVA -->
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">💡 Perspectiva</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story" style="border-bottom:none; padding-bottom:28px;">
+    <h2>O que esses sinais significam para <em>líderes de transformação</em></h2>
+    <p style="margin-bottom:12px;">Três leituras práticas desta edição:</p>
+    <p style="margin-bottom:10px;"><strong>1. Hardware é a nova fronteira da vantagem competitiva em IA.</strong> O chip Jalapeño da OpenAI, desenvolvido em 9 meses, muda o jogo: quem controla o hardware controla o custo e a velocidade de inferência. Para empresas que ainda dependem 100% de APIs de terceiros para suas soluções de IA, o risco de lock-in e repricing nunca foi tão concreto. Diversificação de fornecedores de IA é pauta de boardroom agora.</p>
+    <p style="margin-bottom:10px;"><strong>2. Reestruturações por IA exigem liderança humana proporcional.</strong> O caso Meta é um manual do que não fazer: a estratégia tecnológica avançou mais rápido do que a comunicação e a gestão de cultura. No Brasil, onde o mercado de talentos em IA já é disputadíssimo, perder engenheiros sêniores por falta de clareza estratégica pode custar meses de vantagem competitiva.</p>
+    <p><strong>3. IoT + IA + 5G = a próxima grande onda de produtividade industrial no Brasil.</strong> Com 30 milhões de conexões IoT e 5G cobrindo 1.500 municípios, o Brasil tem a infraestrutura base para liderar a industrialização inteligente na América Latina. O diferencial será a velocidade de integração com IA no edge. Empresas industriais, do agronegócio e de utilities que não tiverem esse roadmap em 2026 serão as incumbentes que os disruption players vão atacar em 2027.</p>
+  </article>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">CLIKDATA<span>·</span>DROPS</div>
+
+      </div>
+      <div class="footer-links">
+        <a href="https://clikdata.com.br" target="_blank">clikdata.com.br</a>
+        <a href="#">Arquivos anteriores</a>
+        <a href="#">Descadastrar</a>
+        <a href="#">Contato</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      Publicado em 29 de junho de 2026 · Edição #055 · clikdata.com.br<br>
+      Este digest é gerado automaticamente com curadoria editorial humana.<br>
+      Fontes: Stanford HAI, TechCrunch, Yahoo Finance, Exame, Ministério das Comunicações.
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
