@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CLIKDATA DROPS — Edição #057 - Julho 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0f0f0f;
+    --paper: #f5f0e8;
+    --accent: #c8401a;
+    --accent2: #1a3c5e;
+    --muted: #7a7060;
+    --rule: #d4cfc4;
+    --tag-bg: #1a3c5e;
+    --tag-color: #f5f0e8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #e8e3d8;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrapper {
+    max-width: 680px;
+    margin: 40px auto;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    box-shadow: 4px 4px 0 #c4bfb4, 8px 8px 0 #b4afa4;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    border-bottom: 3px double var(--ink);
+    padding: 0;
+    position: relative;
+  }
+
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 32px 10px;
+    border-bottom: 1px solid var(--rule);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  .masthead {
+    padding: 28px 32px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--ink);
+    position: relative;
+  }
+
+  .masthead::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--accent);
+    margin: 0 auto 16px;
+  }
+
+  .masthead h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1;
+    color: var(--ink);
+  }
+
+  .masthead h1 span {
+    color: var(--accent);
+  }
+
+  .tagline {
+    margin-top: 8px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .edition-bar {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 10px 32px;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  /* ── INTRO ── */
+  .intro {
+    padding: 28px 32px 24px;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .intro-dropcap {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 0.85;
+    color: var(--accent);
+    float: left;
+    margin-right: 4px;
+    margin-top: 6px;
+  }
+
+  .intro p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: #2a2520;
+  }
+
+  /* ── SECTION HEADER ── */
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 32px 0;
+    margin-bottom: 4px;
+  }
+
+  .section-flag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    background: var(--tag-bg);
+    color: var(--tag-color);
+    padding: 4px 10px;
+    white-space: nowrap;
+  }
+
+  .section-flag.red { background: var(--accent); }
+
+  .section-rule {
+    flex: 1;
+    height: 1px;
+    background: var(--ink);
+  }
+
+  /* ── STORY CARD ── */
+  .story {
+    padding: 20px 32px;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+  }
+
+  .story:last-of-type { border-bottom: none; }
+
+  .story-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .story-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 2px 7px;
+  }
+
+  .story-source {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+  }
+
+  .story h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+
+  .story h2 em {
+    font-style: italic;
+    color: var(--accent2);
+  }
+
+  .story p {
+    font-size: 14px;
+    line-height: 1.72;
+    color: #2a2520;
+  }
+
+  .story .number-callout {
+    float: right;
+    margin: 0 0 8px 18px;
+    text-align: center;
+    border: 2px solid var(--ink);
+    padding: 12px 16px;
+    min-width: 88px;
+  }
+
+  .story .number-callout .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--accent);
+    display: block;
+    line-height: 1;
+  }
+
+  .story .number-callout .num-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 4px;
+  }
+
+  /* ── DIVIDER ── */
+  .section-divider {
+    border: none;
+    border-top: 3px double var(--ink);
+    margin: 8px 32px 0;
+  }
+
+  /* ── DESTAQUE BRASIL ── */
+  .brasil-strip {
+    background: var(--accent2);
+    color: var(--paper);
+    padding: 6px 32px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .brasil-strip::before {
+    content: '▶';
+    font-size: 8px;
+  }
+
+  /* ── STAT ROW ── */
+  .stat-row {
+    display: flex;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .stat-item {
+    flex: 1;
+    padding: 20px 24px;
+    border-right: 1px solid var(--rule);
+    text-align: center;
+  }
+
+  .stat-item:last-child { border-right: none; }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--accent2);
+    display: block;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 6px;
+    line-height: 1.4;
+  }
+
+  /* ── PULLQUOTE ── */
+  .pullquote {
+    margin: 0;
+    padding: 24px 40px;
+    border-top: 2px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+    background: #ede8de;
+  }
+
+  .pullquote blockquote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 19px;
+    line-height: 1.5;
+    color: var(--ink);
+    text-align: center;
+  }
+
+  .pullquote cite {
+    display: block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: center;
+    font-style: normal;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 28px 32px;
+    border-top: 3px double var(--accent);
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333;
+  }
+
+  .footer-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 900;
+  }
+
+  .footer-brand span { color: var(--accent); }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: right;
+  }
+
+  .footer-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: #888;
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .footer-bottom {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: #555;
+    letter-spacing: 0.06em;
+    line-height: 1.6;
+  }
+
+  .routine-badge {
+    display: inline-block;
+    margin-top: 12px;
+    background: var(--accent);
+    color: white;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+  }
+
+
+  .story-source a {
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--muted);
+    transition: color 0.15s;
+  }
+  .story-source a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+  .read-more {
+    display: inline-block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent2);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent2);
+    padding-bottom: 1px;
+  }
+  .read-more:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+  @media (max-width: 600px) {
+    .wrapper { margin: 0; box-shadow: none; }
+    .masthead h1 { font-size: 38px; }
+    .stat-row { flex-direction: column; }
+    .stat-item { border-right: none; border-bottom: 1px solid var(--rule); }
+    .header-top { flex-direction: column; gap: 4px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-top">
+      <span>Edição #057</span>
+      <span>1 de julho de 2026</span>
+      <span>Diária · IA &amp; Transformação</span>
+    </div>
+    <div class="masthead">
+      <h1>CLIKDATA<span style="color:var(--accent)">·</span>DROPS</h1>
+      <p class="tagline">IA · Tecnologia · Transformação Digital · Edição Diária</p>
+    </div>
+    <div class="edition-bar">
+      <span>🌍 Mundo</span>
+      <span>🇧🇷 Brasil</span>
+      <span>📊 Números</span>
+      <span>💡 Perspectiva</span>
+    </div>
+  </header>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <p>
+      <span class="intro-dropcap">A</span>
+      corrida por infraestrutura de IA ganha contornos bilionários logo na abertura de julho de 2026: a SpaceX passa a faturar até US$ 6,3 bilhões alugando capacidade computacional bruta a uma startup rival de modelos, a OpenAI apresenta seu primeiro chip proprietário em parceria com a Broadcom, e um estudo inédito reacende o debate sobre empregos — mostrando que as empresas mais agressivas na adoção de IA estão contratando mais, não menos. No Brasil, a lacuna entre ambição e governança de agentes autônomos aparece nos números, enquanto o Nubank aposta R$ 45 bilhões na tecnologia. Cinco sinais que abrem o segundo semestre.
+    </p>
+  </section>
+
+  <!-- ═══ MUNDO ═══ -->
+  <div class="section-header">
+    <span class="section-flag red">🌍 Mundo</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Infraestrutura &amp; Compute</span>
+      <span class="story-source"><a href="https://www.cnbc.com/2026/06/22/spacex-ai-colossus-data-center-reflection.html" target="_blank">CNBC</a></span>
+    </div>
+    <div class="number-callout">
+      <span class="num">$6,3B</span>
+      <span class="num-label">contrato de compute<br>SpaceX–Reflection</span>
+    </div>
+    <h2>SpaceX vira fornecedora de compute para IA — contrato de <em>US$ 6,3 bilhões</em> com startup rival de modelos</h2>
+    <p>A partir de 1º de julho de 2026, a startup de IA open-source Reflection passa a pagar US$ 150 milhões por mês à SpaceX por acesso a capacidade computacional bruta — chips Nvidia GB300 hospedados no data center Colossus 2, em Memphis. Se o contrato correr até 2029, o valor total pode chegar a US$ 6,3 bilhões. Fundada por ex-pesquisadores do Google DeepMind, incluindo um dos criadores do AlphaGo, a Reflection ganha acesso imediato a infraestrutura de ponta sem precisar construir data centers próprios. Para a SpaceX, o acordo confirma a Colossus como plataforma comercial de compute — somando-se a contratos prévios com Anthropic, Google e Cursor. A linha entre empresas aeroespaciais e provedoras de nuvem de IA está desaparecendo.</p>
+    <a href="https://www.cnbc.com/2026/06/22/spacex-ai-colossus-data-center-reflection.html" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Trabalho &amp; IA</span>
+      <span class="story-source"><a href="https://techcrunch.com/2026/06/29/the-ai-jobs-debate-just-got-messier/" target="_blank">TechCrunch</a></span>
+    </div>
+    <h2>Estudo inédito desafia narrativa do apocalipse do emprego: quem mais investe em IA <em>contrata mais</em></h2>
+    <p>Um levantamento da Ramp com a Revelio Labs, cruzando dados reais de gastos em IA de 21.559 empresas americanas, encontrou o oposto do que se temia: as chamadas "adotantes de alta intensidade" — que gastam em média US$ 30 por funcionário/mês em IA nos primeiros três meses — registraram alta de 10,2% no headcount total, e de 12% nas contratações de nível de entrada, justamente o grupo apontado como mais vulnerável em relatórios anteriores. O próprio estudo alerta para um viés: a amostra é dominada por empresas de tecnologia com forte apoio de venture capital, que já cresciam rapidamente antes da IA. Ainda assim, o dado reabre a discussão sobre causalidade entre adoção de IA e disrupção do mercado de trabalho.</p>
+    <a href="https://techcrunch.com/2026/06/29/the-ai-jobs-debate-just-got-messier/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Chips &amp; Infraestrutura</span>
+      <span class="story-source"><a href="https://techcrunch.com/2026/06/24/openai-unveils-its-first-custom-chip-built-by-broadcom/" target="_blank">TechCrunch</a></span>
+    </div>
+    <h2>OpenAI revela <em>Jalapeño</em>, seu primeiro chip proprietário — parceria com Broadcom corta custo de inferência pela metade</h2>
+    <p>A OpenAI e a Broadcom apresentaram o Jalapeño, o primeiro acelerador de IA projetado do zero pela OpenAI para otimizar inferência de modelos de linguagem em larga escala. Desenvolvido em um ciclo acelerado de apenas nove meses — com uso dos próprios modelos da OpenAI para acelerar o design do chip —, o Jalapeño promete desempenho por watt substancialmente superior ao estado da arte atual, com a Bloomberg apontando redução de cerca de 50% no custo de inferência frente a GPUs da Nvidia. O chip entra em produção no fim de 2026, com expansão prevista para os anos seguintes. A OpenAI se junta a Google, Apple e SpaceX na corrida por silício proprietário — um movimento que reduz dependência de fornecedores únicos e reformula a economia da IA em escala.</p>
+    <a href="https://techcrunch.com/2026/06/24/openai-unveils-its-first-custom-chip-built-by-broadcom/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- ═══ BRASIL ═══ -->
+  <hr class="section-divider">
+  <div class="brasil-strip">Governança de agentes de IA não acompanha a velocidade da adoção no Brasil</div>
+
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">🇧🇷 Brasil</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stat-row">
+    <div class="stat-item">
+      <span class="stat-num">7–8%</span>
+      <span class="stat-label">empresas com maturidade<br>em governança de agentes IA</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">40%</span>
+      <span class="stat-label">projetos de IA agêntica<br>abandonados até 2027 (Gartner)</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">R$45bi</span>
+      <span class="stat-label">investimento do Nubank<br>em IA no Brasil em 2026</span>
+    </div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Governança de IA</span>
+      <span class="story-source"><a href="https://www.ey.com/pt_br/newsroom/2026/05/gerir-milhares-agentes-ia-empresas-adotam-novo-modelo-governanca" target="_blank">EY Brasil</a></span>
+    </div>
+    <h2>Só <em>7% a 8%</em> das empresas brasileiras têm maturidade real em governança de agentes de IA</h2>
+    <p>Entre abril e maio de 2026, análises independentes da EY Brasil, do Gartner e da Deloitte convergiram para o mesmo diagnóstico: apenas entre 7% e 8% das empresas no país demonstram maturidade efetiva na governança de agentes de IA — mesmo com a automação agêntica já consolidada como prioridade estratégica para 62% dos executivos consultados. O Gartner projeta que 40% dos projetos de IA agêntica em andamento serão descontinuados até 2027 por falta de controle operacional. Gerir "exércitos" de agentes autônomos exige um modelo de governança novo — com auditoria contínua, rastreabilidade de decisões e limites claros de autonomia — que a maioria das empresas brasileiras ainda não implementou.</p>
+    <a href="https://www.ey.com/pt_br/newsroom/2026/05/gerir-milhares-agentes-ia-empresas-adotam-novo-modelo-governanca" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story" style="border-bottom:none;">
+    <div class="story-meta">
+      <span class="story-tag">Investimento Corporativo</span>
+      <span class="story-source"><a href="https://international.nubank.com.br/pt-br/companhia/nubank-detalha-estrategia-de-transformacao-com-ia-baseada-em-dados-modelos-fundacionais-e-aconselhamento-financeiro-democratizado/" target="_blank">Nubank</a></span>
+    </div>
+    <h2>Nubank aposta <em>R$ 45 bilhões</em> em IA como camada estratégica do crédito</h2>
+    <p>O Nubank detalhou, no Nu Videocast, sua estratégia de inteligência artificial para 2026: dados proprietários, modelos fundacionais e alta densidade de talento técnico como motor de decisões de crédito, experiência do cliente e operações internas. A empresa confirmou plano de investir R$ 45 bilhões no Brasil ao longo do ano — parte destinada ao desenvolvimento de plataformas de crédito baseadas em IA e ao lançamento de um assistente financeiro pessoal com recomendações personalizadas de gastos, crédito e investimentos. O movimento reforça o Brasil como mercado central de crescimento do banco digital e ilustra como instituições financeiras locais tratam IA não como piloto, mas como infraestrutura de decisão em escala real.</p>
+    <a href="https://international.nubank.com.br/pt-br/companhia/nubank-detalha-estrategia-de-transformacao-com-ia-baseada-em-dados-modelos-fundacionais-e-aconselhamento-financeiro-democratizado/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- PULLQUOTE -->
+  <div class="pullquote">
+    <blockquote>
+      "Quando uma empresa de foguetes fatura bilhões alugando capacidade computacional e o maior banco digital do Brasil aposta R$ 45 bilhões em modelos próprios, fica claro: a infraestrutura de IA virou o novo campo de batalha competitivo — não os modelos em si."
+    </blockquote>
+    <cite>— Análise editorial Clikdata Drops · 1 de julho de 2026</cite>
+  </div>
+
+  <!-- PERSPECTIVA -->
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">💡 Perspectiva</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story" style="border-bottom:none; padding-bottom:28px;">
+    <h2>O que esses sinais significam para <em>líderes de transformação</em></h2>
+    <p style="margin-bottom:12px;">Três leituras práticas para abrir o segundo semestre de 2026:</p>
+    <p style="margin-bottom:10px;"><strong>1. Infraestrutura virou o campo de batalha real.</strong> Entre o contrato bilionário de compute da SpaceX e o chip proprietário da OpenAI, a competição em IA deslocou-se dos modelos de linguagem para quem controla capacidade computacional e silício. Empresas que dependem inteiramente de provedores terceirizados de infraestrutura devem diversificar contratos e monitorar de perto custos de acesso — a corrida por compute não vai ficar mais barata.</p>
+    <p style="margin-bottom:10px;"><strong>2. O dado sobre emprego pede leitura cuidadosa — não conclusão precipitada.</strong> O estudo Ramp/Revelio Labs mostra que adotantes intensivos de IA contratam mais, inclusive em nível de entrada. Mas a amostra é enviesada para empresas de tecnologia já em crescimento acelerado. A lição para líderes: métricas de headcount isoladas não provam causalidade — o indicador que realmente importa é produtividade por função, medida internamente.</p>
+    <p><strong>3. Governança de agentes é o gargalo que vai definir 2027 no Brasil.</strong> Com apenas 7% a 8% das empresas brasileiras maduras em governança de IA agêntica — e o Gartner projetando abandono de 40% dos projetos até 2027 — enquanto o Nubank injeta R$ 45 bilhões na tecnologia, a distância entre quem investe e quem governa nunca esteve tão clara. Instituir auditoria, rastreabilidade e limites de autonomia agora é o que separa escalar de descartar o investimento em 18 meses.</p>
+  </article>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">CLIKDATA<span>·</span>DROPS</div>
+      </div>
+      <div class="footer-links">
+        <a href="https://clikdata.com.br" target="_blank">clikdata.com.br</a>
+        <a href="#">Arquivos anteriores</a>
+        <a href="#">Descadastrar</a>
+        <a href="#">Contato</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      Publicado em 1 de julho de 2026 · Edição #057 · clikdata.com.br<br>
+      Este digest é gerado automaticamente com curadoria editorial humana.<br>
+      Fontes: CNBC, TechCrunch, Ramp, Revelio Labs, EY Brasil, Gartner, Deloitte, Nubank.
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
