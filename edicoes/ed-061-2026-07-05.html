@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CLIKDATA DROPS — Edição #061 - Julho 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0f0f0f;
+    --paper: #f5f0e8;
+    --accent: #c8401a;
+    --accent2: #1a3c5e;
+    --muted: #7a7060;
+    --rule: #d4cfc4;
+    --tag-bg: #1a3c5e;
+    --tag-color: #f5f0e8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #e8e3d8;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrapper {
+    max-width: 680px;
+    margin: 40px auto;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    box-shadow: 4px 4px 0 #c4bfb4, 8px 8px 0 #b4afa4;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    border-bottom: 3px double var(--ink);
+    padding: 0;
+    position: relative;
+  }
+
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 32px 10px;
+    border-bottom: 1px solid var(--rule);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  .masthead {
+    padding: 28px 32px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--ink);
+    position: relative;
+  }
+
+  .masthead::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--accent);
+    margin: 0 auto 16px;
+  }
+
+  .masthead h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1;
+    color: var(--ink);
+  }
+
+  .masthead h1 span {
+    color: var(--accent);
+  }
+
+  .tagline {
+    margin-top: 8px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .edition-bar {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 10px 32px;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  /* ── INTRO ── */
+  .intro {
+    padding: 28px 32px 24px;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .intro-dropcap {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 0.85;
+    color: var(--accent);
+    float: left;
+    margin-right: 4px;
+    margin-top: 6px;
+  }
+
+  .intro p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: #2a2520;
+  }
+
+  /* ── SECTION HEADER ── */
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 32px 0;
+    margin-bottom: 4px;
+  }
+
+  .section-flag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    background: var(--tag-bg);
+    color: var(--tag-color);
+    padding: 4px 10px;
+    white-space: nowrap;
+  }
+
+  .section-flag.red { background: var(--accent); }
+
+  .section-rule {
+    flex: 1;
+    height: 1px;
+    background: var(--ink);
+  }
+
+  /* ── STORY CARD ── */
+  .story {
+    padding: 20px 32px;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+  }
+
+  .story:last-of-type { border-bottom: none; }
+
+  .story-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .story-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 2px 7px;
+  }
+
+  .story-source {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+  }
+
+  .story h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+
+  .story h2 em {
+    font-style: italic;
+    color: var(--accent2);
+  }
+
+  .story p {
+    font-size: 14px;
+    line-height: 1.72;
+    color: #2a2520;
+  }
+
+  .story .number-callout {
+    float: right;
+    margin: 0 0 8px 18px;
+    text-align: center;
+    border: 2px solid var(--ink);
+    padding: 12px 16px;
+    min-width: 88px;
+  }
+
+  .story .number-callout .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--accent);
+    display: block;
+    line-height: 1;
+  }
+
+  .story .number-callout .num-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 4px;
+  }
+
+  /* ── DIVIDER ── */
+  .section-divider {
+    border: none;
+    border-top: 3px double var(--ink);
+    margin: 8px 32px 0;
+  }
+
+  /* ── DESTAQUE BRASIL ── */
+  .brasil-strip {
+    background: var(--accent2);
+    color: var(--paper);
+    padding: 6px 32px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .brasil-strip::before {
+    content: '▶';
+    font-size: 8px;
+  }
+
+  /* ── STAT ROW ── */
+  .stat-row {
+    display: flex;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .stat-item {
+    flex: 1;
+    padding: 20px 24px;
+    border-right: 1px solid var(--rule);
+    text-align: center;
+  }
+
+  .stat-item:last-child { border-right: none; }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--accent2);
+    display: block;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 6px;
+    line-height: 1.4;
+  }
+
+  /* ── PULLQUOTE ── */
+  .pullquote {
+    margin: 0;
+    padding: 24px 40px;
+    border-top: 2px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+    background: #ede8de;
+  }
+
+  .pullquote blockquote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 19px;
+    line-height: 1.5;
+    color: var(--ink);
+    text-align: center;
+  }
+
+  .pullquote cite {
+    display: block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: center;
+    font-style: normal;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 28px 32px;
+    border-top: 3px double var(--accent);
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333;
+  }
+
+  .footer-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 900;
+  }
+
+  .footer-brand span { color: var(--accent); }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: right;
+  }
+
+  .footer-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: #888;
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .footer-bottom {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: #555;
+    letter-spacing: 0.06em;
+    line-height: 1.6;
+  }
+
+  .routine-badge {
+    display: inline-block;
+    margin-top: 12px;
+    background: var(--accent);
+    color: white;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+  }
+
+
+  .story-source a {
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--muted);
+    transition: color 0.15s;
+  }
+  .story-source a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+  .read-more {
+    display: inline-block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent2);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent2);
+    padding-bottom: 1px;
+  }
+  .read-more:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+  @media (max-width: 600px) {
+    .wrapper { margin: 0; box-shadow: none; }
+    .masthead h1 { font-size: 38px; }
+    .stat-row { flex-direction: column; }
+    .stat-item { border-right: none; border-bottom: 1px solid var(--rule); }
+    .header-top { flex-direction: column; gap: 4px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-top">
+      <span>Edição #061</span>
+      <span>5 de julho de 2026</span>
+      <span>Diária · IA &amp; Transformação</span>
+    </div>
+    <div class="masthead">
+      <h1>CLIKDATA<span style="color:var(--accent)">·</span>DROPS</h1>
+      <p class="tagline">IA · Tecnologia · Transformação Digital · Edição Diária</p>
+    </div>
+    <div class="edition-bar">
+      <span>🌍 Mundo</span>
+      <span>🇧🇷 Brasil</span>
+      <span>📊 Números</span>
+      <span>💡 Perspectiva</span>
+    </div>
+  </header>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <p>
+      <span class="intro-dropcap">U</span>
+      Uma falha crítica no LiteLLM, gateway de IA usado por empresas ao redor do mundo, expôs chaves de API de provedores como Anthropic e OpenAI e entrou no catálogo de vulnerabilidades exploradas da CISA. A Tesla, do outro lado do espectro, decidiu apertar o cinto: a partir de 6 de julho, limita o gasto de cada funcionário com ferramentas de IA a US$ 200 por semana. Em Genebra, a ONU abre nesta segunda e terça o primeiro Diálogo Global sobre Governança de IA. No Brasil, o Itaú leva a abertura de conta PJ para o WhatsApp com IA generativa, enquanto o Nubank anuncia R$ 45 bilhões em investimentos para 2026 — boa parte em plataformas de crédito com inteligência artificial. Cinco sinais do dia.
+    </p>
+  </section>
+
+  <!-- ═══ MUNDO ═══ -->
+  <div class="section-header">
+    <span class="section-flag red">🌍 Mundo</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Segurança de IA</span>
+      <span class="story-source"><a href="https://thehackernews.com/2026/06/litellm-flaw-cve-2026-42271-exploited.html" target="_blank">The Hacker News</a></span>
+    </div>
+    <div class="number-callout">
+      <span class="num">10.0</span>
+      <span class="num-label">CVSS da falha<br>combinada no LiteLLM</span>
+    </div>
+    <h2>Falha crítica no LiteLLM expõe chaves de API de <em>Anthropic e OpenAI</em></h2>
+    <p>A CISA confirmou exploração ativa da CVE-2026-42271, uma vulnerabilidade de injeção de comando nos endpoints de teste do protocolo MCP do LiteLLM — gateway de IA usado por milhares de empresas para gerenciar acesso a modelos de linguagem. Pesquisadores encadearam a falha com a CVE-2026-48710, um bypass de autenticação no Starlette, alcançando execução remota de código não autenticada com CVSS combinado de 10.0. O ataque permite rodar comandos arbitrários no host do proxy, roubar credenciais de provedores de IA e se mover lateralmente para sistemas conectados. A correção exige atualizar para LiteLLM 1.83.7+ e Starlette 1.0.1+ — e reforça que a infraestrutura que conecta empresas a modelos de IA virou alvo prioritário de ataque.</p>
+    <a href="https://thehackernews.com/2026/06/litellm-flaw-cve-2026-42271-exploited.html" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Custos de IA</span>
+      <span class="story-source"><a href="https://electrek.co/2026/07/02/tesla-caps-employee-ai-spending-200-week/" target="_blank">Electrek / The Information</a></span>
+    </div>
+    <h2>Tesla limita gasto de funcionários com IA a <em>US$ 200 por semana</em></h2>
+    <p>Um memorando interno revelado pela The Information mostra que a Tesla vai limitar, a partir de 6 de julho, o gasto de cada funcionário com ferramentas de IA a US$ 200 semanais — com exceção das ferramentas da xAI, como Grok, que ficam de fora do teto. Ultrapassar o limite exigirá aprovação de gestor. O motivo: engenheiros vinham consumindo milhares de dólares em tokens por semana sem controle centralizado. A Tesla se junta a Uber, Meta, Amazon e Walmart, que já impuseram tetos ou empurraram equipes para modelos mais baratos diante do custo real de cobrança por token. O sinal para o mercado corporativo é direto: a fase de adoção irrestrita de IA está dando lugar à disciplina orçamentária.</p>
+    <a href="https://electrek.co/2026/07/02/tesla-caps-employee-ai-spending-200-week/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Governança Global</span>
+      <span class="story-source"><a href="https://www.un.org/global-dialogue-ai-governance/en" target="_blank">ONU / UNESCO</a></span>
+    </div>
+    <h2>ONU abre em Genebra o primeiro <em>Diálogo Global sobre Governança de IA</em></h2>
+    <p>Nesta segunda e terça (6 e 7 de julho), o Palexpo de Genebra recebe a primeira sessão do Diálogo Global sobre Governança de Inteligência Artificial, plataforma criada pela Assembleia Geral da ONU para que governos e demais partes interessadas debatam cooperação internacional sobre o tema. Co-presidido por El Salvador e Estônia, o encontro reúne segmento de alto nível, sessões temáticas e eventos paralelos — em simultâneo com o Fórum WSIS 2026 e a cúpula AI for Good da ITU, também em Genebra na mesma semana. É o primeiro esforço multilateral formal para tentar alinhar regras entre países que hoje regulam IA de formas muito diferentes.</p>
+    <a href="https://www.un.org/global-dialogue-ai-governance/en" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- ═══ BRASIL ═══ -->
+  <hr class="section-divider">
+  <div class="brasil-strip">Itaú e Nubank aceleram IA em fintech; Nubank investe R$45bi no Brasil</div>
+
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">🇧🇷 Brasil</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stat-row">
+    <div class="stat-item">
+      <span class="stat-num">R$45bi</span>
+      <span class="stat-label">investimento do Nubank<br>no Brasil em 2026</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">113M</span>
+      <span class="stat-label">clientes do Nubank no país<br>(60%+ da população adulta)</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">&lt;5min</span>
+      <span class="stat-label">para abrir conta PJ<br>pelo WhatsApp do Itaú com IA</span>
+    </div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Fintech &amp; IA</span>
+      <span class="story-source"><a href="https://itforum.com.br/noticias/itau-conta-pj-whatsapp" target="_blank">IT Forum</a></span>
+    </div>
+    <h2>Itaú Empresas leva abertura de conta PJ para o <em>WhatsApp com IA generativa</em></h2>
+    <p>O Itaú Empresas lançou uma jornada de abertura de conta PJ totalmente conversacional pelo WhatsApp oficial do banco, com apoio de IA generativa capaz de interpretar perguntas em tempo real sobre documentos, planos e próximos passos — inclusive por áudios de até 30 segundos. O processo, disponibilizado de forma gradual para pequenas e médias empresas convidadas, leva menos de 5 minutos do início ao fim. É mais um sinal de que bancos brasileiros estão movendo jornadas inteiras — não apenas atendimento — para dentro de canais de mensageria com IA no centro da experiência.</p>
+    <a href="https://itforum.com.br/noticias/itau-conta-pj-whatsapp" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story" style="border-bottom:none;">
+    <div class="story-meta">
+      <span class="story-tag">Investimento &amp; IA</span>
+      <span class="story-source"><a href="https://www.bloomberglinea.com.br/negocios/nubank-investira-r-45-bilhoes-no-brasil-em-2026-e-mira-licenca-bancaria/" target="_blank">Bloomberg Línea</a></span>
+    </div>
+    <h2>Nubank vai investir <em>R$ 45 bilhões</em> no Brasil em 2026 e mira licença bancária</h2>
+    <p>O Nubank anunciou aporte de cerca de R$ 45 bilhões no Brasil em 2026 — quase o dobro do investido dois anos atrás —, dividido entre plataformas de crédito com inteligência artificial, novos produtos, expansão de escritórios e equipes, e reforço de capital. A empresa também busca licença bancária no país e ingressou recentemente na Febraban. O pano de fundo é uma base de 113 milhões de clientes no Brasil, mais de 60% da população adulta, sustentada por receita de R$ 91 bilhões e lucro líquido recorde de R$ 16,2 bilhões em 2025. Fintechs brasileiras deixaram de disputar apenas clientes: agora disputam infraestrutura de crédito orientada por IA.</p>
+    <a href="https://www.bloomberglinea.com.br/negocios/nubank-investira-r-45-bilhoes-no-brasil-em-2026-e-mira-licenca-bancaria/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- PULLQUOTE -->
+  <div class="pullquote">
+    <blockquote>
+      "Uma empresa correndo para consertar uma falha que expõe chaves de IA de todo o setor, outra cortando na própria mão o gasto de seus funcionários com os mesmos modelos, e a ONU tentando, pela primeira vez, sentar o mundo à mesa para discutir regras comuns — a euforia da adoção está cedendo lugar à fase de conter riscos, custos e a falta de padrões."
+    </blockquote>
+    <cite>— Análise editorial Clikdata Drops · 5 de julho de 2026</cite>
+  </div>
+
+  <!-- PERSPECTIVA -->
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">💡 Perspectiva</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story" style="border-bottom:none; padding-bottom:28px;">
+    <h2>O que esses sinais significam para <em>líderes de transformação</em></h2>
+    <p style="margin-bottom:12px;">Três leituras práticas para o dia:</p>
+    <p style="margin-bottom:10px;"><strong>1. Segurança de infraestrutura de IA virou prioridade máxima.</strong> A falha no LiteLLM mostra que o gateway entre sua empresa e os modelos de IA é hoje um dos pontos mais atacados da cadeia. Quem terceiriza modelos de linguagem sem auditar o gateway está exposto a roubo de credenciais e movimento lateral dentro da própria rede.</p>
+    <p style="margin-bottom:10px;"><strong>2. Custo de IA virou linha orçamentária, não detalhe técnico.</strong> Tesla, Uber, Meta, Amazon e Walmart já colocaram tetos de gasto por funcionário. Para CFOs e CIOs, monitorar consumo de tokens por time deixou de ser opcional — é o próximo item de controle financeiro corporativo.</p>
+    <p><strong>3. Fintechs brasileiras mostram o caminho da IA com ROI.</strong> Itaú reduzindo a abertura de conta PJ a 5 minutos via WhatsApp e Nubank direcionando parte de R$ 45 bi para crédito com IA provam que o retorno não está na experimentação isolada, mas em redesenhar processos inteiros ao redor do modelo. É esse o padrão que outros setores no Brasil ainda precisam copiar.</p>
+  </article>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">CLIKDATA<span>·</span>DROPS</div>
+      </div>
+      <div class="footer-links">
+        <a href="https://clikdata.com.br" target="_blank">clikdata.com.br</a>
+        <a href="#">Arquivos anteriores</a>
+        <a href="#">Descadastrar</a>
+        <a href="#">Contato</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      Publicado em 5 de julho de 2026 · Edição #061 · clikdata.com.br<br>
+      Este digest é gerado automaticamente com curadoria editorial humana.<br>
+      Fontes: The Hacker News, Electrek / The Information, ONU / UNESCO, IT Forum, Bloomberg Línea.
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
