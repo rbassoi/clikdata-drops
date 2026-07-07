@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CLIKDATA DROPS — Edição #063 - Julho 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0f0f0f;
+    --paper: #f5f0e8;
+    --accent: #c8401a;
+    --accent2: #1a3c5e;
+    --muted: #7a7060;
+    --rule: #d4cfc4;
+    --tag-bg: #1a3c5e;
+    --tag-color: #f5f0e8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #e8e3d8;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrapper {
+    max-width: 680px;
+    margin: 40px auto;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    box-shadow: 4px 4px 0 #c4bfb4, 8px 8px 0 #b4afa4;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    border-bottom: 3px double var(--ink);
+    padding: 0;
+    position: relative;
+  }
+
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 32px 10px;
+    border-bottom: 1px solid var(--rule);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  .masthead {
+    padding: 28px 32px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--ink);
+    position: relative;
+  }
+
+  .masthead::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--accent);
+    margin: 0 auto 16px;
+  }
+
+  .masthead h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1;
+    color: var(--ink);
+  }
+
+  .masthead h1 span {
+    color: var(--accent);
+  }
+
+  .tagline {
+    margin-top: 8px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .edition-bar {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 10px 32px;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  /* ── INTRO ── */
+  .intro {
+    padding: 28px 32px 24px;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .intro-dropcap {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 0.85;
+    color: var(--accent);
+    float: left;
+    margin-right: 4px;
+    margin-top: 6px;
+  }
+
+  .intro p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: #2a2520;
+  }
+
+  /* ── SECTION HEADER ── */
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 32px 0;
+    margin-bottom: 4px;
+  }
+
+  .section-flag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    background: var(--tag-bg);
+    color: var(--tag-color);
+    padding: 4px 10px;
+    white-space: nowrap;
+  }
+
+  .section-flag.red { background: var(--accent); }
+
+  .section-rule {
+    flex: 1;
+    height: 1px;
+    background: var(--ink);
+  }
+
+  /* ── STORY CARD ── */
+  .story {
+    padding: 20px 32px;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+  }
+
+  .story:last-of-type { border-bottom: none; }
+
+  .story-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .story-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 2px 7px;
+  }
+
+  .story-source {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+  }
+
+  .story h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+
+  .story h2 em {
+    font-style: italic;
+    color: var(--accent2);
+  }
+
+  .story p {
+    font-size: 14px;
+    line-height: 1.72;
+    color: #2a2520;
+  }
+
+  .story .number-callout {
+    float: right;
+    margin: 0 0 8px 18px;
+    text-align: center;
+    border: 2px solid var(--ink);
+    padding: 12px 16px;
+    min-width: 88px;
+  }
+
+  .story .number-callout .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--accent);
+    display: block;
+    line-height: 1;
+  }
+
+  .story .number-callout .num-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 4px;
+  }
+
+  /* ── DIVIDER ── */
+  .section-divider {
+    border: none;
+    border-top: 3px double var(--ink);
+    margin: 8px 32px 0;
+  }
+
+  /* ── DESTAQUE BRASIL ── */
+  .brasil-strip {
+    background: var(--accent2);
+    color: var(--paper);
+    padding: 6px 32px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .brasil-strip::before {
+    content: '▶';
+    font-size: 8px;
+  }
+
+  /* ── STAT ROW ── */
+  .stat-row {
+    display: flex;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .stat-item {
+    flex: 1;
+    padding: 20px 24px;
+    border-right: 1px solid var(--rule);
+    text-align: center;
+  }
+
+  .stat-item:last-child { border-right: none; }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--accent2);
+    display: block;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 6px;
+    line-height: 1.4;
+  }
+
+  /* ── PULLQUOTE ── */
+  .pullquote {
+    margin: 0;
+    padding: 24px 40px;
+    border-top: 2px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+    background: #ede8de;
+  }
+
+  .pullquote blockquote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 19px;
+    line-height: 1.5;
+    color: var(--ink);
+    text-align: center;
+  }
+
+  .pullquote cite {
+    display: block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: center;
+    font-style: normal;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 28px 32px;
+    border-top: 3px double var(--accent);
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333;
+  }
+
+  .footer-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 900;
+  }
+
+  .footer-brand span { color: var(--accent); }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: right;
+  }
+
+  .footer-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: #888;
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .footer-bottom {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: #555;
+    letter-spacing: 0.06em;
+    line-height: 1.6;
+  }
+
+  .routine-badge {
+    display: inline-block;
+    margin-top: 12px;
+    background: var(--accent);
+    color: white;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+  }
+
+
+  .story-source a {
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--muted);
+    transition: color 0.15s;
+  }
+  .story-source a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+  .read-more {
+    display: inline-block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent2);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent2);
+    padding-bottom: 1px;
+  }
+  .read-more:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+  @media (max-width: 600px) {
+    .wrapper { margin: 0; box-shadow: none; }
+    .masthead h1 { font-size: 38px; }
+    .stat-row { flex-direction: column; }
+    .stat-item { border-right: none; border-bottom: 1px solid var(--rule); }
+    .header-top { flex-direction: column; gap: 4px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-top">
+      <span>Edição #063</span>
+      <span>7 de julho de 2026</span>
+      <span>Diária · IA &amp; Transformação</span>
+    </div>
+    <div class="masthead">
+      <h1>CLIKDATA<span style="color:var(--accent)">·</span>DROPS</h1>
+      <p class="tagline">IA · Tecnologia · Transformação Digital · Edição Diária</p>
+    </div>
+    <div class="edition-bar">
+      <span>🌍 Mundo</span>
+      <span>🇧🇷 Brasil</span>
+      <span>📊 Números</span>
+      <span>💡 Perspectiva</span>
+    </div>
+  </header>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <p>
+      <span class="intro-dropcap">E</span>
+      Enquanto o Diálogo Global sobre Governança de IA da ONU encerra hoje sua sessão inaugural em Genebra sob o alerta do cientista Yoshua Bengio de que a ciência não consegue mais garantir que a IA não cause "dano catastrófico", os modelos chineses já processam mais de 45% do tráfego global de tokens na OpenRouter — ante menos de 2% há um ano. Do outro lado do funil de capital, o venture capital bate recorde: US$ 510 bilhões investidos em startups no primeiro semestre de 2026, com OpenAI e Anthropic sozinhas abocanhando 43% do total. No Brasil, os bancos aceleram a corrida agêntica: o Itaú leva saldo e Pix para conversas no WhatsApp com sua nova camada de IA, enquanto o Banco do Brasil forma mais de 36 mil funcionários em IA generativa e agêntica. Cinco sinais do dia.
+    </p>
+  </section>
+
+  <!-- ═══ MUNDO ═══ -->
+  <div class="section-header">
+    <span class="section-flag red">🌍 Mundo</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Governança Global</span>
+      <span class="story-source"><a href="https://news.un.org/en/story/2026/07/1167862" target="_blank">UN News</a></span>
+    </div>
+    <h2>Bengio alerta: ciência não garante que IA evite <em>dano catastrófico</em></h2>
+    <p>O Diálogo Global sobre Governança de Inteligência Artificial da ONU encerra hoje sua sessão inaugural em Genebra, no mesmo momento em que a cidade recebe a Cúpula AI for Good da União Internacional de Telecomunicações, com programação até 10 de julho. Yoshua Bengio, copresidente do Painel Científico Internacional Independente sobre IA, declarou que há evidências crescentes de comportamento enganoso em sistemas avançados e que a ciência atual não consegue garantir que o avanço das capacidades não resulte em dano catastrófico — seja por ação autônoma do próprio sistema, seja por uso malicioso. O aviso reforça a urgência do encontro, que tenta alinhar regras entre os 193 Estados-membros da ONU antes que a lacuna regulatória se torne ainda mais difícil de fechar.</p>
+    <a href="https://news.un.org/en/story/2026/07/1167862" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Modelos de IA</span>
+      <span class="story-source"><a href="https://www.resultsense.com/news/2026-07-07-chinese-ai-models-us-adoption-surge/" target="_blank">ResultSense / OpenRouter</a></span>
+    </div>
+    <div class="number-callout">
+      <span class="num">45%</span>
+      <span class="num-label">do tráfego global<br>de tokens na OpenRouter</span>
+    </div>
+    <h2>Modelos chineses já processam <em>45% do tráfego</em> da OpenRouter — ante 2% há um ano</h2>
+    <p>Dados da plataforma OpenRouter mostram que modelos de origem chinesa — de provedores como Alibaba, DeepSeek, MiniMax, Moonshot e Xiaomi — respondem hoje por mais de 45% de todo o tráfego de tokens processado, um salto vertiginoso ante menos de 2% registrados um ano atrás. O avanço é puxado por preços agressivos, estratégias de código aberto e modelos que entregam qualidade próxima da fronteira a uma fração do custo americano, com janelas de contexto de até 1 milhão de tokens e versões de teste gratuitas. A migração já mudou o backend padrão de IDEs de programação com IA e de plataformas de agentes sensíveis a custo, reacendendo o debate sobre até quando a vantagem técnica ocidental resistirá à pressão de preço vinda da China.</p>
+    <a href="https://www.resultsense.com/news/2026-07-07-chinese-ai-models-us-adoption-surge/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story" style="border-bottom:none;">
+    <div class="story-meta">
+      <span class="story-tag">Finanças &amp; IA</span>
+      <span class="story-source"><a href="https://news.crunchbase.com/venture/global-startup-exits-ipo-ma-soar-ai-q2-h1-2026/" target="_blank">Crunchbase News</a></span>
+    </div>
+    <div class="number-callout">
+      <span class="num">US$510B</span>
+      <span class="num-label">captado por startups<br>no 1º semestre de 2026</span>
+    </div>
+    <h2>Startups captam recorde de <em>US$ 510 bilhões</em> — 43% foram para só duas empresas</h2>
+    <p>O aporte global de capital de risco em startups bateu recorde no primeiro semestre de 2026, somando US$ 510 bilhões — mais do que todo o ano de 2025 (US$ 440 bi) —, segundo levantamento da Crunchbase. Do total, OpenAI e Anthropic sozinhas concentraram US$ 217 bilhões, ou 43% de tudo que foi investido em startups no período; a Anthropic isoladamente captou US$ 65 bilhões só no segundo trimestre e ultrapassou a OpenAI no ranking de empresas privadas mais valiosas do mundo. Mais de 70% de todo o capital de risco do trimestre foi para empresas de IA, ante pouco menos de 50% um ano antes — uma concentração que já preocupa até investidores do setor, mas que segue sem sinais de desaceleração.</p>
+    <a href="https://news.crunchbase.com/venture/global-startup-exits-ipo-ma-soar-ai-q2-h1-2026/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- ═══ BRASIL ═══ -->
+  <hr class="section-divider">
+  <div class="brasil-strip">Bancos brasileiros aceleram IA agêntica: Itaú leva Pix ao WhatsApp, BB forma 36 mil funcionários</div>
+
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">🇧🇷 Brasil</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stat-row">
+    <div class="stat-item">
+      <span class="stat-num">12mil+</span>
+      <span class="stat-label">agentes de IA (Copilot)<br>em operação no BB</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">36mil</span>
+      <span class="stat-label">funcionários inscritos<br>na nova edição do AcademIA BB</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">60%</span>
+      <span class="stat-label">empresas brasileiras que<br>preveem alta no orçamento de TI</span>
+    </div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Fintech &amp; IA</span>
+      <span class="story-source"><a href="https://www.letsmoney.com.br/noticias/itau-ia-i-saldo-pix-whatsapp/" target="_blank">Let's Money</a></span>
+    </div>
+    <h2>Itaú lança <em>ia.i</em> e leva saldo e Pix para conversas no WhatsApp</h2>
+    <p>O Itaú apresentou no Web Summit Rio a ia.i, camada de inteligência artificial que leva serviços financeiros para os canais que o cliente já usa no dia a dia — a começar pelo WhatsApp, onde já é possível consultar saldo e enviar Pix por conversa, sem abrir o aplicativo do banco. Segundo Ricardo Guerra, diretor de tecnologia do banco, a aposta é em IA agêntica: em vez de um sistema central único, o banco passa a operar como um ecossistema de agentes especializados que "conversam melhor com o cliente". O movimento acompanha uma onda mais ampla no setor financeiro brasileiro, com Inter, C6 e outros bancos testando IA conversacional integrada a canais de mensageria.</p>
+    <a href="https://www.letsmoney.com.br/noticias/itau-ia-i-saldo-pix-whatsapp/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story" style="border-bottom:none;">
+    <div class="story-meta">
+      <span class="story-tag">Capacitação &amp; IA</span>
+      <span class="story-source"><a href="https://tiinside.com.br/08/06/2026/banco-do-brasil-engaja-mais-de-36-mil-funcionarios-em-programa-de-capacitacao-para-ia-generativa-e-agentica/" target="_blank">TI Inside</a></span>
+    </div>
+    <h2>Banco do Brasil forma <em>36 mil funcionários</em> em IA generativa e agêntica</h2>
+    <p>O Banco do Brasil abriu a edição 2026 do AcademIA BB, seu programa interno de capacitação em inteligência artificial, com mais de 36 mil funcionários inscritos — ante 24 mil na edição de estreia, em 2024. A curadoria de conteúdo passou a contar com parceria de Microsoft, Google Cloud e IBM, e o foco deste ano migra dos fundamentos de IA generativa para a IA agêntica. O banco já opera mais de 12 mil agentes Copilot e 1.200 modelos de IA em produção — volume que ilustra o quanto a instituição aposta em internalizar competência técnica em vez de depender apenas de fornecedores externos.</p>
+    <a href="https://tiinside.com.br/08/06/2026/banco-do-brasil-engaja-mais-de-36-mil-funcionarios-em-programa-de-capacitacao-para-ia-generativa-e-agentica/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- PULLQUOTE -->
+  <div class="pullquote">
+    <blockquote>
+      "A ciência não pode garantir, à medida que as capacidades continuam a aumentar, que a IA não causará dano catastrófico — seja por ação autônoma do próprio sistema, seja por uso malicioso."
+    </blockquote>
+    <cite>— Yoshua Bengio, copresidente do Painel Científico Internacional Independente sobre IA · Genebra, julho de 2026</cite>
+  </div>
+
+  <!-- PERSPECTIVA -->
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">💡 Perspectiva</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story" style="border-bottom:none; padding-bottom:28px;">
+    <h2>O que esses sinais significam para <em>líderes de transformação</em></h2>
+    <p style="margin-bottom:12px;">Três leituras práticas para o dia:</p>
+    <p style="margin-bottom:10px;"><strong>1. Diversifique modelos antes que o custo decida por você.</strong> Com modelos chineses respondendo por quase metade do tráfego global de IA a uma fração do preço americano, empresas presas a um único fornecedor de modelo correm o risco de pagar caro por uma vantagem de performance cada vez menor. Arquiteturas multi-modelo deixam de ser luxo técnico e viram gestão de risco financeiro.</p>
+    <p style="margin-bottom:10px;"><strong>2. Capital de risco concentrado em poucas apostas de fronteira.</strong> A concentração de 43% de todo o financiamento de startups do semestre em apenas duas empresas mostra que o mercado trata a IA de fronteira como infraestrutura essencial — mas também acende um sinal amarelo sobre dependência de poucos fornecedores de modelo e o risco de correção abrupta caso as expectativas de retorno não se confirmem.</p>
+    <p><strong>3. O playbook bancário brasileiro vira referência.</strong> Itaú e Banco do Brasil mostram dois lados da mesma estratégia: levar IA agêntica para o canal onde o cliente já está (WhatsApp) e capacitar internamente dezenas de milhares de funcionários antes de expandir o uso. Para qualquer líder de transformação digital, a lição é clara — agente sem gente treinada para operá-lo e sem canal de distribuição pronto não escala.</p>
+  </article>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">CLIKDATA<span>·</span>DROPS</div>
+      </div>
+      <div class="footer-links">
+        <a href="https://clikdata.com.br" target="_blank">clikdata.com.br</a>
+        <a href="#">Arquivos anteriores</a>
+        <a href="#">Descadastrar</a>
+        <a href="#">Contato</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      Publicado em 7 de julho de 2026 · Edição #063 · clikdata.com.br<br>
+      Este digest é gerado automaticamente com curadoria editorial humana.<br>
+      Fontes: UN News, OpenRouter/ResultSense, Crunchbase News, Let's Money, TI Inside.
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
