@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CLIKDATA DROPS — Edição #065 - Julho 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0f0f0f;
+    --paper: #f5f0e8;
+    --accent: #c8401a;
+    --accent2: #1a3c5e;
+    --muted: #7a7060;
+    --rule: #d4cfc4;
+    --tag-bg: #1a3c5e;
+    --tag-color: #f5f0e8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #e8e3d8;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrapper {
+    max-width: 680px;
+    margin: 40px auto;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    box-shadow: 4px 4px 0 #c4bfb4, 8px 8px 0 #b4afa4;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    border-bottom: 3px double var(--ink);
+    padding: 0;
+    position: relative;
+  }
+
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 32px 10px;
+    border-bottom: 1px solid var(--rule);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  .masthead {
+    padding: 28px 32px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--ink);
+    position: relative;
+  }
+
+  .masthead::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--accent);
+    margin: 0 auto 16px;
+  }
+
+  .masthead h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1;
+    color: var(--ink);
+  }
+
+  .masthead h1 span {
+    color: var(--accent);
+  }
+
+  .tagline {
+    margin-top: 8px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .edition-bar {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 10px 32px;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  /* ── INTRO ── */
+  .intro {
+    padding: 28px 32px 24px;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .intro-dropcap {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 0.85;
+    color: var(--accent);
+    float: left;
+    margin-right: 4px;
+    margin-top: 6px;
+  }
+
+  .intro p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: #2a2520;
+  }
+
+  /* ── SECTION HEADER ── */
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 32px 0;
+    margin-bottom: 4px;
+  }
+
+  .section-flag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    background: var(--tag-bg);
+    color: var(--tag-color);
+    padding: 4px 10px;
+    white-space: nowrap;
+  }
+
+  .section-flag.red { background: var(--accent); }
+
+  .section-rule {
+    flex: 1;
+    height: 1px;
+    background: var(--ink);
+  }
+
+  /* ── STORY CARD ── */
+  .story {
+    padding: 20px 32px;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+  }
+
+  .story:last-of-type { border-bottom: none; }
+
+  .story-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .story-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 2px 7px;
+  }
+
+  .story-source {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+  }
+
+  .story h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+
+  .story h2 em {
+    font-style: italic;
+    color: var(--accent2);
+  }
+
+  .story p {
+    font-size: 14px;
+    line-height: 1.72;
+    color: #2a2520;
+  }
+
+  .story .number-callout {
+    float: right;
+    margin: 0 0 8px 18px;
+    text-align: center;
+    border: 2px solid var(--ink);
+    padding: 12px 16px;
+    min-width: 88px;
+  }
+
+  .story .number-callout .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--accent);
+    display: block;
+    line-height: 1;
+  }
+
+  .story .number-callout .num-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 4px;
+  }
+
+  /* ── DIVIDER ── */
+  .section-divider {
+    border: none;
+    border-top: 3px double var(--ink);
+    margin: 8px 32px 0;
+  }
+
+  /* ── DESTAQUE BRASIL ── */
+  .brasil-strip {
+    background: var(--accent2);
+    color: var(--paper);
+    padding: 6px 32px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .brasil-strip::before {
+    content: '▶';
+    font-size: 8px;
+  }
+
+  /* ── STAT ROW ── */
+  .stat-row {
+    display: flex;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .stat-item {
+    flex: 1;
+    padding: 20px 24px;
+    border-right: 1px solid var(--rule);
+    text-align: center;
+  }
+
+  .stat-item:last-child { border-right: none; }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--accent2);
+    display: block;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 6px;
+    line-height: 1.4;
+  }
+
+  /* ── PULLQUOTE ── */
+  .pullquote {
+    margin: 0;
+    padding: 24px 40px;
+    border-top: 2px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+    background: #ede8de;
+  }
+
+  .pullquote blockquote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 19px;
+    line-height: 1.5;
+    color: var(--ink);
+    text-align: center;
+  }
+
+  .pullquote cite {
+    display: block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: center;
+    font-style: normal;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 28px 32px;
+    border-top: 3px double var(--accent);
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333;
+  }
+
+  .footer-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 900;
+  }
+
+  .footer-brand span { color: var(--accent); }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: right;
+  }
+
+  .footer-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: #888;
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .footer-bottom {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: #555;
+    letter-spacing: 0.06em;
+    line-height: 1.6;
+  }
+
+  .routine-badge {
+    display: inline-block;
+    margin-top: 12px;
+    background: var(--accent);
+    color: white;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+  }
+
+
+  .story-source a {
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--muted);
+    transition: color 0.15s;
+  }
+  .story-source a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+  .read-more {
+    display: inline-block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent2);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent2);
+    padding-bottom: 1px;
+  }
+  .read-more:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+  @media (max-width: 600px) {
+    .wrapper { margin: 0; box-shadow: none; }
+    .masthead h1 { font-size: 38px; }
+    .stat-row { flex-direction: column; }
+    .stat-item { border-right: none; border-bottom: 1px solid var(--rule); }
+    .header-top { flex-direction: column; gap: 4px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-top">
+      <span>Edição #065</span>
+      <span>9 de julho de 2026</span>
+      <span>Diária · IA &amp; Transformação</span>
+    </div>
+    <div class="masthead">
+      <h1>CLIKDATA<span style="color:var(--accent)">·</span>DROPS</h1>
+      <p class="tagline">IA · Tecnologia · Transformação Digital · Edição Diária</p>
+    </div>
+    <div class="edition-bar">
+      <span>🌍 Mundo</span>
+      <span>🇧🇷 Brasil</span>
+      <span>📊 Números</span>
+      <span>💡 Perspectiva</span>
+    </div>
+  </header>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <p>
+      <span class="intro-dropcap">H</span>
+      Hoje é, possivelmente, o dia mais denso da história recente dos modelos de fronteira: a OpenAI libera o GPT-5.6 — em três variantes, Sol, Terra e Luna — para todos os usuários e desenvolvedores, horas depois de o Departamento de Comércio dos EUA autorizar o lançamento amplo. É a primeira vez, desde o veto à exportação de junho, que todos os grandes laboratórios de IA têm um modelo publicamente disponível ao mesmo tempo. Em paralelo, 193 países se reúnem em Genebra no primeiro Diálogo Global da ONU sobre Governança de IA, onde o cientista Yoshua Bengio alerta que a ciência não pode garantir que a tecnologia não causará "dano catastrófico". No mundo corporativo, a Microsoft aposta US$ 2,5 bilhões e 6 mil especialistas em uma nova unidade para transformar pilotos de IA em resultado real. No Brasil, o Plano Brasileiro de Inteligência Artificial confirma R$ 23 bilhões em investimentos até 2028 — enquanto o país já é o terceiro que mais usa ChatGPT no mundo. Cinco sinais do dia.
+    </p>
+  </section>
+
+  <!-- ═══ MUNDO ═══ -->
+  <div class="section-header">
+    <span class="section-flag red">🌍 Mundo</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Modelos de IA</span>
+      <span class="story-source"><a href="https://openai.com/index/previewing-gpt-5-6-sol/" target="_blank">OpenAI</a></span>
+    </div>
+    <div class="number-callout">
+      <span class="num">3</span>
+      <span class="num-label">modelos lançados<br>no mesmo dia</span>
+    </div>
+    <h2>OpenAI libera <em>GPT-5.6</em> — Sol, Terra e Luna — após aval do governo dos EUA</h2>
+    <p>A OpenAI lançou publicamente a família GPT-5.6 nesta quinta-feira: Sol, o modelo de topo para raciocínio complexo e cargas de trabalho agênticas (US$ 5 de entrada e US$ 30 de saída por milhão de tokens); Terra, equilibrado e competitivo com o GPT-5.5 pela metade do custo (US$ 2,50 / US$ 15); e Luna, rápido e econômico (US$ 1 / US$ 6). A liberação ampla só ocorreu depois que o Departamento de Comércio dos EUA concluiu testes adicionais de segurança. O lançamento coincide com a estreia pública do Grok 4.5 da xAI — marcando a primeira vez, desde o início do veto à exportação em junho, que todos os grandes laboratórios de fronteira têm um modelo disponível simultaneamente ao público.</p>
+    <a href="https://openai.com/index/previewing-gpt-5-6-sol/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Governança Global</span>
+      <span class="story-source"><a href="https://news.un.org/en/story/2026/07/1167862" target="_blank">UN News</a></span>
+    </div>
+    <div class="number-callout">
+      <span class="num">193</span>
+      <span class="num-label">países no diálogo<br>global sobre IA</span>
+    </div>
+    <h2>ONU reúne 193 países em Genebra e cientistas alertam: IA pode causar <em>"dano catastrófico"</em></h2>
+    <p>Convocado pela Assembleia Geral da ONU, o primeiro Diálogo Global sobre Governança de IA reuniu, em 6 e 7 de julho, todos os 193 Estados-membros em Genebra — um marco que consolida a IA como questão geopolítica, não apenas tecnológica. O Painel Científico Internacional Independente sobre IA, copresidido por Yoshua Bengio e Maria Ressa e formado por 40 especialistas, alertou que a ciência atual não consegue garantir que o avanço das capacidades da IA não resultará em dano catastrófico, por conta própria ou por uso malicioso. O painel destacou que a tecnologia avança mais rápido do que a compreensão científica e a capacidade dos governos de se adaptarem.</p>
+    <a href="https://news.un.org/en/story/2026/07/1167862" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story" style="border-bottom:none;">
+    <div class="story-meta">
+      <span class="story-tag">Transformação Digital</span>
+      <span class="story-source"><a href="https://blogs.microsoft.com/blog/2026/07/02/microsoft-frontier-company-ai-engineering-that-amplifies-and-protects-your-intelligence/" target="_blank">Microsoft</a></span>
+    </div>
+    <div class="number-callout">
+      <span class="num">US$2,5B</span>
+      <span class="num-label">investidos na<br>Frontier Company</span>
+    </div>
+    <h2>Microsoft cria unidade de US$ 2,5 bi e 6 mil especialistas para tirar a IA do papel nas empresas</h2>
+    <p>A Microsoft lançou a Frontier Company, nova unidade operacional que embarca cerca de 6.000 engenheiros e especialistas setoriais diretamente dentro de clientes corporativos para projetar, implantar e melhorar continuamente sistemas de IA em escala — já em operação com nomes como London Stock Exchange Group, Land O'Lakes, Unilever e Novo Nordisk, em parceria com Accenture e KPMG. O movimento responde a um dado incômodo: pesquisa do MIT (Project NANDA) mostra que 95% dos pilotos corporativos de IA generativa não geram impacto mensurável no resultado financeiro. Para o CEO de negócios comerciais da Microsoft, a iniciativa vai além do conceito de "forward-deployed engineering" e será "a maior e mais capaz organização de engenharia orientada a resultado do setor".</p>
+    <a href="https://blogs.microsoft.com/blog/2026/07/02/microsoft-frontier-company-ai-engineering-that-amplifies-and-protects-your-intelligence/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- ═══ BRASIL ═══ -->
+  <hr class="section-divider">
+  <div class="brasil-strip">Brasil confirma R$ 23 bi no Plano Brasileiro de IA e já é o 3º país que mais usa ChatGPT</div>
+
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">🇧🇷 Brasil</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stat-row">
+    <div class="stat-item">
+      <span class="stat-num">R$23B</span>
+      <span class="stat-label">previstos no PBIA<br>até 2028</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">3º</span>
+      <span class="stat-label">país que mais usa<br>ChatGPT no mundo</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">17,8%</span>
+      <span class="stat-label">da população mundial<br>em idade ativa já usa IA generativa</span>
+    </div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Política de IA</span>
+      <span class="story-source"><a href="https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/transformacaodigital/plano-brasileiro-de-inteligencia-artificial" target="_blank">MCTI</a></span>
+    </div>
+    <h2>Plano Brasileiro de IA já tem R$ 6,47 bi garantidos dos R$ 23 bi previstos até 2028</h2>
+    <p>O Plano Brasileiro de Inteligência Artificial (PBIA), sob coordenação do MCTI, já assegurou R$ 6,47 bilhões dos R$ 23 bilhões previstos em investimentos até 2028 — sendo R$ 4,5 bilhões via Finep e R$ 1,2 bilhão via BNDES. Os recursos se distribuem em cinco eixos: infraestrutura, difusão e capacitação, melhoria de serviços públicos, inovação empresarial e apoio ao processo regulatório. O plano chega em momento de adoção recorde: o Brasil é hoje o terceiro país que mais usa ChatGPT no mundo, atrás apenas de Estados Unidos e Índia, enquanto o uso de IA generativa pela população economicamente ativa já soma 17,8% globalmente — com 26 economias acima de 30% de adoção.</p>
+    <a href="https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/transformacaodigital/plano-brasileiro-de-inteligencia-artificial" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story" style="border-bottom:none;">
+    <div class="story-meta">
+      <span class="story-tag">Agenda</span>
+      <span class="story-source"><a href="https://aisummit.ia.br/" target="_blank">AI Summit Brasil</a></span>
+    </div>
+    <h2>AI Summit Brasil 2026 chega a São Paulo em 22 e 23 de julho — "nada será como antes"</h2>
+    <p>O AI Summit Brasil 2026 acontece nos dias 22 e 23 de julho no Instituto de Pesquisas Tecnológicas (IPT), em São Paulo, com a proposta de discutir os impactos da IA nos negócios, na sociedade e no futuro do trabalho. O evento chega em meio ao avanço do PBIA e à disputa entre laboratórios globais por modelos cada vez mais baratos e capazes — um lembrete de que, para empresas e gestores públicos brasileiros, a corrida por competência interna em IA está apenas começando.</p>
+    <a href="https://aisummit.ia.br/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- PULLQUOTE -->
+  <div class="pullquote">
+    <blockquote>
+      "A ciência não pode garantir que, à medida que as capacidades da IA aumentam, ela não causará dano catastrófico — por conta própria ou por uso malicioso."
+    </blockquote>
+    <cite>— Yoshua Bengio, copresidente do Painel Científico Internacional Independente sobre IA · Genebra, julho de 2026</cite>
+  </div>
+
+  <!-- PERSPECTIVA -->
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">💡 Perspectiva</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story" style="border-bottom:none; padding-bottom:28px;">
+    <h2>O que esses sinais significam para <em>líderes de transformação</em></h2>
+    <p style="margin-bottom:12px;">Três leituras práticas para o dia:</p>
+    <p style="margin-bottom:10px;"><strong>1. A guerra de preços dos modelos de fronteira muda o cálculo de ROI.</strong> Com GPT-5.6 Terra, Grok 4.5 e Claude Sonnet 5 disputando a mesma faixa de custo, a vantagem competitiva deixa de estar em "ter acesso" a um modelo de ponta e passa a estar em quem melhor arquiteta agentes sobre essa infraestrutura cada vez mais barata.</p>
+    <p style="margin-bottom:10px;"><strong>2. Governança não pode ficar atrás da velocidade de lançamento.</strong> No mesmo dia em que quatro laboratórios de fronteira têm modelos públicos simultâneos, 193 países ouvem que a ciência não garante ausência de dano catastrófico. Empresas que adotam IA em escala sem framework de risco formal estão replicando, em miniatura, o mesmo descompasso que a ONU tenta resolver em nível global.</p>
+    <p><strong>3. Brasil tem plano e demanda — falta execução em escala empresarial.</strong> Com R$ 23 bi previstos no PBIA e o 3º maior uso de ChatGPT do mundo, o país tem base de adoção e financiamento público raros na América Latina. O gargalo, como mostram iniciativas como a Frontier Company da Microsoft em outros mercados, é traduzir essa base em sistemas de IA que geram resultado de negócio mensurável — não apenas mais uso individual da tecnologia.</p>
+  </article>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">CLIKDATA<span>·</span>DROPS</div>
+      </div>
+      <div class="footer-links">
+        <a href="https://clikdata.com.br" target="_blank">clikdata.com.br</a>
+        <a href="#">Arquivos anteriores</a>
+        <a href="#">Descadastrar</a>
+        <a href="#">Contato</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      Publicado em 9 de julho de 2026 · Edição #065 · clikdata.com.br<br>
+      Este digest é gerado automaticamente com curadoria editorial humana.<br>
+      Fontes: OpenAI, UN News, Microsoft, MCTI, AI Summit Brasil.
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
