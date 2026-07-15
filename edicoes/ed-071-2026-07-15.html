@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CLIKDATA DROPS — Edição #071 - Julho 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0f0f0f;
+    --paper: #f5f0e8;
+    --accent: #c8401a;
+    --accent2: #1a3c5e;
+    --muted: #7a7060;
+    --rule: #d4cfc4;
+    --tag-bg: #1a3c5e;
+    --tag-color: #f5f0e8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #e8e3d8;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrapper {
+    max-width: 680px;
+    margin: 40px auto;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    box-shadow: 4px 4px 0 #c4bfb4, 8px 8px 0 #b4afa4;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    border-bottom: 3px double var(--ink);
+    padding: 0;
+    position: relative;
+  }
+
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 32px 10px;
+    border-bottom: 1px solid var(--rule);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  .masthead {
+    padding: 28px 32px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--ink);
+    position: relative;
+  }
+
+  .masthead::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--accent);
+    margin: 0 auto 16px;
+  }
+
+  .masthead h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1;
+    color: var(--ink);
+  }
+
+  .masthead h1 span {
+    color: var(--accent);
+  }
+
+  .tagline {
+    margin-top: 8px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .edition-bar {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 10px 32px;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  /* ── INTRO ── */
+  .intro {
+    padding: 28px 32px 24px;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .intro-dropcap {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 0.85;
+    color: var(--accent);
+    float: left;
+    margin-right: 4px;
+    margin-top: 6px;
+  }
+
+  .intro p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: #2a2520;
+  }
+
+  /* ── SECTION HEADER ── */
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 32px 0;
+    margin-bottom: 4px;
+  }
+
+  .section-flag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    background: var(--tag-bg);
+    color: var(--tag-color);
+    padding: 4px 10px;
+    white-space: nowrap;
+  }
+
+  .section-flag.red { background: var(--accent); }
+
+  .section-rule {
+    flex: 1;
+    height: 1px;
+    background: var(--ink);
+  }
+
+  /* ── STORY CARD ── */
+  .story {
+    padding: 20px 32px;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+  }
+
+  .story:last-of-type { border-bottom: none; }
+
+  .story-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .story-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 2px 7px;
+  }
+
+  .story-source {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+  }
+
+  .story h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+
+  .story h2 em {
+    font-style: italic;
+    color: var(--accent2);
+  }
+
+  .story p {
+    font-size: 14px;
+    line-height: 1.72;
+    color: #2a2520;
+  }
+
+  .story .number-callout {
+    float: right;
+    margin: 0 0 8px 18px;
+    text-align: center;
+    border: 2px solid var(--ink);
+    padding: 12px 16px;
+    min-width: 88px;
+  }
+
+  .story .number-callout .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--accent);
+    display: block;
+    line-height: 1;
+  }
+
+  .story .number-callout .num-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 4px;
+  }
+
+  /* ── DIVIDER ── */
+  .section-divider {
+    border: none;
+    border-top: 3px double var(--ink);
+    margin: 8px 32px 0;
+  }
+
+  /* ── DESTAQUE BRASIL ── */
+  .brasil-strip {
+    background: var(--accent2);
+    color: var(--paper);
+    padding: 6px 32px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .brasil-strip::before {
+    content: '▶';
+    font-size: 8px;
+  }
+
+  /* ── STAT ROW ── */
+  .stat-row {
+    display: flex;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .stat-item {
+    flex: 1;
+    padding: 20px 24px;
+    border-right: 1px solid var(--rule);
+    text-align: center;
+  }
+
+  .stat-item:last-child { border-right: none; }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--accent2);
+    display: block;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 6px;
+    line-height: 1.4;
+  }
+
+  /* ── PULLQUOTE ── */
+  .pullquote {
+    margin: 0;
+    padding: 24px 40px;
+    border-top: 2px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+    background: #ede8de;
+  }
+
+  .pullquote blockquote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 19px;
+    line-height: 1.5;
+    color: var(--ink);
+    text-align: center;
+  }
+
+  .pullquote cite {
+    display: block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: center;
+    font-style: normal;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 28px 32px;
+    border-top: 3px double var(--accent);
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333;
+  }
+
+  .footer-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 900;
+  }
+
+  .footer-brand span { color: var(--accent); }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: right;
+  }
+
+  .footer-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: #888;
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .footer-bottom {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: #555;
+    letter-spacing: 0.06em;
+    line-height: 1.6;
+  }
+
+  .routine-badge {
+    display: inline-block;
+    margin-top: 12px;
+    background: var(--accent);
+    color: white;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+  }
+
+
+  .story-source a {
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--muted);
+    transition: color 0.15s;
+  }
+  .story-source a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+  .read-more {
+    display: inline-block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent2);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent2);
+    padding-bottom: 1px;
+  }
+  .read-more:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+  @media (max-width: 600px) {
+    .wrapper { margin: 0; box-shadow: none; }
+    .masthead h1 { font-size: 38px; }
+    .stat-row { flex-direction: column; }
+    .stat-item { border-right: none; border-bottom: 1px solid var(--rule); }
+    .header-top { flex-direction: column; gap: 4px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-top">
+      <span>Edição #071</span>
+      <span>15 de julho de 2026</span>
+      <span>Diária · IA &amp; Transformação</span>
+    </div>
+    <div class="masthead">
+      <h1>CLIKDATA<span style="color:var(--accent)">·</span>DROPS</h1>
+      <p class="tagline">IA · Tecnologia · Transformação Digital · Edição Diária</p>
+    </div>
+    <div class="edition-bar">
+      <span>🌍 Mundo</span>
+      <span>🇧🇷 Brasil</span>
+      <span>📊 Números</span>
+      <span>💡 Perspectiva</span>
+    </div>
+  </header>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <p>
+      <span class="intro-dropcap">A</span>
+      A Apple abriu uma disputa judicial de peso contra a OpenAI, acusando a rival de roubo sistemático de segredos industriais sobre hardware ainda não lançado, com ex-funcionários da Apple hoje na folha da OpenAI e da io Products, de Jony Ive, no centro do caso. Em paralelo, Nova York se tornou o primeiro estado americano a suspender por um ano a construção de novos data centers de IA em hiperescala, depois de contas de luz subirem quase 68% desde 2019 — sinal de que a fatura da infraestrutura de IA já chegou ao consumidor final. A AWS, por sua vez, apostou US$ 1 bilhão em um time interno de engenheiros para trabalhar dentro das operações dos clientes e transformar promessa de IA em produção real. No Brasil, o país confirma sua posição como 3º maior usuário do ChatGPT no mundo, com 140 milhões de mensagens enviadas por dia, enquanto um novo estudo da ABES com dados da IDC mostra que 40% das médias e grandes empresas já usam agentes de IA em produção — mas ainda tropeçam na hora de medir o retorno desse investimento. Cinco sinais do dia.
+    </p>
+  </section>
+
+  <!-- ═══ MUNDO ═══ -->
+  <div class="section-header">
+    <span class="section-flag red">🌍 Mundo</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Big Tech &amp; Justiça</span>
+      <span class="story-source"><a href="https://techcrunch.com/2026/07/10/apple-sues-openai-over-alleged-trade-secret-theft/" target="_blank">TechCrunch</a></span>
+    </div>
+    <h2>Apple processa a OpenAI por <em>roubo de segredos industriais</em> de hardware</h2>
+    <p>A Apple entrou com uma ação na Justiça federal da Califórnia acusando a OpenAI de se apropriar de propriedade intelectual para desenvolver seus próprios dispositivos de consumo. Segundo a petição, "em todos os níveis, de membros da equipe técnica até o diretor de hardware", a OpenAI vinha roubando segredos e informações confidenciais da Apple, em coordenação com parceiros de negócio. Dois ex-funcionários são citados nominalmente — um deles reteve um notebook corporativo da Apple após migrar para a OpenAI e o usou para baixar documentos técnicos confidenciais. A io Products, empresa de hardware fundada por Jony Ive e adquirida pela OpenAI, também é ré no processo. O caso escancara como a corrida por hardware de IA já virou território de espionagem corporativa entre gigantes.</p>
+    <a href="https://techcrunch.com/2026/07/10/apple-sues-openai-over-alleged-trade-secret-theft/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Infraestrutura &amp; Energia</span>
+      <span class="story-source"><a href="https://www.cnbc.com/2026/07/14/new-york-ai-data-center-ban.html" target="_blank">CNBC</a></span>
+    </div>
+    <div class="number-callout">
+      <span class="num">+68%</span>
+      <span class="num-label">alta na conta de luz<br>em NY desde 2019</span>
+    </div>
+    <h2>Nova York vira o primeiro estado dos EUA a <em>pausar</em> data centers de IA em hiperescala</h2>
+    <p>A governadora Kathy Hochul assinou ordem executiva suspendendo por até um ano a construção de novos data centers "hyperscaler" que consumam 50 megawatts ou mais — a primeira moratória estadual do tipo no país. Durante a pausa, reguladores terão de redigir regras sobre impacto ambiental, demanda energética e uso da água, além de preparar um estudo de impacto ambiental padronizado para projetos futuros. A justificativa é direta: essas instalações consomem energia em ritmo que ameaça superar a capacidade da rede elétrica e pressionam as contas dos consumidores locais, que já subiram quase 68% desde 2019. É o primeiro freio regulatório concreto de peso à corrida por infraestrutura de IA nos EUA — e outros estados avaliam medidas semelhantes.</p>
+    <a href="https://www.cnbc.com/2026/07/14/new-york-ai-data-center-ban.html" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story" style="border-bottom:none;">
+    <div class="story-meta">
+      <span class="story-tag">Enterprise &amp; Cloud</span>
+      <span class="story-source"><a href="https://techcrunch.com/2026/06/30/amazon-launches-new-1-billion-fde-org-following-openai-and-anthropic/" target="_blank">TechCrunch</a></span>
+    </div>
+    <div class="number-callout">
+      <span class="num">$1B</span>
+      <span class="num-label">aposta da AWS em<br>engenharia de implantação</span>
+    </div>
+    <h2>AWS cria unidade de <em>US$ 1 bilhão</em> para implantar IA dentro do cliente</h2>
+    <p>A AWS lançou uma unidade de Forward Deployed Engineering que envia milhares de engenheiros para trabalhar fisicamente dentro das operações de clientes corporativos, construindo sistemas de IA em produção e deixando as equipes autossuficientes ao final do projeto. Squads de cinco a seis especialistas já atuam com clientes como Allen Institute, Cox Automotive, NBA, Ricoh, Southwest Airlines e NFL. O movimento segue o mesmo playbook adotado por OpenAI e Anthropic: o gargalo da IA corporativa não é mais a qualidade dos modelos, é conseguir conectá-los a décadas de processos internos bagunçados. Para líderes de TI, o recado é que a implementação — não o modelo — virou o novo campo de disputa entre os grandes provedores de nuvem.</p>
+    <a href="https://techcrunch.com/2026/06/30/amazon-launches-new-1-billion-fde-org-following-openai-and-anthropic/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- ═══ BRASIL ═══ -->
+  <hr class="section-divider">
+  <div class="brasil-strip">Brasil é o 3º maior usuário do ChatGPT no mundo — e ainda não sabe medir o retorno dos agentes de IA</div>
+
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">🇧🇷 Brasil</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stat-row">
+    <div class="stat-item">
+      <span class="stat-num">40%</span>
+      <span class="stat-label">médias/grandes empresas com<br>agentes de IA em produção</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">53%</span>
+      <span class="stat-label">executivos que priorizam IA<br>generativa e agentes em 2026</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">8 meses</span>
+      <span class="stat-label">payback médio do<br>investimento em IA</span>
+    </div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Adoção Nacional</span>
+      <span class="story-source"><a href="https://fastcompanybrasil.com/ia/top-3-global-de-paises-que-usam-o-chatgpt-brasil-esta-na-lista/" target="_blank">Fast Company Brasil</a></span>
+    </div>
+    <div class="number-callout">
+      <span class="num">140M</span>
+      <span class="num-label">mensagens enviadas<br>por dia no Brasil</span>
+    </div>
+    <h2>Brasil confirma posição de <em>3º maior usuário</em> do ChatGPT no mundo</h2>
+    <p>Levantamento da OpenAI mostra que o Brasil segue atrás apenas de Estados Unidos e Índia em volume de uso do ChatGPT, com brasileiros enviando cerca de 140 milhões de mensagens por dia — fatia relevante das mais de 2 bilhões de interações registradas globalmente. Os usos mais comuns por aqui são redação e comunicação, aprendizado e capacitação, além de programação e ciência de dados. O perfil é jovem: 27% dos usuários têm entre 18 e 24 anos e 33% entre 25 e 34, concentrando estudantes e profissionais em início de carreira. São Paulo, Distrito Federal e Santa Catarina lideram em concentração de acessos. O dado reforça que a adoção de IA generativa no Brasil não é fenômeno de nicho — já é comportamento de massa.</p>
+    <a href="https://fastcompanybrasil.com/ia/top-3-global-de-paises-que-usam-o-chatgpt-brasil-esta-na-lista/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story" style="border-bottom:none;">
+    <div class="story-meta">
+      <span class="story-tag">Agentes &amp; ROI</span>
+      <span class="story-source"><a href="https://tiinside.com.br/10/07/2026/agentes-de-ia-o-brasil-acelera-mas-ainda-nao-sabe-medir-o-retorno/" target="_blank">TI INSIDE / ABES · IDC</a></span>
+    </div>
+    <h2>Empresas brasileiras aceleram agentes de IA, mas ainda <em>não sabem medir</em> o retorno</h2>
+    <p>Estudo da ABES com dados da IDC mostra que agentes de IA generativa lideram a agenda estratégica das empresas brasileiras para 2026, citados como prioridade por 53% dos executivos. Na prática, 40% das médias e grandes empresas já usam agentes inteligentes integrados às operações, e outras 33% têm planos formais para os próximos 12 meses. Quem já adotou reporta ROI médio de 727% em três anos, com payback de cerca de oito meses — mas quando questionadas se conseguem medir de forma eficiente esse retorno, as empresas hesitam: mensuração de resultados segue sendo o elo mais frágil da cadeia. O recado para líderes de transformação é claro: implementar agentes ficou mais fácil que provar o valor que eles geram.</p>
+    <a href="https://tiinside.com.br/10/07/2026/agentes-de-ia-o-brasil-acelera-mas-ainda-nao-sabe-medir-o-retorno/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- PULLQUOTE -->
+  <div class="pullquote">
+    <blockquote>
+      "As capacidades da IA estão avançando mais rápido do que a compreensão científica e do que a capacidade dos governos de se adaptar."
+    </blockquote>
+    <cite>— Yoshua Bengio, copresidente do Painel Científico Internacional Independente sobre IA · ONU, julho de 2026</cite>
+  </div>
+
+  <!-- PERSPECTIVA -->
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">💡 Perspectiva</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story" style="border-bottom:none; padding-bottom:28px;">
+    <h2>O que esses sinais significam para <em>líderes de transformação</em></h2>
+    <p style="margin-bottom:12px;">Três leituras práticas para o dia:</p>
+    <p style="margin-bottom:10px;"><strong>1. A implementação virou o campo de batalha real.</strong> A aposta de US$ 1 bilhão da AWS em engenheiros dentro do cliente e o fato de que 40% das empresas brasileiras já rodam agentes em produção mostram que o gargalo deixou de ser tecnológico — é organizacional. Quem não tem um time dedicado a conectar IA a processos legados vai continuar comprando modelo sem colher resultado.</p>
+    <p style="margin-bottom:10px;"><strong>2. Medir ROI é a próxima disciplina obrigatória.</strong> Com payback médio de oito meses e retorno de 727% em três anos, o caso de negócio para IA está feito — mas o estudo da ABES/IDC expõe que a maioria das empresas ainda não sabe provar esse número internamente. Governança de mensuração vira tão crítica quanto a própria adoção.</p>
+    <p><strong>3. A infraestrutura de IA já tem custo político.</strong> A moratória de Nova York e o processo da Apple contra a OpenAI mostram que energia, água e propriedade intelectual deixaram de ser detalhes operacionais e passaram a ser risco estratégico de primeira ordem — algo que qualquer empresa dependente de provedores de IA precisa monitorar, não só os laboratórios de fronteira.</p>
+  </article>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">CLIKDATA<span>·</span>DROPS</div>
+      </div>
+      <div class="footer-links">
+        <a href="https://clikdata.com.br" target="_blank">clikdata.com.br</a>
+        <a href="#">Arquivos anteriores</a>
+        <a href="#">Descadastrar</a>
+        <a href="#">Contato</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      Publicado em 15 de julho de 2026 · Edição #071 · clikdata.com.br<br>
+      Este digest é gerado automaticamente com curadoria editorial humana.<br>
+      Fontes: TechCrunch, CNBC, Fast Company Brasil, TI INSIDE, ABES, IDC.
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
