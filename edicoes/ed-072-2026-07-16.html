@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CLIKDATA DROPS — Edição #072 - Julho 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0f0f0f;
+    --paper: #f5f0e8;
+    --accent: #c8401a;
+    --accent2: #1a3c5e;
+    --muted: #7a7060;
+    --rule: #d4cfc4;
+    --tag-bg: #1a3c5e;
+    --tag-color: #f5f0e8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #e8e3d8;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrapper {
+    max-width: 680px;
+    margin: 40px auto;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    box-shadow: 4px 4px 0 #c4bfb4, 8px 8px 0 #b4afa4;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    border-bottom: 3px double var(--ink);
+    padding: 0;
+    position: relative;
+  }
+
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 32px 10px;
+    border-bottom: 1px solid var(--rule);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  .masthead {
+    padding: 28px 32px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--ink);
+    position: relative;
+  }
+
+  .masthead::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--accent);
+    margin: 0 auto 16px;
+  }
+
+  .masthead h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1;
+    color: var(--ink);
+  }
+
+  .masthead h1 span {
+    color: var(--accent);
+  }
+
+  .tagline {
+    margin-top: 8px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .edition-bar {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 10px 32px;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  /* ── INTRO ── */
+  .intro {
+    padding: 28px 32px 24px;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .intro-dropcap {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 0.85;
+    color: var(--accent);
+    float: left;
+    margin-right: 4px;
+    margin-top: 6px;
+  }
+
+  .intro p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: #2a2520;
+  }
+
+  /* ── SECTION HEADER ── */
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 32px 0;
+    margin-bottom: 4px;
+  }
+
+  .section-flag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    background: var(--tag-bg);
+    color: var(--tag-color);
+    padding: 4px 10px;
+    white-space: nowrap;
+  }
+
+  .section-flag.red { background: var(--accent); }
+
+  .section-rule {
+    flex: 1;
+    height: 1px;
+    background: var(--ink);
+  }
+
+  /* ── STORY CARD ── */
+  .story {
+    padding: 20px 32px;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+  }
+
+  .story:last-of-type { border-bottom: none; }
+
+  .story-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .story-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 2px 7px;
+  }
+
+  .story-source {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+  }
+
+  .story h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+
+  .story h2 em {
+    font-style: italic;
+    color: var(--accent2);
+  }
+
+  .story p {
+    font-size: 14px;
+    line-height: 1.72;
+    color: #2a2520;
+  }
+
+  .story .number-callout {
+    float: right;
+    margin: 0 0 8px 18px;
+    text-align: center;
+    border: 2px solid var(--ink);
+    padding: 12px 16px;
+    min-width: 88px;
+  }
+
+  .story .number-callout .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--accent);
+    display: block;
+    line-height: 1;
+  }
+
+  .story .number-callout .num-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 4px;
+  }
+
+  /* ── DIVIDER ── */
+  .section-divider {
+    border: none;
+    border-top: 3px double var(--ink);
+    margin: 8px 32px 0;
+  }
+
+  /* ── DESTAQUE BRASIL ── */
+  .brasil-strip {
+    background: var(--accent2);
+    color: var(--paper);
+    padding: 6px 32px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .brasil-strip::before {
+    content: '▶';
+    font-size: 8px;
+  }
+
+  /* ── STAT ROW ── */
+  .stat-row {
+    display: flex;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .stat-item {
+    flex: 1;
+    padding: 20px 24px;
+    border-right: 1px solid var(--rule);
+    text-align: center;
+  }
+
+  .stat-item:last-child { border-right: none; }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--accent2);
+    display: block;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 6px;
+    line-height: 1.4;
+  }
+
+  /* ── PULLQUOTE ── */
+  .pullquote {
+    margin: 0;
+    padding: 24px 40px;
+    border-top: 2px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+    background: #ede8de;
+  }
+
+  .pullquote blockquote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 19px;
+    line-height: 1.5;
+    color: var(--ink);
+    text-align: center;
+  }
+
+  .pullquote cite {
+    display: block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: center;
+    font-style: normal;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 28px 32px;
+    border-top: 3px double var(--accent);
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333;
+  }
+
+  .footer-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 900;
+  }
+
+  .footer-brand span { color: var(--accent); }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: right;
+  }
+
+  .footer-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: #888;
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .footer-bottom {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: #555;
+    letter-spacing: 0.06em;
+    line-height: 1.6;
+  }
+
+  .routine-badge {
+    display: inline-block;
+    margin-top: 12px;
+    background: var(--accent);
+    color: white;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+  }
+
+
+  .story-source a {
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--muted);
+    transition: color 0.15s;
+  }
+  .story-source a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+  .read-more {
+    display: inline-block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent2);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent2);
+    padding-bottom: 1px;
+  }
+  .read-more:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+  @media (max-width: 600px) {
+    .wrapper { margin: 0; box-shadow: none; }
+    .masthead h1 { font-size: 38px; }
+    .stat-row { flex-direction: column; }
+    .stat-item { border-right: none; border-bottom: 1px solid var(--rule); }
+    .header-top { flex-direction: column; gap: 4px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-top">
+      <span>Edição #072</span>
+      <span>16 de julho de 2026</span>
+      <span>Diária · IA &amp; Transformação</span>
+    </div>
+    <div class="masthead">
+      <h1>CLIKDATA<span style="color:var(--accent)">·</span>DROPS</h1>
+      <p class="tagline">IA · Tecnologia · Transformação Digital · Edição Diária</p>
+    </div>
+    <div class="edition-bar">
+      <span>🌍 Mundo</span>
+      <span>🇧🇷 Brasil</span>
+      <span>📊 Números</span>
+      <span>💡 Perspectiva</span>
+    </div>
+  </header>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <p>
+      <span class="intro-dropcap">A</span>
+      Anthropic e Blackstone acabam de oficializar a Ode, uma firma de US$ 1,5 bilhão dedicada a implementar IA dentro de empresas de médio porte — a aposta é que o próximo negócio bilionário da IA não está nos modelos, mas em fazê-los funcionar na prática. No mesmo dia, a Gartner alertou que US$ 234 bilhões em gastos com software corporativo estão expostos à "arbitragem agêntica", à medida que agentes autônomos tornam interfaces tradicionais invisíveis. A Microsoft, por sua vez, corrigiu um número recorde de vulnerabilidades neste ciclo de patches — e credita a própria IA por ter acelerado a descoberta das falhas. No Brasil, a Gartner projeta que a IA deve movimentar US$ 2,59 trilhões globalmente em 2026, acelerando as importações de tecnologia para o país, enquanto uma pesquisa do Observatório Fundação Itaú com o Datafolha mostra que 93% dos brasileiros já usam alguma ferramenta de IA — mas ainda não sabem bem o que ela é. Cinco sinais do dia.
+    </p>
+  </section>
+
+  <!-- ═══ MUNDO ═══ -->
+  <div class="section-header">
+    <span class="section-flag red">🌍 Mundo</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Enterprise &amp; IA</span>
+      <span class="story-source"><a href="https://techcrunch.com/2026/07/15/anthropic-blackstone-bet-the-next-trillion-dollar-ai-business-is-implementation-not-models/" target="_blank">TechCrunch</a></span>
+    </div>
+    <div class="number-callout">
+      <span class="num">$1.5B</span>
+      <span class="num-label">capital inicial<br>da Ode</span>
+    </div>
+    <h2>Anthropic e Blackstone apostam que o próximo negócio bilionário da IA é <em>implementação</em>, não modelos</h2>
+    <p>Anthropic, Blackstone, Hellman &amp; Friedman e Goldman Sachs oficializaram a Ode with Anthropic, empresa independente de US$ 1,5 bilhão criada para embutir IA generativa nos processos do dia a dia de empresas de médio porte que já passaram da fase de piloto. O CEO Chris Taylor disse à TechCrunch que "é fácil imaginar isso como uma empresa de um trilhão de dólares algum dia, se executarmos bem" — e que o trabalho da Ode costuma ser a prioridade número um do CEO cliente, não um projeto de TI paralelo. O CTO Eddie Siegel foi direto: escolha de modelo importa, mas não é onde a maior parte do esforço é gasto — a disputa real está em redesenhar processos de negócio, não em Python versus Java.</p>
+    <a href="https://techcrunch.com/2026/07/15/anthropic-blackstone-bet-the-next-trillion-dollar-ai-business-is-implementation-not-models/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Mercado &amp; Software</span>
+      <span class="story-source"><a href="https://www.gartner.com/en/newsroom/press-releases/2026-07-01-gartner-says-us-dollars-234-billion-in-enterprise-application-software-spend-is-at-risk-from-agentic-artificial-intelligence" target="_blank">Gartner</a></span>
+    </div>
+    <div class="number-callout">
+      <span class="num">$234B</span>
+      <span class="num-label">gasto SaaS exposto<br>à IA agêntica até 2030</span>
+    </div>
+    <h2>Gartner: <em>US$ 234 bilhões</em> em software corporativo estão em risco com a IA agêntica</h2>
+    <p>A consultoria projeta que até US$ 234 bilhões em gastos com aplicações corporativas ficam expostos à "arbitragem agêntica" entre agora e 2030 — cerca de 20% de todo o gasto com SaaS empresarial. O mecanismo: agentes de IA entregam o resultado diretamente, sem passar pelas interfaces tradicionais, tornando o software "invisível". Segundo George Brocklehurst, Managing Vice President da Gartner, isso "rompe o vínculo entre crescimento de usuários e crescimento de receita para muitos fornecedores de software corporativo". Para CIOs, o recado é que o modelo de licenciamento por assento pode não sobreviver intacto à próxima década.</p>
+    <a href="https://www.gartner.com/en/newsroom/press-releases/2026-07-01-gartner-says-us-dollars-234-billion-in-enterprise-application-software-spend-is-at-risk-from-agentic-artificial-intelligence" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story" style="border-bottom:none;">
+    <div class="story-meta">
+      <span class="story-tag">Segurança &amp; IA</span>
+      <span class="story-source"><a href="https://techcrunch.com/2026/07/15/microsoft-patches-record-number-of-security-vulnerabilities-citing-its-use-of-ai/" target="_blank">TechCrunch</a></span>
+    </div>
+    <h2>Microsoft corrige número recorde de vulnerabilidades — e credita a IA pela descoberta</h2>
+    <p>O ciclo mensal de patches da Microsoft trouxe o maior volume de correções de segurança já registrado para Windows, Office e outras linhas de produto, com a empresa atribuindo parte do salto ao uso de IA para acelerar a descoberta de falhas em código. O caso ilustra uma faca de dois gumes que já preocupa times de segurança corporativa: as mesmas ferramentas que aceleram a varredura defensiva também estão nas mãos de atacantes, comprimindo a janela entre a divulgação de uma vulnerabilidade e sua exploração em massa.</p>
+    <a href="https://techcrunch.com/2026/07/15/microsoft-patches-record-number-of-security-vulnerabilities-citing-its-use-of-ai/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- ═══ BRASIL ═══ -->
+  <hr class="section-divider">
+  <div class="brasil-strip">Brasil: 93% já usam IA no dia a dia, mas o país ainda importa tecnologia para acompanhar o ritmo</div>
+
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">🇧🇷 Brasil</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stat-row">
+    <div class="stat-item">
+      <span class="stat-num">93%</span>
+      <span class="stat-label">brasileiros que já usam<br>alguma ferramenta de IA</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">75%</span>
+      <span class="stat-label">que percebem a IA<br>presente no dia a dia</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">+47%</span>
+      <span class="stat-label">alta do investimento<br>global em IA em 2026</span>
+    </div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Investimento &amp; Importação</span>
+      <span class="story-source"><a href="https://docmanagement.com.br/07/15/2026/ia-deve-movimentar-us-259-trilhoes-em-2026-e-acelera-importacoes-de-tecnologia-para-o-brasil/" target="_blank">Portal Information Management / Gartner</a></span>
+    </div>
+    <div class="number-callout">
+      <span class="num">$2.59T</span>
+      <span class="num-label">gasto global<br>com IA em 2026</span>
+    </div>
+    <h2>IA deve movimentar <em>US$ 2,59 trilhões</em> em 2026 — e acelera importações de tecnologia para o Brasil</h2>
+    <p>Segundo projeção da Gartner, o investimento global em inteligência artificial deve somar US$ 2,59 trilhões em 2026, alta de 47% sobre o ano anterior, com mais de 45% do montante direcionado à infraestrutura que sustenta as aplicações de IA — data centers, armazenamento e capacidade de nuvem. O Brasil se consolida como o principal polo latino-americano para receber esses investimentos, mas na prática isso significa dependência crescente de hardware, chips e serviços de nuvem importados: o país acelera o consumo de tecnologia de ponta antes de desenvolver capacidade equivalente de produção interna.</p>
+    <a href="https://docmanagement.com.br/07/15/2026/ia-deve-movimentar-us-259-trilhoes-em-2026-e-acelera-importacoes-de-tecnologia-para-o-brasil/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story" style="border-bottom:none;">
+    <div class="story-meta">
+      <span class="story-tag">Adoção Nacional</span>
+      <span class="story-source"><a href="https://www.fundacaoitau.org.br/noticias/noticias/93-das-pessoas-utilizam-ferramenta-de-ia-diz-pesquisa-da-fundacao-itau-e-datafolha" target="_blank">Observatório Fundação Itaú / Datafolha</a></span>
+    </div>
+    <h2>93% dos brasileiros já usam IA no dia a dia — mas ainda não sabem bem o que ela é</h2>
+    <p>Pesquisa do Observatório Fundação Itaú em parceria com o Datafolha mostra que 93% da população já utiliza alguma ferramenta de inteligência artificial e 75% percebe a presença da tecnologia na rotina — números que confirmam adoção de massa. O contraponto: o estudo revela lacunas relevantes de compreensão sobre o que de fato é IA e como ela funciona, um descompasso entre uso e letramento digital. O tema ganha palco nos dias 22 e 23 de julho, quando o AI Summit Brasil reúne no IPT, em São Paulo, discussões sobre os impactos da IA nos negócios, na sociedade e no futuro do trabalho.</p>
+    <a href="https://www.fundacaoitau.org.br/noticias/noticias/93-das-pessoas-utilizam-ferramenta-de-ia-diz-pesquisa-da-fundacao-itau-e-datafolha" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- PULLQUOTE -->
+  <div class="pullquote">
+    <blockquote>
+      "Sistemas agênticos entregam resultados diretamente, contornando aplicações tradicionais centradas em interface e tornando o software invisível. Isso rompe o vínculo entre crescimento de usuários e crescimento de receita para muitos fornecedores de software corporativo."
+    </blockquote>
+    <cite>— George Brocklehurst, Managing Vice President · Gartner, julho de 2026</cite>
+  </div>
+
+  <!-- PERSPECTIVA -->
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">💡 Perspectiva</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story" style="border-bottom:none; padding-bottom:28px;">
+    <h2>O que esses sinais significam para <em>líderes de transformação</em></h2>
+    <p style="margin-bottom:12px;">Três leituras práticas para o dia:</p>
+    <p style="margin-bottom:10px;"><strong>1. O valor migrou do modelo para a implementação.</strong> A tese de US$ 1,5 bilhão por trás da Ode e o alerta da Gartner sobre US$ 234 bilhões em risco apontam na mesma direção: a vantagem competitiva não está mais em qual modelo se usa, mas em quem consegue embutir agentes nos processos reais de negócio antes que o concorrente o faça — e antes que o próprio fornecedor de software seja contornado.</p>
+    <p style="margin-bottom:10px;"><strong>2. Segurança virou corrida armamentista simétrica.</strong> Se a IA acelera a descoberta de vulnerabilidades para times defensivos, ela faz o mesmo para atacantes. Empresas que usam IA generativa em produção precisam tratar o ciclo de patches e a superfície de exposição como prioridade de governança, não como item operacional de TI.</p>
+    <p><strong>3. Adoção de massa no Brasil não é o mesmo que maturidade.</strong> Com 93% da população já usando IA mas o país ainda dependente de tecnologia importada e de letramento digital defasado, o risco é confundir uso intenso com capacidade estratégica. Quem lidera projetos de transformação precisa investir tanto em infraestrutura nacional quanto em capacitação — os dois lados da mesma equação.</p>
+  </article>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">CLIKDATA<span>·</span>DROPS</div>
+      </div>
+      <div class="footer-links">
+        <a href="https://clikdata.com.br" target="_blank">clikdata.com.br</a>
+        <a href="#">Arquivos anteriores</a>
+        <a href="#">Descadastrar</a>
+        <a href="#">Contato</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      Publicado em 16 de julho de 2026 · Edição #072 · clikdata.com.br<br>
+      Este digest é gerado automaticamente com curadoria editorial humana.<br>
+      Fontes: TechCrunch, Gartner, Portal Information Management, Observatório Fundação Itaú, Datafolha.
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
