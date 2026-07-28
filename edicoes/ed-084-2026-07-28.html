@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CLIKDATA DROPS — Edição #084 - Julho 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0f0f0f;
+    --paper: #f5f0e8;
+    --accent: #c8401a;
+    --accent2: #1a3c5e;
+    --muted: #7a7060;
+    --rule: #d4cfc4;
+    --tag-bg: #1a3c5e;
+    --tag-color: #f5f0e8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #e8e3d8;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrapper {
+    max-width: 680px;
+    margin: 40px auto;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    box-shadow: 4px 4px 0 #c4bfb4, 8px 8px 0 #b4afa4;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    border-bottom: 3px double var(--ink);
+    padding: 0;
+    position: relative;
+  }
+
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 32px 10px;
+    border-bottom: 1px solid var(--rule);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  .masthead {
+    padding: 28px 32px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--ink);
+    position: relative;
+  }
+
+  .masthead::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--accent);
+    margin: 0 auto 16px;
+  }
+
+  .masthead h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1;
+    color: var(--ink);
+  }
+
+  .masthead h1 span {
+    color: var(--accent);
+  }
+
+  .tagline {
+    margin-top: 8px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .edition-bar {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 10px 32px;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  /* ── INTRO ── */
+  .intro {
+    padding: 28px 32px 24px;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .intro-dropcap {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 0.85;
+    color: var(--accent);
+    float: left;
+    margin-right: 4px;
+    margin-top: 6px;
+  }
+
+  .intro p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: #2a2520;
+  }
+
+  /* ── SECTION HEADER ── */
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 32px 0;
+    margin-bottom: 4px;
+  }
+
+  .section-flag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    background: var(--tag-bg);
+    color: var(--tag-color);
+    padding: 4px 10px;
+    white-space: nowrap;
+  }
+
+  .section-flag.red { background: var(--accent); }
+
+  .section-rule {
+    flex: 1;
+    height: 1px;
+    background: var(--ink);
+  }
+
+  /* ── STORY CARD ── */
+  .story {
+    padding: 20px 32px;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+  }
+
+  .story:last-of-type { border-bottom: none; }
+
+  .story-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .story-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 2px 7px;
+  }
+
+  .story-source {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+  }
+
+  .story h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+
+  .story h2 em {
+    font-style: italic;
+    color: var(--accent2);
+  }
+
+  .story p {
+    font-size: 14px;
+    line-height: 1.72;
+    color: #2a2520;
+  }
+
+  .story .number-callout {
+    float: right;
+    margin: 0 0 8px 18px;
+    text-align: center;
+    border: 2px solid var(--ink);
+    padding: 12px 16px;
+    min-width: 88px;
+  }
+
+  .story .number-callout .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--accent);
+    display: block;
+    line-height: 1;
+  }
+
+  .story .number-callout .num-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 4px;
+  }
+
+  /* ── DIVIDER ── */
+  .section-divider {
+    border: none;
+    border-top: 3px double var(--ink);
+    margin: 8px 32px 0;
+  }
+
+  /* ── DESTAQUE BRASIL ── */
+  .brasil-strip {
+    background: var(--accent2);
+    color: var(--paper);
+    padding: 6px 32px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .brasil-strip::before {
+    content: '▶';
+    font-size: 8px;
+  }
+
+  /* ── STAT ROW ── */
+  .stat-row {
+    display: flex;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .stat-item {
+    flex: 1;
+    padding: 20px 24px;
+    border-right: 1px solid var(--rule);
+    text-align: center;
+  }
+
+  .stat-item:last-child { border-right: none; }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--accent2);
+    display: block;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 6px;
+    line-height: 1.4;
+  }
+
+  /* ── PULLQUOTE ── */
+  .pullquote {
+    margin: 0;
+    padding: 24px 40px;
+    border-top: 2px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+    background: #ede8de;
+  }
+
+  .pullquote blockquote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 19px;
+    line-height: 1.5;
+    color: var(--ink);
+    text-align: center;
+  }
+
+  .pullquote cite {
+    display: block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: center;
+    font-style: normal;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 28px 32px;
+    border-top: 3px double var(--accent);
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333;
+  }
+
+  .footer-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 900;
+  }
+
+  .footer-brand span { color: var(--accent); }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: right;
+  }
+
+  .footer-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: #888;
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .footer-bottom {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: #555;
+    letter-spacing: 0.06em;
+    line-height: 1.6;
+  }
+
+  .routine-badge {
+    display: inline-block;
+    margin-top: 12px;
+    background: var(--accent);
+    color: white;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+  }
+
+
+  .story-source a {
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--muted);
+    transition: color 0.15s;
+  }
+  .story-source a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+  .read-more {
+    display: inline-block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent2);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent2);
+    padding-bottom: 1px;
+  }
+  .read-more:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+  @media (max-width: 600px) {
+    .wrapper { margin: 0; box-shadow: none; }
+    .masthead h1 { font-size: 38px; }
+    .stat-row { flex-direction: column; }
+    .stat-item { border-right: none; border-bottom: 1px solid var(--rule); }
+    .header-top { flex-direction: column; gap: 4px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-top">
+      <span>Edição #084</span>
+      <span>28 de julho de 2026</span>
+      <span>Diária · IA &amp; Transformação</span>
+    </div>
+    <div class="masthead">
+      <h1>CLIKDATA<span style="color:var(--accent)">·</span>DROPS</h1>
+      <p class="tagline">IA · Tecnologia · Transformação Digital · Edição Diária</p>
+    </div>
+    <div class="edition-bar">
+      <span>🌍 Mundo</span>
+      <span>🇧🇷 Brasil</span>
+      <span>📊 Números</span>
+      <span>💡 Perspectiva</span>
+    </div>
+  </header>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <p>
+      <span class="intro-dropcap">A</span>
+      A Anthropic lançou o Claude Opus 5, novo modelo-topo que assume a liderança em benchmarks de codificação e conhecimento pela metade do preço cobrado pela concorrência de fronteira. Em Genebra, um painel científico independente da ONU, copresidido por Yoshua Bengio, alertou que a ciência não pode garantir que o avanço da IA deixe de causar "danos catastróficos" — pressão que se soma à expansão global do Meta AI para as mensagens privadas do Threads, dando a meio bilhão de usuários acesso direto a um chatbot dentro do próprio app. No Brasil, o Fórum E-Commerce Brasil 2026 abre hoje em São Paulo com o comércio agêntico como tema central, e um novo raio-x do mercado nacional mostra o sistema financeiro entre os mais avançados do mundo em adoção de IA. Cinco sinais do dia.
+    </p>
+  </section>
+
+  <!-- ═══ MUNDO ═══ -->
+  <div class="section-header">
+    <span class="section-flag red">🌍 Mundo</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Modelos &amp; Mercado</span>
+      <span class="story-source"><a href="https://www.anthropic.com/news/claude-opus-5" target="_blank">Anthropic</a></span>
+    </div>
+    <div class="number-callout">
+      <span class="num">1M</span>
+      <span class="num-label">tokens de contexto<br>no Claude Opus 5</span>
+    </div>
+    <h2>Anthropic lança <em>Claude Opus 5</em> — estado da arte em codificação pela metade do preço da fronteira</h2>
+    <p>A Anthropic apresentou o Claude Opus 5, novo modelo padrão do Claude Max e o mais forte disponível no Claude Pro. A empresa diz que o modelo se aproxima da inteligência de fronteira do Claude Fable 5 por metade do preço, alcançando o novo estado da arte em avaliações de codificação e trabalho de conhecimento como Frontier-Bench e GDPval-AA — embora ainda fique atrás em tarefas de cibersegurança. O Opus 5 mantém o mesmo preço do antecessor Opus 4.8 (US$ 5 / US$ 25 por milhão de tokens), suporta janela de contexto de 1 milhão de tokens e chega com "thinking" ativado por padrão, reforçando a tendência de custo decrescente para IA de ponta.</p>
+    <a href="https://www.anthropic.com/news/claude-opus-5" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Governança &amp; IA</span>
+      <span class="story-source"><a href="https://news.un.org/pt/story/2026/07/1853645" target="_blank">ONU News</a></span>
+    </div>
+    <h2>Painel científico da ONU diz que a ciência <em>não pode garantir</em> que a IA evite "danos catastróficos"</h2>
+    <p>Um painel científico independente que reúne pesquisadores de 37 países, copresidido pelo laureado Yoshua Bengio, apresentou em Genebra um relatório alertando que o avanço das capacidades de IA pode causar danos catastróficos — seja pela ação autônoma de sistemas, seja pelo uso malicioso por pessoas. O documento serviu de base ao Primeiro Diálogo Global sobre Governança da IA da ONU, que reuniu governos, big techs, academia e sociedade civil para debater regras para uma tecnologia que evolui mais rápido do que as normas pensadas para contê-la, e antecedeu a cúpula "AI for Good", também em Genebra.</p>
+    <a href="https://news.un.org/pt/story/2026/07/1853645" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story" style="border-bottom:none;">
+    <div class="story-meta">
+      <span class="story-tag">Produto &amp; IA</span>
+      <span class="story-source"><a href="https://techcrunch.com/2026/07/27/threads-users-can-now-chat-with-meta-ai-in-their-dms/" target="_blank">TechCrunch</a></span>
+    </div>
+    <h2>Meta leva o <em>Meta AI</em> para as mensagens privadas do Threads em todo o mundo</h2>
+    <p>A Meta expandiu globalmente, a partir de 27 de julho, o acesso ao Meta AI dentro das mensagens diretas do Threads, dando a meio bilhão de usuários da rede a possibilidade de conversar com o chatbot em privado — compartilhando posts, imagens, links e vídeos e fazendo perguntas de acompanhamento sem expor a conversa publicamente. O movimento estende o Meta AI a uma quarta grande superfície da empresa, ao lado de Facebook, Instagram e WhatsApp, e é lido como tentativa da Meta de reter usuários dentro do próprio ecossistema, dificultando a migração para assistentes de terceiros como ChatGPT e Gemini.</p>
+    <a href="https://techcrunch.com/2026/07/27/threads-users-can-now-chat-with-meta-ai-in-their-dms/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- ═══ BRASIL ═══ -->
+  <hr class="section-divider">
+  <div class="brasil-strip">Fórum E-Commerce Brasil 2026 abre hoje em São Paulo com o comércio agêntico no centro do palco</div>
+
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">🇧🇷 Brasil</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stat-row">
+    <div class="stat-item">
+      <span class="stat-num">US$2,59tri</span>
+      <span class="stat-label">gasto global projetado<br>com IA em 2026 (Gartner)</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">63%</span>
+      <span class="stat-label">crescimento do mercado de<br>plataformas e modelos de IA em 2026</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">45mil</span>
+      <span class="stat-label">profissionais esperados no<br>Fórum E-Commerce Brasil 2026</span>
+    </div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Eventos &amp; Varejo</span>
+      <span class="story-source"><a href="https://www.ecommercebrasil.com.br/noticias/cadastra-no-forum-e-commerce-brasil-2026-ai-driven-performance-para-crescer-e-commerce" target="_blank">E-Commerce Brasil</a></span>
+    </div>
+    <h2>Comércio agêntico é o tema central do <em>Fórum E-Commerce Brasil 2026</em>, que abre hoje em São Paulo</h2>
+    <p>A 17ª edição do Fórum E-Commerce Brasil começa hoje no Distrito Anhembi, em São Paulo, com expectativa de reunir mais de 45 mil profissionais e gerar R$ 2,5 bilhões em negócios até domingo. A programação prioriza o avanço da IA autônoma como agente ativo de decisão e orquestração de jornada — substituindo trabalho operacional por automação avançada —, além de comércio direto ao consumidor e rentabilidade sustentável em marketplaces. Pela primeira vez, o evento terá a área "Mundo Empreendedor", em parceria com o Sebrae, para aproximar pequenos negócios de soluções e plataformas digitais.</p>
+    <a href="https://www.ecommercebrasil.com.br/noticias/cadastra-no-forum-e-commerce-brasil-2026-ai-driven-performance-para-crescer-e-commerce" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story" style="border-bottom:none;">
+    <div class="story-meta">
+      <span class="story-tag">Adoção Nacional</span>
+      <span class="story-source"><a href="https://www.diarioinduscom.com.br/Noticias/875321/ia_em_2026:_brasil_avanca_em_financas__regulacao_e_produtividade_assistida" target="_blank">Diário Induscom</a></span>
+    </div>
+    <h2>Sistema financeiro brasileiro figura entre os <em>mais avançados do mundo</em> em adoção de IA</h2>
+    <p>Um raio-x do mercado nacional de tecnologia mostra que o setor financeiro brasileiro está entre os mais avançados globalmente na incorporação prática de inteligência artificial, com avanços simultâneos em produtividade assistida e no arcabouço regulatório que passa a acompanhar a tecnologia. O retrato reforça um padrão já visto em edições anteriores: bancos e fintechs nacionais tratam IA como parte da operação central — não mais como piloto — enquanto outros setores da economia brasileira ainda buscam esse mesmo grau de maturidade.</p>
+    <a href="https://www.diarioinduscom.com.br/Noticias/875321/ia_em_2026:_brasil_avanca_em_financas__regulacao_e_produtividade_assistida" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- PULLQUOTE -->
+  <div class="pullquote">
+    <blockquote>
+      "A ciência hoje não pode garantir que o aumento das capacidades de IA não causará danos catastróficos, seja pela ação de máquinas, seja por usuários malintencionados."
+    </blockquote>
+    <cite>— Yoshua Bengio, copresidente do painel científico da ONU sobre IA</cite>
+  </div>
+
+  <!-- PERSPECTIVA -->
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">💡 Perspectiva</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story" style="border-bottom:none; padding-bottom:28px;">
+    <h2>O que esses sinais significam para <em>líderes de transformação</em></h2>
+    <p style="margin-bottom:12px;">Três leituras práticas para o dia:</p>
+    <p style="margin-bottom:10px;"><strong>1. O custo da IA de fronteira está desmoronando — a desculpa do orçamento, também.</strong> O Opus 5 chega ao topo dos benchmarks de codificação pelo mesmo preço do modelo anterior e à metade do custo de outros modelos de fronteira. Times que ainda postergam a adoção de IA generativa citando custo perdem esse argumento a cada novo lançamento: a barreira que resta é organizacional, não financeira.</p>
+    <p style="margin-bottom:10px;"><strong>2. Governança de IA saiu do papel e entrou na agenda de risco.</strong> Um painel científico da ONU dizendo, sem rodeios, que não há garantia contra "danos catastróficos" muda o tom do debate: de promessa regulatória distante para item concreto de gestão de risco corporativo. Empresas que ainda não têm política interna de uso responsável de IA — incluindo agentes autônomos e assistentes como o próprio Meta AI, agora dentro de mensagens privadas — devem tratar isso como prioridade, não como projeto de compliance para "quando der tempo".</p>
+    <p><strong>3. Brasil tem dois motores acesos: varejo agêntico e finanças.</strong> O Fórum E-Commerce Brasil 2026, com 45 mil profissionais discutindo comércio agêntico, e um sistema financeiro nacional já entre os mais avançados do mundo em adoção de IA mostram onde o país realmente converteu curiosidade em operação. O desafio para os próximos meses é replicar essa maturidade em setores que ainda tratam IA como piloto — antes que a vantagem competitiva desses dois setores se torne distância difícil de recuperar.</p>
+  </article>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">CLIKDATA<span>·</span>DROPS</div>
+      </div>
+      <div class="footer-links">
+        <a href="https://clikdata.com.br" target="_blank">clikdata.com.br</a>
+        <a href="#">Arquivos anteriores</a>
+        <a href="#">Descadastrar</a>
+        <a href="#">Contato</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      Publicado em 28 de julho de 2026 · Edição #084 · clikdata.com.br<br>
+      Este digest é gerado automaticamente com curadoria editorial humana.<br>
+      Fontes: Anthropic, ONU News, TechCrunch, E-Commerce Brasil, Diário Induscom.
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
