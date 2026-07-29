@@ -1,7 +1,6 @@
 name: Deploy Newsletter Clikdata Drops
 
 on:
-  # Disparo manual pelo GitHub UI ou via API
   workflow_dispatch:
     inputs:
       edicao:
@@ -13,21 +12,25 @@ on:
         required: true
         type: string
       nome_campanha:
-        description: 'Nome interno da campanha no Brevo'
+        description: 'Nome interno da campanha no Cliker'
         required: true
         type: string
-      lista_brevo:
-        description: 'ID da lista Brevo (padrão: 6)'
+      lista_cliker:
+        description: 'ID da lista no Cliker (veja GET /api-v1/lists)'
         required: false
-        default: '6'
+        default: '1'
+        type: string
+      send_configuration_id:
+        description: 'ID da configuração de envio no Cliker (veja GET /api-v1/send-configurations)'
+        required: false
+        default: '1'
         type: string
       apenas_criar:
-        description: 'Apenas criar campanha no Brevo, sem disparar'
+        description: 'Apenas criar campanha no Cliker, sem disparar'
         required: false
         default: 'false'
         type: boolean
 
-  # Disparo automático ao fazer push de nova edição
   push:
     branches:
       - main
@@ -36,24 +39,21 @@ on:
 
 jobs:
   deploy:
-    name: Push + Brevo
+    name: Push + Cliker
     runs-on: ubuntu-latest
 
     steps:
-      # ── 1. Checkout ──────────────────────────────────────────────
       - name: Checkout repositório
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      # ── 2. Detectar arquivo de edição ─────────────────────────────
       - name: Detectar edição alterada
         id: detectar
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             ARQUIVO="${{ github.event.inputs.edicao }}"
           else
-            # Push automático: pega o último HTML adicionado/modificado em edicoes/
             ARQUIVO=$(git diff --name-only HEAD~1 HEAD -- 'edicoes/*.html' | tail -1)
           fi
 
@@ -64,9 +64,8 @@ jobs:
 
           echo "arquivo=$ARQUIVO" >> $GITHUB_OUTPUT
 
-          # Derivar assunto e nome da campanha quando disparado via push
           if [ "${{ github.event_name }}" = "push" ]; then
-            BASE=$(basename "$ARQUIVO" .html)           # ed-001-2026-05-06
+            BASE=$(basename "$ARQUIVO" .html)
             NUM=$(echo "$BASE" | grep -oP '(?<=ed-)\d+')
             DATA=$(echo "$BASE" | grep -oP '\d{4}-\d{2}-\d{2}')
             DATA_PT=$(date -d "$DATA" '+%d/%m/%Y' 2>/dev/null || echo "$DATA")
@@ -81,35 +80,33 @@ jobs:
           echo "nome_campanha=$NOME"    >> $GITHUB_OUTPUT
           echo "✅ Edição detectada: $ARQUIVO"
 
-      # ── 3. Criar campanha no Brevo ────────────────────────────────
-      - name: Criar campanha Brevo
-        id: brevo_criar
+      - name: Criar campanha Cliker
+        id: cliker_criar
         env:
-          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+          CLIKER_API_KEY: ${{ secrets.CLIKER_API_KEY }}
         run: |
           ARQUIVO="${{ steps.detectar.outputs.arquivo }}"
           ASSUNTO="${{ steps.detectar.outputs.assunto }}"
           NOME="${{ steps.detectar.outputs.nome_campanha }}"
-          LISTA_ID="${{ github.event.inputs.lista_brevo || '6' }}"
-
-          HTML=$(cat "$ARQUIVO")
+          LISTA_ID="${{ github.event.inputs.lista_cliker || '1' }}"
+          SEND_CONFIG_ID="${{ github.event.inputs.send_configuration_id || '1' }}"
 
           PAYLOAD=$(python3 -c "
-          import json, sys
+          import json
           html = open('$ARQUIVO').read()
           print(json.dumps({
               'name': '$NOME',
               'subject': '$ASSUNTO',
               'sender': {'name': 'Clikdata Drops', 'email': 'drops@clikdata.com.br'},
-              'type': 'classic',
-              'htmlContent': html,
-              'recipients': {'listIds': [$LISTA_ID]}
+              'html': html,
+              'list_id': int('$LISTA_ID'),
+              'send_configuration_id': int('$SEND_CONFIG_ID')
           }))
           ")
 
           RESPONSE=$(curl -s -w "\n%{http_code}" \
-            -X POST "https://api.brevo.com/v3/emailCampaigns" \
-            -H "api-key: $BREVO_API_KEY" \
+            -X POST "https://app.cliker.com.br/api-v1/campaigns" \
+            -H "api-key: $CLIKER_API_KEY" \
             -H "Content-Type: application/json" \
             -d "$PAYLOAD")
 
@@ -126,26 +123,24 @@ jobs:
           echo "campaign_id=$CAMPAIGN_ID" >> $GITHUB_OUTPUT
           echo "✅ Campanha criada: ID $CAMPAIGN_ID"
 
-      # ── 4. Disparar campanha ──────────────────────────────────────
-      - name: Disparar campanha Brevo
+      - name: Disparar campanha Cliker
         if: ${{ github.event.inputs.apenas_criar != 'true' }}
         env:
-          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+          CLIKER_API_KEY: ${{ secrets.CLIKER_API_KEY }}
         run: |
-          CAMPAIGN_ID="${{ steps.brevo_criar.outputs.campaign_id }}"
+          CAMPAIGN_ID="${{ steps.cliker_criar.outputs.campaign_id }}"
 
           HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" \
-            -X POST "https://api.brevo.com/v3/emailCampaigns/${CAMPAIGN_ID}/sendNow" \
-            -H "api-key: $BREVO_API_KEY")
+            -X POST "https://app.cliker.com.br/api-v1/campaigns/${CAMPAIGN_ID}/send" \
+            -H "api-key: $CLIKER_API_KEY")
 
-          if [ "$HTTP_CODE" != "204" ]; then
+          if [ "$HTTP_CODE" != "200" ]; then
             echo "❌ Erro ao disparar campanha: HTTP $HTTP_CODE"
             exit 1
           fi
 
           echo "🚀 Campanha $CAMPAIGN_ID disparada com sucesso!"
 
-      # ── 5. Resumo no Job Summary ──────────────────────────────────
       - name: Resumo
         if: always()
         run: |
@@ -154,6 +149,6 @@ jobs:
           echo "| Campo | Valor |" >> $GITHUB_STEP_SUMMARY
           echo "|-------|-------|" >> $GITHUB_STEP_SUMMARY
           echo "| Arquivo | \`${{ steps.detectar.outputs.arquivo }}\` |" >> $GITHUB_STEP_SUMMARY
-          echo "| Campanha Brevo | \`${{ steps.brevo_criar.outputs.campaign_id }}\` |" >> $GITHUB_STEP_SUMMARY
+          echo "| Campanha Cliker | \`${{ steps.cliker_criar.outputs.campaign_id }}\` |" >> $GITHUB_STEP_SUMMARY
           echo "| Assunto | ${{ steps.detectar.outputs.assunto }} |" >> $GITHUB_STEP_SUMMARY
           echo "| Disparada | ${{ github.event.inputs.apenas_criar != 'true' && '✅ Sim' || '⏸ Não (apenas criada)' }} |" >> $GITHUB_STEP_SUMMARY
