@@ -36,7 +36,7 @@ Após o push, **sempre** executar:
 O merge em `main` dispara automaticamente o GitHub Actions workflow
 (`.github/workflows/deploy-newsletter.yml`) que cria e dispara a campanha no Brevo.
 
-### 6. Em caso de erro no Brevo ou no push
+### 6. Em caso de erro na API ou no push
 - Registrar em `logs/erro-AAAA-MM-DD.txt` com: endpoint, HTTP status, mensagem e ação recomendada.
 - Commitar e subir o log junto com a edição.
 
@@ -55,10 +55,10 @@ logs/
 ```
 
 ## Secrets necessários no repositório GitHub
-- `BREVO_API_KEY` — chave da API Brevo (Settings → Secrets and variables → Actions)
+- `CLIKER_API_KEY` — chave da API CLIKER (Settings → Secrets and variables → Actions)
 
 ## Importante
-- O disparo da campanha Brevo **não é feito diretamente deste ambiente** (proxy de saída bloqueado).
+- O disparo da campanha Cliker **não é feito diretamente deste ambiente** (proxy de saída bloqueado).
 - O envio acontece via GitHub Actions após o merge em `main`.
 - Nunca alterar o design do template.
 - Sempre incrementar o número da edição.
