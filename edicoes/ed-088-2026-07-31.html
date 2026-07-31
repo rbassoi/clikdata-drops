@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CLIKDATA DROPS — Edição #088 - Julho 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0f0f0f;
+    --paper: #f5f0e8;
+    --accent: #c8401a;
+    --accent2: #1a3c5e;
+    --muted: #7a7060;
+    --rule: #d4cfc4;
+    --tag-bg: #1a3c5e;
+    --tag-color: #f5f0e8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #e8e3d8;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrapper {
+    max-width: 680px;
+    margin: 40px auto;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    box-shadow: 4px 4px 0 #c4bfb4, 8px 8px 0 #b4afa4;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    border-bottom: 3px double var(--ink);
+    padding: 0;
+    position: relative;
+  }
+
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 32px 10px;
+    border-bottom: 1px solid var(--rule);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  .masthead {
+    padding: 28px 32px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--ink);
+    position: relative;
+  }
+
+  .masthead::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--accent);
+    margin: 0 auto 16px;
+  }
+
+  .masthead h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1;
+    color: var(--ink);
+  }
+
+  .masthead h1 span {
+    color: var(--accent);
+  }
+
+  .tagline {
+    margin-top: 8px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .edition-bar {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 10px 32px;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  /* ── INTRO ── */
+  .intro {
+    padding: 28px 32px 24px;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .intro-dropcap {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 0.85;
+    color: var(--accent);
+    float: left;
+    margin-right: 4px;
+    margin-top: 6px;
+  }
+
+  .intro p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: #2a2520;
+  }
+
+  /* ── SECTION HEADER ── */
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 32px 0;
+    margin-bottom: 4px;
+  }
+
+  .section-flag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    background: var(--tag-bg);
+    color: var(--tag-color);
+    padding: 4px 10px;
+    white-space: nowrap;
+  }
+
+  .section-flag.red { background: var(--accent); }
+
+  .section-rule {
+    flex: 1;
+    height: 1px;
+    background: var(--ink);
+  }
+
+  /* ── STORY CARD ── */
+  .story {
+    padding: 20px 32px;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+  }
+
+  .story:last-of-type { border-bottom: none; }
+
+  .story-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .story-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 2px 7px;
+  }
+
+  .story-source {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+  }
+
+  .story h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+
+  .story h2 em {
+    font-style: italic;
+    color: var(--accent2);
+  }
+
+  .story p {
+    font-size: 14px;
+    line-height: 1.72;
+    color: #2a2520;
+  }
+
+  .story .number-callout {
+    float: right;
+    margin: 0 0 8px 18px;
+    text-align: center;
+    border: 2px solid var(--ink);
+    padding: 12px 16px;
+    min-width: 88px;
+  }
+
+  .story .number-callout .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--accent);
+    display: block;
+    line-height: 1;
+  }
+
+  .story .number-callout .num-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 4px;
+  }
+
+  /* ── DIVIDER ── */
+  .section-divider {
+    border: none;
+    border-top: 3px double var(--ink);
+    margin: 8px 32px 0;
+  }
+
+  /* ── DESTAQUE BRASIL ── */
+  .brasil-strip {
+    background: var(--accent2);
+    color: var(--paper);
+    padding: 6px 32px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .brasil-strip::before {
+    content: '▶';
+    font-size: 8px;
+  }
+
+  /* ── STAT ROW ── */
+  .stat-row {
+    display: flex;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .stat-item {
+    flex: 1;
+    padding: 20px 24px;
+    border-right: 1px solid var(--rule);
+    text-align: center;
+  }
+
+  .stat-item:last-child { border-right: none; }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--accent2);
+    display: block;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 6px;
+    line-height: 1.4;
+  }
+
+  /* ── PULLQUOTE ── */
+  .pullquote {
+    margin: 0;
+    padding: 24px 40px;
+    border-top: 2px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+    background: #ede8de;
+  }
+
+  .pullquote blockquote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 19px;
+    line-height: 1.5;
+    color: var(--ink);
+    text-align: center;
+  }
+
+  .pullquote cite {
+    display: block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: center;
+    font-style: normal;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 28px 32px;
+    border-top: 3px double var(--accent);
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333;
+  }
+
+  .footer-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 900;
+  }
+
+  .footer-brand span { color: var(--accent); }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: right;
+  }
+
+  .footer-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: #888;
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .footer-bottom {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: #555;
+    letter-spacing: 0.06em;
+    line-height: 1.6;
+  }
+
+  .routine-badge {
+    display: inline-block;
+    margin-top: 12px;
+    background: var(--accent);
+    color: white;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+  }
+
+
+  .story-source a {
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--muted);
+    transition: color 0.15s;
+  }
+  .story-source a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+  .read-more {
+    display: inline-block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent2);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent2);
+    padding-bottom: 1px;
+  }
+  .read-more:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+  @media (max-width: 600px) {
+    .wrapper { margin: 0; box-shadow: none; }
+    .masthead h1 { font-size: 38px; }
+    .stat-row { flex-direction: column; }
+    .stat-item { border-right: none; border-bottom: 1px solid var(--rule); }
+    .header-top { flex-direction: column; gap: 4px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-top">
+      <span>Edição #088</span>
+      <span>31 de julho de 2026</span>
+      <span>Diária · IA &amp; Transformação</span>
+    </div>
+    <div class="masthead">
+      <h1>CLIKDATA<span style="color:var(--accent)">·</span>DROPS</h1>
+      <p class="tagline">IA · Tecnologia · Transformação Digital · Edição Diária</p>
+    </div>
+    <div class="edition-bar">
+      <span>🌍 Mundo</span>
+      <span>🇧🇷 Brasil</span>
+      <span>📊 Números</span>
+      <span>💡 Perspectiva</span>
+    </div>
+  </header>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <p>
+      <span class="intro-dropcap">M</span>
+      Mais de 1.100 funcionários de OpenAI, Anthropic, Google e Meta assinaram uma carta pedindo ao governo dos EUA um mecanismo internacional para desacelerar a IA de fronteira se ela avançar rápido demais. No mesmo intervalo, a Gartner projetou alta de 63% nos gastos globais com plataformas e modelos de IA em 2026, enquanto a Meta viu seu caixa livre despencar 91% sob o peso do investimento em infraestrutura — e mesmo assim Mark Zuckerberg prevê agentes de IA pessoais para bilhões de pessoas em cinco anos. No Brasil, levantamento da ABES mostra 40% das empresas já investindo em agentes de IA, e o Fórum E-Commerce Brasil 2026 trouxe um caso concreto: conversão no WhatsApp saltando de 4% para 70% com atendimento agêntico. Cinco sinais do dia.
+    </p>
+  </section>
+
+  <!-- ═══ MUNDO ═══ -->
+  <div class="section-header">
+    <span class="section-flag red">🌍 Mundo</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Governança &amp; IA</span>
+      <span class="story-source"><a href="https://edition.cnn.com/2026/07/28/tech/ai-development-tech-employees-open-letter" target="_blank">CNN Business</a></span>
+    </div>
+    <div class="number-callout">
+      <span class="num">1.178</span>
+      <span class="num-label">funcionários de IA<br>assinam a carta</span>
+    </div>
+    <h2>Funcionários de OpenAI, Anthropic, Google e Meta pedem aos EUA um "freio de emergência" para a IA</h2>
+    <p>Uma carta aberta batizada de "Pacing the Frontier", divulgada em 28 de julho, reuniu 1.178 assinaturas de funcionários de OpenAI, Anthropic, Google DeepMind e Meta AI — incluindo nomes como o CEO da Anthropic, Dario Amodei, o cientista-chefe da OpenAI, Jakub Pachocki, e a VP de Segurança de IA do Google, Anca Dragan. O texto não pede uma pausa imediata no desenvolvimento de IA, mas sim que o governo americano ajude a construir a infraestrutura técnica e de governança necessária para um desaquecimento coordenado e verificável, caso os sistemas de IA passem a avançar mais rápido do que humanos conseguem supervisionar com segurança. Horas depois da publicação, tanto a OpenAI quanto a Anthropic endossaram o texto oficialmente como empresas.</p>
+    <a href="https://edition.cnn.com/2026/07/28/tech/ai-development-tech-employees-open-letter" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Mercado</span>
+      <span class="story-source"><a href="https://docmanagement.com.br/07/29/2026/gartner-preve-que-mercado-mundial-de-plataformas-e-modelos-de-inteligencia-artificial-crescera-63-em-2026/" target="_blank">Gartner</a></span>
+    </div>
+    <h2>Gartner: mercado global de plataformas e modelos de IA crescerá <em>63%</em> em 2026</h2>
+    <p>Segundo a Gartner, os gastos mundiais de usuários finais com modelos e plataformas de inteligência artificial devem somar US$ 64 bilhões em 2026 — alta de 63,4% sobre os US$ 39 bilhões de 2025. Os gastos com IA generativa devem crescer 117% no período, enquanto modelos de linguagem específicos de domínio (DSLMs) sobem 210%. O avanço acompanha uma expansão mais ampla: os gastos globais com TI devem atingir US$ 6,37 trilhões em 2026, alta de 14,2%, puxados por infraestrutura e software voltados a IA. O recado para quem orça tecnologia em 2026: a IA deixou de ser uma linha de investimento isolada e passou a puxar o orçamento de TI como um todo.</p>
+    <a href="https://docmanagement.com.br/07/29/2026/gartner-preve-que-mercado-mundial-de-plataformas-e-modelos-de-inteligencia-artificial-crescera-63-em-2026/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story" style="border-bottom:none;">
+    <div class="story-meta">
+      <span class="story-tag">Big Tech</span>
+      <span class="story-source"><a href="https://techcrunch.com/2026/07/29/mark-zuckerberg-predicts-that-billions-of-people-will-have-personal-ai-agents-in-five-years/" target="_blank">TechCrunch</a></span>
+    </div>
+    <div class="number-callout">
+      <span class="num">-91%</span>
+      <span class="num-label">queda no caixa livre<br>da Meta no trimestre</span>
+    </div>
+    <h2>Zuckerberg aposta em agentes de IA pessoais para bilhões — enquanto o caixa da Meta encolhe 91%</h2>
+    <p>Mark Zuckerberg voltou a defender que, em até cinco anos, bilhões de pessoas terão agentes de IA pessoais integrados ao dia a dia. A aposta vem acompanhada de um custo alto e imediato: o fluxo de caixa livre da Meta caiu para US$ 784 milhões no trimestre, queda de 91% frente aos US$ 8,55 bilhões do ano anterior, pressionado pelos investimentos pesados em infraestrutura de IA. O contraste ilustra a tensão que atravessa toda a indústria em 2026 — entre a promessa de agentes autônomos como próxima grande plataforma e a fatura, cada vez mais concreta, que essa aposta está cobrando das big techs.</p>
+    <a href="https://techcrunch.com/2026/07/29/mark-zuckerberg-predicts-that-billions-of-people-will-have-personal-ai-agents-in-five-years/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- ═══ BRASIL ═══ -->
+  <hr class="section-divider">
+  <div class="brasil-strip">No WhatsApp, agentes de IA elevam conversão de 4% para 70% em caso brasileiro</div>
+
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">🇧🇷 Brasil</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stat-row">
+    <div class="stat-item">
+      <span class="stat-num">40%</span>
+      <span class="stat-label">empresas brasileiras já<br>investem em agentes de IA</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">US$ 4,2 bi</span>
+      <span class="stat-label">gasto em IA no Brasil em 2026 —<br>líder da América Latina (IDC)</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">70%</span>
+      <span class="stat-label">conversão no WhatsApp com<br>agentes, ante 4% antes</span>
+    </div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Investimento Corporativo</span>
+      <span class="story-source"><a href="https://canaltech.com.br/mercado/empresas-brasileiras-colocam-agentes-de-ia-entre-prioridades-para-2026/" target="_blank">ABES / Canaltech</a></span>
+    </div>
+    <h2>Agentes de IA já são prioridade para 40% das empresas brasileiras, aponta ABES</h2>
+    <p>Levantamento da Associação Brasileira das Empresas de Software (ABES) mostra que 40% das companhias brasileiras já realizam investimentos em agentes de IA, enquanto outras 33% planejam iniciar projetos nos próximos 12 meses — juntas, mais de dois terços do mercado corporativo do país já estão em movimento. A IA generativa aparece como iniciativa central de TI para 37% das organizações, enquanto agentes autônomos, capazes de executar tarefas de ponta a ponta, já são prioridade para 23%. O dado confirma a leitura da IDC: o Brasil deve concentrar US$ 4,2 bilhões em gastos com IA em 2026, consolidando a liderança na América Latina.</p>
+    <a href="https://canaltech.com.br/mercado/empresas-brasileiras-colocam-agentes-de-ia-entre-prioridades-para-2026/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story" style="border-bottom:none;">
+    <div class="story-meta">
+      <span class="story-tag">Varejo &amp; Transformação Digital</span>
+      <span class="story-source"><a href="https://centraldovarejo.com.br/forum-e-commerce-brasil-tecnologia-aposta-em-agentes-de-ia/" target="_blank">Central do Varejo</a></span>
+    </div>
+    <h2>No Fórum E-Commerce Brasil, agentes de IA elevam conversão no WhatsApp de 4% para <em>70%</em></h2>
+    <p>No Fórum E-Commerce Brasil 2026, empresas como Eitri, Wicomm e WPP Commerce apresentaram agentes de IA e aplicativos próprios já em operação no varejo digital. Um dos casos mostrados: com atendimento agêntico pelo WhatsApp, a conversão no canal saltou de 4% para 70%, com resolução completa em segundos — sem intervenção humana. O evento reforça uma tendência que a Blip já vinha documentando: a conversa deixou de ser canal de suporte e virou a nova vitrine do varejo digital brasileiro, com agentes assumindo desde a descoberta de produto até o fechamento da venda.</p>
+    <a href="https://centraldovarejo.com.br/forum-e-commerce-brasil-tecnologia-aposta-em-agentes-de-ia/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- PULLQUOTE -->
+  <div class="pullquote">
+    <blockquote>
+      "A conversão no canal saltou de 4% para 70%" — com atendimento 100% agêntico pelo WhatsApp, sem intervenção humana.
+    </blockquote>
+    <cite>— Caso apresentado no Fórum E-Commerce Brasil 2026</cite>
+  </div>
+
+  <!-- PERSPECTIVA -->
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">💡 Perspectiva</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story" style="border-bottom:none; padding-bottom:28px;">
+    <h2>O que esses sinais significam para <em>líderes de transformação</em></h2>
+    <p style="margin-bottom:12px;">Três leituras práticas para o dia:</p>
+    <p style="margin-bottom:10px;"><strong>1. A própria indústria pede um botão de freio.</strong> Quando 1.178 funcionários de OpenAI, Anthropic, Google e Meta — incluindo CEOs e cientistas-chefe — assinam uma carta pedindo mecanismos de desaceleração coordenada, o sinal não é de pânico, é de maturidade. Empresas que dependem de modelos de fronteira devem acompanhar de perto como essa governança evolui, porque ela vai moldar prazos e limites de uso nos próximos anos.</p>
+    <p style="margin-bottom:10px;"><strong>2. O investimento em IA superou a receita que ele gera — por enquanto.</strong> A queda de 91% no caixa livre da Meta, no mesmo trimestre em que a Gartner projeta alta de 63% nos gastos globais com plataformas de IA, mostra que o mercado ainda está pagando a conta da infraestrutura antes de colher o retorno. Para o CFO, isso significa cobrar métricas de ROI mais rígidas de qualquer novo projeto de IA — a paciência do mercado com "investir e esperar" está encurtando.</p>
+    <p><strong>3. Agentes já convertem — e o Brasil tem a prova.</strong> Um salto de conversão de 4% para 70% no WhatsApp não é promessa, é resultado medido. Combinado aos 40% das empresas brasileiras já investindo em agentes de IA, o recado para quem lidera atendimento, vendas ou operações é direto: quem ainda trata agentes como piloto experimental está perdendo participação de mercado para quem já colocou em produção.</p>
+  </article>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">CLIKDATA<span>·</span>DROPS</div>
+      </div>
+      <div class="footer-links">
+        <a href="https://clikdata.com.br" target="_blank">clikdata.com.br</a>
+        <a href="#">Arquivos anteriores</a>
+        <a href="#">Descadastrar</a>
+        <a href="#">Contato</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      Publicado em 31 de julho de 2026 · Edição #088 · clikdata.com.br<br>
+      Este digest é gerado automaticamente com curadoria editorial humana.<br>
+      Fontes: CNN Business, Gartner, TechCrunch, ABES/Canaltech, Central do Varejo/Fórum E-Commerce Brasil.
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
