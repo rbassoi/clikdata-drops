@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CLIKDATA DROPS — Edição #092 - Agosto 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0f0f0f;
+    --paper: #f5f0e8;
+    --accent: #c8401a;
+    --accent2: #1a3c5e;
+    --muted: #7a7060;
+    --rule: #d4cfc4;
+    --tag-bg: #1a3c5e;
+    --tag-color: #f5f0e8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #e8e3d8;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrapper {
+    max-width: 680px;
+    margin: 40px auto;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    box-shadow: 4px 4px 0 #c4bfb4, 8px 8px 0 #b4afa4;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    border-bottom: 3px double var(--ink);
+    padding: 0;
+    position: relative;
+  }
+
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 32px 10px;
+    border-bottom: 1px solid var(--rule);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  .masthead {
+    padding: 28px 32px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--ink);
+    position: relative;
+  }
+
+  .masthead::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--accent);
+    margin: 0 auto 16px;
+  }
+
+  .masthead h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1;
+    color: var(--ink);
+  }
+
+  .masthead h1 span {
+    color: var(--accent);
+  }
+
+  .tagline {
+    margin-top: 8px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .edition-bar {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 10px 32px;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  /* ── INTRO ── */
+  .intro {
+    padding: 28px 32px 24px;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .intro-dropcap {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 0.85;
+    color: var(--accent);
+    float: left;
+    margin-right: 4px;
+    margin-top: 6px;
+  }
+
+  .intro p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: #2a2520;
+  }
+
+  /* ── SECTION HEADER ── */
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 32px 0;
+    margin-bottom: 4px;
+  }
+
+  .section-flag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    background: var(--tag-bg);
+    color: var(--tag-color);
+    padding: 4px 10px;
+    white-space: nowrap;
+  }
+
+  .section-flag.red { background: var(--accent); }
+
+  .section-rule {
+    flex: 1;
+    height: 1px;
+    background: var(--ink);
+  }
+
+  /* ── STORY CARD ── */
+  .story {
+    padding: 20px 32px;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+  }
+
+  .story:last-of-type { border-bottom: none; }
+
+  .story-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .story-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 2px 7px;
+  }
+
+  .story-source {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+  }
+
+  .story h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+
+  .story h2 em {
+    font-style: italic;
+    color: var(--accent2);
+  }
+
+  .story p {
+    font-size: 14px;
+    line-height: 1.72;
+    color: #2a2520;
+  }
+
+  .story .number-callout {
+    float: right;
+    margin: 0 0 8px 18px;
+    text-align: center;
+    border: 2px solid var(--ink);
+    padding: 12px 16px;
+    min-width: 88px;
+  }
+
+  .story .number-callout .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--accent);
+    display: block;
+    line-height: 1;
+  }
+
+  .story .number-callout .num-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 4px;
+  }
+
+  /* ── DIVIDER ── */
+  .section-divider {
+    border: none;
+    border-top: 3px double var(--ink);
+    margin: 8px 32px 0;
+  }
+
+  /* ── DESTAQUE BRASIL ── */
+  .brasil-strip {
+    background: var(--accent2);
+    color: var(--paper);
+    padding: 6px 32px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .brasil-strip::before {
+    content: '▶';
+    font-size: 8px;
+  }
+
+  /* ── STAT ROW ── */
+  .stat-row {
+    display: flex;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .stat-item {
+    flex: 1;
+    padding: 20px 24px;
+    border-right: 1px solid var(--rule);
+    text-align: center;
+  }
+
+  .stat-item:last-child { border-right: none; }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--accent2);
+    display: block;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 6px;
+    line-height: 1.4;
+  }
+
+  /* ── PULLQUOTE ── */
+  .pullquote {
+    margin: 0;
+    padding: 24px 40px;
+    border-top: 2px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+    background: #ede8de;
+  }
+
+  .pullquote blockquote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 19px;
+    line-height: 1.5;
+    color: var(--ink);
+    text-align: center;
+  }
+
+  .pullquote cite {
+    display: block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: center;
+    font-style: normal;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 28px 32px;
+    border-top: 3px double var(--accent);
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333;
+  }
+
+  .footer-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 900;
+  }
+
+  .footer-brand span { color: var(--accent); }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: right;
+  }
+
+  .footer-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: #888;
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .footer-bottom {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: #555;
+    letter-spacing: 0.06em;
+    line-height: 1.6;
+  }
+
+  .routine-badge {
+    display: inline-block;
+    margin-top: 12px;
+    background: var(--accent);
+    color: white;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+  }
+
+
+  .story-source a {
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--muted);
+    transition: color 0.15s;
+  }
+  .story-source a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+  .read-more {
+    display: inline-block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent2);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent2);
+    padding-bottom: 1px;
+  }
+  .read-more:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+  @media (max-width: 600px) {
+    .wrapper { margin: 0; box-shadow: none; }
+    .masthead h1 { font-size: 38px; }
+    .stat-row { flex-direction: column; }
+    .stat-item { border-right: none; border-bottom: 1px solid var(--rule); }
+    .header-top { flex-direction: column; gap: 4px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-top">
+      <span>Edição #092</span>
+      <span>13 de agosto de 2026</span>
+      <span>Diária · IA &amp; Transformação</span>
+    </div>
+    <div class="masthead">
+      <h1>CLIKDATA<span style="color:var(--accent)">·</span>DROPS</h1>
+      <p class="tagline">IA · Tecnologia · Transformação Digital · Edição Diária</p>
+    </div>
+    <div class="edition-bar">
+      <span>🌍 Mundo</span>
+      <span>🇧🇷 Brasil</span>
+      <span>📊 Números</span>
+      <span>💡 Perspectiva</span>
+    </div>
+  </header>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <p>
+      <span class="intro-dropcap">A</span>
+      A Nvidia fechou nesta semana um acordo com Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs e KKR para mobilizar mais de US$ 500 bilhões em capital de terceiros e financiar a construção de "fábricas de IA" — Jensen Huang chamou os chips da empresa, pela primeira vez, de "classe de ativo investível". No mesmo pacote de sinais de mercado, a Anthropic avança para uma estreia na Nasdaq ainda neste outono, com reuniões de pré-IPO e valuation de US$ 965 bilhões, enquanto o Google apresentou o Pixel 11 com o chip Tensor G6 de 2nm e o Gemini rodando nativamente no aparelho. No Brasil, estudo inédito da ABES com a IDC mostra que 95% das empresas já usam IA e 86% vão aumentar o investimento em TI em 2026 — mas talento e dados ainda travam a escala —, enquanto o MDIC lança meta de levar a digitalização de 23% para 50% das empresas até 2033. Cinco sinais do dia.
+    </p>
+  </section>
+
+  <!-- ═══ MUNDO ═══ -->
+  <div class="section-header">
+    <span class="section-flag red">🌍 Mundo</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Infraestrutura &amp; Investimento</span>
+      <span class="story-source"><a href="https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital" target="_blank">NVIDIA Newsroom</a></span>
+    </div>
+    <div class="number-callout">
+      <span class="num">$500B</span>
+      <span class="num-label">capital de terceiros ·<br>financiamento de IA</span>
+    </div>
+    <h2>Nvidia une Wall Street para levantar <em>US$ 500 bilhões</em> em "fábricas de IA"</h2>
+    <p>A Nvidia anunciou parcerias com Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs e KKR para criar plataformas de financiamento de infraestrutura de computação de IA, com meta de mobilizar mais de US$ 500 bilhões em capital de terceiros. Ao vivo na CNBC, Jensen Huang declarou que é "a primeira vez que chips de tecnologia se tornam uma classe de ativo investível" — comparando os data centers de IA a ativos de infraestrutura de longa duração, geradores de receita recorrente. Para CFOs e gestores de capital, o recado é direto: computação de IA está deixando de ser despesa de TI para virar categoria de investimento.</p>
+    <a href="https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Mercado &amp; IPO</span>
+      <span class="story-source"><a href="https://www.startuphub.ai/ai-news/ipo-watch/2026/anthropic-ipo-investor-meetings-fall-2026-07-19" target="_blank">StartupHub AI</a></span>
+    </div>
+    <div class="number-callout">
+      <span class="num">$965B</span>
+      <span class="num-label">valuation ·<br>rumo à Nasdaq</span>
+    </div>
+    <h2>Anthropic marca reuniões de pré-IPO e mira estreia na Nasdaq neste outono</h2>
+    <p>A Anthropic começou a agendar encontros com investidores para uma oferta pública que pode acontecer já em setembro ou outubro, após levantar uma rodada Série H de US$ 65 bilhões que elevou seu valuation a US$ 965 bilhões — hoje a startup de IA mais valiosa do mundo. Morgan Stanley, Goldman Sachs e JPMorgan lideram a oferta, com Amazon e Google entre os principais investidores. O movimento testa o apetite do mercado público por gigantes de IA ainda deficitários, num momento em que a corrida por capital de infraestrutura (ver Nvidia, acima) só se acelera.</p>
+    <a href="https://www.startuphub.ai/ai-news/ipo-watch/2026/anthropic-ipo-investor-meetings-fall-2026-07-19" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story" style="border-bottom:none;">
+    <div class="story-meta">
+      <span class="story-tag">Produtos &amp; IA</span>
+      <span class="story-source"><a href="https://www.androidcentral.com/phones/live/made-by-google-2026-launch-live-pixel-11-pixel-11-pro-fold-pixel-watch-5-gemini-and-all-the-news" target="_blank">Android Central</a></span>
+    </div>
+    <div class="number-callout">
+      <span class="num">2nm</span>
+      <span class="num-label">Tensor G6 ·<br>Gemini on-device</span>
+    </div>
+    <h2>Google lança Pixel 11 com chip de 2nm e Gemini nativo no aparelho</h2>
+    <p>No evento Made by Google 2026, a empresa apresentou a linha Pixel 11 — incluindo Pixel 11 Pro e Pixel 11 Pro Fold — com o novo processador Tensor G6, fabricado em processo de 2nm pela TSMC e o primeiro chip Android relevante a usar transistores Gate-All-Around em produção comercial. O destaque é a integração nativa do Gemini, que agora reserva e paga corridas de aplicativo e faz pedidos de supermercado diretamente pelo assistente. Pré-vendas abriram em 12 de agosto, com chegada às lojas em 20 de agosto. Para times de produto, é mais um sinal de que IA generativa embarcada no hardware deixou de ser diferencial e virou padrão de mercado.</p>
+    <a href="https://www.androidcentral.com/phones/live/made-by-google-2026-launch-live-pixel-11-pixel-11-pro-fold-pixel-watch-5-gemini-and-all-the-news" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- ═══ BRASIL ═══ -->
+  <hr class="section-divider">
+  <div class="brasil-strip">95% das empresas brasileiras já usam IA — mas talento e dados travam a escala</div>
+
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">🇧🇷 Brasil</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stat-row">
+    <div class="stat-item">
+      <span class="stat-num">95%</span>
+      <span class="stat-label">empresas brasileiras<br>que já usam IA</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">86%</span>
+      <span class="stat-label">vão aumentar investimento<br>em TI em 2026</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">23%→50%</span>
+      <span class="stat-label">meta MDIC de digitalização<br>industrial até 2033</span>
+    </div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Adoção Nacional</span>
+      <span class="story-source"><a href="https://abes.org.br/en/ia-impulsiona-nova-corrida-tecnologica-nas-empresas-brasileiras-aponta-estudo-inedito-da-abes/" target="_blank">ABES / IDC</a></span>
+    </div>
+    <h2>IA já está em 95% das empresas brasileiras — o gargalo agora é talento e dado</h2>
+    <p>Estudo inédito "Estratégias Digitais em Alta Performance", conduzido pela IDC a pedido da ABES e apresentado em 6 de agosto, mostra que 95% das empresas brasileiras com mais de 100 funcionários já utilizam inteligência artificial, e 86% pretendem aumentar o investimento em TI em 2026. IA já é o principal tema estratégico das áreas de tecnologia, à frente de segurança, nuvem e automação. O entrave para escalar não é mais adoção — é qualificação profissional e estruturação de dados, com governança emergindo como o principal desafio para transformar uso experimental em resultado consistente.</p>
+    <a href="https://abes.org.br/en/ia-impulsiona-nova-corrida-tecnologica-nas-empresas-brasileiras-aponta-estudo-inedito-da-abes/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story" style="border-bottom:none;">
+    <div class="story-meta">
+      <span class="story-tag">Política Industrial</span>
+      <span class="story-source"><a href="https://telesintese.com.br/mdic-quer-elevar-digitalizacao-das-empresas-para-50-ate-2033/" target="_blank">Telesíntese</a></span>
+    </div>
+    <h2>MDIC quer dobrar a digitalização da indústria brasileira até 2033</h2>
+    <p>O secretário-executivo do MDIC, Rodrigo Zerbone, anunciou meta de elevar de 23% para 50% a fatia de empresas brasileiras que passaram por processos de transformação digital até 2033, dentro da Missão 4 do plano Nova Indústria Brasil. O ministério destaca que 86% dos dados industriais do país ainda não são aproveitados e, portanto, não geram valor econômico. O programa reúne MDIC, Sebrae, Senai, BNDES, ABDI, Finep e Embrapii — sinal de que a digitalização industrial virou prioridade de política pública, não só de mercado.</p>
+    <a href="https://telesintese.com.br/mdic-quer-elevar-digitalizacao-das-empresas-para-50-ate-2033/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- PULLQUOTE -->
+  <div class="pullquote">
+    <blockquote>
+      "Esta é realmente a primeira vez que chips de tecnologia se tornam uma classe de ativo investível. São ativos que geram receita, produtivos, de longa duração, fungíveis e flexíveis."
+    </blockquote>
+    <cite>— Jensen Huang, CEO da Nvidia · sobre o financiamento de US$ 500 bi para IA</cite>
+  </div>
+
+  <!-- PERSPECTIVA -->
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">💡 Perspectiva</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story" style="border-bottom:none; padding-bottom:28px;">
+    <h2>O que esses sinais significam para <em>líderes de transformação</em></h2>
+    <p style="margin-bottom:12px;">Três leituras práticas para o dia:</p>
+    <p style="margin-bottom:10px;"><strong>1. Capital de IA virou classe de ativo — e isso muda o financiamento de projetos.</strong> Com Wall Street tratando computação de IA como infraestrutura de longa duração, empresas que dependem de nuvem devem esperar mais capacidade disponível no médio prazo, mas também mais pressão para justificar retorno mensurável de cada carga de trabalho.</p>
+    <p style="margin-bottom:10px;"><strong>2. IA embarcada é o novo padrão, não o diferencial.</strong> Com Gemini nativo em hardware de consumo e Anthropic rumo à Nasdaq, a barra de expectativa do usuário final sobe — produtos corporativos sem IA integrada de forma fluida correm o risco de parecer defasados já em 2027.</p>
+    <p><strong>3. O Brasil tem adoção, falta execução.</strong> Com 95% das empresas já usando IA mas travadas por talento e dados, e o MDIC mirando dobrar a digitalização industrial até 2033, a vantagem competitiva real vai para quem investir agora em qualificação de equipe e governança de dados — antes que a lacuna de execução vire lacuna de mercado.</p>
+  </article>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">CLIKDATA<span>·</span>DROPS</div>
+      </div>
+      <div class="footer-links">
+        <a href="https://clikdata.com.br" target="_blank">clikdata.com.br</a>
+        <a href="#">Arquivos anteriores</a>
+        <a href="#">Descadastrar</a>
+        <a href="#">Contato</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      Publicado em 13 de agosto de 2026 · Edição #092 · clikdata.com.br<br>
+      Este digest é gerado automaticamente com curadoria editorial humana.<br>
+      Fontes: NVIDIA Newsroom, StartupHub AI, Android Central, ABES/IDC, Telesíntese.
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
