@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CLIKDATA DROPS — Edição #098 - Setembro 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0f0f0f;
+    --paper: #f5f0e8;
+    --accent: #c8401a;
+    --accent2: #1a3c5e;
+    --muted: #7a7060;
+    --rule: #d4cfc4;
+    --tag-bg: #1a3c5e;
+    --tag-color: #f5f0e8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #e8e3d8;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrapper {
+    max-width: 680px;
+    margin: 40px auto;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    box-shadow: 4px 4px 0 #c4bfb4, 8px 8px 0 #b4afa4;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    border-bottom: 3px double var(--ink);
+    padding: 0;
+    position: relative;
+  }
+
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 32px 10px;
+    border-bottom: 1px solid var(--rule);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  .masthead {
+    padding: 28px 32px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--ink);
+    position: relative;
+  }
+
+  .masthead::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--accent);
+    margin: 0 auto 16px;
+  }
+
+  .masthead h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1;
+    color: var(--ink);
+  }
+
+  .masthead h1 span {
+    color: var(--accent);
+  }
+
+  .tagline {
+    margin-top: 8px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .edition-bar {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 10px 32px;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  /* ── INTRO ── */
+  .intro {
+    padding: 28px 32px 24px;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .intro-dropcap {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 0.85;
+    color: var(--accent);
+    float: left;
+    margin-right: 4px;
+    margin-top: 6px;
+  }
+
+  .intro p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: #2a2520;
+  }
+
+  /* ── SECTION HEADER ── */
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 32px 0;
+    margin-bottom: 4px;
+  }
+
+  .section-flag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    background: var(--tag-bg);
+    color: var(--tag-color);
+    padding: 4px 10px;
+    white-space: nowrap;
+  }
+
+  .section-flag.red { background: var(--accent); }
+
+  .section-rule {
+    flex: 1;
+    height: 1px;
+    background: var(--ink);
+  }
+
+  /* ── STORY CARD ── */
+  .story {
+    padding: 20px 32px;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+  }
+
+  .story:last-of-type { border-bottom: none; }
+
+  .story-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .story-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 2px 7px;
+  }
+
+  .story-source {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+  }
+
+  .story h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+
+  .story h2 em {
+    font-style: italic;
+    color: var(--accent2);
+  }
+
+  .story p {
+    font-size: 14px;
+    line-height: 1.72;
+    color: #2a2520;
+  }
+
+  .story .number-callout {
+    float: right;
+    margin: 0 0 8px 18px;
+    text-align: center;
+    border: 2px solid var(--ink);
+    padding: 12px 16px;
+    min-width: 88px;
+  }
+
+  .story .number-callout .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--accent);
+    display: block;
+    line-height: 1;
+  }
+
+  .story .number-callout .num-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 4px;
+  }
+
+  /* ── DIVIDER ── */
+  .section-divider {
+    border: none;
+    border-top: 3px double var(--ink);
+    margin: 8px 32px 0;
+  }
+
+  /* ── DESTAQUE BRASIL ── */
+  .brasil-strip {
+    background: var(--accent2);
+    color: var(--paper);
+    padding: 6px 32px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .brasil-strip::before {
+    content: '▶';
+    font-size: 8px;
+  }
+
+  /* ── STAT ROW ── */
+  .stat-row {
+    display: flex;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .stat-item {
+    flex: 1;
+    padding: 20px 24px;
+    border-right: 1px solid var(--rule);
+    text-align: center;
+  }
+
+  .stat-item:last-child { border-right: none; }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--accent2);
+    display: block;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 6px;
+    line-height: 1.4;
+  }
+
+  /* ── PULLQUOTE ── */
+  .pullquote {
+    margin: 0;
+    padding: 24px 40px;
+    border-top: 2px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+    background: #ede8de;
+  }
+
+  .pullquote blockquote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 19px;
+    line-height: 1.5;
+    color: var(--ink);
+    text-align: center;
+  }
+
+  .pullquote cite {
+    display: block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: center;
+    font-style: normal;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 28px 32px;
+    border-top: 3px double var(--accent);
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333;
+  }
+
+  .footer-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 900;
+  }
+
+  .footer-brand span { color: var(--accent); }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: right;
+  }
+
+  .footer-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: #888;
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .footer-bottom {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: #555;
+    letter-spacing: 0.06em;
+    line-height: 1.6;
+  }
+
+  .routine-badge {
+    display: inline-block;
+    margin-top: 12px;
+    background: var(--accent);
+    color: white;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+  }
+
+
+  .story-source a {
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--muted);
+    transition: color 0.15s;
+  }
+  .story-source a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+  .read-more {
+    display: inline-block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent2);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent2);
+    padding-bottom: 1px;
+  }
+  .read-more:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+  @media (max-width: 600px) {
+    .wrapper { margin: 0; box-shadow: none; }
+    .masthead h1 { font-size: 38px; }
+    .stat-row { flex-direction: column; }
+    .stat-item { border-right: none; border-bottom: 1px solid var(--rule); }
+    .header-top { flex-direction: column; gap: 4px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-top">
+      <span>Edição #098</span>
+      <span>3 de setembro de 2026</span>
+      <span>Diária · IA &amp; Transformação</span>
+    </div>
+    <div class="masthead">
+      <h1>CLIKDATA<span style="color:var(--accent)">·</span>DROPS</h1>
+      <p class="tagline">IA · Tecnologia · Transformação Digital · Edição Diária</p>
+    </div>
+    <div class="edition-bar">
+      <span>🌍 Mundo</span>
+      <span>🇧🇷 Brasil</span>
+      <span>📊 Números</span>
+      <span>💡 Perspectiva</span>
+    </div>
+  </header>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <p>
+      <span class="intro-dropcap">O</span>
+      O Pentágono liberou o ChatGPT Mil e o Grok for Government a mais de 3 milhões de militares e civis na plataforma GenAI.mil, ampliando a presença de IA generativa dentro do governo americano. No mesmo período, a startup de segurança AISLE usou agentes autônomos para encontrar seis vulnerabilidades inéditas na biblioteca curl — usada em bilhões de dispositivos —, incluindo a falha mais antiga já registrada no projeto, com 25 anos. A Dell reportou receita recorde de US$ 47 bilhões no trimestre, com US$ 60,9 bilhões em novos pedidos de servidores de IA e backlog de US$ 95 bilhões. No Brasil, a Meta IA finalmente chegou ao WhatsApp, Instagram, Facebook e Messenger, enquanto os bancos brasileiros miram R$ 50,4 bilhões em investimentos de tecnologia para 2026. Cinco sinais do dia.
+    </p>
+  </section>
+
+  <!-- ═══ MUNDO ═══ -->
+  <div class="section-header">
+    <span class="section-flag red">🌍 Mundo</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Governo &amp; IA</span>
+      <span class="story-source"><a href="https://defensescoop.com/2026/08/31/grok-chatgpt-added-to-genai-mil/" target="_blank">DefenseScoop</a></span>
+    </div>
+    <div class="number-callout">
+      <span class="num">3M</span>
+      <span class="num-label">militares e civis com<br>acesso ao GenAI.mil</span>
+    </div>
+    <h2>Pentágono libera <em>ChatGPT</em> e <em>Grok</em> para mais de 3 milhões de militares e civis</h2>
+    <p>O Departamento de Defesa dos EUA incluiu o ChatGPT Mil, da OpenAI, e o Grok for Government, do Starshield AI (SpaceX), na plataforma interna GenAI.mil, que já operava com o Gemini, do Google, desde dezembro. As ferramentas têm acreditação para lidar com informações não classificadas controladas em nível de impacto 5 e ajudam mais de 3 milhões de militares e civis a redigir documentos de aquisição, resumir políticas e gerar relatórios internos. O movimento consolida a adoção de IA generativa como infraestrutura padrão dentro do governo americano — e amplia a corrida entre fornecedores por contratos públicos de larga escala.</p>
+    <a href="https://defensescoop.com/2026/08/31/grok-chatgpt-added-to-genai-mil/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Segurança &amp; IA</span>
+      <span class="story-source"><a href="https://aisle.com/blog/aisle-discovers-6-new-cves-in-curl-including-the-oldest-issue-ever-reported" target="_blank">AISLE</a></span>
+    </div>
+    <div class="number-callout">
+      <span class="num">25</span>
+      <span class="num-label">anos: idade da falha<br>mais antiga já achada</span>
+    </div>
+    <h2>Agentes de IA da AISLE encontram <em>6 vulnerabilidades inéditas</em> no curl, usado em 30 bilhões de dispositivos</h2>
+    <p>O sistema autônomo de caça a vulnerabilidades da startup AISLE produziu 29 relatórios sobre o código do curl — biblioteca presente em bilhões de dispositivos ao redor do mundo —, dos quais seis foram validados pelos mantenedores do projeto como CVEs, incluindo uma falha de 25 anos, a mais antiga já registrada no software. A empresa afirma que sistemas concorrentes, como o Codex Security da OpenAI e o Mythos da Anthropic, não encontraram nenhuma vulnerabilidade no mesmo código-base antes dela. O caso reforça um alerta que já ronda a indústria: a capacidade de agentes de IA para descobrir falhas está crescendo mais rápido do que a capacidade humana de corrigi-las.</p>
+    <a href="https://aisle.com/blog/aisle-discovers-6-new-cves-in-curl-including-the-oldest-issue-ever-reported" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story" style="border-bottom:none;">
+    <div class="story-meta">
+      <span class="story-tag">Infraestrutura &amp; Mercado</span>
+      <span class="story-source"><a href="https://www.investing.com/news/company-news/dell-q2-fy27-slides-ai-server-backlog-hits-95b-revenue-up-58-93CH-4884718" target="_blank">Investing.com</a></span>
+    </div>
+    <div class="number-callout">
+      <span class="num">$95bi</span>
+      <span class="num-label">backlog de servidores<br>de IA da Dell</span>
+    </div>
+    <h2>Dell bate recorde com <em>US$ 60,9 bilhões</em> em novos pedidos de servidores de IA em um trimestre</h2>
+    <p>A Dell Technologies reportou receita recorde de US$ 47 bilhões no segundo trimestre fiscal, alta de 58% na comparação anual, puxada por US$ 16,4 bilhões em vendas de servidores otimizados para IA — o dobro do mesmo período do ano passado. A companhia registrou US$ 60,9 bilhões em novos pedidos de servidores de IA no trimestre, elevando o backlog a US$ 95 bilhões, e revisou a projeção anual de receita para US$ 192 bilhões. O resultado confirma que a demanda por infraestrutura de IA segue superando a oferta disponível, mesmo depois de dois anos de investimento acelerado em data centers.</p>
+    <a href="https://www.investing.com/news/company-news/dell-q2-fy27-slides-ai-server-backlog-hits-95b-revenue-up-58-93CH-4884718" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- ═══ BRASIL ═══ -->
+  <hr class="section-divider">
+  <div class="brasil-strip">Meta IA chega ao Brasil e bancos brasileiros miram R$ 50,4 bi em tecnologia</div>
+
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">🇧🇷 Brasil</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stat-row">
+    <div class="stat-item">
+      <span class="stat-num">US$2,52tri</span>
+      <span class="stat-label">gasto global com IA<br>projetado pela Gartner em 2026</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">40%</span>
+      <span class="stat-label">apps corporativos com<br>agentes de IA até fim de 2026</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">R$50,4bi</span>
+      <span class="stat-label">investimento de bancos<br>brasileiros em tech em 2026</span>
+    </div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Big Techs no Brasil</span>
+      <span class="story-source"><a href="https://www.tecmundo.com.br/software/290574-meta-ai-chega-brasil-integrada-whatsapp-instagram-messenger.htm" target="_blank">TecMundo</a></span>
+    </div>
+    <h2>Meta IA chega oficialmente ao Brasil, integrada a <em>WhatsApp, Instagram e Messenger</em></h2>
+    <p>Depois de meses de impasse com a Autoridade Nacional de Proteção de Dados (ANPD) sobre o uso de dados de usuários para treinar modelos, a Meta liberou a Meta IA para o Brasil, integrada a WhatsApp, Instagram, Facebook e Messenger, além do site meta.ai. A assistente, baseada em Llama, permite gerar imagens e texto por comando direto dentro dos aplicativos mais usados pelos brasileiros — o mesmo lançamento também chega a Reino Unido, Filipinas, Bolívia, Guatemala e Paraguai. Para empresas que usam esses canais como principal ponto de contato com o cliente, a chegada oficial da IA nativa da Meta redefine o piso de expectativa dos consumidores em atendimento automatizado.</p>
+    <a href="https://www.tecmundo.com.br/software/290574-meta-ai-chega-brasil-integrada-whatsapp-instagram-messenger.htm" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story" style="border-bottom:none;">
+    <div class="story-meta">
+      <span class="story-tag">Setor Financeiro</span>
+      <span class="story-source"><a href="https://www.letsmoney.com.br/noticias/bancos-50-bi-tech-febraban-2026/" target="_blank">Let's Money / Febraban</a></span>
+    </div>
+    <h2>Bancos brasileiros miram <em>R$ 50,4 bilhões</em> em tecnologia em 2026, com IA no centro da estratégia</h2>
+    <p>Segundo levantamento da Febraban, os bancos brasileiros devem investir R$ 50,4 bilhões em tecnologia em 2026, com inteligência artificial como eixo central da disputa competitiva. O Banco do Brasil já lançou um novo aplicativo com o "Meu Assistente BB", que recebe comandos em linguagem natural por texto ou voz, enquanto o Itaú colocou sua IA nativa no centro da própria marca. O setor financeiro brasileiro, historicamente um dos mais avançados do país em digitalização, agora testa se consegue transformar assistentes de IA em canal primário de atendimento — não apenas em complemento ao app tradicional.</p>
+    <a href="https://www.letsmoney.com.br/noticias/bancos-50-bi-tech-febraban-2026/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- PULLQUOTE -->
+  <div class="pullquote">
+    <blockquote>
+      "O volume de vulnerabilidades sendo descoberto por IA está a caminho de superar a capacidade da indústria de aplicar correções — remediação, não descoberta, é o verdadeiro gargalo."
+    </blockquote>
+    <cite>— Equipe de pesquisa da AISLE, sobre a descoberta de 6 novas CVEs no curl</cite>
+  </div>
+
+  <!-- PERSPECTIVA -->
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">💡 Perspectiva</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story" style="border-bottom:none; padding-bottom:28px;">
+    <h2>O que esses sinais significam para <em>líderes de transformação</em></h2>
+    <p style="margin-bottom:12px;">Três leituras práticas para o dia:</p>
+    <p style="margin-bottom:10px;"><strong>1. A IA virou padrão de infraestrutura pública e privada ao mesmo tempo.</strong> Quando o Pentágono libera ChatGPT e Grok para 3 milhões de pessoas e a Dell registra US$ 95 bilhões em backlog de servidores, fica claro que a discussão não é mais "se" adotar IA em escala, mas com que velocidade a capacidade de infraestrutura acompanha a demanda.</p>
+    <p style="margin-bottom:10px;"><strong>2. Descoberta de falhas por IA cria um novo tipo de dívida técnica.</strong> Os seis CVEs achados pela AISLE no curl mostram que agentes autônomos já superam ferramentas concorrentes na caça a vulnerabilidades. Times de segurança precisam se preparar para um volume de achados que cresce mais rápido do que a capacidade de remediar — priorização vira o gargalo real.</p>
+    <p><strong>3. No Brasil, o assistente de IA vira a nova porta de entrada do cliente.</strong> Entre a chegada da Meta IA a WhatsApp e Instagram e os R$ 50,4 bilhões que bancos brasileiros vão investir em tecnologia, o mercado nacional caminha para tratar assistentes de IA como canal primário de relacionamento — não mais um complemento experimental ao atendimento tradicional.</p>
+  </article>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">CLIKDATA<span>·</span>DROPS</div>
+      </div>
+      <div class="footer-links">
+        <a href="https://clikdata.com.br" target="_blank">clikdata.com.br</a>
+        <a href="#">Arquivos anteriores</a>
+        <a href="#">Descadastrar</a>
+        <a href="#">Contato</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      Publicado em 3 de setembro de 2026 · Edição #098 · clikdata.com.br<br>
+      Este digest é gerado automaticamente com curadoria editorial humana.<br>
+      Fontes: DefenseScoop, AISLE, Investing.com, TecMundo, Let's Money / Febraban.
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
