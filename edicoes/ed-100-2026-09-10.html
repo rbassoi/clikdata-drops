@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CLIKDATA DROPS — Edição #100 - Setembro 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0f0f0f;
+    --paper: #f5f0e8;
+    --accent: #c8401a;
+    --accent2: #1a3c5e;
+    --muted: #7a7060;
+    --rule: #d4cfc4;
+    --tag-bg: #1a3c5e;
+    --tag-color: #f5f0e8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #e8e3d8;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrapper {
+    max-width: 680px;
+    margin: 40px auto;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    box-shadow: 4px 4px 0 #c4bfb4, 8px 8px 0 #b4afa4;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    border-bottom: 3px double var(--ink);
+    padding: 0;
+    position: relative;
+  }
+
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 32px 10px;
+    border-bottom: 1px solid var(--rule);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  .masthead {
+    padding: 28px 32px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--ink);
+    position: relative;
+  }
+
+  .masthead::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--accent);
+    margin: 0 auto 16px;
+  }
+
+  .masthead h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1;
+    color: var(--ink);
+  }
+
+  .masthead h1 span {
+    color: var(--accent);
+  }
+
+  .tagline {
+    margin-top: 8px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .edition-bar {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 10px 32px;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  /* ── INTRO ── */
+  .intro {
+    padding: 28px 32px 24px;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .intro-dropcap {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 0.85;
+    color: var(--accent);
+    float: left;
+    margin-right: 4px;
+    margin-top: 6px;
+  }
+
+  .intro p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: #2a2520;
+  }
+
+  /* ── SECTION HEADER ── */
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 32px 0;
+    margin-bottom: 4px;
+  }
+
+  .section-flag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    background: var(--tag-bg);
+    color: var(--tag-color);
+    padding: 4px 10px;
+    white-space: nowrap;
+  }
+
+  .section-flag.red { background: var(--accent); }
+
+  .section-rule {
+    flex: 1;
+    height: 1px;
+    background: var(--ink);
+  }
+
+  /* ── STORY CARD ── */
+  .story {
+    padding: 20px 32px;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+  }
+
+  .story:last-of-type { border-bottom: none; }
+
+  .story-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .story-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 2px 7px;
+  }
+
+  .story-source {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+  }
+
+  .story h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+
+  .story h2 em {
+    font-style: italic;
+    color: var(--accent2);
+  }
+
+  .story p {
+    font-size: 14px;
+    line-height: 1.72;
+    color: #2a2520;
+  }
+
+  .story .number-callout {
+    float: right;
+    margin: 0 0 8px 18px;
+    text-align: center;
+    border: 2px solid var(--ink);
+    padding: 12px 16px;
+    min-width: 88px;
+  }
+
+  .story .number-callout .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--accent);
+    display: block;
+    line-height: 1;
+  }
+
+  .story .number-callout .num-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 4px;
+  }
+
+  /* ── DIVIDER ── */
+  .section-divider {
+    border: none;
+    border-top: 3px double var(--ink);
+    margin: 8px 32px 0;
+  }
+
+  /* ── DESTAQUE BRASIL ── */
+  .brasil-strip {
+    background: var(--accent2);
+    color: var(--paper);
+    padding: 6px 32px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .brasil-strip::before {
+    content: '▶';
+    font-size: 8px;
+  }
+
+  /* ── STAT ROW ── */
+  .stat-row {
+    display: flex;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .stat-item {
+    flex: 1;
+    padding: 20px 24px;
+    border-right: 1px solid var(--rule);
+    text-align: center;
+  }
+
+  .stat-item:last-child { border-right: none; }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--accent2);
+    display: block;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 6px;
+    line-height: 1.4;
+  }
+
+  /* ── PULLQUOTE ── */
+  .pullquote {
+    margin: 0;
+    padding: 24px 40px;
+    border-top: 2px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+    background: #ede8de;
+  }
+
+  .pullquote blockquote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 19px;
+    line-height: 1.5;
+    color: var(--ink);
+    text-align: center;
+  }
+
+  .pullquote cite {
+    display: block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: center;
+    font-style: normal;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 28px 32px;
+    border-top: 3px double var(--accent);
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333;
+  }
+
+  .footer-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 900;
+  }
+
+  .footer-brand span { color: var(--accent); }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: right;
+  }
+
+  .footer-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: #888;
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .footer-bottom {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: #555;
+    letter-spacing: 0.06em;
+    line-height: 1.6;
+  }
+
+  .routine-badge {
+    display: inline-block;
+    margin-top: 12px;
+    background: var(--accent);
+    color: white;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+  }
+
+
+  .story-source a {
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--muted);
+    transition: color 0.15s;
+  }
+  .story-source a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+  .read-more {
+    display: inline-block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent2);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent2);
+    padding-bottom: 1px;
+  }
+  .read-more:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+  @media (max-width: 600px) {
+    .wrapper { margin: 0; box-shadow: none; }
+    .masthead h1 { font-size: 38px; }
+    .stat-row { flex-direction: column; }
+    .stat-item { border-right: none; border-bottom: 1px solid var(--rule); }
+    .header-top { flex-direction: column; gap: 4px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-top">
+      <span>Edição #100</span>
+      <span>10 de setembro de 2026</span>
+      <span>Diária · IA &amp; Transformação</span>
+    </div>
+    <div class="masthead">
+      <h1>CLIKDATA<span style="color:var(--accent)">·</span>DROPS</h1>
+      <p class="tagline">IA · Tecnologia · Transformação Digital · Edição Diária</p>
+    </div>
+    <div class="edition-bar">
+      <span>🌍 Mundo</span>
+      <span>🇧🇷 Brasil</span>
+      <span>📊 Números</span>
+      <span>💡 Perspectiva</span>
+    </div>
+  </header>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <p>
+      <span class="intro-dropcap">O</span>penAI afirma que 10 mil agentes de IA resolveram, em 88 horas, um dos sete Problemas do Milênio da matemática — mas o feito foi imediatamente ofuscado por uma disputa de crédito com um pesquisador da Anthropic. No mesmo dia, NSA, CISA e FBI acusaram seis empresas chinesas de IA de conduzirem campanhas de destilação em escala industrial contra modelos americanos desde 2024. A Gartner alerta que, superada a euforia inicial, o desafio dos CIOs deixou de ser tecnológico: é usar IA para ampliar — não substituir — o julgamento humano. No Brasil, a KPMG confirma que 100% das empresas já implementaram automação e IA agêntica, mas 45% ainda operam projetos desconectados entre si, enquanto o governo federal injeta R$ 23 bilhões no Plano Brasileiro de IA até 2028. Cinco sinais do dia.
+    </p>
+  </section>
+
+  <!-- ═══ MUNDO ═══ -->
+  <div class="section-header">
+    <span class="section-flag red">🌍 Mundo</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Pesquisa &amp; IA</span>
+      <span class="story-source"><a href="https://www.axios.com/2026/09/08/openai-math-solution-navier-stokes-credit" target="_blank">Axios</a></span>
+    </div>
+    <div class="number-callout">
+      <span class="num">88h</span>
+      <span class="num-label">para resolver um<br>Problema do Milênio</span>
+    </div>
+    <h2>OpenAI diz ter resolvido problema do milênio em <em>88 horas</em> — e mergulha em disputa de crédito</h2>
+    <p>A OpenAI anunciou que um modelo interno ainda não lançado, operando com cerca de 10 mil agentes de IA, produziu uma prova formalizada em Lean para o problema de existência e suavidade de Navier-Stokes, um dos sete Problemas do Milênio do Clay Mathematics Institute, cada um com prêmio de US$ 1 milhão. O anúncio foi rapidamente ofuscado: o matemático Tristan Buckmaster (NYU) alega que a OpenAI teve acesso ao trabalho que ele desenvolvia havia quase um ano com Levent Alpöge, pesquisador da Anthropic, e pressionou para excluir Alpöge dos créditos — acusação que a empresa nega. O Clay Institute ainda não validou a prova de forma independente.</p>
+    <a href="https://www.axios.com/2026/09/08/openai-math-solution-navier-stokes-credit" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Segurança &amp; Geopolítica</span>
+      <span class="story-source"><a href="https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-251a" target="_blank">CISA / NSA / FBI</a></span>
+    </div>
+    <div class="number-callout">
+      <span class="num">6</span>
+      <span class="num-label">empresas chinesas<br>citadas no alerta</span>
+    </div>
+    <h2>EUA acusam seis empresas de IA chinesas de <em>destilação industrial</em> de modelos americanos</h2>
+    <p>Em alerta conjunto (AA26-251A) publicado em 8 de setembro, NSA, CISA e FBI afirmam que DeepSeek, Alibaba, Moonshot AI, MiniMax, StepFun e Z.AI conduziram, desde pelo menos o fim de 2024, campanhas "agressivas, maliciosas e direcionadas" de destilação contra modelos de fronteira dos EUA — incluindo variantes de Claude, GPT, Gemini e Grok —, extraindo bilhões de tokens para treinar seus próprios sistemas. Segundo as agências, essas práticas não são um complemento, mas o núcleo da estratégia de desenvolvimento dessas empresas, o que reacende o debate sobre proteção de propriedade intelectual em IA generativa.</p>
+    <a href="https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-251a" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story" style="border-bottom:none;">
+    <div class="story-meta">
+      <span class="story-tag">Transformação Digital</span>
+      <span class="story-source"><a href="https://www.gartner.com/en/newsroom/press-releases/2026-09-09-gartner-identifies-four-shifts-shaping-the-future-of-work" target="_blank">Gartner</a></span>
+    </div>
+    <h2>Gartner: o erro das empresas foi tratar a IA como <em>automação</em>, não como amplificação</h2>
+    <p>A Gartner identificou quatro mudanças estruturais no futuro do trabalho, com destaque para a relação entre humanos e "IA parceira de ferramenta" (toolmate): à medida que os primeiros investimentos em IA entram no "vale da desilusão", o desafio dos CIOs deixa de ser tecnológico e passa a ser usar IA para ampliar o julgamento, a criatividade e a liderança humanas — não substituí-los. A consultoria também aponta que apenas 48% das iniciativas digitais atingem ou superam as metas de negócio definidas, mesmo com 94% dos CIOs esperando mudanças relevantes em seus planos nos próximos 24 meses.</p>
+    <a href="https://www.gartner.com/en/newsroom/press-releases/2026-09-09-gartner-identifies-four-shifts-shaping-the-future-of-work" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- ═══ BRASIL ═══ -->
+  <hr class="section-divider">
+  <div class="brasil-strip">Empresas brasileiras lideram automação com IA agêntica — mas projetos ainda operam desconectados</div>
+
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">🇧🇷 Brasil</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stat-row">
+    <div class="stat-item">
+      <span class="stat-num">100%</span>
+      <span class="stat-label">empresas brasileiras com<br>automação e IA agêntica implementadas</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">45%</span>
+      <span class="stat-label">relatam projetos de IA<br>operando de forma desconectada</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">R$23bi</span>
+      <span class="stat-label">investimento do Plano<br>Brasileiro de IA até 2028</span>
+    </div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Adoção Corporativa</span>
+      <span class="story-source"><a href="https://kpmg.com/br/pt/insights/2026/05/global-tech-report.html" target="_blank">KPMG Brasil</a></span>
+    </div>
+    <h2>Brasil chega a <em>100% de adoção</em> de automação e IA agêntica — mas coordenação ainda falha</h2>
+    <p>O KPMG Global Tech Report 2026, que ouviu 150 executivos de tecnologia no Brasil entre os 2.500 entrevistados em 27 países, mostra que 100% das empresas brasileiras já implementaram algum grau de automação e IA, incluindo soluções agênticas — 81% delas já investem especificamente em capacidades de agentes autônomos. O lado crítico: 45% dos executivos afirmam que múltiplos projetos de IA operam de forma desconectada entre áreas, e 82% acreditam que gerenciar frotas de agentes será crítico nos próximos cinco anos. Para líderes de transformação digital, a mensagem é clara: a corrida pela adoção já foi vencida — a próxima disputa é pela integração.</p>
+    <a href="https://kpmg.com/br/pt/insights/2026/05/global-tech-report.html" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story" style="border-bottom:none;">
+    <div class="story-meta">
+      <span class="story-tag">Política Pública &amp; IA</span>
+      <span class="story-source"><a href="https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/transformacaodigital/plano-brasileiro-de-inteligencia-artificial" target="_blank">Ministério da Ciência, Tecnologia e Inovação</a></span>
+    </div>
+    <h2>Governo federal aposta <em>R$ 23 bilhões</em> em soberania de IA até 2028</h2>
+    <p>O Plano Brasileiro de Inteligência Artificial (PBIA), do Ministério da Ciência, Tecnologia e Inovação, prevê R$ 23 bilhões em investimentos até 2028 distribuídos em cinco eixos: infraestrutura, formação e capacitação, serviços públicos, inovação empresarial e apoio ao processo regulatório. Entre as iniciativas concretas está a aquisição de um supercomputador de US$ 1 bilhão — que o governo diz que estará entre os dez mais potentes do mundo — e a capacitação de 115 mil servidores públicos em IA. O plano busca reduzir a dependência tecnológica externa do país num momento em que infraestrutura de dados e governança avançam em ritmos muito diferentes no setor privado brasileiro.</p>
+    <a href="https://www.gov.br/mcti/pt-br/acompanhe-o-mcti/transformacaodigital/plano-brasileiro-de-inteligencia-artificial" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- PULLQUOTE -->
+  <div class="pullquote">
+    <blockquote>
+      "Quando executivos de negócio e de TI olharem para trás, para o início da era da IA, perceberão que seu maior erro foi acreditar que a automação do trabalho era o objetivo, quando a oportunidade real era a amplificação da força de trabalho."
+    </blockquote>
+    <cite>— Tori Paulman, VP Analyst, Gartner</cite>
+  </div>
+
+  <!-- PERSPECTIVA -->
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">💡 Perspectiva</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story" style="border-bottom:none; padding-bottom:28px;">
+    <h2>O que esses sinais significam para <em>líderes de transformação</em></h2>
+    <p style="margin-bottom:12px;">Três leituras práticas para o dia:</p>
+    <p style="margin-bottom:10px;"><strong>1. Crédito e proveniência viram risco de governança.</strong> A disputa em torno da prova de Navier-Stokes mostra que, quanto mais agentes de IA operam de forma autônoma sobre trabalho humano prévio, mais as organizações precisam de trilhas de auditoria claras sobre origem de dados e autoria — antes que a disputa vire passivo jurídico ou reputacional.</p>
+    <p style="margin-bottom:10px;"><strong>2. Segurança de modelo é tema de C-level, não só de TI.</strong> O alerta conjunto de NSA, CISA e FBI contra seis empresas chinesas de IA reforça que proteção de propriedade intelectual em modelos de fronteira já é pauta geopolítica — e qualquer empresa que integra modelos de terceiros precisa mapear essa exposição na sua cadeia de fornecedores.</p>
+    <p><strong>3. Adoção não é mais o gargalo — integração é.</strong> Com 100% das empresas brasileiras já usando automação e IA agêntica, mas 45% com projetos desconectados, e a Gartner apontando que só 48% das iniciativas digitais batem metas globalmente, o próximo ciclo de vantagem competitiva pertence a quem consolidar agentes e times humanos em um único fluxo de trabalho — não a quem simplesmente tiver mais IA implantada.</p>
+  </article>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">CLIKDATA<span>·</span>DROPS</div>
+      </div>
+      <div class="footer-links">
+        <a href="https://clikdata.com.br" target="_blank">clikdata.com.br</a>
+        <a href="#">Arquivos anteriores</a>
+        <a href="#">Descadastrar</a>
+        <a href="#">Contato</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      Publicado em 10 de setembro de 2026 · Edição #100 · clikdata.com.br<br>
+      Este digest é gerado automaticamente com curadoria editorial humana.<br>
+      Fontes: Axios, CISA/NSA/FBI, Gartner, KPMG Brasil, Ministério da Ciência, Tecnologia e Inovação.
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
