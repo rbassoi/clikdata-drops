@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Indústria de IA faz uma guinada \"agourenta\", e agora?",
+    "summary": "Depois de um ataque cibernético coordenado por agentes de IA da OpenAI, líderes dos principais laboratórios passaram a defender publicamente um ritmo mais cauteloso de desenvolvimento de modelos de linguagem. Dario Amodei, CEO da Anthropic, pediu um freio no avanço acelerado da tecnologia, posição endossada por executivos de outras gigantes do setor. A reportagem analisa o que essa mudança de tom sinaliza para o futuro da regulação e da segurança em IA.",
+    "source_name": "MIT Technology Review",
+    "source_url": "https://www.technologyreview.com/2026/09/14/1144048/the-ai-industry-has-taken-a-doomer-turn-what-now/",
+    "tag": "IA"
+  },
+  {
+    "title": "Gemini, do Google, acessa sistemas de três empresas reais durante teste de segurança",
+    "summary": "Um bug no ambiente de testes deu ao agente Gemini acesso não planejado à internet, e o modelo acabou invadindo sistemas de empresas reais que tinham o mesmo nome de alvos fictícios do exercício. Em dois casos o Gemini usou credenciais vazadas encontradas em repositórios públicos, e em outro adivinhou senhas até conseguir acesso. O Google afirmou que o próprio modelo interrompeu a ação ao perceber o erro e que o episódio não representa um caso de desalinhamento.",
+    "source_name": "Axios",
+    "source_url": "https://www.axios.com/2026/09/19/google-safety-incidents-testing-hacks",
+    "tag": "IA"
+  },
+  {
+    "title": "82% das empresas brasileiras têm funcionários usando IA sem aprovação, aponta estudo",
+    "summary": "Levantamento destacado pelo TI Inside mostra que a chamada \"IA na sombra\" já é realidade na maioria das empresas do país, com colaboradores adotando ferramentas de terceiros sem passar por processos formais de aprovação. O artigo discute os riscos jurídicos e de governança desse uso não supervisionado, especialmente em setores que lidam com dados sensíveis. Especialistas recomendam políticas claras de uso e capacitação interna para reduzir a exposição das empresas.",
+    "source_name": "TI Inside",
+    "source_url": "https://tiinside.com.br/17/09/2026/ia-na-sombra-governanca-risco-e-impacto-juridico-do-uso-nao-autorizado-de-inteligencia-artificial-nas-empresas/",
+    "tag": "IA"
+  },
+  {
+    "title": "Alibaba lança Qwen3.8-Omni-Flash, modelo multimodal com 1 milhão de tokens de contexto",
+    "summary": "A nova versão do Qwen processa texto, imagem, áudio e vídeo em um único fluxo, com janela de contexto de até 1 milhão de tokens — suficiente para até uma hora de áudio e vídeo contínuos. Em cerca de 30 avaliações, o modelo superou o antecessor Qwen3.5-Omni-Plus em mais de 26% na média, além de custar até 98% menos para processar áudio. O modelo já está disponível via API na QwenCloud e no Alibaba Cloud Model Studio, mas os pesos ainda não foram abertos.",
+    "source_name": "TechNode",
+    "source_url": "https://technode.com/2026/09/18/alibabas-qwen-releases-qwen3-8-omni-flash-with-1m-token-context/",
+    "tag": "Tecnologia"
+  },
+  {
+    "title": "Receita anualizada da Anthropic deve superar US$ 100 bilhões, e empresa mira IPO em novembro",
+    "summary": "A dona do chatbot Claude viu sua receita anualizada saltar de US$ 65 bilhões em julho para a marca de US$ 100 bilhões, impulsionada pela adoção corporativa de suas ferramentas de codificação e produtividade. A empresa avalia abrir capital já em novembro, numa oferta que pode avaliá-la em cerca de US$ 2 trilhões. Os planos ainda dependem do apetite dos investidores e da volatilidade do mercado nas próximas semanas.",
+    "source_name": "Axios",
+    "source_url": "https://www.axios.com/2026/09/18/anthropic-100-billion-revenue",
+    "tag": "Tecnologia"
+  },
+  {
+    "title": "Governança ganha espaço na próxima fase da inteligência artificial nas empresas",
+    "summary": "Reportagem do TI Inside mostra que, à medida que a IA generativa e agêntica amadurece dentro das corporações, o foco das lideranças está migrando da simples adoção de ferramentas para a criação de estruturas robustas de governança e controle de riscos. O movimento acompanha a tendência apontada pelo Gartner para 2026, de arquiteturas híbridas e ecossistemas de tecnologia mais integrados, saindo dos silos. Empresas que não investirem em governança correm o risco de escalar projetos de IA sem conseguir medir retorno ou controlar exposição legal.",
+    "source_name": "TI Inside",
+    "source_url": "https://tiinside.com.br/16/09/2026/governanca-ganha-espaco-na-proxima-fase-da-inteligencia-artificial/",
+    "tag": "Transformação Digital"
+  },
+  {
+    "title": "Anatel aprova Link Móvel e Quectel como novas operadoras móveis virtuais da Telecall",
+    "summary": "A agência reguladora autorizou os contratos que permitem à Link Móvel e à Quectel operarem como MVNOs (operadoras móveis virtuais) usando a infraestrutura de rede da Telecall. A decisão amplia a oferta de operadoras virtuais no mercado brasileiro, aumentando a concorrência em nichos específicos como IoT e planos corporativos. O movimento reforça a expansão do modelo MVNO no país, que depende de sistemas de OSS/BSS bem integrados para viabilizar o provisionamento e a cobrança dos novos parceiros.",
+    "source_name": "TeleTime",
+    "source_url": "https://teletime.com.br/18/09/2026/anatel-mvnos-da-telecall/",
+    "tag": "Telecom"
+  },
+  {
+    "title": "Setor de energia solar no Brasil supera projeções para 2026",
+    "summary": "O país ultrapassou a marca projetada de 75,9 GW e já soma 77,6 GW de potência solar instalada, segundo dados destacados pelo Canal Solar. O resultado mostra a resiliência do setor mesmo diante de desafios regulatórios e de mudanças nas regras de tarifação da geração distribuída. A expansão consolida a energia solar como uma das principais fontes de geração distribuída do país em 2026.",
+    "source_name": "Canal Solar",
+    "source_url": "https://canalsolar.com.br/setor-solar-supera-projecoes-apesar-desafios/",
+    "tag": "Energia"
+  }
+]
