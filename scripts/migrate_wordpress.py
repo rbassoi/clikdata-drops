@@ -82,7 +82,17 @@ def wp_session():
     base_url = os.environ["WP_BASE_URL"].rstrip("/")
     s = requests.Session()
     s.auth = (user, app_password)
-    s.headers.update({"Content-Type": "application/json"})
+    s.headers.update({
+        "Content-Type": "application/json",
+        # O User-Agent padrão do requests ("python-requests/x.x") é
+        # bloqueado por Mod_Security em algumas hospedagens compartilhadas
+        # por parecer tráfego automatizado/bot. Um User-Agent de navegador
+        # normal evita esse bloqueio.
+        "User-Agent": (
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+            "(KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+        ),
+    })
     return s, base_url
 
 
