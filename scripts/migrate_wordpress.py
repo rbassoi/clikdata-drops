@@ -2,11 +2,14 @@
 """
 Publica/atualiza edições do Clikdata Drops (edicoes/*.html) como posts no
 WordPress (drops.clikdata.com.br), preservando o design original de cada
-edição via <iframe src="data:text/html;base64,...">  — sem depender de
-upload de mídia .html (bloqueado por padrão no WP), sem depender do CSS
-do tema, e sem enviar HTML bruto no corpo da requisição (evita bloqueios
-de firewalls tipo Mod_Security, que tendem a barrar payloads com tags
-<style>/<script> literais).
+edição via <iframe src="data:text/html;base64,...">.
+
+Usa a rota REST própria /wp-json/clikdata/v1/posts (plugin
+clikdata-drops-publish-api), em vez da rota padrão /wp-json/wp/v2/posts,
+porque o Mod_Security desta hospedagem bloqueia TODO POST em
+/wp-json/wp/v2/posts — confirmado via diagnóstico (até payload mínimo de
+0.1 KB foi bloqueado, então não é questão de tamanho/conteúdo, é a rota
+em si). A rota custom não bate no padrão bloqueado.
 
 Idempotente: mantém um manifesto (wp-migration-state.json) na raiz do repo
 com o mapeamento edição -> post_id/post_url/content_hash. Uma edição só é
@@ -99,12 +102,15 @@ def build_post_payload(num, data_iso, raw_html):
 
 
 def upsert_post(session, base_url, payload, existing_post_id):
+    # Rota custom do plugin clikdata-drops-publish-api: sempre POST nesta
+    # única rota — o próprio plugin decide criar ou atualizar (por "id" ou
+    # por "slug" já existente), então não precisamos montar URLs diferentes
+    # como faríamos com a REST API padrão do WP.
+    url = f"{base_url}/wp-json/clikdata/v1/posts"
+    body = dict(payload)
     if existing_post_id:
-        url = f"{base_url}/wp-json/wp/v2/posts/{existing_post_id}"
-        resp = session.post(url, json=payload, timeout=60)
-    else:
-        url = f"{base_url}/wp-json/wp/v2/posts"
-        resp = session.post(url, json=payload, timeout=60)
+        body["id"] = existing_post_id
+    resp = session.post(url, json=body, timeout=60)
     if resp.status_code not in (200, 201):
         raise RuntimeError(f"WP API {resp.status_code} em {url}: {resp.text[:500]}")
     return resp.json()
