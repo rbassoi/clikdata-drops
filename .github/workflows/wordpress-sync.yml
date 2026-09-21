@@ -1,0 +1,82 @@
+name: Sync Newsletter -> WordPress
+
+# Sincroniza edições da newsletter (edicoes/*.html) com posts no WordPress
+# (drops.clikdata.com.br), via scripts/migrate_wordpress.py.
+#
+# - workflow_dispatch: roda sob demanda (ex.: migração inicial das 102
+#   edições, ou reprocessar tudo). É idempotente — só cria/atualiza o que
+#   mudou, com base no manifesto wp-migration-state.json.
+# - push em main que altera edicoes/**.html: publica só a(s) edição(ões)
+#   nova(s)/alterada(s).
+
+on:
+  workflow_dispatch:
+    inputs:
+      arquivo:
+        description: 'Processar só uma edição (ex: edicoes/ed-001-2026-05-06.html). Deixe vazio para processar todas.'
+        required: false
+        type: string
+
+  push:
+    branches:
+      - main
+    paths:
+      - 'edicoes/**.html'
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    name: Publicar no WordPress
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repositório
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Instalar dependências
+        run: pip install --quiet requests
+
+      - name: Publicar/atualizar edições no WordPress
+        id: sync
+        env:
+          WP_BASE_URL: https://drops.clikdata.com.br
+          WP_USER: ${{ secrets.WP_USER }}
+          WP_APP_PASSWORD: ${{ secrets.WP_APP_PASSWORD }}
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ -n "${{ github.event.inputs.arquivo }}" ]; then
+            python3 scripts/migrate_wordpress.py "${{ github.event.inputs.arquivo }}"
+          else
+            python3 scripts/migrate_wordpress.py
+          fi
+
+      - name: Commit do manifesto (wp-migration-state.json)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if ! git diff --quiet -- wp-migration-state.json; then
+            git add wp-migration-state.json
+            git commit -m "chore: atualiza manifesto de sincronização com WordPress [skip ci]"
+            git push
+          else
+            echo "Nada a commitar — manifesto sem alterações."
+          fi
+
+      - name: Registrar erro (se houver)
+        if: failure()
+        run: |
+          mkdir -p logs
+          echo "$(date -u +%Y-%m-%dT%H:%M:%SZ) — Falha no workflow wordpress-sync.yml (run ${{ github.run_id }})" >> "logs/erro-$(date -u +%Y-%m-%d).txt"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add logs/
+          git commit -m "chore: registra erro de sincronização com WordPress [skip ci]" || true
+          git push || true

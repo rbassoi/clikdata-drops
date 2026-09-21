@@ -56,10 +56,18 @@ logs/
 
 ## Secrets necessários no repositório GitHub
 - `CLIKER_API_KEY` — chave da API CLIKER (Settings → Secrets and variables → Actions)
+- `WP_USER` — usuário da Application Password do WordPress (`claudedrops`)
+- `WP_APP_PASSWORD` — Application Password do WordPress (drops.clikdata.com.br)
+
+## Publicação no WordPress (drops.clikdata.com.br)
+- Cada edição é publicada como um post via `scripts/migrate_wordpress.py`, chamado pelo workflow `.github/workflows/wordpress-sync.yml`.
+- O design original de cada edição é preservado via `<iframe srcdoc="...">` (o HTML completo da edição é embutido, sem passar pelo CSS do tema). Isso exige que o usuário WP usado (`claudedrops`) tenha a capability `unfiltered_html` (padrão para Administrador em instalação single-site).
+- O workflow roda automaticamente a cada push em `main` que altera `edicoes/**.html` (publica só a edição nova) e também pode ser disparado manualmente (`workflow_dispatch`) para reprocessar tudo — é idempotente, controlado pelo manifesto `wp-migration-state.json`.
 
 ## Importante
 - O disparo da campanha Cliker **não é feito diretamente deste ambiente** (proxy de saída bloqueado).
 - O envio acontece via GitHub Actions após o merge em `main`.
+- A publicação no WordPress também **não é feita diretamente deste ambiente** (mesmo motivo).
 - Nunca alterar o design do template.
 - Sempre incrementar o número da edição.
 - Sempre incluir links das fontes nas notícias.
