@@ -2,8 +2,11 @@
 """
 Publica/atualiza edições do Clikdata Drops (edicoes/*.html) como posts no
 WordPress (drops.clikdata.com.br), preservando o design original de cada
-edição via <iframe srcdoc="..."> — sem depender de upload de mídia .html
-(bloqueado por padrão no WP) e sem depender do CSS do tema.
+edição via <iframe src="data:text/html;base64,...">  — sem depender de
+upload de mídia .html (bloqueado por padrão no WP), sem depender do CSS
+do tema, e sem enviar HTML bruto no corpo da requisição (evita bloqueios
+de firewalls tipo Mod_Security, que tendem a barrar payloads com tags
+<style>/<script> literais).
 
 Idempotente: mantém um manifesto (wp-migration-state.json) na raiz do repo
 com o mapeamento edição -> post_id/post_url/content_hash. Uma edição só é
@@ -16,9 +19,11 @@ Uso:
 
 Variáveis de ambiente obrigatórias:
   WP_BASE_URL       ex: https://drops.clikdata.com.br
-  WP_USER           ex: claudedrops
+  WP_USER           usuário WordPress real (ex: rbassoi) — o "nome" dado à
+                    Application Password é só um rótulo, não um usuário
   WP_APP_PASSWORD   Application Password gerado no WP (com espaços, ok)
 """
+import base64
 import glob
 import hashlib
 import html
@@ -37,7 +42,7 @@ FILENAME_RE = re.compile(r"ed-(\d+)-(\d{4}-\d{2}-\d{2})\.html$")
 IFRAME_TEMPLATE = """<!-- wp:html -->
 <div class="clikdata-drops-edicao" style="max-width:760px;margin:0 auto;">
 <iframe
-  srcdoc="{srcdoc}"
+  src="data:text/html;charset=utf-8;base64,{b64}"
   title="{title}"
   loading="lazy"
   style="width:100%;height:2400px;border:0;display:block;"
@@ -81,8 +86,8 @@ def wp_session():
 def build_post_payload(num, data_iso, raw_html):
     data_pt = datetime.strptime(data_iso, "%Y-%m-%d").strftime("%d/%m/%Y")
     title = f"Clikdata Drops #{num:03d} — {data_pt}"
-    srcdoc = html.escape(raw_html, quote=True)
-    content = IFRAME_TEMPLATE.format(srcdoc=srcdoc, title=html.escape(title, quote=True))
+    b64 = base64.b64encode(raw_html.encode("utf-8")).decode("ascii")
+    content = IFRAME_TEMPLATE.format(b64=b64, title=html.escape(title, quote=True))
     return {
         "title": title,
         "slug": f"clikdata-drops-{num:03d}",
@@ -106,7 +111,7 @@ def upsert_post(session, base_url, payload, existing_post_id):
 
 
 def main():
-    args = sys.argv[1:]
+    args = [a.strip() for a in sys.argv[1:] if a.strip()]
     files = args if args else sorted(glob.glob(EDICOES_GLOB))
     if not files:
         print("Nenhuma edição encontrada.")
