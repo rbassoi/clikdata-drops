@@ -1,0 +1,39 @@
+name: Diagnóstico Mod_Security WordPress
+
+# Workflow temporário para isolar a causa do bloqueio Mod_Security ao
+# publicar via REST API no WordPress. Roda scripts/diagnose_wp.py, que
+# tenta várias requisições de tamanhos/tipos diferentes e reporta onde
+# o bloqueio acontece. Cria e apaga posts de rascunho no processo — não
+# afeta nenhum conteúdo publicado.
+#
+# Pode ser removido depois que o diagnóstico servir seu propósito.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  diagnose:
+    name: Testar limites do Mod_Security
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repositório
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Instalar dependências
+        run: pip install --quiet requests
+
+      - name: Rodar diagnóstico
+        env:
+          WP_BASE_URL: https://drops.clikdata.com.br
+          WP_USER: ${{ secrets.WP_USER }}
+          WP_APP_PASSWORD: ${{ secrets.WP_APP_PASSWORD }}
+        run: python3 scripts/diagnose_wp.py
