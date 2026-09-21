@@ -19,6 +19,7 @@ contrário é pulada (create) ou atualizada (update) só quando necessário.
 Uso:
   python3 scripts/migrate_wordpress.py                # processa todas as edições em edicoes/
   python3 scripts/migrate_wordpress.py edicoes/ed-102-2026-09-17.html   # processa só uma
+  python3 scripts/migrate_wordpress.py --force        # reprocessa TODAS ignorando o cache de hash
 
 Variáveis de ambiente obrigatórias:
   WP_BASE_URL       ex: https://drops.clikdata.com.br
@@ -84,10 +85,6 @@ def wp_session():
     s.auth = (user, app_password)
     s.headers.update({
         "Content-Type": "application/json",
-        # O User-Agent padrão do requests ("python-requests/x.x") é
-        # bloqueado por Mod_Security em algumas hospedagens compartilhadas
-        # por parecer tráfego automatizado/bot. Um User-Agent de navegador
-        # normal evita esse bloqueio.
         "User-Agent": (
             "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
             "(KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
@@ -108,14 +105,11 @@ def build_post_payload(num, data_iso, raw_html):
         "date": f"{data_iso}T08:00:00",
         "content": content,
         "excerpt": f"Edição #{num:03d} da newsletter Clikdata Drops — {data_pt}.",
+        "category": "Newsletter",
     }
 
 
 def upsert_post(session, base_url, payload, existing_post_id):
-    # Rota custom do plugin clikdata-drops-publish-api: sempre POST nesta
-    # única rota — o próprio plugin decide criar ou atualizar (por "id" ou
-    # por "slug" já existente), então não precisamos montar URLs diferentes
-    # como faríamos com a REST API padrão do WP.
     url = f"{base_url}/wp-json/clikdata/v1/posts"
     body = dict(payload)
     if existing_post_id:
@@ -128,6 +122,8 @@ def upsert_post(session, base_url, payload, existing_post_id):
 
 def main():
     args = [a.strip() for a in sys.argv[1:] if a.strip()]
+    force = "--force" in args
+    args = [a for a in args if a != "--force"]
     files = args if args else sorted(glob.glob(EDICOES_GLOB))
     if not files:
         print("Nenhuma edição encontrada.")
@@ -151,7 +147,7 @@ def main():
         key = os.path.basename(path)
         entry = state.get(key)
 
-        if entry and entry.get("content_hash") == content_hash:
+        if not force and entry and entry.get("content_hash") == content_hash:
             skipped += 1
             continue
 
