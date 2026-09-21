@@ -1,0 +1,82 @@
+name: Sync Notícias Diárias -> WordPress
+
+# Publica notícias diárias (noticias/AAAA-MM-DD.json) como posts individuais
+# no WordPress (drops.clikdata.com.br), categoria "Notícias".
+#
+# Totalmente separado do fluxo da newsletter: NÃO toca em edicoes/,
+# template.html, prompt.md, deploy-newsletter.yml, wordpress-sync.yml nem
+# scripts/migrate_wordpress.py.
+#
+# - push em main que altera noticias/**.json: publica as notícias novas/alteradas.
+# - workflow_dispatch: roda sob demanda (reprocessar um dia específico ou tudo).
+
+on:
+  workflow_dispatch:
+    inputs:
+      arquivo:
+        description: 'Processar só um dia (ex: noticias/2026-09-21.json). Deixe vazio para processar todos. Digite --force para reprocessar tudo.'
+        required: false
+        type: string
+
+  push:
+    branches:
+      - main
+    paths:
+      - 'noticias/**.json'
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    name: Publicar notícias no WordPress
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repositório
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Instalar dependências
+        run: pip install --quiet requests
+
+      - name: Publicar notícias no WordPress
+        env:
+          WP_BASE_URL: https://drops.clikdata.com.br
+          WP_USER: ${{ secrets.WP_USER }}
+          WP_APP_PASSWORD: ${{ secrets.WP_APP_PASSWORD }}
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ -n "${{ github.event.inputs.arquivo }}" ]; then
+            python3 scripts/publish_daily_news.py "${{ github.event.inputs.arquivo }}"
+          else
+            python3 scripts/publish_daily_news.py
+          fi
+
+      - name: Commit do manifesto (wp-news-state.json)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if ! git diff --quiet -- wp-news-state.json; then
+            git add wp-news-state.json
+            git commit -m "chore: atualiza manifesto de notícias sincronizadas com WordPress [skip ci]"
+            git push
+          else
+            echo "Nada a commitar — manifesto sem alterações."
+          fi
+
+      - name: Registrar erro (se houver)
+        if: failure()
+        run: |
+          mkdir -p logs
+          echo "$(date -u +%Y-%m-%dT%H:%M:%SZ) — Falha no workflow wordpress-news-sync.yml (run ${{ github.run_id }})" >> "logs/erro-noticias-$(date -u +%Y-%m-%d).txt"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add logs/
+          git commit -m "chore: registra erro de sincronização de notícias com WordPress [skip ci]" || true
+          git push || true
