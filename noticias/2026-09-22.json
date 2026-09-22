@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Debate sobre desaceleração da IA se intensifica às vésperas de encontro entre Trump e Xi",
+    "summary": "Nos dias que antecederam o encontro entre os presidentes Donald Trump e Xi Jinping, cresceram em Washington os pedidos por uma desaceleração no ritmo de desenvolvimento de modelos de IA. O debate ganhou força depois que o CEO da Anthropic, Dario Amodei, publicou um ensaio defendendo mais cautela no setor, posição endossada por Sam Altman (OpenAI), Demis Hassabis (Google DeepMind) e Elon Musk (xAI). Mark Zuckerberg (Meta) e Jensen Huang (Nvidia) rejeitaram publicamente qualquer proposta de desaceleração, evidenciando uma divisão entre as grandes empresas de tecnologia. O episódio reacendeu discussões no Congresso americano sobre regulação e riscos existenciais da IA, num momento em que o governo busca equilibrar competitividade global com segurança. A repercussão do tema é relevante porque sinaliza que mesmo executivos que lideram a corrida por IA avançada começam a reconhecer riscos sistêmicos do ritmo atual de desenvolvimento.",
+    "source_name": "Bloomberg",
+    "source_url": "https://www.bloomberg.com/news/newsletters/2026-09-21/trump-presses-ai-case-ahead-of-xi-meeting-as-calls-rise-for-slowdown",
+    "tag": "IA"
+  },
+  {
+    "title": "OpenAI, Anthropic e Google DeepMind avançam em órgão de autorregulação de segurança nos moldes da FINRA",
+    "summary": "As três maiores empresas de IA de ponta confirmaram que vêm coordenando, desde julho de 2026, a criação de um órgão de autorregulação de segurança inspirado na FINRA, entidade que supervisiona o mercado financeiro americano. A proposta, apresentada publicamente por Demis Hassabis, da Google DeepMind, prevê que o próprio setor financie e estruture um organismo capaz de definir protocolos de teste, realizar avaliações independentes e sinalizar problemas antes do lançamento de novos modelos. Chris Lehane, executivo da OpenAI, confirmou a articulação em um briefing em Washington em 15 de setembro. A iniciativa, no entanto, enfrenta resistência: um processo movido em 18 de setembro acusa as empresas de usarem o discurso de segurança para coordenar práticas que restringem a concorrência no setor. O caso ilustra a tensão entre autorregulação voluntária e risco de conluio empresarial, tema que deve ganhar ainda mais peso à medida que reguladores em diferentes países avaliam como supervisionar modelos de fronteira.",
+    "source_name": "Forkast News",
+    "source_url": "https://forkast.news/three-frontier-labs-are-building-a-finra-style-safety-body-history-suggests-it-wont-be-a-brake/",
+    "tag": "IA"
+  },
+  {
+    "title": "IA será prioridade das empresas brasileiras em 2026, mas falta investimento e estratégia, aponta Amcham",
+    "summary": "Levantamento da Amcham Brasil mostra que a inteligência artificial deve se consolidar como prioridade estratégica das empresas no país em 2026, mas grande parte das organizações ainda carece de investimento consistente e de um plano estruturado para adoção da tecnologia. O estudo aponta um descompasso entre o discurso executivo sobre IA e a realidade da implementação nas operações do dia a dia, com muitas empresas ainda em estágio exploratório. Entre os principais obstáculos citados estão a falta de mão de obra qualificada, orçamentos limitados e ausência de governança de dados adequada. O tema ganha relevância num momento em que startups brasileiras de IA aplicada, como Blip, Enter e Tractian, atraem rodadas robustas de investimento ao resolver problemas setoriais concretos, sugerindo que o mercado privado pode estar mais avançado que boa parte das grandes corporações. A pesquisa reforça a necessidade de as empresas brasileiras tratarem IA como projeto estratégico de longo prazo, e não apenas como iniciativa pontual de inovação.",
+    "source_name": "Amcham Brasil",
+    "source_url": "https://www.amcham.com.br/noticias/inteligencia-artificial-sera-prioridade-das-empresas-em-2026",
+    "tag": "IA"
+  },
+  {
+    "title": "Google começa a pagar editores por conteúdo usado em respostas geradas por IA",
+    "summary": "O Google iniciou um piloto batizado de \"AI Contribution Pilot\", que remunera editores de conteúdo quando suas páginas são consideradas relevantes para a geração de respostas em produtos de IA como Gemini, AI Overviews e o AI Mode da busca. Diferentemente do modelo tradicional de cliques, o pagamento pode ocorrer mesmo sem o usuário acessar o site original, desde que o conteúdo tenha contribuído de forma mensurável para a resposta gerada. A empresa classifica a iniciativa como um piloto em estágio inicial, testado com dezenas de editores, com adesão maior entre veículos pequenos e médios do que entre grandes grupos de mídia. Executivos de editoras relataram que os valores oferecidos até agora são considerados baixos, o que gera ceticismo sobre a viabilidade do modelo como fonte real de receita. A medida surge em resposta à pressão crescente do setor de mídia, que vê o tráfego de buscas cair à medida que respostas de IA substituem cliques para os sites originais.",
+    "source_name": "Olhar Digital",
+    "source_url": "https://olhardigital.com.br/2026/09/17/pro/google-testa-remuneracao-para-sites-que-ajudam-suas-ferramentas-de-ia-a-gerar-respostas-mais-uteis/",
+    "tag": "Tecnologia"
+  },
+  {
+    "title": "Agente de IA da Meta é bloqueado de operar no site da Amazon",
+    "summary": "A Amazon bloqueou o acesso do agente de IA da Meta, batizado de Muse, ao seu site de e-commerce, numa medida que expõe as tensões crescentes em torno do comércio conduzido por agentes autônomos de IA. Segundo a reportagem, o Muse apresenta uma das taxas de alucinação mais baixas entre os modelos avaliados, mas a Amazon optou por restringir o acesso por ainda considerar relevante demais o risco de erros em transações automatizadas antes de liberar o agente sem controles adicionais. O episódio ocorre em meio à corrida das grandes techs para viabilizar o chamado \"agentic commerce\", em que assistentes de IA fazem compras em nome dos usuários sem intervenção humana direta. A decisão da Amazon sinaliza que grandes varejistas ainda preferem cautela regulatória e técnica antes de abrir suas plataformas a agentes de terceiros, mesmo enquanto a própria Amazon testa seus assistentes de compra. Para empresas que apostam em automação de compras via IA, o caso reforça que interoperabilidade e confiança entre plataformas concorrentes ainda são barreiras a superar.",
+    "source_name": "TechCrunch",
+    "source_url": "https://techcrunch.com/2026/09/21/metas-ai-agent-has-been-blocked-from-using-amazon-com/",
+    "tag": "Tecnologia"
+  },
+  {
+    "title": "64% das empresas sofrem com baixa cultura digital, aponta estudo da SoftExpert",
+    "summary": "Uma pesquisa da SoftExpert revela que 64% das empresas brasileiras enfrentam dificuldades relacionadas à baixa cultura digital interna, enquanto 62% ainda lidam com sistemas legados e pouco integrados como entrave à transformação digital. O estudo indica que o principal gargalo não é a falta de acesso a tecnologia, mas sim a resistência organizacional e a ausência de processos de gestão de mudança que acompanhem a adoção de novas ferramentas. Apesar dos desafios, 60% das companhias pesquisadas preveem aumento no orçamento de TI para os próximos ciclos, com 23% projetando crescimento acima de 10%. Os dados reforçam uma tendência já observada em 2026: empresas estão migrando de ecossistemas fragmentados para plataformas integradas, à medida que IA generativa, automação e computação de borda deixam de ser suporte e passam a ser parte central da operação. O levantamento é um alerta para líderes de TI de que investir em tecnologia sem investir paralelamente em capacitação e cultura organizacional tende a gerar baixo retorno sobre os projetos de transformação digital.",
+    "source_name": "TI Inside",
+    "source_url": "https://tiinside.com.br/21/09/2026/64-das-empresas-sofrem-com-baixa-cultura-digital-aponta-estudo-da-softexpert/",
+    "tag": "Transformação Digital"
+  },
+  {
+    "title": "Anatel avança em proposta para liberar faixa de 6 GHz e acelerar o 5G no Brasil",
+    "summary": "A Anatel colocou em consulta pública uma proposta para destinar até 700 MHz de capacidade na faixa entre 6.425 MHz e 7.125 MHz à telefonia móvel, com o objetivo de ampliar a capacidade de transmissão de dados das operadoras e sustentar a crescente demanda por 5G no país. O projeto prevê a divisão da faixa em três blocos nacionais de 200 MHz e um bloco complementar de 100 MHz, com expectativa de que a licitação ocorra até 2028. A medida atende a um pedido antigo de operadoras como Vivo, Claro e TIM, que enfrentam gargalos de capacidade em áreas urbanas de alta densidade de tráfego de dados móveis. Para o ecossistema de OSS/BSS, a liberação de novas faixas de espectro tende a pressionar operadoras a modernizar seus sistemas de gestão de rede e faturamento, de forma a suportar o aumento de capacidade e novos modelos de serviço habilitados pelo 5G avançado. A consulta pública ficará aberta para contribuições da sociedade até 23 de outubro de 2026, e o resultado deve moldar o cronograma de expansão do 5G no Brasil nos próximos anos.",
+    "source_name": "Mixvale",
+    "source_url": "https://www.mixvale.com.br/2026/09/16/anatel-planeja-faixa-de-6-ghz-para-acelerar-conexao-movel/",
+    "tag": "Telecom"
+  },
+  {
+    "title": "Energia solar responde por quase três quartos da expansão da matriz elétrica brasileira em 2026",
+    "summary": "A energia solar foi responsável por 72,6% de toda a capacidade elétrica adicionada ao sistema brasileiro entre janeiro e agosto de 2026, com a entrada em operação comercial de 75 novas usinas fotovoltaicas que juntas somaram 3,52 GW de capacidade instalada. O resultado consolida a fonte solar como o principal motor de expansão da matriz elétrica do país neste ano, superando outras fontes renováveis e térmicas em volume de novos empreendimentos conectados. A capacidade solar instalada acumulada já soma 77,6 GW, superando a própria projeção da Absolar para o fim do ano, que era de 75,9 GW. O avanço ocorre em meio a um cenário de preços de energia em queda: contratos futuros recuaram até 11,5% na primeira semana de setembro, refletindo maior oferta e a incorporação de fontes renováveis ao sistema. Para o setor corporativo, o dado reforça a atratividade de projetos de geração distribuída e de contratos de compra de energia solar como estratégia de redução de custos e metas ESG.",
+    "source_name": "Canal Solar",
+    "source_url": "https://canalsolar.com.br/solar-expansao-matriz-eletrica-brasileira/",
+    "tag": "Energia"
+  }
+]
