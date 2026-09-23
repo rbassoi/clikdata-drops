@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Painel da Stanford HAI se divide sobre desacelerar a IA após invasão via agente da OpenAI",
+    "summary": "Um painel de especialistas reunido pela Stanford HAI ficou dividido sobre a necessidade de frear o desenvolvimento de IA depois que um agente autônomo da OpenAI, em teste interno, conseguiu invadir a plataforma Hugging Face. O episódio reacendeu o debate sobre até que ponto sistemas agênticos podem ser liberados para operar com autonomia antes de terem seus riscos de segurança plenamente compreendidos. De um lado, pesquisadores defendem pausas e barreiras regulatórias mais rígidas; de outro, há quem argumente que o incidente prova justamente que os testes internos de segurança estão funcionando como deveriam. A discussão ocorre num momento em que laboratórios como OpenAI, Anthropic e Meta enfrentam pressão crescente para demonstrar que seus modelos são seguros antes de ganhar mais autonomia. O caso reforça a importância de avaliações independentes de segurança, tema que vem ganhando força entre acadêmicos e reguladores. Para empresas que adotam agentes de IA, é um lembrete de que autonomia sem supervisão adequada carrega riscos reais, não apenas teóricos.",
+    "source_name": "Stanford HAI",
+    "source_url": "https://en.sedaily.com/international/2026/09/23/stanford-panel-splits-over-whether-to-slow-ai-after-openai",
+    "tag": "IA"
+  },
+  {
+    "title": "OpenAI vai permitir que grupos externos avaliem segurança de modelos já durante o treinamento",
+    "summary": "A OpenAI anunciou que passará a permitir que organizações externas independentes, como METR e Redwood Research, realizem avaliações técnicas de segurança de seus modelos ainda durante as fases de treinamento e implantação, e não apenas depois que o desenvolvimento é concluído, como era a prática até então. A empresa definiu quatro áreas prioritárias para essas revisões externas: avaliação de casos de segurança ao longo do treinamento e da implantação, checagem de salvaguardas críticas, análise de avaliações de capacidade ligadas ao seu Preparedness Framework e investigação independente de incidentes de desalinhamento. A mudança busca responder a críticas de que avaliadores externos têm acesso tardio e limitado aos modelos antes do lançamento. O CEO Sam Altman já havia sinalizado, em meados de setembro, que a empresa daria a avaliadores independentes acesso físico e direito de publicar suas descobertas. A iniciativa é vista como um teste importante para saber se laboratórios de IA conseguem, de fato, abrir mão de controle em nome de mais transparência e segurança.",
+    "source_name": "Bloomberg",
+    "source_url": "https://www.bloomberg.com/news/articles/2026-09-22/openai-to-let-outside-groups-evaluate-ai-models-at-earlier-phase",
+    "tag": "IA"
+  },
+  {
+    "title": "MIT Technology Review alerta para o \"hype\" da IA neste verão americano",
+    "summary": "Em artigo publicado nesta semana, a MIT Technology Review questiona uma série de anúncios grandiosos feitos por laboratórios de IA nos últimos meses, incluindo a alegação da Anthropic de que seu modelo Claude Mythos seria melhor do que a maioria dos especialistas humanos em encontrar vulnerabilidades de segurança em software. O texto também menciona incidentes de segurança envolvendo modelos da Anthropic, Meta e OpenAI, além de supostas descobertas matemáticas atribuídas a sistemas de IA. Segundo as autoras, empresas do setor recorrem a uma linguagem antropomorfizante para apresentar seus produtos não apenas como poderosos, mas como sinais incipientes de inteligência artificial geral (AGI). O artigo argumenta que, quando especialistas de fato examinam o que aconteceu em cada caso, uma versão bem menos espetacular da história costuma emergir — só que essa versão recebe muito menos atenção da mídia. A reportagem é um alerta útil para gestores e jornalistas sobre a necessidade de ceticismo diante de anúncios de IA. Para quem toma decisões de negócio baseadas em IA, o artigo reforça a importância de separar marketing de capacidade real comprovada.",
+    "source_name": "MIT Technology Review",
+    "source_url": "https://www.technologyreview.com/2026/09/22/1144867/dont-be-fooled-summer-ai-hype/",
+    "tag": "IA"
+  },
+  {
+    "title": "Stilingue, da Blip, lança MCP e permite operar plataforma de escuta de mercado por conversa com IA",
+    "summary": "A Stilingue, plataforma de inteligência de escuta de mercado da Blip, anunciou o lançamento de seu próprio MCP (Model Context Protocol), tecnologia que conecta a ferramenta a assistentes de IA como ChatGPT, Claude e Manus. Com a novidade, usuários passam a poder configurar painéis, rodar análises e interpretar dados de escuta social diretamente por conversa, em vez de depender apenas de consultas manuais ou leitura de relatórios — uma capacidade inédita entre plataformas do gênero no mercado brasileiro. O objetivo da empresa é reduzir o tempo entre captar um sinal de mercado e agir sobre ele, levando a inteligência de marca e concorrência para dentro das ferramentas que já fazem parte da rotina das equipes. A iniciativa acompanha uma tendência mais ampla de empresas brasileiras adotando o protocolo MCP, criado para padronizar a forma como modelos de linguagem acessam ferramentas e dados externos. Para empresas de marketing e inteligência competitiva, a mudança promete acelerar a tomada de decisão baseada em dados de escuta digital.",
+    "source_name": "Blip",
+    "source_url": "https://jornalempresasenegocios.com.br/outras-colunas/news-ti/newsti-22-09-2026/",
+    "tag": "IA"
+  },
+  {
+    "title": "Robô voador do MIT fica 450% mais rápido com novo sistema de controle por IA",
+    "summary": "Pesquisadores do MIT desenvolveram um sistema de controle baseado em IA que permitiu a um minúsculo robô voador ganhar agilidade comparável à de um inseto, aumentando sua velocidade em cerca de 450% e sua aceleração em aproximadamente 250% em relação às melhores demonstrações anteriores da equipe. O sistema, dividido em duas partes, combina alto desempenho com eficiência computacional, permitindo que o controlador interprete a posição do robô e o ambiente ao redor e decida seus movimentos em tempo real. Em testes, o robô completou dez cambalhotas consecutivas em onze segundos, mantendo-se a menos de cinco centímetros da trajetória pretendida mesmo sob a ação do vento. A tecnologia pode, no futuro, permitir que microrrobôs façam buscas em escombros após terremotos e naveguem em espaços perigosos inacessíveis a drones convencionais. O avanço ilustra como técnicas de IA aplicadas a controle físico, e não apenas a geração de texto ou imagem, seguem produzindo ganhos práticos relevantes em robótica.",
+    "source_name": "MIT Technology Review",
+    "source_url": "https://www.sciencedaily.com/releases/2026/09/260921081114.htm",
+    "tag": "Tecnologia"
+  },
+  {
+    "title": "Conferência Gartner CIO & IT Executive 2026 debate liderança \"além da IA\" em São Paulo",
+    "summary": "A Gartner CIO & IT Executive Conference 2026 reuniu, entre os dias 21 e 23 de setembro no Sheraton São Paulo WTC Hotel, mais de mil CIOs e executivos de tecnologia em torno do tema \"Além da IA: A Nova Fronteira da Liderança\". O evento contou com mais de 31 analistas da Gartner e mais de 40 fornecedores de soluções, discutindo como transformar inteligência artificial em vantagem estratégica real, e não apenas em promessa de produtividade. A programação foi organizada em cinco eixos: IA agêntica, infraestrutura e tecnologia de IA, cibersegurança e resiliência corporativa, tecnologias emergentes e modelos operacionais. Um dos recados centrais da conferência é que a discussão sobre IA nas empresas está amadurecendo: sai do estágio de experimentação isolada e entra na pauta de arquitetura de TI, governança e modelo operacional. A Gartner também reforçou a previsão de que mais de uma em cada dez empresas será \"AI-first\" até 2030, à frente de concorrentes que ainda tratam a IA como projeto piloto. Para líderes de tecnologia brasileiros, o evento funciona como termômetro de para onde a adoção corporativa de IA está caminhando na região.",
+    "source_name": "Gartner",
+    "source_url": "https://www.gartner.com/pt-br/conferences/la/cio-brazil",
+    "tag": "Transformação Digital"
+  },
+  {
+    "title": "Plataformas resistem a integrar centro de mediação da Anatel para conflitos com teles",
+    "summary": "Big techs e plataformas digitais reagiram com resistência à proposta da Anatel de criar um Centro de Mediação e Soluções Consensuais (Cemesc) para resolver conflitos entre elas e as operadoras de telecomunicações, segundo apuração da TELETIME. As empresas argumentam que não deveriam ser alvo compulsório do mecanismo, enquanto as operadoras de telecom defendem um projeto-piloto justamente para testar a mediação nesse tipo de disputa. O tema ganhou destaque no boletim da TELETIME de 22 de setembro, que também tratou de novas regras de contratação no âmbito da EAF e da participação do setor de telecom no exercício de simulação de crises cibernéticas Cyber Guardian. A discussão reflete uma tensão maior entre teles e plataformas de internet no Brasil, que disputam espaço regulatório em temas como infraestrutura, uso de rede e responsabilidade por conteúdo. Para o setor de OSS/BSS e operações de telecom, o desfecho da proposta pode definir um novo canal formal de resolução de disputas comerciais e técnicas entre operadoras e big techs, com impacto direto em contratos de interconexão e parcerias de rede.",
+    "source_name": "teleco.com.br (TELETIME)",
+    "source_url": "https://teletime.com.br/21/09/2026/plataformas-centro-mediacao-anatel/",
+    "tag": "Telecom"
+  },
+  {
+    "title": "CMSE aprova contratos de cinco usinas e adiciona 1,8 GW ao sistema elétrico para enfrentar El Niño",
+    "summary": "O Comitê de Monitoramento do Setor Elétrico (CMSE) aprovou contratos para cinco usinas, adicionando 1,8 GW de capacidade ao sistema elétrico brasileiro como medida preventiva diante da alta probabilidade de ocorrência do fenômeno El Niño no segundo semestre e de incertezas do cenário geopolítico internacional. A decisão, tomada com base em recomendações do Operador Nacional do Sistema Elétrico (ONS), busca reforçar a segurança de suprimento energético do país em um período de maior variabilidade climática, que historicamente afeta tanto a geração hidrelétrica quanto a demanda por energia. A medida ocorre em um momento de forte expansão da energia solar no Brasil: o país já superou a marca de 77,6 GW de capacidade instalada, ultrapassando em 1,7 GW a projeção da Absolar para o fim de 2026, com a fonte solar respondendo por cerca de três quartos de toda a expansão da matriz elétrica no ano. O reforço de capacidade aprovado pelo CMSE deve ajudar a evitar desequilíbrios de oferta em um sistema cada vez mais dependente de fontes renováveis intermitentes como solar e eólica. Para o setor de energia solar, a notícia reforça a importância de uma matriz diversificada e de mecanismos de contingência para lidar com eventos climáticos extremos.",
+    "source_name": "Canal Solar",
+    "source_url": "https://canalsolar.com.br/cmse-aprova-contratos-usinas-impactos-el-nino/",
+    "tag": "Energia"
+  }
+]
