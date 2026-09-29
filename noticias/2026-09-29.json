@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Anthropic lança Claude Opus 5.5 e OpenAI responde com GPT-6 Sol e Luna",
+    "summary": "A Anthropic lançou o Claude Opus 5.5, modelo voltado a programação, trabalho autônomo e tarefas profissionais, que segundo a imprensa entrega desempenho próximo ao de seu modelo maior a um custo cerca de 40% menor que o Opus 5 e com geração mais de 30% mais rápida. Minutos depois, a OpenAI apresentou o GPT-6 Sol e o GPT-6 Luna, versões mais baratas e rápidas derivadas da tecnologia do GPT-6 Astra, com preços de API 50% menores que as tarifas promocionais do GPT-5.6. O movimento mostra que a disputa entre laboratórios deixou de girar apenas em torno do maior modelo e passou a incluir preço e eficiência. Para empresas, isso reduz o custo de escalar agentes e automações e pressiona fornecedores a rever contratos.",
+    "source_name": "CNBC",
+    "source_url": "https://www.cnbc.com/2026/09/22/anthropic-openai-cheaper-ai-models.html",
+    "tag": "IA"
+  },
+  {
+    "title": "MIT Technology Review questiona quando podemos dizer que a IA fez uma descoberta científica",
+    "summary": "Em artigo publicado em 28 de setembro, a MIT Technology Review discute os critérios para atribuir a uma IA uma descoberta científica. O texto surge em meio a anúncios de laboratórios como a Anthropic, que afirma ter um laboratório de biologia molecular em que agentes de IA formulam hipóteses e cientistas humanos rodam os experimentos, com uma primeira descoberta relatada. A revista também vem alertando para o excesso de marketing em torno de supostos avanços matemáticos e de segurança cibernética. A discussão importa porque define como pesquisa, regulação e investimento vão avaliar promessas de IA aplicada à ciência.",
+    "source_name": "MIT Technology Review",
+    "source_url": "https://www.technologyreview.com/2026/09/28/1145230/when-can-we-say-ai-made-a-scientific-discovery/",
+    "tag": "IA"
+  },
+  {
+    "title": "Trump reúne CEOs de big techs para discutir inteligência artificial nesta terça",
+    "summary": "O presidente dos EUA, Donald Trump, e o presidente da Câmara, Mike Johnson, têm reunião marcada em 29 de setembro com líderes de tecnologia para tratar de inteligência artificial. Entre os convidados previstos estão Sam Altman (OpenAI), Sundar Pichai (Alphabet), Tim Cook (Apple), Elon Musk (Tesla) e Jensen Huang (Nvidia). O encontro ocorre em um momento de forte competição entre laboratórios e de debate sobre regulação. O resultado pode sinalizar o rumo de políticas de IA nos EUA, com efeito direto sobre empresas e fornecedores em todo o mundo, inclusive no Brasil.",
+    "source_name": "Olhar Digital",
+    "source_url": "https://olhardigital.com.br/2026/09/24/pro/trump-presidente-da-camara-dos-eua-e-ceos-de-tecnologia-terao-reuniao-sobre-inteligencia-artificial-na-terca-29",
+    "tag": "Tecnologia"
+  },
+  {
+    "title": "Brasil entra em nova fase da IA: da adoção à escala",
+    "summary": "Estudo da Strand Partners para a AWS indica que 50% das empresas brasileiras já usam inteligência artificial, mas apenas 15% estão em estágio avançado. O Brasil deve movimentar cerca de US$ 4,2 bilhões em investimentos em IA neste ano, liderando a América Latina. A leitura do mercado é que o desafio deixou de ser experimentar e passou a ser escalar, com governança, dados de qualidade e retorno mensurável. Para as empresas, o recado é priorizar poucos casos de uso com impacto claro em vez de pilotos dispersos.",
+    "source_name": "TI Inside",
+    "source_url": "https://tiinside.com.br/23/09/2026/brasil-entra-em-uma-nova-fase-da-inteligencia-artificial-da-adocao-a-escala/",
+    "tag": "Transformação Digital"
+  },
+  {
+    "title": "Gartner: US$ 234 bilhões em gastos com software corporativo estão em risco por causa da IA agêntica",
+    "summary": "A Gartner estima que US$ 234 bilhões em gastos com software de aplicações corporativas estão sob risco diante do avanço da IA agêntica. A consultoria também projeta que agentes de IA específicos para tarefas estarão em 40% das aplicações corporativas até o fim de 2026, contra menos de 5% em 2025, e alerta que mais de 40% dos projetos agênticos podem ser cancelados até 2027 por custos, valor pouco claro ou controles de risco inadequados. Para CIOs, a mensagem é combinar ambição com disciplina de governança e de casos de uso.",
+    "source_name": "Gartner",
+    "source_url": "https://www.gartner.com/en/newsroom/press-releases/2026-07-01-gartner-says-us-dollars-234-billion-in-enterprise-application-software-spend-is-at-risk-from-agentic-artificial-intelligence",
+    "tag": "Transformação Digital"
+  },
+  {
+    "title": "Brisanet inicia operação móvel 5G no Centro-Oeste",
+    "summary": "A Brisanet começou a operar comercialmente o 5G móvel no Centro-Oeste, com oferta inicial em Acreúna e Hidrolândia, em Goiás. A operadora cearense espera chegar a 115 municípios da região em 2026, sendo 62 em Goiás e 53 em Mato Grosso do Sul, priorizando cidades pequenas e médias. Os planos têm franquias de 25 GB a 250 GB, com preços promocionais de R$ 34,99 a R$ 99,99 mensais nos primeiros 12 meses. A expansão reforça a concorrência regional e a interiorização do 5G.",
+    "source_name": "TELETIME",
+    "source_url": "https://teletime.com.br/10/09/2026/brisanet-inicia-5g-centro-oeste/",
+    "tag": "Telecom"
+  },
+  {
+    "title": "GSMA: indústria móvel está pronta para implantação da banda de 6 GHz",
+    "summary": "A GSMA afirma que a indústria móvel está preparada para implantar a banda de 6 GHz, defendendo previsibilidade para os investimentos das operadoras. Segundo a entidade, países que representam mais de 80% da população mundial já apoiam essa abordagem. A faixa é vista como base para a expansão do 5G Advanced e para o futuro 6G. Para operadoras e fornecedores de OSS/BSS, mais capacidade significa redes mais complexas e maior necessidade de automação e orquestração.",
+    "source_name": "TELETIME",
+    "source_url": "https://teletime.com.br/08/09/2026/gsma-governos-superior-6-ghz/",
+    "tag": "Telecom"
+  },
+  {
+    "title": "Solar responde por 73% da expansão da matriz elétrica brasileira em 2026, aponta Aneel",
+    "summary": "Segundo a Aneel, entre janeiro e agosto entraram em operação comercial 75 usinas solares, somando 3.520,93 MW, o que faz da fonte solar responsável por 73% da expansão da matriz elétrica do país em 2026. Em 8 de setembro, o Brasil somava 220.662,7 MW de potência fiscalizada. Em paralelo, a Aneel abriu em 10 de setembro a Consulta Pública 033/2026, que propõe criar o conceito de Recursos Energéticos Distribuídos e modernizar as regras de conexão de geração distribuída, armazenamento e veículos elétricos, com contribuições até 9 de novembro. O tema é central para integradores, investidores e consumidores.",
+    "source_name": "Canal Solar",
+    "source_url": "https://canalsolar.com.br/solar-expansao-matriz-eletrica-brasileira/",
+    "tag": "Energia"
+  }
+]
