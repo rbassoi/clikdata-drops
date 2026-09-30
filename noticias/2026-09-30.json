@@ -1,0 +1,58 @@
+[
+  {
+    "title": "AMD vai comprar a World Labs, de Fei-Fei Li, por US$ 8,2 bilhões",
+    "summary": "A AMD anunciou um acordo para adquirir a World Labs, startup de modelos de inteligência espacial fundada por Fei-Fei Li, em uma transação toda em ações avaliada em US$ 8,2 bilhões. O fechamento é esperado até o fim do ano, sujeito a aprovações regulatórias. Fei-Fei Li, professora de Stanford e criadora do ImageNet, passa a ser vice-presidente executiva e cientista-chefe da AMD. A World Labs desenvolve modelos que geram, reconstroem e simulam ambientes 3D interativos a partir de texto, imagem e vídeo, além de tecnologia para robótica. É a segunda maior aquisição da história da AMD, atrás da Xilinx, e sinaliza a aposta da empresa em IA física para disputar espaço com a Nvidia.",
+    "source_name": "TechCrunch",
+    "source_url": "https://techcrunch.com/2026/09/28/amd-will-acquire-fei-fei-lis-world-labs-for-8-2-billion/",
+    "tag": "IA"
+  },
+  {
+    "title": "Google, Anthropic e OpenAI apresentam modelos de IA para cibersegurança",
+    "summary": "As três gigantes de IA divulgaram modelos, salvaguardas e programas de acesso voltados à segurança cibernética. O Google apresentou o Gemini 3.8 Flash Cyber, que, segundo a cobertura, mostra desempenho de fronteira na descoberta autônoma de vulnerabilidades, superando modelos maiores de concorrentes. O movimento mostra que a IA passou a ser peça central tanto do ataque quanto da defesa digital. Para as empresas, aumenta a pressão para automatizar a detecção de falhas e adotar programas controlados de acesso a essas ferramentas. A discussão sobre salvaguardas indica que o setor tenta conter o uso malicioso dessas capacidades.",
+    "source_name": "The Hacker News",
+    "source_url": "https://thehackernews.com/2026/09/google-anthropic-and-openai-unveil.html",
+    "tag": "Tecnologia"
+  },
+  {
+    "title": "Anthropic, Google e OpenAI planejam criar órgão de padrões de segurança em IA",
+    "summary": "As três empresas trabalham para lançar, até o fim deste ano ou no início do próximo, uma organização de padrões para IA na qual os desenvolvedores de modelos de fronteira estabeleceriam regras de forma autorregulada, sem supervisão governamental. A iniciativa surge em meio ao avanço de modelos cada vez mais capazes e ao debate regulatório global. Críticos tendem a questionar a independência de um órgão criado pelas próprias empresas reguladas. Para o mercado, a definição de padrões comuns pode influenciar exigências de contratação, auditoria e compliance em soluções de IA. O tema vale acompanhamento por quem adota IA em ambientes corporativos.",
+    "source_name": "PYMNTS",
+    "source_url": "https://www.pymnts.com/news/artificial-intelligence/2026/openai-google-and-anthropic-join-forces-to-set-ai-safety-standards/",
+    "tag": "IA"
+  },
+  {
+    "title": "Gartner prevê gasto mundial em IA de US$ 2,7 trilhões em 2026",
+    "summary": "Em previsão divulgada em 16 de setembro, o Gartner projeta que o gasto global com IA chegará a US$ 2,7 trilhões em 2026, alta de 49,5% sobre o ano anterior. A expectativa para plataformas de desenvolvimento de aplicações de IA subiu de 28% para 39% de crescimento, e a de modelos de IA generativa passou de 110% para 117%. O ajuste reflete empresas, fornecedores de software e consultorias buscando construir aplicações de IA sob medida. Os números reforçam que o investimento segue acelerado e concentrado em infraestrutura e plataformas. Para líderes de tecnologia, é um indicador de onde estarão orçamento e concorrência nos próximos trimestres.",
+    "source_name": "Gartner",
+    "source_url": "https://www.gartner.com/en/newsroom/press-releases/2026-09-16-gartner-forecasts-worldwide-ai-spending-to-grow-49-point-5-percent-in-2026",
+    "tag": "Tecnologia"
+  },
+  {
+    "title": "MIT Technology Review: não se deixe enganar pelo hype de IA deste verão",
+    "summary": "Artigo publicado em 22 de setembro argumenta que afirmações exageradas sobre AGI e novas capacidades de IA se desfazem rapidamente quando examinadas com rigor. O texto convida a separar avanços reais de marketing em um período de lançamentos frequentes de modelos. A leitura crítica é relevante em um momento de investimentos bilionários e expectativas elevadas. Para empresas, a mensagem é medir resultados concretos antes de escalar projetos baseados apenas em promessas. A revista também realiza, de 29 de setembro a 1º de outubro, o evento EmTech Future 2026, com foco na convergência entre IA, quântica e energia.",
+    "source_name": "MIT Technology Review",
+    "source_url": "https://www.technologyreview.com/2026/09/22/1144867/dont-be-fooled-summer-ai-hype/",
+    "tag": "IA"
+  },
+  {
+    "title": "84% das empresas brasileiras usam IA \"aos pedaços\"",
+    "summary": "Reportagem da Exame mostra que a maioria das empresas brasileiras que usam inteligência artificial ainda não a incorporou de forma transversal na operação. O uso se concentra em aplicações pontuais e visíveis, o que indica maturidade digital limitada. Dados relacionados do Cetic.br apontam adoção geral de 17%, com as grandes empresas passando de 38% para 50% entre 2024 e 2025. O Plano Brasileiro de IA prevê R$ 23 bilhões em investimentos até 2028. O desafio das empresas é sair de pilotos isolados para processos integrados, com dados, infraestrutura e governança adequados.",
+    "source_name": "Exame",
+    "source_url": "https://exame.com/inteligencia-artificial/84-das-empresas-brasileiras-usam-ia-aos-pedacos-o-que-o-dado-revela-sobre-a-maturidade-digital/",
+    "tag": "Transformação Digital"
+  },
+  {
+    "title": "De redes de telecom à infraestrutura de IA: o próximo salto da conectividade",
+    "summary": "Matéria do TELETIME publicada em 25 de setembro discute como as operadoras podem evoluir de provedoras de conectividade para peças da infraestrutura de inteligência artificial. O movimento passa por redes mais autônomas, capazes de se autoconfigurar e se otimizar, e pela adição de IA em tempo real nas redes de acesso. No Brasil, a modernização da RAN da TIM avança em Belo Horizonte, Brasília e Salvador. Operadoras miram o nível 4 de autonomia de rede até 2030, o que pressiona sistemas OSS/BSS a incorporar automação e IA agêntica. A IDC estima que o investimento de telecom em IA na América Latina chegue a US$ 617 milhões em 2026.",
+    "source_name": "TELETIME",
+    "source_url": "https://teletime.com.br/25/09/2026/infraestrutura_de_ia_conectividade/",
+    "tag": "Telecom"
+  },
+  {
+    "title": "Investimentos em energia solar superam R$ 300 bilhões no Brasil",
+    "summary": "Levantamento da Absolar, repercutido pelo Canal Solar, mostra que os investimentos na fonte solar, somando geração distribuída e grandes usinas, ultrapassam R$ 300 bilhões desde o início da expansão no país. O setor gerou mais de dois milhões de empregos e quase R$ 96 bilhões em tributos. A fonte soma 68,8 GW instalados e ocupa o segundo lugar na matriz, com 25,3%. Apesar disso, a Absolar projeta retração de 7% na expansão em 2026, com 10,6 GW adicionados contra 11,4 GW em 2025, por causa de cortes de geração (curtailment) e dificuldades de conexão. A prioridade da entidade é avançar em regulação e tecnologias complementares como armazenamento.",
+    "source_name": "Canal Solar",
+    "source_url": "https://canalsolar.com.br/investimentos-em-energia-solar-brasil-2026/",
+    "tag": "Energia"
+  }
+]
