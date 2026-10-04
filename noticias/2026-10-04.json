@@ -1,0 +1,58 @@
+[
+  {
+    "title": "OpenAI lança Dots, agentes sempre ativos que trabalham em ChatGPT, Slack e Teams",
+    "summary": "Durante o DevDay, em 29 de setembro, a OpenAI apresentou o Dots, agentes que rodam 24 horas por dia em computadores próprios na nuvem. Eles usam o modelo GPT-6 Astra e se conectam por plugins a mais de 4.000 aplicativos. O usuário pode conversar com um dot no ChatGPT (desktop, web e mobile) e também no Slack e no Teams. Permissões e aprovações para ações sensíveis são configuradas pelo usuário, e a empresa trabalha com a Microsoft para integrar o produto aos controles do Agent 365. O primeiro dot vem incluso nos planos Pro e Business Premium, com exclusão inicial de EEE, Suíça e Reino Unido. A notícia importa porque desloca o uso de IA do chat para a delegação contínua de tarefas dentro das ferramentas de trabalho.",
+    "source_name": "TechCrunch",
+    "source_url": "https://techcrunch.com/2026/09/29/openai-launches-dots-its-bubbly-agentic-avatar/",
+    "tag": "IA"
+  },
+  {
+    "title": "Instinct levanta US$ 1 bilhão em Série C e chega a US$ 10 bilhões de valuation",
+    "summary": "A startup Instinct, fundada por Noah Shinn, captou US$ 1 bilhão em uma Série C liderada por Sequoia, Benchmark e Coatue, avaliando a empresa em US$ 10 bilhões. A rodada ocorre cerca de um mês após uma Série B de US$ 250 milhões a US$ 2,5 bilhões, ou seja, o valor quadruplicou em semanas. O produto, lançado só por convite em agosto de 2026, é um agente pessoal que liga ou envia mensagens para reservar, comprar e cancelar serviços. Entre os usos estão planejar viagens, pedir mercado, cancelar assinaturas e resolver problemas de cobrança. O movimento mostra o apetite de investidores por agentes de consumo que executam tarefas de ponta a ponta.",
+    "source_name": "Pulse 2.0",
+    "source_url": "https://pulse2.com/instinct-raises-1-billion-series-c-at-10-billion-valuation/",
+    "tag": "IA"
+  },
+  {
+    "title": "Relatório da Microsoft: IA já dá vantagem aos atacantes, com exploração em menos de 24 horas",
+    "summary": "O Microsoft Digital Defense Report 2026 conclui que a IA deslocou a vantagem de curto prazo para os atacantes. O tempo mediano entre a descoberta de uma vulnerabilidade e sua exploração ficou bem abaixo de 24 horas, enquanto empresas costumam levar de 30 a 60 dias para corrigir falhas críticas externas. O phishing foi o vetor de entrada em 23% das intrusões investigadas, contra 7% antes. O documento cita o primeiro ataque de extorsão com ransomware automatizado, em julho de 2026, e o uso de IA por grupos ligados a China, Rússia e Coreia do Norte. Para as empresas, o recado é acelerar a gestão de patches e a defesa de identidades.",
+    "source_name": "Help Net Security",
+    "source_url": "https://www.helpnetsecurity.com/2026/10/02/ai-cybersecurity-threats-microsoft-report/",
+    "tag": "Tecnologia"
+  },
+  {
+    "title": "Estudo da SAP: ROI de IA agêntica deve quadruplicar no Brasil, mas só 3% estão prontas para escalar",
+    "summary": "Pesquisa da SAP mostra que empresas brasileiras investem em média US$ 20,8 milhões em IA neste ano, contra US$ 14,2 milhões no levantamento anterior. O ROI médio subiu de 16% para 19% e deve chegar a 38% até 2028. Cerca de 55% das companhias já testaram casos de uso com agentes de IA e 77% veem potencial moderado ou alto de transformação. Apesar disso, apenas 3% se dizem totalmente preparadas para escalar agentes, e 75% apontam qualidade e disponibilidade de dados como principal barreira. O estudo reforça que, na transformação digital corporativa, dados e governança são o gargalo, mais que a tecnologia.",
+    "source_name": "SAP Brasil",
+    "source_url": "https://news.sap.com/brazil/2026/09/roi-em-ia-agentica-deve-quadruplicar-no-brasil-aponta-estudo-da-sap/",
+    "tag": "Transformação Digital"
+  },
+  {
+    "title": "Claro conclui compra da Desktop por R$ 1,75 bilhão e vai fechar o capital da provedora",
+    "summary": "Em 1º de outubro, a Claro, por meio da Claro NXT Telecomunicações, concluiu a aquisição de 72,83% da Desktop, equivalente a 84,7 milhões de ações ordinárias, por cerca de R$ 1,747 bilhão. A compra, anunciada em março, envolveu o fundo Makalu e acionistas fundadores. Rodrigo Marques assumiu a presidência da Desktop, e parte da diretoria anterior deixou os cargos. A Claro NXT vai pedir à CVM o registro de uma OPA unificada, que inclui a conversão de registro e a saída do Novo Mercado da B3, o que na prática fecha o capital. O negócio reforça a consolidação do setor de provedores regionais de internet no Brasil.",
+    "source_name": "TELETIME",
+    "source_url": "https://teletime.com.br/01/10/2026/claro-assume-controle-desktop/",
+    "tag": "Telecom"
+  },
+  {
+    "title": "SoftBank conclui compra da DigitalBridge, controladora da Highline Brasil e da Scala Data Centers",
+    "summary": "A SoftBank concluiu em 30 de setembro de 2026 a aquisição da DigitalBridge, por cerca de US$ 3,1 bilhões, após o anúncio de dezembro. A gestora de infraestrutura digital controla a Highline Brasil, empresa de torres de telecomunicações, e a Scala Data Centers. A DigitalBridge continuará operando como plataforma gerida separadamente, sob liderança de Marc Ganzi, e deixa a bolsa de Nova York. No Brasil, a Highline captou R$ 73 milhões via Fust para ampliar a rede móvel. A operação liga o capital da SoftBank à infraestrutura de torres e data centers que sustenta a expansão de 5G e de IA na região.",
+    "source_name": "Data Center Dynamics",
+    "source_url": "https://www.datacenterdynamics.com/br/not%C3%ADcias/a-softbank-conclui-a-aquisicao-da-digitalbridge/",
+    "tag": "Telecom"
+  },
+  {
+    "title": "Brasil ultrapassa 77,6 GW de energia solar e supera projeção da Absolar para o fim de 2026",
+    "summary": "O Brasil alcançou 77,6 GW de capacidade solar instalada, superando a marca de 75,9 GW projetada pela Absolar para o fim de 2026 com mais de três meses de antecedência. O resultado ficou 1,7 GW acima da expectativa e soma geração distribuída e usinas centralizadas. A projeção original previa 51,8 GW em geração distribuída e 24,1 GW em geração centralizada. O avanço ocorre apesar de obstáculos como curtailment (cortes de geração) e dificuldades de conexão causadas pela inversão de fluxo na rede. A fonte solar já é a segunda da matriz elétrica, atrás apenas das hidrelétricas.",
+    "source_name": "Canal Solar",
+    "source_url": "https://canalsolar.com.br/setor-solar-supera-projecoes-apesar-desafios/",
+    "tag": "Energia"
+  },
+  {
+    "title": "CMSE antecipa 1,8 GW de térmicas para reforçar o sistema elétrico diante do El Niño",
+    "summary": "O Comitê de Monitoramento do Setor Elétrico aprovou a antecipação de contratos de cinco usinas, que adicionam 1,8 GW ao SIN a partir de 1º de setembro de 2026. As usinas são Termomacaé (RJ), Manaus I (AM), Termoceará Diesel (CE), Três Lagoas (MS) e Araucária (PR). A decisão seguiu recomendação do ONS diante da alta probabilidade de El Niño no segundo semestre e das incertezas do cenário geopolítico. Segundo o ONS, o fenômeno pode reduzir a geração na região Norte e, ao mesmo tempo, elevar o consumo por causa do calor. A medida reforça a segurança de suprimento, mas indica pressão sobre custos e sobre a conta de luz.",
+    "source_name": "Canal Solar",
+    "source_url": "https://canalsolar.com.br/cmse-aprova-contratos-usinas-impactos-el-nino/",
+    "tag": "Energia"
+  }
+]
