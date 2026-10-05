@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Google restringe modelos do Gemini para usuários gratuitos e AI Plus a partir de 9 de outubro",
+    "summary": "A partir de 9 de outubro, o Google passa a limitar os modelos do Gemini por nível de assinatura. Usuários gratuitos perdem acesso aos modelos Flash e Pro e ficam restritos ao Flash-Lite. Assinantes do AI Plus, plano de US$ 4,99 por mês, mantêm Flash-Lite e Flash, mas perdem o Pro. Os planos AI Pro e AI Ultra não sofrem restrição de modelos e ainda ganham o modo Deep Think. A mudança reforça os limites por consumo de computação introduzidos em maio e mostra que o custo de inferência pressiona até as gigantes. Para empresas e profissionais que dependem do Gemini gratuito, vale revisar fluxos e avaliar migração para planos pagos.",
+    "source_name": "Olhar Digital",
+    "source_url": "https://olhardigital.com.br/2026/10/04/inteligencia-artificial/google-vai-limitar-acesso-a-modelos-do-gemini-para-usuarios-gratuitos-e-ai-plus",
+    "tag": "IA"
+  },
+  {
+    "title": "OpenAI negocia captação de pelo menos US$ 30 bilhões com valuation de cerca de US$ 1,4 trilhão",
+    "summary": "Segundo reportagem da Bloomberg, replicada pelo TechCrunch, a OpenAI conversa com investidores para levantar ao menos US$ 30 bilhões em uma rodada pré-IPO, avaliando a empresa em torno de US$ 1,4 trilhão. O valor seria cerca de 64% acima dos US$ 852 bilhões da avaliação de março. A receita anualizada estaria perto de US$ 70 bilhões, com forte alta no terceiro trimestre. A rodada funcionaria como financiamento-ponte, já que Sam Altman afirmou que a abertura de capital não ocorre em 2026. As negociações ainda estão em estágio inicial e os termos podem mudar. O movimento mostra o tamanho do capital necessário para sustentar a corrida de infraestrutura de IA.",
+    "source_name": "TechCrunch",
+    "source_url": "https://techcrunch.com/2026/09/29/openai-reportedly-in-talks-to-raise-30b-round-at-1-4t-valuation/",
+    "tag": "IA"
+  },
+  {
+    "title": "Masayoshi Son alerta que superinteligência em mãos erradas pode ser extremamente perigosa",
+    "summary": "No fórum Science and Technology in Society, em Quioto, em 4 de outubro, o fundador do SoftBank, Masayoshi Son, fez um raro alerta: a IA cresce rápido demais para ficar nas mãos de poucos países sem regras comuns. Ele defendeu a construção de confiança entre nações e previu que a próxima fase, a partir do ano que vem, levará a IA ao mundo físico, com robôs e dispositivos executando tarefas reais. No mesmo palco, o CTO da Casa Branca, Michael Kratsios, anunciou uma iniciativa liderada pelos EUA com 17 países para usar IA na aceleração da pesquisa científica, inclusive com experimentos automatizados. A fala importa por vir de um dos maiores investidores em IA do mundo.",
+    "source_name": "Japan Times",
+    "source_url": "https://www.japantimes.co.jp/business/2026/10/05/companies/softbank-son-ai-risks/",
+    "tag": "IA"
+  },
+  {
+    "title": "Gartner lista cinco ações de cibersegurança para CISOs até o fim de 2026",
+    "summary": "O Gartner divulgou cinco ações que os responsáveis por segurança da informação devem adotar até o fim de 2026 diante da aceleração da disrupção tecnológica. A primeira trata da IA agêntica como risco interno: segundo pesquisa com 297 líderes de segurança, 54% das organizações não têm abordagem definida para limitar o acesso de agentes de IA. Também aparecem os deepfakes, que tornam insuficiente reconhecer alguém por imagem ou voz, a migração para criptografia pós-quântica antes de 2030 e a revisão da gestão de identidade e acesso para agentes autônomos. Por fim, a consultoria recomenda defesas preventivas automatizadas. Para empresas em transformação digital, o recado é tratar agentes de IA como identidades a governar.",
+    "source_name": "Inforchannel (Gartner)",
+    "source_url": "https://inforchannel.com.br/2026/10/02/gartner-identifica-as-principais-acoes-em-ciberseguranca-ate-o-final-de-2026/",
+    "tag": "Transformação Digital"
+  },
+  {
+    "title": "Califórnia sanciona lei que impõe regras mais duras a robotáxis",
+    "summary": "O governador Gavin Newsom sancionou a lei SB 1246, que cria regras para veículos autônomos após episódios de robotáxis bloqueando o trânsito, entrando em cenas de crime e atrapalhando socorristas. Empresas como Tesla, Waymo e Zoox deverão oferecer suporte local a equipes de emergência e poderão ser penalizadas se um veículo bloquear polícia ou bombeiros por mais de 30 minutos. A norma também exige que operadores remotos estejam nos EUA e tenham carteira de motorista americana, além de notificação a cidades em falhas sistêmicas e técnicos locais para incidentes. A lei só vale a partir de julho de 2028. O caso indica a direção da regulação de autonomia urbana.",
+    "source_name": "TechCrunch",
+    "source_url": "https://techcrunch.com/2026/10/04/techcrunch-mobility-reining-in-robotaxis/",
+    "tag": "Tecnologia"
+  },
+  {
+    "title": "Telesur conclui upgrade para o Cerillion 26.1 e ganha motor de promoções com agentes de IA",
+    "summary": "A principal operadora do Suriname, Telesur, colocou em produção a versão 26.1 da suíte BSS/OSS da Cerillion, concluindo uma atualização de grande porte com mínima interrupção para o negócio. A nova versão traz um motor de promoções que permite desenhar e lançar ofertas com mais rapidez, agentes de IA para automação e eficiência operacional, melhorias de CRM e um conjunto ampliado de TM Forum Open APIs que simplifica integrações. O CEO da operadora destacou a capacidade de lançar promoções mais rápido e de aproveitar IA. O caso ilustra a tendência de levar IA agêntica para dentro de BSS/OSS, com impacto direto em agilidade comercial das teles.",
+    "source_name": "TelecomTV",
+    "source_url": "https://www.telecomtv.com/content/digital-platforms-services/telesur-successfully-upgrades-to-cerillion-26-1-unlocking-advanced-promotions-and-ai-driven-innovation-56341/",
+    "tag": "Telecom"
+  },
+  {
+    "title": "Operadoras devem bloquear bets a partir de 6 de outubro, prevê MP",
+    "summary": "Segundo o Teletime, uma medida provisória prevê que as operadoras de telecomunicações passem a bloquear o acesso a sites de apostas (bets) irregulares a partir de 6 de outubro, com a Anatel no centro da coordenação do processo. Na prática, as teles ganham um papel adicional de fiscalização no ambiente digital, o que exige adaptação técnica de redes, sistemas de DNS e processos de gestão de listas de bloqueio. Para o setor, o tema levanta debates sobre custos, prazos e responsabilidade das operadoras. A medida se soma a outras frentes regulatórias da agência, como a fiscalização de banda larga clandestina.",
+    "source_name": "Teletime",
+    "source_url": "https://teletime.com.br/25/09/2026/bloqueio-bets-anatel-operadoras/",
+    "tag": "Telecom"
+  },
+  {
+    "title": "Fox ESS apresenta bateria all-in-one plug-in e BESS ultrarrápido para o mercado brasileiro",
+    "summary": "A fabricante Fox ESS apresentou ao Brasil novidades em armazenamento, entre elas uma bateria all-in-one que se conecta à tomada e um sistema BESS de resposta ultrarrápida. O movimento ocorre em um momento em que o armazenamento ganha centralidade no setor elétrico brasileiro: o ONS divulgou a capacidade disponível na rede para os leilões de baterias de 2026 e a energia solar enfrenta cortes de geração e dificuldades de conexão. Soluções de baterias residenciais e comerciais ajudam a aproveitar melhor a geração solar e reduzir a dependência da rede. A notícia importa por indicar a chegada de produtos que podem destravar o próximo ciclo de crescimento da fonte no país.",
+    "source_name": "Canal Solar",
+    "source_url": "https://canalsolar.com.br/bateria-all-in-one-bess-novidades-fox-ess/",
+    "tag": "Energia"
+  }
+]
