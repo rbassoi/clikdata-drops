@@ -1,0 +1,58 @@
+[
+  {
+    "title": "OpenAI vai testar anúncios visuais no ChatGPT durante a geração de imagens",
+    "summary": "A OpenAI anunciou que, ainda neste mês, começará a testar nos Estados Unidos anúncios visuais exibidos enquanto o ChatGPT gera imagens, inicialmente com um grupo restrito de anunciantes. Os anúncios serão identificados como patrocinados e ficarão separados da imagem gerada, e o teste atinge apenas usuários do plano gratuito. A empresa informou que o ChatGPT já alcança 1,2 bilhão de usuários por semana e reforçou que a publicidade não influencia as respostas do assistente. Para fechar o desenho de medição, a OpenAI incluiu parceiros como DoubleVerify e Kochava. A notícia importa porque mostra a monetização de chatbots avançando para além das assinaturas, o que pode redefinir o mercado de mídia digital e as regras de privacidade em torno da IA generativa.",
+    "source_name": "TechCrunch",
+    "source_url": "https://techcrunch.com/2026/10/05/openai-launches-visual-ads-that-appear-alongside-image-generation-results/",
+    "tag": "IA"
+  },
+  {
+    "title": "Casa Branca cria 'Super Intelligence Force' para coordenar a política de IA dos EUA",
+    "summary": "O presidente Donald Trump anunciou no domingo que o diretor de Inteligência Nacional, Jay Clayton, liderará uma nova força-tarefa da Casa Branca batizada de 'Super Intelligence Force', tornando-o o segundo 'czar de IA' da administração. A liderança será compartilhada com o presidente da FTC, Andrew Ferguson, o chefe de pesquisa e engenharia do Pentágono, Emil Michael, e o diretor do OPM, Scott Kupor. A iniciativa busca coordenar as ações do governo federal sobre inteligência artificial em áreas como segurança, regulação e competitividade. Para empresas e governos fora dos EUA, o movimento sinaliza que a IA segue como prioridade estratégica e de segurança nacional, com potencial impacto em exportação de chips, regulação e parcerias internacionais.",
+    "source_name": "AI Weekly",
+    "source_url": "https://aiweekly.co/ai-news-today/edition/2026-10-05",
+    "tag": "IA"
+  },
+  {
+    "title": "Califórnia proíbe demissões e punições baseadas apenas em sistemas automatizados",
+    "summary": "A Califórnia se tornou o primeiro estado americano a impedir que empregadores demitam ou disciplinem trabalhadores com base exclusivamente em sistemas automatizados de decisão. A regra entra em vigor em 1º de julho de 2027, o que dá às empresas um prazo para revisar seus processos de RH. Na prática, será preciso manter supervisão humana significativa sobre decisões que afetem a carreira de funcionários, mesmo quando algoritmos ou ferramentas de IA gerarem recomendações. A medida é um sinal de que a regulação do uso de IA no ambiente de trabalho está amadurecendo e deve influenciar legislações em outros estados e países, inclusive no Brasil, onde o tema também começa a ser debatido.",
+    "source_name": "AI Weekly",
+    "source_url": "https://aiweekly.co/ai-news-today",
+    "tag": "Tecnologia"
+  },
+  {
+    "title": "Gartner prevê que gastos mundiais com IA cresçam 49,5% e cheguem a US$ 2,7 trilhões em 2026",
+    "summary": "Segundo projeção da Gartner divulgada no fim de setembro, os gastos mundiais com inteligência artificial devem subir 49,5% e alcançar US$ 2,7 trilhões em 2026. O número reflete a corrida por infraestrutura, como data centers e chips, além da incorporação de IA em software, serviços e dispositivos. Para os líderes de tecnologia, o dado reforça que a IA deixou de ser um experimento isolado e passou a ocupar parcela relevante dos orçamentos de TI. Ao mesmo tempo, aumenta a pressão por demonstrar retorno concreto sobre o investimento e por governar custos, riscos e dependência de poucos fornecedores. A transformação digital das empresas passa a ser medida cada vez mais pela capacidade de escalar casos de uso de IA em produção.",
+    "source_name": "TI Inside (Gartner)",
+    "source_url": "https://tiinside.com.br/25/09/2026/gartner-preve-que-gastos-mundiais-com-ia-subam-495-e-atinjam-us-27-trilhoes-em-2026/",
+    "tag": "Transformação Digital"
+  },
+  {
+    "title": "Uso de IA no atendimento ao cliente deve crescer até 2027, mas automação avança mais rápido que a confiança",
+    "summary": "Levantamento divulgado pelo Portal Information Management indica que agentes de IA já respondem por cerca de metade das interações de atendimento ao consumidor, com expectativa de chegar a 63% até 2027. O estudo ressalta, porém, que a automação está avançando mais rápido do que a confiança de clientes e das próprias empresas nesses sistemas. Isso significa que organizações precisam investir em transparência, qualidade das respostas e caminhos claros de escalonamento para atendentes humanos. Para quem lidera projetos de transformação digital, a mensagem é que ganho de eficiência sem experiência consistente pode corroer a relação com o cliente, e que governança e métricas de satisfação devem acompanhar a expansão da IA.",
+    "source_name": "Portal Information Management",
+    "source_url": "https://docmanagement.com.br/10/06/2026/uso-de-ia-no-atendimento-ao-cliente-deve-crescer-ate-2027-mas-a-automacao-esta-avancando-mais-rapido-do-que-a-confianca/",
+    "tag": "Transformação Digital"
+  },
+  {
+    "title": "Starlink lidera adições em agosto e ultrapassa TIM e Unifique na banda larga",
+    "summary": "Dados da Anatel mostram que a Starlink foi a operadora que mais adicionou acessos de banda larga fixa em agosto, com 65 mil novos clientes, encerrando o mês com 936,8 mil acessos ativos. Com isso, ultrapassou a TIM, que somava 929,8 mil, e a Unifique, com 892 mil. A Vivo ficou muito próxima na disputa mensal, com 64 mil ativações e 8,54 milhões de assinantes, enquanto a Claro, líder do mercado, somou 35 mil. A Starlink afirma ter mais de 1 milhão de clientes no Brasil pela sua própria contabilidade. O avanço da conectividade via satélite pressiona operadoras tradicionais e provedores regionais, sobretudo em áreas onde a fibra ainda não chegou.",
+    "source_name": "TELETIME",
+    "source_url": "https://teletime.com.br/05/10/2026/starlink-banda-larga-agosto-2026/",
+    "tag": "Telecom"
+  },
+  {
+    "title": "Claro conclui compra da Desktop e prevê migrar clientes HFC para fibra em dois anos",
+    "summary": "A Claro concluiu em 1º de outubro a aquisição do controle da Desktop, após aprovação do Cade sem restrições e anuência prévia da Anatel. Ao todo, a operadora adquiriu cerca de 72,83% do capital da provedora. No plano apresentado ao Cade, a Claro pretende migrar em até 24 meses os clientes atendidos por redes HFC (fibra e cabo coaxial) para a infraestrutura de fibra até a casa (FTTH) da Desktop, desligando a rede antiga onde a transferência estiver completa. A Anatel também exige a consolidação da ocupação de postes em um único ponto de fixação no mesmo prazo. A operação reforça a consolidação do setor e a aposta das grandes operadoras na fibra, com impacto direto em operações de rede, OSS/BSS e na migração de bases de clientes.",
+    "source_name": "TeleSíntese",
+    "source_url": "https://telesintese.com.br/claro-conclui-compra-da-desktop-e-assume-controle/",
+    "tag": "Telecom"
+  },
+  {
+    "title": "ONS divulga capacidade disponível na rede para os leilões de baterias de 2026",
+    "summary": "O Operador Nacional do Sistema Elétrico (ONS), em conjunto com a Aneel e a EPE, publicou nota técnica com a capacidade remanescente do sistema para a conexão de projetos de armazenamento em baterias nos leilões de reserva de capacidade de 2026. O cálculo combina três critérios: espaço físico para conexão nas subestações, desempenho elétrico do sistema e limitações de curto-circuito. Os leilões estão previstos para dezembro, com contratos de 15 anos e início de suprimento em agosto de 2028. A informação ajuda investidores e desenvolvedores a escolher pontos de conexão viáveis e é um passo importante para o armazenamento ganhar escala no Brasil, o que tende a complementar a expansão da geração solar e reduzir cortes de energia renovável.",
+    "source_name": "Canal Solar",
+    "source_url": "https://canalsolar.com.br/ons-divulga-capacidade-disponivel-leiloes-baterias/",
+    "tag": "Energia"
+  }
+]
