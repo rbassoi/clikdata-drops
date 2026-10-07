@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Eleições 2026 tiveram quase um conteúdo eleitoral com IA por hora",
+    "summary": "Levantamento do projeto VigIA, do Observatório Lupa, analisou conteúdos suspeitos de desinformação entre 16 de agosto e 28 de setembro. Dos 972 conteúdos examinados, 920 usaram inteligência artificial, o equivalente a quase um por hora. Foram identificados 554 deepfakes, entre vídeos e imagens adulterados ou gerados artificialmente. Entre os casos confirmados, 60% não traziam nenhuma sinalização sobre o uso da tecnologia. O dado reforça a pressão sobre plataformas e Justiça Eleitoral para fiscalizar e rotular conteúdo sintético em períodos de campanha.",
+    "source_name": "DGABC",
+    "source_url": "https://dgabc.com.br/Noticia/4351247/eleicoes-2026-tiveram-quase-um-conteudo-eleitoral-com-ia-por-hora",
+    "tag": "IA"
+  },
+  {
+    "title": "AMD planeja elevar fornecimento de chips de IA em 2027",
+    "summary": "A CEO da AMD, Lisa Su, afirmou a repórteres em Taipé, na terça-feira (6), que a empresa conseguiu aumentar sua oferta de chips de inteligência artificial ao longo de 2026 e pretende ampliá-la substancialmente em 2027. A declaração sinaliza que a fabricante busca ganhar espaço em um mercado de aceleradores ainda dominado pela Nvidia. A capacidade de fornecimento é hoje um dos principais gargalos para empresas que expandem data centers de IA. O movimento é acompanhado de perto por provedores de nuvem e grandes clientes corporativos.",
+    "source_name": "Mix Vale",
+    "source_url": "https://www.mixvale.com.br/2026/10/06/amd-planeja-elevar-fornecimento-de-chips-de-inteligencia-artificial-em-2027/",
+    "tag": "Tecnologia"
+  },
+  {
+    "title": "DeepSeek avança em nova captação e prepara IPO na bolsa de Xangai",
+    "summary": "A startup chinesa de IA DeepSeek está em fase final de uma nova rodada de investimento, que segundo a Bloomberg pode superar a meta inicial de cerca de 50 bilhões de yuans. Depois de fechar a rodada, a empresa pretende se reestruturar para abrir capital, com previsão de listagem em 2027 no STAR Market, segmento de tecnologia da bolsa de Xangai. A CITIC Securities está entre os bancos contratados para preparar a oferta. O movimento mostra o apetite de investidores por laboratórios de IA chineses e a corrida por capital para financiar modelos de ponta.",
+    "source_name": "South China Morning Post",
+    "source_url": "https://www.scmp.com/tech/tech-trends/article/3366948/chinese-ai-firm-deepseek-taps-underwriters-including-citic-securities-ipo-sources",
+    "tag": "IA"
+  },
+  {
+    "title": "Anatel reivindica papel na regulação do ecossistema digital",
+    "summary": "Na abertura do Futurecom 2026, em São Paulo, o conselheiro da Anatel Edson Holanda defendeu que a agência participe das discussões sobre a regulação do ecossistema digital formado por redes de telecomunicações, data centers, computação em nuvem e plataformas. A posição surge em meio ao debate no Brasil sobre quem deve regular big techs e serviços digitais. Para as operadoras, a definição pode impactar regras de interconexão, custos de rede e a relação com grandes geradores de tráfego.",
+    "source_name": "TeleSíntese",
+    "source_url": "https://telesintese.com.br/anatel-reivindica-participacao-na-regulacao-do-ecossistema-digital/",
+    "tag": "Telecom"
+  },
+  {
+    "title": "NLT Telecom integra satélite à oferta de IoT no Brasil",
+    "summary": "Durante o Futurecom 2026, a NLT Telecom anunciou parceria com a floLIVE e a Skylo para integrar conectividade celular e satelital à sua oferta de Internet das Coisas no país. A combinação permite manter dispositivos conectados mesmo em áreas sem cobertura móvel, o que interessa a setores como agronegócio, logística e energia. A iniciativa reflete a tendência de convergência entre redes terrestres e não terrestres e abre espaço para novos serviços de valor agregado para operadoras e integradores.",
+    "source_name": "TeleSíntese",
+    "source_url": "https://telesintese.com.br/nlt-telecom-integra-satelite-a-oferta-de-iot-no-brasil/",
+    "tag": "Telecom"
+  },
+  {
+    "title": "ANEEL quer dar às distribuidoras controle sobre geração distribuída",
+    "summary": "A Consulta Pública 033/2026 da ANEEL propõe novos requisitos técnicos que permitiriam às distribuidoras controlar recursos de geração distribuída, como mini usinas solares, em um universo de mais de 33 GW. O foco inicial seria cerca de 70 mil instalações de maior porte, incluindo aproximadamente 68 mil de minigeração e 1,5 mil centrais do tipo III, como PCHs e pequenas térmicas a biomassa. Os microgeradores residenciais não seriam alcançados neste primeiro momento. A proposta busca lidar com os desafios de equilíbrio entre carga e geração impostos pelo crescimento da solar em telhados, mas o setor acompanha de perto os impactos sobre a viabilidade dos projetos.",
+    "source_name": "Canal Solar",
+    "source_url": "https://canalsolar.com.br/aneel-controle-distribuidoras-geracao-distribuida/",
+    "tag": "Energia"
+  },
+  {
+    "title": "Aneel propõe que distribuidoras controlem 33 GW de geração distribuída",
+    "summary": "Segundo a Reuters, a Aneel aprovou consulta pública sobre mudanças técnicas que dariam às distribuidoras capacidade de controlar até 33 gigawatts em recursos de geração distribuída. A medida responde ao crescimento da geração própria, principalmente solar, que não é gerenciável pelo Operador Nacional do Sistema Elétrico e tem desafiado o equilíbrio da rede nacional. Para investidores e integradores de energia solar, as regras finais podem alterar a operação, a remuneração e o risco regulatório de projetos de mini e microgeração.",
+    "source_name": "Investing.com / Reuters",
+    "source_url": "https://br.investing.com/news/commodities-news/aneel-propoe-que-distribuidoras-de-energia-possam-controlar-33-gw-de-geracao-distribuida-2059264",
+    "tag": "Energia"
+  },
+  {
+    "title": "Inteligência Artificial ultrapassa segurança e nuvem na agenda estratégica das empresas",
+    "summary": "Pesquisa divulgada pelo Convergência Digital indica que a inteligência artificial assumiu o primeiro lugar na agenda estratégica de empresas nacionais, à frente de segurança e nuvem, temas que dominaram as prioridades de TI nos últimos anos. O resultado mostra a migração da IA de projeto-piloto para prioridade de negócio. Ainda assim, desafios como demonstrar retorno sobre o investimento, qualidade dos dados e falta de profissionais qualificados seguem como obstáculos para escalar as iniciativas.",
+    "source_name": "Convergência Digital",
+    "source_url": "https://convergenciadigital.com.br/mercado/inteligencia-artificial-ultrapassa-seguranca-e-nuvem-e-assume-1o-lugar-na-agenda-estrategica-de-empresas-nacionais/",
+    "tag": "Transformação Digital"
+  }
+]
