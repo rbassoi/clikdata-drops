@@ -1,0 +1,5 @@
+Rotina de notícias do blog — 2026-10-09
+O que falhou: não foi gerado noticias/2026-10-09.json.
+Motivo: WebFetch falhou (getaddrinfo ENOTFOUND) em techcrunch.com, canalsolar.com.br, teleco.com.br e exame.com; a WebSearch devolveu quase só resultados antigos ou agregadores sem fonte primária verificável (nada de Stanford HAI, MIT TR, Valor, IDC, Blip, teleco). Não foi possível obter 8 notícias com resumo e source_url confiáveis, e não inventamos conteúdo.
+Pistas parciais (não verificadas): Gartner/gastos globais em IA US$ 2,59 tri em 2026; ANEEL aprovou em 06/10 regra de ordem de curtailment (Canal Solar); GD solar 53,65 GW (ANEEL, 03/10).
+Ação recomendada: reexecutar a rotina em ambiente com acesso de rede às fontes, ou gerar o JSON manualmente.
