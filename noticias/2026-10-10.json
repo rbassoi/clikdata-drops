@@ -1,0 +1,58 @@
+[
+  {
+    "title": "OpenAI lança GPT-6 e 'Intelligent UI' para todos os usuários do ChatGPT",
+    "summary": "A OpenAI iniciou em 7 de outubro a liberação do GPT-6 no ChatGPT, junto com um recurso chamado Intelligent UI, que permite respostas com elementos interativos como botões, calculadoras, gráficos editáveis, diagramas e mapas. A liberação começa pelos planos pagos, movidos pelo GPT-6 Sol, e chega aos planos Free e Go em 8 de outubro com o GPT-6 Luna. O próprio modelo decide quando um formato visual ajuda e, quando não ajuda, a resposta continua em texto simples; usuários podem reduzir a quantidade de elementos visuais. A mudança aproxima o chatbot de um aplicativo sob demanda, o que pode alterar o modo como empresas desenham experiências de atendimento e análise de dados. As afirmações de desempenho vêm da própria OpenAI e ainda não têm confirmação independente.",
+    "source_name": "VKTR",
+    "source_url": "https://www.vktr.com/ai-platforms/openai-brings-gpt6-to-all-chatgpt-users-with-interactive-intelligent-ui/",
+    "tag": "IA"
+  },
+  {
+    "title": "Google apresenta o Gemini 4 Argon, seu modelo mais poderoso, com foco em cibersegurança",
+    "summary": "O Google anunciou em 30 de setembro o Gemini 4 Argon, descrito pela empresa como seu modelo mais poderoso até agora. Por ora o acesso é restrito a um grupo seleito de parceiros de segurança, por meio do programa Fairwind, e não há data para o lançamento público. O modelo foi treinado para trabalho defensivo e, segundo o Google, consegue encontrar, validar e corrigir vulnerabilidades críticas de software de forma autônoma, além de analisar vídeos longos e gráficos. Nos benchmarks divulgados pela empresa ele supera concorrentes como o GPT-6 Astra, mas a Reuters observa que ele fica atrás em parte dos testes de programação. O lançamento reforça a disputa entre as big techs por modelos de fronteira especializados em segurança.",
+    "source_name": "TechCrunch (via APH Networks)",
+    "source_url": "https://aphnetworks.com/news/32293-google-releases-gemini-4-argon-called-its-most-powerful-model-yet",
+    "tag": "IA"
+  },
+  {
+    "title": "Anthropic lança o Claude Haiku 5.5 com preço até 90% menor",
+    "summary": "A Anthropic lançou em 7 de outubro o Claude Haiku 5.5, que chama de seu modelo pequeno mais barato, rápido e capaz. O preço de entrada cai para US$ 0,10 por milhão de tokens e o de saída para US$ 0,50 em requisições abaixo de 100 mil tokens, contra US$ 1 e US$ 5 do Haiku 4.5. A empresa informa uma economia média de cerca de 75%, já considerando um novo tokenizador que usa um pouco mais de tokens. É o primeiro Haiku com configuração ajustável de esforço, que permite equilibrar custo e inteligência, e a Anthropic cita 72,4% no subconjunto offline do OSWorld 2.1, contra 15,7% do Haiku 4.5. Para empresas, a queda de preço torna viável usar agentes em tarefas de alto volume, como suporte ao cliente e classificação.",
+    "source_name": "The New Stack",
+    "source_url": "https://thenewstack.io/anthropic-claude-haiku-5-5/",
+    "tag": "IA"
+  },
+  {
+    "title": "Número de agentes de IA ativos por empresa quase triplica em 2026, mostra estudo",
+    "summary": "Um estudo da Salesforce, noticiado pela imprensa nesta semana, indica que o número médio de agentes de IA ativos por empresa quase triplicou entre fevereiro de 2025 e abril de 2026. Além da quantidade, a sofisticação e a produtividade dos agentes também aumentaram, sinal de que a tecnologia saiu da fase de pilotos. No Brasil, outras pesquisas mostram um quadro mais cauteloso: um levantamento da AWS com a Strand Partners estima que 40% das empresas já usam alguma forma de IA, mas 62% ainda estão em estágio básico. A distância entre adoção e maturidade é o principal desafio para líderes de transformação digital, que precisam de governança, dados organizados e capacitação para escalar agentes com resultado mensurável.",
+    "source_name": "HR Portugal",
+    "source_url": "https://hrportugal.sapo.pt/?p=466964",
+    "tag": "Transformação Digital"
+  },
+  {
+    "title": "Anatel prorroga até 2029 testes da Vivo para conexão direta de satélite ao celular",
+    "summary": "A Anatel estendeu até 22 de abril de 2029 a autorização temporária da Vivo para testar comunicação direta entre satélites e celulares (D2D), por meio do Ato 11.334, publicado em 16 de setembro. O prazo anterior terminava em 22 de outubro de 2026. A Starlink é o parceiro indicado, mas as regras permitem trocar ou incluir provedores mediante comunicação à agência. Os testes usam frequências da própria Vivo na faixa de 4G, em caráter secundário, e a permissão pode acabar antes se a Anatel publicar regras definitivas. Segundo a imprensa do setor, o serviço inicial deve se limitar a mensagens de texto e comunicações de emergência, com voz e dados em uma etapa posterior. A decisão amplia a cobertura em áreas remotas e coloca o Brasil na corrida regulatória do D2D.",
+    "source_name": "Canaltech",
+    "source_url": "https://canaltech.com.br/telecom/anatel-libera-starlink-sem-antena-direto-no-celular-para-vivo-ate-2029",
+    "tag": "Telecom"
+  },
+  {
+    "title": "Cerillion leva MCP e IA agêntica para BSS/OSS no TM Forum Innovate Americas",
+    "summary": "A fornecedora britânica Cerillion apresentou em 6 e 7 de outubro, no TM Forum Innovate Americas, em Dallas, sua plataforma BSS/OSS com recursos de IA agêntica. O destaque é um servidor de Model Context Protocol (MCP) que permite que agentes de IA interajam de forma padronizada com os sistemas das operadoras, como cobrança, catálogo e atendimento. A abordagem acompanha a movimentação de Amdocs e Ericsson, que também colocaram agentes no centro de suas pilhas de OSS/BSS ao longo de 2026. Para as teles, o ganho esperado é automatizar fluxos de ponta a ponta sem refazer integrações legadas. O tema segue como uma das principais tendências de modernização em telecom.",
+    "source_name": "Directors Talk Interviews",
+    "source_url": "https://www.directorstalkinterviews.com/cerillion-targets-telecoms-ai-and-bss-modernisation-at-innovate-americas-2026/4121260882",
+    "tag": "Telecom"
+  },
+  {
+    "title": "Aneel aprova regra para ratear cortes de geração entre as fontes de energia",
+    "summary": "Em 6 de outubro, a diretoria da Aneel aprovou a regra que organiza os cortes de geração (curtailment) por sobreoferta de energia, encerrando um debate iniciado com a Consulta Pública 45/2019. Os cortes serão divididos entre as fontes, e a parcela hidrelétrica entrará de forma gradual ao longo de quatro anos, em patamares de 25% a 100%. Para autoprodutores, o corte recai em regra apenas sobre a geração que exceder o consumo local, com exceções de segurança e confiabilidade a cargo do ONS. A relatora, Agnes da Costa, prevê um período de sombra de um ano para implementação. A definição traz previsibilidade a investidores em solar e eólica, que vinham acumulando perdas com cortes sem critério claro de compensação.",
+    "source_name": "Canal Solar",
+    "source_url": "https://canalsolar.com.br/aneel-regras-cortes-geracao-sistema-eletrico/",
+    "tag": "Energia"
+  },
+  {
+    "title": "Geração distribuída solar chega a 54 GW e supera todas as termelétricas do país",
+    "summary": "Dados da Aneel de 3 de outubro mostram que a geração distribuída solar soma cerca de 53,65 GW, acima dos 49,89 GW de todas as usinas termelétricas em operação no Brasil. A comparação tem ressalvas, pois as duas bases da agência medem coisas diferentes e não podem ser somadas. Mesmo assim, o número ilustra o peso que telhados e pequenas usinas ganharam na matriz elétrica em poucos anos. A geração centralizada solar soma 23,61 GW, segundo o painel do Canal Solar. O avanço acontece em meio à transição tarifária do Fio B, que passa a cobrar 60% da TUSD sobre a energia compensada em 2026, e às novas regras de corte de geração, temas que afetam a viabilidade de novos projetos.",
+    "source_name": "Click Petróleo e Gás",
+    "source_url": "https://clickpetroleoegas.com.br/geracao-distribuida-solar-chega-a-54-gw-e-ja-supera-a-potencia-de-todas-as-termeletricas-do-brasil-49-9-gw-mostram-dados-da-aneel-mhbb01",
+    "tag": "Energia"
+  }
+]
