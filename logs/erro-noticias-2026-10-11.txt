@@ -1,0 +1,9 @@
+Rotina de notícias 2026-10-11 — NÃO publicada
+
+O que falhou:
+- WebFetch bloqueado para todos os domínios (getaddrinfo ENOTFOUND: techcrunch.com, canalsolar.com.br, teleco.com.br, exame.com, technologyreview.com).
+- WebSearch retornou apenas resultados antigos/secundários; não foi possível obter 8 notícias das últimas 24-48h com link original e detalhes verificáveis (Telecom/OSS-BSS e Energia Solar sem nenhum item recente confirmado).
+
+Decisão: noticias/2026-10-11.json NÃO foi criado, para não publicar conteúdo inventado ou desatualizado no WordPress.
+
+Ação recomendada: verificar o acesso de rede (allowlist de domínios) do ambiente da rotina e reexecutar manualmente; como o JSON não existe, a rotina de amanhã/reexecução funcionará normalmente.
