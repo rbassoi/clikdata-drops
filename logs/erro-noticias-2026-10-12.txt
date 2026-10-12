@@ -1,0 +1,9 @@
+Rotina de notícias 2026-10-12 — NÃO publicada (noticias/2026-10-12.json não foi criado).
+
+O que falhou:
+- WebFetch para techcrunch.com, canalsolar.com.br, teleco.com.br, exame.com e technologyreview.com falhou com getaddrinfo ENOTFOUND (sem acesso de saída a esses domínios neste ambiente).
+- WebSearch não retornou notícias datadas e verificáveis de outubro/2026 para Canal Solar, teleco, Gartner/IDC, Stanford HAI/MIT TR e IA Brasil; só agregadores com datas inconsistentes.
+
+Motivo da decisão: sem fontes primárias verificáveis (título, data, link original) para 8 notícias, não foi gerado conteúdo, para evitar publicar notícias inventadas no blog.
+
+Ação recomendada: reexecutar a rotina quando houver acesso às fontes (ou liberar os domínios no proxy/rede do ambiente), ou gerar noticias/2026-10-12.json manualmente.
