@@ -1,0 +1,5 @@
+Rotina: noticias diárias (2026-10-13)
+O que falhou: não foi possível reunir 8 notícias verificáveis das últimas 24-48h.
+Motivo: WebFetch falhou com ENOTFOUND (DNS) para techcrunch.com, canalsolar.com.br, teleco.com.br, exame.com e technologyreview.com (proxy de saída bloqueado). WebSearch retornou apenas trechos genéricos/antigos, sem conteúdo suficiente para resumos de 4-6 frases com fatos confiáveis.
+Ação tomada: noticias/2026-10-13.json NÃO foi criado, para evitar publicar conteúdo inventado no WordPress.
+Ação recomendada: reexecutar a rotina em ambiente com acesso às fontes (ou liberar os domínios no proxy).
