@@ -1,0 +1,10 @@
+Clickdata Drops — edição NÃO gerada em 2026-10-13 (próxima seria #109).
+
+O que falhou:
+- WebFetch para zdnet.com bloqueado neste ambiente (sem acesso de saída).
+- WebSearch não retornou matérias datadas das últimas 48h com link original verificável nas fontes prioritárias (Stanford HAI, MIT TR, Exame, Valor, TechCrunch, IDC, Gartner, Blip, ZDNet). Só agregadores e resultados antigos/sem data; os itens citados (FMI, Maia 300, Bill Gates) vieram sem URL da matéria original.
+- Campanha Cliker não criada/disparada (sem edição; envio é feito via GitHub Actions após merge em main).
+
+Decisão: não publicar notícias não verificadas, para evitar conteúdo inventado na newsletter.
+
+Ação recomendada: reexecutar quando houver acesso às fontes (liberar domínios no proxy) ou fornecer manualmente as 5 notícias com links.
