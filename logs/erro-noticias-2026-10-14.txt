@@ -1,0 +1,6 @@
+Rotina: noticias diarias WordPress — 2026-10-14
+O que falhou: etapa 3 (pesquisa). Nao foi possivel obter 8 noticias verificaveis das ultimas 24-48h.
+Motivo: WebFetch falha com getaddrinfo ENOTFOUND (techcrunch.com, canalsolar.com.br, teleco.com.br, exame.com — saida bloqueada).
+WebSearch retornou apenas material antigo (jul-set/2026 ou anterior); so 1 item recente (Meta/Facebook "Seu algoritmo", 13/10) sem fonte primaria.
+Para nao publicar conteudo inventado, noticias/2026-10-14.json NAO foi criado.
+Acao recomendada: liberar o acesso de rede aos dominios de fontes (ou fornecer outra ferramenta de busca) e re-executar a rotina; o arquivo ainda nao existe, entao a execucao seguinte nao sera bloqueada.
