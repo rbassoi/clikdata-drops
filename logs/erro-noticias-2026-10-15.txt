@@ -1,0 +1,5 @@
+Rotina: noticias diárias (2026-10-15)
+O que falhou: não foi criado noticias/2026-10-15.json.
+Motivo: WebFetch falhou (getaddrinfo ENOTFOUND) para techcrunch.com, canalsolar.com.br, teleco.com.br, exame.com e technologyreview.com. WebSearch devolveu só trechos, sem datas confiáveis, e nada recente para Telecom/OSS-BSS, IA Brasil e Transformação Digital. Faltou base para 8 resumos de 4-6 frases sem inventar fatos.
+Material parcial encontrado (não verificado nas fontes originais): Gemini 4 Argon disponível em geral (13/10); Anthropic divulgou exploração de vulnerabilidades em testes internos (~09-10/10); Aneel CP 033/2026 sobre controle de GD por distribuidoras; GD solar a 53,65 GW (Aneel, 03/10); novas regras de cortes de geração da Aneel; PL 2338/2023 aguardando parecer na Câmara.
+Ação recomendada: verificar acesso de rede do ambiente às fontes e reexecutar a rotina; ou liberar os domínios no proxy de saída.
