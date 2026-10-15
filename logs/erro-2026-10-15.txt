@@ -1,0 +1,6 @@
+Rotina: Clickdata Drops (edicao #109) — 2026-10-15
+O que falhou: passo 1 (pesquisa). Nao foi possivel obter 5 noticias verificaveis das ultimas 48h nas fontes prioritarias.
+Endpoint: WebFetch https://techcrunch.com/category/artificial-intelligence/ — erro getaddrinfo ENOTFOUND (saida de rede bloqueada).
+WebSearch retornou majoritariamente material antigo/paginas de tag; itens recentes (Apple Intelligence na China - Bloomberg 14/10; Shopify/Xbox Labs/Higgsfield via agregador) sem confirmacao em fonte primaria.
+Passos 2-5 (HTML, commit da edicao, criacao/disparo da campanha Cliker) NAO executados, para nao publicar/enviar conteudo inventado. Nenhuma chamada a app.cliker.com.br foi feita (proxy de saida bloqueado; envio ocorre via GitHub Actions apos merge em main). ed-109 nao foi criada.
+Acao recomendada: liberar acesso de rede aos dominios das fontes (techcrunch.com, exame.com, valor.globo.com, technologyreview.com, zdnet.com) ou fornecer outra ferramenta de busca, e re-executar a rotina. Ultima edicao salva: ed-108-2026-10-08.
