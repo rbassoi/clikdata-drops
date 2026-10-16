@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Google leva agentes de IA ao Gemini, começando pelas empresas",
+    "summary": "O Google anunciou em 8 de outubro um agente unificado dentro do Gemini, lançado primeiro para clientes corporativos. A ferramenta executa tarefas de múltiplas etapas e, por padrão, escolhe sozinha o modelo mais adequado a cada pedido. Os usuários também podem selecionar modelos de terceiros, incluindo os Claude, da Anthropic, o que sinaliza uma estratégia de plataforma aberta. A movimentação coloca o Google em competição direta com os agentes de OpenAI e Anthropic no mercado corporativo. Para as empresas, o ponto central é a possibilidade de automatizar fluxos de trabalho completos sem ficar preso a um único fornecedor de modelo.",
+    "source_name": "TechCrunch",
+    "source_url": "https://techcrunch.com/2026/10/08/google-brings-agentic-ai-to-gemini-starting-with-businesses/",
+    "tag": "IA"
+  },
+  {
+    "title": "Gemini Enterprise passa a processar dados localmente no Brasil",
+    "summary": "A partir de 15 de outubro, o Google processa no Brasil os dados de clientes do Gemini Enterprise que usam o modelo Gemini 3.5 Flash. O anúncio foi feito no Google Cloud Summit Brasil, em São Paulo. O armazenamento local já existia; a novidade é a etapa de processamento, em que o modelo interpreta o pedido e gera a resposta. A mudança atende empresas com exigências de residência de dados e de baixa latência, como bancos e órgãos públicos. O Google também prevê dobrar sua infraestrutura no país até 2030 e afirma que os dados dos clientes não treinam seus modelos sem consentimento explícito.",
+    "source_name": "Canaltech",
+    "source_url": "https://canaltech.com.br/inteligencia-artificial/gemini-ganha-processamento-local-no-brasil-e-deve-ficar-mais-rapido/",
+    "tag": "Tecnologia"
+  },
+  {
+    "title": "Gartner: 70% das empresas devem abandonar agentes de IA construídos por engenharia dedicada do fornecedor",
+    "summary": "Em previsão divulgada em 29 de setembro, a Gartner afirma que 70% das empresas abandonarão, até 2028, iniciativas de IA agêntica construídas por meio de forward-deployed engineering (engenheiros do fornecedor alocados no cliente). Segundo a consultoria, os custos crescentes e a incapacidade de as empresas evoluírem as soluções por conta própria são os principais motivos. O alerta se soma a previsões anteriores da Gartner de que muitos projetos de IA agêntica serão cancelados por custo e valor pouco claros. Para líderes de TI, a mensagem é investir em capacidades internas e em fundações de dados e processos, em vez de depender de entregas sob medida dos fornecedores.",
+    "source_name": "Gartner",
+    "source_url": "https://www.gartner.com/en/newsroom/press-releases/2026-09-29-gartner-predicts-70-percent-of-enterprises-will-abandon-agentic-ai-built-by-vendor-forward-deployed-engineering-by-2028",
+    "tag": "Transformação Digital"
+  },
+  {
+    "title": "iuh! ativa core móvel próprio com capacidade para 1 milhão de chips",
+    "summary": "A operadora virtual iuh! ativou seu próprio core de rede móvel, com capacidade para atender 1 milhão de chips, segundo o Teletime em 13 de outubro. Ter o core próprio significa que a empresa controla funções centrais como autenticação, tarifação e gestão de sessões, em vez de depender da infraestrutura da operadora hospedeira. Esse modelo dá mais autonomia para criar planos e serviços diferenciados e para reduzir custos no longo prazo. O movimento reforça a tendência de MVNOs brasileiras que buscam maior independência tecnológica e se aproximam do papel de operadoras completas.",
+    "source_name": "Teletime",
+    "source_url": "https://teletime.com.br/13/10/2026/iuh-ativa-core-movel-proprio",
+    "tag": "Telecom"
+  },
+  {
+    "title": "A semana da telco AI-native: investor day de IA da Deutsche Telekom e nova plataforma agêntica de receita",
+    "summary": "O resumo semanal da TelecomTV de 3 a 9 de outubro destacou o investor day de IA da Deutsche Telekom, com metas financeiras ligadas a receita e à redução de custos graças à inteligência artificial. A publicação também citou o lançamento, pela Beyond Now, de uma plataforma de orquestração de receita e ecossistema baseada em agentes de IA. A empresa integra o relatório da TelecomTV sobre a evolução de OSS/BSS nativos de IA. Os dois anúncios mostram operadoras e fornecedores migrando de pilotos para metas mensuráveis e arquiteturas agênticas sobre os sistemas de suporte. Para quem atua com OSS/BSS, indicam que a automação de ponta a ponta passa a ser cobrada em resultados.",
+    "source_name": "TelecomTV",
+    "source_url": "https://www.telecomtv.com/content/ai/the-week-in-ai-native-telco-3-9-oct-2026-56443/",
+    "tag": "Telecom"
+  },
+  {
+    "title": "ANEEL propõe dar às distribuidoras controle sobre geração distribuída de maior porte",
+    "summary": "A ANEEL abriu a Consulta Pública 033/2026 para atualizar as regras de conexão de geração distribuída solar, baterias e veículos elétricos. A proposta permite que as distribuidoras comandem usinas de maior porte, inclusive para limitar a injeção de potência na rede. Por ora, a exigência não alcançaria os milhões de microgeradores residenciais existentes, e o foco inicial são os recursos de maior porte. O debate ocorre em meio a discussões sobre cortes de geração (curtailment) e sobre a integração de baterias ao sistema. O setor solar acompanha de perto, pois as regras definirão a previsibilidade de receita de novos projetos.",
+    "source_name": "Canal Solar",
+    "source_url": "https://canalsolar.com.br/aneel-controle-distribuidoras-geracao-distribuida/",
+    "tag": "Energia"
+  },
+  {
+    "title": "Maritaca AI lança prévia do Sabiazinho-4, modelo brasileiro com foco jurídico",
+    "summary": "A startup brasileira Maritaca AI lançou uma prévia do Sabiazinho-4, primeiro modelo da nova geração da família Sabiá. O modelo prioriza velocidade e baixo custo e traz melhorias no domínio jurídico, com maior precisão na redação de peças processuais e sentenças em relação ao Sabiazinho 3.0. No OAB-Bench, que avalia tarefas de escrita jurídica da segunda fase do exame da OAB, obteve nota 7,2 de 10. No benchmark de leis federais brasileiras, acertou 85%. São resultados de benchmark, não uma certificação da OAB, mas mostram que modelos locais podem competir em nichos que exigem conhecimento do contexto nacional.",
+    "source_name": "Canaltech",
+    "source_url": "https://canaltech.com.br/inteligencia-artificial/sabiazinho-4-brasileira-maritaca-lanca-novo-modelo-de-ia/",
+    "tag": "IA"
+  },
+  {
+    "title": "Meta tenta reconstruir a gestão que a IA deveria ter reduzido",
+    "summary": "Reportagem da Fortune de 12 de setembro relata que a Meta, que apostou que a IA encolheria suas camadas de gerência, vem discretamente reconstruindo parte dessas posições. A empresa demitiu cerca de 8 mil pessoas (10% da força de trabalho) em abril e elevou seu investimento em capex para até US$ 135 bilhões em 2026. Os cortes atingiram desproporcionalmente gestores, com o objetivo de simplificar estruturas de reporte. O caso é um alerta para empresas que planejam enxugar organizações com base em ganhos de produtividade de IA ainda não comprovados na prática. A lição para a transformação digital é que a automação exige redesenho de papéis, e não só corte de cargos.",
+    "source_name": "Fortune",
+    "source_url": "https://fortune.com/2026/09/12/meta-year-of-efficiency-managers-ai-investment/",
+    "tag": "Transformação Digital"
+  }
+]
