@@ -1,0 +1,4 @@
+Rotina: Noticias BLOG — 2026-10-19
+O que falhou: não foi gerado noticias/2026-10-19.json.
+Motivo: WebFetch falhou com ENOTFOUND (techcrunch.com, canalsolar.com.br, teleco.com.br, exame.com) — sem acesso direto às fontes prioritárias neste ambiente. WebSearch retornou majoritariamente conteúdo antigo/agregado, sem notícias verificáveis de 17-19/10/2026 de telecom/OSS-BSS, transformação digital e Brasil, nem URLs originais confiáveis. Para não publicar notícias inventadas ou não verificadas, nenhum JSON foi criado (e nenhum post será publicado).
+Ação recomendada: reexecutar a rotina manualmente em ambiente com acesso à web às fontes, ou liberar os domínios no proxy de saída.
