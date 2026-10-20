@@ -1,0 +1,6 @@
+Rotina: Clickdata Drops (nova edição #109) — 2026-10-20
+Endpoint: nenhuma chamada à API Cliker/Brevo foi feita (edição não gerada).
+HTTP status: n/a
+O que falhou: não foi possível levantar 5 notícias verificáveis das últimas 48h (18-20/10/2026).
+Motivo: WebFetch falhou com ENOTFOUND/bloqueio em techcrunch.com, exame.com e zdnet.com. WebSearch retornou apenas conteúdo agregado, antigo ou não verificável (sem matérias datadas de 18-20/10 de IA Brasil/mundo, tecnologia ou transformação digital, e sem comunicados Gartner/IDC de outubro). Para não publicar notícias inventadas ou sem link original confiável, a edição #109 NÃO foi gerada, nem commitada, nem enviada.
+Ação recomendada: reexecutar a rotina em ambiente com acesso às fontes prioritárias (liberar techcrunch.com, exame.com, zdnet.com, valor.globo.com no proxy de saída) ou fornecer manualmente os links das notícias.
