@@ -1,0 +1,4 @@
+Rotina: Noticias BLOG — 2026-10-21
+O que falhou: não foi gerado noticias/2026-10-21.json (8 notícias).
+Motivo: WebFetch falha com "getaddrinfo ENOTFOUND" para techcrunch.com, canalsolar.com.br, teleco.com.br e exame.com (sem acesso direto às fontes). WebSearch devolveu apenas resultados antigos/agregadores, sem conteúdo verificável de Telecom/OSS-BSS e Energia Solar das últimas 48h. Para não publicar notícias inventadas no blog, o arquivo não foi criado.
+Ação recomendada: verificar a política de rede do ambiente (liberar domínios das fontes) e disparar a rotina novamente (workflow/rotina manual).
