@@ -1,0 +1,4 @@
+Rotina: Noticias BLOG — 2026-10-22
+O que falhou: não foi possível reunir 8 notícias verificadas (últimas 24-48h) com fontes originais.
+Motivo: WebFetch sem acesso de rede (ENOTFOUND) a techcrunch.com, canalsolar.com.br, teleco.com.br e exame.com; WebSearch retornou majoritariamente páginas antigas/agregadores sem cobertura de Telecom/OSS-BSS e Energia Solar. Para não publicar conteúdo inventado/não verificado, noticias/2026-10-22.json NÃO foi criado.
+Ação recomendada: reexecutar a rotina (ou criar manualmente noticias/2026-10-22.json) quando houver acesso às fontes.
