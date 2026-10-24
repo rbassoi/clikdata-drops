@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Falhas críticas no PHP, achadas com ajuda de IA, tiram sites do ar em vários países",
+    "summary": "A PHP Foundation divulgou em 21 de outubro duas vulnerabilidades críticas, com nota 9,2 no CVSS, que permitem execução remota de código sem autenticação. O PHP roda no servidor de cerca de 70% dos sites, o que explica a manchete sobre o alcance global, embora nem todos os sites estejam de fato vulneráveis. Segundo a cobertura, modelos de IA ajudaram pesquisadores a localizar as falhas. Governos como Holanda, Finlândia, Alemanha, Bélgica e França tiraram sites do ar de forma preventiva, e agências de cibersegurança pediram atualização imediata. O episódio mostra a IA como ferramenta de descoberta de vulnerabilidades e pressiona equipes de TI a acelerar o patching.",
+    "source_name": "DGABC",
+    "source_url": "https://www.dgabc.com.br/Noticia/4354210/paises-correm-para-corrigir-vulnerabilidade-descoberta-por-ia-que-afetou-70-dos-sites-globais",
+    "tag": "IA"
+  },
+  {
+    "title": "Anthropic lança o Claude Duet, agente de IA proativo para uso pessoal",
+    "summary": "A Anthropic anunciou em 21 de outubro o Claude Duet, uma prévia de pesquisa de um agente que trabalha em segundo plano. Todas as manhãs ele envia um resumo do que importa nos aplicativos conectados e, ao longo do dia, só avisa quando algo exige atenção. O agente pede aprovação antes de ações relevantes, como enviar mensagens, fazer pagamentos ou apagar arquivos. Por ora, o acesso é por lista de espera para assinantes Pro e Max nos EUA. O lançamento aumenta a disputa por agentes sempre ativos, em que a Anthropic enfrenta Meta e OpenAI.",
+    "source_name": "MacRumors",
+    "source_url": "https://macrumors.com/2026/10/21/anthropic-claude-duet/",
+    "tag": "IA"
+  },
+  {
+    "title": "Gemini 4 Argon chega com liberação cautelosa, começando por parceiros de cibersegurança",
+    "summary": "O Google colocou o Gemini 4 Argon em disponibilidade geral em meados de outubro. A CNBC discute se o modelo consegue alcançar OpenAI e Anthropic na fronteira da tecnologia. O lançamento será gradual, começando por parceiros de cibersegurança, o que reflete a preocupação com usos ofensivos de modelos cada vez mais capazes. A estratégia indica que a segurança virou parte do plano de distribuição dos modelos de ponta. Para empresas, a disputa tende a trazer mais opções e pressão por preços.",
+    "source_name": "CNBC",
+    "source_url": "https://www.cnbc.com/2026/10/02/tech-download-google-argon-frontier-openai-anthropic.html",
+    "tag": "Tecnologia"
+  },
+  {
+    "title": "Gartner alerta para falhas de governança em projetos de IA nas empresas",
+    "summary": "Matéria publicada em 20 de outubro, com base em análises da Gartner, aponta que até 60% das empresas podem falhar na governança de IA até 2027, principalmente por resistência cultural e falta de preparo das equipes. O texto cita ainda que apenas cerca de 17% das organizações já implementaram agentes de IA. O recado é que a barreira da IA corporativa deixou de ser a tecnologia e passou a ser organização, processos e pessoas. Para líderes de transformação digital, isso reforça a necessidade de definir responsáveis, regras de uso e métricas antes de escalar pilotos. Os números vêm de um veículo secundário e valem ser conferidos no material original da Gartner.",
+    "source_name": "IT Show",
+    "source_url": "https://itshow.com.br/gartner-governanca-ia-falhas-culturais-2027/",
+    "tag": "Transformação Digital"
+  },
+  {
+    "title": "Anatel propõe leilão da faixa de 6 GHz em 2028, com contrapartidas em data centers",
+    "summary": "A Anatel propôs realizar o leilão da faixa de 6 GHz em 2028, em vez de 2026, incluindo contrapartidas ligadas a data centers. A faixa é disputada entre o uso para Wi-Fi e para 5G e 6G, e as operadoras já vinham pedindo mais prazo por causa do peso dos investimentos. A mudança de calendário altera o planejamento de espectro e de capex das teles. Para o setor, o desenho com data centers conecta a infraestrutura de rede à demanda por computação de IA. O tema ainda deve passar por consulta e debate regulatório.",
+    "source_name": "Mobile Time",
+    "source_url": "https://www.mobiletime.com.br/noticias/21/10/2026/anatel-leilao-6-ghz-2028/",
+    "tag": "Telecom"
+  },
+  {
+    "title": "Brasil chega a 69,8 milhões de linhas 5G no terceiro trimestre de 2026",
+    "summary": "Dados preliminares da Anatel indicam cerca de 69,8 milhões de acessos 5G no país no terceiro trimestre de 2026. O número mostra a continuidade da adoção da tecnologia, que ainda convive com áreas sem cobertura. A informação foi divulgada em 21 de outubro, mas parte dos dados de agosto de Vivo e Claro aguardava confirmação por instabilidade no arquivo da agência. A evolução do 5G alimenta a demanda por automação em OSS/BSS e por redes mais programáveis. O ritmo de crescimento será observado pelas operadoras para calibrar investimentos.",
+    "source_name": "Mixvale",
+    "source_url": "https://www.mixvale.com.br/2026/10/21/brasil-atinge-698-milhoes-de-linhas-5g-no-3o-trimestre-de-2026/",
+    "tag": "Telecom"
+  },
+  {
+    "title": "Empreendedores devolveram 923 projetos solares em 2026, e cortes já atingem 25% da geração",
+    "summary": "Levantamento da Absolar, divulgado pela pv magazine Brasil em 14 de outubro, aponta a devolução de 923 projetos solares em 2026, somando mais de 40 GW de capacidade e cerca de R$ 134 bilhões em investimentos que deixaram de ocorrer. Os cortes de geração (curtailment) chegaram a 1,4 GWmed, o equivalente a 25,3% da geração solar potencial no período. A entidade atribui o cenário à falta de critérios claros de classificação e ressarcimento da energia cortada. O dado expõe um gargalo regulatório e de rede que ameaça a expansão da fonte. O tema deve dominar as discussões do setor nas próximas semanas.",
+    "source_name": "pv magazine Brasil",
+    "source_url": "http://www.pv-magazine-brasil.com/2026/10/14/empreendedores-desistiram-de-40-gw-de-projetos-solares-em-2026/",
+    "tag": "Energia"
+  },
+  {
+    "title": "Irena projeta que o Brasil terá um dos menores custos de energia solar firme do mundo em 2035",
+    "summary": "Segundo projeção da Irena divulgada pela Absolar em 16 de outubro, o Brasil poderá chegar a cerca de US$ 41 por MWh para energia solar firme, isto é, combinada com armazenamento por baterias, em 2035. O custo ficaria atrás apenas do da China. A estimativa reforça o papel das baterias para mitigar o curtailment e dar previsibilidade à geração. Durante a Intersolar, a Absolar também defendeu a contratação de pelo menos 8 GW de armazenamento e a expansão de 18 GW em grandes usinas entre 2027 e 2030. O setor aposta nessa agenda para a próxima gestão federal.",
+    "source_name": "O Povo",
+    "source_url": "https://www.opovo.com.br/noticias/economia/2026/10/16/amp/absolar-custo-de-energia-solar-no-brasil-so-perdera-para-china-em-2035-diz-irena.html",
+    "tag": "Energia"
+  }
+]
