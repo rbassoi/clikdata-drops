@@ -1,0 +1,58 @@
+[
+  {
+    "title": "OpenAI e Google Cloud fecham parceria para levar modelos da OpenAI ao Model Garden",
+    "summary": "Em 21 de outubro, OpenAI e Google Cloud anunciaram uma parceria para oferecer os modelos de fronteira da OpenAI e os fluxos agênticos do Codex dentro do Model Garden do Google Cloud. Os clientes poderão contratar pelo Google Cloud Marketplace e usar compromissos de gasto já existentes na nuvem. Por enquanto, o acesso é apenas por prévia privada para empresas selecionadas, com disponibilidade geral prometida para breve, e os termos financeiros não foram divulgados. O movimento chega depois do fim da exclusividade de distribuição com a Microsoft, que segue como principal parceira de nuvem da OpenAI. Para as empresas, o ponto central é a facilidade de usar vários modelos de IA em um mesmo ambiente de nuvem, reduzindo o risco de dependência de um único fornecedor.",
+    "source_name": "OpenAI Developer Community",
+    "source_url": "https://community.openai.com/t/openai-models-are-coming-to-google-cloud/1408440",
+    "tag": "IA"
+  },
+  {
+    "title": "Anthropic abre escritório em Singapura e mira o Sudeste Asiático",
+    "summary": "A Anthropic confirmou que abre em outubro um escritório em Singapura, no distrito de Raffles Place, o primeiro da empresa no Sudeste Asiático. A operação será liderada por Dale Finlay, ex-executivo do Google Cloud, como gerente-geral para a ASEAN. A empresa justifica a escolha pelo fato de Singapura ocupar a segunda posição entre 121 países no uso do Claude.ai em proporção à população, segundo seu Economic Index. O foco são startups, grandes empresas e setor público, com demanda forte em áreas reguladas como serviços financeiros e governo. A expansão acompanha movimentos semelhantes de OpenAI e Google DeepMind e mostra a disputa global por clientes corporativos de IA.",
+    "source_name": "Fortune",
+    "source_url": "https://fortune.com/2026/09/16/anthropic-open-singapore-office-october-chasing-openai-southeast-asia/",
+    "tag": "IA"
+  },
+  {
+    "title": "Google traz processamento local do Gemini Enterprise para o Brasil",
+    "summary": "No Google Cloud Summit Brasil, o Google anunciou que pretende dobrar sua infraestrutura técnica no país até 2030 para acelerar a IA agêntica. A partir de 15 de outubro, os dados de clientes do Gemini Enterprise que usam o Gemini 3.5 Flash passam a ser processados localmente no Brasil. A empresa também apresentou ferramentas para levar agentes de IA do protótipo à produção. O processamento em território nacional ajuda empresas de setores regulados a atender exigências de privacidade e soberania de dados, além de reduzir a latência. É um sinal de que as big techs estão tratando o mercado brasileiro como prioritário na corrida pela IA corporativa.",
+    "source_name": "Exame",
+    "source_url": "https://exame.com/inteligencia-artificial/google-cloud-quer-dobrar-infraestrutura-no-brasil-ate-2030-para-acelerar-ia-agentica/",
+    "tag": "IA"
+  },
+  {
+    "title": "Estudo IDC e Provokers: 62% das empresas brasileiras adotam agentes de IA, mas só 17% têm governança consolidada",
+    "summary": "Pesquisa da IDC em parceria com a Provokers, citada pela Exame, mostra que 62% das organizações brasileiras já implementam ou aceleram a adoção de agentes de IA. Porém, apenas 17% consolidaram essa adoção com a governança necessária para usá-la em múltiplos processos. A distância entre o interesse e a maturidade indica que muitos projetos ainda estão em fase de teste, sem políticas claras de segurança, responsabilidade e medição de resultado. Para líderes de transformação digital, o desafio deixa de ser escolher a tecnologia e passa a ser estruturar regras, dados e processos para escalar os agentes com controle. O levantamento é do fim de setembro, mas segue como referência do momento do mercado.",
+    "source_name": "Exame / IDC",
+    "source_url": "https://exame.com/inteligencia-artificial/google-cloud-quer-dobrar-infraestrutura-no-brasil-ate-2030-para-acelerar-ia-agentica/",
+    "tag": "Transformação Digital"
+  },
+  {
+    "title": "Deutsche Telekom mira 2,5 bilhões de euros em economia com IA e automação até 2030",
+    "summary": "No AI Investor Day, em Bonn, a Deutsche Telekom apresentou a meta de cerca de 2,5 bilhões de euros em economia indireta de custos até 2030, em comparação com 2023, usando IA em operação de rede, atendimento, desenvolvimento de software e administração. Para 2027, a projeção é de aproximadamente 1,1 bilhão de euros em economia bruta fora dos EUA, parte dela destinada a reinvestimento em fibra na Alemanha. A empresa também espera cerca de 800 milhões de euros em receita ligada a IA fora dos EUA em 2030, contra cerca de 250 milhões previstos para 2026. A Light Reading lembra que o número é bruto e não inclui custos de tokens de IA, o que pede cautela na leitura. O caso é uma referência para operadoras que discutem automação de OSS/BSS e retorno de investimento em IA.",
+    "source_name": "Telecoms.com",
+    "source_url": "https://www.telecoms.com/ai/deutsche-telekom-eyes-2-5-billion-in-savings-from-ai-to-provide-fibre-boost",
+    "tag": "Telecom"
+  },
+  {
+    "title": "Leilão de 6 GHz: Anatel prorroga consulta até 7 de dezembro e operadoras reagem à exigência de data centers",
+    "summary": "A Anatel prorrogou para 7 de dezembro o prazo da Consulta Pública nº 37, sobre o edital do leilão da faixa de 6 GHz (6.425 a 7.125 MHz), que antes terminaria em 23 de outubro. A proposta prevê compromissos de investimento em núcleos regionais neutros e data centers de borda nas regiões Norte, Nordeste e Centro-Oeste, e Claro e Vivo questionam a inclusão dessas obrigações. Há também disputa sobre os lotes: a agência propõe dois blocos nacionais de 200 MHz, enquanto as operadoras querem três, e os provedores regionais defendem uma parte da faixa. A Anatel mantém o leilão até 2028, mas Claro, Vivo e Conexis pedem que ocorra só depois, possivelmente após 2030. Uma terceira audiência pública deve ocorrer em Fortaleza, em novembro.",
+    "source_name": "Convergência Digital",
+    "source_url": "https://convergenciadigital.com.br/internet/leilao-6ghz-impasse-entre-teles-e-isps-faz-anatel-adiar-consulta-publica-ate-dezembro/",
+    "tag": "Telecom"
+  },
+  {
+    "title": "ANEEL avalia liberar venda de excedente solar pelas distribuidoras já a partir de 2027",
+    "summary": "A ANEEL estuda permitir que as distribuidoras negociem no mercado de curto prazo o excedente de energia da geração distribuída solar a partir de janeiro de 2027. A ideia consta da Nota Técnica Conjunta 23/2026 e, segundo o Cenário Energia, a regra provisória trataria esse excedente pelo PLD, enquanto a solução definitiva seria debatida em consulta pública de 45 dias. A energia hoje não contabilizada teve média de 140 MWm entre janeiro e junho de 2026, alta de 28%. A mudança pode alterar a forma como o excedente é valorado e ter efeitos sobre as tarifas dos consumidores. O setor acompanha de perto, pois a geração distribuída já soma cerca de 47 GW no país.",
+    "source_name": "Canal Solar",
+    "source_url": "https://canalsolar.com.br/aneel-avalia-liberar-venda-exedente-solar/",
+    "tag": "Energia"
+  },
+  {
+    "title": "ANEEL propõe dar às distribuidoras controle sobre geração solar, baterias e veículos elétricos",
+    "summary": "A Consulta Pública 033/2026 da ANEEL propõe atualizar o Módulo 3 do PRODIST para que as distribuidoras tenham mais controle sobre recursos conectados à rede, como geração solar, baterias e veículos elétricos. As contribuições podem ser enviadas de 10 de setembro a 9 de novembro de 2026. O texto é uma proposta, não uma norma em vigor, e tem gerado debate no setor solar sobre responsabilidade regulatória e o papel das distribuidoras. A discussão ocorre num momento em que a geração distribuída cresce e a rede precisa lidar com fluxos bidirecionais e novos equipamentos. Integradores e fabricantes devem acompanhar a consulta, pois as regras finais podem afetar projetos e custos de conexão.",
+    "source_name": "Canal Solar",
+    "source_url": "https://canalsolar.com.br/aneel-controle-distribuidoras-geracao-distribuida/",
+    "tag": "Energia"
+  }
+]
