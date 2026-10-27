@@ -1,0 +1,4 @@
+Rotina: Noticias BLOG — 2026-10-27
+O que falhou: noticias/2026-10-27.json NAO foi criado.
+Motivo: WebFetch falhou (getaddrinfo ENOTFOUND) para techcrunch.com, canalsolar.com.br, exame.com e teleco.com.br; o WebSearch retornou apenas trechos sem URLs de matérias verificáveis (sem links originais nem detalhes) para 8 notícias. Para não publicar conteúdo inventado ou links não verificados no blog, nenhuma notícia foi gerada.
+Acao recomendada: verificar acesso de rede/proxy do ambiente da rotina para os domínios das fontes e re-executar; ou rodar manualmente. Nenhuma publicação foi feita no WordPress.
