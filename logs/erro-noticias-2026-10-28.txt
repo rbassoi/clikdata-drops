@@ -1,0 +1,4 @@
+Rotina: Noticias BLOG — 2026-10-28
+O que falhou: pesquisa das 8 notícias. WebSearch não retornou notícias das últimas 48h (resultados antigos/sem data) e WebFetch falhou (getaddrinfo ENOTFOUND) em techcrunch.com, canalsolar.com.br, teleco.com.br e exame.com.br — hosts fora da lista de domínios permitidos da sessão.
+Motivo: restrição de rede do ambiente; sem fontes verificáveis. Para não publicar conteúdo inventado, noticias/2026-10-28.json NÃO foi criado.
+Ação recomendada: liberar esses domínios nas configurações de rede do ambiente e reexecutar a rotina (ou criar o JSON manualmente).
