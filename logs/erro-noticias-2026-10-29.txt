@@ -1,0 +1,5 @@
+Rotina: Noticias BLOG — 2026-10-29
+O que falhou: pesquisa das 8 notícias. noticias/2026-10-29.json NÃO foi criado.
+Motivo: WebFetch falhou (getaddrinfo ENOTFOUND) em techcrunch.com, canalsolar.com.br, teleco.com.br e exame.com — domínios fora da rede permitida da sessão. WebSearch não retornou matérias verificáveis das últimas 48h (resultados antigos/agregadores não confiáveis, sem URLs originais de notícias).
+Para não publicar conteúdo inventado no blog, nenhuma notícia foi gerada.
+Ação recomendada: liberar os domínios (techcrunch.com, canalsolar.com.br, teleco.com.br, exame.com, valor.globo.com, technologyreview.com, hai.stanford.edu etc.) nas configurações de rede do ambiente e reexecutar a rotina.
