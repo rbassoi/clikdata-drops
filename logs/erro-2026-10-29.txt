@@ -1,0 +1,4 @@
+Rotina: Clickdata Drops #109 — 29/10/2026
+O que falhou: pesquisa das 5 notícias (passo 1). WebSearch retornou apenas agregadores/resumos de fonte única, sem links originais verificáveis; WebFetch falhou (getaddrinfo ENOTFOUND) em techcrunch.com e theneuron.ai — hosts fora da lista de domínios permitidos da sessão.
+Motivo: restrição de rede do ambiente; sem fontes primárias verificáveis. Para não enviar conteúdo não verificado/inventado a uma lista real de assinantes, a edição #109 NÃO foi gerada e a campanha Cliker NÃO foi criada nem disparada.
+Ação recomendada: liberar nas configurações de rede do ambiente os domínios das fontes prioritárias (techcrunch.com, exame.com.br, valor.globo.com, technologyreview.com, hai.stanford.edu, zdnet.com, gartner.com, idc.com, blip.ai) e reexecutar a rotina.
