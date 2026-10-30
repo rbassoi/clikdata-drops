@@ -1,0 +1,7 @@
+Rotina: Noticias BLOG — 2026-10-30
+O que falhou: não foi possível obter 8 notícias recentes (24-48h) com links verificáveis.
+Motivo: WebSearch retornou apenas resultados antigos/genéricos (sem notícias de 28-30/10/2026);
+WebFetch falhou com ENOTFOUND para techcrunch.com, teleco.com.br, canalsolar.com.br, exame.com e technologyreview.com
+(domínios fora da lista de rede permitida da sessão).
+Ação: noticias/2026-10-30.json NÃO foi criado (para não publicar conteúdo inventado no blog).
+Ação recomendada: liberar esses domínios nas configurações de rede do ambiente e reexecutar a rotina.
