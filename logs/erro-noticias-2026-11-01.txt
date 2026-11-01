@@ -1,0 +1,7 @@
+Rotina: noticias diárias — 2026-11-01
+O que falhou: não foi possível obter 8 notícias recentes (24-48h) com links originais verificáveis.
+Motivo:
+- WebSearch retornou apenas páginas antigas/sem data (2025 ou anteriores), sem notícias de 30/10-01/11/2026.
+- WebFetch falhou com getaddrinfo ENOTFOUND para techcrunch.com, technologyreview.com, canalsolar.com.br, teleco.com.br e exame.com (domínios fora da allowlist de rede do ambiente).
+- Para não publicar conteúdo inventado/desatualizado no WordPress, o arquivo noticias/2026-11-01.json NÃO foi criado.
+Ação recomendada: liberar esses domínios na configuração de rede do ambiente da rotina e reexecutar (ou rodar manualmente).
