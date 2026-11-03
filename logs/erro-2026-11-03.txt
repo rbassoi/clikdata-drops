@@ -1,0 +1,5 @@
+Rotina: Clickdata Drops (edição #109) — 2026-11-03
+O que falhou: não foi possível obter 5 notícias reais das últimas 48h.
+Motivo: WebSearch retornou apenas páginas evergreen/antigas, sem notícias datadas de 2026-11; WebFetch falhou (getaddrinfo ENOTFOUND) para techcrunch.com — domínio fora da lista de rede permitida da sessão.
+Ação: edicoes/ed-109-2026-11-03.html NÃO foi criado, para não publicar notícias inventadas. Nenhum PR/merge feito; campanha Cliker não disparada.
+Ação recomendada: liberar nas configurações de rede do ambiente os domínios techcrunch.com, exame.com, valor.globo.com, technologyreview.com, hai.stanford.edu, zdnet.com, blip.ai e reexecutar.
