@@ -1,0 +1,8 @@
+Rotina: Noticias BLOG — 2026-11-04
+O que falhou: não foi possível obter 8 notícias reais das últimas 24-48h.
+Motivo: WebSearch não retornou nenhum conteúdo datado de nov/2026 (resultados antigos ou genéricos);
+WebFetch falhou com ENOTFOUND (DNS) para techcrunch.com e canalsolar.com.br (domínios fora da allowlist de rede da sessão).
+Para não publicar conteúdo inventado, noticias/2026-11-04.json NÃO foi criado.
+Ação recomendada: liberar os domínios das fontes prioritárias (techcrunch.com, canalsolar.com.br, teleco.com.br,
+exame.com, valor.globo.com, technologyreview.com, hai.stanford.edu) nas configurações de rede do ambiente
+e re-executar a rotina (o arquivo do dia não existe, então ela rodará normalmente).
