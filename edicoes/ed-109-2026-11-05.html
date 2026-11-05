@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CLIKDATA DROPS — Edição #109 - Novembro 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0f0f0f;
+    --paper: #f5f0e8;
+    --accent: #c8401a;
+    --accent2: #1a3c5e;
+    --muted: #7a7060;
+    --rule: #d4cfc4;
+    --tag-bg: #1a3c5e;
+    --tag-color: #f5f0e8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #e8e3d8;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrapper {
+    max-width: 680px;
+    margin: 40px auto;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    box-shadow: 4px 4px 0 #c4bfb4, 8px 8px 0 #b4afa4;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    border-bottom: 3px double var(--ink);
+    padding: 0;
+    position: relative;
+  }
+
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 32px 10px;
+    border-bottom: 1px solid var(--rule);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  .masthead {
+    padding: 28px 32px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--ink);
+    position: relative;
+  }
+
+  .masthead::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--accent);
+    margin: 0 auto 16px;
+  }
+
+  .masthead h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1;
+    color: var(--ink);
+  }
+
+  .masthead h1 span {
+    color: var(--accent);
+  }
+
+  .tagline {
+    margin-top: 8px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .edition-bar {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 10px 32px;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  /* ── INTRO ── */
+  .intro {
+    padding: 28px 32px 24px;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .intro-dropcap {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 0.85;
+    color: var(--accent);
+    float: left;
+    margin-right: 4px;
+    margin-top: 6px;
+  }
+
+  .intro p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: #2a2520;
+  }
+
+  /* ── SECTION HEADER ── */
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 32px 0;
+    margin-bottom: 4px;
+  }
+
+  .section-flag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    background: var(--tag-bg);
+    color: var(--tag-color);
+    padding: 4px 10px;
+    white-space: nowrap;
+  }
+
+  .section-flag.red { background: var(--accent); }
+
+  .section-rule {
+    flex: 1;
+    height: 1px;
+    background: var(--ink);
+  }
+
+  /* ── STORY CARD ── */
+  .story {
+    padding: 20px 32px;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+  }
+
+  .story:last-of-type { border-bottom: none; }
+
+  .story-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .story-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 2px 7px;
+  }
+
+  .story-source {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+  }
+
+  .story h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+
+  .story h2 em {
+    font-style: italic;
+    color: var(--accent2);
+  }
+
+  .story p {
+    font-size: 14px;
+    line-height: 1.72;
+    color: #2a2520;
+  }
+
+  .story .number-callout {
+    float: right;
+    margin: 0 0 8px 18px;
+    text-align: center;
+    border: 2px solid var(--ink);
+    padding: 12px 16px;
+    min-width: 88px;
+  }
+
+  .story .number-callout .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--accent);
+    display: block;
+    line-height: 1;
+  }
+
+  .story .number-callout .num-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 4px;
+  }
+
+  /* ── DIVIDER ── */
+  .section-divider {
+    border: none;
+    border-top: 3px double var(--ink);
+    margin: 8px 32px 0;
+  }
+
+  /* ── DESTAQUE BRASIL ── */
+  .brasil-strip {
+    background: var(--accent2);
+    color: var(--paper);
+    padding: 6px 32px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .brasil-strip::before {
+    content: '▶';
+    font-size: 8px;
+  }
+
+  /* ── STAT ROW ── */
+  .stat-row {
+    display: flex;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .stat-item {
+    flex: 1;
+    padding: 20px 24px;
+    border-right: 1px solid var(--rule);
+    text-align: center;
+  }
+
+  .stat-item:last-child { border-right: none; }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--accent2);
+    display: block;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 6px;
+    line-height: 1.4;
+  }
+
+  /* ── PULLQUOTE ── */
+  .pullquote {
+    margin: 0;
+    padding: 24px 40px;
+    border-top: 2px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+    background: #ede8de;
+  }
+
+  .pullquote blockquote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 19px;
+    line-height: 1.5;
+    color: var(--ink);
+    text-align: center;
+  }
+
+  .pullquote cite {
+    display: block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: center;
+    font-style: normal;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 28px 32px;
+    border-top: 3px double var(--accent);
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333;
+  }
+
+  .footer-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 900;
+  }
+
+  .footer-brand span { color: var(--accent); }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: right;
+  }
+
+  .footer-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: #888;
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .footer-bottom {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: #555;
+    letter-spacing: 0.06em;
+    line-height: 1.6;
+  }
+
+  .routine-badge {
+    display: inline-block;
+    margin-top: 12px;
+    background: var(--accent);
+    color: white;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+  }
+
+
+  .story-source a {
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--muted);
+    transition: color 0.15s;
+  }
+  .story-source a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+  .read-more {
+    display: inline-block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent2);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent2);
+    padding-bottom: 1px;
+  }
+  .read-more:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+  @media (max-width: 600px) {
+    .wrapper { margin: 0; box-shadow: none; }
+    .masthead h1 { font-size: 38px; }
+    .stat-row { flex-direction: column; }
+    .stat-item { border-right: none; border-bottom: 1px solid var(--rule); }
+    .header-top { flex-direction: column; gap: 4px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-top">
+      <span>Edição #109</span>
+      <span>5 de novembro de 2026</span>
+      <span>Diária · IA &amp; Transformação</span>
+    </div>
+    <div class="masthead">
+      <h1>CLIKDATA<span style="color:var(--accent)">·</span>DROPS</h1>
+      <p class="tagline">IA · Tecnologia · Transformação Digital · Edições Terças, Quintas</p>
+    </div>
+    <div class="edition-bar">
+      <span>🌍 Mundo</span>
+      <span>🇧🇷 Brasil</span>
+      <span>📊 Números</span>
+      <span>💡 Perspectiva</span>
+    </div>
+  </header>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <p>
+      <span class="intro-dropcap">A</span>
+      A AMD paga cerca de US$ 2,9 bilhões por uma startup de inferência, a Apple abre o Siri com IA a desenvolvedores e já avisa investidores sobre agentes imprevisíveis, e o mercado de segurança para IA esquenta com novas aquisições. No Brasil, o Google prepara anúncios no Modo IA e a Act Digital aposta R$ 100 milhões em agentes.
+    </p>
+  </section>
+
+  <!-- ═══ MUNDO ═══ -->
+  <div class="section-header">
+    <span class="section-flag red">🌍 Mundo</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Tecnologia</span>
+      <span class="story-source"><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-wednesday-november-4-2026/" target="_blank">The Neuron</a></span>
+    </div>
+    <div class="number-callout">
+      <span class="num">$2,9 bi</span>
+      <span class="num-label">aquisição<br>AMD · Taalas</span>
+    </div>
+    <h2>AMD compra a startup de inferência <em>Taalas</em> por cerca de US$ 2,9 bilhões</h2>
+    <p>Em documento enviado a reguladores em 4 de novembro, a AMD informou que pagará cerca de US$ 2,9 bilhões, em dinheiro e ações, pela Taalas, startup canadense de Toronto focada em inferência de IA. O movimento mostra que a disputa por hardware migrou do treinamento para o custo de rodar modelos em escala. Valores conforme o resumo diário da imprensa especializada; confirme no comunicado oficial.</p>
+    <a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-wednesday-november-4-2026/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Produtos &amp; Agentes</span>
+      <span class="story-source"><a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-wednesday-november-4-2026/" target="_blank">The Neuron</a></span>
+    </div>
+    <h2>Apple abre o <em>Siri com IA</em> a desenvolvedores e alerta para agentes imprevisíveis</h2>
+    <p>A Apple liberou a integração do Siri com IA para todos os desenvolvedores nos betas do iOS 27.3 e sistemas irmãos; a chegada ao público é esperada em alguns meses e o recurso não está disponível na União Europeia. A empresa também alertou investidores sobre o comportamento imprevisível de agentes e anunciou mudanças no acesso total ao disco do Mac para reduzir riscos.</p>
+    <a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-wednesday-november-4-2026/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Segurança de IA</span>
+      <span class="story-source"><a href="https://aiagentsdirectory.com/news/ai-agents-news-brief-november-4-2026" target="_blank">AI Agents Directory</a></span>
+    </div>
+    <h2>Segurança para IA vira alvo de M&amp;A: <em>CrowdStrike</em> e Palo Alto na fila</h2>
+    <p>A CrowdStrike deve adquirir a Fiddler AI e a Dreadnode por cerca de US$ 495 milhões, e a Palo Alto Networks estaria em negociações para comprar a Clutch Security por cerca de US$ 500 milhões. Os valores são reportados por agregadores, sem confirmação oficial. Na mesma data, a OpenAI lançou o ChatGPT Images 2.6 e a Cognition apresentou o SWE-2 Flash, modelo de código.</p>
+    <a href="https://aiagentsdirectory.com/news/ai-agents-news-brief-november-4-2026" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- ═══ BRASIL ═══ -->
+  <hr class="section-divider">
+  <div class="brasil-strip">Brasil: anúncios chegam à busca com IA e agentes ganham orçamento</div>
+
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">🇧🇷 Brasil</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stat-row">
+    <div class="stat-item">
+      <span class="stat-num">US$ 2,9 bi</span>
+      <span class="stat-label">AMD compra<br>a Taalas</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">~US$ 495 mi</span>
+      <span class="stat-label">CrowdStrike em<br>Fiddler AI e Dreadnode</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">R$ 100 mi</span>
+      <span class="stat-label">Act Digital em IA<br>até 2027</span>
+    </div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Brasil · Mercado</span>
+      <span class="story-source"><a href="https://fastcompanybrasil.com/ia/respostas-ia-google-terao-anuncios-brasil-a-partir-2026/" target="_blank">Fast Company Brasil</a></span>
+    </div>
+    <h2>Respostas do <em>Modo IA do Google</em> terão anúncios no Brasil</h2>
+    <p>O Google prevê levar anúncios ao Modo IA no Brasil no último trimestre de 2026, ainda sem data específica de início. Para marcas e agências, muda a lógica de mídia paga: a visibilidade passa a depender de aparecer dentro da resposta gerada, não apenas na lista de links.</p>
+    <a href="https://fastcompanybrasil.com/ia/respostas-ia-google-terao-anuncios-brasil-a-partir-2026/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+  <article class="story" style="border-bottom:none;">
+    <div class="story-meta">
+      <span class="story-tag">Transformação Digital</span>
+      <span class="story-source"><a href="https://iabrasilnoticias.com.br/ultimas-noticias/" target="_blank">IA Brasil Notícias</a></span>
+    </div>
+    <h2>Act Digital anuncia <em>R$ 100 milhões</em> para ampliar atuação em IA até 2027</h2>
+    <p>A Act Digital informou um plano de investimento de R$ 100 milhões para expandir sua atuação em inteligência artificial até 2027, com foco em agentes de IA. O dado indica que o orçamento de transformação digital no Brasil segue migrando de pilotos para produtos e serviços baseados em agentes.</p>
+    <a href="https://iabrasilnoticias.com.br/ultimas-noticias/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- PULLQUOTE -->
+  <div class="pullquote">
+    <blockquote>
+      "A disputa deixa de ser só por modelos: agora é por quem roda, protege e monetiza a IA."
+    </blockquote>
+    <cite>— Síntese editorial · Clikdata Drops</cite>
+  </div>
+
+  <!-- PERSPECTIVA -->
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">💡 Perspectiva</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story" style="border-bottom:none; padding-bottom:28px;">
+    <h2>O que esses sinais significam para <em>líderes de transformação</em></h2>
+    <p style="margin-bottom:12px;">Três leituras práticas desta edição:</p>
+    <p style="margin-bottom:10px;"><strong>1. Inferência é o novo centro de custo.</strong> A compra da Taalas pela AMD reforça que rodar modelos, e não treiná-los, pesa no orçamento. Calcule o custo por tarefa dos seus agentes antes de escalar.</p>
+    <p style="margin-bottom:10px;"><strong>2. Segurança de agentes deixou de ser opcional.</strong> Apple e as aquisições em segurança de IA mostram o mesmo risco: agentes imprevisíveis. Defina permissões, logs e responsáveis desde o piloto.</p>
+    <p><strong>3. Descoberta muda de canal.</strong> Com anúncios no Modo IA, o marketing precisa medir presença em respostas geradas. Comece a monitorar como sua marca aparece nelas.</p>
+  </article>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">CLIKDATA<span>·</span>DROPS</div>
+        
+      </div>
+      <div class="footer-links">
+        <a href="https://clikdata.com.br" target="_blank">clikdata.com.br</a>
+        <a href="#">Arquivos anteriores</a>
+        <a href="#">Descadastrar</a>
+        <a href="#">Contato</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      Publicado em 5 de novembro de 2026 · Edição #109 · clikdata.com.br<br>
+      Este digest é gerado automaticamente com curadoria editorial humana.<br>
+      Fontes: The Neuron, AI Agents Directory, Fast Company Brasil, IA Brasil Notícias.
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
