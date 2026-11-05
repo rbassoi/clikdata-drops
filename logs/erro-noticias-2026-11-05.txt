@@ -1,0 +1,7 @@
+Rotina: noticias diárias (2026-11-05)
+O que falhou: não foi possível reunir 8 notícias reais das últimas 24-48h. Nenhum arquivo noticias/2026-11-05.json foi criado.
+Motivo:
+- WebFetch para techcrunch.com, canalsolar.com.br, exame.com e teleco.com.br falhou com ENOTFOUND (domínios fora da lista permitida de rede da sessão).
+- WebSearch retornou apenas material antigo/sem data de novembro de 2026; nada verificável nas últimas 48h.
+- Para não publicar conteúdo inventado no blog, o JSON não foi gerado.
+Ação recomendada: liberar os domínios (techcrunch.com, canalsolar.com.br, exame.com, teleco.com.br, valor.globo.com, technologyreview.com, hai.stanford.edu) nas configurações de rede do ambiente e reexecutar a rotina.
