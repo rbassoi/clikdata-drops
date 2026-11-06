@@ -1,0 +1,7 @@
+Rotina de notícias — 2026-11-06
+O que falhou: não foi possível obter 8 notícias verificadas das últimas 24-48h.
+Motivo: WebSearch retornou apenas conteúdo antigo/genérico (nada datado de nov/2026 com link confiável);
+WebFetch falhou (ENOTFOUND) para techcrunch.com, teleco.com.br, canalsolar.com.br e exame.com
+(domínios fora da allowlist de rede da sessão).
+Ação tomada: noticias/2026-11-06.json NÃO foi criado, para não publicar notícias inventadas no WordPress.
+Ação recomendada: liberar esses domínios nas configurações de rede do ambiente e reexecutar a rotina.
