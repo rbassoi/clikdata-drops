@@ -1,0 +1,12 @@
+Rotina de notícias 2026-11-07 — NÃO publicada (noticias/2026-11-07.json não criado).
+
+O que falhou: não foi possível obter 8 notícias verificáveis das últimas 24-48h.
+Motivo:
+- WebSearch retornou apenas resultados antigos (2025 a set/2026), nenhuma notícia de nov/2026.
+- WebFetch falhou com ENOTFOUND (domínios fora da allowlist de rede da sessão):
+  techcrunch.com, canalsolar.com.br, www.teleco.com.br, exame.com.
+Para não inventar notícias/links, nenhum JSON foi gerado.
+
+Ação recomendada: liberar esses domínios (e demais fontes prioritárias: valor.globo.com,
+technologyreview.com, hai.stanford.edu, gartner.com, idc.com, blip.ai) nas configurações de rede
+do ambiente e reexecutar a rotina.
