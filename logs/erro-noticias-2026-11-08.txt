@@ -1,0 +1,7 @@
+Rotina de notícias 2026-11-08 — NÃO publicada
+O que falhou: não foi possível obter 8 notícias verificáveis das últimas 24-48h.
+Motivo: WebSearch retornou apenas páginas antigas/sem data (nenhum resultado de novembro/2026);
+WebFetch falhou com ENOTFOUND para techcrunch.com, canalsolar.com.br, convergenciadigital.com.br e exame.com
+(domínios fora da lista de rede permitida da sessão).
+Ação recomendada: liberar esses domínios (e teleco.com.br, valor.globo.com, etc.) nas configurações de rede
+do ambiente e reexecutar a rotina. Nenhum noticias/2026-11-08.json foi criado, para evitar notícias inventadas.
