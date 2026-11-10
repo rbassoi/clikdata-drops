@@ -1,0 +1,8 @@
+Edição #110 (10/11/2026) NÃO gerada.
+Etapa: PASSO 1 — pesquisa de notícias das últimas 48h.
+Erro: WebSearch retornou apenas resultados sem data confirmada para nov/2026 (nenhuma notícia verificável das últimas 48h);
+WebFetch falhou (getaddrinfo ENOTFOUND) para techcrunch.com, technologyreview.com, exame.com e bloqueio para zdnet.com
+(domínios fora da lista de rede permitida da sessão).
+Ação recomendada: liberar techcrunch.com, technologyreview.com, exame.com, zdnet.com, valor.globo.com, hai.stanford.edu
+nas configurações de rede do ambiente e reexecutar. Não foi publicada edição com notícias não verificadas;
+nenhuma campanha foi criada/disparada.
