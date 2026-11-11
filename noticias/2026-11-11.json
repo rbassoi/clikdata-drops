@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Governos e laboratórios de IA assinam o Pacto de Paris por IA segura, com compromisso de \"desligamento\" de modelos",
+    "summary": "Em 9 de novembro, o presidente Emmanuel Macron lançou o Paris Call for AI Safety and Security, declaração assinada por governos como França, Canadá, Finlândia, Noruega, Holanda e Bahrein e por empresas como Anthropic, OpenAI, Microsoft, Mistral AI, Cohere e Hugging Face. O texto prevê procedimentos comuns para avaliar modelos de alta capacidade, mais responsabilização dos desenvolvedores e troca de informações sobre incidentes graves de segurança. Um dos pontos centrais é o compromisso com mecanismos de segurança que permitam desligar modelos durante o treinamento e o uso interno. Google, Meta, Estados Unidos e China ficaram de fora, e críticos como Yoshua Bengio apontam a falta de prazos e de auditorias independentes obrigatórias. Mesmo com limitações, o pacto sinaliza que a governança de modelos de fronteira está saindo do discurso e virando compromisso formal entre Estados e empresas.",
+    "source_name": "Élysée",
+    "source_url": "https://www.elysee.fr/en/emmanuel-macron/2026/11/09/paris-call-for-ai-safety-and-security",
+    "tag": "IA"
+  },
+  {
+    "title": "Fireworks AI amplia alcance de vazamento: dados de clientes e pesos parciais de modelos foram expostos",
+    "summary": "A plataforma de inferência Fireworks AI, que atende mais de 10 mil clientes, revelou uma segunda intrusão e ampliou o escopo do incidente de segurança detectado em outubro. Além de chaves de API e tokens capturados em jobs de avaliação, os invasores acessaram dados de faturamento, alguns datasets de clientes e pesos incompletos de modelos em treinamento, entrando por um provedor de nuvem terceirizado que hospedava máquinas de P&D. A empresa atribui o ataque a um grupo com motivação financeira praticando \"LLMJacking\", ou seja, roubo e revenda de acesso a modelos de IA, e investiga o caso com a Unit 42, da Palo Alto Networks. A Notion informou que conversas de seu assistente de IA podem ter sido expostas, embora sem dados que as liguem a usuários específicos. O caso mostra que a cadeia de fornecedores de IA virou um alvo valioso e que empresas precisam auditar onde seus dados e segredos circulam.",
+    "source_name": "The Register",
+    "source_url": "https://www.theregister.com/cyber-crime/2026/11/10/fireworks-ai-gets-burned-twice-as-customer-data-exposure-widens/5308722",
+    "tag": "IA"
+  },
+  {
+    "title": "Google anuncia TPU 8tx e TPU 8i Max e completa quatro sistemas de chips de IA em 2026",
+    "summary": "O Google Cloud apresentou em 9 de novembro dois novos sistemas da oitava geração de TPUs, seus chips próprios para IA. O TPU 8tx usa o mesmo silício do TPU 8t, mas adiciona criptografia em hardware para inferência confidencial e treinamento em pequena escala, combinado a processadores AMD EPYC de 5ª geração, e mira empresas reguladas e governos. Já o TPU 8i Max junta dois chips TPU 8i em um único pacote, dobrando computação, SRAM e largura de banda de memória para cargas de contexto longo, como agentes. Os sistemas só devem chegar aos clientes em 2027 e ainda não têm preço divulgado. O anúncio reforça a estratégia do Google de competir com a NVIDIA oferecendo hardware especializado para cada etapa do ciclo de vida da IA agêntica.",
+    "source_name": "Data Center Knowledge",
+    "source_url": "https://www.datacenterknowledge.com/data-center-chips/google-adds-tpu-8tx-8i-max-for-enterprise-ai",
+    "tag": "Tecnologia"
+  },
+  {
+    "title": "Gartner: adoção de IA agêntica avança mais rápido que a governança nas empresas",
+    "summary": "Pesquisa do Gartner com mais de 2 mil CIOs e executivos de tecnologia, apresentada no Gartner IT Symposium/Xpo 2026 em Barcelona, indica que 71% das organizações esperam implantar IA agêntica nos próximos 12 meses. No entanto, apenas 21% afirmam já ter capacidades de governança específicas para agentes de IA. A distância entre ambição e controle preocupa porque agentes tomam decisões e executam ações em sistemas corporativos com pouca supervisão humana. O dado se soma a outro levantamento recente do Gartner, segundo o qual só 13% dos CIOs dizem ter obtido valor significativo ou transformacional com IA. Para as áreas de transformação digital, o recado é que políticas, monitoramento e critérios claros de produção precisam acompanhar a corrida pelos agentes.",
+    "source_name": "CDO Magazine",
+    "source_url": "https://www.cdomagazine.tech/aiml/gartner-agentic-ai-adoption-is-outpacing-enterprise-governance",
+    "tag": "Transformação Digital"
+  },
+  {
+    "title": "Prodam-SP abre chamamento para levar soluções de IA a prefeituras de todo o Brasil",
+    "summary": "A Prodam-SP, empresa de tecnologia da Prefeitura de São Paulo, abriu um chamamento público para selecionar empresas especializadas que ajudem a vender nacionalmente as soluções reunidas na Prodam Store. O marketplace foi criado para conectar administrações públicas a tecnologias de gestão urbana, incluindo sistemas e aplicações de inteligência artificial. A ideia é que as parceiras prospectem e estruturem oportunidades comerciais junto a outros municípios. O movimento ocorre depois que o Tribunal de Contas do Município suspendeu, em abril, um edital anterior ligado à comercialização do Smart Sampa para outras cidades. A iniciativa mostra como governos locais começam a buscar modelos de compartilhamento de tecnologia para acelerar a digitalização de serviços públicos.",
+    "source_name": "Convergência Digital",
+    "source_url": "https://convergenciadigital.com.br/governo/prodam-sp-usa-marketplace-para-vender-inteligencia-artificial-as-prefeituras/",
+    "tag": "Transformação Digital"
+  },
+  {
+    "title": "Vivo lucra R$ 2,5 bilhões no 3º trimestre, alta de 30,1%",
+    "summary": "A Telefônica Brasil, dona da Vivo, registrou lucro líquido de R$ 2,456 bilhões no terceiro trimestre de 2026, alta de 30,1% sobre o mesmo período de 2025. A receita líquida ficou perto de R$ 16 bilhões, com crescimento de cerca de 7%, e o EBITDA subiu 10%, para R$ 7,1 bilhões. O resultado foi ajudado por R$ 352 milhões em ganhos com a venda de ativos de cobre, parte da estratégia de desmontar a rede legada. No acumulado de nove meses, o lucro soma R$ 5,29 bilhões, avanço de 23,3%. O balanço contrasta com o da TIM, que teve receita em alta mas lucro em queda no trimestre, e reforça a posição da Vivo na liderança de adições líquidas de internet no país.",
+    "source_name": "Mobile Time",
+    "source_url": "https://www.mobiletime.com.br/noticias/10/11/2026/vivo-3t26/",
+    "tag": "Telecom"
+  },
+  {
+    "title": "ANEEL propõe incluir sistemas solares e eletropostos na nova tarifa horária Hora Certa",
+    "summary": "A ANEEL apresentou proposta de reformulação da tarifa branca, batizada de Tarifa Hora Certa, que cobra preços diferentes conforme o horário de consumo. A migração seria automática e gradual para consumidores de baixa tensão, começando em abril de 2028 para quem consome a partir de 1.800 kWh/mês e chegando a 500 kWh/mês em 2031, podendo alcançar cerca de 5,7 milhões de unidades. Para o setor solar, o ponto mais sensível é que novos pedidos de conexão de geração distribuída e eletropostos comerciais de baixa tensão ficariam sujeitos à nova tarifa sem possibilidade de retorno à tarifa plana. A medida pode mudar o dimensionamento de sistemas fotovoltaicos e abrir espaço para baterias, que permitem deslocar o consumo para horários mais baratos. A decisão final da diretoria da agência é esperada para dezembro.",
+    "source_name": "Canal Solar",
+    "source_url": "https://canalsolar.com.br/tarifa-hora-certa-aneel-sistemas-solares-veiculos-eletricos/",
+    "tag": "Energia"
+  },
+  {
+    "title": "IEA: demanda solar cresce, mas mais de 90% dos grandes fabricantes chineses têm prejuízo em 2026",
+    "summary": "O relatório Renewables 2026 da Agência Internacional de Energia (IEA) mostra que mais de 90% dos principais fabricantes chineses de equipamentos fotovoltaicos registraram prejuízo em 2026, e mais de 70 empresas pediram falência desde 2024. A causa é o excesso de capacidade produtiva e a queda de preços, que nem a alta de 10% a 30% nos módulos em relação a 2025 conseguiu compensar. Ao mesmo tempo, a IEA projeta que as adições globais de renováveis caiam 11%, para 733 GW em 2026, puxadas pela desaceleração da China, embora o ano ainda deva ser o segundo maior da história. A agência alerta que a expansão acelerada da fabricação de baterias pode repetir a mesma dinâmica de sobreoferta. Para integradores e investidores no Brasil, o cenário indica possível consolidação de fornecedores e pressão sobre preços e garantias.",
+    "source_name": "Canal Solar",
+    "source_url": "https://canalsolar.com.br/demanda-energia-solar-fabricantes-prejuizos/",
+    "tag": "Energia"
+  }
+]
