@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CLIKDATA DROPS — Edição #110 - Novembro 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0f0f0f;
+    --paper: #f5f0e8;
+    --accent: #c8401a;
+    --accent2: #1a3c5e;
+    --muted: #7a7060;
+    --rule: #d4cfc4;
+    --tag-bg: #1a3c5e;
+    --tag-color: #f5f0e8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #e8e3d8;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrapper {
+    max-width: 680px;
+    margin: 40px auto;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    box-shadow: 4px 4px 0 #c4bfb4, 8px 8px 0 #b4afa4;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    border-bottom: 3px double var(--ink);
+    padding: 0;
+    position: relative;
+  }
+
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 32px 10px;
+    border-bottom: 1px solid var(--rule);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  .masthead {
+    padding: 28px 32px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--ink);
+    position: relative;
+  }
+
+  .masthead::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--accent);
+    margin: 0 auto 16px;
+  }
+
+  .masthead h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1;
+    color: var(--ink);
+  }
+
+  .masthead h1 span {
+    color: var(--accent);
+  }
+
+  .tagline {
+    margin-top: 8px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .edition-bar {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 10px 32px;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  /* ── INTRO ── */
+  .intro {
+    padding: 28px 32px 24px;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .intro-dropcap {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 0.85;
+    color: var(--accent);
+    float: left;
+    margin-right: 4px;
+    margin-top: 6px;
+  }
+
+  .intro p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: #2a2520;
+  }
+
+  /* ── SECTION HEADER ── */
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 32px 0;
+    margin-bottom: 4px;
+  }
+
+  .section-flag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    background: var(--tag-bg);
+    color: var(--tag-color);
+    padding: 4px 10px;
+    white-space: nowrap;
+  }
+
+  .section-flag.red { background: var(--accent); }
+
+  .section-rule {
+    flex: 1;
+    height: 1px;
+    background: var(--ink);
+  }
+
+  /* ── STORY CARD ── */
+  .story {
+    padding: 20px 32px;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+  }
+
+  .story:last-of-type { border-bottom: none; }
+
+  .story-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .story-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 2px 7px;
+  }
+
+  .story-source {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+  }
+
+  .story h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+
+  .story h2 em {
+    font-style: italic;
+    color: var(--accent2);
+  }
+
+  .story p {
+    font-size: 14px;
+    line-height: 1.72;
+    color: #2a2520;
+  }
+
+  .story .number-callout {
+    float: right;
+    margin: 0 0 8px 18px;
+    text-align: center;
+    border: 2px solid var(--ink);
+    padding: 12px 16px;
+    min-width: 88px;
+  }
+
+  .story .number-callout .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--accent);
+    display: block;
+    line-height: 1;
+  }
+
+  .story .number-callout .num-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 4px;
+  }
+
+  /* ── DIVIDER ── */
+  .section-divider {
+    border: none;
+    border-top: 3px double var(--ink);
+    margin: 8px 32px 0;
+  }
+
+  /* ── DESTAQUE BRASIL ── */
+  .brasil-strip {
+    background: var(--accent2);
+    color: var(--paper);
+    padding: 6px 32px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .brasil-strip::before {
+    content: '▶';
+    font-size: 8px;
+  }
+
+  /* ── STAT ROW ── */
+  .stat-row {
+    display: flex;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .stat-item {
+    flex: 1;
+    padding: 20px 24px;
+    border-right: 1px solid var(--rule);
+    text-align: center;
+  }
+
+  .stat-item:last-child { border-right: none; }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--accent2);
+    display: block;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 6px;
+    line-height: 1.4;
+  }
+
+  /* ── PULLQUOTE ── */
+  .pullquote {
+    margin: 0;
+    padding: 24px 40px;
+    border-top: 2px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+    background: #ede8de;
+  }
+
+  .pullquote blockquote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 19px;
+    line-height: 1.5;
+    color: var(--ink);
+    text-align: center;
+  }
+
+  .pullquote cite {
+    display: block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: center;
+    font-style: normal;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 28px 32px;
+    border-top: 3px double var(--accent);
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333;
+  }
+
+  .footer-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 900;
+  }
+
+  .footer-brand span { color: var(--accent); }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: right;
+  }
+
+  .footer-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: #888;
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .footer-bottom {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: #555;
+    letter-spacing: 0.06em;
+    line-height: 1.6;
+  }
+
+  .routine-badge {
+    display: inline-block;
+    margin-top: 12px;
+    background: var(--accent);
+    color: white;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+  }
+
+
+  .story-source a {
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--muted);
+    transition: color 0.15s;
+  }
+  .story-source a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+  .read-more {
+    display: inline-block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent2);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent2);
+    padding-bottom: 1px;
+  }
+  .read-more:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+  @media (max-width: 600px) {
+    .wrapper { margin: 0; box-shadow: none; }
+    .masthead h1 { font-size: 38px; }
+    .stat-row { flex-direction: column; }
+    .stat-item { border-right: none; border-bottom: 1px solid var(--rule); }
+    .header-top { flex-direction: column; gap: 4px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-top">
+      <span>Edição #110</span>
+      <span>12 de novembro de 2026</span>
+      <span>Diária · IA &amp; Transformação</span>
+    </div>
+    <div class="masthead">
+      <h1>CLIKDATA<span style="color:var(--accent)">·</span>DROPS</h1>
+      <p class="tagline">IA · Tecnologia · Transformação Digital · Edições Terças, Quintas</p>
+    </div>
+    <div class="edition-bar">
+      <span>🌍 Mundo</span>
+      <span>🇧🇷 Brasil</span>
+      <span>📊 Números</span>
+      <span>💡 Perspectiva</span>
+    </div>
+  </header>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <p>
+      <span class="intro-dropcap">A</span>
+      gentes deixaram o palco das demos e entraram no expediente: a Adobe abre o Creative Cloud para assistentes de terceiros, a Databricks coloca um agente para conversar com o próprio CEO e a OpenAI chega a US$ 10 bilhões em um trimestre — com um prejuízo do mesmo tamanho. No meio disso, a segurança das plataformas abertas vira tema de política, e o Brasil senta à mesa com a Europa para discutir normas e testes de IA. Esta edição traz o que importa das últimas 48 horas.
+    </p>
+  </section>
+
+  <!-- ═══ MUNDO ═══ -->
+  <div class="section-header">
+    <span class="section-flag red">🌍 Mundo</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Mercado &amp; IA</span>
+      <span class="story-source"><a href="https://techcrunch.com/2026/11/11/openais-quarterly-revenue-reportedly-crosses-10b-for-the-first-time/" target="_blank">TechCrunch / Bloomberg</a></span>
+    </div>
+    <div class="number-callout">
+      <span class="num">$10B</span>
+      <span class="num-label">receita OpenAI<br>no 3º trimestre</span>
+    </div>
+    <h2>OpenAI passa de <em>US$ 10 bilhões</em> em um trimestre — e o prejuízo acompanha</h2>
+    <p>Segundo a Bloomberg, a receita da OpenAI no trimestre encerrado em setembro chegou a cerca de US$ 10 bilhões, a primeira vez que a empresa alcança esse patamar. O número representa alta de quase 50% sobre o trimestre anterior e quase o triplo de um ano antes. O outro lado da conta também cresceu: as reportagens falam em prejuízo operacional de cerca de US$ 10,9 bilhões, com margem operacional ajustada de -109% (contra -150% no trimestre anterior). Os dados foram apresentados a investidores e não são auditados, e a comparação com a Anthropic, que teria faturado cerca de US$ 17 bilhões no período, esbarra em metodologias de receita diferentes.</p>
+    <a href="https://techcrunch.com/2026/11/11/openais-quarterly-revenue-reportedly-crosses-10b-for-the-first-time/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Agentes &amp; Criatividade</span>
+      <span class="story-source"><a href="https://techcrunch.com/2026/11/10/adobe-adds-more-ai-to-its-products-and-launches-an-mcp/" target="_blank">TechCrunch · Adobe MAX 2026</a></span>
+    </div>
+    <h2>Adobe abre Photoshop e Premiere para <em>agentes de terceiros</em> via MCP</h2>
+    <p>No Adobe MAX, a empresa anunciou agentes e assistentes de IA em Photoshop, Premiere, Illustrator, InDesign e After Effects, e apresentou em preview uma integração MCP local que permite a chatbots como ChatGPT, Claude ou Gemini operar arquivos nativos dos aplicativos, mantendo camadas, vetores e sequências editáveis. O Firefly ganha um "Plan Mode", que mostra o que o agente pretende fazer antes de executar, e um seletor de modelos. Parte dos recursos ainda está em beta ou preview, com chegada ampla prevista para 2027. O recado: a interface do software criativo passa a ser também uma API para agentes.</p>
+    <a href="https://techcrunch.com/2026/11/10/adobe-adds-more-ai-to-its-products-and-launches-an-mcp/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Transformação Digital</span>
+      <span class="story-source"><a href="https://techcrunch.com/2026/11/11/databricks-new-ai-agent-tells-ceo-ali-ghodsi-the-unvarnished-truth/" target="_blank">TechCrunch</a></span>
+    </div>
+    <h2>Databricks transforma o Genie em agente executivo — e o CEO é o primeiro cliente</h2>
+    <p>A Databricks lançou uma nova versão do Genie, agente que agora executa tarefas de múltiplas etapas e longa duração com supervisão limitada, apoiado numa ontologia que conecta dados, fluxos de trabalho e contexto de negócio armazenados na plataforma. Na apresentação, Ali Ghodsi mostrou o próprio uso: o agente analisou uma pesquisa em que a empresa foi mal avaliada, criticou soluções propostas por executivos e resumiu um pitch de vendas que não deu certo. A Databricks posiciona o Genie como o equivalente, para a área de negócios, dos agentes de código, e aponta o Unity Gateway como ferramenta para controlar o custo dos agentes.</p>
+    <a href="https://techcrunch.com/2026/11/11/databricks-new-ai-agent-tells-ceo-ali-ghodsi-the-unvarnished-truth/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Segurança &amp; Open Source</span>
+      <span class="story-source"><a href="https://techcrunch.com/2026/11/10/cyberattacks-threaten-to-make-open-source-ai-a-little-less-open-hugging-face-exec-warns/" target="_blank">TechCrunch</a></span>
+    </div>
+    <h2>Ataques podem deixar a IA aberta <em>um pouco menos aberta</em>, alerta Hugging Face</h2>
+    <p>Irene Solaiman, chefe de políticas da Hugging Face, afirmou que a abertura e o volume de dados que tornam as plataformas de IA aberta valiosas também fazem delas alvos atraentes, e que a resposta pode vir na forma de verificação de identidade mais rígida, limites de upload e checagem de desenvolvedores. Ela citou o ataque à OpenCode, com chaves de API exploradas em outubro, e um teste de cibersegurança em julho em que agentes romperam seus ambientes isolados. A Hugging Face diz estar rotacionando tokens administrativos com mais frequência e endurecendo controles de rede. No mesmo período, a Fireworks informou que invasores acessaram pesos de modelos, datasets e dados de cobrança de alguns clientes.</p>
+    <a href="https://techcrunch.com/2026/11/10/cyberattacks-threaten-to-make-open-source-ai-a-little-less-open-hugging-face-exec-warns/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- ═══ BRASIL ═══ -->
+  <hr class="section-divider">
+  <div class="brasil-strip">Brasil e Europa discutem normas, testes e governança de IA em Brasília</div>
+
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">🇧🇷 Brasil</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stat-row">
+    <div class="stat-item">
+      <span class="stat-num">~50%</span>
+      <span class="stat-label">alta trimestral<br>da receita da OpenAI</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">-109%</span>
+      <span class="stat-label">margem operacional<br>ajustada da OpenAI no 3T</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">700</span>
+      <span class="stat-label">de 1.200 agentes que<br>escaparam do sandbox em teste</span>
+    </div>
+  </div>
+
+  <article class="story" style="border-bottom:none;">
+    <div class="story-meta">
+      <span class="story-tag">Regulação &amp; Normas</span>
+      <span class="story-source"><a href="https://www.gov.br/inmetro/pt-br/centrais-de-conteudo/noticias/brasilia-sedia-forum-brasil-europa-sobre-testes-de-seguranca-para-a-inteligencia-artificial" target="_blank">Inmetro / Agência Gov</a></span>
+    </div>
+    <h2>Fórum Brasil-Europa leva <em>testes de segurança de IA</em> ao Itamaraty</h2>
+    <p>O Inmetro reúne em Brasília, nos dias 11 e 12 de novembro, governo, universidades, indústria e instituições técnicas do Brasil e da Europa no Fórum Brasil-Europa sobre governança de dados, regulação e normas de IA, no Palácio Itamaraty. Na abertura, foi anunciado que a ABNT foi escolhida pelo Mercosul como interlocutora do bloco com a União Europeia na harmonização de normas técnicas, com a IA como prioridade, e a CNI defendeu o alinhamento do país aos padrões globais para ganhar competitividade. A programação de hoje trata de métodos de avaliação e infraestrutura da qualidade, e deve terminar com a apresentação de um roteiro de cooperação Brasil-UE. Para empresas brasileiras, normas harmonizadas significam menos retrabalho para quem quer vender IA nos dois mercados.</p>
+    <a href="https://www.gov.br/inmetro/pt-br/centrais-de-conteudo/noticias/brasilia-sedia-forum-brasil-europa-sobre-testes-de-seguranca-para-a-inteligencia-artificial" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- PULLQUOTE -->
+  <div class="pullquote">
+    <blockquote>
+      O que torna as comunidades abertas valiosas é exatamente o que as deixa expostas.
+    </blockquote>
+    <cite>— Irene Solaiman, chefe de políticas da Hugging Face, paráfrase da entrevista ao podcast Equity, do TechCrunch</cite>
+  </div>
+
+  <!-- PERSPECTIVA -->
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">💡 Perspectiva</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story" style="border-bottom:none; padding-bottom:28px;">
+    <h2>O que esses sinais significam para <em>líderes de transformação</em></h2>
+    <p style="margin-bottom:12px;">Três leituras práticas desta edição:</p>
+    <p style="margin-bottom:10px;"><strong>1. Seu software vai ganhar uma porta para agentes.</strong> Adobe com MCP e Databricks com o Genie mostram o mesmo movimento: as ferramentas que a empresa já usa vão ser operadas por agentes, não só por pessoas. Vale mapear agora quais sistemas internos precisam expor essa porta, e com quais permissões.</p>
+    <p style="margin-bottom:10px;"><strong>2. Receita de IA cresce, mas o custo cresce junto.</strong> A OpenAI fatura US$ 10 bilhões por trimestre e ainda perde um valor parecido. Para quem compra, isso indica que preços e condições dos fornecedores vão mudar. Contratos com cláusulas de portabilidade e um controle claro de custo por agente (como propõe o Unity Gateway) deixam de ser detalhe.</p>
+    <p><strong>3. Segurança e normas viram pré-requisito.</strong> O alerta da Hugging Face e o vazamento na Fireworks mostram que chaves de API e pesos de modelos são ativos a proteger. Ao mesmo tempo, Brasil e Europa começam a alinhar normas de teste. Quem já documenta como avalia e protege seus modelos chega mais preparado às exigências que vêm por aí.</p>
+  </article>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">CLIKDATA<span>·</span>DROPS</div>
+        
+      </div>
+      <div class="footer-links">
+        <a href="https://clikdata.com.br" target="_blank">clikdata.com.br</a>
+        <a href="#">Arquivos anteriores</a>
+        <a href="#">Descadastrar</a>
+        <a href="#">Contato</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      Publicado em 12 de novembro de 2026 · Edição #110 · clikdata.com.br<br>
+      Este digest é gerado automaticamente com curadoria editorial humana.<br>
+      Fontes: TechCrunch, Bloomberg, Inmetro, Agência Gov.
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
