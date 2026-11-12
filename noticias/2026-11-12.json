@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Anthropic lança roadshow de IPO com faixa de US$ 70 a US$ 78 por ação e pode valer até US$ 1,4 trilhão",
+    "summary": "A Anthropic iniciou em 10 de novembro o roadshow de sua oferta pública inicial, com preço esperado entre US$ 70 e US$ 78 por ação e listagem das ações Classe A na Nasdaq sob o ticker \"ANT\". A oferta soma 825 milhões de ações, a maior parte emitida pela própria empresa, o que pode levantar até cerca de US$ 64,4 bilhões no topo da faixa. Sete parceiros estratégicos, entre eles Google e Nvidia, se comprometeram a comprar US$ 26 bilhões em ações sem direito a voto ao preço do IPO. Segundo a CNBC, a precificação está prevista para 18 de novembro e a estreia na bolsa para o dia 19, e a Bloomberg relata que o livro de ofertas já está várias vezes sobrescrito. A faixa, que implica valor totalmente diluído de até US$ 1,4 trilhão, ficou abaixo dos US$ 2 trilhões especulados semanas antes, em meio a uma correção nas ações de IA. O resultado deve servir de termômetro para o apetite do mercado por laboratórios de IA de fronteira e para os IPOs do setor que vêm a seguir.",
+    "source_name": "CNBC",
+    "source_url": "https://www.cnbc.com/2026/11/10/anthropic-sets-price-range-of-70-to-78-in-upcoming-ipo.html",
+    "tag": "IA"
+  },
+  {
+    "title": "Google libera o Gemini 4 Carbon para todos os desenvolvedores e empresas pagantes",
+    "summary": "O Google ampliou o acesso ao Gemini 4 Carbon, seu modelo voltado a tarefas mais complexas, que até então estava restrito a parceiros de cibersegurança. Desde 10 de novembro, o modelo está disponível via API no Google AI Studio e no Gemini para empresas para todos os desenvolvedores e clientes corporativos pagantes. O preço de lançamento é o mesmo do Gemini 4 Argon, US$ 2 por milhão de tokens de entrada e US$ 10 por milhão de saída, com reajuste previsto ao fim do período promocional. O Google posiciona o Carbon para problemas difíceis, em que o modelo gasta mais tokens explorando alternativas e verificando o próprio trabalho, e segue recomendando o Argon para o dia a dia de programação. A abertura acirra a disputa com OpenAI e Anthropic pelo segmento de modelos de raciocínio para uso corporativo.",
+    "source_name": "Google Blog",
+    "source_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/",
+    "tag": "IA"
+  },
+  {
+    "title": "Brasil cai para 54º lugar no ranking mundial de digitalização e IA do IMD e da Fundação Dom Cabral",
+    "summary": "O Brasil ficou em 54º lugar entre 70 economias no World Digital and AI Ranking 2026, elaborado pelo IMD em parceria com a Fundação Dom Cabral e divulgado em 11 de novembro, perdendo duas posições em relação à edição anterior. Estados Unidos, Singapura e Países Baixos lideram a classificação. O país tem desempenho razoável em infraestrutura de pesquisa (26º), liderança pública (28º) e cibersegurança e ética em IA (42º). Os pontos fracos estão na adoção de IA no ambiente produtivo (65º), na confiança (65º), no ambiente regulatório (63º) e em capital e investimento (66º). O resultado indica que o Brasil leva para a era da IA os mesmos gargalos de competitividade de sempre, como custo de capital e insegurança regulatória, e que a lacuna está menos na pesquisa e mais em transformar tecnologia em produtividade nas empresas.",
+    "source_name": "Terra",
+    "source_url": "https://www.terra.com.br/economia/brasil-cai-2-posicoes-e-fica-em-54-lugar-em-ranking-global-de-digitalizacao-e-ia-entenda-por-que,b92f58b359144be8e67af13f72e79109646uqxor.html",
+    "tag": "IA"
+  },
+  {
+    "title": "Nvidia abre investigação independente sobre Jensen Huang e parlamentares pedem apuração federal",
+    "summary": "O conselho da Nvidia iniciou uma investigação independente sobre o CEO Jensen Huang depois de reportagens de que ele teria sido alvo de uma operação de inteligência estrangeira. Huang admitiu, em memorando aos funcionários, um relacionamento extraconjugal com uma executiva que autoridades americanas suspeitam ter ligações com a inteligência chinesa. Um comitê de conselheiros independentes, assessorado por advogados externos, conduzirá a apuração, e o presidente Donald Trump afirmou que o FBI também está analisando o caso. Parlamentares dos dois partidos pediram uma investigação federal e há quem defenda a renúncia do executivo, enquanto as ações da empresa chegaram a perder quase US$ 200 bilhões em valor de mercado. O conselho diz não ter motivos para crer que segredos da empresa ou a segurança nacional tenham sido comprometidos, mas o episódio cria incerteza de governança na companhia mais central da cadeia global de IA.",
+    "source_name": "Forbes",
+    "source_url": "https://www.forbes.com/sites/maryroeloffs/2026/11/11/lawmakers-urge-federal-probe-into-jensen-huang-over-affair-with-chinese-spy-and-call-for-his-resignation/",
+    "tag": "Tecnologia"
+  },
+  {
+    "title": "Piauí quer exportar a SoberanIA, sua IA em português, para países de língua portuguesa",
+    "summary": "O governo do Piauí apresentou, no contexto do Web Summit em Lisboa, o plano de levar a SoberanIA, modelo de linguagem treinado com dados em português, a outros países da lusofonia. Segundo reportagem do jornal português Público, o projeto recebeu R$ 35 milhões do Plano Brasileiro de Inteligência Artificial e já está em conversas com Cabo Verde e outros países. A plataforma, lançada comercialmente em 2026 com apoio federal, é distribuída por canais como Serpro, Telebras e AWS Marketplace. A iniciativa é um caso raro de governo estadual brasileiro desenvolvendo tecnologia própria de IA e tentando transformá-la em produto de exportação. Para a transformação digital do setor público, o projeto testa se modelos soberanos e em língua local conseguem ganhar escala fora do país de origem.",
+    "source_name": "Público",
+    "source_url": "https://publico.pt/2026/11/11/publico-brasil/noticia/web-summit-sao-tome-plano-piaui-exportar-tecnologia-lusofonia-2194570",
+    "tag": "Transformação Digital"
+  },
+  {
+    "title": "TIM tem receita de R$ 7 bilhões no 3º trimestre, mas lucro normalizado cai 7,8%",
+    "summary": "A TIM Brasil registrou receita de cerca de R$ 7,07 bilhões no terceiro trimestre de 2026, alta de 5,3% na comparação anual, e Ebitda de aproximadamente R$ 3,7 bilhões, avanço de 6,7%. O lucro líquido normalizado, porém, caiu 7,8%, para R$ 1,11 bilhão, em linha com a expectativa dos analistas. A queda veio de uma despesa financeira líquida 18% maior, ligada a arrendamentos mais caros, e de maiores pagamentos de IR e CSLL. Na operação, o pós-pago cresceu 5,2%, para 34 milhões de linhas, enquanto o pré-pago encolheu 9%, e a TIM Ultrafibra chegou a 931 mil acessos. O resultado mostra uma operadora com crescimento operacional sólido, puxado por B2B e 5G, mas com lucro pressionado pelo custo financeiro e pela carga tributária.",
+    "source_name": "Teletime",
+    "source_url": "https://teletime.com.br/09/11/2026/tim-terceiro-trimestre-7-bilhoes/",
+    "tag": "Telecom"
+  },
+  {
+    "title": "Telefónica lucra 464 milhões de euros até setembro e eleva metas para 2026",
+    "summary": "A Telefónica divulgou em 12 de novembro seus resultados dos nove primeiros meses de 2026, com lucro líquido de 464 milhões de euros e receita 2,8% maior. Diante do desempenho, o grupo espanhol, controlador da Vivo no Brasil, elevou suas metas financeiras para o ano. O balanço chega um dia depois de a Vivo reportar lucro de R$ 2,5 bilhões no trimestre, e o Brasil segue como um dos principais motores de resultado do grupo. A companhia está no meio de um plano estratégico que concentra a operação em poucos mercados centrais e aposta em convergência, fibra e serviços digitais. Para o setor, o resultado reforça a tese de que grandes operadoras voltam a crescer quando combinam disciplina de custos e foco geográfico.",
+    "source_name": "Deia",
+    "source_url": "https://deia.eus/economia/2026/11/12/telefonica-gana-464-millones-septiembre-11748263.html",
+    "tag": "Telecom"
+  },
+  {
+    "title": "Tarifa Hora Certa: ABSOLAR, INEL e ABGD apoiam a modernização, mas cobram segurança jurídica para a geração solar",
+    "summary": "Associações do setor solar reagiram à proposta da ANEEL de criar a Tarifa Hora Certa, modalidade horária que substituiria a Tarifa Branca e pode alcançar até 5,7 milhões de consumidores de baixa tensão. ABSOLAR, INEL e ABGD reconheceram a importância de modernizar as tarifas, mas alertaram para riscos à micro e minigeração distribuída. O ponto mais sensível é a inclusão obrigatória, sem opção de saída, de novos sistemas solares que pedirem conexão a partir de 90 dias após a publicação da norma. As entidades argumentam que a medida pode contrariar a Lei 14.300/2022 e pedem estabilidade regulatória para não afugentar investimentos, enquanto um parecer da Procuradoria da ANEEL sustenta que a lei não garante o congelamento da modalidade tarifária. O desfecho vai definir a atratividade econômica dos novos projetos de geração distribuída no país a partir de 2028.",
+    "source_name": "Canal Solar",
+    "source_url": "https://canalsolar.com.br/tarifa-hora-certa-associacoes-o-que-dizem/",
+    "tag": "Energia"
+  }
+]
