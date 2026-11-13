@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Jensen Huang renuncia ao comando da Nvidia e CFO Colette Kress assume como CEO interina",
+    "summary": "Jensen Huang deixou o cargo de CEO da Nvidia após 33 anos à frente da empresa que cofundou; o conselho aceitou a renúncia na quarta-feira (11) e o anúncio foi feito na quinta (12). A saída ocorre poucos dias depois de Huang admitir um relacionamento com uma suposta espiã chinesa, caso que gerou pedidos de investigação federal por parlamentares nos EUA. A diretora financeira Colette Kress assume interinamente, acumulando o cargo de CFO, enquanto o conselho busca um sucessor entre candidatos internos e externos. As ações da Nvidia chegaram a cair mais de 13% no início do pregão antes de reduzir as perdas. Como a Nvidia é a principal fornecedora de chips para IA do mundo, a troca de comando adiciona incerteza a toda a cadeia de infraestrutura de IA, de hyperscalers a startups.",
+    "source_name": "TechCrunch",
+    "source_url": "https://techcrunch.com/2026/11/12/nvidias-jensen-huang-resigns-chipmaker-names-cfo-colette-kress-as-interim-ceo/",
+    "tag": "Tecnologia"
+  },
+  {
+    "title": "IPO da Anthropic tem demanda seis vezes maior que a oferta e estreia na Nasdaq pode ocorrer em 19 de novembro",
+    "summary": "O livro de ofertas do IPO da Anthropic está cerca de seis vezes sobrescrito, segundo a Bloomberg, com a faixa indicativa de US$ 70 a US$ 78 por ação. O Financial Times informou que os bancos coordenadores avaliam precificar acima do teto, o que poderia levar o valor de mercado a US$ 1,5 trilhão ou mais. A precificação é esperada para 18 de novembro, com possível primeiro dia de negociação em 19 de novembro, sob o ticker ANT. A forte procura contrasta com sinais recentes de desaceleração nos gastos corporativos com IA e com os prejuízos operacionais acumulados pela empresa. O resultado da oferta deve servir de termômetro para o apetite do mercado por empresas de modelos de fronteira, abrindo caminho para outras listagens do setor.",
+    "source_name": "Seeking Alpha / Bloomberg",
+    "source_url": "https://seekingalpha.com/news/4672156-anthropics-ipo-six-times-oversubscribed",
+    "tag": "IA"
+  },
+  {
+    "title": "Google DeepMind lança Gemini Robotics 2.5 e AlphaGenome 2 no mesmo dia",
+    "summary": "A Google DeepMind apresentou o Gemini Robotics 2.5, seu modelo visão-linguagem-ação mais capaz até agora, voltado a dar mais destreza, confiabilidade e segurança a robôs em ambientes reais e não estruturados. O modelo aprende centenas de habilidades cotidianas, de dobrar roupas a separar peças em linhas de montagem, e chega ao mercado via parceiros como Apptronik, Agile Robots e Boston Dynamics. No mesmo anúncio, a empresa lançou o AlphaGenome 2, que prevê como variantes genéticas afetam tipos celulares específicos, treinado com mais de 100 milhões de perfis de células em 68 tecidos. O AlphaGenome 2 é liberado apenas para pesquisa acadêmica não comercial via API e não é validado para uso clínico. Os lançamentos reforçam a aposta do Google em 'IA física' e em ciência acelerada por IA como frentes de diferenciação.",
+    "source_name": "SiliconANGLE",
+    "source_url": "https://siliconangle.com/2026/11/11/google-deepmind-releases-new-advanced-robotics-ai-model-and-next-generation-gene-prediction-model/",
+    "tag": "IA"
+  },
+  {
+    "title": "Google lança Gemini Decisions API, que responde até 1.000 perguntas fechadas em uma única chamada",
+    "summary": "O Google lançou em beta a Gemini Decisions API, baseada no novo modelo Gemini Decision 1, projetada para escolhas fechadas em vez de geração de texto livre. A API avalia até 1.000 perguntas independentes de sim/não, múltipla escolha ou rubrica sobre uma mesma entrada, que pode combinar texto, imagens, áudio, vídeo e PDFs. O preço é de US$ 0,10 por milhão de tokens de entrada, sem cobrança por tokens de saída, e há um nível gratuito no Google AI Studio. A proposta mira fluxos de agentes e automação que precisam de classificações rápidas e baratas, como triagem de documentos, moderação e roteamento. O lançamento coloca o Google em concorrência direta com a API equivalente da OpenAI, que aceita até 400 perguntas por requisição.",
+    "source_name": "SiliconANGLE",
+    "source_url": "https://siliconangle.com/2026/11/11/google-enters-the-decision-model-market-with-gemini-decisions-api/",
+    "tag": "IA"
+  },
+  {
+    "title": "Empresas brasileiras mais que dobram gastos com ferramentas de IA em 2026, e Anthropic lidera em valor",
+    "summary": "Levantamento da Pluggy, baseado em dados bancários anonimizados de 225 mil empresas, identificou 8.763 companhias (3,89%) com despesas em ferramentas de IA entre janeiro e agosto de 2026. Entre as empresas que contrataram IA de forma contínua no período, o gasto mensal mediano subiu de R$ 113 para R$ 312. Em valor, a Anthropic concentrou 52,2% dos desembolsos entre os 21 fornecedores analisados, contra 25,1% da OpenAI, embora a OpenAI tenha ligeiramente mais clientes (5.261 contra 5.183). A retenção também favoreceu a Anthropic em agosto: 72,9% dos clientes seguiam ativos, ante 67,3% na OpenAI. Os dados mostram que a adoção de IA nas empresas brasileiras ainda é minoritária, mas cresce rápido e já se traduz em gasto recorrente.",
+    "source_name": "TI Inside",
+    "source_url": "https://tiinside.com.br/11/11/2026/empresas-brasileiras-mais-que-dobraram-gastos-com-ia-em-2026-aponta-levantamento/",
+    "tag": "Transformação Digital"
+  },
+  {
+    "title": "Gartner prevê que a IA vai gerar saldo líquido de 1,7 milhão de empregos até 2030",
+    "summary": "O Gartner projeta que a inteligência artificial criará cerca de 10,6 milhões de postos de trabalho e eliminará aproximadamente 8,9 milhões até 2030, resultando em ganho líquido de 1,7 milhão de empregos. Segundo a consultoria, entre 0,4% e 1,8% dos trabalhadores devem perder o emprego por causa direta da IA no período. O impacto maior será na transformação de funções: pouco mais de 20% da força de trabalho global, ou 435,5 milhões de pessoas, precisará se adaptar a papéis modificados pela tecnologia. A previsão desloca o debate da substituição em massa para a requalificação e o redesenho de processos. Para líderes de RH e de TI, o recado é que programas de capacitação e gestão de mudança serão tão decisivos quanto a escolha das ferramentas de IA.",
+    "source_name": "Gartner",
+    "source_url": "https://www.gartner.com/en/newsroom/press-releases/2026-11-10-gartner-forecasts-artificial-intelligence-will-drive-a-net-increase-of-1-7-million-jobs-by-2030",
+    "tag": "Transformação Digital"
+  },
+  {
+    "title": "Anatel obriga operadoras a compartilhar redes móveis em pequenos municípios e rodovias",
+    "summary": "A Anatel aprovou regra que obriga as operadoras móveis a compartilhar suas redes (roaming) em municípios com menos de 30 mil habitantes, em localidades fora das sedes municipais e em rodovias federais e estaduais, alcançando cerca de 2 mil cidades. Os prazos de implementação são de 90 dias para os pequenos municípios, 150 dias para localidades fora das sedes e 210 dias para as rodovias. A conexão à rede da concorrente deverá ser automática, sem troca de chip, e não poderá gerar cobrança adicional ao consumidor. As operadoras poderão pedir exceções quando comprovarem inviabilidade técnica. A medida busca reduzir áreas de sombra no interior e nas estradas e altera a dinâmica competitiva, já que a cobertura própria deixa de ser diferencial exclusivo nessas regiões.",
+    "source_name": "Canal Rural",
+    "source_url": "https://www.canalrural.com.br/politica/anatel-aprova-compartilhamento-de-redes-em-pequenos-municipios-e-rodovias/",
+    "tag": "Telecom"
+  },
+  {
+    "title": "EPE alerta para desafios ambientais da expansão solar centralizada, concentrada no semiárido",
+    "summary": "Nota técnica da Empresa de Pesquisa Energética, elaborada para o Plano Decenal de Expansão de Energia 2036, aponta riscos socioambientais na expansão das usinas fotovoltaicas centralizadas no Brasil. O plano prevê 9,5 GW de nova capacidade até 2036, sendo cerca de 987 MW já contratados e 8,5 GW de expansão indicativa entre 2029 e 2036. Aproximadamente 80% dessa capacidade ficará no semiárido, e 62% na Caatinga, o equivalente a 21,8 mil hectares que podem exigir supressão de vegetação nativa. O documento destaca ainda pressão sobre recursos hídricos, destinação de módulos ao fim da vida útil e gargalos no licenciamento ambiental. O alerta indica que o crescimento da fonte solar vai depender cada vez mais de planejamento territorial e critérios socioambientais, e não apenas de preço e rede.",
+    "source_name": "Canal Solar",
+    "source_url": "https://canalsolar.com.br/energia-solar-brasil-desafios-ambientais-epe/",
+    "tag": "Energia"
+  }
+]
