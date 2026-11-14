@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Google lança o Gemini 4 Hydrogen, modelo rápido para programação e agentes que passa a rodar na Busca",
+    "summary": "O Google ampliou a família Gemini 4 com o Hydrogen, uma versão destilada do Gemini 4 Carbon e otimizada para velocidade, voltada a tarefas cotidianas de programação e fluxos agênticos. Segundo a empresa, o modelo conclui tarefas cerca de 2,5 vezes mais rápido que o Gemini 3.8 Flash, que ele substitui na Busca e no app Gemini para todos os usuários, inclusive os gratuitos. No Artificial Analysis Intelligence Index, o Hydrogen supera o Gemini 4 Argon, modelo maior, e oferece quatro níveis de raciocínio, incluindo um novo nível 'xhigh'. Na API, o preço é de US$ 1,50 por milhão de tokens de entrada e US$ 7,50 por milhão de saída, com janela de contexto de 1 milhão de tokens. O lançamento mostra que a disputa entre os laboratórios passou a ser também por custo e latência, o que barateia o uso de agentes em escala nas empresas.",
+    "source_name": "Google Blog",
+    "source_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/",
+    "tag": "IA"
+  },
+  {
+    "title": "OpenAI fatura US$ 10 bilhões no 3º trimestre, mas prejuízo operacional sobe para US$ 10,9 bilhões",
+    "summary": "A receita da OpenAI cresceu cerca de 50% no terceiro trimestre de 2026, chegando a aproximadamente US$ 10 bilhões, segundo documentos de investidores obtidos pelo The Wall Street Journal. O prejuízo operacional ajustado, porém, aumentou para cerca de US$ 10,9 bilhões, acima do próprio faturamento do período. A margem operacional ajustada melhorou de -150% para -109%, o que indica ganho de eficiência relativa, mesmo com a perda em dólares maior. A empresa estreitou a distância de receita em relação à Anthropic, que se prepara para estrear na Nasdaq, enquanto avança no mercado corporativo antes de seu próprio IPO. Os números mostram o tamanho do custo de computação por trás da corrida da IA generativa e alimentam o debate entre investidores sobre quando esses negócios vão dar lucro.",
+    "source_name": "Euronews",
+    "source_url": "https://www.euronews.com/2026/11/11/openai-reports-steep-losses-despite-quarterly-revenue-rise",
+    "tag": "IA"
+  },
+  {
+    "title": "SpaceX anuncia mais de US$ 74 bilhões em campi de supercomputação para IA no Texas e no Arizona",
+    "summary": "A SpaceX anunciou que vai investir mais de US$ 74 bilhões em dois campi de supercomputação para inteligência artificial nos Estados Unidos. O projeto em Starbase, no Texas, deve receber mais de US$ 24 bilhões e contar com geração própria de energia, enquanto o campus no condado de Cochise, no Arizona, está orçado em cerca de US$ 50 bilhões. A unidade do Arizona ainda precisa de aprovação local, enfrenta oposição de moradores e tem audiência marcada para 9 de dezembro; a empresa promete resfriamento a seco, sem novos poços. Desde o IPO em junho, o segmento de IA da SpaceX já responde por mais da metade da receita da companhia, com contratos de capacidade com clientes como Google e Anthropic. O anúncio mostra como energia, água e terra viraram o gargalo central da infraestrutura de IA.",
+    "source_name": "The Next Web",
+    "source_url": "https://thenextweb.com/news/spacex-74b-ai-computing-centers-arizona-texas",
+    "tag": "Tecnologia"
+  },
+  {
+    "title": "Notion corta a Fireworks AI e desativa recurso Insights após vazamento de conversas de IA",
+    "summary": "O Notion encerrou o uso da Fireworks AI como fornecedora e desativou temporariamente o recurso Insights depois que o segundo incidente de segurança da Fireworks em menos de um mês expôs conversas do Notion AI. Segundo o comunicado do Notion, menos de 1% dos workspaces pode ter sido afetado, e os responsáveis por eles já foram notificados. A empresa recomenda tratar os dados como expostos e trocar senhas, chaves de API e outras credenciais que tenham sido coladas no Notion AI durante o período. A própria Fireworks ampliou o alcance do incidente, admitindo acesso a dados de cobrança, datasets e pesos de modelos de alguns clientes. O caso mostra o risco que fornecedores terceiros de inferência trazem para quem usa IA e reforça a necessidade de auditar a cadeia de fornecedores.",
+    "source_name": "Notion",
+    "source_url": "https://www.notion.com/security/advisories/security-incident-involving-a-third-party-ai-vendor-nov9",
+    "tag": "Tecnologia"
+  },
+  {
+    "title": "Centauro coloca 900 agentes de IA para trabalhar e resolve 60% dos chamados sem intervenção humana",
+    "summary": "A Centauro, rede de artigos esportivos do Grupo SBF, informou que sua plataforma já tem mais de 900 agentes de inteligência artificial em operação. Segundo a empresa, os agentes resolvem mais de 60% dos chamados de pós-venda sem precisar de atendentes humanos. A tecnologia também atualiza o estoque das 230 lojas da rede, ligando atendimento, logística e operação de varejo. O caso é um dos exemplos mais avançados de IA agêntica em escala no varejo brasileiro, indo além de pilotos isolados. Para outras empresas, o caso mostra o potencial de ganho de eficiência e também o desafio de governar centenas de agentes autônomos em processos críticos.",
+    "source_name": "Exame",
+    "source_url": "https://exame.com/inteligencia-artificial/centauro-coloca-900-agentes-de-ia-para-trabalhar-e-resolve-60-dos-chamados-sem-humanos",
+    "tag": "Transformação Digital"
+  },
+  {
+    "title": "Anatel suspende ferramenta antispam da TIM e manda desbloquear números em 24 horas",
+    "summary": "A Anatel suspendeu na noite de sexta-feira (13) o mecanismo antispam da TIM, alegando descumprimento de regras de transparência e falta de canais para que empresas contestem bloqueios. A agência determinou que a operadora desbloqueie, em até 24 horas, os números que foram barrados apenas pela ferramenta. A TIM afirmou que vai recorrer da decisão. A disputa ocorre em um momento de forte pressão regulatória contra chamadas abusivas e telemarketing, e meses depois de a própria TIM e outras operadoras terem questionado na Anatel o antispam da Vivo. A decisão deve servir de referência para a forma como as operadoras usam filtros automáticos, muitas vezes baseados em IA, sem prejudicar empresas que fazem chamadas legítimas.",
+    "source_name": "Teletime",
+    "source_url": "https://teletime.com.br/13/11/2026/anatel-suspende-antispam-da-tim",
+    "tag": "Telecom"
+  },
+  {
+    "title": "Leilões de energia A-1, A-2 e A-3 negociam R$ 14,2 bilhões, mas com deságio de apenas 1,15%",
+    "summary": "Os leilões de energia existente A-1, A-2 e A-3 movimentaram cerca de R$ 14,2 bilhões, segundo o Canal Solar. O deságio médio foi de apenas 1,15%, e o A-2 registrou o menor desconto, de 0,41%, enquanto o A-3 teve o menor volume negociado. Os certames foram os primeiros sob as novas regras da ANEEL, que elevaram a garantia financeira adicional de três para doze meses de receita contratual, depois do rombo de R$ 495 milhões entre distribuidoras. Mesmo com exigências mais rígidas, comercializadoras continuaram participando. O baixo deságio indica um mercado com pouca folga de preços e mostra o custo das garantias maiores, um ponto relevante para geradores solares e comercializadoras que planejam contratos de médio prazo.",
+    "source_name": "Canal Solar",
+    "source_url": "https://canalsolar.com.br/leiloes-a1-a2-a3-negociam-desagio/",
+    "tag": "Energia"
+  },
+  {
+    "title": "Cortes de geração solar e eólica crescem 21% nos oito primeiros meses de 2026",
+    "summary": "Dados do ONS divulgados pelo Canal Solar mostram que o curtailment, ou seja, os cortes de geração de usinas eólicas e solares, aumentou cerca de 21% entre janeiro e agosto de 2026 frente ao mesmo período do ano anterior. Os cortes passaram a representar 14,4% da geração potencial dessas fontes, contra 9% em 2025. O problema vem da expansão acelerada das renováveis sem a mesma velocidade na transmissão e no armazenamento, além do excesso de oferta no meio do dia. O acordo de ressarcimento proposto pelo MME já atraiu o interesse de 1.539 usinas, cerca de 91% da base de referência do ONS. O tema é central para a rentabilidade de projetos solares e reforça a urgência do leilão de baterias e de sinais tarifários que desloquem o consumo.",
+    "source_name": "Canal Solar",
+    "source_url": "https://canalsolar.com.br/cortes-de-geracao-solar-aumentam/",
+    "tag": "Energia"
+  }
+]
