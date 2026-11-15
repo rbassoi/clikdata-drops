@@ -1,0 +1,58 @@
+[
+  {
+    "title": "OpenAI lança o ChatGPT Wallet para que seus agentes façam compras sem ver o número do cartão",
+    "summary": "A OpenAI apresentou em 13 de novembro o ChatGPT Wallet, carteira desenvolvida com American Express, Mastercard e Visa que permite aos agentes do ChatGPT concluir compras em nome do usuário. Em vez do número real do cartão, a rede de pagamento gera um token para cada transação, com código de segurança e validade próprios, de modo que nem o agente nem o lojista têm acesso aos dados originais. Cada compra precisa ser aprovada por biometria, como Face ID ou impressão digital. Por enquanto, o recurso está restrito a assinantes Pro nos EUA, maiores de 18 anos e com cartões de crédito emitidos no país, e a OpenAI promete para depois compras pré-autorizadas dentro de limites de gasto. O lançamento é um passo importante do chamado comércio agêntico, em que a confiança nos pagamentos passa a ser o principal gargalo para a adoção de agentes de IA no varejo.",
+    "source_name": "OpenAI",
+    "source_url": "https://openai.com/index/introducing-chatgpt-wallet/",
+    "tag": "IA"
+  },
+  {
+    "title": "Quatro ONGs processam OpenAI, Google, Anthropic, Meta e SpaceX para congelar o desenvolvimento de IA de fronteira",
+    "summary": "Quatro organizações sem fins lucrativos, entre elas a Public Citizen e a Alliance for Secure AI, entraram em 12 de novembro com uma ação na Corte Superior de São Francisco contra cinco desenvolvedores de IA de fronteira. O processo pede uma liminar que impeça as empresas de treinar ou lançar modelos mais capazes do que os atuais e também proíba que a IA conduza de forma autônoma a própria pesquisa em IA. A tese se apoia na lei californiana de concorrência desleal e argumenta que o desenvolvimento desses sistemas configura um risco público, citando alertas das próprias empresas sobre ataques cibernéticos e armas biológicas. Nenhum tribunal se pronunciou ainda, e especialistas consideram o pedido improvável de prosperar. Mesmo assim, o caso leva o debate sobre segurança de IA para o Judiciário em plena semana da esperada estreia da Anthropic na bolsa.",
+    "source_name": "Tech Times",
+    "source_url": "https://www.techtimes.com/articles/330616/20261114/ai-development-freeze-lawsuit-nonprofits-sue-5-labs-say-real-freeze-needs-government-inspections.htm",
+    "tag": "IA"
+  },
+  {
+    "title": "Cloudflare abre o código do Kitesurf, motor de navegação leve feito para agentes de IA",
+    "summary": "A Cloudflare liberou como código aberto, sob licença Apache 2.0, o Kitesurf, seu motor de navegador experimental pensado para agentes de IA. A proposta é permitir que agentes carreguem sites, executem JavaScript e interajam com páginas usando muito menos CPU e memória do que um Chromium completo, escalando pela rede de Workers da empresa. O projeto combina componentes em Rust como Blitz (HTML e layout) e Stylo (CSS), roda JavaScript via Dynamic Workers e é controlado pelo Chrome DevTools Protocol, o que permite reaproveitar scripts de Puppeteer sem reescrita. A empresa avisa que a compatibilidade com a web ainda é incompleta e que o projeto segue em desenvolvimento intenso. O movimento mostra como a infraestrutura da web começa a ser redesenhada para um tráfego cada vez mais gerado por agentes, e não por pessoas.",
+    "source_name": "Cloudflare Blog",
+    "source_url": "https://blog.cloudflare.com/kitesurf-open-source/",
+    "tag": "Tecnologia"
+  },
+  {
+    "title": "Quod lança plataforma multiagente de IA que funciona como um 'comitê digital' para decisões de crédito e risco",
+    "summary": "A Quod, birô de crédito e inteligência de dados criado pelos grandes bancos brasileiros, lançou o Quod IA, uma plataforma multiagente voltada a decisões de crédito, risco, recuperação e prevenção a fraudes. A solução conecta agentes de IA aos sistemas, bases de dados e APIs da companhia, e cada agente reúne uma competência diferente para analisar informações e emitir diagnósticos em poucos segundos. A empresa descreve o modelo como um 'comitê digital' e destaca a rastreabilidade das interações, que une automação e governança. O desenvolvimento contou com apoio da consultoria BRQ. O caso ilustra como o setor financeiro brasileiro está levando a IA agêntica de pilotos para processos críticos, em que auditabilidade e conformidade regulatória pesam tanto quanto a velocidade.",
+    "source_name": "BP Money",
+    "source_url": "https://bpmoney.com.br/?p=419221",
+    "tag": "Transformação Digital"
+  },
+  {
+    "title": "Gartner: 71% das empresas querem usar IA agêntica em 12 meses, mas só 21% têm governança para isso",
+    "summary": "Uma pesquisa do Gartner com mais de 2.000 CIOs e executivos de tecnologia mostra que 71% das organizações esperam colocar agentes de IA em operação nos próximos 12 meses. Apenas 21%, porém, afirmam já ter as capacidades de governança necessárias para gerenciar esses sistemas. Segundo a consultoria, as empresas avançam na IA agêntica mais rápido do que constroem controles sobre permissões, monitoramento e responsabilização das ações dos agentes. Esse descompasso eleva riscos operacionais, de segurança e de conformidade, especialmente quando os agentes passam a agir em sistemas corporativos sem supervisão humana direta. Para líderes de transformação digital, o recado é que governança deixa de ser etapa posterior e passa a ser pré-requisito para escalar a IA com segurança.",
+    "source_name": "CDO Magazine (Gartner)",
+    "source_url": "https://www.cdomagazine.tech/aiml/gartner-agentic-ai-adoption-is-outpacing-enterprise-governance",
+    "tag": "Transformação Digital"
+  },
+  {
+    "title": "Novo leilão reverso vai antecipar metas do 5G em até 190 localidades rurais de 17 estados",
+    "summary": "A EAD/Seja Digital, sob supervisão da Anatel, marcou para 8 de dezembro o quinto leilão reverso para antecipar obrigações de cobertura do leilão do 5G. Serão cerca de R$ 24 milhões, vindos de recursos remanescentes do leilão do 4G, para levar sinal a até 190 localidades em 17 estados, beneficiando aproximadamente 118 mil pessoas. No modelo reverso, vence a operadora que pedir o menor volume de recursos públicos para atender cada localidade, e a cobertura pode ser feita em 4G ou tecnologia superior. Brisanet, Claro, Vivo, TIM e iez! aparecem no edital entre as empresas com localidades passíveis de antecipação. Com esta edição, o programa chega a 537 localidades contempladas, reforçando o uso de instrumentos de mercado para reduzir o déficit de conectividade em áreas rurais.",
+    "source_name": "TELETIME",
+    "source_url": "https://teletime.com.br/11/11/2026/leilao-reverso-190-localidades/",
+    "tag": "Telecom"
+  },
+  {
+    "title": "SolarEdge anuncia fim das vendas diretas e das operações locais no Brasil",
+    "summary": "A fabricante israelense de inversores e otimizadores SolarEdge comunicou ao mercado brasileiro que vai encerrar as vendas diretas e as operações locais no país. Segundo o comunicado, os últimos pedidos de compra devem ser enviados até 30 de novembro de 2026, com entregas até 18 de dezembro. A empresa garante que os produtos elegíveis vendidos antes do prazo seguirão cobertos pela garantia, e o suporte por chat da equipe internacional funcionará até o fim de 2026. Ainda não está claro como ficará a comercialização via distribuidores nem como serão tratadas as substituições de equipamentos após a transição. A saída, que segue movimento semelhante na Austrália e na Nova Zelândia, acende um alerta para integradores e consumidores de geração distribuída sobre a continuidade do pós-venda.",
+    "source_name": "Canal Solar",
+    "source_url": "https://canalsolar.com.br/solaredge-comunica-fim-das-vendas-diretas-e-das-operacoes-locais-no-brasil/",
+    "tag": "Energia"
+  },
+  {
+    "title": "IEA: mais de 90% dos grandes fabricantes chineses de equipamentos solares têm prejuízo em 2026",
+    "summary": "O relatório Renewables 2026 da Agência Internacional de Energia aponta que mais de 90% dos principais fabricantes chineses de equipamentos fotovoltaicos registraram prejuízo em 2026, e mais de 70 empresas do setor faliram desde 2024. O prejuízo líquido acumulado de fabricantes e produtores de polissilício subiu de cerca de US$ 4,4 bilhões em 2024 para quase US$ 5,5 bilhões, com margens negativas nos três primeiros trimestres deste ano, embora haja sinais de estabilização. A causa é o excesso de capacidade, que derrubou os preços ao longo de toda a cadeia. A IEA projeta consolidação, com queda de 10% a 35% na capacidade de wafers e de 5% a 15% na de células e módulos até 2031. Para o Brasil, que importa a maior parte dos módulos da China, o cenário mantém equipamentos baratos no curto prazo, mas aumenta o risco de instabilidade entre fornecedores.",
+    "source_name": "pv magazine",
+    "source_url": "https://www.pv-magazine.com/2026/11/11/over-90-of-chinas-solar-supply-chain-is-reporting-losses-says-iea/",
+    "tag": "Energia"
+  }
+]
