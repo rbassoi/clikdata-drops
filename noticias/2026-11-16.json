@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Apple lança app de estudo com a OpenEvidence para entender como as pessoas usam IA em questões de saúde",
+    "summary": "A Apple anunciou uma parceria com a OpenEvidence, empresa de IA voltada à área médica, para lançar um aplicativo de estudo sobre o uso de inteligência artificial em perguntas de saúde. O estudo é aberto a usuários nos Estados Unidos com mais de 21 anos e pretende reunir até 200 mil participantes ao longo de 12 meses. A OpenEvidence é conhecida por sua ferramenta de apoio à decisão clínica usada por profissionais de saúde, que responde perguntas com citações das fontes científicas. A iniciativa mostra que a Apple quer entender de forma estruturada como consumidores recorrem a chatbots para temas médicos, um uso que cresce rapidamente e levanta dúvidas sobre precisão e segurança. Os dados podem orientar recursos futuros de saúde no ecossistema da empresa e alimentar o debate regulatório sobre IA na medicina.",
+    "source_name": "TechCrunch",
+    "source_url": "https://techcrunch.com/2026/11/15/apple-launches-new-app-to-study-how-people-use-ai-for-health/",
+    "tag": "IA"
+  },
+  {
+    "title": "Fractile, startup britânica de chips de inferência, levanta US$ 720 milhões e passa a valer US$ 7 bilhões",
+    "summary": "A Fractile, desenvolvedora britânica de chips para inferência de IA, fechou uma rodada Série C de US$ 720 milhões com avaliação pós-money de US$ 7 bilhões. Segundo a Reuters, a rodada foi liderada por Thrive Capital, Founders Fund, Lightspeed e Redpoint, com participação de fundos ligados ao governo britânico. O valor representa mais de seis vezes a avaliação de cerca de US$ 1,1 bilhão registrada na Série B, em maio de 2026. Relatos indicam que a Anthropic firmou um acordo inicial para comprar cerca de US$ 250 milhões em chips da empresa, informação ainda não confirmada oficialmente. A Fractile planeja lançar seu primeiro chip comercial no próximo ano, num momento em que a demanda por inferência barata e rápida faz investidores apostarem em alternativas à Nvidia.",
+    "source_name": "SiliconANGLE",
+    "source_url": "https://siliconangle.com/2026/11/11/inference-chip-developer-fractile-raises-720m-in-funding/",
+    "tag": "IA"
+  },
+  {
+    "title": "Startup japonesa newmo capta ¥ 20,8 bilhões com liderança da KDDI para colocar robotáxis nas ruas de Osaka",
+    "summary": "A newmo, startup japonesa de mobilidade, levantou ¥ 20,8 bilhões (cerca de US$ 135 milhões) em uma rodada Série B liderada pela operadora KDDI, elevando seu total captado para ¥ 40,7 bilhões. A empresa opera cerca de 1.900 táxis e desenvolve uma IA de direção autônoma para o mercado japonês. Junto com o aporte, KDDI e KDDI Smart Mobility firmaram uma parceria de capital e negócios que inclui conectividade, infraestrutura de computação para IA, monitoramento remoto e posicionamento de alta precisão. A meta é iniciar a operação comercial de robotáxis em Sakai, na região de Osaka, em 2028, inicialmente com motoristas de segurança a bordo. O movimento mostra operadoras de telecom se posicionando como infraestrutura crítica para veículos autônomos, num Japão onde Toyota e Waymo também preparam serviços a partir de 2027.",
+    "source_name": "The Bridge",
+    "source_url": "https://thebridge.jp/2026/11/newmo-raises-20-8-billion-yen-series-b-kddi",
+    "tag": "Tecnologia"
+  },
+  {
+    "title": "Zenvia testa agente de IA para vendas e prepara lançamento de solução de comércio conversacional",
+    "summary": "A Zenvia, empresa brasileira de plataformas de comunicação com clientes, está conduzindo um piloto de comércio conversacional com agentes de IA voltados a vendas. Segundo o diretor de tecnologia da companhia, a expectativa é lançar a solução comercialmente até o fim deste ano. A plataforma da empresa já permite montar equipes de agentes de IA com funções específicas, que atuam de forma coordenada no relacionamento com o cliente. A iniciativa acompanha a migração do mercado de chatbots de atendimento para agentes capazes de conduzir jornadas completas de compra em canais como o WhatsApp. Para empresas brasileiras, a tendência abre espaço para aumentar conversão e reduzir custo de vendas, mas exige governança sobre o que os agentes podem prometer e executar em nome da marca.",
+    "source_name": "Mobile Time",
+    "source_url": "https://www.mobiletime.com.br/noticias/12/11/2026/zenvia-agente-vendas/",
+    "tag": "Transformação Digital"
+  },
+  {
+    "title": "Anatel garante até 2030 contratos de roaming para IoT/M2M e protege conexão multioperadora em aplicações críticas",
+    "summary": "A Anatel publicou a Resolução nº 795, que altera o Plano Geral de Metas de Competição (PGMC) e foi publicada no Diário Oficial em 13 de novembro. A norma assegura a continuidade, até 31 de dezembro de 2030, dos contratos de roaming para comunicação máquina a máquina (M2M) e Internet das Coisas firmados até 8 de setembro de 2025. A resolução também torna ineficaz qualquer cláusula contratual que impeça dispositivos de se conectarem a mais de uma operadora em aplicações de missão crítica. A medida dá segurança a setores como rastreamento logístico, medição inteligente de energia, meios de pagamento e telemetria, que dependem de cobertura contínua. Para operadoras e provedores de IoT, a decisão estabiliza o ambiente regulatório e reduz o risco de interrupção de serviços em larga escala.",
+    "source_name": "Atlas Público",
+    "source_url": "https://atlaspublico.com.br/noticias/anatel-garante-ate-2030-roaming-de-contratos-iot-m2m-e-101714",
+    "tag": "Telecom"
+  },
+  {
+    "title": "Anatel estuda permitir que titular bloqueie a abertura de novas linhas de celular em seu CPF",
+    "summary": "A Anatel avalia criar um mecanismo para que o próprio titular do CPF possa bloquear a habilitação de novas linhas de celular em seu nome. A proposta tem como alvo fraudes em que criminosos ativam chips com dados de terceiros para aplicar golpes, receber códigos de verificação ou movimentar contas bancárias. Ainda não há prazo definido para a implementação, e a agência discute o tema junto a outras medidas de reforço da identificação, como o uso de biometria. A discussão ocorre na mesma semana em que entraram em vigor novas regras contra chamadas abusivas e em que a agência suspendeu cautelarmente o filtro antispam da TIM. O conjunto de iniciativas mostra a Anatel ampliando sua atuação em segurança do consumidor, o que deve exigir ajustes de processos e sistemas de cadastro das operadoras.",
+    "source_name": "Piranot",
+    "source_url": "https://www.piranot.com.br/2026/11/15/noticias/tecnologia-e-inovacao/anatel-bloqueio-linhas-celular-cpf/",
+    "tag": "Telecom"
+  },
+  {
+    "title": "Energia solar chega a 77,6 GW no Brasil e supera com antecedência a projeção da ABSOLAR para 2026",
+    "summary": "O Brasil alcançou 77,6 GW de potência solar instalada, superando a projeção de 75,9 GW que a ABSOLAR havia feito para o fim de 2026, segundo o Canal Solar. A marca foi atingida com cerca de três meses de antecedência em relação à estimativa. Do total, cerca de 54 GW correspondem à geração distribuída, em telhados e pequenos terrenos, e 23,6 GW à geração centralizada em grandes usinas. A geração distribuída sozinha já supera em aproximadamente 2,2 GW a capacidade estimada para dezembro. O resultado reforça o peso da fonte solar na matriz brasileira, mas também amplia a pressão por soluções para cortes de geração, conexão de novos projetos e armazenamento.",
+    "source_name": "Canal Solar",
+    "source_url": "https://canalsolar.com.br/setor-solar-supera-projecoes-apesar-desafios/",
+    "tag": "Energia"
+  },
+  {
+    "title": "Leilão de baterias entra na reta final e e-Storage, da Canadian Solar, mira fornecer mais de 1 GW",
+    "summary": "A e-Storage, braço de armazenamento da Canadian Solar, pretende fornecer pelo menos 1 GW em sistemas de baterias (BESS) com solução nacionalizada para o leilão de reserva de capacidade marcado para 2 de dezembro. A empresa obteve no início de novembro o código CFI do BNDES, que habilita o financiamento de equipamentos com conteúdo nacional. O primeiro leilão de baterias do país terá duas sessões: em 2 de dezembro, com exigência de conteúdo local e preço-teto de R$ 1,76 milhão/MW.ano, e em 4 de dezembro, sem essa exigência e com teto de R$ 1,58 milhão/MW.ano. Pelo cronograma, a habilitação técnica dos projetos pela EPE está prevista para 17 de novembro. O certame é visto como o marco inicial de um mercado de armazenamento capaz de reduzir o desperdício de energia solar e eólica.",
+    "source_name": "pv magazine Brasil",
+    "source_url": "http://www.pv-magazine-brasil.com/2026/11/12/com-solucao-nacionalizada-e-storage-canadian-solar-mira-fornecer-mais-de-1-gw-em-bess-para-leilao/",
+    "tag": "Energia"
+  }
+]
