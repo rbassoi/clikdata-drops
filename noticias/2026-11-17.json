@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Anthropic define faixa de US$ 70 a US$ 78 por ação e se aproxima da estreia na Nasdaq com o ticker ANT",
+    "summary": "A Anthropic, criadora do Claude, iniciou o roadshow de sua oferta pública inicial com uma faixa indicativa de US$ 70 a US$ 78 por ação para cerca de 825 milhões de ações Classe A, com listagem prevista na Nasdaq sob o ticker ANT. Segundo reportagens, a precificação deve ocorrer em 18 de novembro e o início das negociações em 19 de novembro, embora as datas ainda dependam de aprovação regulatória. A avaliação estimada, entre cerca de US$ 1,26 trilhão e US$ 1,41 trilhão em base totalmente diluída, ficou abaixo dos US$ 2 trilhões especulados meses atrás, refletindo a cautela do mercado com os valuations de IA. Se confirmada, a operação será uma das maiores da história e um teste decisivo do apetite de investidores por laboratórios de IA de fronteira. O resultado deve influenciar o custo de capital de todo o setor, inclusive de rivais como a OpenAI, que descartou abrir capital em 2026.",
+    "source_name": "Gizmodo",
+    "source_url": "https://gizmodo.com/anthropic-still-plans-to-go-public-as-soon-as-next-week-report-2000837422",
+    "tag": "IA"
+  },
+  {
+    "title": "Brasil adere ao Compromisso de Antália por uma inteligência artificial sustentável durante a COP31",
+    "summary": "O Brasil aderiu ao Compromisso de Antália sobre Inteligência Artificial, assinado durante a COP31, na Turquia, em iniciativa da presidência turca com a União Internacional de Telecomunicações (UIT) e a Unesco. O acordo busca conciliar o avanço da IA com a preservação ambiental e a proteção de trabalhadores diante da automação. O país foi representado pelo secretário de Telecomunicações do Ministério das Comunicações, Hermano Tercius. Nas discussões, também foi citada a proposta de criação de um Instituto de Inteligência Artificial para Mudanças Climáticas com sede no Brasil. A adesão reforça a agenda de soberania digital do Plano Brasileiro de IA e posiciona o país no debate sobre o consumo de energia e água dos data centers, tema cada vez mais central na expansão da IA.",
+    "source_name": "Revista Vigor",
+    "source_url": "https://revistavigor.com.br/2026/11/17/brasil-assina-pacto-global-por-inteligencia-artificial-sustentavel/",
+    "tag": "IA"
+  },
+  {
+    "title": "Dreamteam, startup de CRM baseado em agentes de IA, capta recursos para desafiar Salesforce e SAP",
+    "summary": "A Dreamteam, startup de cerca de um ano fundada por ex-executivos da Freshworks, levantou uma nova rodada liderada pela Accel, com participação de Premji Invest e Together Fund, segundo a Bloomberg — o valor reportado é de US$ 53 milhões. A empresa desenvolve uma plataforma de CRM em que equipes de agentes de IA capturam, estruturam e atualizam dados de clientes, reduzindo o trabalho manual de vendedores e equipes de atendimento. A proposta é competir diretamente com sistemas tradicionais de gestão de relacionamento, como os de Salesforce e SAP. A rodada se soma a uma onda de investimentos em 'CRMs nativos de IA', segmento em que também atuam nomes como Attio e Lightfield. Para as empresas, o movimento sinaliza que a camada de software corporativo de vendas e atendimento tende a ser redesenhada em torno de agentes autônomos.",
+    "source_name": "Bloomberg",
+    "source_url": "https://www.bloomberg.com/news/articles/2026-11-16/ai-startup-dreamteam-raises-capital-to-challenge-salesforce-sap",
+    "tag": "Transformação Digital"
+  },
+  {
+    "title": "Telus desiste de codesenvolver dois data centers de IA em Vancouver após protestos",
+    "summary": "A operadora canadense Telus deixou a parceria com a incorporadora Westbank para construir dois data centers de inteligência artificial em Vancouver, mas a Westbank afirma que os projetos seguirão com um novo parceiro, ainda não divulgado. As unidades — o prédio M3, em Mount Pleasant, e uma instalação de dez andares na 150 West Georgia St. — faziam parte do programa federal de grandes data centers de IA soberana do Canadá. A decisão ocorre após centenas de pessoas marcharem contra os projetos e de uma vereadora propor uma pausa em novos data centers até que a cidade avalie riscos e impactos comunitários. A Telus diz que segue avaliando parceiros e locais para expandir sua infraestrutura de IA em outras regiões da Colúmbia Britânica. O caso ilustra a crescente resistência local a data centers urbanos, um desafio também para operadoras que apostam em 'fábricas de IA'.",
+    "source_name": "Daily Hive",
+    "source_url": "https://dailyhive.com/vancouver/telus-westbank-vancouver-ai-data-centre-partnership-changes",
+    "tag": "Tecnologia"
+  },
+  {
+    "title": "Anatel suspende cautelarmente o antispam da TIM por falta de transparência",
+    "summary": "A Anatel determinou, por medida cautelar, a suspensão do mecanismo antispam da TIM, alegando falta de transparência e ausência de canais adequados para que empresas contestem bloqueios. Segundo a agência, a operadora não forneceu as informações mínimas sobre o funcionamento da ferramenta, e a decisão deveria ser cumprida em até 24 horas após a notificação. Houve ainda registros de bloqueios indevidos de chamadas de serviços essenciais, como saúde e emergência, que já haviam exigido intervenção em setembro. A TIM poderá retomar o serviço depois de se adequar às diretrizes publicadas em agosto, e deve recorrer. O episódio expõe a disputa entre operadoras pelo modelo de combate a chamadas abusivas, já que a Vivo acusava o antispam da rival de barrar suas ofertas comerciais.",
+    "source_name": "Teletime",
+    "source_url": "https://teletime.com.br/13/11/2026/anatel-suspende-antispam-da-tim/",
+    "tag": "Telecom"
+  },
+  {
+    "title": "Roaming nacional sem custo extra entra em vigor em 9 de dezembro com implantação escalonada",
+    "summary": "A Resolução nº 794/2026 da Anatel, publicada no Diário Oficial em 9 de novembro, amplia o roaming nacional e permite que o cliente use a rede de outra operadora onde a sua não tiver cobertura, sem cobrança adicional. A norma entra em vigor em 9 de dezembro de 2026, mas a implementação será gradual. Segundo a cobertura da votação, cidades de até 30 mil habitantes devem ser atendidas em 90 dias, localidades não-sede em 150 dias e rodovias em 210 dias. A regra está alinhada à política nacional de conectividade em rodovias e mira áreas pouco atendidas por Vivo, Claro e TIM. Para o setor, a medida muda a lógica de competição por cobertura e exige ajustes técnicos e comerciais nos acordos de atacado entre as operadoras.",
+    "source_name": "DOL",
+    "source_url": "https://dol.com.br/noticias/tecnologia/968331/celular-sem-sinal-tera-internet-de-graca-da-vivo-claro-e-tim",
+    "tag": "Telecom"
+  },
+  {
+    "title": "Cortes de geração levam 507 usinas solares a desistirem do Nordeste em 2026",
+    "summary": "Levantamento mostra que 507 projetos de usinas solares centralizadas que planejavam se instalar no Nordeste pediram à Aneel a revogação de suas outorgas em 2026. O principal motivo apontado é o curtailment, mecanismo pelo qual o ONS reduz a produção de usinas quando a rede de transmissão não consegue escoar toda a energia gerada. A Aneel pondera que parte dos pedidos vem de outorgas solicitadas sem viabilidade comprovada, na corrida pelo desconto nas tarifas de transmissão que valeu até março de 2022. Empresas como a Auren já haviam desistido de projetos citando falta de margem no sistema de transmissão. A onda de desistências representa dezenas de bilhões de reais em investimentos perdidos e reforça a pressão por expansão da rede e por soluções de armazenamento na região.",
+    "source_name": "TV Sim Brasil",
+    "source_url": "https://tvsimbrasil.com.br/brasil/economia/noticia/2026/11/15/por-que-507-usinas-solares-desistiram-nordeste",
+    "tag": "Energia"
+  },
+  {
+    "title": "ANEEL propõe incluir sistemas solares e eletropostos na nova Tarifa Hora Certa",
+    "summary": "A ANEEL apresentou proposta de uma nova modalidade tarifária horária para consumidores de baixa tensão, a 'Tarifa Hora Certa', que inclui unidades com sistemas solares e eletropostos para veículos elétricos. A implantação seria gradual e poderia alcançar 5,7 milhões de consumidores até 2031, com preços diferentes conforme o horário de consumo. A proposta ainda depende da diretoria colegiada, e a expectativa é concluir a tramitação até dezembro. Associações como ABSOLAR, INEL e ABGD cobram segurança jurídica e estudos de impacto para quem já possui geração própria, questionando se a medida de fato reduziria a injeção de excedentes no pico solar. A discussão é central para o futuro da geração distribuída, pois pode alterar o retorno de investimentos em painéis e estimular o uso de baterias residenciais.",
+    "source_name": "Canal Solar",
+    "source_url": "https://canalsolar.com.br/tarifa-hora-certa-aneel-sistemas-solares-veiculos-eletricos/",
+    "tag": "Energia"
+  }
+]
