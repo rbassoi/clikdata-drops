@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Anthropic precifica IPO a US$ 83 por ação e levanta US$ 81,3 bilhões na maior oferta da história",
+    "summary": "A Anthropic fixou o preço de sua oferta pública inicial em US$ 83 por ação, acima da faixa indicativa de US$ 70 a US$ 78 divulgada dias antes. A operação foi ampliada para 980 milhões de ações (ante 825 milhões previstas) e levantou cerca de US$ 81,3 bilhões, superando o IPO da SpaceX como o maior já registrado. Com isso, a desenvolvedora do Claude chega à bolsa avaliada em aproximadamente US$ 1,5 trilhão em base totalmente diluída. As ações começam a ser negociadas nesta quinta-feira (19) na Nasdaq, sob o ticker ANT, e a demanda de investidores institucionais e de varejo superou várias vezes a oferta. A estreia é vista como um termômetro do apetite do mercado por empresas de IA de fronteira e deve influenciar os próximos movimentos de capital no setor.",
+    "source_name": "CNBC",
+    "source_url": "https://www.cnbc.com/2026/11/18/anthropic-ipo-ai-offering-price.html",
+    "tag": "IA"
+  },
+  {
+    "title": "OpenAI lança GPT-6.2 Astra e Sol com preços menores na API e foco em tarefas agênticas",
+    "summary": "A OpenAI apresentou duas novas versões de seu modelo principal: o GPT-6.2 Astra, voltado a trabalhos profissionais complexos, e o GPT-6.2 Sol, opção mais barata para tarefas do dia a dia, como programação e redação. Na API, o Astra custa US$ 8 por milhão de tokens de entrada e US$ 40 por milhão de saída, corte de 20% em relação ao GPT-6 Astra, enquanto o Sol mantém US$ 2 e US$ 10. Os modelos estão disponíveis no ChatGPT Work e no Codex para assinantes Plus, Pro, Enterprise e Edu. A empresa afirma que o Astra é o primeiro modelo lançado externamente a atingir o nível 'High' de autoaperfeiçoamento em seu Preparedness Framework, o que motivou salvaguardas reforçadas em cibersegurança. Parte da comunidade considerou os ganhos de benchmark modestos, e testes independentes apontam taxas de alucinação ainda elevadas em esforço máximo.",
+    "source_name": "The Decoder",
+    "source_url": "https://the-decoder.com/openai-launches-gpt-6-2-astra-and-sol-with-lower-api-prices-and-some-benchmark-gains/",
+    "tag": "IA"
+  },
+  {
+    "title": "Nvidia registra receita recorde de US$ 115,8 bilhões no trimestre, alta de 103% em um ano",
+    "summary": "A Nvidia divulgou os resultados do terceiro trimestre do ano fiscal de 2027, encerrado em 25 de outubro, com receita recorde de US$ 115,8 bilhões, mais que o dobro do mesmo período do ano anterior e cerca de 20% acima do trimestre passado. O segmento de data center, impulsionado pela demanda por infraestrutura de IA e pelo início dos embarques do Vera Rubin NVL72, somou US$ 107,6 bilhões, alta anual de 110%. A margem bruta GAAP ficou em 74,8% e o lucro por ação diluído foi de US$ 2,70. Para o quarto trimestre, a companhia projeta receita de US$ 130 bilhões, com variação de 3%, sem considerar vendas de computação para data centers na China. Os números reforçam que os investimentos globais em IA seguem acelerando, apesar das tensões regulatórias e geopolíticas em torno dos chips.",
+    "source_name": "NVIDIA Newsroom",
+    "source_url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-third-quarter-fiscal-2027",
+    "tag": "Tecnologia"
+  },
+  {
+    "title": "Microsoft lança sete modelos MAI no Ignite 2026, com MAI Code 2 integrado ao GitHub Copilot",
+    "summary": "No Ignite 2026, a Microsoft apresentou sete novos modelos próprios da família MAI, com destaque para o MAI Code 2 e o MAI Code 2 Flash, voltados a programação corporativa. Segundo a empresa, o MAI Code 2 entrega cerca de 98% do desempenho do GPT-6.1 Sol a 40% do custo, números ainda não verificados de forma independente. O modelo já está disponível nos planos pagos do GitHub Copilot, enquanto a versão Flash chega também aos planos gratuito e estudantil e entra em prévia no Azure Foundry. O pacote inclui ainda o MAI Cyber 2 Flash, restrito a equipes de defesa verificadas, além de modelos de imagem e voz em tempo real. O movimento mostra a Microsoft reduzindo a dependência da OpenAI e competindo por custo em cargas de trabalho corporativas de alto volume.",
+    "source_name": "TestingCatalog",
+    "source_url": "https://www.testingcatalog.com/microsoft-launches-seven-mai-models-at-ignite-2026/",
+    "tag": "Transformação Digital"
+  },
+  {
+    "title": "EUA fecham brecha da nuvem e exigem licença para data centers que dão acesso remoto a chips de IA para a China",
+    "summary": "O Bureau of Industry and Security, do Departamento de Comércio dos EUA, publicou uma regra provisória que obriga fornecedores de chips avançados a obter licença para atender data centers em qualquer lugar do mundo que prestem serviços a empresas sediadas na China e em outros países sob restrição. Clientes existentes terão 90 dias para se regularizar, e a norma também passa a exigir licença para exportações a Indonésia, Malásia, Singapura e Tailândia, além do Brasil. O alvo é o chamado 'acesso remoto', modalidade em que companhias chinesas alugam capacidade computacional em centros de dados no exterior para contornar os controles de exportação. Analistas preveem atrasos e custos mais altos para o boom de data centers no Sudeste Asiático, que se apoiava fortemente na demanda chinesa. Pequim classificou a medida como coerção econômica, enquanto a Malásia orientou seus operadores a cumprir as novas exigências.",
+    "source_name": "CNBC",
+    "source_url": "https://www.cnbc.com/2026/11/18/nvidia-us-ai-chip-export-controls-data-centers-.html",
+    "tag": "Tecnologia"
+  },
+  {
+    "title": "V.tal amplia base de fibra, mas prejuízo cresce 80% no terceiro trimestre",
+    "summary": "A V.tal, maior rede neutra de fibra óptica do país, divulgou balanço do terceiro trimestre de 2026 com prejuízo líquido de R$ 678 milhões, cerca de 80% acima do registrado um ano antes. A receita líquida caiu 35%, para R$ 1,23 bilhão, reflexo principalmente do encerramento dos contratos com a Oi, até então sua maior cliente. Em contrapartida, o Ebitda subiu 13%, para R$ 364 milhões, com margem de 29%, e a base de banda larga cresceu tanto na rede neutra quanto na subsidiária Nio. Os números ilustram o desafio de reposicionar o modelo de infraestrutura compartilhada após a crise da Oi. O desempenho da V.tal é acompanhado de perto pelo mercado por ser referência para a consolidação e o compartilhamento de redes no setor de telecom brasileiro.",
+    "source_name": "Teletime",
+    "source_url": "https://teletime.com.br/17/11/2026/v-tal-prejuizo-terceiro-trimestre-2026/",
+    "tag": "Telecom"
+  },
+  {
+    "title": "Governo cria Sistema de Satélites de Defesa e Comunicações Estratégicas",
+    "summary": "Decreto publicado no Diário Oficial da União criou o Sistema de Satélites de Defesa e Comunicações Estratégicas, que passa a integrar os satélites de comunicação governamentais, incluindo o SGDC-1, em operação desde 2017. A governança ficará a cargo de comitês de quatro ministérios, com um comitê diretor presidido pelo Ministério das Comunicações como instância máxima de decisão estratégica. A norma prevê modernização da infraestrutura e transferência de tecnologia, mas não anuncia, por si só, a contratação de um novo satélite. Paralelamente, a Telebras trabalha na estruturação de um sucessor do SGDC, com financiamento pleiteado junto ao Banco do BRICS e horizonte de contratação em 2027. A iniciativa busca reforçar a soberania nas comunicações críticas do Estado em um cenário de crescente presença de constelações estrangeiras de órbita baixa no país.",
+    "source_name": "CNN Brasil",
+    "source_url": "https://www.cnnbrasil.com.br/ciencia/brasil-amplia-defesa-e-anuncia-novo-sistema-de-satelites-para-protecao-da-comunicacao-estrategica-nacional/",
+    "tag": "Telecom"
+  },
+  {
+    "title": "ANEEL abre consulta sobre sandbox do ONS que prevê cortes na geração distribuída sem ressarcimento",
+    "summary": "A diretoria da ANEEL aprovou a abertura de consulta pública sobre um sandbox regulatório proposto pelo ONS para testar cortes automáticos de geração distribuída, executados pelas distribuidoras, sem compensação financeira aos geradores. Inicialmente participariam Cemig, Copel, CPFL Paulista, Energisa Mato Grosso e Neoenergia Elektro, e a adesão de minigeradores seria obrigatória. O ONS sugere um teste de 12 meses, enquanto a área técnica da agência propõe até 24 meses, e a energia que deixar de ser injetada também não geraria créditos de compensação. O operador argumenta que pagar ressarcimento distorceria a avaliação técnica, mas o setor solar teme insegurança jurídica, lembrando parecer da AGU que questiona o chamado 'corte contábil' da MMGD. A discussão é central para o futuro da geração distribuída, que já soma dezenas de gigawatts no país e pressiona a operação do sistema em horários de pico solar.",
+    "source_name": "Canal Solar",
+    "source_url": "https://canalsolar.com.br/ons-cortes-gd-sem-ressarcimento-consumidores/",
+    "tag": "Energia"
+  }
+]
