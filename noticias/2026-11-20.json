@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Google lança Gemini 4 Neon, modelo intermediário que promete qualidade de topo com custo menor",
+    "summary": "O Google apresentou o Gemini 4 Neon, novo modelo intermediário da família Gemini 4, posicionado entre o Hydrogen (mais rápido e barato) e o Carbon (voltado às tarefas mais complexas e longas). Segundo a empresa, o Neon iguala ou supera o Carbon em qualidade geral, sendo cerca de três vezes mais rápido e custando 60% do preço. O modelo tem janela de contexto de 1 milhão de tokens e preço de US$ 3 por milhão de tokens de entrada e US$ 15 por milhão de saída, disponível na Gemini API, no Google AI Studio e para assinantes Pro e Ultra no app Gemini. Nos benchmarks divulgados pelo próprio Google, o Neon é comparado diretamente a Claude Opus 5.5 e GPT-6.2 Sol, com vantagem na maioria dos testes, embora o modelo da Anthropic ainda lidere em avaliações de programação agêntica. O lançamento reforça a guerra de preços entre os grandes laboratórios, que vem barateando rapidamente o acesso a modelos de alto desempenho para empresas.",
+    "source_name": "9to5Google",
+    "source_url": "https://9to5google.com/2026/11/18/gemini-4-neon-announcement/",
+    "tag": "IA"
+  },
+  {
+    "title": "Anthropic estreia na Nasdaq e fecha o primeiro dia 17% acima do preço do IPO",
+    "summary": "As ações da Anthropic começaram a ser negociadas na Nasdaq nesta quinta-feira (19), sob o ticker ANT, após a empresa precificar o IPO a US$ 83 por ação, acima da faixa indicativa de US$ 70 a US$ 78. Os papéis abriram a US$ 111,50, alta de 34% sobre o preço da oferta, chegaram a US$ 115,10 na máxima do dia e fecharam a US$ 97,17, ainda mais de 17% acima do valor do IPO. Com isso, a companhia passou a ser avaliada em cerca de US$ 1,76 trilhão, segundo a CNN. A oferta levantou US$ 81,3 bilhões e é a maior da história, num dia em que o índice Nasdaq recuou e as bolsas americanas tocaram mínimas de sete meses. A estreia é vista como termômetro do apetite dos investidores por empresas de IA generativa e pode abrir caminho para outros IPOs do setor.",
+    "source_name": "CNN",
+    "source_url": "https://www.cnn.com/2026/11/19/business/live-news/anthropic-ipo",
+    "tag": "IA"
+  },
+  {
+    "title": "Nvidia suspende envio de chips H200 licenciados para a China",
+    "summary": "A Nvidia confirmou que parou de enviar à China os chips de IA da geração Hopper, incluindo o H200, mesmo tendo recebido licenças de exportação do governo dos EUA. A informação veio à tona na teleconferência de resultados, quando a CEO interina Colette Kress afirmou que as projeções da empresa já excluem esses produtos, sem explicar o motivo nem dizer se a suspensão é definitiva. No trimestre anterior, as vendas licenciadas de Hopper para a China haviam rendido cerca de US$ 2,4 bilhões à companhia. Pequim também vinha restringindo as importações: segundo a Reuters, cerca de 600 mil chips H200 estavam parados em Hong Kong à espera de autorização para entrar no continente. A decisão aumenta a incerteza sobre o acordo de licenciamento negociado entre Washington e Pequim e ocorre em meio à pressão de parlamentares americanos por controles de exportação mais rígidos.",
+    "source_name": "U.S. News / Reuters",
+    "source_url": "https://www.usnews.com/news/top-news/articles/2026-11-18/nvidia-stops-shipping-us-approved-ai-chips-to-china",
+    "tag": "Tecnologia"
+  },
+  {
+    "title": "Citi passa a responsabilizar clientes por ações de agentes de IA de terceiros em suas contas",
+    "summary": "O Citi atualizou seu contrato de uso online com uma nova seção que torna o cliente integralmente responsável por tudo o que um agente de IA de terceiros fizer em sua conta, inclusive depois de um vazamento ou roubo de credenciais. A regra não vale para as ferramentas de IA oferecidas pelo próprio banco, que ficam explicitamente excluídas. Segundo o TechCrunch, o movimento segue políticas semelhantes anunciadas por JPMorgan e Bank of America em outubro, além de alertas recentes de Citizens Bank e PNC. Especialistas lembram que proteções federais ao consumidor não podem ser simplesmente renunciadas por contrato, mas sua aplicação a transações feitas por agentes autorizados pelo cliente ainda é nebulosa. O caso mostra como a chegada dos agentes autônomos ao varejo financeiro está obrigando bancos a redefinir responsabilidades, um debate que deve chegar também ao Open Finance brasileiro.",
+    "source_name": "TechCrunch",
+    "source_url": "https://techcrunch.com/2026/11/18/more-banks-says-customers-using-ai-agents-are-on-their-own-even-if-they-get-hacked/",
+    "tag": "Transformação Digital"
+  },
+  {
+    "title": "Satya Nadella explica plano de demissão voluntária para 60 mil funcionários da Microsoft",
+    "summary": "O CEO da Microsoft, Satya Nadella, defendeu publicamente o programa de desligamento voluntário oferecido em outubro a cerca de 60 mil funcionários, apresentado como alternativa a uma nova rodada de demissões em massa. Segundo ele, a empresa está se reorganizando para que todos usem IA no dia a dia e passem a gerenciar agentes, em vez de executar cada tarefa manualmente. Nadella negou que a Microsoft esteja simplesmente substituindo pessoas por IA e afirmou que a engenharia de software segue 'muito viva', citando o Cowork, agente do Microsoft 365 desenvolvido por uma equipe de apenas 11 pessoas apoiadas por IA. A empresa não divulgou quantos funcionários devem aceitar a oferta. O caso é um dos exemplos mais claros de como grandes corporações estão redesenhando estruturas e funções em torno da IA, com impactos diretos sobre gestão de pessoas e cultura organizacional.",
+    "source_name": "TechCrunch",
+    "source_url": "https://techcrunch.com/2026/11/18/microsoft-ceo-satya-nadella-explains-why-he-asked-60k-employees-to-quit/",
+    "tag": "Transformação Digital"
+  },
+  {
+    "title": "Projeto no Senado propõe contribuição de 3% sobre receita de big techs e empresas de IA",
+    "summary": "O líder do governo no Congresso, senador Randolfe Rodrigues (PT-AP), apresentou o PLP 308/2026, que cria a Contribuição Social sobre Serviços Digitais (CSSD), com alíquota de 3% sobre a receita bruta de grandes empresas de tecnologia. A cobrança atingiria companhias com faturamento global acima de R$ 3 bilhões ou superior a R$ 30 milhões no Brasil, nos segmentos de publicidade digital, redes sociais, streaming, buscadores e inteligência artificial, incluindo serviços de IA generativa. A arrecadação seria destinada por cinco anos a programas federais de renda básica. O texto se inspira em modelos adotados por países como França e Espanha, mas não estima quanto a contribuição renderia aos cofres públicos. A proposta surge em meio ao pacote de ajuste fiscal do governo e deve reacender o debate sobre tributação digital e seus efeitos sobre preços e investimentos em IA no país.",
+    "source_name": "Mobile Time",
+    "source_url": "https://www.mobiletime.com.br/noticias/18/11/2026/senador-taxa-big-techs-3/",
+    "tag": "Tecnologia"
+  },
+  {
+    "title": "Anatel confirma R$ 375 milhões para data center de IA operado pela Telebras",
+    "summary": "A Anatel formalizou a destinação de R$ 375 milhões para a construção de um data center voltado à inteligência artificial, que será operado pela Telebras. A agência, porém, determinou que, antes de qualquer contratação, seja identificada formalmente a fonte de recursos que vai financiar a operação contínua da estrutura. A exigência ocorre num momento de forte aperto orçamentário: a própria Anatel alertou que pode ficar sem dinheiro para despesas essenciais e pediu o desbloqueio de R$ 30 milhões, com nova revisão prevista para 24 de novembro. O projeto se insere na estratégia federal de ampliar a capacidade computacional soberana para IA. A cautela da agência evidencia o desafio de sustentar financeiramente infraestruturas digitais públicas para além do investimento inicial.",
+    "source_name": "Convergência Digital",
+    "source_url": "https://convergenciadigital.com.br/governo/anatel-confirma-data-center-de-ia-com-investimento-de-r-375-milhoes-na-telebras",
+    "tag": "Telecom"
+  },
+  {
+    "title": "Associações do setor solar lançam abaixo-assinado para adiar votação da Tarifa Hora Certa na ANEEL",
+    "summary": "Entidades ligadas à geração distribuída e à energia solar lançaram um abaixo-assinado pedindo que a ANEEL adie a votação da chamada Tarifa Hora Certa, prevista para dezembro, e amplie a discussão com consumidores e pequenos negócios. A proposta da agência cria uma tarifa horária, mais cara no horário de pico, com enquadramento automático de consumidores de baixa tensão com consumo médio a partir de 500 kWh/mês, alcançando cerca de 5,7 milhões de unidades. A implantação seria gradual, a partir de abril de 2028, e consumidores de baixa renda ficariam de fora. O setor teme impactos sobre a atratividade de sistemas fotovoltaicos, cuja geração se concentra fora do pico noturno, e critica o prazo curto de debate. A mobilização se soma a outras consultas recentes da ANEEL sobre GD, como as regras para energia solar por assinatura e cortes de geração, que vêm tensionando a relação entre regulador e setor.",
+    "source_name": "Canal Solar",
+    "source_url": "https://canalsolar.com.br/associacoes-abaixo-assinado-votacao-tarifa-hora-certa/",
+    "tag": "Energia"
+  }
+]
