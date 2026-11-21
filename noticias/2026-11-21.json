@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Claude amplia limite histórico sobre zeros da função zeta, e hipótese de Riemann volta ao centro do debate sobre IA na matemática",
+    "summary": "A Anthropic divulgou que um modelo Claude, ainda não lançado, elevou de 41,6% para 67,2% a proporção mínima comprovada de zeros da função zeta de Riemann que estão sobre a chamada linha crítica, um avanço sobre um limite que levou décadas de trabalho humano para ser construído. A empresa deixa claro que o resultado não é uma prova da hipótese de Riemann, problema em aberto há 167 anos: o modelo tentou atacar a hipótese diretamente e não conseguiu, e o novo limite surgiu como subproduto dessa tentativa. O trabalho veio acompanhado de uma formalização em Lean, verificável por máquina, e foi examinado por matemáticos da própria Anthropic e por especialistas externos, embora ainda não tenha passado por revisão por pares tradicional. Segundo o TechCrunch, a semana também teve a divulgação de uma suposta prova humana da hipótese, que igualmente aguarda verificação. O episódio mostra a IA saindo da resolução de exercícios para contribuir com pesquisa matemática de fronteira, e reforça a importância da verificação formal para separar avanço real de alegação.",
+    "source_name": "TechCrunch",
+    "source_url": "https://techcrunch.com/2026/11/20/ai-claimed-a-solution-to-the-167-year-old-riemann-hypothesis-and-a-human-did-too/",
+    "tag": "IA"
+  },
+  {
+    "title": "Google dá ao Gemini a capacidade de operar o Mac pelo usuário, com apps rodando em segundo plano",
+    "summary": "O Google adicionou o recurso de computer use ao aplicativo do Gemini para macOS, permitindo que o assistente execute tarefas diretamente no Mac, navegando por sites, arquivos e aplicativos. Diferentemente de soluções que assumem o controle da tela, o Gemini trabalha em uma janela separada, deixando a tela e o cursor livres para o usuário continuar trabalhando. O usuário escolhe quais aplicativos o agente pode acessar e pode pausar, interromper ou aprovar as ações antes de serem executadas. O recurso exige assinatura Google AI Plus, Pro ou Ultra e chega inicialmente em inglês nos Estados Unidos. Com OpenAI, Anthropic e Meta já oferecendo agentes de desktop, o movimento coloca o Google na disputa pelo agente que executa trabalho no computador pessoal, uma fronteira central da IA agêntica para produtividade.",
+    "source_name": "TechCrunch",
+    "source_url": "https://techcrunch.com/2026/11/19/google-gives-gemini-the-ability-to-use-your-mac-for-you/",
+    "tag": "Tecnologia"
+  },
+  {
+    "title": "OpenAI começa a testar agentes Dots no ChatGPT Plus, com o Brasil entre os países incluídos",
+    "summary": "A OpenAI iniciou na quinta-feira (19) os testes dos Dots, nova funcionalidade de agentes no ChatGPT, com um grupo pequeno de assinantes do plano Plus. O Brasil está entre os países que participam dessa fase inicial, e o acesso vale para quem paga o plano Plus, que custa R$ 99,90 por mês no país. A inclusão do Brasil logo no teste reforça a relevância do mercado brasileiro, um dos maiores em número de usuários do ChatGPT. O lançamento acontece em meio à corrida das grandes empresas de IA por agentes que executam tarefas de forma autônoma, e não apenas respondem perguntas. Para empresas e profissionais brasileiros, o teste é uma oportunidade de avaliar cedo como esses agentes se encaixam em fluxos de trabalho reais.",
+    "source_name": "TV Sim Brasil",
+    "source_url": "https://tvsimbrasil.com.br/brasil/tecnologia/noticia/2026/11/20/openai-testa-agentes-dots-chatgpt-plus-brasil",
+    "tag": "IA"
+  },
+  {
+    "title": "Gartner: só 13% dos CIOs dizem que suas empresas obtiveram valor significativo ou transformacional com IA",
+    "summary": "A pesquisa Gartner 2027 CIO and Technology Executive Agenda, feita com 2.002 CIOs e executivos de tecnologia entre maio e julho de 2026, mostra que apenas 13% relatam ter obtido valor significativo ou transformacional da inteligência artificial até agora. O levantamento se soma a outros dados recentes da consultoria: só 3% das empresas superam suas metas de redução de custos com IA, enquanto 38% já gastaram mais do que planejavam. Mesmo assim, 85% das organizações pretendem aumentar os investimentos em IA em 2027, o que evidencia a distância entre expectativa e resultado. Para a Gartner, o gargalo está menos na tecnologia e mais em governança, dados e capacidade de escalar casos de uso entre áreas de negócio. A mensagem para líderes de transformação digital é clara: o próximo ciclo de investimento precisará ser medido por retorno, e não só por adoção.",
+    "source_name": "Portal Information Management",
+    "source_url": "https://docmanagement.com.br/11/18/2026/pesquisa-do-gartner-revela-que-apenas-13-dos-cios-afirmam-que-suas-empresas-obtiveram-valor-significativo-ou-transformacional-com-a-inteligencia-artificial/",
+    "tag": "Transformação Digital"
+  },
+  {
+    "title": "Anatel propõe antecipar a autenticação obrigatória de chamadas para outubro de 2027",
+    "summary": "O Conselho Diretor da Anatel aprovou por unanimidade, em 19 de novembro, uma consulta pública que propõe antecipar o prazo para autenticação de todas as chamadas telefônicas para 31 de outubro de 2027, antes previsto para novembro de 2028. A mudança altera o Regulamento Geral de Direitos do Consumidor de Serviços de Telecomunicações para implementar a Medida Provisória nº 1.396, de outubro de 2026, que traz medidas contra fraudes e uso abusivo das redes. Pela proposta, chamadas não autenticadas deverão ser bloqueadas antes de chegar ao aparelho, com exceções ainda a definir, e a gestão da autenticação poderá ficar a cargo de uma entidade técnica credenciada pela agência. A Anatel classificou o tema como urgente e o incluiu na Agenda Regulatória 2027-2028, com prazo legal para editar a regra até 12 de dezembro de 2026. Para operadoras e áreas de OSS/BSS, a antecipação significa acelerar investimentos em STIR/SHAKEN, bases de identificação e integração de sistemas.",
+    "source_name": "TELETIME",
+    "source_url": "https://teletime.com.br/19/11/2026/anatel-mp-autenticacao/",
+    "tag": "Telecom"
+  },
+  {
+    "title": "Anatel formaliza espectro na banda S para Starlink e AST SpaceMobile oferecerem conexão direta a celulares",
+    "summary": "A Anatel formalizou nesta semana as autorizações para que Starlink, da SpaceX, e AST SpaceMobile utilizem blocos de 15+15 MHz na banda S no Brasil, voltados ao serviço de conexão direta de satélites a celulares (direct-to-device). A decisão encerra uma disputa regulatória de meses: a Starlink pedia 30+30 MHz, toda a faixa disponível, enquanto a agência chegou a considerar blocos de 10+10 MHz por operador. A AST SpaceMobile também obteve uso secundário de até 10+10 MHz na faixa de 700 MHz por meio de acordos com operadoras regionais. Operadoras móveis tradicionais, como a Claro, defendiam limites menores por temer a concorrência dos satélites. A medida abre caminho para cobertura móvel em áreas remotas do país e pressiona as teles a redefinirem estratégias de cobertura e parcerias com operadores de satélite.",
+    "source_name": "TELETIME",
+    "source_url": "https://teletime.com.br/19/11/2026/starlink-ast-spacemobile-banda-s/",
+    "tag": "Telecom"
+  },
+  {
+    "title": "ANEEL abre consulta para liquidar excedentes da geração distribuída no mercado de curto prazo",
+    "summary": "A diretoria da ANEEL aprovou em 17 de novembro uma consulta pública de 45 dias, aberta a contribuições de 19 de novembro a 4 de janeiro de 2027, sobre o tratamento dos excedentes de energia da micro e minigeração distribuída (MMGD) que circulam nas redes das distribuidoras. A proposta prevê que esses volumes injetados além da carga local sejam liquidados no Mercado de Curto Prazo pelo PLD, com eventuais receitas revertidas para reduzir as tarifas dos consumidores. Há duas alternativas em análise: uma apenas reconhece contabilmente os fluxos de energia, e outra permite também a monetização dos excedentes. Segundo a CCEE, as assimetrias contábeis ligadas a esses excedentes causaram impacto de R$ 225 milhões em 2025, e a área técnica sugere uma correção provisória a partir da contabilização de janeiro de 2027. Para o setor solar, que soma dezenas de gigawatts em GD, a definição mexe com o equilíbrio econômico entre consumidores-geradores, distribuidoras e demais consumidores.",
+    "source_name": "Cenário Energia",
+    "source_url": "https://cenarioenergia.com.br/2026/11/17/aneel-consulta-liquidacao-excedentes-geracao-distribuida-mcp/",
+    "tag": "Energia"
+  },
+  {
+    "title": "SolarEdge encerra vendas diretas e operações locais no Brasil, com últimos pedidos até 30 de novembro",
+    "summary": "A fabricante israelense SolarEdge comunicou o fim das vendas diretas e das operações locais no Brasil, onde mantinha presença desde 2018. Os últimos pedidos de compra devem ser enviados até 30 de novembro de 2026, com entregas até 18 de dezembro, e a empresa também encerra renovações de certificação de produtos, promoções e programas locais. Produtos elegíveis vendidos antes da data-limite continuarão com garantia, mas a companhia ainda não detalhou como serão feitas as trocas a partir de 2027 nem como os distribuidores seguirão vendendo a marca. A decisão surpreende porque, em março, a SolarEdge havia nomeado um novo country manager e reforçado a relação com instaladores, e segue a sinalização do CEO Shuki Nir de sair de mercados com desempenho inferior. A saída reflete a pressão sobre margens no mercado global de equipamentos solares e deixa instaladores e clientes brasileiros atentos ao suporte de longo prazo dos inversores e otimizadores já instalados.",
+    "source_name": "Canal Solar",
+    "source_url": "https://canalsolar.com.br/solaredge-comunica-fim-das-vendas-diretas-e-das-operacoes-locais-no-brasil/",
+    "tag": "Energia"
+  }
+]
