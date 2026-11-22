@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Estreia bilionária na bolsa reacende dúvidas sobre o compromisso da Anthropic com a segurança da IA",
+    "summary": "Dias depois da estreia na Nasdaq, em 19 de novembro, com uma oferta recorde de US$ 81,3 bilhões, a Anthropic virou alvo de críticos que questionam se a pressão de acionistas públicos vai conviver com a missão de segurança que sempre definiu a empresa. Reportagem da NPR ouviu especialistas que veem no IPO um teste real para a estrutura de governança da companhia, criada justamente para blindar decisões de segurança de interesses puramente comerciais. O debate ganha peso porque a Anthropic desenvolve modelos de fronteira como o Mythos Preview, cuja capacidade em cibersegurança levou a empresa a restringir o acesso a parceiros selecionados. Com resultados trimestrais e expectativas de crescimento agora sob escrutínio do mercado, cada decisão de adiar ou limitar um lançamento terá custo visível. Para o setor, o caso vai mostrar se compromissos voluntários de segurança resistem à lógica de mercado de capitais.",
+    "source_name": "NPR",
+    "source_url": "https://www.npr.org/2026/11/21/nx-s1-6048678/anthropic-ipo-mission-ai-safety",
+    "tag": "IA"
+  },
+  {
+    "title": "Campanhas ARTEX roubam chaves de gateways de IA para financiar agentes maliciosos",
+    "summary": "Uma nota de pesquisa da Cloud Security Alliance, publicada em 18 de novembro, descreve as campanhas ARTEX, que coletam chaves de API armazenadas em gateways de IA como LiteLLM e One API, muito usados por empresas para centralizar o acesso a diversos modelos. Com as credenciais em mãos, os atacantes passam a usar a conta da vítima para rodar seus próprios agentes, transferindo o custo de computação para quem foi invadido — por isso a CSA chama o fenômeno de 'agentes autofinanciados'. A Amazon também documentou uma campanha semelhante, em que agentes automatizados vasculham ambientes expostos atrás de chaves de IA, segundo o The Hacker News. O alerta mostra que os gateways, criados para dar controle e governança ao uso de IA, viraram pontos únicos de falha. Para times de segurança, a recomendação é tratar essas chaves como credenciais críticas, com rotação, limites de gasto e monitoramento de uso anômalo.",
+    "source_name": "Cloud Security Alliance",
+    "source_url": "https://labs.cloudsecurityalliance.org/research/csa-research-note-self-funding-agents-ai-gateway-key-harvest/",
+    "tag": "IA"
+  },
+  {
+    "title": "SEC abre investigação civil sobre divulgações da Nvidia após a saída de Jensen Huang",
+    "summary": "A SEC, órgão regulador do mercado de capitais dos EUA, abriu uma investigação civil para apurar se a Nvidia enganou investidores em suas divulgações, segundo reportagem do Wall Street Journal repercutida por diversos veículos. Um dos focos seria a forma como a empresa reporta vendas na Ásia — no ano passado, a Nvidia deixou de detalhar separadamente as vendas para Singapura. Nem a SEC nem a Nvidia confirmaram oficialmente o inquérito, e não há ação formal anunciada, mas as ações caíram com a notícia e acumulam queda de mais de 10% desde a renúncia de Huang, em 12 de novembro. A procuradoria-geral da Califórnia também estaria avaliando o caso. Para o mercado de IA, a investigação adiciona incerteza à principal fornecedora de chips do setor justamente em meio à transição de comando.",
+    "source_name": "InvestmentNews",
+    "source_url": "https://www.investmentnews.com/equities/embattled-nvidia-faces-sec-probe-as-california-attorney-general-eyes-action/269054",
+    "tag": "Tecnologia"
+  },
+  {
+    "title": "Google libera de graça o Gemini Tasks, agente que liga para empresas e faz compras pelo usuário",
+    "summary": "O Google passou a oferecer gratuitamente o Gemini Tasks — antes chamado Gemini Spark e restrito a assinantes — nos EUA, Japão, Coreia do Sul, Canadá, Austrália e Índia, alcançando a base de mais de 1 bilhão de usuários mensais do Gemini nesses países. O recurso, movido pelo modelo Gemini 4 Hydrogen, executa tarefas de ponta a ponta: agenda serviços, organiza listas de compras e administra calendários. Nos EUA, ele também pode ligar para estabelecimentos via tecnologia Duplex, acessar sites com login e preparar compras pelo Google Pay dentro de um limite de gastos definido, sempre com aprovação final do usuário. O anúncio foi feito por Josh Woodward, vice-presidente responsável pelo app Gemini. A gratuidade acirra a disputa com OpenAI e Meta pelo agente pessoal de uso massivo e pressiona empresas a preparar seus canais para atender clientes representados por IA.",
+    "source_name": "TechRepublic",
+    "source_url": "https://www.techrepublic.com/article/news-google-gemini-tasks-free-six-countries/",
+    "tag": "Tecnologia"
+  },
+  {
+    "title": "Dragos planta 2 milhões de segredos falsos em prompts e encontra ao menos três provedores de IA vazando dados",
+    "summary": "A Dragos, especializada em segurança industrial, enviou entre julho e novembro cerca de dois milhões de prompts com URLs e credenciais falsas rastreáveis (canary tokens) a serviços de IA amplamente usados, para ver onde esses dados reapareceriam. O estudo, conduzido pelo diretor de pesquisa HD Moore, encontrou indícios de que pelo menos três provedores foram expostos: segredos dos prompts foram usados em tentativas de acesso aos sistemas de teste e a contas AWS-isca da empresa, inclusive com tentativas de login SSH como root. Um mesmo adversário parece ter comprometido dois provedores ao mesmo tempo, e prompts enviados a serviços americanos chegaram a organizações de IA chinesas. A Dragos lembra que provedores costumam reter prompts por dias, meses ou indefinidamente, para treino, segurança ou negócios. Para empresas, a lição é clara: nunca colar credenciais em prompts e incluir os provedores de IA na gestão de risco da cadeia de fornecedores.",
+    "source_name": "Dragos",
+    "source_url": "https://www.dragos.com/blog/ai-supply-chain-security-canary-tokens",
+    "tag": "Transformação Digital"
+  },
+  {
+    "title": "Anatel autoriza Hughes a usar a faixa de 700 MHz em três municípios de Mato Grosso",
+    "summary": "A Anatel autorizou a Hughes, operadora de banda larga via satélite, a usar dois canais de 5 MHz na faixa de 700 MHz em três municípios de Mato Grosso, com validade até 21 de setembro de 2031. A faixa de 700 MHz é valorizada pelo grande alcance e boa penetração do sinal, o que a torna ideal para cobrir áreas rurais e de baixa densidade, como as do agronegócio mato-grossense. A decisão indica um movimento da Hughes para complementar a conectividade satelital com redes terrestres em regiões onde a demanda por conexão no campo cresce rapidamente. O uso secundário e regional de espectro tem sido uma via da agência para ampliar a cobertura fora dos grandes centros. Para o setor, o caso reforça a tendência de modelos híbridos satélite-terrestre na disputa pela conectividade rural.",
+    "source_name": "Telesíntese",
+    "source_url": "https://telesintese.com.br/anatel-autoriza-hughes-a-usar-700-mhz-em-tres-municipios-de-mato-grosso",
+    "tag": "Telecom"
+  },
+  {
+    "title": "Aldeia indígena em Maricá ganha sistema solar off-grid de 210 kWp com autonomia de até cinco dias",
+    "summary": "A Aldeia Céu Azul, em Maricá (RJ), recebeu um sistema fotovoltaico isolado da rede de 210 kWp, com cerca de 300 módulos solares, cinco inversores híbridos e 2.090 kWh de armazenamento em aproximadamente 100 baterias de lítio. O projeto vai abastecer 11 moradias, a escola, o posto de saúde e a iluminação pública da comunidade, garantindo energia por até cinco dias mesmo sem sol. A iniciativa foi destacada pelo Canal Solar e pela PV Magazine Brasil. Projetos off-grid com baterias vêm se tornando a solução mais viável para comunidades onde a extensão da rede é cara ou instável. O caso também mostra o barateamento do armazenamento, que começa a viabilizar sistemas com autonomia de vários dias para serviços essenciais.",
+    "source_name": "Click Petróleo e Gás",
+    "source_url": "https://clickpetroleoegas.com.br/aldeia-indigena-no-rio-instala-300-paineis-solares-e-100-baterias-de-litio-para-manter-casas-escola-e-posto-de-saude-com-energia-por-ate-cinco-dias-fpsv/",
+    "tag": "Energia"
+  },
+  {
+    "title": "ANEEL revoga outorgas de térmicas e prepara novo encargo sobre benefícios da geração distribuída a partir de 2027",
+    "summary": "A ANEEL cancelou outorgas de usinas térmicas e propôs a criação de uma nova cobrança sobre os benefícios da geração distribuída (GD) a partir de 2027, com base na Nota Técnica Conjunta 17/2026. A proposta aplica o Encargo Complementar de Recursos (ECR), instituído pela Lei 15.269/2025 e foi estruturada pela agência para incidir sobre os benefícios hoje concedidos à GD. A medida se soma a uma série de iniciativas recentes da agência sobre GD, como as consultas sobre energia solar por assinatura, liquidação de excedentes e cortes automáticos de geração. Para o setor solar, o encargo pode reduzir a atratividade econômica de novos sistemas e alterar o cálculo de retorno de quem pretende investir. Os detalhes da cobrança ainda devem passar por etapas de participação pública antes de valer.",
+    "source_name": "NC News",
+    "source_url": "https://ncnews.com.br/2026/11/16/aneel-revoga-termicas-prepara-novo-encargo-geracao/",
+    "tag": "Energia"
+  }
+]
