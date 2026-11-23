@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Comitê do Parlamento britânico pede lei de segurança de IA e um regulador com poder para pausar modelos",
+    "summary": "O Comitê de Negócios, Inovação, Ciência e Comércio da Câmara dos Comuns do Reino Unido publicou o relatório 'Guardrails for growth: AI safety and security', que recomenda um AI Safety and Security Bill e a criação de um regulador estatutário separado do AI Security Institute (AISI). Pela proposta, o novo órgão teria poder para acessar modelos e sistemas, exigir verificação independente de alegações de segurança, punir recusas ou atrasos injustificados e manter monitoramento contínuo. Os parlamentares também querem que o regulador possa pausar treinamentos de alto risco, adiar ou proibir lançamentos e suspender serviços. O AISI continuaria como braço técnico, fornecendo evidências, enquanto a fiscalização ficaria com a nova autoridade. A resposta formal do governo ainda está pendente, mas, se aceita, a recomendação marcaria a passagem dos testes voluntários de IA de fronteira para um regime obrigatório, um precedente relevante para outros países que discutem regulação, inclusive o Brasil.",
+    "source_name": "LexisNexis",
+    "source_url": "https://www.lexisnexis.co.uk/legal/news/business-innovation-science-trade-committee-recommends-statutory-ai-powers-rights-safeguards",
+    "tag": "IA"
+  },
+  {
+    "title": "Google: uso de agentes de IA por hackers atinge um 'limiar significativo'",
+    "summary": "O Google Threat Intelligence Group (GTIG), em conjunto com a Mandiant, publicou uma nova edição do seu AI Threat Tracker afirmando que a atividade maliciosa com agentes de IA cruzou um limiar importante. Segundo o relatório, vários grupos, de espionagem ligada a Estados a quadrilhas com motivação financeira, já abusam de ferramentas abertas de pentest agêntico e de frameworks multiagentes ofensivos, como ARTEX, CAIRN, CyberStrikeAI e PentAGI. O Google pondera que ainda não observou pipelines totalmente autônomos sendo usados contra alvos em larga escala. Mesmo assim, projeta que ataques agênticos sofisticados e totalmente autônomos devem surgir nos próximos meses. Para as empresas, o recado é que a velocidade de varredura, roubo de credenciais e exploração tende a crescer, o que exige defesa também automatizada e governança rígida sobre chaves e acessos de IA.",
+    "source_name": "Google Cloud Threat Intelligence",
+    "source_url": "https://cloud.google.com/blog/topics/threat-intelligence/agentic-threat-activity-crosses-a-significant-threshold",
+    "tag": "Tecnologia"
+  },
+  {
+    "title": "Hack Brasil 2026 reúne mais de R$ 2 milhões em benefícios para projetar talentos brasileiros de IA",
+    "summary": "A Firecrawl, startup norte-americana com fundadores de origem brasileira, organiza o Hack Brasil 2026, maratona de desenvolvimento de aplicações de inteligência artificial. A iniciativa mobiliza mais de R$ 2 milhões em prêmios e benefícios, como créditos de ferramentas e infraestrutura para os participantes. O encerramento presencial está marcado para 12 de dezembro, em São Paulo. A proposta é dar visibilidade a desenvolvedores e equipes brasileiras e aproximá-los do mercado internacional de IA. O evento reflete a disputa global por talentos na área e o interesse crescente de empresas estrangeiras em recrutar e fomentar a comunidade técnica do país.",
+    "source_name": "Brasil Inovador",
+    "source_url": "https://brasilinovador.com.br/hack-brasil-2026-mobiliza-r-2-milhoes-em-beneficios-e-projeta-talentos-nacionais-de-inteligencia-artificial-no-mercado-externo/",
+    "tag": "IA"
+  },
+  {
+    "title": "Inovabra, do Bradesco, abre agenda corporativa com foco em IA, reforma tributária e saúde",
+    "summary": "O Inovabra, ecossistema de coinovação do Bradesco, realiza de 23 a 25 de novembro uma série de encontros presenciais em São Paulo voltados a empresas e startups. A programação gira em torno de três eixos: inteligência artificial, reforma tributária e saúde. A abertura fica a cargo de um desafio de IA generativa conduzido pela Capgemini, com foco em aplicações práticas para negócios. A combinação de temas mostra como as grandes companhias brasileiras estão tratando a IA não como projeto isolado, mas como parte da adaptação a mudanças regulatórias e operacionais, como a nova tributação sobre consumo. Iniciativas de inovação aberta como essa têm sido um dos principais canais para grandes empresas testarem soluções de IA com startups antes de escalar.",
+    "source_name": "Brasil Inovador",
+    "source_url": "https://brasilinovador.com.br/inovabra-anuncia-agenda-corporativa-de-novembro-de-2026-com-foco-em-ia-reforma-tributaria-e-saude/",
+    "tag": "Transformação Digital"
+  },
+  {
+    "title": "Senado aprova PL dos Postes, que limita aluguel cobrado das teles, e texto vai à sanção",
+    "summary": "O Senado aprovou em votação simbólica o PL 3.220/2019, conhecido como PL dos Postes, que cria um marco para o compartilhamento de postes entre distribuidoras de energia e empresas de telecomunicações. O texto prevê que a ANEEL defina um teto para o aluguel dos pontos de fixação, com metodologia elaborada junto à Anatel, e que nas áreas rurais o valor máximo seja metade do urbano. O projeto também prevê punições para ocupações sem contrato e prazos para regularizar a infraestrutura, e manteve a possibilidade de as distribuidoras explorarem comercialmente os próprios postes. A proposta segue agora para sanção presidencial, e as operadoras, representadas pela Conexis, aguardam o decreto regulamentador e a nova resolução conjunta Anatel-ANEEL. O tema é antigo e crítico para o setor, pois o custo e a desordem nos postes afetam diretamente a expansão da fibra óptica no país.",
+    "source_name": "Teletime",
+    "source_url": "https://teletime.com.br/18/11/2026/senado-aprova-pl-dos-postes/",
+    "tag": "Telecom"
+  },
+  {
+    "title": "BTG vê sentido estratégico na possível compra da Vero pela Vivo, mesmo com prêmio elevado",
+    "summary": "A Telefônica Brasil, dona da Vivo, avalia a compra da provedora de fibra Vero por cerca de 1 bilhão de euros, algo próximo de R$ 6,3 bilhões, segundo reportagens baseadas em informações do jornal espanhol Expansión. A Vivo afirma que as conversas são preliminares e não vinculantes e que não há decisão sobre uma oferta. Em análise, o BTG Pactual considerou o valor acima dos múltiplos praticados no mercado, mas avaliou que a aquisição faria sentido ao ampliar a oferta convergente da operadora. A Vero tem cerca de 1,3 milhão de assinantes de banda larga e receita líquida de R$ 1,7 bilhão em 12 meses, e o negócio aproximaria a Vivo da Claro, líder em banda larga fixa. O movimento confirma a tendência de consolidação dos provedores regionais de fibra pelas grandes teles.",
+    "source_name": "Teletime",
+    "source_url": "https://teletime.com.br/17/11/2026/btg-pactual-r-63-bi-pela-vero-faria-sentido-para-vivo-apesar-de-premio/",
+    "tag": "Telecom"
+  },
+  {
+    "title": "ANEEL propõe nova metodologia de curtailment que reduz em 10 TWh o ressarcimento a eólicas e solares",
+    "summary": "A ANEEL apresentou a Nota Técnica 183/2026, que redefine quais cortes de geração (curtailment) podem ser ressarcidos a usinas eólicas e solares, com base na Lei 15.269/2025. Segundo a reportagem, a mudança não altera o volume físico de energia cortada, mas reduz em cerca de 10 TWh a parcela que poderia ser cobrada via encargos. A proposta chega depois de a diretoria ter aprovado, em outubro, o rateio dos custos dos cortes entre eólicas e solares, com hidrelétricas incluídas em fase posterior. Os cortes se tornaram um dos maiores problemas do setor renovável, especialmente no Nordeste, onde a geração supera a capacidade de escoamento da rede. Para investidores em usinas solares, a nova regra significa mais risco de receita e tende a pesar nas decisões sobre novos projetos.",
+    "source_name": "Cenário Energia",
+    "source_url": "https://cenarioenergia.com.br/2026/11/16/aneel-metodologia-curtailment-corta-10-twh-ressarcimento/",
+    "tag": "Energia"
+  },
+  {
+    "title": "CCEE, EPE e ONS abrem código da plataforma que vai substituir NEWAVE e DECOMP até 2028",
+    "summary": "A CCEE, a EPE e o ONS abriram o código-fonte da nova plataforma computacional que deve substituir os modelos NEWAVE e DECOMP, usados no planejamento da operação e na formação do preço da energia (PLD). O código está em um repositório público no GitHub, com titularidade compartilhada entre as três instituições, que também cuidarão da governança técnica do desenvolvimento. Agentes de mercado, consultorias, universidades e pesquisadores podem rodar simulações e propor contribuições antes da adoção oficial, prevista para janeiro de 2028, após validação e aprovação regulatória. A transição deve incluir um período de execução em paralelo com os modelos atuais. Para geradores solares e comercializadoras, a mudança é relevante porque o novo modelo vai influenciar despacho, preços e o tratamento das fontes renováveis intermitentes.",
+    "source_name": "Cenário Energia",
+    "source_url": "https://cenarioenergia.com.br/2026/11/17/ccee-epe-e-ons-abrem-codigo-de-nova-plataforma-que-substituira-newave-e-decomp-ate-2028/",
+    "tag": "Energia"
+  }
+]
