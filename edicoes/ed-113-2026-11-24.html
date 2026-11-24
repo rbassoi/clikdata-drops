@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CLIKDATA DROPS — Edição #113 - Novembro 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0f0f0f;
+    --paper: #f5f0e8;
+    --accent: #c8401a;
+    --accent2: #1a3c5e;
+    --muted: #7a7060;
+    --rule: #d4cfc4;
+    --tag-bg: #1a3c5e;
+    --tag-color: #f5f0e8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #e8e3d8;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrapper {
+    max-width: 680px;
+    margin: 40px auto;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    box-shadow: 4px 4px 0 #c4bfb4, 8px 8px 0 #b4afa4;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    border-bottom: 3px double var(--ink);
+    padding: 0;
+    position: relative;
+  }
+
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 32px 10px;
+    border-bottom: 1px solid var(--rule);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  .masthead {
+    padding: 28px 32px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--ink);
+    position: relative;
+  }
+
+  .masthead::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--accent);
+    margin: 0 auto 16px;
+  }
+
+  .masthead h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1;
+    color: var(--ink);
+  }
+
+  .masthead h1 span {
+    color: var(--accent);
+  }
+
+  .tagline {
+    margin-top: 8px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .edition-bar {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 10px 32px;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  /* ── INTRO ── */
+  .intro {
+    padding: 28px 32px 24px;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .intro-dropcap {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 0.85;
+    color: var(--accent);
+    float: left;
+    margin-right: 4px;
+    margin-top: 6px;
+  }
+
+  .intro p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: #2a2520;
+  }
+
+  /* ── SECTION HEADER ── */
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 32px 0;
+    margin-bottom: 4px;
+  }
+
+  .section-flag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    background: var(--tag-bg);
+    color: var(--tag-color);
+    padding: 4px 10px;
+    white-space: nowrap;
+  }
+
+  .section-flag.red { background: var(--accent); }
+
+  .section-rule {
+    flex: 1;
+    height: 1px;
+    background: var(--ink);
+  }
+
+  /* ── STORY CARD ── */
+  .story {
+    padding: 20px 32px;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+  }
+
+  .story:last-of-type { border-bottom: none; }
+
+  .story-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .story-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 2px 7px;
+  }
+
+  .story-source {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+  }
+
+  .story h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+
+  .story h2 em {
+    font-style: italic;
+    color: var(--accent2);
+  }
+
+  .story p {
+    font-size: 14px;
+    line-height: 1.72;
+    color: #2a2520;
+  }
+
+  .story .number-callout {
+    float: right;
+    margin: 0 0 8px 18px;
+    text-align: center;
+    border: 2px solid var(--ink);
+    padding: 12px 16px;
+    min-width: 88px;
+  }
+
+  .story .number-callout .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--accent);
+    display: block;
+    line-height: 1;
+  }
+
+  .story .number-callout .num-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 4px;
+  }
+
+  /* ── DIVIDER ── */
+  .section-divider {
+    border: none;
+    border-top: 3px double var(--ink);
+    margin: 8px 32px 0;
+  }
+
+  /* ── DESTAQUE BRASIL ── */
+  .brasil-strip {
+    background: var(--accent2);
+    color: var(--paper);
+    padding: 6px 32px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .brasil-strip::before {
+    content: '▶';
+    font-size: 8px;
+  }
+
+  /* ── STAT ROW ── */
+  .stat-row {
+    display: flex;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .stat-item {
+    flex: 1;
+    padding: 20px 24px;
+    border-right: 1px solid var(--rule);
+    text-align: center;
+  }
+
+  .stat-item:last-child { border-right: none; }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--accent2);
+    display: block;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 6px;
+    line-height: 1.4;
+  }
+
+  /* ── PULLQUOTE ── */
+  .pullquote {
+    margin: 0;
+    padding: 24px 40px;
+    border-top: 2px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+    background: #ede8de;
+  }
+
+  .pullquote blockquote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 19px;
+    line-height: 1.5;
+    color: var(--ink);
+    text-align: center;
+  }
+
+  .pullquote cite {
+    display: block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: center;
+    font-style: normal;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 28px 32px;
+    border-top: 3px double var(--accent);
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333;
+  }
+
+  .footer-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 900;
+  }
+
+  .footer-brand span { color: var(--accent); }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: right;
+  }
+
+  .footer-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: #888;
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .footer-bottom {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: #555;
+    letter-spacing: 0.06em;
+    line-height: 1.6;
+  }
+
+  .routine-badge {
+    display: inline-block;
+    margin-top: 12px;
+    background: var(--accent);
+    color: white;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+  }
+
+
+  .story-source a {
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--muted);
+    transition: color 0.15s;
+  }
+  .story-source a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+  .read-more {
+    display: inline-block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent2);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent2);
+    padding-bottom: 1px;
+  }
+  .read-more:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+  @media (max-width: 600px) {
+    .wrapper { margin: 0; box-shadow: none; }
+    .masthead h1 { font-size: 38px; }
+    .stat-row { flex-direction: column; }
+    .stat-item { border-right: none; border-bottom: 1px solid var(--rule); }
+    .header-top { flex-direction: column; gap: 4px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-top">
+      <span>Edição #113</span>
+      <span>24 de novembro de 2026</span>
+      <span>Diária · IA &amp; Transformação</span>
+    </div>
+    <div class="masthead">
+      <h1>CLIKDATA<span style="color:var(--accent)">·</span>DROPS</h1>
+      <p class="tagline">IA · Tecnologia · Transformação Digital · Edições Terças, Quintas</p>
+    </div>
+    <div class="edition-bar">
+      <span>🌍 Mundo</span>
+      <span>🇧🇷 Brasil</span>
+      <span>📊 Números</span>
+      <span>💡 Perspectiva</span>
+    </div>
+  </header>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <p>
+      <span class="intro-dropcap">E</span>
+      m 48 horas, o setor de IA mostrou o quanto ainda depende de pessoas, governos e regras. A Nvidia trouxe Jensen Huang de volta ao comando onze dias depois da renúncia, e as bolsas tiveram o melhor pregão desde abril de 2025, logo após a pior semana desde março de 2020. Ao mesmo tempo, o cientista-chefe da OpenAI propôs um teto comum para o desenvolvimento de modelos, e os governadores americanos pediram regras federais sem apagar as leis estaduais. Na Europa, a Deutsche Telekom aposta na Mistral para ter IA soberana. No Brasil, a nova exigência de licença dos EUA para chips de IA já pesa sobre os planos de data centers.
+    </p>
+  </section>
+
+  <!-- ═══ MUNDO ═══ -->
+  <div class="section-header">
+    <span class="section-flag red">🌍 Mundo</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Mercado &amp; Chips</span>
+      <span class="story-source"><a href="https://nvidianews.nvidia.com/news/nvidia-board-reinstates-jensen-huang-as-president-ceo-and-board-director" target="_blank">NVIDIA · NPR · CNBC</a></span>
+    </div>
+    <div class="number-callout">
+      <span class="num">+31%</span>
+      <span class="num-label">ação da Nvidia<br>em um dia</span>
+    </div>
+    <h2>Nvidia traz Jensen Huang de volta e <em>a bolsa vive o melhor dia</em> desde 2025</h2>
+    <p>O conselho da Nvidia reinstalou nesta segunda-feira (23), por unanimidade, Jensen Huang como presidente, CEO e conselheiro, com efeito imediato. Ele havia renunciado em 12 de novembro, em meio a uma investigação interna, e em 17 de novembro o conselho ainda dizia não ter intenção de trazê-lo de volta. Segundo a empresa, a decisão levou em conta conversas com altos escalões do governo dos EUA, e o conselho se disse convencido de que o retorno não representa risco à segurança nacional. O presidente Donald Trump reivindicou o crédito pela mudança. A ação da Nvidia fechou em alta de cerca de 31%, o índice de semicondutores da Filadélfia subiu 14% e a Nasdaq avançou 6%, no melhor pregão desde abril de 2025. A recuperação veio depois da pior semana da Nasdaq 100 desde março de 2020, e analistas alertam que pode ser apenas um repique técnico.</p>
+    <a href="https://nvidianews.nvidia.com/news/nvidia-board-reinstates-jensen-huang-as-president-ceo-and-board-director" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Segurança de IA</span>
+      <span class="story-source"><a href="https://www.yahoo.com/news/articles/openai-scientist-proposes-industry-ai-230920757.html" target="_blank">Yahoo News · OpenAI</a></span>
+    </div>
+    <h2>Cientista-chefe da OpenAI propõe <em>teto comum</em> para o avanço dos modelos</h2>
+    <p>Jakub Pachocki, cientista-chefe da OpenAI, publicou no domingo (22) o texto "Perplexity and Intelligence", em que sugere que toda a indústria adote a perplexidade, medida de quão bem um modelo prevê a próxima palavra, como régua comum de capacidade. A ideia é que os laboratórios se comprometam a não ultrapassar um limite acordado até que as ferramentas de monitoramento e segurança atinjam marcos definidos. Pachocki não indicou qual seria o número, quando o teto começaria a valer nem como seria fiscalizado, e reconhece que a comparação é difícil quando cada empresa usa dados diferentes. Sam Altman apoiou a proposta no X. O alerta de fundo é que a própria IA pode acelerar o treinamento de novos modelos já em 2027, mais rápido do que a capacidade de supervisioná-los.</p>
+    <a href="https://www.yahoo.com/news/articles/openai-scientist-proposes-industry-ai-230920757.html" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Regulação</span>
+      <span class="story-source"><a href="https://thenextweb.com/news/governors-ai-principles-federal-state-roles-nga" target="_blank">The Next Web · NGA</a></span>
+    </div>
+    <h2>Governadores dos EUA pedem regras federais para IA <em>sem apagar as leis estaduais</em></h2>
+    <p>A National Governors Association divulgou no domingo (22) princípios bipartidários para a regulação de IA, elaborados por um conselho liderado pelo governador de Maryland, Wes Moore, com participação do governador de Utah, Spencer Cox. O texto pede que Washington defina padrões para os modelos de uso geral mais avançados, cujos riscos têm escala nacional, enquanto os estados mantêm autoridade sobre defesa do consumidor, discriminação e emprego. Os governadores também pedem que o Congresso não anule as leis estaduais, o que os coloca em rota de colisão com a Casa Branca, que defende a preempção federal. São recomendações, não leis. Para empresas que operam nos EUA, o sinal é que a convivência entre regras federais e estaduais deve continuar por um bom tempo.</p>
+    <a href="https://thenextweb.com/news/governors-ai-principles-federal-state-roles-nga" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">IA Soberana</span>
+      <span class="story-source"><a href="https://www.telekom.com/en/newsroom/latest-updates/media-information/2026/11/deutsche-telekom-advances-sovereign-ai-in-germany" target="_blank">Deutsche Telekom</a></span>
+    </div>
+    <div class="number-callout">
+      <span class="num">€100M</span>
+      <span class="num-label">aporte na<br>Mistral AI</span>
+    </div>
+    <h2>Deutsche Telekom investe na Mistral para levar <em>IA europeia</em> às empresas alemãs</h2>
+    <p>O T.Capital Tech Fund, braço de investimentos da Deutsche Telekom, aportou 100 milhões de euros na rodada Série D da francesa Mistral AI. A operadora apresenta o investimento como o primeiro passo de uma parceria mais ampla, que deve combinar sua infraestrutura e sua base de clientes corporativos e públicos com os modelos e o software empresarial da Mistral. A Telekom já opera desde fevereiro uma fábrica de IA em Munique com a Nvidia, e a Mistral abriu um centro de pesquisa na mesma cidade em setembro. O movimento mostra como a soberania de dados virou critério de compra na Europa: grandes clientes querem IA de ponta, mas hospedada e governada por fornecedores locais.</p>
+    <a href="https://www.telekom.com/en/newsroom/latest-updates/media-information/2026/11/deutsche-telekom-advances-sovereign-ai-in-germany" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- ═══ BRASIL ═══ -->
+  <hr class="section-divider">
+  <div class="brasil-strip">Data centers no Brasil agora precisam de licença dos EUA para chips de IA</div>
+
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">🇧🇷 Brasil</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stat-row">
+    <div class="stat-item">
+      <span class="stat-num">5</span>
+      <span class="stat-label">países na nova lista<br>de licença dos EUA</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">91,5%</span>
+      <span class="stat-label">das empresas já levam<br>IA à operação (Kyndryl)</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">57%</span>
+      <span class="stat-label">dos atendimentos já<br>feitos por IA (NeoAssist)</span>
+    </div>
+  </div>
+
+  <article class="story" style="border-bottom:none;">
+    <div class="story-meta">
+      <span class="story-tag">Infraestrutura IA</span>
+      <span class="story-source"><a href="https://exame.com/inteligencia-artificial/eua-brasil-regra-chips-ia-acesso-remoto-china/" target="_blank">EXAME · Telesíntese</a></span>
+    </div>
+    <h2>Regra americana para chips de IA <em>entra em vigor</em> e atinge data centers no Brasil</h2>
+    <p>Os EUA incluíram o Brasil, ao lado de Indonésia, Malásia, Singapura e Tailândia, na lista de países que passam a precisar de licença, analisada caso a caso, para receber chips e servidores avançados de IA. A norma, anunciada em 16 de novembro e já em vigor, também cria um controle separado sobre o acesso remoto à capacidade de computação instalada em data centers. O objetivo declarado é impedir que empresas chinesas usem infraestrutura em outros países para chegar à tecnologia americana. Compradores com matriz nos EUA seguem dispensados, desde que o exportador informe as vendas mensalmente. Para o Brasil, que vinha atraindo bilhões em projetos de data centers depois da reforma tributária sobre equipamentos de TI, a regra adiciona prazo, burocracia e incerteza a planos de IA que dependem de GPUs de ponta, e favorece operadores americanos sobre os nacionais.</p>
+    <a href="https://exame.com/inteligencia-artificial/eua-brasil-regra-chips-ia-acesso-remoto-china/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- PULLQUOTE -->
+  <div class="pullquote">
+    <blockquote>
+      "Com base nessas contribuições, o Conselho está confiante de que a reintegração do Sr. Huang não representa risco à segurança nacional."
+    </blockquote>
+    <cite>— Conselho de Administração da NVIDIA, comunicado de 23/11/2026 (tradução livre)</cite>
+  </div>
+
+  <!-- PERSPECTIVA -->
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">💡 Perspectiva</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story" style="border-bottom:none; padding-bottom:28px;">
+    <h2>O que esses sinais significam para <em>líderes de transformação</em></h2>
+    <p style="margin-bottom:12px;">Três leituras práticas desta edição:</p>
+    <p style="margin-bottom:10px;"><strong>1. A cadeia de IA tem pontos únicos de falha.</strong> Uma semana de incerteza sobre o comando de uma única fornecedora derrubou o mercado, e o retorno do CEO o levantou em um dia. Quem depende de GPUs, nuvens e modelos de poucos fornecedores precisa tratar isso como risco de continuidade: mapear dependências, ter alternativas testadas e contratos que permitam migrar.</p>
+    <p style="margin-bottom:10px;"><strong>2. A regulação vem em camadas, não em bloco.</strong> Tetos voluntários propostos pelos laboratórios, padrões federais para modelos de fronteira e leis estaduais para o uso cotidiano devem coexistir. Para a empresa usuária, o caminho mais seguro é governar o uso: inventário de casos, classificação de risco, registro de decisões e supervisão humana onde o impacto é alto, o que vale para qualquer combinação de regras que vier.</p>
+    <p><strong>3. Soberania virou requisito de projeto no Brasil.</strong> Com licença dos EUA para chips e controle sobre acesso remoto, a pergunta "onde roda e quem pode acessar" passa a pesar tanto quanto o desempenho do modelo. Vale revisar o roadmap de IA considerando prazos de importação, provedores com matriz nos EUA, nuvem nacional e modelos menores que rodem com menos hardware, como a Europa já começa a fazer com a Mistral.</p>
+  </article>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">CLIKDATA<span>·</span>DROPS</div>
+        
+      </div>
+      <div class="footer-links">
+        <a href="https://clikdata.com.br" target="_blank">clikdata.com.br</a>
+        <a href="#">Arquivos anteriores</a>
+        <a href="#">Descadastrar</a>
+        <a href="#">Contato</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      Publicado em 24 de novembro de 2026 · Edição #113 · clikdata.com.br<br>
+      Este digest é gerado automaticamente com curadoria editorial humana.<br>
+      Fontes: NVIDIA, NPR, CNBC, OpenAI, Yahoo News, The Next Web, National Governors Association, Deutsche Telekom, EXAME, Telesíntese, Forbes Brasil, NeoAssist.
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
