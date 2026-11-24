@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Cientista-chefe da OpenAI propõe limites comuns para o desenvolvimento de IA até que o monitoramento alcance os modelos",
+    "summary": "Jakub Pachocki, cientista-chefe da OpenAI, publicou em 22 de novembro uma proposta para que os desenvolvedores de IA de fronteira concordem com limites comuns de capacidade, que não seriam ultrapassados até que as ferramentas para entender e monitorar o comportamento dos modelos atinjam marcos concretos. A métrica sugerida é a perplexidade, combinada com outras medições, e a OpenAI divulgou números internos: cerca de 0,99 para o GPT-3.5, 0,91 para o GPT-4 e capacidades relevantes em matemática e cibersegurança surgindo abaixo de 0,8. Sam Altman apoiou a ideia publicamente, mas a proposta não traz um teto inicial nem uma data de entrada em vigor. Ainda faltam consensos sobre métricas, marcos de segurança e mecanismos de fiscalização, num contexto em que o governo dos EUA resiste a restrições amplas. A iniciativa importa porque é rara uma líder do setor defender publicamente freios coordenados à própria corrida tecnológica.",
+    "source_name": "The Next Web",
+    "source_url": "https://thenextweb.com/news/openai-chief-scientist-shared-ai-limits",
+    "tag": "IA"
+  },
+  {
+    "title": "Governadores dos EUA pedem ao Congresso uma regra federal de IA que preserve o papel dos estados",
+    "summary": "A National Governors Association divulgou em 22 de novembro princípios bipartidários para a governança de IA, pedindo ao Congresso um marco nacional que divida responsabilidades. Pela proposta, Washington ficaria com os riscos de escala nacional e internacional, inclusive padrões para os modelos de propósito geral mais avançados, enquanto os estados manteriam flexibilidade para regular o uso da tecnologia dentro de suas fronteiras. Os governadores pedem cautela com a preempção das leis estaduais já aprovadas e consulta ampla aos estados. O tema segue em disputa no Congresso, onde há pressão para incluir a preempção federal em leis maiores e propostas como o Great American AI Act. O desfecho deve definir o ambiente regulatório que empresas globais, incluindo as brasileiras com operações nos EUA, terão de seguir.",
+    "source_name": "PYMNTS",
+    "source_url": "https://www.pymnts.com/news/artificial-intelligence/2026/governors-urge-congress-to-preserve-state-authority-in-national-ai-framework/",
+    "tag": "IA"
+  },
+  {
+    "title": "CrowdStrike anuncia compra da Zscaler por US$ 43,9 bilhões em ações",
+    "summary": "A CrowdStrike fechou acordo definitivo para adquirir a Zscaler em uma transação totalmente em ações avaliada em cerca de US$ 43,9 bilhões, aprovada por unanimidade pelos conselhos das duas empresas. Cada ação da Zscaler será trocada por 1,135 ação da CrowdStrike, o que equivale a cerca de US$ 260 por papel, e há multa de rescisão de US$ 1,4 bilhão em determinados cenários. A empresa combinada deve nascer com mais de US$ 10 bilhões em receita recorrente anual e mira cerca de US$ 1 bilhão em sinergias de receita em 30 meses. O argumento central é unir proteção de endpoints e acesso zero trust para ajudar clientes a adotar agentes de IA com segurança. É uma das maiores consolidações da história da cibersegurança e deve pressionar concorrentes como Palo Alto Networks a reagir.",
+    "source_name": "TechCrunch",
+    "source_url": "https://techcrunch.com/2026/11/23/crowdstrike-to-acquire-zscaler-for-44-billion/",
+    "tag": "Tecnologia"
+  },
+  {
+    "title": "Nvidia reconduz Jensen Huang ao cargo de CEO, e executivo deve depor no Senado dos EUA",
+    "summary": "O conselho da Nvidia votou por unanimidade pela volta de Jensen Huang ao comando da empresa, menos de duas semanas depois de ele deixar o cargo, em 12 de novembro, em meio a um escândalo envolvendo sua conduta pessoal. Segundo a companhia, a decisão veio após garantias de altas autoridades do governo americano, e o presidente Donald Trump endossou o retorno afirmando não haver evidências de irregularidades. Huang tem depoimento público marcado no Comitê Bancário do Senado, que tem jurisdição sobre controles de exportação, precedido de uma sessão fechada com comissões da Câmara. Os parlamentares querem esclarecimentos sobre riscos ligados à venda e ao contrabando de chips para a China. O episódio mostra como a liderança da empresa mais valiosa do ciclo da IA virou assunto de segurança nacional.",
+    "source_name": "TechCrunch",
+    "source_url": "https://techcrunch.com/2026/11/23/jensen-huang-scheduled-to-testify-next-week-in-senate-following-reinstatement-as-nvidia-ceo/",
+    "tag": "Tecnologia"
+  },
+  {
+    "title": "Wells Fargo passa a responsabilizar clientes por transações feitas por agentes de IA",
+    "summary": "Entra em vigor nesta terça-feira, 24 de novembro, a nova versão do contrato de acesso online do Wells Fargo, com uma seção dedicada a agentes de IA de terceiros. O texto afirma que o uso de qualquer agente é por conta e risco do cliente, que responde pelas instruções dadas pelo agente, inclusive as não intencionais, até notificar o banco de que revogou o acesso. O banco diz que não monitora nem avalia a segurança desses agentes e se reserva o direito de exigir registro, alterar formas de acesso ou bloqueá-los. Outros grandes bancos americanos, como JPMorgan, Bank of America e Citi, também vêm restringindo bots externos em suas plataformas. O movimento antecipa um debate que deve chegar ao Brasil com o Open Finance: quem responde quando um agente autônomo erra com o dinheiro do cliente.",
+    "source_name": "Tech Times",
+    "source_url": "https://www.techtimes.com/articles/329947/20261103/wells-fargo-just-made-you-legally-responsible-every-transaction-your-ai-agent-makes.htm",
+    "tag": "Transformação Digital"
+  },
+  {
+    "title": "Serpro prepara fábrica de agentes de IA para órgãos públicos no primeiro semestre de 2027",
+    "summary": "O Serpro vai incorporar uma fábrica de agentes de IA à plataforma IA Brasil, com previsão de lançamento no primeiro semestre de 2027, segundo o superintendente de IA da estatal, Carlos Rodrigo Lima, no IA.Gov Summit, em Brasília. Antes disso, deve chegar o Serpro CODE, ferramenta de geração de código que está em testes com 250 desenvolvedores da empresa e tem disponibilidade prevista para o primeiro trimestre. Os agentes planejados terão controles de custo e salvaguardas de segurança, e se somam ao Serpro Agents, que já permite montar fluxos de agentes visualmente, com pouco código, exportáveis como API. Os modelos usados são abertos e rodam em infraestrutura nacional, em linha com a estratégia de reduzir a dependência de LLMs estrangeiros. A iniciativa pode acelerar a adoção de IA agêntica na administração pública federal.",
+    "source_name": "Convergência Digital",
+    "source_url": "https://convergenciadigital.com.br/governo/serpro-vai-ter-fabrica-de-agentes-ia-no-1o-semestre-do-ano-que-vem/",
+    "tag": "IA"
+  },
+  {
+    "title": "Anatel propõe antecipar para outubro de 2027 a autenticação obrigatória de chamadas",
+    "summary": "A Anatel abriu consulta pública, publicada no Diário Oficial de 23 de novembro, com as regras de autenticação, identificação e bloqueio de chamadas e mensagens previstas na Medida Provisória 1.396/2026. A principal mudança antecipa de novembro de 2028 para outubro de 2027 o prazo para que todas as chamadas do país sejam autenticadas. Ligações não autenticadas passariam a ser bloqueadas, com exceções ainda a definir, como serviços públicos essenciais, e usuários com grande volume de chamadas suspeitas poderiam ter a originação suspensa por 15 dias. O texto trata ainda da identificação das empresas que ligam e de uma base centralizada de numeração sob supervisão da agência. Para operadoras, a proposta significa adaptar sistemas de rede e OSS/BSS em prazo bem mais curto no combate a golpes e chamadas abusivas.",
+    "source_name": "Teletime",
+    "source_url": "https://teletime.com.br/19/11/2026/anatel-mp-autenticacao/",
+    "tag": "Telecom"
+  },
+  {
+    "title": "IEA: demanda por energia solar segue crescendo, mas mais de 90% das fabricantes chinesas acumulam prejuízo",
+    "summary": "O relatório Renewables 2026, da Agência Internacional de Energia, aponta que mais de 90% dos principais fabricantes chineses de equipamentos fotovoltaicos registraram prejuízo em 2026. O excesso de capacidade e a queda contínua dos preços corroeram margens, e dezenas de empresas pediram falência ou liquidação desde 2024. As perdas líquidas somadas de fabricantes e produtores de polissilício subiram de cerca de US$ 4,4 bilhões para quase US$ 5,5 bilhões, embora a IEA veja sinais de estabilização. Ao mesmo tempo, a demanda global por solar continua sustentando a expansão, mesmo com a queda de quase 55% nas novas instalações na China nos primeiros nove meses do ano. Para o mercado brasileiro, o cenário mantém módulos baratos no curto prazo, mas acende alerta sobre consolidação de fornecedores e garantias de longo prazo.",
+    "source_name": "Canal Solar",
+    "source_url": "https://canalsolar.com.br/demanda-energia-solar-fabricantes-prejuizos/",
+    "tag": "Energia"
+  }
+]
