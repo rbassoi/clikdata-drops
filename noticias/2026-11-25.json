@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Reguladora financeira do Reino Unido avisa que agentes de IA que movimentam dinheiro podem precisar de licença",
+    "summary": "A Financial Conduct Authority (FCA), reguladora financeira do Reino Unido, publicou em 24 de novembro o documento \"Our approach to Agentic AI\", com sua posição sobre agentes autônomos de IA no setor financeiro. Segundo a FCA, não haverá regras novas: o arcabouço atual, baseado em princípios e resultados, já se aplica. Agentes que iniciam pagamentos, executam operações, contratam crédito ou seguros ou fazem recomendações personalizadas de investimento entram no perímetro regulatório. Usos apenas informativos ficam fora dele. A agência também lembrou que se apresentar só como \"fornecedor de tecnologia\" não dispensa a autorização, e que bancos continuam responsáveis mesmo quando a IA vem de terceiros. É um dos primeiros posicionamentos claros de um grande regulador sobre quem responde quando um agente de IA move dinheiro, tema que também chega ao Brasil com o avanço do Open Finance e do Pix por agentes.",
+    "source_name": "The Next Web",
+    "source_url": "https://thenextweb.com/news/fca-agentic-ai-authorisation",
+    "tag": "IA"
+  },
+  {
+    "title": "Anthropic e Aliança de IA para a Educação vão investir até US$ 10 milhões para testar IA em escolas públicas brasileiras",
+    "summary": "A Anthropic, dona do Claude, anunciou em 23 de novembro uma parceria com a Aliança de IA para a Educação, formada por Fundação Lemann, Telles Foundation e VélezReyes+. O projeto é de longo prazo e prevê até US$ 10 milhões para levar ferramentas de IA a escolas e redes públicas de ensino no Brasil. Os pilotos começam em 2027 e vão focar em gestão educacional, liderança pedagógica e prática docente. A Anthropic entra com a tecnologia e a engenharia, e a Aliança com a experiência em educação. As parceiras afirmam que os dados de alunos e adolescentes não serão usados para treinar os modelos. A iniciativa coloca o Brasil entre os primeiros mercados onde uma grande desenvolvedora de IA testa aplicações próprias na educação pública.",
+    "source_name": "Teletime",
+    "source_url": "https://teletime.com.br/23/11/2026/anthropic-alianca-ia-para-educacao/",
+    "tag": "IA"
+  },
+  {
+    "title": "Microsoft declara \"Code Red\" interno após apagão de quase 24 horas no Microsoft 365",
+    "summary": "A Microsoft declarou um \"Code Red\" interno para mudar a forma como previne e responde a grandes falhas de serviço, segundo memorandos revelados pela Reuters. A decisão vem depois do apagão de 12 e 13 de novembro, que deixou fora do ar Exchange Online, Outlook, Teams, Copilot e outros produtos do Microsoft 365 por quase um dia. Jason Henderson, presidente do M365 Core, chamou o episódio de o incidente de maior impacto para clientes da história do Exchange Online. O plano tem cinco frentes, entre elas descarte controlado de carga, particionamento geográfico do tráfego e mecanismos de recuperação mais rápidos. Para empresas que concentram e-mail, colaboração e IA em um só fornecedor, o caso reforça a importância de planos de continuidade e de avaliar o risco de concentração na nuvem.",
+    "source_name": "SiliconANGLE",
+    "source_url": "https://siliconangle.com/2026/11/24/microsoft-declares-internal-code-red-after-nearly-24-hour-microsoft-365-outage/",
+    "tag": "Tecnologia"
+  },
+  {
+    "title": "Capgemini: 59% dos executivos dizem que os gastos com IA superaram o orçamento",
+    "summary": "Um novo relatório do Capgemini Research Institute, \"The cost of intelligence: Governing AI economics in the agentic enterprise\", ouviu 500 executivos de alto escalão de grandes empresas em setembro de 2026. Segundo o estudo, 59% dizem que os gastos com IA nos últimos 12 meses ficaram acima do esperado ou do orçado. Entre as empresas que estouraram o orçamento, a despesa ficou em média 24% acima do previsto, e dois terços delas sofreram impacto financeiro negativo. Seis em cada dez organizações não têm visão completa dos custos de IA, e metade dos executivos admite aprovar investimentos sem conhecer o custo total. Com os agentes de IA chegando à operação, a gestão financeira da IA (tokens, infraestrutura e governança) passa a ser tão estratégica quanto a escolha dos casos de uso.",
+    "source_name": "TI Inside",
+    "source_url": "https://tiinside.com.br/24/11/2026/59-dos-executivos-relatam-gastos-com-ia-acima-do-esperado-revela-capgemini/",
+    "tag": "Transformação Digital"
+  },
+  {
+    "title": "Data centers de IA passam a construir as próprias usinas a gás para fugir da fila da rede elétrica",
+    "summary": "A MIT Technology Review mostra que, até outubro de 2026, desenvolvedores de data centers nos EUA anunciaram mais de 100 usinas a gás \"atrás do medidor\", instaladas nos próprios terrenos, segundo dados da Cleanview. O principal motivo é a demora para conectar novas cargas à rede elétrica, que pode chegar a uma década. Por enquanto, só uma pequena parte desses projetos está em construção ou em operação. A reportagem aponta os efeitos colaterais: mais emissões e o risco de contas de energia mais altas para os demais consumidores. O tema mostra como a energia virou o principal gargalo da expansão da IA, e o debate também interessa ao Brasil, que tenta atrair data centers com a promessa de matriz renovável.",
+    "source_name": "MIT Technology Review",
+    "source_url": "https://www.technologyreview.com/2026/11/24/1149622/data-centers-natural-gas/",
+    "tag": "Tecnologia"
+  },
+  {
+    "title": "Anatel nega recurso e mantém proibição dos bloqueios antispam da TIM",
+    "summary": "A Anatel negou o pedido de efeito suspensivo da TIM contra a medida cautelar que proibiu a operadora de manter seus bloqueios antispam. Segundo a agência, a TIM não estava sendo transparente sobre os critérios usados para bloquear certos números. Com isso, a cautelar segue valendo enquanto o mérito do caso é analisado. A decisão acontece num momento em que a Anatel endurece o combate às chamadas abusivas e ao telemarketing, inclusive com bloqueio obrigatório de linhas e autenticação de chamadas. O caso mostra a tensão entre proteger o consumidor contra spam e garantir regras claras e auditáveis para os filtros aplicados pelas operadoras.",
+    "source_name": "Teletime",
+    "source_url": "https://teletime.com.br/24/11/2026/anatel-nega-recurso-contra-proibicao-de-antispam-da-tim/",
+    "tag": "Telecom"
+  },
+  {
+    "title": "EAF encomenda mil celulares resistentes para a rede privativa de missão crítica do governo federal",
+    "summary": "A Entidade Administradora da Faixa (EAF), criada no leilão do 5G, encomendou um primeiro lote de mil celulares robustos para a rede móvel privativa de missão crítica do governo federal. A entrega está prevista para a primeira quinzena de dezembro, quando também começam os testes em Brasília. A rede privativa é uma das contrapartidas do leilão do 5G e deve atender órgãos de segurança e da administração federal com comunicações seguras e dedicadas. A compra dos terminais marca a passagem da fase de infraestrutura para o uso real da rede. É também um caso de referência para o mercado de redes privativas e para fornecedores de OSS e de dispositivos de missão crítica no país.",
+    "source_name": "Teletime",
+    "source_url": "https://teletime.com.br/24/11/2026/eaf-celulares-rede-privativa/",
+    "tag": "Telecom"
+  },
+  {
+    "title": "ANEEL publica regras do encargo ECR, que pode reduzir benefícios da geração distribuída a partir de 2027",
+    "summary": "A ANEEL publicou a Resolução Normativa nº 1.176/2026, que define como as distribuidoras devem incluir na fatura o ECR, um novo encargo que pode reduzir parte dos benefícios tarifários da geração distribuída (GD) a partir de 2027. A medida foi aprovada pela diretoria da agência em 17 de novembro. A área técnica estimou em R$ 8,46 bilhões os subsídios à GD na CDE de 2027, bem acima do limite de R$ 4,03 bilhões. Na mesma reunião, a ANEEL abriu consultas públicas sobre restrições à energia solar por assinatura e sobre a liquidação de excedentes de GD no mercado de curto prazo. Para consumidores e integradores solares, o pacote sinaliza mais custo e mais incerteza regulatória para o modelo de GD nos próximos anos.",
+    "source_name": "Canal Solar",
+    "source_url": "https://canalsolar.com.br/aneel-ecr-reduzir-beneficios-geracao-distribuida/",
+    "tag": "Energia"
+  }
+]
