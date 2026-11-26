@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Estudo da Anthropic com 58 empresas mostra que o gargalo da IA no trabalho é organizacional, não tecnológico",
+    "summary": "O time de economia da Anthropic publicou o relatório \"Working with AI\", baseado em 66 entrevistas presenciais em 58 empresas americanas e quase 300 aplicações de IA em uso. Os entrevistados relataram aumento de produção ou de qualidade em 55% dos casos, mas quase uma em cada cinco aplicações (19%) ainda não gerou nenhum valor de negócio. Os principais obstáculos são internos: o volume de revisão do que a IA produz lidera as menções, seguido pela resistência de funcionários e pela necessidade de revisão por especialistas — a regulação quase não apareceu. Apenas duas empresas relataram demissões diretas por automação, mas cerca de dois terços dizem estar contratando menos por causa da IA. O estudo tem limitações (a amostra é só de clientes da Anthropic e as avaliações são qualitativas), mas reforça que capturar valor da IA depende de redesenhar processos e fluxos de revisão, não apenas de adotar ferramentas.",
+    "source_name": "Anthropic",
+    "source_url": "https://www.anthropic.com/research/working-with-ai",
+    "tag": "Transformação Digital"
+  },
+  {
+    "title": "Tidal vai banir e remover cerca de 27 milhões de músicas geradas inteiramente por IA",
+    "summary": "A plataforma de streaming Tidal anunciou que, a partir de 9 de dezembro, vai remover faixas totalmente geradas por inteligência artificial e rejeitar novas entregas desse tipo feitas por distribuidoras. Segundo a empresa, cerca de 27 milhões de faixas, ou 6,3% do catálogo, estão marcadas como 100% geradas por IA. A Tidal afirma que 43% das faixas recebidas nos últimos 90 dias foram detectadas como integralmente sintéticas e que 96% delas não recebem nenhuma reprodução. Músicas feitas com auxílio de IA no processo criativo continuam permitidas, e a detecção fica a cargo da parceira Ircam Amplify. A decisão coloca a Tidal na linha mais dura do setor, ao lado do Bandcamp, enquanto Spotify e Apple Music apenas rotulam o conteúdo — e mostra como o \"lixo de IA\" virou problema operacional e de remuneração para plataformas de conteúdo.",
+    "source_name": "TechCrunch",
+    "source_url": "https://techcrunch.com/2026/11/24/tidal-to-ban-and-remove-millions-of-ai-generated-tracks-as-ai-slop-inundates-music-streaming/",
+    "tag": "IA"
+  },
+  {
+    "title": "Samsung perde US$ 81 bilhões em um dia com tombo das ações de chips e reacende debate sobre bolha da IA",
+    "summary": "As ações da Samsung caíram 9,87% na bolsa de Seul nesta quarta-feira (25), apagando cerca de US$ 81 bilhões em valor de mercado, enquanto a rival SK Hynix recuou 11,05%. O movimento reflete o receio de investidores de que a produção de alguns chips voltados à IA esteja crescendo mais rápido do que as encomendas. A queda se soma a uma sequência de turbulências no setor em novembro, que incluiu forte recuo do Nasdaq no início do mês por temores regulatórios ligados a data centers nos EUA. O episódio também coincide com notícias de que o mercado passou a precificar empresas de IA abaixo das avaliações pretendidas no auge do entusiasmo. Para empresas e investidores, o sinal é que a cadeia de infraestrutura de IA começa a ser cobrada por retorno concreto, e não apenas por expectativa de demanda.",
+    "source_name": "Exame",
+    "source_url": "https://exame.com/tecnologia/bolha-da-ia-samsung-perde-us-81-bilhoes-em-um-dia-com-tombo-das-acoes-de-chips/",
+    "tag": "IA"
+  },
+  {
+    "title": "FCC aprova plano da SpaceX para colocar data centers de IA em órbita",
+    "summary": "A Comissão Federal de Comunicações dos EUA (FCC) concedeu aprovação condicional para que a SpaceX implante até 1 milhão de satélites destinados a um negócio de data centers orbitais. O pedido havia sido apresentado em janeiro e prevê satélites operando entre 500 km e 2.000 km de altitude, alimentados por energia solar para processar cargas de IA no espaço. Amazon, Viasat e a Sociedade Astronômica Americana se opuseram, citando riscos de detritos orbitais, interferência de rádio e impactos ambientais, mas as objeções não impediram a autorização. A decisão é um marco para a ideia de levar computação de IA para fora da Terra, onde energia e refrigeração seriam menos restritivas. Ao mesmo tempo, amplia a preocupação com a ocupação da órbita baixa e com a concentração de infraestrutura crítica em uma única empresa.",
+    "source_name": "TechCrunch",
+    "source_url": "https://techcrunch.com/2026/11/25/fcc-approves-spacex-plan-to-put-ai-data-centers-in-space",
+    "tag": "Tecnologia"
+  },
+  {
+    "title": "FinCEN, unidade de crimes financeiros do Tesouro dos EUA, tira sistemas do ar após acesso não autorizado",
+    "summary": "A FinCEN, órgão do Tesouro americano que recebe os relatórios bancários sobre lavagem de dinheiro, informou que investiga um incidente de cibersegurança em que um invasor acessou um subconjunto limitado de seus sistemas. Por precaução, alguns serviços foram desligados, e o órgão estendeu determinados prazos de entrega de relatórios para 30 de dezembro de 2026. Segundo um representante ouvido pela Reuters, não há evidência de violação das bases da Lei de Sigilo Bancário (BSA) ou de beneficiários finais, mas a análise forense continua com apoio do FBI e da CISA. A FinCEN não revelou como o invasor entrou nem quem seria o responsável. O caso ocorre na mesma semana de uma intrusão relatada em sistemas de agências de inteligência dos EUA e expõe a pressão crescente sobre a segurança de infraestruturas governamentais críticas.",
+    "source_name": "The Hacker News",
+    "source_url": "https://thehackernews.com/2026/11/us-treasurys-fincen-takes-some-systems.html",
+    "tag": "Tecnologia"
+  },
+  {
+    "title": "TCU nega solução consensual para renovação das faixas de 850 MHz de TIM, Claro e Vivo",
+    "summary": "O Tribunal de Contas da União rejeitou o pedido da Anatel para construir uma solução consensual na renovação das faixas de 850 MHz usadas por TIM, Claro e Vivo. O tema se arrasta há anos porque o TCU entende que não cabe renovação sucessiva automática de espectro, o que gera incerteza sobre custos e segurança jurídica das operadoras para além de 2028. Com a negativa, os caminhos que restam às teles seriam a judicialização ou um modelo que lhes dê alguma preferência no leilão previsto para 2028. A faixa de 850 MHz é estratégica por sua boa propagação, importante para cobertura em áreas rurais e para o uso futuro em 4G e 5G. A decisão aumenta o risco regulatório para o planejamento de investimentos das grandes operadoras no país.",
+    "source_name": "TELETIME",
+    "source_url": "https://teletime.com.br/25/11/2026/tcu-nega-pactuacao-por-consenso-na-renovacao-das-faixas-de-850-mhz/",
+    "tag": "Telecom"
+  },
+  {
+    "title": "Anatel avalia criar fundo setorial para big techs nos moldes do Fust e do Funttel",
+    "summary": "O conselheiro da Anatel Edson Holanda levantou a possibilidade de instituir um fundo setorial com contribuição das big techs, inspirado no Fust e no Funttel, que hoje são abastecidos por operadoras de telecomunicações. A declaração foi feita durante painel do Fórum dig.ia, em Brasília. Holanda já havia descartado o modelo de \"fair share\" (pagamento direto das plataformas às teles pelo uso das redes), mas vê espaço para outras formas de as grandes plataformas digitais contribuírem com o financiamento da infraestrutura. A discussão ocorre em meio à tentativa da Anatel de ampliar sua atuação sobre plataformas digitais, IA e data centers, que enfrenta resistência de parte do governo, da sociedade civil e das próprias empresas. Se avançar, a proposta pode redesenhar o modelo de financiamento da expansão de redes no Brasil.",
+    "source_name": "TELETIME",
+    "source_url": "https://teletime.com.br/25/11/2026/anatel-fundo-setorial-big-techs-holanda/",
+    "tag": "Telecom"
+  },
+  {
+    "title": "Sistema elétrico bate recorde de demanda, com geração distribuída suprindo mais de 30% da carga",
+    "summary": "O Sistema Interligado Nacional registrou na terça-feira (24) recorde de demanda de 108,7 GW às 10h47, superando os 106,6 GW do dia anterior, segundo dados preliminares do ONS. Às 11h40, a micro e minigeração distribuída (MMGD), majoritariamente solar, forneceu cerca de 33 GW, o equivalente a 31% da demanda naquele instante, de acordo com levantamento da RED (antiga ABGD). A GD ficou atrás apenas das hidrelétricas (34%) e superou a solar centralizada, que respondeu por 14,9%. Segundo a associação, sem essa geração as demais usinas teriam de aumentar a entrega em cerca de 45% para atender o mesmo consumo. O dado chega em meio às consultas públicas da ANEEL que podem mudar regras da geração distribuída, e reforça o argumento do setor de que o impacto da GD sobre as redes precisa ser avaliado antes de novas restrições.",
+    "source_name": "Canal Solar",
+    "source_url": "https://canalsolar.com.br/sistema-eletrico-recorde-demanda-gd-suprindo/",
+    "tag": "Energia"
+  }
+]
