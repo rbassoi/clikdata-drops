@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CLIKDATA DROPS — Edição #114 - Novembro 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0f0f0f;
+    --paper: #f5f0e8;
+    --accent: #c8401a;
+    --accent2: #1a3c5e;
+    --muted: #7a7060;
+    --rule: #d4cfc4;
+    --tag-bg: #1a3c5e;
+    --tag-color: #f5f0e8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #e8e3d8;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrapper {
+    max-width: 680px;
+    margin: 40px auto;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    box-shadow: 4px 4px 0 #c4bfb4, 8px 8px 0 #b4afa4;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    border-bottom: 3px double var(--ink);
+    padding: 0;
+    position: relative;
+  }
+
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 32px 10px;
+    border-bottom: 1px solid var(--rule);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  .masthead {
+    padding: 28px 32px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--ink);
+    position: relative;
+  }
+
+  .masthead::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--accent);
+    margin: 0 auto 16px;
+  }
+
+  .masthead h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1;
+    color: var(--ink);
+  }
+
+  .masthead h1 span {
+    color: var(--accent);
+  }
+
+  .tagline {
+    margin-top: 8px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .edition-bar {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 10px 32px;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  /* ── INTRO ── */
+  .intro {
+    padding: 28px 32px 24px;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .intro-dropcap {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 0.85;
+    color: var(--accent);
+    float: left;
+    margin-right: 4px;
+    margin-top: 6px;
+  }
+
+  .intro p {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: #2a2520;
+  }
+
+  /* ── SECTION HEADER ── */
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 32px 0;
+    margin-bottom: 4px;
+  }
+
+  .section-flag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    background: var(--tag-bg);
+    color: var(--tag-color);
+    padding: 4px 10px;
+    white-space: nowrap;
+  }
+
+  .section-flag.red { background: var(--accent); }
+
+  .section-rule {
+    flex: 1;
+    height: 1px;
+    background: var(--ink);
+  }
+
+  /* ── STORY CARD ── */
+  .story {
+    padding: 20px 32px;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+  }
+
+  .story:last-of-type { border-bottom: none; }
+
+  .story-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .story-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 2px 7px;
+  }
+
+  .story-source {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+  }
+
+  .story h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+
+  .story h2 em {
+    font-style: italic;
+    color: var(--accent2);
+  }
+
+  .story p {
+    font-size: 14px;
+    line-height: 1.72;
+    color: #2a2520;
+  }
+
+  .story .number-callout {
+    float: right;
+    margin: 0 0 8px 18px;
+    text-align: center;
+    border: 2px solid var(--ink);
+    padding: 12px 16px;
+    min-width: 88px;
+  }
+
+  .story .number-callout .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--accent);
+    display: block;
+    line-height: 1;
+  }
+
+  .story .number-callout .num-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 4px;
+  }
+
+  /* ── DIVIDER ── */
+  .section-divider {
+    border: none;
+    border-top: 3px double var(--ink);
+    margin: 8px 32px 0;
+  }
+
+  /* ── DESTAQUE BRASIL ── */
+  .brasil-strip {
+    background: var(--accent2);
+    color: var(--paper);
+    padding: 6px 32px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .brasil-strip::before {
+    content: '▶';
+    font-size: 8px;
+  }
+
+  /* ── STAT ROW ── */
+  .stat-row {
+    display: flex;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .stat-item {
+    flex: 1;
+    padding: 20px 24px;
+    border-right: 1px solid var(--rule);
+    text-align: center;
+  }
+
+  .stat-item:last-child { border-right: none; }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--accent2);
+    display: block;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-top: 6px;
+    line-height: 1.4;
+  }
+
+  /* ── PULLQUOTE ── */
+  .pullquote {
+    margin: 0;
+    padding: 24px 40px;
+    border-top: 2px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+    background: #ede8de;
+  }
+
+  .pullquote blockquote {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 19px;
+    line-height: 1.5;
+    color: var(--ink);
+    text-align: center;
+  }
+
+  .pullquote cite {
+    display: block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: center;
+    font-style: normal;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 28px 32px;
+    border-top: 3px double var(--accent);
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333;
+  }
+
+  .footer-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 900;
+  }
+
+  .footer-brand span { color: var(--accent); }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: right;
+  }
+
+  .footer-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: #888;
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .footer-bottom {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: #555;
+    letter-spacing: 0.06em;
+    line-height: 1.6;
+  }
+
+  .routine-badge {
+    display: inline-block;
+    margin-top: 12px;
+    background: var(--accent);
+    color: white;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+  }
+
+
+  .story-source a {
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--muted);
+    transition: color 0.15s;
+  }
+  .story-source a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+  .read-more {
+    display: inline-block;
+    margin-top: 10px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent2);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent2);
+    padding-bottom: 1px;
+  }
+  .read-more:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+  @media (max-width: 600px) {
+    .wrapper { margin: 0; box-shadow: none; }
+    .masthead h1 { font-size: 38px; }
+    .stat-row { flex-direction: column; }
+    .stat-item { border-right: none; border-bottom: 1px solid var(--rule); }
+    .header-top { flex-direction: column; gap: 4px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-top">
+      <span>Edição #114</span>
+      <span>26 de novembro de 2026</span>
+      <span>Diária · IA &amp; Transformação</span>
+    </div>
+    <div class="masthead">
+      <h1>CLIKDATA<span style="color:var(--accent)">·</span>DROPS</h1>
+      <p class="tagline">IA · Tecnologia · Transformação Digital · Edições Terças, Quintas</p>
+    </div>
+    <div class="edition-bar">
+      <span>🌍 Mundo</span>
+      <span>🇧🇷 Brasil</span>
+      <span>📊 Números</span>
+      <span>💡 Perspectiva</span>
+    </div>
+  </header>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <p>
+      <span class="intro-dropcap">A</span>
+      corrida da IA saiu do laboratório e chegou à conta de luz, ao orçamento e ao regulador. A Amazon pagou cerca de US$ 7,5 bilhões por um software que extrai mais desempenho dos seus próprios chips, numa aposta para encurtar a distância para a Nvidia. No Reino Unido, a FCA avisou que agentes de IA que movimentam dinheiro podem precisar de licença. A Microsoft declarou "Code Red" interno depois de quase 24 horas de apagão no Microsoft 365, e nos EUA os data centers passaram a construir as próprias usinas a gás para não esperar a rede elétrica. No Brasil, a Anthropic e a Aliança de IA para a Educação anunciaram até US$ 10 milhões para testar IA em escolas públicas.
+    </p>
+  </section>
+
+  <!-- ═══ MUNDO ═══ -->
+  <div class="section-header">
+    <span class="section-flag red">🌍 Mundo</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Mercado &amp; Chips</span>
+      <span class="story-source"><a href="https://techcrunch.com/2026/11/24/amazons-decart-acquisition-is-a-bet-on-using-software-to-narrow-the-gap-with-nvidia-in-the-ai-chip-race/" target="_blank">TechCrunch · Bloomberg</a></span>
+    </div>
+    <div class="number-callout">
+      <span class="num">US$7,5 bi</span>
+      <span class="num-label">valor estimado<br>do acordo</span>
+    </div>
+    <h2>Amazon compra tecnologia da Decart e <em>aposta no software</em> para encarar a Nvidia</h2>
+    <p>A Amazon anunciou um acordo para ficar com a tecnologia do Decart Optimization Stack (DOS), software que otimiza a execução de modelos de IA em chips, e para contratar os fundadores e a equipe de engenharia da startup. A empresa não divulgou o valor, mas a Bloomberg estima o negócio em cerca de US$ 7,5 bilhões. Os modelos de vídeo da Decart, Lucy e Oasis, ficam de fora. O objetivo é extrair mais desempenho do Trainium, chip próprio que a Amazon usava só nos seus data centers e agora se prepara para vender a terceiros. Em testes específicos, a Decart relatou geração de quadros quatro vezes mais rápida no Trainium a metade do custo de GPUs da Nvidia. O acordo ainda depende de aprovação regulatória. A leitura do mercado é que, na disputa por chips de IA, o software de otimização vale quase tanto quanto o silício.</p>
+    <a href="https://techcrunch.com/2026/11/24/amazons-decart-acquisition-is-a-bet-on-using-software-to-narrow-the-gap-with-nvidia-in-the-ai-chip-race/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Regulação · Agentes de IA</span>
+      <span class="story-source"><a href="https://thenextweb.com/news/fca-agentic-ai-authorisation" target="_blank">The Next Web · FCA</a></span>
+    </div>
+    <h2>Reguladora britânica avisa: agente de IA que <em>movimenta dinheiro</em> pode precisar de licença</h2>
+    <p>A Financial Conduct Authority (FCA), reguladora financeira do Reino Unido, publicou na terça-feira (24) o documento "Our approach to Agentic AI", com sua posição sobre agentes autônomos no setor financeiro. Não haverá regras novas: segundo a FCA, o arcabouço atual, baseado em princípios e resultados, já se aplica. Agentes que iniciam pagamentos, executam operações, contratam crédito ou seguros ou fazem recomendações personalizadas de investimento entram no perímetro regulatório. Usos apenas informativos ficam de fora. A agência também lembrou que se apresentar como "fornecedor de tecnologia" não dispensa a autorização, e que bancos continuam responsáveis mesmo quando a IA vem de terceiros. É um dos primeiros posicionamentos claros de um grande regulador sobre quem responde quando um agente de IA move dinheiro, tema que também chega ao Brasil com o Open Finance e o Pix.</p>
+    <a href="https://thenextweb.com/news/fca-agentic-ai-authorisation" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Cloud &amp; Resiliência</span>
+      <span class="story-source"><a href="https://siliconangle.com/2026/11/24/microsoft-declares-internal-code-red-after-nearly-24-hour-microsoft-365-outage/" target="_blank">SiliconANGLE · Reuters</a></span>
+    </div>
+    <h2>Microsoft declara <em>"Code Red"</em> interno após quase 24 horas de apagão no Microsoft 365</h2>
+    <p>A Microsoft declarou um "Code Red" interno para mudar a forma como previne e responde a grandes falhas, segundo memorandos revelados pela Reuters. A decisão vem depois do apagão de 12 e 13 de novembro, que deixou fora do ar Exchange Online, Outlook, Teams, Copilot e outros produtos do Microsoft 365 por quase um dia. Jason Henderson, presidente do M365 Core, chamou o episódio de o incidente de maior impacto para clientes da história do Exchange Online. O plano tem cinco frentes, entre elas descarte controlado de carga, particionamento geográfico do tráfego e mecanismos de recuperação mais rápidos. Para empresas que concentram e-mail, colaboração e IA em um só fornecedor, o caso reforça a importância de planos de continuidade e de medir o risco de concentração na nuvem.</p>
+    <a href="https://siliconangle.com/2026/11/24/microsoft-declares-internal-code-red-after-nearly-24-hour-microsoft-365-outage/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <article class="story">
+    <div class="story-meta">
+      <span class="story-tag">Energia &amp; Data Centers</span>
+      <span class="story-source"><a href="https://www.technologyreview.com/2026/11/24/1149622/data-centers-natural-gas/" target="_blank">MIT Technology Review</a></span>
+    </div>
+    <div class="number-callout">
+      <span class="num">+100</span>
+      <span class="num-label">usinas a gás<br>anunciadas nos EUA</span>
+    </div>
+    <h2>Data centers de IA constroem <em>as próprias usinas a gás</em> para fugir da fila da rede</h2>
+    <p>A MIT Technology Review mostra que, até outubro de 2026, desenvolvedores de data centers nos EUA anunciaram mais de 100 usinas a gás "atrás do medidor", instaladas nos próprios terrenos, segundo dados da Cleanview. O principal motivo é a demora para conectar novas cargas à rede elétrica, que pode chegar a uma década. Por enquanto, só uma pequena parte desses projetos está em construção ou em operação. A reportagem aponta os efeitos colaterais: mais emissões e o risco de contas de energia mais altas para os demais consumidores. O tema mostra como a energia virou o principal gargalo da expansão da IA, e interessa também ao Brasil, que tenta atrair data centers com a promessa de uma matriz elétrica renovável.</p>
+    <a href="https://www.technologyreview.com/2026/11/24/1149622/data-centers-natural-gas/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- ═══ BRASIL ═══ -->
+  <hr class="section-divider">
+  <div class="brasil-strip">Anthropic e Aliança de IA para a Educação levam IA às escolas públicas brasileiras</div>
+
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">🇧🇷 Brasil</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stat-row">
+    <div class="stat-item">
+      <span class="stat-num">US$10 mi</span>
+      <span class="stat-label">para pilotos de IA<br>na rede pública</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">59%</span>
+      <span class="stat-label">dos executivos gastaram<br>acima do previsto com IA</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">24%</span>
+      <span class="stat-label">estouro médio do<br>orçamento (Capgemini)</span>
+    </div>
+  </div>
+
+  <article class="story" style="border-bottom:none;">
+    <div class="story-meta">
+      <span class="story-tag">IA na Educação</span>
+      <span class="story-source"><a href="https://teletime.com.br/23/11/2026/anthropic-alianca-ia-para-educacao/" target="_blank">Teletime</a></span>
+    </div>
+    <h2>Anthropic e Aliança de IA para a Educação vão investir até <em>US$ 10 milhões</em> em escolas públicas</h2>
+    <p>A Anthropic, dona do Claude, anunciou uma parceria de longo prazo com a Aliança de IA para a Educação, formada por Fundação Lemann, Telles Foundation e VélezReyes+. O projeto prevê até US$ 10 milhões para levar ferramentas de IA a escolas e redes públicas de ensino no Brasil. Os pilotos começam em 2027 e vão focar em gestão educacional, liderança pedagógica e prática docente. A Anthropic entra com a tecnologia e a engenharia, e a Aliança com a experiência em educação. As parceiras afirmam que os dados de alunos e adolescentes não serão usados para treinar os modelos. A iniciativa coloca o Brasil entre os primeiros mercados onde uma grande desenvolvedora de IA testa aplicações próprias na educação pública. Em paralelo, um estudo do Capgemini Research Institute com 500 executivos mostra o outro lado da adoção: 59% gastaram com IA mais do que o previsto, e seis em cada dez empresas não têm visão completa desses custos.</p>
+    <a href="https://teletime.com.br/23/11/2026/anthropic-alianca-ia-para-educacao/" class="read-more" target="_blank">→ Ler matéria completa</a>
+  </article>
+
+  <!-- PULLQUOTE -->
+  <div class="pullquote">
+    <blockquote>
+      "Na disputa pelos chips de IA, o software que otimiza o hardware passou a valer quase tanto quanto o próprio silício."
+    </blockquote>
+    <cite>— Leitura editorial Clikdata Drops sobre o acordo Amazon–Decart</cite>
+  </div>
+
+  <!-- PERSPECTIVA -->
+  <div class="section-header" style="padding-top:16px;">
+    <span class="section-flag">💡 Perspectiva</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <article class="story" style="border-bottom:none; padding-bottom:28px;">
+    <h2>O que esses sinais significam para <em>líderes de transformação</em></h2>
+    <p style="margin-bottom:12px;">Três leituras práticas desta edição:</p>
+    <p style="margin-bottom:10px;"><strong>1. Agente que age precisa de dono.</strong> A FCA deixou claro que não importa se a decisão foi tomada por um modelo de terceiros: quem oferece o serviço responde por ele. Antes de colocar agentes para pagar, contratar ou aprovar, defina limites de ação, trilha de auditoria, aprovação humana nos casos de maior impacto e contratos que deixem claro quem responde por cada etapa.</p>
+    <p style="margin-bottom:10px;"><strong>2. Resiliência e custo viraram requisitos de IA.</strong> Um dia sem Microsoft 365 parou e-mail, reuniões e Copilot ao mesmo tempo, e 59% dos executivos já gastam com IA mais do que planejaram. Vale tratar IA como infraestrutura crítica: plano de continuidade para os serviços dos quais ela depende, alternativas testadas e uma gestão financeira de tokens e infraestrutura (FinOps de IA) com orçamento e alertas por caso de uso.</p>
+    <p><strong>3. Energia e hardware definem o ritmo.</strong> Data centers construindo usinas próprias e a Amazon investindo bilhões para tirar mais de cada chip mostram que a capacidade de computação é finita e cara. Para empresas brasileiras, a pergunta prática é eficiência: modelos menores quando bastam, cargas agendadas, e uso de nuvem nacional com matriz renovável como vantagem competitiva. Na educação pública, a mesma lógica vale: projetos-piloto bem medidos antes de escalar.</p>
+  </article>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">CLIKDATA<span>·</span>DROPS</div>
+        
+      </div>
+      <div class="footer-links">
+        <a href="https://clikdata.com.br" target="_blank">clikdata.com.br</a>
+        <a href="#">Arquivos anteriores</a>
+        <a href="#">Descadastrar</a>
+        <a href="#">Contato</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      Publicado em 26 de novembro de 2026 · Edição #114 · clikdata.com.br<br>
+      Este digest é gerado automaticamente com curadoria editorial humana.<br>
+      Fontes: TechCrunch, Bloomberg, The Next Web, Financial Conduct Authority, SiliconANGLE, Reuters, MIT Technology Review, Cleanview, Teletime, Capgemini Research Institute, TI Inside.
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
