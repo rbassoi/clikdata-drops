@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Nvidia suspende envio de servidores de IA para Malásia, Singapura, Tailândia e Indonésia",
+    "summary": "A Nvidia orientou seus parceiros de fabricação, como Dell e Supermicro, a interromper o envio de servidores de IA com seus chips para Malásia, Singapura, Tailândia e Indonésia, segundo reportagem do Financial Times repercutida pela Reuters. A medida vem logo após a entrada em vigor de novas regras de exportação dos EUA, que passaram a exigir licenças para remessas de chips avançados a vários países do Sudeste Asiático. Esses mercados são apontados como rota usada por desenvolvedores chineses para obter os chips mais avançados da empresa, contornando as restrições americanas. Ainda não está claro se a suspensão é temporária, enquanto Nvidia e parceiros se adequam às exigências de conformidade. O episódio mostra como a geopolítica dos semicondutores segue redesenhando a cadeia global de infraestrutura de IA e pode afetar a expansão de data centers na região.",
+    "source_name": "U.S. News / Reuters",
+    "source_url": "https://www.usnews.com/news/top-news/articles/2026-11-26/nvidia-halts-server-shipments-to-four-southeast-asian-countries-ft-reports",
+    "tag": "Tecnologia"
+  },
+  {
+    "title": "OpenAI começa a testar o Private Inference, que protege prompts corporativos durante o processamento",
+    "summary": "A OpenAI iniciou testes do Private Inference, recurso em versão alfa disponibilizado para um pequeno grupo de clientes empresariais, anunciado por Sam Altman no X. A proposta é usar computação confidencial — execução dentro de enclaves isolados por hardware — para que nem a própria OpenAI consiga ler prompts e respostas enquanto o modelo os processa. O recurso integra o pacote OpenAI Private Intelligence e é diferente do Zero Data Retention, que trata de não guardar os dados após o uso. A empresa ainda não informou preço nem data de disponibilidade geral, e a expansão depende de obter mais capacidade de computação confidencial. A iniciativa responde a uma das principais barreiras à adoção de IA em setores regulados, como finanças e saúde: a dúvida sobre quem pode ver os dados sensíveis enviados aos modelos.",
+    "source_name": "Sulat AI & Tech News",
+    "source_url": "https://news.sulat.com/2026/11/26/openai-private-inference/",
+    "tag": "IA"
+  },
+  {
+    "title": "Anthropic usa agentes do Claude para migrar sua API de Python para Rust e corta 70% do uso de CPU",
+    "summary": "A Anthropic detalhou como migrou a Messages API, que atende às conversas com o Claude, de Python para Rust, com agentes do próprio Claude fazendo grande parte da reescrita. Segundo a empresa, a mudança reduziu cerca de 70% do uso de CPU por requisição em uma região, mais de 80% da memória e melhorou em cerca de 20% o tempo mediano até o primeiro token para usuários do Claude Code. O primeiro rascunho do código principal saiu em cerca de uma semana, mas validar a equivalência com o sistema antigo levou meses: a equipe espelhou tráfego real nas duas versões e usou a API em Python como referência. Engenheiros revisaram cada correção feita pelos agentes, e a migração ocorreu sem interrupções nem congelamento de novas funcionalidades. O caso é um exemplo concreto de modernização de sistemas legados com IA e mostra que o gargalo está na verificação, não na geração de código.",
+    "source_name": "TechRepublic",
+    "source_url": "https://www.techrepublic.com/article/news-anthropic-claude-messages-api-rust-migration/",
+    "tag": "Transformação Digital"
+  },
+  {
+    "title": "X finalmente ganha controles parentais para adolescentes, 20 anos após sua criação",
+    "summary": "A rede social X, antigo Twitter, lançou controles parentais voltados a usuários adolescentes. Contas de jovens entre 13 e 17 anos passam a entrar por padrão em um 'modo protegido', e os pais podem definir limites diários de tempo de uso e aprovar novos seguidores. A novidade chega cerca de duas décadas após o lançamento da plataforma, que ficou para trás de concorrentes como Instagram e TikTok nesse tipo de ferramenta. O movimento ocorre em meio à crescente pressão regulatória em vários países sobre a segurança de menores nas redes sociais. Para o mercado, é mais um sinal de que proteção infantojuvenil deixou de ser diferencial e virou requisito básico para plataformas digitais.",
+    "source_name": "TechCrunch",
+    "source_url": "https://techcrunch.com/2026/11/26/x-finally-gets-parental-controls-after-20-years/",
+    "tag": "Tecnologia"
+  },
+  {
+    "title": "Governo federal prepara duas IAs transacionais para os serviços digitais e política de governança de IA",
+    "summary": "A ministra da Gestão e Inovação, Esther Dweck, anunciou que o governo federal está prestes a lançar duas inteligências artificiais transacionais nos serviços digitais, capazes de executar ações — e não apenas responder dúvidas — a partir de conversas com o cidadão. O governo também pretende formalizar uma política de governança de IA, com avaliação de riscos e supervisão institucional dos sistemas. Segundo levantamentos citados na cobertura, a administração federal já opera mais de 300 sistemas de IA em 78 órgãos, com centenas de outros em desenvolvimento. A iniciativa marca a passagem de chatbots informativos para agentes que alteram dados e concluem serviços públicos. O desafio será equilibrar ganho de eficiência com segurança, transparência e conformidade com a LGPD.",
+    "source_name": "Convergência Digital",
+    "source_url": "https://convergenciadigital.com.br/governo/governo-esta-prestes-a-lancar-duas-ia-transacionais-nos-servicos-digitais/",
+    "tag": "IA"
+  },
+  {
+    "title": "Edital de relicitação da faixa de 850 MHz deve ir à consulta pública em fevereiro de 2027",
+    "summary": "O presidente interino da Anatel, Alexandre Freire, afirmou que a minuta do edital de relicitação da faixa de 850 MHz deve voltar ao conselho diretor em fevereiro de 2027, seguindo depois para consulta pública. A sinalização vem um dia após o TCU negar a solução consensual para renovar as licenças de TIM, Claro e Vivo nessa faixa, o que inviabiliza a prorrogação automática. Com isso, a agência terá de conduzir um novo leilão para o espectro, considerado valioso pela boa propagação e cobertura. Ainda há debate no setor sobre a aplicação da renovação sucessiva a licenças concedidas antes da mudança da norma. O desfecho terá impacto direto no planejamento de rede e nos investimentos das grandes operadoras nos próximos anos.",
+    "source_name": "Teletime",
+    "source_url": "https://teletime.com.br/26/11/2026/edital-850-mhz-fevereiro-2027/",
+    "tag": "Telecom"
+  },
+  {
+    "title": "Prazo de homologação de produtos na Anatel chega a 40 dias após troca de sistema",
+    "summary": "O prazo para homologação de produtos de telecomunicações na Anatel chegou a cerca de 40 dias, acima da meta de 30 dias, segundo o gerente de Certificação da agência. A agência reconheceu que a implantação do novo sistema Certifica apresentou mais erros do que o previsto, gerando atrasos na análise dos processos. A homologação é obrigatória para que equipamentos como celulares, roteadores e módulos IoT possam ser comercializados no Brasil. O atraso afeta fabricantes, importadores e operadoras, especialmente em um período de lançamentos de fim de ano. A Anatel trabalha para estabilizar a plataforma e reduzir o prazo de volta à meta.",
+    "source_name": "Teletime",
+    "source_url": "https://teletime.com.br/25/11/2026/homologacao-anatel-40-dias/",
+    "tag": "Telecom"
+  },
+  {
+    "title": "CMN reduz juros do Fundo Clima de 6,5% para 3% ao ano para baterias fabricadas no Brasil",
+    "summary": "O Conselho Monetário Nacional aprovou a Resolução nº 5.353/2026, que reduz o custo do Fundo Clima de 6,5% para 3% ao ano no financiamento de sistemas de armazenamento de energia com baterias fabricadas no país. A medida amplia o diferencial das condições oferecidas pelo BNDES aos projetos que optarem pelas rotas 2, 3 e 4 de nacionalização de conteúdo. O incentivo chega às vésperas dos leilões de baterias: a primeira sessão, em 2 de dezembro, será exclusiva para sistemas que atendam aos critérios de conteúdo local, e a segunda, em 4 de dezembro, aberta aos demais. A Justiça Federal também negou pedido da ABEEólica para suspender os certames. O armazenamento é peça-chave para integrar o crescente volume de geração solar à rede elétrica brasileira.",
+    "source_name": "pv magazine Brasil",
+    "source_url": "http://www.pv-magazine-brasil.com/2026/11/26/cmn-reduz-juros-do-fundo-clima-de-65-para-3-para-baterias-fabricadas-no-brasil/",
+    "tag": "Energia"
+  }
+]
