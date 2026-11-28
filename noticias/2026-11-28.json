@@ -1,0 +1,58 @@
+[
+  {
+    "title": "OpenAI contra-ataca e processa a Apple por roubo de segredos comerciais e pressão sobre fornecedores",
+    "summary": "A OpenAI entrou com uma contra-ação contra a Apple em um tribunal da Califórnia nesta sexta-feira (27), acusando a fabricante do iPhone de práticas comerciais 'ilegais, ilícitas e desleais'. Segundo a empresa, a Apple teria pressionado fornecedores de hardware que também trabalham com a OpenAI e se apropriado de informações confidenciais. O processo responde à ação movida pela Apple meses antes contra a OpenAI e dois ex-funcionários, incluindo o diretor de hardware Tang Tan, acusados de levar dados proprietários para ajudar no desenvolvimento dos dispositivos da criadora do ChatGPT. A OpenAI argumenta que a tese da Apple permitiria acusar praticamente qualquer funcionário que deixe a empresa, e seu novo empregador, de roubo de segredos. A Apple chamou a contra-ação de 'distração'. A disputa mostra como a corrida por dispositivos próprios de IA está colocando as duas empresas, antes parceiras, em rota de colisão direta.",
+    "source_name": "CNN",
+    "source_url": "https://www.cnn.com/2026/11/27/tech/openai-apple-countersuit",
+    "tag": "IA"
+  },
+  {
+    "title": "VigIA: regras do TSE não impediram circulação de conteúdos irregulares feitos com IA na eleição de 2026",
+    "summary": "O relatório final do projeto VigIA, do Observatório Lupa, identificou 2.563 publicações eleitorais criadas ou editadas com inteligência artificial em sete redes sociais durante a campanha de 2026 — o equivalente a um conteúdo a cada 40 minutos. Mais da metade (1.469 publicações, ou 57%) não trazia qualquer aviso de uso de IA, como exige a resolução do TSE. O levantamento também encontrou 232 deepfakes publicados em contas oficiais de candidatos, além de conteúdos que seguiram circulando no período em que a lei eleitoral proíbe esse tipo de material. As plataformas da Meta concentraram a maior parte dos registros. O estudo, que combina monitoramento humano e ferramentas de detecção de mídia sintética, reforça o debate sobre a efetividade da regulação e a responsabilidade das plataformas na próxima disputa.",
+    "source_name": "Agência Lupa",
+    "source_url": "https://www.agencialupa.org/reportagem/2026/11/27/vigia-regras-do-tse-nao-impediram-conteudos-irregulares-de-circular-na-eleicao-de-2026/",
+    "tag": "IA"
+  },
+  {
+    "title": "1Password confirma invasão de sistemas internos via conta do GitHub de funcionário, mas diz que cofres estão seguros",
+    "summary": "O gerenciador de senhas 1Password revelou um incidente de segurança detectado em 19 de novembro, no qual um invasor obteve acesso à conta corporativa do GitHub de um funcionário. Com essas credenciais, o atacante injetou código malicioso em serviços de backend, copiou código-fonte de repositórios privados e acessou o sistema de CI/CD da empresa. Foram expostos nomes, e-mails e alguns parâmetros de autenticação de um subconjunto de usuários, além de tokens de convite e recuperação de um pequeno grupo. A empresa afirma que o conteúdo dos cofres, as senhas e as chaves secretas dos clientes não foram acessados em nenhum momento. Em resposta, revogou credenciais, rotacionou segredos de infraestrutura e ampliou os códigos de recuperação de seis para dez caracteres. O caso é mais um alerta sobre a cadeia de desenvolvimento de software como vetor de ataque, mesmo em empresas especializadas em segurança.",
+    "source_name": "TechCrunch",
+    "source_url": "https://techcrunch.com/2026/11/25/1password-said-hackers-broke-into-its-internal-systems-but-customer-passwords-are-safe/",
+    "tag": "Tecnologia"
+  },
+  {
+    "title": "Google passa a exigir que agentes de IA acessem o Workspace apenas por servidores MCP e CLI oficiais",
+    "summary": "O Google tornou disponíveis para todos os clientes os servidores MCP e a CLI do Workspace e, junto com eles, publicou um adendo contratual que obriga agentes de IA a usar esses canais em vez das APIs REST tradicionais. A aplicação técnica da regra começa em 1º de fevereiro de 2027; aplicativos convencionais continuam usando as APIs existentes. Segundo a empresa, as APIs REST foram desenhadas para software em ritmo humano, em que um token válido indicava intenção do usuário — premissa que não vale mais para agentes autônomos. Cada chamada pelas novas interfaces será checada contra permissões, regras de DLP e rótulos de classificação da organização, e os agentes precisarão de IDs OAuth dedicados. O adendo ainda proíbe treinar modelos ou armazenar permanentemente dados brutos do Workspace. Para áreas de TI, a mudança exige revisar integrações agênticas já em produção e é um sinal de como a governança de agentes vai entrar nos contratos corporativos.",
+    "source_name": "Infosecurity Magazine",
+    "source_url": "https://www.infosecurity-magazine.com/news/google-cloud-ai-agents-workspace/",
+    "tag": "Transformação Digital"
+  },
+  {
+    "title": "Canadá amplia fundo de acesso a computação de IA para C$ 1 bilhão e favorece nuvens nacionais",
+    "summary": "O governo do Canadá anunciou em Toronto, na quinta-feira (26), um aporte adicional de C$ 700 milhões ao AI Compute Access Fund, que chega a C$ 1 bilhão. O programa passa a cobrir até 80% dos custos elegíveis quando a capacidade computacional vier de provedores 'soberanos' de controle canadense, e até 50% para outros provedores com hardware instalado no país; serviços hospedados no exterior ficam de fora. Podem participar empresas registradas no Canadá com menos de 500 funcionários, equipes locais de P&D e plano de comercialização, com projetos de C$ 100 mil a C$ 5 milhões. A primeira chamada é voltada a saúde e ciências da vida, com propostas até 4 de janeiro de 2027. A medida integra a meta de colocar 500 MW de computação soberana em operação e é um exemplo de política industrial de IA que países como o Brasil acompanham de perto.",
+    "source_name": "Unite.AI",
+    "source_url": "https://www.unite.ai/canada-invests-700-million-more-to-expand-ai-compute-access-fund/",
+    "tag": "IA"
+  },
+  {
+    "title": "Anatel formaliza outorga nacional de operadora móvel virtual para a iuh! Digital",
+    "summary": "A Anatel publicou em 27 de novembro o extrato da autorização que permite à NUH! Digital, que opera com a marca iuh!, prestar o Serviço Móvel Pessoal por meio de rede virtual (MVNO) em todo o território nacional, em regime privado e sem prazo de término. O termo foi assinado em 25 de novembro. A empresa, que nasceu como MVNO credenciada na rede da Claro, colocou em operação comercial em outubro seu próprio núcleo de rede móvel, com capacidade inicial para até 1 milhão de chips ativos e suporte a 2G, 3G, 4G e 5G. O documento não detalha quais redes de acesso a operadora utilizará em cada região. A outorga é mais um passo no amadurecimento do mercado de MVNOs no Brasil, em que novos entrantes com core próprio ganham autonomia para criar ofertas e integrar sistemas de OSS/BSS sem depender integralmente das grandes teles.",
+    "source_name": "Telesíntese",
+    "source_url": "https://telesintese.com.br/anatel-formaliza-outorga-nacional-de-mvno-para-iuh-digital/",
+    "tag": "Telecom"
+  },
+  {
+    "title": "UFF inaugura usina solar de R$ 10 milhões dedicada à pesquisa em tecnologias fotovoltaicas no RJ",
+    "summary": "A Universidade Federal Fluminense inaugurou uma usina solar de cerca de R$ 10 milhões no Núcleo Experimental de Iguaba Grande, na Região dos Lagos do Rio de Janeiro. Além de gerar eletricidade, a estrutura foi concebida como um laboratório a céu aberto para pesquisar, desenvolver e comparar o desempenho de diferentes tecnologias fotovoltaicas. O projeto é coordenado pelo professor Daniel Henrique Nogueira Dias, do Departamento de Engenharia Elétrica, e reúne pesquisadores de engenharia elétrica, telecomunicações e civil. A iniciativa também prevê ações de educação ambiental, com visitas de estudantes de escolas públicas da região. Em um país que já ultrapassa 54 GW de geração distribuída solar, a usina ajuda a suprir uma lacuna apontada pelo setor: a falta de pesquisa aplicada nacional para avaliar equipamentos e condições reais de operação.",
+    "source_name": "pv magazine Brasil",
+    "source_url": "http://www.pv-magazine-brasil.com/2026/11/27/uff-inaugura-usina-solar-de-r-10-milhoes-para-pesquisa-em-tecnologias-fotovoltaicas-no-rj/",
+    "tag": "Energia"
+  },
+  {
+    "title": "Reta final da consulta da Aneel que pode dar às distribuidoras controle remoto sobre usinas de geração distribuída",
+    "summary": "Termina em 30 de novembro o prazo, já prorrogado, para contribuições à Consulta Pública 033/2026 da Aneel, que revisa o Módulo 3 do PRODIST e cria o conceito de Recursos Energéticos Distribuídos. A proposta permitiria que distribuidoras monitorem e comandem à distância usinas de geração distribuída, podendo limitar a energia injetada na rede ou até desligá-las, com preferência por controle gradual. As exigências valeriam integralmente para novas conexões; entre as existentes, a obrigação se restringiria às maiores, como minigeração entre 75 kW e 5 MW e usinas do tipo III, que somam dezenas de gigawatts, com prazos de adequação de 120 a 180 dias. A iniciativa responde a alertas do ONS sobre os impactos da GD em horários de baixa carga, num momento em que a geração distribuída já chegou a suprir 31% da demanda nacional. O setor solar teme custos de adequação e perda de receita sem compensação, o que deve tornar o tema um dos principais embates regulatórios de 2027.",
+    "source_name": "Canal Solar",
+    "source_url": "https://canalsolar.com.br/aneel-controle-distribuidoras-geracao-distribuida/",
+    "tag": "Energia"
+  }
+]
